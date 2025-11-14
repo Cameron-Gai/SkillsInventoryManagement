@@ -25,7 +25,7 @@ A web-based platform for managing employee skill profiles, supporting organizati
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 | Folder | Description |
 |--------|--------------|
 | `docs/` | Requirements, Architecture, and Detailed Design docs |
