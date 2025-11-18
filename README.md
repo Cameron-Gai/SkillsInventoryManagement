@@ -33,3 +33,11 @@ A web-based platform for managing employee skill profiles, supporting organizati
 | `backend/` | Express server and business logic |
 | `database/` | SQL schema and seed data |
 | `scripts/` | Backup, restore, and deployment utilities |
+
+--
+
+## Setup & Initialization
+1. Clone the repository to your machine
+2. Install dependencies: `npm install` - read from package.json
+3. Copy `env.example` to `.env` and configure your environment variables
+4. Start the server: `npm start`
