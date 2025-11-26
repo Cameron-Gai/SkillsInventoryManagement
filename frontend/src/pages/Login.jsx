@@ -3,6 +3,16 @@
 // Will later include login form and authentication logic.
 
 import DarkToggle from "@/components/DarkToggle";
+import authApi from "@/api/authApi";
+
+async function testApi() {
+  try {
+    const res = await authApi.verify();
+    console.log("API WORKING:", res.data);
+  } catch (err) {
+    console.error("ERROR:", err);
+  }
+}
 
 export default function Login() {
   return (
@@ -14,6 +24,14 @@ export default function Login() {
 
       {/* Dark mode toggle button */}
       <DarkToggle />
+
+	<button
+	  onClick={testApi}
+	  className="p-2 bg-[var(--color-primary)] text-white rounded"
+	>
+	  Test API
+	</button>
+
 
     </div>
   );
