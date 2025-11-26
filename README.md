@@ -33,6 +33,14 @@ A web-based platform for managing employee skill profiles, supporting organizati
 | `backend/` | Express server and business logic |
 | `database/` | SQL schema and seed data |
 | `scripts/` | Backup, restore, and deployment utilities |
+| `src/`
+├── `config/`
+├── `routes/`
+├── `controllers/`
+├── `services/`
+├── `repositories/`
+├── `models/`
+
 
 --
 
