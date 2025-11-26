@@ -1,16 +1,48 @@
-# React + Vite
+# Skills Inventory Management Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A Vite-powered React SPA that will serve as the user interface for the Skills Inventory Management platform. The app currently provides placeholder routes for authentication, dashboards, and admin tooling so the navigation flow can be wired before backend APIs are available.
 
-Currently, two official plugins are available:
+## Prerequisites
+- Node.js 18+ (Vite requires modern Node features)
+- npm 9+ (comes with recent Node distributions)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Getting started
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Start the development server with hot reload:
+   ```bash
+   npm run dev
+   ```
+   The app runs at the URL printed in the terminal (default: `http://localhost:5173`).
+3. Build for production:
+   ```bash
+   npm run build
+   ```
+4. Preview the production build locally:
+   ```bash
+   npm run preview
+   ```
+5. Lint the codebase:
+   ```bash
+   npm run lint
+   ```
 
-## React Compiler
+## Project structure
+- `src/main.jsx`: React entry point that mounts the router.
+- `src/routes/AppRouter.jsx`: Declares public and protected routes using React Router.
+- `src/routes/ProtectedRoute.jsx`: Simple placeholder guard that will later validate authentication and roles.
+- `src/pages/*`: Placeholder views for Login, Dashboard, Profile, Team, and Admin areas.
+- `src/index.css`: Vite starter styles (to be replaced with project-specific theme).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Routing overview
+- `/login`: Public entry point for authentication (placeholder for now).
+- `/dashboard`, `/profile`, `/team`: Protected employee/manager areas.
+- `/admin`: Admin-only placeholder guarded by the `role` prop on `ProtectedRoute`.
+- `*`: Unknown routes redirect to the login page.
 
-## Expanding the ESLint configuration
+## Development notes
+- Path alias `@` resolves to `src/` (see `vite.config.js`).
+- Authentication and role checks are stubbed in `ProtectedRoute.jsx`; replace these with real logic when backend endpoints are available.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
