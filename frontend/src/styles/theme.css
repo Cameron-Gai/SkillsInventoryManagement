@@ -1,0 +1,28 @@
+/* theme.css */
+/* Global design tokens used across the entire app */
+
+:root {
+  /* Brand colors */
+  --color-primary: #2563eb; /* blue-600 */
+  --color-primary-light: #3b82f6; /* blue-500 */
+  --color-primary-dark: #1e40af; /* blue-800 */
+
+  --color-secondary: #f97316; /* orange-500 */
+  --color-secondary-dark: #c2410c; /* orange-700 */
+
+  /* Backgrounds */
+  --background: #f8fafc; /* slate-50 */
+  --background-dark: #0f172a; /* slate-900 */
+
+  /* Text */
+  --text-color: #1e293b; /* slate-800 */
+  --text-color-light: #f1f5f9; /* slate-100 */
+
+  /* Spacing scale additions (optional) */
+  --space-card: 1.25rem;
+}
+
+.dark {
+  --background: #0f172a;
+  --text-color: #f1f5f9;
+}
