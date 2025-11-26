@@ -1,0 +1,25 @@
+{
+  "name": "skillsinventorymanagement",
+  "version": "1.0.0",
+  "description": "Skills Inventory Management software",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cameron-Gai/SkillsInventoryManagement.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cameron-Gai/SkillsInventoryManagement/issues"
+  },
+  "homepage": "https://github.com/Cameron-Gai/SkillsInventoryManagement#readme",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0"
+  }
+}
