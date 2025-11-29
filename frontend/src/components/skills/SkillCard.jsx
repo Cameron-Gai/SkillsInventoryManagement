@@ -11,7 +11,7 @@ export default function SkillCard({ skill, onEdit }) {
           </div>
           <p className="text-sm text-[var(--text-color-secondary)]">{skill.category}</p>
         </div>
-        <span className="rounded-full bg-[color:var(--color-primary)]/10 px-3 py-1 text-xs font-semibold text-[color:var(--color-primary)]">
+        <span className="text-xs font-semibold rounded-full px-3 py-1 bg-[color:var(--color-primary)] text-[color:var(--text-color-contrast)]">
           {skill.level}
         </span>
       </div>

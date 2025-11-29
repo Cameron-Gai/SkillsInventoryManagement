@@ -2,7 +2,7 @@
 // Admin dashboard keeps employee experience visible while surfacing admin tools.
 
 import Sidebar from '@/components/Sidebar'
-import EmployeeSkillsPanel from '@/components/skills/EmployeeSkillsPanel'
+// Skill inventory intentionally not shown here — use the Employee view to manage profiles
 import { getStoredUser } from '@/utils/auth'
 
 export default function Admin() {
@@ -22,12 +22,11 @@ export default function Admin() {
           </p>
         </header>
 
-        <EmployeeSkillsPanel ownerLabel="your" />
-
         <section className="rounded-xl border border-[var(--border-color)] bg-[var(--card-background)] p-6 shadow-sm">
           <h2 className="text-xl font-semibold text-[var(--text-color)]">Platform controls</h2>
           <p className="mt-2 text-[var(--text-color-secondary)]">
-            Backup, restore, and audit workflows will surface here while keeping employee utilities available in the same view.
+            Backup, restore, and audit workflows will surface here. Employee skill profiles are managed in the dedicated
+            Employee view so admins can review and edit records centrally.
           </p>
         </section>
       </main>

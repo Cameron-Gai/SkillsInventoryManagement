@@ -11,13 +11,13 @@ export default function Sidebar() {
   const role = user?.role
 
   const links = [
-    { to: '/dashboard', label: 'Employee UI', allowedRoles: ['employee', 'manager', 'admin'] },
-    { to: '/team', label: 'Manager UI', allowedRoles: ['manager', 'admin'] },
-    { to: '/admin', label: 'Admin UI', allowedRoles: ['admin'] },
+    { to: '/dashboard', label: 'My Profile', allowedRoles: ['employee', 'manager', 'admin'] },
+    { to: '/team', label: 'My Team', allowedRoles: ['manager'] },
+    { to: '/admin', label: 'Administration', allowedRoles: ['admin'] },
   ]
 
   return (
-    <aside className="w-full max-w-xs shrink-0 border-r border-[var(--border-color)] bg-[var(--card-background)] p-6 shadow-sm">
+    <aside className="w-full max-w-xs shrink-0 border-r border-[var(--border-color)] bg-[var(--panel-background)] p-6 shadow-sm">
       <div className="flex items-center justify-between gap-3">
         <div>
           <p className="text-sm text-[var(--text-color-secondary)]">Signed in as</p>
@@ -35,15 +35,24 @@ export default function Sidebar() {
               key={link.to}
               to={link.to}
               className={({ isActive }) =>
-                `${navBaseClasses} ${
-                  isActive
-                    ? 'bg-[color:var(--color-primary)]/15 text-[color:var(--color-primary)]'
-                    : 'text-[var(--text-color)] hover:border-[color:var(--color-primary)] hover:text-[color:var(--color-primary)]'
-                }`
-              }
+                  `${navBaseClasses} group ${
+                    isActive
+                      ? 'bg-[var(--background)] text-[color:var(--color-primary)] shadow-sm'
+                      : 'text-[var(--text-color)] hover:bg-[var(--background)] hover:text-[color:var(--color-primary)]'
+                  }`
+                }
             >
-              <span>{link.label}</span>
-              <span className="text-[var(--text-color-secondary)]">→</span>
+                {({ isActive }) => (
+                <>
+                  <div className="flex items-center">
+                      <span className={`mr-3 h-6 w-1.5 rounded-r-md transition-colors ${isActive ? 'bg-[color:var(--color-primary)]' : 'bg-transparent group-hover:bg-[color:var(--color-primary)]'}`} />
+
+                      <span className={`${isActive ? 'text-[color:var(--color-primary)]' : 'text-[var(--text-color)]'} block`}>{link.label}</span>
+                  </div>
+
+                  <span className="text-[var(--text-color-secondary)]">→</span>
+                </>
+              )}
             </NavLink>
           ))}
       </div>

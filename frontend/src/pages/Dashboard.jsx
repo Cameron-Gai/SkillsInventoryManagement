@@ -26,7 +26,7 @@ export default function Dashboard() {
 
       <main className="flex-1 space-y-6 p-8">
         <header className="rounded-xl border border-[var(--border-color)] bg-[var(--card-background)] p-6 shadow-sm">
-          <p className="text-sm font-semibold uppercase tracking-wide text-[color:var(--color-primary)]">Employee Dashboard</p>
+          <p className="text-sm font-semibold uppercase tracking-wide text-[color:var(--header-color)]">Employee Dashboard</p>
           <h1 className="mt-2 text-3xl font-bold text-[var(--text-color)]">Welcome back, {user?.name ?? 'team member'}</h1>
           <p className="mt-3 max-w-3xl text-[var(--text-color-secondary)]">{heroCopy}</p>
         </header>

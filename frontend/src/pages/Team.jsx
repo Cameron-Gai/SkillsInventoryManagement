@@ -2,7 +2,7 @@
 // Manager dashboard builds on top of the employee experience.
 
 import Sidebar from '@/components/Sidebar'
-import EmployeeSkillsPanel from '@/components/skills/EmployeeSkillsPanel'
+// Skill inventory intentionally not shown on the Manager dashboard — use the Employee view to manage profiles
 import { getStoredUser } from '@/utils/auth'
 
 export default function Team() {
@@ -22,13 +22,11 @@ export default function Team() {
           </p>
         </header>
 
-        <EmployeeSkillsPanel ownerLabel="your" />
-
         <section className="rounded-xl border border-[var(--border-color)] bg-[var(--card-background)] p-6 shadow-sm">
           <h2 className="text-xl font-semibold text-[var(--text-color)]">Team snapshot</h2>
           <p className="mt-2 text-[var(--text-color-secondary)]">
-            Team insights and approvals will be built here. Managers can jump to employee records after confirming their own
-            skill updates.
+            Team insights and approvals will be built here. Managers can jump to employee records from the Employee view
+            to review or update individual skill profiles.
           </p>
         </section>
       </main>
