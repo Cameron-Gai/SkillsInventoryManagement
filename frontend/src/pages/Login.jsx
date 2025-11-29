@@ -55,12 +55,13 @@ export default function Login() {
           <div className="flex items-center justify-between gap-4">
             <div>
               <p className="text-xs uppercase tracking-[0.2em] text-[var(--text-color-subtle)] font-semibold">
-                Development Mode Login — SSO Coming Soon
+                Development Mode Login
               </p>
-              <h1 className="text-3xl font-bold text-[color:var(--color-primary)]">Skills Inventory</h1>
-              <p className="text-sm text-[var(--text-color-secondary)] mt-1">Use the dev accounts below to preview each dashboard.</p>
+              <h1 className="text-3xl font-bold text-[color:var(--header-color)]">Skills Inventory</h1>
+              <p className="text-sm text-[var(--text-color-secondary)] mt-1">Use the dev accounts provided to preview each dashboard.
+              </p>
             </div>
-            <DarkToggle />
+          <DarkToggle />
           </div>
 
           <form className="space-y-4" onSubmit={handleSubmit}>

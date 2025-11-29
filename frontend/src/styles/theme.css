@@ -2,42 +2,44 @@
 /* Global design tokens used across the app */
 
 :root {
-  /* Brand Primary (Sabre Red) */
-  --color-primary: #E4002B;
-  --color-primary-light: #FF4A63; /* elevated CTA highlight */
-  --color-primary-dark: #C00021; /* hover/active */
+  /* Brand Primary (Accessible Red) */
+  --color-primary: #B00020; /* darker red for improved contrast */
+  --color-primary-light: #E34B55; /* elevated CTA highlight */
+  --color-primary-dark: #8A0018; /* hover/active */
 
-  /* Secondary Accent (Corporate Aviation Blue) */
-  --color-secondary: #004A80;
-  --color-secondary-light: #0662A8;
-  --color-secondary-dark: #00345C;
+  /* Secondary Accent (Neutral Dark Grey for accents) */
+  --color-secondary: #2D2D2D;
+  --color-secondary-light: #3A3A3A;
+  --color-secondary-dark: #1F1F1F;
 
   /* Background System */
-  --background: #F9FAFB;        /* main background */
+  --background: #FFFFFF;        /* main background */
   --card-background: #FFFFFF;   /* surfaces/cards */
-  --panel-background: #F1F3F5;  /* sidebars, modals, credentials list */
-  --background-muted: #ECEFF1;  /* table rows, soft UI areas */
+  --panel-background: #F6F7F8;  /* sidebars, modals, credentials list */
+  --background-muted: #F2F4F6;  /* table rows, soft UI areas */
 
   /* Border + Divider */
-  --border-color: #D0D5DA;
-  --border-color-strong: #AAB4BE;
+  --border-color: #D1D5DB;
+  --border-color-strong: #9CA3AF;
 
   /* Text Colors */
-  --text-color: #1A1A1A;        /* primary content */
-  --text-color-secondary: #4E5A66; /* labels + form instructions */
-  --text-color-subtle: #6D7A87;    /* helper text */
-  --text-color-contrast: #FFFFFF;  /* text against red/blue */
+  --text-color: #0F172A;        /* primary content */
+  --text-color-secondary: #374151; /* labels + form instructions */
+  --text-color-subtle: #6B7280;    /* helper text */
+  --text-color-contrast: #FFFFFF;  /* text against colored backgrounds */
+  /* Header color (follows primary by default) */
+  --header-color: var(--color-primary);
 
   /* Inputs */
   --input-bg: #FFFFFF;
-  --input-border: #D0D5DA;
-  --input-border-focus: #004A80;   /* blue focus ring */
-  --input-placeholder: #8A98A8;
+  --input-border: #CBD5E1;
+  --input-border-focus: #B00020;   /* red focus ring (accessible) */
+  --input-placeholder: #9CA3AF;
 
   /* Semantic utility */
-  --state-info: #E7F3FF;
+  --state-info: #E6F0FF;
   --state-warn: #FEF3C7;
-  --state-error: #FCE8E8;
+  --state-error: #FEE2E2;
 
   /* Spacing scale (yours preserved) */
   --space-card: 1.25rem;
@@ -48,19 +50,21 @@
 /* ====================== */
 
 .dark {
-  --background: #1A1A1A;
-  --card-background: #2D2D2D;
-  --panel-background: #242424;
+  --background: #121212;
+  --card-background: #1F1F1F;
+  --panel-background: #171717;
 
-  --text-color: #F1F5F9;
-  --text-color-secondary: #CBD5E1;
-  --text-color-subtle: #94A3B8;
+  --text-color: #F8FAFC;
+  --text-color-secondary: #E5E7EB;
+  --text-color-subtle: #9CA3AF;
 
-  --border-color: #3A3A3A;
-  --border-color-strong: #4A4A4A;
+  --border-color: #2B2B2B;
+  --border-color-strong: #3A3A3A;
 
-  --input-bg: #2D2D2D;
-  --input-border: #3A3A3A;
-  --input-border-focus: #E4002B;
-  --input-placeholder: #6B7A90;
+  --input-bg: #1F1F1F;
+  --input-border: #2E2E2E;
+  --input-border-focus: #B00020; /* accessible red focus */
+  --input-placeholder: #6B7280;
+  /* Header color in dark mode */
+  --header-color: var(--text-color-contrast);
 }
