@@ -5,22 +5,18 @@
 //  - If the user has the correct role (employee/manager/admin)
 
 import { Navigate } from 'react-router-dom'
-
-// TODO: replace with real auth logic
-const isAuthenticated = true
-const userRole = 'employee'
+import { getStoredUser, getDashboardPathForRole } from '@/utils/auth'
 
 export default function ProtectedRoute({ children, role }) {
-  // If not logged in, send them to the login page
-  if (!isAuthenticated) {
+  const user = getStoredUser()
+
+  if (!user) {
     return <Navigate to="/login" replace />
   }
 
-  // If a role is required but user does not match, redirect
-  if (role && role !== userRole) {
-    return <Navigate to="/dashboard" replace />
+  if (role && role !== user.role) {
+    return <Navigate to={getDashboardPathForRole(user.role)} replace />
   }
 
-  // User is allowed → render the page
   return children
 }
