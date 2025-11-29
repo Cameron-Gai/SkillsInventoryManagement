@@ -1,28 +1,66 @@
 /* theme.css */
-/* Global design tokens used across the entire app */
+/* Global design tokens used across the app */
 
 :root {
-  /* Brand colors */
-  --color-primary: #2563eb; /* blue-600 */
-  --color-primary-light: #3b82f6; /* blue-500 */
-  --color-primary-dark: #1e40af; /* blue-800 */
+  /* Brand Primary (Sabre Red) */
+  --color-primary: #E4002B;
+  --color-primary-light: #FF4A63; /* elevated CTA highlight */
+  --color-primary-dark: #C00021; /* hover/active */
 
-  --color-secondary: #f97316; /* orange-500 */
-  --color-secondary-dark: #c2410c; /* orange-700 */
+  /* Secondary Accent (Corporate Aviation Blue) */
+  --color-secondary: #004A80;
+  --color-secondary-light: #0662A8;
+  --color-secondary-dark: #00345C;
 
-  /* Backgrounds */
-  --background: #f8fafc; /* slate-50 */
-  --background-dark: #0f172a; /* slate-900 */
+  /* Background System */
+  --background: #F9FAFB;        /* main background */
+  --card-background: #FFFFFF;   /* surfaces/cards */
+  --panel-background: #F1F3F5;  /* sidebars, modals, credentials list */
+  --background-muted: #ECEFF1;  /* table rows, soft UI areas */
 
-  /* Text */
-  --text-color: #1e293b; /* slate-800 */
-  --text-color-light: #f1f5f9; /* slate-100 */
+  /* Border + Divider */
+  --border-color: #D0D5DA;
+  --border-color-strong: #AAB4BE;
 
-  /* Spacing scale additions (optional) */
+  /* Text Colors */
+  --text-color: #1A1A1A;        /* primary content */
+  --text-color-secondary: #4E5A66; /* labels + form instructions */
+  --text-color-subtle: #6D7A87;    /* helper text */
+  --text-color-contrast: #FFFFFF;  /* text against red/blue */
+
+  /* Inputs */
+  --input-bg: #FFFFFF;
+  --input-border: #D0D5DA;
+  --input-border-focus: #004A80;   /* blue focus ring */
+  --input-placeholder: #8A98A8;
+
+  /* Semantic utility */
+  --state-info: #E7F3FF;
+  --state-warn: #FEF3C7;
+  --state-error: #FCE8E8;
+
+  /* Spacing scale (yours preserved) */
   --space-card: 1.25rem;
 }
 
+/* ====================== */
+/* =      DARK MODE     = */
+/* ====================== */
+
 .dark {
-  --background: #0f172a;
-  --text-color: #f1f5f9;
+  --background: #1A1A1A;
+  --card-background: #2D2D2D;
+  --panel-background: #242424;
+
+  --text-color: #F1F5F9;
+  --text-color-secondary: #CBD5E1;
+  --text-color-subtle: #94A3B8;
+
+  --border-color: #3A3A3A;
+  --border-color-strong: #4A4A4A;
+
+  --input-bg: #2D2D2D;
+  --input-border: #3A3A3A;
+  --input-border-focus: #E4002B;
+  --input-placeholder: #6B7A90;
 }

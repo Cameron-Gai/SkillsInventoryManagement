@@ -1,4 +1,4 @@
-export default function ThemeToggle() {
+export default function DarkToggle() {
   function toggle() {
     const isDark = document.documentElement.classList.toggle("dark")
     try {
@@ -11,10 +11,10 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={toggle}
-      className="p-2 rounded bg-[var(--color-primary)] text-white"
+      className="p-2 rounded bg-[color:var(--color-primary)] text-[color:var(--text-color-contrast)] hover:bg-[color:var(--color-primary-dark)] transition"
       aria-label="Toggle dark mode"
     >
-      Toggle Dark Mode
+      🌙 Theme
     </button>
   );
 }
