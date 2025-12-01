@@ -1,46 +1,41 @@
 const express = require('express');
-const config = require('./src/config/config');
+const dotenv = require('dotenv');
+dotenv.config();
+
+const authRoutes = require('./src/routes/authRoutes');
+const { authenticate } = require('./src/config/auth/authMiddleware');
+const { authorizeRoles } = require('./src/config/auth/requireRole');
+const db = require('./src/config/db');
 
 const app = express();
+const cors = require('cors');
 
-// Middleware
+app.use(cors());
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
 
-// Basic health check route
-app.get('/health', (req, res) => {
-  res.status(200).json({
-    status: 'OK',
-    timestamp: new Date().toISOString(),
-    environment: config.server.env
-  });
+// Login routes
+app.use('/api', authRoutes);
+
+// Example protected route
+app.get('/api/skills', authenticate, authorizeRoles('admin', 'manager'), async (req, res) => {
+  try {
+    const result = await db.query('SELECT * FROM skill');
+    res.json(result.rows);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
 });
 
-// API routes will be mounted here
-// Example: app.use(config.api.baseUrl, routes);
-
-// 404 handler
-app.use((req, res) => {
-  res.status(404).json({
-    error: 'Not Found',
-    message: `Cannot ${req.method} ${req.url}`
-  });
-});
-
-// Error handler
-app.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(err.status || 500).json({
-    error: err.message || 'Internal Server Error',
-    ...(config.server.env === 'development' && { stack: err.stack })
-  });
+// Health check
+app.get('/health', async (req, res) => {
+  try {
+    const result = await db.query('SELECT NOW()');
+    res.status(200).json({ status: 'OK', timestamp: result.rows[0].now });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
 });
 
 // Start server
-const PORT = config.server.port;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT} in ${config.server.env} mode`);
-  console.log(`Health check available at http://localhost:${PORT}/health`);
-});
-
-module.exports = app;
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
