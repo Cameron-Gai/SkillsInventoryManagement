@@ -46,6 +46,6 @@ A web-based platform for managing employee skill profiles, supporting organizati
 
 ## Setup & Initialization
 1. Clone the repository to your machine
-2. Install dependencies: `npm install` - read from package.json
-3. Copy `env.example` to `.env` and configure your environment variables
-4. Start the server: `npm run dev`
+2. Install dependencies: `npm install` - read from package.json. This needs to be done in both the Frontend and Backend files
+3. Copy `env.example` to `.env` and configure your environment variables. This needs to be done in the Backend file
+4. Start the server: `npm run dev` You can do this from 2 different terminals, one starts the backend and the other for frontend
