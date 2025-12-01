@@ -19,8 +19,10 @@
   },
   "homepage": "https://github.com/Cameron-Gai/SkillsInventoryManagement#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^17.2.3",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "pg": "^8.13.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",

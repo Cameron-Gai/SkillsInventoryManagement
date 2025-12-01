@@ -24,7 +24,7 @@ module.exports = {
     baseUrl: process.env.API_BASE_URL || '/api',
   },
   cors: {
-    origin: process.env.CORS_ORIGIN || 'http://localhost:3000',
+    origin: process.env.CORS_ORIGIN || 'http://localhost:5173',
   },
   logging: {
     level: process.env.LOG_LEVEL || 'info',

@@ -1,9 +1,17 @@
 const express = require('express');
+const cors = require('cors');
 const config = require('./src/config/config');
+
+// Initialize database connection
+require('./src/config/database');
 
 const app = express();
 
 // Middleware
+app.use(cors({
+  origin: config.cors.origin,
+  credentials: true,
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -16,8 +24,9 @@ app.get('/health', (req, res) => {
   });
 });
 
-// API routes will be mounted here
-// Example: app.use(config.api.baseUrl, routes);
+// API routes
+const userRoutes = require('./src/routes/userRoutes');
+app.use(`${config.api.baseUrl}/${config.api.version}/users`, userRoutes);
 
 // 404 handler
 app.use((req, res) => {
