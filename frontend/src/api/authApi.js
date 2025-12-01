@@ -4,8 +4,8 @@
 import axios from "./axiosInstance";
 
 const authApi = {
-  login: (email, password) =>
-    axios.post("/auth/login", { email, password }),
+  login: (username, password) =>
+    axios.post("/auth/login", { username, password }),
 
   logout: () =>
     axios.post("/auth/logout"),

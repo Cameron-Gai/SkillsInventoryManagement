@@ -17,7 +17,7 @@ const axiosInstance = axios.create({
 axiosInstance.interceptors.request.use(
   (config) => {
     // Inject JWT token if present
-    const token = localStorage.getItem("token");
+    const token = localStorage.getItem("sim_token");
 
     if (token) {
       config.headers["Authorization"] = `Bearer ${token}`;

@@ -1,44 +1,47 @@
-import { useMemo, useState } from 'react'
+import { useMemo, useState, useEffect } from 'react'
 import SkillList from './SkillList'
 import SkillFormModal from './SkillFormModal'
+import personSkillsApi from '@/api/personSkillsApi'
+import skillsApi from '@/api/skillsApi'
 
-const DEFAULT_SKILLS = [
-  {
-    id: 1,
-    name: 'React',
-    category: 'Framework',
-    level: 'Advanced',
-    years: 4,
-    frequency: 'Daily',
-    status: 'active',
-    notes: 'Building reusable design system components and dashboards.',
-  },
-  {
-    id: 2,
-    name: 'People Management',
-    category: 'Leadership',
-    level: 'Intermediate',
-    years: 2,
-    frequency: 'Weekly',
-    status: 'pending',
-    notes: 'Coaching individual contributors and running 1:1s.',
-  },
-  {
-    id: 3,
-    name: 'SQL',
-    category: 'Core Skill',
-    level: 'Intermediate',
-    years: 5,
-    frequency: 'Weekly',
-    status: 'active',
-    notes: 'Authoring analytics queries and data quality checks.',
-  },
-]
-
-export default function EmployeeSkillsPanel({ ownerLabel = 'your' }) {
-  const [skills, setSkills] = useState(DEFAULT_SKILLS)
+export default function EmployeeSkillsPanel({ ownerLabel = 'your', userId = null }) {
+  const [skills, setSkills] = useState([])
+  const [allSkills, setAllSkills] = useState([])
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [editingSkill, setEditingSkill] = useState(null)
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
+
+  // Fetch user's skills and available skills
+  useEffect(() => {
+    const fetchSkills = async () => {
+      try {
+        setLoading(true)
+        setError(null)
+
+        // Fetch user's skills
+        let userSkillsResponse
+        if (userId) {
+          userSkillsResponse = await personSkillsApi.getUserSkills(userId)
+        } else {
+          userSkillsResponse = await personSkillsApi.getMySkills()
+        }
+
+        // Fetch all available skills
+        const allSkillsResponse = await skillsApi.getAllSkills()
+
+        setSkills(userSkillsResponse.data || [])
+        setAllSkills(allSkillsResponse.data || [])
+      } catch (err) {
+        setError(err.message || 'Failed to load skills')
+        console.error('Error fetching skills:', err)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    fetchSkills()
+  }, [userId])
 
   const sortedSkills = useMemo(
     () => [...skills].sort((a, b) => a.name.localeCompare(b.name)),
@@ -55,17 +58,24 @@ export default function EmployeeSkillsPanel({ ownerLabel = 'your' }) {
     setIsModalOpen(true)
   }
 
-  const handleSave = (updatedSkill) => {
-    if (updatedSkill.id) {
-      setSkills((prev) => prev.map((skill) => (skill.id === updatedSkill.id ? updatedSkill : skill)))
-    } else {
-      const nextSkill = {
-        ...updatedSkill,
-        id: crypto.randomUUID(),
+  const handleSave = async (updatedSkill) => {
+    try {
+      if (updatedSkill.id) {
+        // Update existing skill
+        await personSkillsApi.updateMySkillStatus(updatedSkill.id, updatedSkill.status)
+        setSkills((prev) =>
+          prev.map((skill) => (skill.id === updatedSkill.id ? updatedSkill : skill))
+        )
+      } else {
+        // Add new skill
+        await personSkillsApi.addMySkill(updatedSkill.id || updatedSkill.skill_id)
+        setSkills((prev) => [...prev, updatedSkill])
       }
-      setSkills((prev) => [...prev, nextSkill])
+      setIsModalOpen(false)
+    } catch (err) {
+      setError('Failed to save skill: ' + err.message)
+      console.error('Error saving skill:', err)
     }
-    setIsModalOpen(false)
   }
 
   return (
@@ -78,19 +88,33 @@ export default function EmployeeSkillsPanel({ ownerLabel = 'your' }) {
         <button
           type="button"
           onClick={openNewSkill}
-          className="rounded-md bg-[color:var(--color-primary)] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[color:var(--color-primary-dark)]"
+          disabled={loading}
+          className="rounded-md bg-[color:var(--color-primary)] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[color:var(--color-primary-dark)] disabled:opacity-50"
         >
           Add Skill
         </button>
       </div>
 
-      <div className="mt-5">
-        <SkillList skills={sortedSkills} onEdit={handleEdit} />
-      </div>
+      {error && (
+        <div className="mt-4 rounded-md bg-red-100 p-3 text-red-700">
+          {error}
+        </div>
+      )}
+
+      {loading ? (
+        <div className="mt-5 text-center py-8 text-[var(--text-color-secondary)]">
+          Loading skills...
+        </div>
+      ) : (
+        <div className="mt-5">
+          <SkillList skills={sortedSkills} onEdit={handleEdit} />
+        </div>
+      )}
 
       <SkillFormModal
         isOpen={isModalOpen}
         initialSkill={editingSkill}
+        availableSkills={allSkills}
         onSave={handleSave}
         onClose={() => setIsModalOpen(false)}
       />
