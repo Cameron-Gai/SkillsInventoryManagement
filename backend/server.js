@@ -4,8 +4,10 @@ dotenv.config();
 const cors = require('cors');
 const config = require('./src/config/config');
 const authRoutes = require('./src/routes/authRoutes');
-const { authenticate } = require('./src/config/auth/authMiddleware');
-const { authorizeRoles } = require('./src/config/auth/requireRole');
+const usersRoutes = require('./src/routes/usersRoutes');
+const skillsRoutes = require('./src/routes/skillsRoutes');
+const personSkillsRoutes = require('./src/routes/personSkillsRoutes');
+const teamRoutes = require('./src/routes/teamRoutes');
 const db = require('./src/config/db');
 
 const app = express();
@@ -18,18 +20,25 @@ app.use(cors({
 
 app.use(express.json());
 
-// Login routes
+// Root route
+app.get('/', (req, res) => {
+  res.json({ message: 'Skills Inventory Management API', version: '1.0.0' });
+});
+
+// Auth routes
 app.use('/api', authRoutes);
 
-// Example protected route
-app.get('/api/skills', authenticate, authorizeRoles('admin', 'manager'), async (req, res) => {
-  try {
-    const result = await db.query('SELECT * FROM skill');
-    res.json(result.rows);
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  }
-});
+// Users routes
+app.use('/api/users', usersRoutes);
+
+// Skills routes
+app.use('/api/skills', skillsRoutes);
+
+// Person Skills routes
+app.use('/api/person-skills', personSkillsRoutes);
+
+// Team routes
+app.use('/api/team', teamRoutes);
 
 // Health check
 app.get('/health', async (req, res) => {

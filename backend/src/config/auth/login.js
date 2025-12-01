@@ -11,7 +11,7 @@ router.post('/login', async (req, res) => {
   try {
     // Fetch user by username
     const result = await db.query(
-      'SELECT person_id, username, password, role FROM person WHERE username = $1',
+      'SELECT person_id, person_name, username, password, role FROM person WHERE username = $1',
       [username]
     );
 
@@ -40,6 +40,8 @@ router.post('/login', async (req, res) => {
       message: 'Login successful',
       token,
       person_id: user.person_id,
+      name: user.person_name,
+      username: user.username,
       role: user.role
     });
 
