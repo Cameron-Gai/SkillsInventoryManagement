@@ -29,6 +29,8 @@
   --text-color-contrast: #FFFFFF;  /* text against colored backgrounds */
   /* Header color (follows primary by default) */
   --header-color: var(--color-primary);
+  --pending-color: #0F172A; 
+  --pending-color-box: #E6F0FF; /* light blue for pending states */
 
   /* Inputs */
   --input-bg: #FFFFFF;
@@ -65,6 +67,9 @@
   --input-border: #2E2E2E;
   --input-border-focus: #B00020; /* accessible red focus */
   --input-placeholder: #6B7280;
-  /* Header color in dark mode */
+  
+  --pending-color-box: #F8FAFC;
+  /* Text color in dark mode */
   --header-color: var(--text-color-contrast);
+  --pending-color: var(--text-amber-200); /* amber for pending states */
 }
