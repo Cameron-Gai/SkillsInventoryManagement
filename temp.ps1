@@ -4,8 +4,7 @@ param(
     [string]$Image = 'postgres:15',
     [string]$VolumeName = 'sim-postgres-data',
     [int]$HostPort = 5432,
-    [string]$SeedWorkbook = 'scripts/seed.xlsx',
-    [switch]$PreserveVolume
+    [string]$SeedWorkbook = 'scripts/seed.xlsx'
 )
 
 $ErrorActionPreference = 'Stop'
@@ -21,32 +20,6 @@ function Assert-DockerAvailable {
         docker info | Out-Null
     } catch {
         throw 'Docker daemon is not running or inaccessible. Start Docker Desktop and try again.'
-    }
-}
-
-function Invoke-ContainerSqlFile {
-    param(
-        [string]$FilePath
-    )
-
-    if (-not (Test-Path $FilePath)) {
-        Write-Warning "SQL file not found: $FilePath"
-        return
-    }
-
-    $destination = "/tmp/" + [System.IO.Path]::GetFileName($FilePath)
-    Write-Host "Applying SQL: $([System.IO.Path]::GetFileName($FilePath))"
-    & docker cp $FilePath "${ContainerName}:$destination" | Out-Null
-    & docker exec $ContainerName psql -U $($envDefaults.DB_USER) -d $($envDefaults.DB_NAME) -f $destination | Out-Null
-}
-
-function Assert-LastExitSucceeded {
-    param(
-        [string]$Step
-    )
-
-    if ($LASTEXITCODE -ne 0) {
-        throw "$Step failed with exit code $LASTEXITCODE."
     }
 }
 
@@ -66,7 +39,6 @@ if (-not (Test-Path $backendEnvPath)) {
     "DB_NAME=$($envDefaults.DB_NAME)" | Out-File $backendEnvPath -Append -Encoding ASCII
     "DB_USER=$($envDefaults.DB_USER)" | Out-File $backendEnvPath -Append -Encoding ASCII
     "DB_PASSWORD=$($envDefaults.DB_PASSWORD)" | Out-File $backendEnvPath -Append -Encoding ASCII
-    "DEFAULT_USER_PASSWORD=Password123!" | Out-File $backendEnvPath -Append -Encoding ASCII
     "JWT_SECRET=super-secret-key" | Out-File $backendEnvPath -Append -Encoding ASCII
 }
 
@@ -80,33 +52,19 @@ if ((docker ps -a --format '{{.Names}}' | Where-Object { $_ -eq $ContainerName }
     docker rm -f $ContainerName | Out-Null
 }
 
-if (docker volume ls --format '{{.Name}}' | Where-Object { $_ -eq $VolumeName }) {
-    if ($PreserveVolume) {
-        Write-Host "Reusing existing docker volume '$VolumeName' (data preserved per -PreserveVolume)."
-    } else {
-        Write-Host "Removing existing docker volume '$VolumeName' for a clean seed. Use -PreserveVolume to skip this."
-        docker volume rm $VolumeName | Out-Null
-        Write-Host "Creating docker volume '$VolumeName'"
-        docker volume create $VolumeName | Out-Null
-    }
-} else {
+if (-not (docker volume ls --format '{{.Name}}' | Where-Object { $_ -eq $VolumeName })) {
     Write-Host "Creating docker volume '$VolumeName'"
     docker volume create $VolumeName | Out-Null
 }
 
 Write-Host "Starting Postgres container..."
-$dockerArgs = @(
-    'run','-d',
-    '--name', $ContainerName,
-    '-e', "POSTGRES_USER=$($envDefaults.DB_USER)",
-    '-e', "POSTGRES_PASSWORD=$($envDefaults.DB_PASSWORD)",
-    '-e', "POSTGRES_DB=$($envDefaults.DB_NAME)",
-    '-v', "${VolumeName}:/var/lib/postgresql/data",
-    '-p', "${HostPort}:5432",
-    $Image
-)
-Write-Host "Executing: docker $($dockerArgs -join ' ')"
-& docker @dockerArgs | Out-Null
+docker run -d --name $ContainerName `
+    -e POSTGRES_USER=$($envDefaults.DB_USER) `
+    -e POSTGRES_PASSWORD=$($envDefaults.DB_PASSWORD) `
+    -e POSTGRES_DB=$($envDefaults.DB_NAME) `
+    -v ${VolumeName}:/var/lib/postgresql/data `
+    -p "$HostPort:5432" `
+    $Image | Out-Null
 
 Write-Host 'Waiting for Postgres to accept connections...'
 $ready = $false
@@ -122,9 +80,6 @@ if (-not $ready) {
     throw 'Postgres did not become ready in time.'
 }
 
-Invoke-ContainerSqlFile (Join-Path $root 'dbfile.sql')
-Invoke-ContainerSqlFile (Join-Path $root 'update.sql')
-
 $python = Get-Command python -ErrorAction Stop
 pip show pandas | Out-Null 2>$null
 if ($LASTEXITCODE -ne 0) {
@@ -134,18 +89,11 @@ if ($LASTEXITCODE -ne 0) {
 
 Write-Host 'Seeding base tables from Excel workbook...'
 python scripts/xlsxtoDB.py $SeedWorkbook
-Assert-LastExitSucceeded 'Excel import'
-
-Write-Host 'Hashing default account passwords...'
-node scripts/set_default_passwords.js
-Assert-LastExitSucceeded 'Password hashing script'
 
 Write-Host 'Assigning randomized employee skills...'
 python scripts/assign_random_skills.py --min-skills 3 --max-skills 7 --truncate
-Assert-LastExitSucceeded 'Random skill assignment'
 
 Write-Host 'Assigning randomized team focus priorities...'
 python scripts/randomize_team_focus.py --min-per-team 2 --max-per-team 4 --truncate
-Assert-LastExitSucceeded 'Team focus randomizer'
 
 Write-Host 'Environment bootstrap completed.'

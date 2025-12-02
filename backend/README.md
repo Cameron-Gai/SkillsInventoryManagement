@@ -24,6 +24,9 @@ This package hosts the Express.js backend for the Skills Inventory and Catalog S
    ```
    The API listens on `PORT` (default `3000`) and exposes a health check at `/health`.
 
+### Default credentials
+Running `bootstrap_sim_env.ps1` (or executing `node scripts/set_default_passwords.js` manually) hashes `DEFAULT_USER_PASSWORD` for every person record. The default value is `Password123!`, so once seeding finishes you can sign in as any username listed in the `person` table using that password unless you change the variable.
+
 ## Available Scripts
 - `npm start` – start the Express server.
 - `npm run dev` – start the server with nodemon style reloads.
@@ -41,6 +44,7 @@ Configuration defaults are defined in `src/config/config.js`. The following vari
 - `DB_NAME` (default `skills_inventory`)
 - `DB_USER`
 - `DB_PASSWORD`
+- `DEFAULT_USER_PASSWORD` (default `Password123!` used by `scripts/set_default_passwords.js`)
 - `JWT_SECRET`
 - `JWT_EXPIRES_IN` (default `24h`)
 - `API_VERSION` (default `v1`)
@@ -53,6 +57,9 @@ Configuration defaults are defined in `src/config/config.js`. The following vari
 - `scripts/assign_random_skills.py` – populates `person_skill` with randomized statuses, proficiency metadata, and timestamps.
 - `scripts/randomize_team_focus.py` – assigns `team_high_value_skills` entries for every manager that has direct reports.
 - `scripts/bootstrap_sim_env.ps1` – orchestrates Docker setup plus the scripts above so you can reproduce the full demo dataset in one step.
+- `scripts/set_default_passwords.js` – hashes the `DEFAULT_USER_PASSWORD` for every `person` row lacking a bcrypt hash so local logins always work.
+
+> `bootstrap_sim_env.ps1` deletes and recreates the `sim-postgres-data` Docker volume by default (clean seed). Use the `-PreserveVolume` switch to keep existing data.
 
 All seeders honor `backend/.env` for `DB_HOST`, `DB_PORT`, `DB_NAME`, `DB_USER`, and `DB_PASSWORD`.
 

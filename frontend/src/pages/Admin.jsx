@@ -224,8 +224,7 @@ export default function Admin() {
           <p className="text-sm font-semibold uppercase tracking-wide text-[color:var(--color-primary)]">Admin UI</p>
           <h1 className="mt-2 text-3xl font-bold text-[var(--text-color)]">Platform Administration</h1>
           <p className="mt-3 max-w-3xl text-[var(--text-color-secondary)]">
-            Manage users, skills, and platform settings. You retain the full employee dashboard for your own profile while gaining
-            access to these administrative tools.
+            Manage users, skills, and platform settings. 
           </p>
         </header>
 

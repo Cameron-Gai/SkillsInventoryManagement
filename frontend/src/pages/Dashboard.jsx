@@ -4,6 +4,7 @@
 import { useMemo, useState, useEffect } from 'react'
 import Sidebar from '@/components/Sidebar'
 import EmployeeSkillsPanel from '@/components/skills/EmployeeSkillsPanel'
+import DesirableNote from '@/components/skills/DesirableNote'
 import usersApi from '@/api/usersApi'
 import { storeUser } from '@/utils/auth'
 
@@ -148,7 +149,7 @@ export default function Dashboard() {
                         <p className="text-xs text-[var(--text-color-secondary)]">
                           {skill.type} • Priority: {skill.priority}
                         </p>
-                        {skill.notes && <p className="text-xs text-[var(--text-color-secondary)]">Notes: {skill.notes}</p>}
+                        <DesirableNote skill={skill} className="mt-1" />
                       </div>
                       {meta && (
                         <span className={`self-start rounded-full border px-3 py-1 text-xs font-semibold ${meta.badgeClass}`}>

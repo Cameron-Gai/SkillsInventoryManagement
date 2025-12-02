@@ -3,6 +3,7 @@
 
 import { useState, useEffect } from 'react'
 import Logout from '@/components/Logout'
+import DesirableNote from '@/components/skills/DesirableNote'
 import usersApi from '@/api/usersApi'
 
 export default function Profile() {
@@ -164,7 +165,7 @@ export default function Profile() {
                       <div>
                         <p className="text-lg font-semibold text-[var(--text-color)]">{skill.name}</p>
                         <p className="text-xs text-[var(--text-color-secondary)]">{skill.type} • Priority: {skill.priority}</p>
-                        {skill.notes && <p className="text-xs text-[var(--text-color-secondary)]">Notes: {skill.notes}</p>}
+                        <DesirableNote skill={skill} className="mt-1" />
                       </div>
                       <span
                         className={`self-start rounded-full px-3 py-1 text-xs font-semibold ${

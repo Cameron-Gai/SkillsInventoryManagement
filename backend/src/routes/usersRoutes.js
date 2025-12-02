@@ -88,7 +88,7 @@ router.get('/me', authenticate, async (req, res) => {
       const requested = normalizedStatus === 'requested';
       const statusLabel = satisfied ? 'satisfied' : requested ? 'requested' : 'not_started';
 
-      return {
+      const payload = {
         skill_id: row.skill_id,
         name: row.skill_name,
         type: row.skill_type,
@@ -98,6 +98,24 @@ router.get('/me', authenticate, async (req, res) => {
         status: statusLabel,
         satisfied,
       };
+
+      const optionalNumber = (value) => {
+        if (value === null || value === undefined) return null;
+        const parsed = Number(value);
+        return Number.isFinite(parsed) ? parsed : null;
+      };
+
+      const teamCount = optionalNumber(row.team_count);
+      const teamCoverage = optionalNumber(row.team_coverage);
+      const employeePenetration = optionalNumber(row.employee_penetration);
+      const approvedEmployees = optionalNumber(row.approved_employees);
+
+      if (teamCount !== null) payload.team_count = teamCount;
+      if (teamCoverage !== null) payload.team_coverage = teamCoverage;
+      if (employeePenetration !== null) payload.employee_penetration = employeePenetration;
+      if (approvedEmployees !== null) payload.approved_employees = approvedEmployees;
+
+      return payload;
     };
 
     let suggestedSkills = [];
