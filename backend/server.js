@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const config = require('./src/config/config');
+const apiRoutes = require('../src/routes');
 
 const app = express();
 
@@ -21,8 +22,8 @@ app.get('/health', (req, res) => {
   });
 });
 
-// API routes will be mounted here
-// Example: app.use(config.api.baseUrl, routes);
+// Mount API routes
+app.use(config.api.baseUrl, apiRoutes);
 
 // 404 handler
 app.use((req, res) => {
