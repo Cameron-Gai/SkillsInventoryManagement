@@ -42,7 +42,7 @@ def fetch_people_and_skills(cur):
 def choose_status():
     statuses = (
         ('Approved', 0.6),
-        ('Requested', 0.3),
+        ('Pending', 0.3),
         ('Canceled', 0.1),
     )
     roll = random.random()
@@ -55,14 +55,14 @@ def choose_status():
 
 
 def generate_requested_at(status):
-    """Return a believable timestamp for when a skill was requested."""
+    """Return a believable timestamp for when a skill was submitted."""
     now = datetime.now(timezone.utc)
 
     if status == 'Approved':
         days_ago = random.randint(30, 180)
     elif status == 'Canceled':
         days_ago = random.randint(15, 120)
-    else:  # Requested
+    else:  # Pending
         days_ago = random.randint(1, 60)
 
     hours_ago = random.randint(0, 23)

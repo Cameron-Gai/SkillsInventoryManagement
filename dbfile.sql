@@ -1,9 +1,10 @@
 CREATE TYPE skill_status_enum AS ENUM ('Approved', 'Canceled');
 CREATE TYPE skill_type_enum AS ENUM ('Knowledge', 'Experience', 'Technology', 'Other');
-CREATE TYPE person_skill_status_enum AS ENUM ('Requested', 'Approved', 'Canceled');
+CREATE TYPE person_skill_status_enum AS ENUM ('Pending', 'Approved', 'Canceled');
 CREATE TYPE project_status_enum AS ENUM ('Approved', 'Canceled');
 CREATE TYPE project_skill_required_status_enum AS ENUM ('Approved', 'Canceled');
 CREATE TYPE person_project_assignment_status_enum AS ENUM ('Requested', 'Approved', 'Canceled');
+CREATE TYPE skill_request_status_enum AS ENUM ('Requested', 'Approved', 'Rejected');
 
 CREATE TABLE person (
     person_id SERIAL PRIMARY KEY,
@@ -39,6 +40,20 @@ CREATE TABLE skill (
     skill_name VARCHAR(255) NOT NULL,
     status skill_status_enum NOT NULL,
     skill_type skill_type_enum NOT NULL
+);
+
+CREATE TABLE skill_request (
+    request_id SERIAL PRIMARY KEY,
+    requested_by INT NOT NULL REFERENCES person(person_id) ON DELETE CASCADE,
+    skill_name VARCHAR(255) NOT NULL,
+    skill_type skill_type_enum NOT NULL,
+    justification TEXT DEFAULT '',
+    status skill_request_status_enum NOT NULL DEFAULT 'Pending',
+    created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    resolved_at TIMESTAMPTZ,
+    resolved_by INT REFERENCES person(person_id),
+    resolution_notes TEXT,
+    created_skill_id INT REFERENCES skill(skill_id)
 );
 
 CREATE TABLE person_skill (

@@ -3,6 +3,7 @@ import SkillList from './SkillList'
 import SkillFormModal from './SkillFormModal'
 import personSkillsApi from '@/api/personSkillsApi'
 import skillsApi from '@/api/skillsApi'
+import skillRequestsApi from '@/api/skillRequestsApi'
 
 const UI_STATUS_FROM_DB = {
   approved: 'active',
@@ -11,14 +12,7 @@ const UI_STATUS_FROM_DB = {
   canceled: 'archived',
 }
 
-const DB_STATUS_FROM_UI = {
-  active: 'Approved',
-  pending: 'Requested',
-  archived: 'Canceled',
-}
-
 const mapDbStatusToUi = (status) => UI_STATUS_FROM_DB[status?.toLowerCase?.()] || 'pending'
-const mapUiStatusToDb = (status) => DB_STATUS_FROM_UI[status?.toLowerCase?.()] || 'Requested'
 
 function decorateSkill(skill) {
   const uiStatus = mapDbStatusToUi(skill.status)
@@ -30,7 +24,7 @@ function decorateSkill(skill) {
     years: skill.experience_years ?? skill.years ?? 0,
     frequency: skill.usage_frequency ?? skill.frequency ?? 'Occasionally',
     status: uiStatus,
-    dbStatus: skill.status ?? mapUiStatusToDb(uiStatus),
+    dbStatus: skill.status,
     notes: skill.notes ?? '',
   }
 }
@@ -42,6 +36,7 @@ export default function EmployeeSkillsPanel({ ownerLabel = 'your', userId = null
   const [editingSkill, setEditingSkill] = useState(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
+  const [successMessage, setSuccessMessage] = useState(null)
 
   const refreshSkills = useCallback(async () => {
     try {
@@ -78,36 +73,49 @@ export default function EmployeeSkillsPanel({ ownerLabel = 'your', userId = null
   const openNewSkill = () => {
     setEditingSkill(null)
     setIsModalOpen(true)
+    setError(null)
   }
 
   const handleEdit = (skill) => {
     setEditingSkill(skill)
     setIsModalOpen(true)
+    setError(null)
   }
 
   const handleSave = async (updatedSkill) => {
     try {
-      const payload = {
-        status: mapUiStatusToDb(updatedSkill.status),
-        experience_years: updatedSkill.years,
-        usage_frequency: updatedSkill.frequency,
-        proficiency_level: updatedSkill.level,
-        notes: updatedSkill.notes,
+      setError(null)
+
+      if (updatedSkill.mode === 'request') {
+        await skillRequestsApi.createRequest({
+          skill_name: updatedSkill.skill_name,
+          skill_type: updatedSkill.skill_type,
+          justification: updatedSkill.justification,
+        })
+        setSuccessMessage('Thanks! Your new skill request was submitted for admin review.')
+      } else {
+        const payload = {
+          experience_years: updatedSkill.experience_years,
+          usage_frequency: updatedSkill.usage_frequency,
+          proficiency_level: updatedSkill.proficiency_level,
+          notes: updatedSkill.notes,
+        }
+
+        if (updatedSkill.id) {
+          await personSkillsApi.updateMySkill(updatedSkill.id, payload)
+          setSuccessMessage('Skill details updated successfully.')
+        } else {
+          await personSkillsApi.addMySkill(updatedSkill.skill_id, payload)
+          setSuccessMessage('Skill submitted for approval.')
+        }
+        await refreshSkills()
       }
 
-      if (updatedSkill.id) {
-        await personSkillsApi.updateMySkill(updatedSkill.id, payload)
-      } else {
-        const skillIdentifier = updatedSkill.id || updatedSkill.skill_id
-        if (!skillIdentifier) {
-          throw new Error('Please select a skill from the catalog.')
-        }
-        await personSkillsApi.addMySkill(skillIdentifier, payload)
-      }
-      await refreshSkills()
       setIsModalOpen(false)
     } catch (err) {
-      setError('Failed to save skill: ' + err.message)
+      console.error('Error saving skill:', err)
+      const message = err.response?.data?.error || err.message
+      setError('Failed to save skill: ' + message)
       console.error('Error saving skill:', err)
     }
   }
@@ -132,6 +140,12 @@ export default function EmployeeSkillsPanel({ ownerLabel = 'your', userId = null
       {error && (
         <div className="mt-4 rounded-md bg-red-100 p-3 text-red-700">
           {error}
+        </div>
+      )}
+
+      {successMessage && (
+        <div className="mt-4 rounded-md bg-green-100 p-3 text-green-700">
+          {successMessage}
         </div>
       )}
 

@@ -8,6 +8,7 @@ const usersRoutes = require('./src/routes/usersRoutes');
 const skillsRoutes = require('./src/routes/skillsRoutes');
 const personSkillsRoutes = require('./src/routes/personSkillsRoutes');
 const teamRoutes = require('./src/routes/teamRoutes');
+const skillRequestsRoutes = require('./src/routes/skillRequestsRoutes');
 const db = require('./src/config/db');
 
 const app = express();
@@ -36,6 +37,9 @@ app.use('/api/skills', skillsRoutes);
 
 // Person Skills routes
 app.use('/api/person-skills', personSkillsRoutes);
+
+// Skill request routes
+app.use('/api/skill-requests', skillRequestsRoutes);
 
 // Team routes
 app.use('/api/team', teamRoutes);

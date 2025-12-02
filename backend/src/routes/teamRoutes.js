@@ -41,7 +41,7 @@ router.get('/my-team', authenticate, authorizeRoles('manager', 'admin'), async (
          SELECT
            ps.person_id,
            COUNT(*) FILTER (WHERE ps.status = 'Approved') AS total_skills,
-           COUNT(*) FILTER (WHERE ps.status = 'Requested') AS pending_skills,
+           COUNT(*) FILTER (WHERE ps.status = 'Pending') AS pending_skills,
            COUNT(*) FILTER (WHERE ps.status = 'Approved') AS approved_skills,
            json_agg(DISTINCT s.skill_name ORDER BY s.skill_name)
              FILTER (WHERE s.skill_name IS NOT NULL AND ps.status = 'Approved') AS top_skills,
@@ -56,7 +56,7 @@ router.get('/my-team', authenticate, authorizeRoles('manager', 'admin'), async (
                'experience_years', ps.experience_years,
                'notes', COALESCE(ps.notes, '')
              )
-           ) FILTER (WHERE ps.status = 'Requested') AS pending_skill_details
+           ) FILTER (WHERE ps.status = 'Pending') AS pending_skill_details
          FROM person_skill ps
          JOIN skill s ON s.skill_id = ps.skill_id
          GROUP BY ps.person_id
@@ -247,7 +247,7 @@ router.get('/insights', authenticate, authorizeRoles('manager', 'admin'), async 
         `SELECT COUNT(*) AS pending_count
          FROM person_skill ps
          JOIN person p ON ps.person_id = p.person_id
-         WHERE p.manager_person_id = $1 AND ps.status = 'Requested'`,
+         WHERE p.manager_person_id = $1 AND ps.status = 'Pending'`,
         [managerId]
       ),
       db.query(
@@ -264,7 +264,7 @@ router.get('/insights', authenticate, authorizeRoles('manager', 'admin'), async 
       db.query(
         `SELECT
            COUNT(*) FILTER (WHERE ps.status = 'Approved') AS approved_skills,
-           COUNT(*) FILTER (WHERE ps.status = 'Requested') AS pending_skills,
+           COUNT(*) FILTER (WHERE ps.status = 'Pending') AS pending_skills,
            COUNT(*) FILTER (WHERE ps.status = 'Canceled') AS canceled_skills,
            COUNT(DISTINCT ps.skill_id) FILTER (WHERE ps.status = 'Approved') AS unique_skills,
            COUNT(*) FILTER (WHERE ps.status = 'Approved') AS team_skill_count
@@ -285,7 +285,7 @@ router.get('/insights', authenticate, authorizeRoles('manager', 'admin'), async 
          FROM person_skill ps
          JOIN person p ON ps.person_id = p.person_id
          JOIN skill s ON s.skill_id = ps.skill_id
-         WHERE p.manager_person_id = $1 AND ps.status = 'Requested'
+         WHERE p.manager_person_id = $1 AND ps.status = 'Pending'
          GROUP BY s.skill_type`,
         [managerId]
       ),
@@ -295,7 +295,7 @@ router.get('/insights', authenticate, authorizeRoles('manager', 'admin'), async 
          JOIN person p ON p.person_id = ps.person_id
          JOIN skill s ON s.skill_id = ps.skill_id
          WHERE p.manager_person_id = $1
-         ORDER BY (ps.status = 'Requested') DESC, s.skill_name
+         ORDER BY (ps.status = 'Pending') DESC, s.skill_name
          LIMIT 4`,
         [managerId]
       ),
@@ -314,7 +314,7 @@ router.get('/insights', authenticate, authorizeRoles('manager', 'admin'), async 
     const spotlight = spotlightResult.rows.map((row, index) => ({
       name: row.person_name,
       role: row.skill_type,
-      status: row.status?.toLowerCase?.() === 'requested' ? 'pending' : row.status,
+      status: ['pending', 'requested'].includes(row.status?.toLowerCase?.()) ? 'pending' : row.status,
       match: Math.min(95, 65 + index * 5),
       tags: [row.skill_name, row.skill_type],
     }));

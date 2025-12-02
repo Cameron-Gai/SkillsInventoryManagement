@@ -169,12 +169,12 @@ export default function Profile() {
                       </div>
                       <span
                         className={`self-start rounded-full px-3 py-1 text-xs font-semibold ${
-                          skill.already_requested
+                          (skill.already_pending ?? skill.already_requested)
                             ? 'bg-yellow-100 text-yellow-700'
                             : 'bg-blue-100 text-blue-700'
                         }`}
                       >
-                        {skill.already_requested ? 'Requested' : 'Not started'}
+                        {(skill.already_pending ?? skill.already_requested) ? 'Pending' : 'Not started'}
                       </span>
                     </div>
                   </li>

@@ -46,7 +46,7 @@ router.get('/me', authenticate, async (req, res) => {
       (acc, row) => {
         const key = row.status?.toLowerCase?.();
         if (key === 'approved') acc.approved = row.count;
-        else if (key === 'requested') acc.pending = row.count;
+        else if (key === 'pending' || key === 'requested') acc.pending = row.count;
         else if (key === 'canceled') acc.canceled = row.count;
         acc.total += row.count;
         return acc;
@@ -67,7 +67,7 @@ router.get('/me', authenticate, async (req, res) => {
     const recommendedMatches = skillDetailResult.rows.map((row, index) => ({
       name: row.skill_name,
       role: row.skill_type,
-      status: row.status?.toLowerCase?.() === 'requested' ? 'pending' : 'approved',
+      status: ['pending', 'requested'].includes(row.status?.toLowerCase?.()) ? 'pending' : 'approved',
       match: Math.min(95, 60 + index * 5),
       tags: [row.skill_type, row.status],
     }));
@@ -85,8 +85,8 @@ router.get('/me', authenticate, async (req, res) => {
       const status = userSkillStatusMap.get(row.skill_id);
       const normalizedStatus = status?.toLowerCase?.();
       const satisfied = normalizedStatus === 'approved';
-      const requested = normalizedStatus === 'requested';
-      const statusLabel = satisfied ? 'satisfied' : requested ? 'requested' : 'not_started';
+      const pending = normalizedStatus === 'pending' || normalizedStatus === 'requested';
+      const statusLabel = satisfied ? 'satisfied' : pending ? 'pending' : 'not_started';
 
       const payload = {
         skill_id: row.skill_id,
@@ -94,7 +94,8 @@ router.get('/me', authenticate, async (req, res) => {
         type: row.skill_type,
         priority: row.priority,
         notes: row.notes || '',
-        already_requested: requested,
+        already_requested: pending,
+        already_pending: pending,
         status: statusLabel,
         satisfied,
       };
@@ -216,7 +217,7 @@ router.get('/', authenticate, authorizeRoles('admin', 'manager'), async (req, re
          SELECT
            ps.person_id,
            COUNT(*) FILTER (WHERE ps.status = 'Approved') AS total_skills,
-           COUNT(*) FILTER (WHERE ps.status = 'Requested') AS pending_skills,
+           COUNT(*) FILTER (WHERE ps.status = 'Pending') AS pending_skills,
            COUNT(*) FILTER (WHERE ps.status = 'Approved') AS approved_skills,
            json_agg(
              json_build_object(
@@ -230,7 +231,7 @@ router.get('/', authenticate, authorizeRoles('admin', 'manager'), async (req, re
                'notes', COALESCE(ps.notes, '')
              )
            )
-             FILTER (WHERE ps.status = 'Requested') AS pending_skill_names
+             FILTER (WHERE ps.status = 'Pending') AS pending_skill_names
          FROM person_skill ps
          JOIN skill s ON s.skill_id = ps.skill_id
          GROUP BY ps.person_id

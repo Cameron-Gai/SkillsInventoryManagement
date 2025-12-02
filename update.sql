@@ -86,6 +86,64 @@ UPDATE person_skill
 SET requested_at = NOW()
 WHERE requested_at IS NULL;
 
+DO $$
+BEGIN
+    IF EXISTS (SELECT 1 FROM pg_type WHERE typname = 'person_skill_status_enum') THEN
+        IF EXISTS (
+            SELECT 1
+            FROM pg_enum e
+            JOIN pg_type t ON t.oid = e.enumtypid
+            WHERE t.typname = 'person_skill_status_enum'
+              AND e.enumlabel = 'Requested'
+        ) AND NOT EXISTS (
+            SELECT 1
+            FROM pg_enum e
+            JOIN pg_type t ON t.oid = e.enumtypid
+            WHERE t.typname = 'person_skill_status_enum'
+              AND e.enumlabel = 'Pending'
+        ) THEN
+            EXECUTE 'ALTER TYPE person_skill_status_enum RENAME VALUE ''Requested'' TO ''Pending''';
+        END IF;
+    END IF;
+END$$;
+
+DO $$
+BEGIN
+    IF NOT EXISTS (SELECT 1 FROM pg_type WHERE typname = 'skill_request_status_enum') THEN
+        CREATE TYPE skill_request_status_enum AS ENUM ('Requested', 'Approved', 'Rejected');
+    ELSE
+        IF EXISTS (
+            SELECT 1
+            FROM pg_enum e
+            JOIN pg_type t ON t.oid = e.enumtypid
+            WHERE t.typname = 'skill_request_status_enum'
+              AND e.enumlabel = 'Pending'
+        ) AND NOT EXISTS (
+            SELECT 1
+            FROM pg_enum e
+            JOIN pg_type t ON t.oid = e.enumtypid
+            WHERE t.typname = 'skill_request_status_enum'
+              AND e.enumlabel = 'Requested'
+        ) THEN
+            EXECUTE 'ALTER TYPE skill_request_status_enum RENAME VALUE ''Pending'' TO ''Requested''';
+        END IF;
+    END IF;
+END$$;
+
+CREATE TABLE IF NOT EXISTS skill_request (
+    request_id SERIAL PRIMARY KEY,
+    requested_by INT NOT NULL REFERENCES person(person_id) ON DELETE CASCADE,
+    skill_name VARCHAR(255) NOT NULL,
+    skill_type skill_type_enum NOT NULL,
+    justification TEXT DEFAULT '',
+    status skill_request_status_enum NOT NULL DEFAULT 'Requested',
+    created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    resolved_at TIMESTAMPTZ,
+    resolved_by INT REFERENCES person(person_id),
+    resolution_notes TEXT,
+    created_skill_id INT REFERENCES skill(skill_id)
+);
+
 
 
 

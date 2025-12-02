@@ -2,7 +2,7 @@ const express = require('express');
 const { authenticate } = require('../config/auth/authMiddleware');
 const { authorizeRoles } = require('../config/auth/requireRole');
 const db = require('../config/db');
-const { ensureCompanyDesiredSkillsTable } = require('../utils/highValueSkillsTable');
+const { ensureCompanyDesiredSkillsTable, ensureTeamHighValueSkillsTable } = require('../utils/highValueSkillsTable');
 
 const router = express.Router();
 const companyDesiredRouter = express.Router();
@@ -224,21 +224,36 @@ router.put('/:id', authenticate, authorizeRoles('admin'), async (req, res) => {
 
 // Delete a skill (admin only)
 router.delete('/:id', authenticate, authorizeRoles('admin'), async (req, res) => {
+  const { id } = req.params;
+  const client = await db.connect();
   try {
-    const { id } = req.params;
+    await ensureTeamHighValueSkillsTable();
+    await ensureCompanyDesiredSkillsTable();
 
-    const result = await db.query(
-      'DELETE FROM skill WHERE skill_id = $1 RETURNING skill_id',
-      [id]
-    );
+    await client.query('BEGIN');
 
-    if (result.rows.length === 0) {
+    const existing = await client.query('SELECT skill_id FROM skill WHERE skill_id = $1', [id]);
+    if (existing.rowCount === 0) {
+      await client.query('ROLLBACK');
       return res.status(404).json({ error: 'Skill not found' });
     }
 
-    res.json({ message: 'Skill deleted successfully', skill_id: id });
+    await client.query('DELETE FROM team_high_value_skills WHERE skill_id = $1', [id]);
+    await client.query('DELETE FROM company_desired_skills WHERE skill_id = $1', [id]);
+    await client.query('DELETE FROM person_skill WHERE skill_id = $1', [id]);
+    await client.query('DELETE FROM project_skill_required WHERE skill_id = $1', [id]);
+    await client.query('UPDATE skill_request SET created_skill_id = NULL WHERE created_skill_id = $1', [id]);
+
+    await client.query('DELETE FROM skill WHERE skill_id = $1', [id]);
+
+    await client.query('COMMIT');
+
+    res.json({ message: 'Skill deleted successfully', skill_id: Number(id) });
   } catch (err) {
+    await client.query('ROLLBACK');
     res.status(500).json({ error: err.message });
+  } finally {
+    client.release();
   }
 });
 

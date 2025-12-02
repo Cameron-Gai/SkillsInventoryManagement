@@ -9,6 +9,14 @@ const statusConfig = {
       borderColor: 'var(--accent-warning-border)',
     },
   },
+  requested: {
+    label: 'Requested',
+    style: {
+      backgroundColor: 'var(--accent-warning-bg)',
+      color: 'var(--accent-warning-text)',
+      borderColor: 'var(--accent-warning-border)',
+    },
+  },
   great: {
     label: 'Great',
     style: {
@@ -74,5 +82,5 @@ export default function StatusBadges({ status }) {
 }
 
 StatusBadges.propTypes = {
-  status: PropTypes.oneOf(['pending', 'approved', 'rejected', 'great', 'good', 'okay', 'needs_work']),
+  status: PropTypes.oneOf(['pending', 'requested', 'approved', 'rejected', 'great', 'good', 'okay', 'needs_work']),
 };

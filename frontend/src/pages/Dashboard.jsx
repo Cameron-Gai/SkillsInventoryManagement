@@ -106,9 +106,10 @@ export default function Dashboard() {
       }
     }
 
-    if (skill?.already_requested) {
+    const alreadyPending = skill?.already_pending ?? skill?.already_requested
+    if (alreadyPending) {
       return {
-        label: 'Requested',
+        label: 'Pending',
         badgeClass: 'bg-amber-100 text-amber-700 border border-amber-200',
       }
     }

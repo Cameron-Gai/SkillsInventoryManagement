@@ -5,6 +5,15 @@ const db = require('../config/db');
 
 const router = express.Router();
 
+async function managerCanAccess(managerId, targetPersonId) {
+  if (!managerId || !targetPersonId) return false;
+  const result = await db.query(
+    'SELECT 1 FROM person WHERE person_id = $1 AND manager_person_id = $2',
+    [targetPersonId, managerId]
+  );
+  return result.rowCount > 0;
+}
+
 // Get skills for current user
 router.get('/me', authenticate, async (req, res) => {
   try {
@@ -95,15 +104,12 @@ router.post('/me', authenticate, async (req, res) => {
     const userId = req.user.person_id;
     const {
       skill_id,
-      status = 'Requested',
       experience_years = 0,
       usage_frequency = 'Occasionally',
       proficiency_level = 'Intermediate',
       notes = '',
-      requested_at,
     } = req.body;
-
-    const requestedAtValue = requested_at ? new Date(requested_at) : new Date();
+    const requestedAtValue = new Date();
 
     if (!skill_id) {
       return res.status(400).json({ error: 'skill_id is required' });
@@ -115,22 +121,21 @@ router.post('/me', authenticate, async (req, res) => {
       return res.status(404).json({ error: 'Skill not found' });
     }
 
-    // Insert or update person_skill
+    const existingSkill = await db.query(
+      'SELECT 1 FROM person_skill WHERE person_id = $1 AND skill_id = $2',
+      [userId, skill_id]
+    );
+
+    if (existingSkill.rowCount > 0) {
+      return res.status(409).json({ error: 'Skill already exists in your inventory. Use edit to update it.' });
+    }
+
+    // Insert person_skill request
     const result = await db.query(
       `INSERT INTO person_skill (person_id, skill_id, status, experience_years, usage_frequency, proficiency_level, notes, requested_at)
-       VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
-       ON CONFLICT (person_id, skill_id) DO UPDATE SET
-         status = EXCLUDED.status,
-         experience_years = EXCLUDED.experience_years,
-         usage_frequency = EXCLUDED.usage_frequency,
-         proficiency_level = EXCLUDED.proficiency_level,
-         notes = EXCLUDED.notes,
-         requested_at = CASE
-           WHEN EXCLUDED.status = 'Requested' THEN EXCLUDED.requested_at
-           ELSE person_skill.requested_at
-         END
+       VALUES ($1, $2, 'Pending', $3, $4, $5, $6, $7)
        RETURNING person_id, skill_id, status, experience_years, usage_frequency, proficiency_level, notes, requested_at`,
-      [userId, skill_id, status, experience_years, usage_frequency, proficiency_level, notes, requestedAtValue]
+      [userId, skill_id, experience_years, usage_frequency, proficiency_level, notes, requestedAtValue]
     );
 
     res.status(201).json({
@@ -154,7 +159,7 @@ router.post('/user/:userId', authenticate, authorizeRoles('admin'), async (req, 
     const { userId } = req.params;
     const {
       skill_id,
-      status = 'Requested',
+      status = 'Pending',
       experience_years = 0,
       usage_frequency = 'Occasionally',
       proficiency_level = 'Intermediate',
@@ -190,7 +195,7 @@ router.post('/user/:userId', authenticate, authorizeRoles('admin'), async (req, 
          proficiency_level = EXCLUDED.proficiency_level,
          notes = EXCLUDED.notes,
          requested_at = CASE
-           WHEN EXCLUDED.status = 'Requested' THEN EXCLUDED.requested_at
+           WHEN EXCLUDED.status = 'Pending' THEN EXCLUDED.requested_at
            ELSE person_skill.requested_at
          END
        RETURNING person_id, skill_id, status, experience_years, usage_frequency, proficiency_level, notes, requested_at`,
@@ -218,33 +223,26 @@ router.put('/me/:skillId', authenticate, async (req, res) => {
     const userId = req.user.person_id;
     const { skillId } = req.params;
     const {
-      status,
       experience_years,
       usage_frequency,
       proficiency_level,
       notes,
-      requested_at,
     } = req.body;
+    const hasUpdates = [experience_years, usage_frequency, proficiency_level, notes].some((value) => value !== undefined);
 
-    const requestedAtValue = status === 'Requested'
-      ? (requested_at ? new Date(requested_at) : new Date())
-      : null;
-
-    if (!status) {
-      return res.status(400).json({ error: 'status is required' });
+    if (!hasUpdates) {
+      return res.status(400).json({ error: 'Provide at least one field to update.' });
     }
 
     const result = await db.query(
       `UPDATE person_skill
-         SET status = $1,
-           experience_years = COALESCE($4, experience_years),
-           usage_frequency = COALESCE($5, usage_frequency),
-           proficiency_level = COALESCE($6, proficiency_level),
-           notes = COALESCE($7, notes),
-           requested_at = CASE WHEN $1 = 'Requested' THEN COALESCE($8, requested_at) ELSE requested_at END
-       WHERE person_id = $2 AND skill_id = $3
+           SET experience_years = COALESCE($3, experience_years),
+           usage_frequency = COALESCE($4, usage_frequency),
+           proficiency_level = COALESCE($5, proficiency_level),
+           notes = COALESCE($6, notes)
+       WHERE person_id = $1 AND skill_id = $2
          RETURNING person_id, skill_id, status, experience_years, usage_frequency, proficiency_level, notes, requested_at`,
-        [status, userId, skillId, experience_years, usage_frequency, proficiency_level, notes, requestedAtValue]
+        [userId, skillId, experience_years, usage_frequency, proficiency_level, notes]
     );
 
     if (result.rows.length === 0) {
@@ -267,7 +265,7 @@ router.put('/me/:skillId', authenticate, async (req, res) => {
 });
 
 // Update skill status for a specific user (admin only)
-router.put('/user/:userId/:skillId', authenticate, authorizeRoles('admin'), async (req, res) => {
+router.put('/user/:userId/:skillId', authenticate, authorizeRoles('admin', 'manager'), async (req, res) => {
   try {
     const { userId, skillId } = req.params;
     const {
@@ -279,7 +277,19 @@ router.put('/user/:userId/:skillId', authenticate, authorizeRoles('admin'), asyn
       requested_at,
     } = req.body;
 
-    const requestedAtValue = status === 'Requested'
+    const allowedStatuses = new Set(['Approved', 'Canceled', 'Pending']);
+    if (!allowedStatuses.has(status)) {
+      return res.status(400).json({ error: 'Invalid status value' });
+    }
+
+    if (req.user.role === 'manager') {
+      const permitted = await managerCanAccess(req.user.person_id, userId);
+      if (!permitted) {
+        return res.status(403).json({ error: 'Managers may only update their direct reports.' });
+      }
+    }
+
+    const requestedAtValue = status === 'Pending'
       ? (requested_at ? new Date(requested_at) : new Date())
       : null;
 
@@ -294,7 +304,7 @@ router.put('/user/:userId/:skillId', authenticate, authorizeRoles('admin'), asyn
            usage_frequency = COALESCE($5, usage_frequency),
            proficiency_level = COALESCE($6, proficiency_level),
            notes = COALESCE($7, notes),
-           requested_at = CASE WHEN $1 = 'Requested' THEN COALESCE($8, requested_at) ELSE requested_at END
+           requested_at = CASE WHEN $1 = 'Pending' THEN COALESCE($8, requested_at) ELSE requested_at END
        WHERE person_id = $2 AND skill_id = $3
          RETURNING person_id, skill_id, status, experience_years, usage_frequency, proficiency_level, notes, requested_at`,
         [status, userId, skillId, experience_years, usage_frequency, proficiency_level, notes, requestedAtValue]

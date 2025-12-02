@@ -55,6 +55,7 @@ const sortSkillsByRequestAge = (skills = []) => {
 }
 
 const stripTrailingAgo = (label) => (typeof label === 'string' ? label.replace(/\sago$/, '') : label)
+const buildActionKey = (item, skill) => `${item.id ?? item.person_id ?? item.username ?? item.name}-${skill.id ?? skill.skill_id ?? skill.name}`
 
 const fallbackResults = [
   {
@@ -78,7 +79,7 @@ const fallbackResults = [
   },
 ]
 
-export default function SearchResultCards({ results = [] }) {
+export default function SearchResultCards({ results = [], onResolveSkill, pendingActionKey }) {
   const data = results.length ? results : fallbackResults
 
   return (
@@ -105,11 +106,17 @@ export default function SearchResultCards({ results = [] }) {
           </div>
 
           <div className="space-y-2">
-            {sortSkillsByRequestAge(item.skills)?.map((skill) => (
-              <div
-                key={skill.id ?? `${item.id}-${skill.name}`}
-                className="rounded-lg border border-[var(--border-color)] bg-[var(--background-muted)] p-3"
-              >
+            {sortSkillsByRequestAge(item.skills)?.map((skill) => {
+              const normalizedStatus = (skill.status ?? '').toLowerCase()
+              const canResolve = typeof onResolveSkill === 'function' && ['pending', 'requested'].includes(normalizedStatus)
+              const actionKey = buildActionKey(item, skill)
+              const busy = pendingActionKey === actionKey
+
+              return (
+                <div
+                  key={skill.id ?? `${item.id}-${skill.name}`}
+                  className="rounded-lg border border-[var(--border-color)] bg-[var(--background-muted)] p-3"
+                >
                 <div className="flex items-start justify-between gap-4">
                   <div>
                     <p className="text-sm font-medium text-[var(--text-color)]">{skill.name}</p>
@@ -122,7 +129,7 @@ export default function SearchResultCards({ results = [] }) {
                       </span>
                     )}
                     {skill.requestedAt && (
-                      <p className="text-xs text-[var(--text-color-secondary)]">Requested {formatRelativeTime(skill.requestedAt)}</p>
+                      <p className="text-xs text-[var(--text-color-secondary)]">Pending since {formatRelativeTime(skill.requestedAt)}</p>
                     )}
                   </div>
                 </div>
@@ -134,8 +141,31 @@ export default function SearchResultCards({ results = [] }) {
                 {skill.notes && (
                   <p className="mt-2 text-xs italic text-[var(--text-color-secondary)]">Notes: {skill.notes}</p>
                 )}
-              </div>
-            ))}
+                {canResolve && (
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    {['Approved', 'Canceled'].map((nextStatus) => {
+                      const isApprove = nextStatus === 'Approved'
+                      return (
+                        <button
+                          key={`${actionKey}-${nextStatus}`}
+                          type="button"
+                          disabled={busy}
+                          onClick={() => onResolveSkill(item, skill, nextStatus)}
+                          className={`rounded-md border px-3 py-1 text-xs font-semibold transition ${
+                            isApprove
+                              ? 'border-emerald-200 bg-emerald-50 text-emerald-700 hover:bg-emerald-100'
+                              : 'border-rose-200 bg-rose-50 text-rose-700 hover:bg-rose-100'
+                          } ${busy ? 'opacity-60' : ''}`}
+                        >
+                          {busy ? 'Saving...' : isApprove ? 'Approve' : 'Reject'}
+                        </button>
+                      )
+                    })}
+                  </div>
+                )}
+                </div>
+              )
+            })}
           </div>
         </div>
       ))}
@@ -169,4 +199,6 @@ SearchResultCards.propTypes = {
       pendingLabel: PropTypes.string,
     }),
   ),
+  onResolveSkill: PropTypes.func,
+  pendingActionKey: PropTypes.string,
 }

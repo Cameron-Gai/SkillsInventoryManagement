@@ -1,7 +1,7 @@
 // Team.jsx
 // Manager dashboard for viewing and managing team members.
 
-import { useState, useEffect, useMemo } from 'react'
+import { useState, useEffect, useMemo, useCallback } from 'react'
 import Sidebar from '@/components/Sidebar'
 import ApprovalQueuePriorityIndicator from '@/components/visuals/ApprovalQueuePriorityIndicator'
 import DataVolumeCounters from '@/components/visuals/DataVolumeCounters'
@@ -49,7 +49,7 @@ const normalizePendingSkills = (member) => {
         proficiencyLevel: skill.proficiency_level ?? skill.proficiencyLevel ?? null,
         usageFrequency: skill.usage_frequency ?? skill.usageFrequency ?? null,
         experienceYears,
-        status: skill.status ?? skill.review_status ?? skill.state ?? null,
+        status: skill.status ?? skill.review_status ?? skill.state ?? 'Pending',
         notes: skill.notes ?? skill.note ?? '',
       }
     })
@@ -75,34 +75,45 @@ export default function Team() {
   const [highValueForm, setHighValueForm] = useState({ skill_id: '', priority: 'High', notes: '' })
   const [highValueError, setHighValueError] = useState(null)
   const [highValueLoading, setHighValueLoading] = useState(false)
+  const [reviewActionKey, setReviewActionKey] = useState(null)
+  const [reviewActionError, setReviewActionError] = useState(null)
 
-  useEffect(() => {
-    const fetchTeamData = async () => {
-      try {
+  const fetchTeamData = useCallback(async ({ withLoader = true } = {}) => {
+    try {
+      if (withLoader) {
         setLoading(true)
         setError(null)
+      }
 
-        const [teamRes, insightsRes, highValueRes, skillsRes] = await Promise.all([
-          teamApi.getMyTeam(),
-          teamApi.getTeamInsights(),
-          teamApi.getHighValueSkills(),
-          skillsApi.getAllSkills(),
-        ])
+      const [teamRes, insightsRes, highValueRes, skillsRes] = await Promise.all([
+        teamApi.getMyTeam(),
+        teamApi.getTeamInsights(),
+        teamApi.getHighValueSkills(),
+        skillsApi.getAllSkills(),
+      ])
 
-        setTeamMembers(teamRes.data || [])
-        setInsights(insightsRes.data)
-        setHighValueSkills(highValueRes.data || [])
-        setSkillOptions(skillsRes.data || [])
-      } catch (err) {
+      setTeamMembers(teamRes.data || [])
+      setInsights(insightsRes.data)
+      setHighValueSkills(highValueRes.data || [])
+      setSkillOptions(skillsRes.data || [])
+    } catch (err) {
+      if (withLoader) {
         setError('Failed to load team data: ' + err.message)
-        console.error('Error:', err)
-      } finally {
+      }
+      console.error('Error:', err)
+      if (!withLoader) {
+        throw err
+      }
+    } finally {
+      if (withLoader) {
         setLoading(false)
       }
     }
-
-    fetchTeamData()
   }, [])
+
+  useEffect(() => {
+    fetchTeamData()
+  }, [fetchTeamData])
 
   const handleSelectMember = async (memberId) => {
     try {
@@ -464,6 +475,30 @@ export default function Team() {
     }
   }
 
+  const handleReviewAction = async (item, skill, nextStatus) => {
+    const memberId = item?.id ?? item?.person_id
+    const skillId = skill?.id ?? skill?.skill_id
+    if (!memberId || !skillId) return
+
+    const actionKey = `${memberId}-${skillId}`
+    setReviewActionKey(actionKey)
+    setReviewActionError(null)
+
+    const action = nextStatus === 'Approved'
+      ? () => teamApi.approveTeamMemberSkill(memberId, skillId)
+      : () => teamApi.rejectTeamMemberSkill(memberId, skillId)
+
+    try {
+      await action()
+      await fetchTeamData({ withLoader: false })
+    } catch (err) {
+      console.error('Failed to update skill status:', err)
+      setReviewActionError(err.response?.data?.error || err.message || 'Unable to update the request.')
+    } finally {
+      setReviewActionKey(null)
+    }
+  }
+
   return (
     <div className="flex min-h-screen bg-[var(--background)] text-[var(--text-color)]">
       <Sidebar />
@@ -526,7 +561,7 @@ export default function Team() {
                   onChange={handleHighValueFormChange}
                   className="mt-1 block w-full rounded-md border border-[var(--border-color)] bg-[var(--background)] px-3 py-2 text-[var(--text-color)]"
                 >
-                  <option value="">Select a skill…</option>
+                  <option value="">Select a skill...</option>
                   {availableSkillOptions.map((skill) => (
                     <option key={skill.id} value={skill.id}>{skill.name} • {skill.type}</option>
                   ))}
@@ -562,7 +597,7 @@ export default function Team() {
                   disabled={highValueLoading}
                   className="w-full rounded-md bg-[var(--color-primary)] px-4 py-2 text-white font-medium hover:bg-[var(--color-primary-dark)] disabled:opacity-60"
                 >
-                  {highValueLoading ? 'Saving…' : 'Add Skill'}
+                  {highValueLoading ? 'Saving...' : 'Add Skill'}
                 </button>
               </div>
             </form>
@@ -600,12 +635,19 @@ export default function Team() {
               <p className="text-sm font-semibold uppercase tracking-wide text-[color:var(--color-primary)]">Team Review Queue</p>
               <h2 className="text-xl font-semibold text-[var(--text-color)]">Pending Team Requests</h2>
               <p className="text-sm text-[var(--text-color-secondary)]">Only includes members assigned to you as manager.</p>
+              {reviewActionError && (
+                <p className="mt-2 text-sm text-red-600">{reviewActionError}</p>
+              )}
             </div>
             {teamReviewQueue.length === 0 ? (
               <p className="text-sm text-[var(--text-color-secondary)]">No pending skill requests from your team.</p>
             ) : (
               <div className="max-h-[34rem] overflow-y-auto pr-2">
-                <SearchResultCards results={teamReviewQueue} />
+                <SearchResultCards
+                  results={teamReviewQueue}
+                  onResolveSkill={handleReviewAction}
+                  pendingActionKey={reviewActionKey}
+                />
               </div>
             )}
           </section>
@@ -658,7 +700,7 @@ export default function Team() {
                       <span className={`px-2 py-1 rounded text-xs font-semibold ${
                         skill.status === 'Approved'
                           ? 'bg-green-100 text-green-700'
-                          : skill.status === 'Requested'
+                          : skill.status === 'Pending'
                           ? 'bg-yellow-100 text-yellow-700'
                           : 'bg-red-100 text-red-700'
                       }`}>

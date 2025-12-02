@@ -14,6 +14,7 @@ A web-based platform for managing employee skill profiles, supporting organizati
 - Manager approvals and search by skill/team  
 - Admin data audits, imports, and backups  
 - Role-based interfaces for Employee / Manager / Admin  
+- Pending skill requests require manager or admin approval before they count toward the catalog  
 
 ---
 
