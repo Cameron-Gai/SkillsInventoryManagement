@@ -1,18 +1,18 @@
+//Sidebar.jsx
 import { NavLink, useNavigate } from 'react-router-dom'
 import Logout from './Logout'
-import { getStoredUser } from '@/utils/auth'
 
 const navBaseClasses =
   'flex w-full items-center justify-between rounded-lg px-3 py-2 text-sm font-semibold transition border border-transparent'
 
 export default function Sidebar() {
-  const user = getStoredUser()
+  const user = JSON.parse(localStorage.getItem('sim_user'))
   const navigate = useNavigate()
   const role = user?.role
 
   const links = [
     { to: '/dashboard', label: 'My Profile', allowedRoles: ['employee', 'manager', 'admin'] },
-    { to: '/team', label: 'My Team', allowedRoles: ['manager'] },
+    { to: '/team', label: 'My Team', allowedRoles: ['manager', 'admin'] },
     { to: '/admin', label: 'Administration', allowedRoles: ['admin'] },
   ]
 

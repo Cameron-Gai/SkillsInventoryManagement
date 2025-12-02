@@ -1,17 +1,24 @@
+--Run every block one by one
 -- Person table
+--{ 1) run these first
 ALTER TABLE person DROP CONSTRAINT fk_person_org;
 ALTER TABLE person DROP CONSTRAINT fk_person_manager;
 
 -- Organization table
 ALTER TABLE organization DROP CONSTRAINT fk_org_manager;
+--} 1) till here
 
---insert all tables with \copy command manually
---skills=# \copy organization(organization_id, organization_name, organization_manager_person_id) FROM 'path/to/Organization_data.csv' DELIMITER ',' CSV HEADER;
---skills=# \copy person(person_id, person_name, manager_person_id, member_of_organization_id, is_admin) FROM 'path/to/Person_data.csv' DELIMITER ',' CSV HEADER;
---skills=# \copy skill(skill_id, skill_name, status, skill_type) FROM 'path/to/Skill_data.csv' DELIMITER ',' CSV HEADER;
---skills=# \copy project_skill_required(project_id, skill_id, status) FROM 'path/to/Project_Skill_Required_data.csv' DELIMITER ',' CSV HEADER;
+
+--2) Do this after (CHANGE CSV FILE PATH IMPORTANTTTT)
+--insert all tables with \copy command manually on command prompt. You can do it in sql directly too with import
+--\copy organization(organization_id, organization_name, organization_manager_person_id) FROM 'path/to/Organization_data.csv' DELIMITER ',' CSV HEADER;
+--\copy person(person_id, person_name, manager_person_id, member_of_organization_id, is_admin) FROM 'path/to/Person_data.csv' DELIMITER ',' CSV HEADER;
+--\copy skill(skill_id, skill_name, status, skill_type) FROM 'path/to/Skill_data.csv' DELIMITER ',' CSV HEADER;
+--\copy project_skill_required(project_id, skill_id, status) FROM 'path/to/Project_Skill_Required_data.csv' DELIMITER ',' CSV HEADER;
 -- Insert data into project table
 
+
+--3) this after
 INSERT INTO project (
     project_id, 
     project_name, 
@@ -25,6 +32,8 @@ INSERT INTO project (
 (3, 'Customer A1', 'Approved', 2, TO_DATE('6/22/2025','MM/DD/YYYY'), TO_DATE('6/21/2026','MM/DD/YYYY')),
 (4, 'New Low Cost Carrier CD', 'Approved', 2, TO_DATE('10/10/2025','MM/DD/YYYY'), TO_DATE('4/30/2026','MM/DD/YYYY'));
 
+
+--{ 4) Do this next
 UPDATE person
 SET manager_person_id = NULL
 WHERE manager_person_id = 0;
@@ -56,8 +65,10 @@ SET role = CASE
     WHEN EXISTS (SELECT 1 FROM person p2 WHERE p2.manager_person_id = person.person_id) THEN 'manager'
     ELSE 'employee'
 END;
+--} 4) UNTIL HEREEE
 
 
+--5) Can run everything else below this together
 ALTER TABLE person
 ADD COLUMN password TEXT;
 
@@ -68,6 +79,10 @@ UPDATE person
 SET username = LOWER(REPLACE(person_name, ' ', '.'));
 
 
+ALTER TABLE person_skill ADD COLUMN IF NOT EXISTS level VARCHAR(50);
+ALTER TABLE person_skill ADD COLUMN IF NOT EXISTS years INT;
+ALTER TABLE person_skill ADD COLUMN IF NOT EXISTS frequency VARCHAR(50);
+ALTER TABLE person_skill ADD COLUMN IF NOT EXISTS notes TEXT;
 
 
 

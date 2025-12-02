@@ -213,6 +213,30 @@ router.put('/user/:userId/:skillId', authenticate, authorizeRoles('admin'), asyn
   }
 });
 
+// Update skill details for a specific user (admin or manager)
+router.put('/user/:userId/:skillId/details', authenticate, authorizeRoles('admin', 'manager'), async (req, res) => {
+  try {
+    const { userId, skillId } = req.params;
+    const { level, years, frequency, notes } = req.body;
+
+    const result = await db.query(
+      `UPDATE person_skill
+       SET level = $1, years = $2, frequency = $3, notes = $4
+       WHERE person_id = $5 AND skill_id = $6
+       RETURNING person_id, skill_id, status, level, years, frequency, notes`,
+      [level, years, frequency, notes, userId, skillId]
+    );
+
+    if (result.rows.length === 0) {
+      return res.status(404).json({ error: 'Skill not found for user' });
+    }
+
+    res.json(result.rows[0]);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
 // Remove a skill from current user
 router.delete('/me/:skillId', authenticate, async (req, res) => {
   try {

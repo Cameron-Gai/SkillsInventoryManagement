@@ -189,6 +189,40 @@ router.get('/insights', authenticate, authorizeRoles('manager', 'admin'), async 
   }
 });
 
+// Manager: consolidated approved skills for all team members
+router.get('/my-team/approved-skills', authenticate, authorizeRoles('manager', 'admin'), async (req, res) => {
+  try {
+    const managerId = req.user.person_id;
+
+    const result = await db.query(
+      `SELECT p.person_id, p.person_name, p.username,
+              s.skill_id, s.skill_name, s.skill_type,
+              ps.level, ps.years, ps.frequency, ps.notes
+       FROM person_skill ps
+       JOIN person p ON ps.person_id = p.person_id
+       JOIN skill s ON ps.skill_id = s.skill_id
+       WHERE p.manager_person_id = $1 AND ps.status = 'Approved'
+       ORDER BY p.person_name, s.skill_name`,
+      [managerId]
+    );
+
+    const items = result.rows.map(r => ({
+      person_id: r.person_id,
+      name: r.person_name,
+      username: r.username,
+      skill: { id: r.skill_id, name: r.skill_name, type: r.skill_type },
+      level: r.level,
+      years: r.years,
+      frequency: r.frequency,
+      notes: r.notes,
+    }));
+
+    res.json(items);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
 // Approve a skill for a team member
 router.patch('/my-team/:memberId/skills/:skillId/approve', authenticate, authorizeRoles('manager', 'admin'), async (req, res) => {
   try {

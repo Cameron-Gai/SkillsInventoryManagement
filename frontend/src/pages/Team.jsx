@@ -14,6 +14,8 @@ export default function Team() {
   const [selectedMember, setSelectedMember] = useState(null)
   const [memberDetails, setMemberDetails] = useState(null)
   const [pendingRequests, setPendingRequests] = useState([])
+  const [confirmAction, setConfirmAction] = useState(null) // { memberId, skillId, action: 'approve'|'reject' }
+  const [approvedSkills, setApprovedSkills] = useState([])
 
   useEffect(() => {
     const fetchTeamData = async () => {
@@ -28,6 +30,13 @@ export default function Team() {
 
         setTeamMembers(teamRes.data || [])
         setInsights(insightsRes.data)
+        // Fetch consolidated approved skills for manager's team
+        try {
+          const approvedRes = await teamApi.getTeamApprovedSkills()
+          setApprovedSkills(approvedRes.data || [])
+        } catch (err) {
+          console.error('Error fetching approved team skills:', err)
+        }
 
         // Fetch all team members' skills and collect pending requests
         const allPendingRequests = []
@@ -228,6 +237,54 @@ export default function Team() {
           </section>
         )}
 
+        {/* Approved Skills (Team-wide) */}
+        {!loading && approvedSkills.length > 0 && (
+          <section className="rounded-xl border border-[var(--border-color)] bg-[var(--card-background)] p-6 shadow-sm">
+            <div className="flex items-center justify-between">
+              <h2 className="text-xl font-semibold text-[var(--text-color)]">Approved Skills (Team)</h2>
+              <button
+                onClick={async () => {
+                  try {
+                    const approvedRes = await teamApi.getTeamApprovedSkills()
+                    setApprovedSkills(approvedRes.data || [])
+                  } catch (err) {
+                    setError('Failed to refresh approved skills: ' + err.message)
+                  }
+                }}
+                className="rounded-md border border-[var(--border-color)] px-3 py-1.5 text-sm"
+              >
+                Refresh
+              </button>
+            </div>
+            <div className="mt-4 space-y-3">
+              {approvedSkills.map((r) => (
+                <div key={`${r.person_id}-${r.skill.id}`} className="rounded-lg border border-[var(--border-color)] p-4">
+                  <div className="flex items-start justify-between gap-3">
+                    <div className="flex-1">
+                      <p className="font-semibold text-[var(--text-color)]">{r.skill.name}</p>
+                      <p className="text-xs text-[var(--text-color-secondary)]">{r.name} • {r.username} • {r.skill.type}</p>
+                      <div className="mt-2 grid grid-cols-2 md:grid-cols-4 gap-2 text-xs text-[var(--text-color-secondary)]">
+                        {r.level && <div><span className="font-medium">Level:</span> {r.level}</div>}
+                        {r.years !== null && r.years !== undefined && <div><span className="font-medium">Experience:</span> {r.years} yrs</div>}
+                        {r.frequency && <div><span className="font-medium">Frequency:</span> {r.frequency}</div>}
+                        {r.notes && <div className="col-span-2"><span className="font-medium">Notes:</span> {r.notes}</div>}
+                      </div>
+                    </div>
+                    <div className="flex gap-2">
+                      <button
+                        onClick={() => setConfirmAction({ memberId: r.person_id, skillId: r.skill.id, action: 'deleteApproved' })}
+                        className="px-3 py-1.5 text-sm rounded border border-red-300 text-red-600"
+                      >
+                        Delete
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
         <section className="rounded-xl border border-[var(--border-color)] bg-[var(--card-background)] p-6 shadow-sm">
           <h2 className="text-xl font-semibold text-[var(--text-color)]">Team Members</h2>
           {loading ? (
@@ -299,7 +356,7 @@ export default function Team() {
                           {skill.status === 'Requested' && (
                             <div className="flex gap-1">
                               <button
-                                onClick={() => handleApproveSkill(selectedMember, skill.id)}
+                                onClick={() => setConfirmAction({ memberId: selectedMember, skillId: skill.id, action: 'approve' })}
                                 className="flex items-center justify-center w-8 h-8 rounded-full bg-green-600 hover:bg-green-700 text-white transition"
                                 title="Approve"
                               >
@@ -308,7 +365,7 @@ export default function Team() {
                                 </svg>
                               </button>
                               <button
-                                onClick={() => handleRejectSkill(selectedMember, skill.id)}
+                                onClick={() => setConfirmAction({ memberId: selectedMember, skillId: skill.id, action: 'reject' })}
                                 className="flex items-center justify-center w-8 h-8 rounded-full bg-red-600 hover:bg-red-700 text-white transition"
                                 title="Reject"
                               >
@@ -326,6 +383,41 @@ export default function Team() {
               )}
             </div>
           </section>
+        )}
+
+        {/* Approval/Cancellation Confirmation Modal */}
+        {confirmAction && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
+            <div className="w-full max-w-md rounded-lg bg-[var(--card-background)] p-6 shadow-xl">
+              <h3 className="text-xl font-semibold text-[var(--text-color)]">
+                {confirmAction.action === 'approve' ? 'Confirm Approval'
+                  : confirmAction.action === 'reject' ? 'Confirm Cancellation'
+                  : 'Delete Approved Skill'}
+              </h3>
+              <p className="mt-3 text-sm text-[var(--text-color-secondary)]">
+                {confirmAction.action === 'deleteApproved' ? 'Are you sure you want to delete this approved skill?' : `Are you sure you want to ${confirmAction.action} this request?`}
+              </p>
+              <div className="mt-6 flex justify-end gap-3">
+                <button onClick={() => setConfirmAction(null)} className="rounded-md border border-[var(--border-color)] px-4 py-2 text-sm font-medium text-[var(--text-color-secondary)] hover:border-[color:var(--color-primary)]">Cancel</button>
+                <button
+                  onClick={async () => {
+                    if (confirmAction.action === 'approve') {
+                      await handleApproveSkill(confirmAction.memberId, confirmAction.skillId)
+                    } else if (confirmAction.action === 'reject') {
+                      await handleRejectSkill(confirmAction.memberId, confirmAction.skillId)
+                    } else if (confirmAction.action === 'deleteApproved') {
+                      await teamApi.deleteMemberSkill(confirmAction.memberId, confirmAction.skillId)
+                      setApprovedSkills(prev => prev.filter(s => !(s.person_id === confirmAction.memberId && s.skill.id === confirmAction.skillId)))
+                    }
+                    setConfirmAction(null)
+                  }}
+                  className={`rounded-md px-4 py-2 text-sm font-semibold text-white transition ${confirmAction.action === 'approve' ? 'bg-green-600 hover:bg-green-700' : confirmAction.action === 'reject' ? 'bg-red-600 hover:bg-red-700' : 'bg-red-600 hover:bg-red-700'}`}
+                >
+                  {confirmAction.action === 'approve' ? 'Approve' : confirmAction.action === 'reject' ? 'Cancel Request' : 'Delete'}
+                </button>
+              </div>
+            </div>
+          </div>
         )}
       </main>
     </div>

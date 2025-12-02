@@ -21,6 +21,14 @@ const teamApi = {
   rejectTeamMemberSkill: (memberId, skillId) =>
     axios.patch(`/team/my-team/${memberId}/skills/${skillId}/reject`),
 
+  // Update details (level, years, frequency, notes) for a member's skill
+  updateMemberSkillDetails: (memberId, skillId, details) =>
+    axios.put(`/person-skills/user/${memberId}/${skillId}/details`, details),
+
+  // Delete a member's skill
+  deleteMemberSkill: (memberId, skillId) =>
+    axios.delete(`/person-skills/user/${memberId}/${skillId}`),
+
   // Admin: list all skill requests with optional filters
   getAdminRequests: ({ page = 1, pageSize = 20, status = '' } = {}) => {
     const params = new URLSearchParams()
@@ -29,6 +37,9 @@ const teamApi = {
     if (status) params.set('status', status)
     return axios.get(`/team/admin/requests?${params.toString()}`)
   },
+
+  // Manager: consolidated approved skills for team
+  getTeamApprovedSkills: () => axios.get('/team/my-team/approved-skills'),
 };
 
 export default teamApi;
