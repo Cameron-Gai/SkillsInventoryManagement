@@ -9,10 +9,11 @@ export default function Sidebar() {
   const user = getStoredUser()
   const navigate = useNavigate()
   const role = user?.role
+  const canManageTeam = role === 'manager' || (role === 'admin' && user?.has_direct_reports)
 
   const links = [
     { to: '/dashboard', label: 'My Profile', allowedRoles: ['employee', 'manager', 'admin'] },
-    { to: '/team', label: 'My Team', allowedRoles: ['manager'] },
+    ...(canManageTeam ? [{ to: '/team', label: 'My Team', allowedRoles: ['manager', 'admin'] }] : []),
     { to: '/admin', label: 'Administration', allowedRoles: ['admin'] },
   ]
 

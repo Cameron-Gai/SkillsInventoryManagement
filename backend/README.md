@@ -4,23 +4,29 @@ This package hosts the Express.js backend for the Skills Inventory and Catalog S
 
 ## Prerequisites
 - Node.js 18+ and npm
-- Optional: PostgreSQL instance for persistence
+- Docker Desktop (recommended) or access to a PostgreSQL 15 instance
+- PowerShell (if you plan to run the repo bootstrap script)
 
 ## Getting Started
 1. Install dependencies:
    ```bash
    npm install
    ```
-2. Create a `.env` file in the `backend/` directory (see [Environment variables](#environment-variables)).
-3. Start the server:
-   ```bash
-   npm start
+2. Copy `.env.example` to `.env` and populate the values listed in [Environment variables](#environment-variables).
+3. (Optional) Provision and seed the demo PostgreSQL database:
+   ```powershell
+   powershell -ExecutionPolicy Bypass -File ../scripts/bootstrap_sim_env.ps1
    ```
-   The server runs on `PORT` (defaults to `3000`) and exposes a health check at `/health`.
+   The script launches a `postgres:15` container named `sim-postgres`, creates default credentials (`sim_user` / `SimP@ssw0rd`), imports `scripts/seed.xlsx`, randomizes employee skills, and assigns manager/team focus priorities.
+4. Start the server (Hot Reload):
+   ```bash
+   npm run dev
+   ```
+   The API listens on `PORT` (default `3000`) and exposes a health check at `/health`.
 
 ## Available Scripts
 - `npm start` – start the Express server.
-- `npm run dev` – same as `npm start` (placeholder for future dev tooling).
+- `npm run dev` – start the server with nodemon style reloads.
 
 ## API Endpoints
 - `GET /health` – returns a JSON payload with status, timestamp, and active environment.
@@ -42,9 +48,21 @@ Configuration defaults are defined in `src/config/config.js`. The following vari
 - `CORS_ORIGIN` (default `http://localhost:3000`)
 - `LOG_LEVEL` (default `info`)
 
+## Database & Seeding Utilities
+- `scripts/xlsxtoDB.py` – bulk-imports `scripts/seed.xlsx` sheets into the configured database.
+- `scripts/assign_random_skills.py` – populates `person_skill` with randomized statuses, proficiency metadata, and timestamps.
+- `scripts/randomize_team_focus.py` – assigns `team_high_value_skills` entries for every manager that has direct reports.
+- `scripts/bootstrap_sim_env.ps1` – orchestrates Docker setup plus the scripts above so you can reproduce the full demo dataset in one step.
+
+All seeders honor `backend/.env` for `DB_HOST`, `DB_PORT`, `DB_NAME`, `DB_USER`, and `DB_PASSWORD`.
+
 ## Project Structure
 - `server.js` – Express application entry point, middleware, error handling, and server bootstrap.
-- `src/config/config.js` – Environment-based configuration values used throughout the backend.
+- `src/config/` – Environment + database config and auth helpers.
+- `src/routes/` – Feature routers (auth, users, skills, teams, etc.).
+- `src/utils/` – Supporting libraries (e.g., company focus calculators, hashing helpers).
 
 ## Notes
-- Additional routes, controllers, services, and database integrations can be added under `src/` following the layered architecture outlined in the root project README.
+- Health check: `GET /api/health`
+- Authentication: JWT via `/api/auth/login` (tokens verified by middleware in `src/config/auth`)
+- When adjusting schema, update both the migration SQL (under `/database` or `/scripts`) and the Excel seed file if you rely on the bootstrapper.

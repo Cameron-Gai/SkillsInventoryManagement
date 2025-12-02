@@ -11,30 +11,26 @@ const personSkillsApi = {
   getUserSkills: (userId) => axios.get(`/person-skills/user/${userId}`),
 
   // Add a skill to current user's profile
-  addMySkill: (skillId, status = "Requested") =>
+  addMySkill: (skillId, payload = {}) =>
     axios.post("/person-skills/me", {
       skill_id: skillId,
-      status,
+      ...payload,
     }),
 
   // Add a skill to a specific user (admin only)
-  addUserSkill: (userId, skillId, status = "Requested") =>
+  addUserSkill: (userId, skillId, payload = {}) =>
     axios.post(`/person-skills/user/${userId}`, {
       skill_id: skillId,
-      status,
+      ...payload,
     }),
 
   // Update skill status for current user
-  updateMySkillStatus: (skillId, status) =>
-    axios.put(`/person-skills/me/${skillId}`, {
-      status,
-    }),
+  updateMySkill: (skillId, payload) =>
+    axios.put(`/person-skills/me/${skillId}`, payload),
 
   // Update skill status for a specific user (admin only)
-  updateUserSkillStatus: (userId, skillId, status) =>
-    axios.put(`/person-skills/user/${userId}/${skillId}`, {
-      status,
-    }),
+  updateUserSkill: (userId, skillId, payload) =>
+    axios.put(`/person-skills/user/${userId}/${skillId}`, payload),
 
   // Remove a skill from current user
   removeMySkill: (skillId) => axios.delete(`/person-skills/me/${skillId}`),

@@ -1,8 +1,12 @@
 // Admin.jsx
 // Admin dashboard with user and skill management.
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import Sidebar from '@/components/Sidebar'
+import BackupHealthStatus from '@/components/visuals/BackupHealthStatus'
+import DataVolumeCounters from '@/components/visuals/DataVolumeCounters'
+import ExportSummaryCounters from '@/components/visuals/ExportSummaryCounters'
+import SearchResultCards from '@/components/visuals/SearchResultCards'
 import usersApi from '@/api/usersApi'
 import skillsApi from '@/api/skillsApi'
 
@@ -37,6 +41,132 @@ export default function Admin() {
 
     fetchData()
   }, [])
+
+  const backupSnapshot = useMemo(() => {
+    const totalRecords = users.length + skills.length
+    const protectedRecords = Math.max(0, Math.round(totalRecords * 0.9))
+    const changeEvents = users.length * 3 + skills.length
+    const changesSinceBackup = Math.max(0, changeEvents - protectedRecords)
+
+    return {
+      protectedRecords,
+      changesSinceBackup,
+    }
+  }, [skills.length, users.length])
+
+  const platformVolumes = useMemo(() => {
+    const organizationIds = users
+      .map((u) => u.organization_id ?? u.member_of_organization_id)
+      .filter((value) => value !== null && value !== undefined)
+
+    return {
+      skills: skills.length,
+      employees: users.length,
+      teams: new Set(organizationIds).size,
+      audits: backupSnapshot.changesSinceBackup,
+    }
+  }, [backupSnapshot.changesSinceBackup, skills.length, users])
+
+  const backupStatusCard = useMemo(() => ({
+    lastBackup: new Date().toLocaleString('en-US', { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' }),
+    status: users.length > 0 ? 'healthy' : 'warning',
+    message: `${backupSnapshot.protectedRecords.toLocaleString('en-US')} records protected in archive`,
+  }), [backupSnapshot.protectedRecords, users.length])
+
+  const exportSummary = useMemo(() => ({
+    files: Math.max(1, Math.round(users.length / 25) || 1),
+    rows: users.length + skills.length,
+    duration: users.length ? `${Math.max(2, Math.round((users.length + skills.length) / 20))}s` : '—',
+  }), [skills.length, users.length])
+
+  const reviewQueue = useMemo(() => {
+    const normalizePendingSkills = (user) => {
+      const rawSkills = Array.isArray(user.pending_skills)
+        ? user.pending_skills
+        : Array.isArray(user.pendingSkills)
+          ? user.pendingSkills
+          : []
+
+      return rawSkills
+        .map((skill) => {
+          if (!skill) return null
+          if (typeof skill === 'string') {
+            return {
+              id: skill,
+              name: skill,
+              type: 'Skill request',
+              requestedAt: null,
+              proficiencyLevel: null,
+              usageFrequency: null,
+              experienceYears: null,
+              notes: '',
+            }
+          }
+
+          const requestedAt = skill.requested_at ?? skill.requestedAt ?? null
+          const experienceValue = skill.experience_years ?? skill.experienceYears ?? null
+          let experienceYears = null
+          if (experienceValue !== null && experienceValue !== undefined && experienceValue !== '') {
+            const parsedExperience = typeof experienceValue === 'number' ? experienceValue : Number(experienceValue)
+            experienceYears = Number.isNaN(parsedExperience) ? null : parsedExperience
+          }
+
+          return {
+            id: skill.skill_id ?? skill.skillId ?? skill.id ?? skill.name ?? `skill-${Math.random().toString(36).slice(2)}`,
+            name: skill.name ?? skill.skill_name ?? 'Skill request',
+            type: skill.type ?? skill.skill_type ?? 'Skill',
+            requestedAt,
+            proficiencyLevel: skill.proficiency_level ?? skill.proficiencyLevel ?? null,
+            usageFrequency: skill.usage_frequency ?? skill.usageFrequency ?? null,
+            experienceYears,
+            notes: skill.notes ?? skill.note ?? '',
+          }
+        })
+        .filter(Boolean)
+    }
+
+    const pendingEntries = users
+      .map((user) => {
+        const pendingSkillsList = normalizePendingSkills(user)
+        const pendingCount = pendingSkillsList.length || user.pending_skills_count || 0
+
+        const pendingTimestamps = pendingSkillsList
+          .map((skill) => skill?.requestedAt)
+          .map((value) => {
+            if (!value) return null
+            const timestamp = new Date(value).getTime()
+            return Number.isNaN(timestamp) ? null : timestamp
+          })
+          .filter((value) => value !== null)
+
+        const oldestPending = pendingTimestamps.length ? Math.min(...pendingTimestamps) : null
+
+        return {
+          user,
+          pendingSkillsList,
+          pendingCount,
+          oldestPending,
+        }
+      })
+      .filter((entry) => entry.pendingCount > 0)
+      .sort((a, b) => {
+        const aTime = a.oldestPending ?? Number.POSITIVE_INFINITY
+        const bTime = b.oldestPending ?? Number.POSITIVE_INFINITY
+        if (aTime !== bTime) return aTime - bTime
+        return b.pendingCount - a.pendingCount
+      })
+      .map((entry) => ({
+        id: entry.user.person_id,
+        name: entry.user.name,
+        role: entry.user.role,
+        status: 'pending',
+        pendingCount: entry.pendingCount,
+        waitTimestamp: entry.oldestPending,
+        skills: entry.pendingSkillsList,
+      }))
+
+    return pendingEntries
+  }, [users])
 
   const handleDeleteUser = async (userId) => {
     if (!window.confirm('Are you sure you want to delete this user?')) return
@@ -98,6 +228,37 @@ export default function Admin() {
             access to these administrative tools.
           </p>
         </header>
+
+        {!loading && (
+          <section className="space-y-4">
+            <div className="grid gap-4 lg:grid-cols-3">
+              <div className="lg:col-span-2">
+                <DataVolumeCounters items={platformVolumes} auditLabel="Audits" />
+              </div>
+              <div className="space-y-2">
+                <BackupHealthStatus {...backupStatusCard} />
+                <p className="text-xs text-[var(--text-color-secondary)]">Backup health status is illustrative placeholder data.</p>
+              </div>
+            </div>
+
+            <div className="grid gap-4 lg:grid-cols-3">
+              <div className="space-y-2">
+                <ExportSummaryCounters summary={exportSummary} />
+                <p className="text-xs text-[var(--text-color-secondary)]">Export summary metrics are placeholders until real exports are wired up.</p>
+              </div>
+              <div className="rounded-xl border border-[var(--border-color)] bg-[var(--card-background)] p-6 shadow-sm space-y-4 lg:col-span-2">
+                <div>
+                  <p className="text-sm font-semibold uppercase tracking-wide text-[color:var(--color-primary)]">Review Queue</p>
+                  <h2 className="text-xl font-semibold text-[var(--text-color)]">Pending Actions</h2>
+                  <p className="text-sm text-[var(--text-color-secondary)]">Spot checks for user updates awaiting approval.</p>
+                </div>
+                <div className="max-h-[34rem] overflow-y-auto pr-2">
+                  <SearchResultCards results={reviewQueue} />
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
 
         <div className="flex gap-4 border-b border-[var(--border-color)]">
           <button

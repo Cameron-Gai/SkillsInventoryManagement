@@ -25,6 +25,13 @@ router.post('/login', async (req, res) => {
     if (!validPassword)
       return res.status(401).json({ error: 'Invalid credentials' });
 
+    const directReportResult = await db.query(
+      'SELECT COUNT(*)::int AS report_count FROM person WHERE manager_person_id = $1',
+      [user.person_id]
+    );
+    const directReportCount = Number(directReportResult.rows[0]?.report_count || 0);
+    const hasDirectReports = directReportCount > 0;
+
     // Create JWT
     const token = jwt.sign(
       {
@@ -42,7 +49,9 @@ router.post('/login', async (req, res) => {
       person_id: user.person_id,
       name: user.person_name,
       username: user.username,
-      role: user.role
+      role: user.role,
+      has_direct_reports: hasDirectReports,
+      direct_report_count: directReportCount
     });
 
   } catch (err) {

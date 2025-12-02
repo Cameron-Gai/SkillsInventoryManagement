@@ -12,18 +12,25 @@ export default function TalentGapRadar({ data = [] }) {
         { category: 'Security', current: 3, target: 6 },
       ];
 
+  const tickColor = 'var(--text-color-secondary)';
+  const tooltipStyle = {
+    backgroundColor: 'var(--card-background)',
+    border: '1px solid var(--border-color)',
+    color: 'var(--text-color)',
+  };
+
   return (
-    <div className="bg-white dark:bg-neutral-900 rounded-lg shadow p-4">
-      <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100 mb-3">Talent Gap Radar</h3>
+    <div className="rounded-xl border border-[var(--border-color)] bg-[var(--card-background)] p-4 shadow-sm">
+      <h3 className="text-lg font-semibold text-[var(--text-color)] mb-3">Talent Gap Radar</h3>
       <ResponsiveContainer width="100%" height={320}>
         <RadarChart data={chartData} cx="50%" cy="50%" outerRadius="70%">
           <PolarGrid />
-          <PolarAngleAxis dataKey="category" tick={{ fill: '#6b7280' }} />
-          <PolarRadiusAxis angle={30} domain={[0, 10]} tick={{ fill: '#6b7280' }} />
+          <PolarAngleAxis dataKey="category" tick={{ fill: tickColor }} />
+          <PolarRadiusAxis angle={30} domain={[0, 10]} tick={{ fill: tickColor }} />
           <Radar name="Current" dataKey="current" stroke="#0ea5e9" fill="#0ea5e9" fillOpacity={0.5} />
           <Radar name="Target" dataKey="target" stroke="#f97316" fill="#f97316" fillOpacity={0.3} />
           <Legend />
-          <Tooltip />
+          <Tooltip contentStyle={tooltipStyle} />
         </RadarChart>
       </ResponsiveContainer>
     </div>

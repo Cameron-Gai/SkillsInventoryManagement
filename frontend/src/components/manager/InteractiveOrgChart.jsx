@@ -2,9 +2,9 @@ import PropTypes from 'prop-types';
 
 function Node({ person }) {
   return (
-    <div className="border rounded-lg p-3 bg-white dark:bg-neutral-900 shadow-sm">
-      <p className="text-sm font-semibold text-gray-800 dark:text-gray-100">{person.name}</p>
-      <p className="text-xs text-gray-500 dark:text-gray-400">{person.title}</p>
+    <div className="rounded-xl border border-[var(--border-color)] bg-[var(--card-background)] p-3 shadow-sm">
+      <p className="text-sm font-semibold text-[var(--text-color)]">{person.name}</p>
+      <p className="text-xs text-[var(--text-color-secondary)]">{person.title}</p>
     </div>
   );
 }
@@ -24,7 +24,7 @@ function Branch({ node }) {
         <div className="flex gap-4 mt-4 flex-wrap justify-center">
           {node.children.map((child) => (
             <div key={child.name} className="flex flex-col items-center">
-              <div className="w-0.5 h-4 bg-gray-300 dark:bg-neutral-700" />
+              <div className="w-0.5 h-4 bg-[var(--border-color)]" />
               <Branch node={child} />
             </div>
           ))}
@@ -69,10 +69,10 @@ export default function InteractiveOrgChart({ root }) {
     };
 
   return (
-    <div className="bg-gradient-to-b from-gray-50 to-white dark:from-neutral-900 dark:to-neutral-950 rounded-lg shadow p-4">
+    <div className="rounded-xl border border-[var(--border-color)] bg-[var(--card-background)] p-4 shadow-sm">
       <div className="flex items-center justify-between mb-3">
-        <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100">Interactive Org Chart</h3>
-        <span className="text-xs text-gray-500 dark:text-gray-400">Placeholder hierarchy; wire to API later.</span>
+        <h3 className="text-lg font-semibold text-[var(--text-color)]">Interactive Org Chart</h3>
+        <span className="text-xs text-[var(--text-color-secondary)]">Placeholder hierarchy; wire to API later.</span>
       </div>
       <div className="overflow-auto">
         <Branch node={placeholder} />

@@ -11,7 +11,16 @@ router.get('/me', authenticate, async (req, res) => {
     const userId = req.user.person_id;
 
     const result = await db.query(
-      `SELECT ps.person_id, ps.skill_id, ps.status, s.skill_name, s.skill_type
+            `SELECT ps.person_id,
+              ps.skill_id,
+              ps.status,
+              ps.experience_years,
+              ps.usage_frequency,
+              ps.proficiency_level,
+              ps.notes,
+              ps.requested_at,
+              s.skill_name,
+              s.skill_type
        FROM person_skill ps
        JOIN skill s ON ps.skill_id = s.skill_id
        WHERE ps.person_id = $1
@@ -25,6 +34,11 @@ router.get('/me', authenticate, async (req, res) => {
       type: row.skill_type,
       status: row.status,
       person_id: row.person_id,
+      experience_years: row.experience_years,
+      usage_frequency: row.usage_frequency,
+      proficiency_level: row.proficiency_level,
+      notes: row.notes,
+      requested_at: row.requested_at,
     }));
 
     res.json(skills);
@@ -39,7 +53,16 @@ router.get('/user/:userId', authenticate, authorizeRoles('admin', 'manager'), as
     const { userId } = req.params;
 
     const result = await db.query(
-      `SELECT ps.person_id, ps.skill_id, ps.status, s.skill_name, s.skill_type
+            `SELECT ps.person_id,
+              ps.skill_id,
+              ps.status,
+              ps.experience_years,
+              ps.usage_frequency,
+              ps.proficiency_level,
+              ps.notes,
+              ps.requested_at,
+              s.skill_name,
+              s.skill_type
        FROM person_skill ps
        JOIN skill s ON ps.skill_id = s.skill_id
        WHERE ps.person_id = $1
@@ -53,6 +76,11 @@ router.get('/user/:userId', authenticate, authorizeRoles('admin', 'manager'), as
       type: row.skill_type,
       status: row.status,
       person_id: row.person_id,
+      experience_years: row.experience_years,
+      usage_frequency: row.usage_frequency,
+      proficiency_level: row.proficiency_level,
+      notes: row.notes,
+      requested_at: row.requested_at,
     }));
 
     res.json(skills);
@@ -65,7 +93,17 @@ router.get('/user/:userId', authenticate, authorizeRoles('admin', 'manager'), as
 router.post('/me', authenticate, async (req, res) => {
   try {
     const userId = req.user.person_id;
-    const { skill_id, status = 'Requested' } = req.body;
+    const {
+      skill_id,
+      status = 'Requested',
+      experience_years = 0,
+      usage_frequency = 'Occasionally',
+      proficiency_level = 'Intermediate',
+      notes = '',
+      requested_at,
+    } = req.body;
+
+    const requestedAtValue = requested_at ? new Date(requested_at) : new Date();
 
     if (!skill_id) {
       return res.status(400).json({ error: 'skill_id is required' });
@@ -79,17 +117,31 @@ router.post('/me', authenticate, async (req, res) => {
 
     // Insert or update person_skill
     const result = await db.query(
-      `INSERT INTO person_skill (person_id, skill_id, status)
-       VALUES ($1, $2, $3)
-       ON CONFLICT (person_id, skill_id) DO UPDATE SET status = EXCLUDED.status
-       RETURNING person_id, skill_id, status`,
-      [userId, skill_id, status]
+      `INSERT INTO person_skill (person_id, skill_id, status, experience_years, usage_frequency, proficiency_level, notes, requested_at)
+       VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
+       ON CONFLICT (person_id, skill_id) DO UPDATE SET
+         status = EXCLUDED.status,
+         experience_years = EXCLUDED.experience_years,
+         usage_frequency = EXCLUDED.usage_frequency,
+         proficiency_level = EXCLUDED.proficiency_level,
+         notes = EXCLUDED.notes,
+         requested_at = CASE
+           WHEN EXCLUDED.status = 'Requested' THEN EXCLUDED.requested_at
+           ELSE person_skill.requested_at
+         END
+       RETURNING person_id, skill_id, status, experience_years, usage_frequency, proficiency_level, notes, requested_at`,
+      [userId, skill_id, status, experience_years, usage_frequency, proficiency_level, notes, requestedAtValue]
     );
 
     res.status(201).json({
       person_id: result.rows[0].person_id,
       skill_id: result.rows[0].skill_id,
       status: result.rows[0].status,
+      experience_years: result.rows[0].experience_years,
+      usage_frequency: result.rows[0].usage_frequency,
+      proficiency_level: result.rows[0].proficiency_level,
+      notes: result.rows[0].notes,
+      requested_at: result.rows[0].requested_at,
     });
   } catch (err) {
     res.status(500).json({ error: err.message });
@@ -100,7 +152,17 @@ router.post('/me', authenticate, async (req, res) => {
 router.post('/user/:userId', authenticate, authorizeRoles('admin'), async (req, res) => {
   try {
     const { userId } = req.params;
-    const { skill_id, status = 'Requested' } = req.body;
+    const {
+      skill_id,
+      status = 'Requested',
+      experience_years = 0,
+      usage_frequency = 'Occasionally',
+      proficiency_level = 'Intermediate',
+      notes = '',
+      requested_at,
+    } = req.body;
+
+    const requestedAtValue = requested_at ? new Date(requested_at) : new Date();
 
     if (!skill_id) {
       return res.status(400).json({ error: 'skill_id is required' });
@@ -119,17 +181,31 @@ router.post('/user/:userId', authenticate, authorizeRoles('admin'), async (req, 
     }
 
     const result = await db.query(
-      `INSERT INTO person_skill (person_id, skill_id, status)
-       VALUES ($1, $2, $3)
-       ON CONFLICT (person_id, skill_id) DO UPDATE SET status = EXCLUDED.status
-       RETURNING person_id, skill_id, status`,
-      [userId, skill_id, status]
+      `INSERT INTO person_skill (person_id, skill_id, status, experience_years, usage_frequency, proficiency_level, notes, requested_at)
+       VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
+       ON CONFLICT (person_id, skill_id) DO UPDATE SET
+         status = EXCLUDED.status,
+         experience_years = EXCLUDED.experience_years,
+         usage_frequency = EXCLUDED.usage_frequency,
+         proficiency_level = EXCLUDED.proficiency_level,
+         notes = EXCLUDED.notes,
+         requested_at = CASE
+           WHEN EXCLUDED.status = 'Requested' THEN EXCLUDED.requested_at
+           ELSE person_skill.requested_at
+         END
+       RETURNING person_id, skill_id, status, experience_years, usage_frequency, proficiency_level, notes, requested_at`,
+      [userId, skill_id, status, experience_years, usage_frequency, proficiency_level, notes, requestedAtValue]
     );
 
     res.status(201).json({
       person_id: result.rows[0].person_id,
       skill_id: result.rows[0].skill_id,
       status: result.rows[0].status,
+      experience_years: result.rows[0].experience_years,
+      usage_frequency: result.rows[0].usage_frequency,
+      proficiency_level: result.rows[0].proficiency_level,
+      notes: result.rows[0].notes,
+      requested_at: result.rows[0].requested_at,
     });
   } catch (err) {
     res.status(500).json({ error: err.message });
@@ -141,15 +217,34 @@ router.put('/me/:skillId', authenticate, async (req, res) => {
   try {
     const userId = req.user.person_id;
     const { skillId } = req.params;
-    const { status } = req.body;
+    const {
+      status,
+      experience_years,
+      usage_frequency,
+      proficiency_level,
+      notes,
+      requested_at,
+    } = req.body;
+
+    const requestedAtValue = status === 'Requested'
+      ? (requested_at ? new Date(requested_at) : new Date())
+      : null;
 
     if (!status) {
       return res.status(400).json({ error: 'status is required' });
     }
 
     const result = await db.query(
-      'UPDATE person_skill SET status = $1 WHERE person_id = $2 AND skill_id = $3 RETURNING person_id, skill_id, status',
-      [status, userId, skillId]
+      `UPDATE person_skill
+         SET status = $1,
+           experience_years = COALESCE($4, experience_years),
+           usage_frequency = COALESCE($5, usage_frequency),
+           proficiency_level = COALESCE($6, proficiency_level),
+           notes = COALESCE($7, notes),
+           requested_at = CASE WHEN $1 = 'Requested' THEN COALESCE($8, requested_at) ELSE requested_at END
+       WHERE person_id = $2 AND skill_id = $3
+         RETURNING person_id, skill_id, status, experience_years, usage_frequency, proficiency_level, notes, requested_at`,
+        [status, userId, skillId, experience_years, usage_frequency, proficiency_level, notes, requestedAtValue]
     );
 
     if (result.rows.length === 0) {
@@ -160,6 +255,11 @@ router.put('/me/:skillId', authenticate, async (req, res) => {
       person_id: result.rows[0].person_id,
       skill_id: result.rows[0].skill_id,
       status: result.rows[0].status,
+      experience_years: result.rows[0].experience_years,
+      usage_frequency: result.rows[0].usage_frequency,
+      proficiency_level: result.rows[0].proficiency_level,
+      notes: result.rows[0].notes,
+      requested_at: result.rows[0].requested_at,
     });
   } catch (err) {
     res.status(500).json({ error: err.message });
@@ -170,15 +270,34 @@ router.put('/me/:skillId', authenticate, async (req, res) => {
 router.put('/user/:userId/:skillId', authenticate, authorizeRoles('admin'), async (req, res) => {
   try {
     const { userId, skillId } = req.params;
-    const { status } = req.body;
+    const {
+      status,
+      experience_years,
+      usage_frequency,
+      proficiency_level,
+      notes,
+      requested_at,
+    } = req.body;
+
+    const requestedAtValue = status === 'Requested'
+      ? (requested_at ? new Date(requested_at) : new Date())
+      : null;
 
     if (!status) {
       return res.status(400).json({ error: 'status is required' });
     }
 
     const result = await db.query(
-      'UPDATE person_skill SET status = $1 WHERE person_id = $2 AND skill_id = $3 RETURNING person_id, skill_id, status',
-      [status, userId, skillId]
+      `UPDATE person_skill
+         SET status = $1,
+           experience_years = COALESCE($4, experience_years),
+           usage_frequency = COALESCE($5, usage_frequency),
+           proficiency_level = COALESCE($6, proficiency_level),
+           notes = COALESCE($7, notes),
+           requested_at = CASE WHEN $1 = 'Requested' THEN COALESCE($8, requested_at) ELSE requested_at END
+       WHERE person_id = $2 AND skill_id = $3
+         RETURNING person_id, skill_id, status, experience_years, usage_frequency, proficiency_level, notes, requested_at`,
+        [status, userId, skillId, experience_years, usage_frequency, proficiency_level, notes, requestedAtValue]
     );
 
     if (result.rows.length === 0) {
@@ -189,6 +308,11 @@ router.put('/user/:userId/:skillId', authenticate, authorizeRoles('admin'), asyn
       person_id: result.rows[0].person_id,
       skill_id: result.rows[0].skill_id,
       status: result.rows[0].status,
+      experience_years: result.rows[0].experience_years,
+      usage_frequency: result.rows[0].usage_frequency,
+      proficiency_level: result.rows[0].proficiency_level,
+      notes: result.rows[0].notes,
+      requested_at: result.rows[0].requested_at,
     });
   } catch (err) {
     res.status(500).json({ error: err.message });

@@ -67,6 +67,25 @@ ADD COLUMN username VARCHAR(50) UNIQUE;
 UPDATE person
 SET username = LOWER(REPLACE(person_name, ' ', '.'));
 
+ALTER TABLE person_skill
+ADD COLUMN IF NOT EXISTS experience_years INTEGER DEFAULT 0;
+
+ALTER TABLE person_skill
+ADD COLUMN IF NOT EXISTS usage_frequency TEXT DEFAULT 'Occasionally';
+
+ALTER TABLE person_skill
+ADD COLUMN IF NOT EXISTS proficiency_level TEXT DEFAULT 'Intermediate';
+
+ALTER TABLE person_skill
+ADD COLUMN IF NOT EXISTS notes TEXT DEFAULT '';
+
+ALTER TABLE person_skill
+ADD COLUMN IF NOT EXISTS requested_at TIMESTAMPTZ DEFAULT NOW();
+
+UPDATE person_skill
+SET requested_at = NOW()
+WHERE requested_at IS NULL;
+
 
 
 

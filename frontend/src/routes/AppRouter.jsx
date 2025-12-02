@@ -9,7 +9,6 @@ import { getDashboardPathForRole, getStoredUser } from '@/utils/auth'
 // Pages
 import Login from '@/pages/Login'
 import Dashboard from '@/pages/Dashboard'
-import Profile from '@/pages/Profile'
 import Team from '@/pages/Team'
 import Admin from '@/pages/Admin'
 
@@ -36,15 +35,6 @@ export default function AppRouter() {
           element={
             <ProtectedRoute>
               <Dashboard />
-            </ProtectedRoute>
-          }
-        />
-
-        <Route
-          path="/profile"
-          element={
-            <ProtectedRoute>
-              <Profile />
             </ProtectedRoute>
           }
         />

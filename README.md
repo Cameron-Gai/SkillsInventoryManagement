@@ -33,19 +33,29 @@ A web-based platform for managing employee skill profiles, supporting organizati
 | `backend/` | Express server and business logic |
 | `database/` | SQL schema and seed data |
 | `scripts/` | Backup, restore, and deployment utilities |
-| `src/`
-├── `config/`
-├── `routes/`
-├── `controllers/`
-├── `services/`
-├── `repositories/`
-├── `models/`
 
+**Key scripts**
+- `scripts/bootstrap_sim_env.ps1` – spins up the Dockerized Postgres instance, loads `scripts/seed.xlsx`, randomizes personal skills, and assigns team priorities so you can mirror the demo dataset locally with one command.
+- `scripts/xlsxtoDB.py` – ingests the Excel workbook into Postgres.
+- `scripts/assign_random_skills.py` – randomizes per-person skill inventories with realistic metadata.
+- `scripts/randomize_team_focus.py` – assigns high-value priorities for each manager/team.
 
 --
 
 ## Setup & Initialization
-1. Clone the repository to your machine
-2. Install dependencies: `npm install` - read from package.json. This needs to be done in both the Frontend and Backend files
-3. Copy `env.example` to `.env` and configure your environment variables. This needs to be done in the Backend file
-4. Start the server: `npm run dev` You can do this from 2 different terminals, one starts the backend and the other for frontend
+1. Clone the repository
+2. Backend setup
+	- `cd backend && npm install`
+	- Copy `.env.example` to `.env` and adjust values if needed
+	- Start the API in one terminal: `npm run dev`
+3. Frontend setup
+	- `cd frontend && npm install`
+	- Copy `.env.example` to `.env` (defaults to `VITE_API_URL=http://localhost:3000/api`)
+	- Start Vite in a second terminal: `npm run dev`
+4. Visit the Vite URL (default `http://localhost:5173`) and sign in using accounts from your seeded database.
+
+### Optional: Bootstrap demo database via Docker
+```
+powershell -ExecutionPolicy Bypass -File scripts/bootstrap_sim_env.ps1
+```
+The script checks that Docker Desktop is running, pulls the `postgres:15` image, provisions the `sim-postgres` container + `sim-postgres-data` volume, and seeds demo data by chaining `xlsxtoDB.py`, `assign_random_skills.py`, and `randomize_team_focus.py`. Run it from PowerShell (Windows Terminal or VS Code) before launching the backend if you want the ready-made dataset.

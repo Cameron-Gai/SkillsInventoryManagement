@@ -45,6 +45,7 @@ CREATE TABLE person_skill (
     person_id INT NOT NULL,
     skill_id INT NOT NULL,
     status person_skill_status_enum NOT NULL,
+    requested_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (person_id, skill_id),
     FOREIGN KEY (person_id) REFERENCES person(person_id)
         ON UPDATE CASCADE ON DELETE CASCADE,

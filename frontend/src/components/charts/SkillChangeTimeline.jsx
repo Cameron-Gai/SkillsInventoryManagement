@@ -12,18 +12,25 @@ export default function SkillChangeTimeline({ data = [], stroke = '#2563eb', fil
         { month: 'May', additions: 9, removals: 2 },
       ];
 
+  const axisColor = 'var(--text-color-secondary)';
+  const tooltipStyle = {
+    backgroundColor: 'var(--card-background)',
+    border: '1px solid var(--border-color)',
+    color: 'var(--text-color)',
+  };
+
   return (
-    <div className="bg-white dark:bg-neutral-900 rounded-lg shadow p-4 space-y-3">
+    <div className="rounded-xl border border-[var(--border-color)] bg-[var(--card-background)] p-4 shadow-sm space-y-3">
       <div className="flex items-center justify-between">
-        <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100">Skill Change Timeline</h3>
-        <span className="text-sm text-gray-500 dark:text-gray-400">Monthly adds vs drops</span>
+        <h3 className="text-lg font-semibold text-[var(--text-color)]">Skill Change Timeline</h3>
+        <span className="text-sm text-[var(--text-color-secondary)]">Monthly adds vs drops</span>
       </div>
       <ResponsiveContainer width="100%" height={260}>
         <AreaChart data={chartData} margin={{ top: 10, right: 20, left: 0, bottom: 0 }}>
           <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="month" tick={{ fill: '#6b7280' }} />
-          <YAxis tick={{ fill: '#6b7280' }} />
-          <Tooltip />
+          <XAxis dataKey="month" tick={{ fill: axisColor }} />
+          <YAxis tick={{ fill: axisColor }} />
+          <Tooltip contentStyle={tooltipStyle} />
           <Area type="monotone" dataKey="additions" name="Added" stroke={stroke} fill={fill} strokeWidth={2} />
           <Area
             type="monotone"

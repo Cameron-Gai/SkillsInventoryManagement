@@ -32,6 +32,23 @@
   --pending-color: #0F172A; 
   --pending-color-box: #E6F0FF; /* light blue for pending states */
 
+  /* Accent badges + highlights */
+  --accent-info-bg: #EEF2FF;
+  --accent-info-text: #3730A3;
+  --accent-info-border: #C7D2FE;
+
+  --accent-success-bg: #ECFDF5;
+  --accent-success-text: #065F46;
+  --accent-success-border: #A7F3D0;
+
+  --accent-warning-bg: #FEF3C7;
+  --accent-warning-text: #92400E;
+  --accent-warning-border: #FCD34D;
+
+  --accent-danger-bg: #FEE2E2;
+  --accent-danger-text: #991B1B;
+  --accent-danger-border: #FCA5A5;
+
   /* Inputs */
   --input-bg: #FFFFFF;
   --input-border: #CBD5E1;
@@ -55,6 +72,7 @@
   --background: #121212;
   --card-background: #1F1F1F;
   --panel-background: #171717;
+  --background-muted: #1A1A1A;
 
   --text-color: #F8FAFC;
   --text-color-secondary: #E5E7EB;
@@ -71,5 +89,21 @@
   --pending-color-box: #F8FAFC;
   /* Text color in dark mode */
   --header-color: var(--text-color-contrast);
-  --pending-color: var(--text-amber-200); /* amber for pending states */
+  --pending-color: #FCD34D;
+
+  --accent-info-bg: rgba(99, 102, 241, 0.18);
+  --accent-info-text: #C7D2FE;
+  --accent-info-border: rgba(129, 140, 248, 0.6);
+
+  --accent-success-bg: rgba(16, 185, 129, 0.2);
+  --accent-success-text: #A7F3D0;
+  --accent-success-border: rgba(52, 211, 153, 0.6);
+
+  --accent-warning-bg: rgba(251, 191, 36, 0.18);
+  --accent-warning-text: #FDE68A;
+  --accent-warning-border: rgba(251, 191, 36, 0.6);
+
+  --accent-danger-bg: rgba(248, 113, 113, 0.2);
+  --accent-danger-text: #FECACA;
+  --accent-danger-border: rgba(248, 113, 113, 0.6);
 }

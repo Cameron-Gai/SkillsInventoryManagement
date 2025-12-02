@@ -2,8 +2,98 @@ const express = require('express');
 const { authenticate } = require('../config/auth/authMiddleware');
 const { authorizeRoles } = require('../config/auth/requireRole');
 const db = require('../config/db');
+const { ensureCompanyDesiredSkillsTable } = require('../utils/highValueSkillsTable');
 
 const router = express.Router();
+const companyDesiredRouter = express.Router();
+
+companyDesiredRouter.get('/', authenticate, authorizeRoles('admin'), async (req, res) => {
+  try {
+    await ensureCompanyDesiredSkillsTable();
+    const result = await db.query(
+      `SELECT c.id, c.skill_id, c.priority, c.notes, c.created_at, c.created_by, s.skill_name, s.skill_type
+       FROM company_desired_skills c
+       JOIN skill s ON s.skill_id = c.skill_id
+       ORDER BY c.created_at DESC`
+    );
+
+    const payload = result.rows.map((row) => ({
+      id: row.id,
+      skill_id: row.skill_id,
+      skill_name: row.skill_name,
+      skill_type: row.skill_type,
+      priority: row.priority,
+      notes: row.notes || '',
+      created_at: row.created_at,
+      created_by: row.created_by,
+    }));
+
+    res.json(payload);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+companyDesiredRouter.post('/', authenticate, authorizeRoles('admin'), async (req, res) => {
+  try {
+    await ensureCompanyDesiredSkillsTable();
+    const { skill_id, priority = 'High', notes = '' } = req.body;
+
+    if (!skill_id) {
+      return res.status(400).json({ error: 'skill_id is required' });
+    }
+
+    const insertResult = await db.query(
+      `INSERT INTO company_desired_skills (skill_id, priority, notes, created_by)
+       VALUES ($1, $2, $3, $4)
+       ON CONFLICT (skill_id)
+       DO UPDATE SET priority = EXCLUDED.priority, notes = EXCLUDED.notes
+       RETURNING id`,
+      [skill_id, priority, notes, req.user.person_id]
+    );
+
+    const detailResult = await db.query(
+      `SELECT c.id, c.skill_id, c.priority, c.notes, c.created_at, c.created_by, s.skill_name, s.skill_type
+       FROM company_desired_skills c
+       JOIN skill s ON s.skill_id = c.skill_id
+       WHERE c.id = $1`,
+      [insertResult.rows[0].id]
+    );
+
+    const row = detailResult.rows[0];
+    res.status(201).json({
+      id: row.id,
+      skill_id: row.skill_id,
+      skill_name: row.skill_name,
+      skill_type: row.skill_type,
+      priority: row.priority,
+      notes: row.notes || '',
+      created_at: row.created_at,
+      created_by: row.created_by,
+    });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+companyDesiredRouter.delete('/:id', authenticate, authorizeRoles('admin'), async (req, res) => {
+  try {
+    await ensureCompanyDesiredSkillsTable();
+    const { id } = req.params;
+    const result = await db.query(
+      'DELETE FROM company_desired_skills WHERE id = $1 RETURNING id',
+      [id]
+    );
+
+    if (result.rows.length === 0) {
+      return res.status(404).json({ error: 'Company desired skill not found' });
+    }
+
+    res.json({ message: 'Company desired skill removed', id: Number(id) });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
 
 // Get all skills (authenticated users)
 router.get('/', authenticate, async (req, res) => {
@@ -24,6 +114,8 @@ router.get('/', authenticate, async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
+
+router.use('/company-desired', companyDesiredRouter);
 
 // Get a specific skill by ID (authenticated users)
 router.get('/:id', authenticate, async (req, res) => {

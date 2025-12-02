@@ -14,14 +14,20 @@ export default function TeamSkillProfileWheel({ data = [] }) {
         { name: 'Security', value: 8, fill: COLORS[4] },
       ];
 
+  const tooltipStyle = {
+    backgroundColor: 'var(--card-background)',
+    border: '1px solid var(--border-color)',
+    color: 'var(--text-color)',
+  };
+
   return (
-    <div className="bg-white dark:bg-neutral-900 rounded-lg shadow p-4">
-      <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100 mb-3">Team Skill Profile Wheel</h3>
+    <div className="rounded-xl border border-[var(--border-color)] bg-[var(--card-background)] p-4 shadow-sm">
+      <h3 className="text-lg font-semibold text-[var(--text-color)] mb-3">Team Skill Profile Wheel</h3>
       <ResponsiveContainer width="100%" height={320}>
         <RadialBarChart cx="50%" cy="50%" innerRadius="20%" outerRadius="90%" barSize={14} data={chartData}>
           <RadialBar background dataKey="value" cornerRadius={8} />
           <Legend iconType="circle" />
-          <Tooltip />
+          <Tooltip contentStyle={tooltipStyle} />
         </RadialBarChart>
       </ResponsiveContainer>
     </div>

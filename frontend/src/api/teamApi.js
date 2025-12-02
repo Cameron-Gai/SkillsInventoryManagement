@@ -13,6 +13,11 @@ const teamApi = {
   // Get team insights (stats, pending approvals, etc.)
   getTeamInsights: () => axios.get("/team/insights"),
 
+  // High value skills management
+  getHighValueSkills: () => axios.get("/team/high-value-skills"),
+  addHighValueSkill: (payload) => axios.post("/team/high-value-skills", payload),
+  deleteHighValueSkill: (id) => axios.delete(`/team/high-value-skills/${id}`),
+
   // Approve a skill for a team member
   approveTeamMemberSkill: (memberId, skillId) =>
     axios.patch(`/team/my-team/${memberId}/skills/${skillId}/approve`),

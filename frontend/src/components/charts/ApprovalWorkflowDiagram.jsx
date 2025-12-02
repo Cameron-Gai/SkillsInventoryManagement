@@ -15,8 +15,8 @@ const statusStyles = {
 
 export default function ApprovalWorkflowDiagram({ steps = defaultSteps }) {
   return (
-    <div className="bg-white dark:bg-neutral-900 rounded-lg shadow p-4">
-      <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100 mb-4">Approval Workflow</h3>
+    <div className="rounded-xl border border-[var(--border-color)] bg-[var(--card-background)] p-4 shadow-sm">
+      <h3 className="text-lg font-semibold text-[var(--text-color)] mb-4">Approval Workflow</h3>
       <div className="flex items-center justify-between gap-3">
         {steps.map((step, idx) => (
           <div key={step.id} className="flex-1 flex flex-col items-center text-center">
@@ -24,14 +24,14 @@ export default function ApprovalWorkflowDiagram({ steps = defaultSteps }) {
               <div className={`h-10 w-10 rounded-full flex items-center justify-center text-white ${statusStyles[step.status]}`}>
                 {idx + 1}
               </div>
-              {idx < steps.length - 1 && <div className="flex-1 h-1 bg-gray-200 dark:bg-neutral-800" />}
+              {idx < steps.length - 1 && <div className="flex-1 h-1 bg-[var(--border-color)]" />}
             </div>
-            <p className="text-sm font-semibold text-gray-800 dark:text-gray-100 mt-2">{step.label}</p>
-            <p className="text-xs text-gray-500 dark:text-gray-400 capitalize">{step.status}</p>
+            <p className="text-sm font-semibold text-[var(--text-color)] mt-2">{step.label}</p>
+            <p className="text-xs text-[var(--text-color-secondary)] capitalize">{step.status}</p>
           </div>
         ))}
       </div>
-      <p className="text-xs text-gray-500 dark:text-gray-400 mt-3">Connect to approvals API to drive live status.</p>
+      <p className="text-xs text-[var(--text-color-secondary)] mt-3">Connect to approvals API to drive live status.</p>
     </div>
   );
 }

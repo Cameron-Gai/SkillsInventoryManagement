@@ -12,15 +12,29 @@ export default function SkillLevelHistogram({ data = [] }) {
         { level: 5, count: 5 },
       ];
 
+  const axisColor = 'var(--text-color-secondary)';
+  const tooltipStyle = {
+    backgroundColor: 'var(--card-background)',
+    border: '1px solid var(--border-color)',
+    color: 'var(--text-color)',
+  };
+
   return (
-    <div className="bg-white dark:bg-neutral-900 rounded-lg shadow p-4">
-      <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100 mb-3">Skill Level Histogram</h3>
+    <div className="rounded-xl border border-[var(--border-color)] bg-[var(--card-background)] p-4 shadow-sm">
+      <h3 className="text-lg font-semibold text-[var(--text-color)] mb-3">Skill Level Histogram</h3>
       <ResponsiveContainer width="100%" height={240}>
         <BarChart data={chartData} margin={{ top: 10, right: 20, left: 0, bottom: 0 }}>
           <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="level" tick={{ fill: '#6b7280' }} label={{ value: 'Level', position: 'insideBottom', dy: 10 }} />
-          <YAxis tick={{ fill: '#6b7280' }} label={{ value: 'Count', angle: -90, position: 'insideLeft', dx: -10 }} />
-          <Tooltip />
+          <XAxis
+            dataKey="level"
+            tick={{ fill: axisColor }}
+            label={{ value: 'Level', position: 'insideBottom', dy: 10, fill: axisColor }}
+          />
+          <YAxis
+            tick={{ fill: axisColor }}
+            label={{ value: 'Count', angle: -90, position: 'insideLeft', dx: -10, fill: axisColor }}
+          />
+          <Tooltip contentStyle={tooltipStyle} />
           <Bar dataKey="count" fill="#6366f1" radius={[4, 4, 0, 0]} />
         </BarChart>
       </ResponsiveContainer>

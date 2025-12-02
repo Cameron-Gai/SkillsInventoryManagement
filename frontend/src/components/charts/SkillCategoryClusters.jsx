@@ -7,9 +7,9 @@ function CustomTooltip({ active, payload }) {
   if (!active || !payload?.length) return null;
   const { name, value } = payload[0];
   return (
-    <div className="bg-white dark:bg-neutral-800 text-sm rounded shadow px-3 py-2">
-      <p className="font-semibold text-gray-800 dark:text-gray-100">{name}</p>
-      <p className="text-gray-600 dark:text-gray-300">{value} skills</p>
+    <div className="rounded border border-[var(--border-color)] bg-[var(--card-background)] px-3 py-2 text-sm shadow-sm">
+      <p className="font-semibold text-[var(--text-color)]">{name}</p>
+      <p className="text-[var(--text-color-secondary)]">{value} skills</p>
     </div>
   );
 }
@@ -33,10 +33,10 @@ export default function SkillCategoryClusters({ data = [] }) {
   const formatted = chartData.map((item, idx) => ({ ...item, fill: colors[idx % colors.length] }));
 
   return (
-    <div className="bg-white dark:bg-neutral-900 rounded-lg shadow p-4">
+    <div className="rounded-xl border border-[var(--border-color)] bg-[var(--card-background)] p-4 shadow-sm">
       <div className="flex items-center justify-between mb-3">
-        <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100">Skill Category Clusters</h3>
-        <span className="text-sm text-gray-500 dark:text-gray-400">Hover for counts</span>
+        <h3 className="text-lg font-semibold text-[var(--text-color)]">Skill Category Clusters</h3>
+        <span className="text-sm text-[var(--text-color-secondary)]">Hover for counts</span>
       </div>
       <ResponsiveContainer width="100%" height={280}>
         <Treemap data={formatted} dataKey="size" stroke="#f7fafc" fill="#3182ce">

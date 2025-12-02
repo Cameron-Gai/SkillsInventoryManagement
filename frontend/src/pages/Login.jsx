@@ -40,6 +40,8 @@ export default function Login() {
         role: response.data.role,
         name: response.data.name,
         username: response.data.username,
+        has_direct_reports: response.data.has_direct_reports ?? false,
+        direct_report_count: response.data.direct_report_count ?? 0,
       })
 
       navigate(getDashboardPathForRole(response.data.role), { replace: true })
@@ -51,9 +53,9 @@ export default function Login() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-6 py-12 bg-[var(--background)] text-[var(--text-color)]">
-      <div className="w-full max-w-4xl grid gap-6 lg:grid-cols-[1.2fr_1fr] items-start">
-        <section className="rounded-xl bg-[var(--card-background)] shadow-lg border border-[var(--border-color)] p-8 space-y-6">
+    <div className="min-h-screen flex items-center justify-center px-5 py-8 bg-[var(--background)] text-[var(--text-color)]">
+      <div className="w-full max-w-3xl">
+        <section className="rounded-xl bg-[var(--card-background)] shadow-lg border border-[var(--border-color)] p-6 space-y-4">
           <div className="flex items-center justify-between gap-4">
             <div>
               <p className="text-xs uppercase tracking-[0.2em] text-[var(--text-color-subtle)] font-semibold">
@@ -66,7 +68,7 @@ export default function Login() {
           <DarkToggle />
           </div>
 
-          <form className="space-y-4" onSubmit={handleSubmit}>
+          <form className="space-y-3" onSubmit={handleSubmit}>
             <div className="space-y-2">
               <label className="block text-sm font-semibold text-[var(--text-color)]">Username</label>
               <input
@@ -74,7 +76,7 @@ export default function Login() {
                 value={username}
                 onChange={(event) => setUsername(event.target.value)}
                 placeholder="Enter your username"
-                className="w-full rounded-lg border border-[var(--input-border)] bg-[var(--input-bg)] text-[var(--text-color)] px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[color:var(--color-primary)]"
+                className="w-full rounded-lg border border-[var(--input-border)] bg-[var(--input-bg)] text-[var(--text-color)] px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-[color:var(--color-primary)]"
                 required
                 disabled={loading}
               />
@@ -87,7 +89,7 @@ export default function Login() {
                 value={password}
                 onChange={(event) => setPassword(event.target.value)}
                 placeholder="Enter your password"
-                className="w-full rounded-lg border border-[var(--input-border)] bg-[var(--input-bg)] text-[var(--text-color)] px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[color:var(--color-primary)]"
+                className="w-full rounded-lg border border-[var(--input-border)] bg-[var(--input-bg)] text-[var(--text-color)] px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-[color:var(--color-primary)]"
                 required
                 disabled={loading}
               />
@@ -102,21 +104,12 @@ export default function Login() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full rounded-lg bg-[color:var(--color-primary)] px-4 py-3 text-sm font-semibold text-white hover:bg-[color:var(--color-primary-dark)] disabled:opacity-50 transition"
+              className="w-full rounded-lg bg-[color:var(--color-primary)] px-4 py-2.5 text-sm font-semibold text-white hover:bg-[color:var(--color-primary-dark)] disabled:opacity-50 transition"
             >
               {loading ? 'Signing in...' : 'Sign in'}
             </button>
           </form>
         </section>
-
-        <aside className="space-y-4">
-          <div className="rounded-xl border border-[var(--border-color)] bg-[var(--card-background)] shadow-lg p-6">
-            <p className="text-sm font-semibold text-[var(--text-color)] mb-3">About</p>
-            <p className="text-sm text-[var(--text-color-secondary)]">
-              Welcome to Skills Inventory Management. Sign in with your username and password to access your dashboard.
-            </p>
-          </div>
-        </aside>
       </div>
     </div>
   )

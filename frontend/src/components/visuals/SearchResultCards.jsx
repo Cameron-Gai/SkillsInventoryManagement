@@ -1,63 +1,172 @@
-import PropTypes from 'prop-types';
-import StatusBadges from './StatusBadges';
-import SearchResultSkillMatchMeter from './SearchResultSkillMatchMeter';
+import PropTypes from 'prop-types'
+import StatusBadges from './StatusBadges'
+
+const getTimestamp = (value) => {
+  if (!value && value !== 0) return null
+  if (typeof value === 'number') return value
+  const ms = new Date(value).getTime()
+  return Number.isNaN(ms) ? null : ms
+}
+
+const formatRelativeTime = (value) => {
+  const timestamp = getTimestamp(value)
+  if (timestamp === null) return 'Timestamp unavailable'
+
+  const diffMs = Date.now() - timestamp
+  if (diffMs < 0) return 'Just now'
+
+  const minute = 60 * 1000
+  const hour = 60 * minute
+  const day = 24 * hour
+  const week = 7 * day
+
+  if (diffMs < minute) {
+    const seconds = Math.max(1, Math.floor(diffMs / 1000))
+    return `${seconds}s ago`
+  }
+  if (diffMs < hour) {
+    const minutes = Math.floor(diffMs / minute)
+    return `${minutes}m ago`
+  }
+  if (diffMs < day) {
+    const hours = Math.floor(diffMs / hour)
+    return `${hours}h ago`
+  }
+  if (diffMs < week) {
+    const days = Math.floor(diffMs / day)
+    return `${days}d ago`
+  }
+  const weeks = Math.floor(diffMs / week)
+  return `${weeks}w ago`
+}
+
+const sortSkillsByRequestAge = (skills = []) => {
+  return [...skills].sort((a, b) => {
+    const aTime = getTimestamp(a?.requestedAt)
+    const bTime = getTimestamp(b?.requestedAt)
+    const safeA = aTime ?? Number.POSITIVE_INFINITY
+    const safeB = bTime ?? Number.POSITIVE_INFINITY
+
+    if (safeA !== safeB) return safeA - safeB
+    const aName = a?.name || ''
+    const bName = b?.name || ''
+    return aName.localeCompare(bName)
+  })
+}
+
+const stripTrailingAgo = (label) => (typeof label === 'string' ? label.replace(/\sago$/, '') : label)
+
+const fallbackResults = [
+  {
+    id: 'sample-1',
+    name: 'Alex Johnson',
+    role: 'Frontend Engineer',
+    status: 'pending',
+    waitTimestamp: Date.now() - 1000 * 60 * 60 * 24 * 4,
+    skills: [
+      {
+        id: 'react',
+        name: 'React',
+        type: 'Technology',
+        requestedAt: Date.now() - 1000 * 60 * 60 * 20,
+        proficiencyLevel: 'Intermediate',
+        usageFrequency: 'Daily',
+        experienceYears: 3,
+        notes: 'Needs production access',
+      },
+    ],
+  },
+]
 
 export default function SearchResultCards({ results = [] }) {
-  const fallback = results.length
-    ? results
-    : [
-        {
-          name: 'Alex Johnson',
-          role: 'Frontend Engineer',
-          status: 'approved',
-          match: 88,
-          tags: ['React', 'TypeScript', 'Design Systems'],
-        },
-        {
-          name: 'Morgan Lee',
-          role: 'Data Analyst',
-          status: 'pending',
-          match: 72,
-          tags: ['SQL', 'Python', 'PowerBI'],
-        },
-      ];
+  const data = results.length ? results : fallbackResults
 
   return (
     <div className="space-y-3">
-      {fallback.map((item) => (
+      {data.map((item) => (
         <div
-          key={item.name}
-          className="bg-white dark:bg-neutral-900 rounded-lg shadow border border-gray-100 dark:border-neutral-800 p-4 space-y-3"
+          key={item.id ?? item.name}
+          className="rounded-xl border border-[var(--border-color)] bg-[var(--card-background)] p-4 shadow-sm space-y-4"
         >
-          <div className="flex items-center justify-between">
+          <div className="flex items-start justify-between gap-4">
             <div>
-              <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-100">{item.name}</h4>
-              <p className="text-sm text-gray-500 dark:text-gray-400">{item.role}</p>
+              <h4 className="text-lg font-semibold text-[var(--text-color)]">{item.name}</h4>
+              <p className="text-sm text-[var(--text-color-secondary)]">{item.role || 'Employee'}</p>
+              <p className="text-xs text-[var(--text-color-secondary)]">
+                {item.pendingCount ?? item.skills?.length ?? 0} {item.pendingLabel || 'pending request(s)'}
+              </p>
             </div>
-            <StatusBadges status={item.status} />
+            <div className="text-right space-y-1">
+              <StatusBadges status={item.status || 'pending'} />
+              <p className="text-xs text-[var(--text-color-secondary)]">
+                {(item.waitLabel || 'Waiting')} {item.waitText || stripTrailingAgo(formatRelativeTime(item.waitTimestamp))}
+              </p>
+            </div>
           </div>
-          <div className="flex flex-wrap gap-2">
-            {item.tags?.map((tag) => (
-              <span key={tag} className="px-2 py-1 rounded-full bg-gray-100 dark:bg-neutral-800 text-xs text-gray-700 dark:text-gray-200">
-                {tag}
-              </span>
+
+          <div className="space-y-2">
+            {sortSkillsByRequestAge(item.skills)?.map((skill) => (
+              <div
+                key={skill.id ?? `${item.id}-${skill.name}`}
+                className="rounded-lg border border-[var(--border-color)] bg-[var(--background-muted)] p-3"
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <p className="text-sm font-medium text-[var(--text-color)]">{skill.name}</p>
+                    <p className="text-xs text-[var(--text-color-secondary)]">{skill.type || 'Skill'}</p>
+                  </div>
+                  <div className="text-right space-y-1">
+                    {skill.status?.toLowerCase?.() === 'pending' && (
+                      <span className="inline-flex items-center rounded-full border border-[var(--accent-warning-border)] bg-[var(--accent-warning-bg)] px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-[var(--accent-warning-text)]">
+                        Pending skill
+                      </span>
+                    )}
+                    {skill.requestedAt && (
+                      <p className="text-xs text-[var(--text-color-secondary)]">Requested {formatRelativeTime(skill.requestedAt)}</p>
+                    )}
+                  </div>
+                </div>
+                <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-xs text-[var(--text-color-secondary)]">
+                  <span>Proficiency: {skill.proficiencyLevel || 'Not specified'}</span>
+                  <span>Usage: {skill.usageFrequency || 'Not specified'}</span>
+                  <span>Experience: {typeof skill.experienceYears === 'number' ? `${skill.experienceYears} yr${skill.experienceYears === 1 ? '' : 's'}` : 'Not specified'}</span>
+                </div>
+                {skill.notes && (
+                  <p className="mt-2 text-xs italic text-[var(--text-color-secondary)]">Notes: {skill.notes}</p>
+                )}
+              </div>
             ))}
           </div>
-          <SearchResultSkillMatchMeter match={item.match} label="Skill Match" />
         </div>
       ))}
     </div>
-  );
+  )
 }
 
 SearchResultCards.propTypes = {
   results: PropTypes.arrayOf(
     PropTypes.shape({
+      id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
       name: PropTypes.string.isRequired,
       role: PropTypes.string,
       status: PropTypes.string,
-      match: PropTypes.number,
-      tags: PropTypes.arrayOf(PropTypes.string),
+      waitTimestamp: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.instanceOf(Date)]),
+      waitLabel: PropTypes.string,
+      waitText: PropTypes.string,
+      skills: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+          name: PropTypes.string.isRequired,
+          type: PropTypes.string,
+          requestedAt: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.instanceOf(Date)]),
+          proficiencyLevel: PropTypes.string,
+          usageFrequency: PropTypes.string,
+          experienceYears: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+          notes: PropTypes.string,
+        }),
+      ),
+      pendingCount: PropTypes.number,
+      pendingLabel: PropTypes.string,
     }),
   ),
-};
+}

@@ -1,8 +1,39 @@
-import { useMemo, useState, useEffect } from 'react'
+import { useMemo, useState, useEffect, useCallback } from 'react'
 import SkillList from './SkillList'
 import SkillFormModal from './SkillFormModal'
 import personSkillsApi from '@/api/personSkillsApi'
 import skillsApi from '@/api/skillsApi'
+
+const UI_STATUS_FROM_DB = {
+  approved: 'active',
+  requested: 'pending',
+  pending: 'pending',
+  canceled: 'archived',
+}
+
+const DB_STATUS_FROM_UI = {
+  active: 'Approved',
+  pending: 'Requested',
+  archived: 'Canceled',
+}
+
+const mapDbStatusToUi = (status) => UI_STATUS_FROM_DB[status?.toLowerCase?.()] || 'pending'
+const mapUiStatusToDb = (status) => DB_STATUS_FROM_UI[status?.toLowerCase?.()] || 'Requested'
+
+function decorateSkill(skill) {
+  const uiStatus = mapDbStatusToUi(skill.status)
+  return {
+    ...skill,
+    name: skill.name ?? skill.skill_name,
+    category: skill.category ?? skill.type ?? 'Core Skill',
+    level: skill.proficiency_level ?? skill.level ?? 'Intermediate',
+    years: skill.experience_years ?? skill.years ?? 0,
+    frequency: skill.usage_frequency ?? skill.frequency ?? 'Occasionally',
+    status: uiStatus,
+    dbStatus: skill.status ?? mapUiStatusToDb(uiStatus),
+    notes: skill.notes ?? '',
+  }
+}
 
 export default function EmployeeSkillsPanel({ ownerLabel = 'your', userId = null }) {
   const [skills, setSkills] = useState([])
@@ -12,36 +43,32 @@ export default function EmployeeSkillsPanel({ ownerLabel = 'your', userId = null
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
 
+  const refreshSkills = useCallback(async () => {
+    try {
+      setLoading(true)
+      setError(null)
+
+      const userSkillsResponse = userId
+        ? await personSkillsApi.getUserSkills(userId)
+        : await personSkillsApi.getMySkills()
+
+      const allSkillsResponse = await skillsApi.getAllSkills()
+
+      const decorated = (userSkillsResponse.data || []).map(decorateSkill)
+      setSkills(decorated)
+      setAllSkills(allSkillsResponse.data || [])
+    } catch (err) {
+      setError(err.message || 'Failed to load skills')
+      console.error('Error fetching skills:', err)
+    } finally {
+      setLoading(false)
+    }
+  }, [userId])
+
   // Fetch user's skills and available skills
   useEffect(() => {
-    const fetchSkills = async () => {
-      try {
-        setLoading(true)
-        setError(null)
-
-        // Fetch user's skills
-        let userSkillsResponse
-        if (userId) {
-          userSkillsResponse = await personSkillsApi.getUserSkills(userId)
-        } else {
-          userSkillsResponse = await personSkillsApi.getMySkills()
-        }
-
-        // Fetch all available skills
-        const allSkillsResponse = await skillsApi.getAllSkills()
-
-        setSkills(userSkillsResponse.data || [])
-        setAllSkills(allSkillsResponse.data || [])
-      } catch (err) {
-        setError(err.message || 'Failed to load skills')
-        console.error('Error fetching skills:', err)
-      } finally {
-        setLoading(false)
-      }
-    }
-
-    fetchSkills()
-  }, [userId])
+    refreshSkills()
+  }, [refreshSkills])
 
   const sortedSkills = useMemo(
     () => [...skills].sort((a, b) => a.name.localeCompare(b.name)),
@@ -60,17 +87,24 @@ export default function EmployeeSkillsPanel({ ownerLabel = 'your', userId = null
 
   const handleSave = async (updatedSkill) => {
     try {
-      if (updatedSkill.id) {
-        // Update existing skill
-        await personSkillsApi.updateMySkillStatus(updatedSkill.id, updatedSkill.status)
-        setSkills((prev) =>
-          prev.map((skill) => (skill.id === updatedSkill.id ? updatedSkill : skill))
-        )
-      } else {
-        // Add new skill
-        await personSkillsApi.addMySkill(updatedSkill.id || updatedSkill.skill_id)
-        setSkills((prev) => [...prev, updatedSkill])
+      const payload = {
+        status: mapUiStatusToDb(updatedSkill.status),
+        experience_years: updatedSkill.years,
+        usage_frequency: updatedSkill.frequency,
+        proficiency_level: updatedSkill.level,
+        notes: updatedSkill.notes,
       }
+
+      if (updatedSkill.id) {
+        await personSkillsApi.updateMySkill(updatedSkill.id, payload)
+      } else {
+        const skillIdentifier = updatedSkill.id || updatedSkill.skill_id
+        if (!skillIdentifier) {
+          throw new Error('Please select a skill from the catalog.')
+        }
+        await personSkillsApi.addMySkill(skillIdentifier, payload)
+      }
+      await refreshSkills()
       setIsModalOpen(false)
     } catch (err) {
       setError('Failed to save skill: ' + err.message)

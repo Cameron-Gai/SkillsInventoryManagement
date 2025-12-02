@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 
-const rowColors = {
-  valid: 'bg-emerald-50 dark:bg-emerald-900/40',
-  warning: 'bg-amber-50 dark:bg-amber-900/40',
-  error: 'bg-rose-50 dark:bg-rose-900/40',
+const rowStyles = {
+  valid: { backgroundColor: 'var(--accent-success-bg)' },
+  warning: { backgroundColor: 'var(--accent-warning-bg)' },
+  error: { backgroundColor: 'var(--accent-danger-bg)' },
 };
 
 export default function ImportValidationTable({ rows = [] }) {
@@ -17,16 +17,16 @@ export default function ImportValidationTable({ rows = [] }) {
       ];
 
   return (
-    <div className="bg-white dark:bg-neutral-900 rounded-lg shadow overflow-hidden">
-      <div className="px-4 py-3 border-b border-gray-100 dark:border-neutral-800 flex items-center justify-between">
+    <div className="rounded-xl border border-[var(--border-color)] bg-[var(--card-background)] shadow-sm overflow-hidden">
+      <div className="px-4 py-3 border-b border-[var(--border-color)] flex items-center justify-between">
         <div>
-          <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100">Import Validation</h3>
-          <p className="text-xs text-gray-500 dark:text-gray-400">Color-coded quality checks before saving.</p>
+          <h3 className="text-lg font-semibold text-[var(--text-color)]">Import Validation</h3>
+          <p className="text-xs text-[var(--text-color-secondary)]">Color-coded quality checks before saving.</p>
         </div>
       </div>
       <div className="overflow-x-auto">
         <table className="min-w-full text-left text-sm">
-          <thead className="bg-gray-50 dark:bg-neutral-800 text-gray-600 dark:text-gray-300">
+          <thead className="bg-[var(--background-muted)] text-[var(--text-color-secondary)]">
             <tr>
               <th className="px-4 py-2">Field</th>
               <th className="px-4 py-2">Value</th>
@@ -36,11 +36,11 @@ export default function ImportValidationTable({ rows = [] }) {
           </thead>
           <tbody>
             {tableRows.map((row) => (
-              <tr key={`${row.field}-${row.value}`} className={rowColors[row.status] || rowColors.warning}>
-                <td className="px-4 py-2 font-medium text-gray-800 dark:text-gray-100">{row.field}</td>
-                <td className="px-4 py-2 text-gray-700 dark:text-gray-200">{row.value}</td>
-                <td className="px-4 py-2 capitalize text-gray-700 dark:text-gray-200">{row.status}</td>
-                <td className="px-4 py-2 text-gray-600 dark:text-gray-300">{row.message}</td>
+              <tr key={`${row.field}-${row.value}`} style={rowStyles[row.status] || rowStyles.warning}>
+                <td className="px-4 py-2 font-medium text-[var(--text-color)]">{row.field}</td>
+                <td className="px-4 py-2 text-[var(--text-color-secondary)]">{row.value}</td>
+                <td className="px-4 py-2 capitalize text-[var(--text-color-secondary)]">{row.status}</td>
+                <td className="px-4 py-2 text-[var(--text-color-secondary)]">{row.message}</td>
               </tr>
             ))}
           </tbody>
