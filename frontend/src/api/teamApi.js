@@ -20,6 +20,15 @@ const teamApi = {
   // Reject a skill for a team member
   rejectTeamMemberSkill: (memberId, skillId) =>
     axios.patch(`/team/my-team/${memberId}/skills/${skillId}/reject`),
+
+  // Admin: list all skill requests with optional filters
+  getAdminRequests: ({ page = 1, pageSize = 20, status = '' } = {}) => {
+    const params = new URLSearchParams()
+    params.set('page', page)
+    params.set('pageSize', pageSize)
+    if (status) params.set('status', status)
+    return axios.get(`/team/admin/requests?${params.toString()}`)
+  },
 };
 
 export default teamApi;

@@ -58,24 +58,45 @@ export default function EmployeeSkillsPanel({ ownerLabel = 'your', userId = null
     setIsModalOpen(true)
   }
 
-  const handleSave = async (updatedSkill) => {
+  const handleSave = async (skillData) => {
     try {
-      if (updatedSkill.id) {
+      if (editingSkill) {
         // Update existing skill
-        await personSkillsApi.updateMySkillStatus(updatedSkill.id, updatedSkill.status)
-        setSkills((prev) =>
-          prev.map((skill) => (skill.id === updatedSkill.id ? updatedSkill : skill))
-        )
+        const response = await personSkillsApi.addMySkill(skillData)
+        setSkills((prev) => prev.map(s => s.id === skillData.skill_id ? response.data : s))
       } else {
-        // Add new skill
-        await personSkillsApi.addMySkill(updatedSkill.id || updatedSkill.skill_id)
-        setSkills((prev) => [...prev, updatedSkill])
+        // Add new skill request
+        const response = await personSkillsApi.addMySkill(skillData)
+        setSkills((prev) => [...prev, response.data])
       }
       setIsModalOpen(false)
+      setEditingSkill(null)
     } catch (err) {
       setError('Failed to save skill: ' + err.message)
       console.error('Error saving skill:', err)
     }
+  }
+
+  const [deleteConfirm, setDeleteConfirm] = useState(null)
+
+  const handleDelete = async (skillId) => {
+    setDeleteConfirm(skillId)
+  }
+
+  const confirmDelete = async () => {
+    try {
+      await personSkillsApi.removeMySkill(deleteConfirm)
+      setSkills((prev) => prev.filter(s => s.id !== deleteConfirm))
+      setDeleteConfirm(null)
+    } catch (err) {
+      setError('Failed to delete skill: ' + err.message)
+      console.error('Error deleting skill:', err)
+      setDeleteConfirm(null)
+    }
+  }
+
+  const cancelDelete = () => {
+    setDeleteConfirm(null)
   }
 
   return (
@@ -107,7 +128,7 @@ export default function EmployeeSkillsPanel({ ownerLabel = 'your', userId = null
         </div>
       ) : (
         <div className="mt-5">
-          <SkillList skills={sortedSkills} onEdit={handleEdit} />
+          <SkillList skills={sortedSkills} onEdit={handleEdit} onDelete={handleDelete} />
         </div>
       )}
 
@@ -118,6 +139,34 @@ export default function EmployeeSkillsPanel({ ownerLabel = 'your', userId = null
         onSave={handleSave}
         onClose={() => setIsModalOpen(false)}
       />
+
+      {/* Delete Confirmation Modal */}
+      {deleteConfirm && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
+          <div className="w-full max-w-md rounded-lg bg-[var(--card-background)] p-6 shadow-xl">
+            <h3 className="text-xl font-semibold text-[var(--text-color)]">Delete Skill Request</h3>
+            <p className="mt-3 text-sm text-[var(--text-color-secondary)]">
+              Are you sure you want to delete this skill request? This action cannot be undone.
+            </p>
+            <div className="mt-6 flex justify-end gap-3">
+              <button
+                type="button"
+                onClick={cancelDelete}
+                className="rounded-md border border-[var(--border-color)] px-4 py-2 text-sm font-medium text-[var(--text-color-secondary)] hover:border-[color:var(--color-primary)]"
+              >
+                Cancel
+              </button>
+              <button
+                type="button"
+                onClick={confirmDelete}
+                className="rounded-md bg-red-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-red-700"
+              >
+                Delete
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   )
 }

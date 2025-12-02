@@ -11,10 +11,11 @@ router.get('/me', authenticate, async (req, res) => {
     const userId = req.user.person_id;
 
     const result = await db.query(
-      `SELECT ps.person_id, ps.skill_id, ps.status, s.skill_name, s.skill_type
+      `SELECT ps.person_id, ps.skill_id, ps.status, ps.level, ps.years, ps.frequency, ps.notes,
+              s.skill_name, s.skill_type
        FROM person_skill ps
        JOIN skill s ON ps.skill_id = s.skill_id
-       WHERE ps.person_id = $1
+       WHERE ps.person_id = $1 AND ps.status <> 'Canceled'
        ORDER BY s.skill_name`,
       [userId]
     );
@@ -25,6 +26,10 @@ router.get('/me', authenticate, async (req, res) => {
       type: row.skill_type,
       status: row.status,
       person_id: row.person_id,
+      level: row.level,
+      years: row.years,
+      frequency: row.frequency,
+      notes: row.notes,
     }));
 
     res.json(skills);
@@ -42,7 +47,7 @@ router.get('/user/:userId', authenticate, authorizeRoles('admin', 'manager'), as
       `SELECT ps.person_id, ps.skill_id, ps.status, s.skill_name, s.skill_type
        FROM person_skill ps
        JOIN skill s ON ps.skill_id = s.skill_id
-       WHERE ps.person_id = $1
+       WHERE ps.person_id = $1 ${req.user.role === 'admin' ? '' : "AND ps.status <> 'Canceled'"}
        ORDER BY s.skill_name`,
       [userId]
     );
@@ -65,33 +70,46 @@ router.get('/user/:userId', authenticate, authorizeRoles('admin', 'manager'), as
 router.post('/me', authenticate, async (req, res) => {
   try {
     const userId = req.user.person_id;
-    const { skill_id, status = 'Requested' } = req.body;
+    const { skill_id, level, years, frequency, notes } = req.body;
 
     if (!skill_id) {
       return res.status(400).json({ error: 'skill_id is required' });
     }
 
     // Check if skill exists
-    const skillCheck = await db.query('SELECT skill_id FROM skill WHERE skill_id = $1', [skill_id]);
+    const skillCheck = await db.query(
+      'SELECT skill_id, skill_name, skill_type FROM skill WHERE skill_id = $1',
+      [skill_id]
+    );
+
     if (skillCheck.rows.length === 0) {
       return res.status(404).json({ error: 'Skill not found' });
     }
 
-    // Insert or update person_skill
+    const skill = skillCheck.rows[0];
+
+    // Employees can only add skills with 'Requested' status
     const result = await db.query(
-      `INSERT INTO person_skill (person_id, skill_id, status)
-       VALUES ($1, $2, $3)
-       ON CONFLICT (person_id, skill_id) DO UPDATE SET status = EXCLUDED.status
-       RETURNING person_id, skill_id, status`,
-      [userId, skill_id, status]
+      `INSERT INTO person_skill (person_id, skill_id, status, level, years, frequency, notes)
+       VALUES ($1, $2, 'Requested', $3, $4, $5, $6)
+       ON CONFLICT (person_id, skill_id) 
+       DO UPDATE SET status = 'Requested', level = $3, years = $4, frequency = $5, notes = $6
+       RETURNING person_id, skill_id, status, level, years, frequency, notes`,
+      [userId, skill_id, level, years, frequency, notes]
     );
 
     res.status(201).json({
-      person_id: result.rows[0].person_id,
-      skill_id: result.rows[0].skill_id,
+      id: skill.skill_id,
+      name: skill.skill_name,
+      type: skill.skill_type,
       status: result.rows[0].status,
+      level: result.rows[0].level,
+      years: result.rows[0].years,
+      frequency: result.rows[0].frequency,
+      notes: result.rows[0].notes,
     });
   } catch (err) {
+    console.error('Error in POST /person-skills/me:', err);
     res.status(500).json({ error: err.message });
   }
 });
@@ -231,6 +249,45 @@ router.delete('/user/:userId/:skillId', authenticate, authorizeRoles('admin'), a
     }
 
     res.json({ message: 'Skill removed successfully' });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// Admin: add a skill to self as Approved (bypass approval)
+router.post('/admin/me', authenticate, authorizeRoles('admin'), async (req, res) => {
+  try {
+    const userId = req.user.person_id;
+    const { skill_id, level, years, frequency, notes } = req.body;
+
+    if (!skill_id) {
+      return res.status(400).json({ error: 'skill_id is required' });
+    }
+
+    const skillCheck = await db.query('SELECT skill_id, skill_name, skill_type FROM skill WHERE skill_id = $1', [skill_id]);
+    if (skillCheck.rows.length === 0) {
+      return res.status(404).json({ error: 'Skill not found' });
+    }
+    const skill = skillCheck.rows[0];
+
+    const result = await db.query(
+      `INSERT INTO person_skill (person_id, skill_id, status, level, years, frequency, notes)
+       VALUES ($1, $2, 'Approved', $3, $4, $5, $6)
+       ON CONFLICT (person_id, skill_id) DO UPDATE SET status = 'Approved', level = $3, years = $4, frequency = $5, notes = $6
+       RETURNING status, level, years, frequency, notes`,
+      [userId, skill_id, level, years, frequency, notes]
+    );
+
+    res.status(201).json({
+      id: skill.skill_id,
+      name: skill.skill_name,
+      type: skill.skill_type,
+      status: result.rows[0].status,
+      level: result.rows[0].level,
+      years: result.rows[0].years,
+      frequency: result.rows[0].frequency,
+      notes: result.rows[0].notes,
+    });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }

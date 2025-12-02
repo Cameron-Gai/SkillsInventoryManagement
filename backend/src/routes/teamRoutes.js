@@ -4,6 +4,61 @@ const { authorizeRoles } = require('../config/auth/requireRole');
 const db = require('../config/db');
 
 const router = express.Router();
+// Admin: list all skill requests across the org with pagination
+router.get('/admin/requests', authenticate, authorizeRoles('admin'), async (req, res) => {
+  try {
+    const { page = 1, pageSize = 20, status } = req.query;
+    const offset = (Number(page) - 1) * Number(pageSize);
+
+    const params = [];
+    let where = '';
+    if (status && ['Requested', 'Approved', 'Canceled'].includes(status)) {
+      params.push(status);
+      where = 'WHERE ps.status = $1';
+    }
+
+    const totalResult = await db.query(
+      `SELECT COUNT(*) AS total
+       FROM person_skill ps
+       JOIN person p ON ps.person_id = p.person_id
+       JOIN skill s ON ps.skill_id = s.skill_id
+       ${where}`,
+      params
+    );
+
+    const total = Number(totalResult.rows[0].total || 0);
+
+    const listResult = await db.query(
+      `SELECT ps.person_id, p.person_name, p.username,
+              ps.skill_id, s.skill_name, s.skill_type,
+              ps.status, ps.level, ps.years, ps.frequency, ps.notes
+       FROM person_skill ps
+       JOIN person p ON ps.person_id = p.person_id
+       JOIN skill s ON ps.skill_id = s.skill_id
+       ${where}
+       ORDER BY ps.person_id, s.skill_name
+       LIMIT $${params.length + 1} OFFSET $${params.length + 2}`,
+      [...params, Number(pageSize), offset]
+    );
+
+    const items = listResult.rows.map(r => ({
+      person_id: r.person_id,
+      name: r.person_name,
+      username: r.username,
+      skill: { id: r.skill_id, name: r.skill_name, type: r.skill_type },
+      status: r.status,
+      level: r.level,
+      years: r.years,
+      frequency: r.frequency,
+      notes: r.notes,
+    }));
+
+    res.json({ page: Number(page), pageSize: Number(pageSize), total, items });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
 
 // Get team members for the current manager
 router.get('/my-team', authenticate, authorizeRoles('manager', 'admin'), async (req, res) => {
@@ -54,10 +109,11 @@ router.get('/my-team/:memberId', authenticate, authorizeRoles('manager', 'admin'
 
     // Get skills for this member
     const skillsResult = await db.query(
-      `SELECT ps.skill_id, ps.status, s.skill_name, s.skill_type
+      `SELECT ps.skill_id, ps.status, ps.level, ps.years, ps.frequency, ps.notes,
+              s.skill_name, s.skill_type
        FROM person_skill ps
        JOIN skill s ON ps.skill_id = s.skill_id
-       WHERE ps.person_id = $1
+       WHERE ps.person_id = $1 AND ps.status <> 'Canceled'
        ORDER BY s.skill_name`,
       [memberId]
     );
@@ -67,6 +123,10 @@ router.get('/my-team/:memberId', authenticate, authorizeRoles('manager', 'admin'
       name: skill.skill_name,
       type: skill.skill_type,
       status: skill.status,
+      level: skill.level,
+      years: skill.years,
+      frequency: skill.frequency,
+      notes: skill.notes,
     }));
 
     res.json({
@@ -132,17 +192,25 @@ router.get('/insights', authenticate, authorizeRoles('manager', 'admin'), async 
 // Approve a skill for a team member
 router.patch('/my-team/:memberId/skills/:skillId/approve', authenticate, authorizeRoles('manager', 'admin'), async (req, res) => {
   try {
-    const managerId = req.user.person_id;
+    const userId = req.user.person_id;
     const { memberId, skillId } = req.params;
+    const isAdmin = req.user.role === 'admin';
 
-    // Verify the member belongs to this manager's team
+    // Verify the member exists
     const memberCheck = await db.query(
-      'SELECT person_id FROM person WHERE person_id = $1 AND manager_person_id = $2',
-      [memberId, managerId]
+      'SELECT person_id, manager_person_id FROM person WHERE person_id = $1',
+      [memberId]
     );
 
     if (memberCheck.rows.length === 0) {
       return res.status(404).json({ error: 'Team member not found' });
+    }
+
+    const member = memberCheck.rows[0];
+
+    // Authorization: Admin can approve anyone, Manager can only approve their direct reports
+    if (!isAdmin && member.manager_person_id !== userId) {
+      return res.status(403).json({ error: 'Not authorized to approve skills for this team member' });
     }
 
     const result = await db.query(
@@ -167,17 +235,25 @@ router.patch('/my-team/:memberId/skills/:skillId/approve', authenticate, authori
 // Reject a skill for a team member
 router.patch('/my-team/:memberId/skills/:skillId/reject', authenticate, authorizeRoles('manager', 'admin'), async (req, res) => {
   try {
-    const managerId = req.user.person_id;
+    const userId = req.user.person_id;
     const { memberId, skillId } = req.params;
+    const isAdmin = req.user.role === 'admin';
 
-    // Verify the member belongs to this manager's team
+    // Verify the member exists
     const memberCheck = await db.query(
-      'SELECT person_id FROM person WHERE person_id = $1 AND manager_person_id = $2',
-      [memberId, managerId]
+      'SELECT person_id, manager_person_id FROM person WHERE person_id = $1',
+      [memberId]
     );
 
     if (memberCheck.rows.length === 0) {
       return res.status(404).json({ error: 'Team member not found' });
+    }
+
+    const member = memberCheck.rows[0];
+
+    // Authorization: Admin can reject anyone, Manager can only reject their direct reports
+    if (!isAdmin && member.manager_person_id !== userId) {
+      return res.status(403).json({ error: 'Not authorized to reject skills for this team member' });
     }
 
     const result = await db.query(

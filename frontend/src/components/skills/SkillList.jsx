@@ -1,6 +1,6 @@
 import SkillCard from './SkillCard'
 
-export default function SkillList({ skills, onEdit }) {
+export default function SkillList({ skills, onEdit, onDelete }) {
   if (!skills.length) {
     return (
       <div className="rounded-lg border border-dashed border-[var(--border-color)] bg-[var(--card-background)] p-6 text-center text-[var(--text-color-secondary)]">
@@ -12,7 +12,7 @@ export default function SkillList({ skills, onEdit }) {
   return (
     <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
       {skills.map((skill) => (
-        <SkillCard key={skill.id} skill={skill} onEdit={onEdit} />
+        <SkillCard key={skill.id} skill={skill} onEdit={onEdit} onDelete={onDelete} />
       ))}
     </div>
   )

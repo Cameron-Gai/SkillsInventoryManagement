@@ -5,7 +5,7 @@ const db = require('../config/db');
 
 const router = express.Router();
 
-// Get current user profile
+//get current user profile
 router.get('/me', authenticate, async (req, res) => {
   try {
     const userId = req.user.person_id;

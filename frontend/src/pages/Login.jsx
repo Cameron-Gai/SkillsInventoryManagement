@@ -52,7 +52,7 @@ export default function Login() {
 
   return (
     <div className="min-h-screen flex items-center justify-center px-6 py-12 bg-[var(--background)] text-[var(--text-color)]">
-      <div className="w-full max-w-4xl grid gap-6 lg:grid-cols-[1.2fr_1fr] items-start">
+      <div className="w-full max-w-md space-y-6">
         <section className="rounded-xl bg-[var(--card-background)] shadow-lg border border-[var(--border-color)] p-8 space-y-6">
           <div className="flex items-center justify-between gap-4">
             <div>
@@ -109,13 +109,11 @@ export default function Login() {
           </form>
         </section>
 
-        <aside className="space-y-4">
-          <div className="rounded-xl border border-[var(--border-color)] bg-[var(--card-background)] shadow-lg p-6">
-            <p className="text-sm font-semibold text-[var(--text-color)] mb-3">About</p>
-            <p className="text-sm text-[var(--text-color-secondary)]">
-              Welcome to Skills Inventory Management. Sign in with your username and password to access your dashboard.
-            </p>
-          </div>
+        <aside className="rounded-xl border border-[var(--border-color)] bg-[var(--card-background)] shadow-lg p-6">
+          <p className="text-sm font-semibold text-[var(--text-color)] mb-3">About</p>
+          <p className="text-sm text-[var(--text-color-secondary)]">
+            Welcome to Skills Inventory Management. Sign in with your username and password to access your dashboard.
+          </p>
         </aside>
       </div>
     </div>

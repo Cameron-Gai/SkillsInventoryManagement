@@ -1,6 +1,6 @@
 import PendingBadge from './PendingBadge'
 
-export default function SkillCard({ skill, onEdit }) {
+export default function SkillCard({ skill, onEdit, onDelete }) {
   return (
     <div className="rounded-lg border border-[var(--border-color)] bg-[var(--card-background)] p-4 shadow-sm">
       <div className="flex items-start justify-between gap-3">
@@ -25,13 +25,29 @@ export default function SkillCard({ skill, onEdit }) {
           <span className="rounded-full bg-[var(--background)] px-2 py-1">Years: {skill.years}</span>
           <span className="rounded-full bg-[var(--background)] px-2 py-1">Usage: {skill.frequency}</span>
         </div>
-        <button
-          type="button"
-          onClick={() => onEdit(skill)}
-          className="rounded-md border border-[var(--border-color)] px-3 py-1.5 text-sm font-medium text-[var(--text-color)] transition hover:border-[color:var(--color-primary)] hover:text-[color:var(--color-primary)]"
-        >
-          Edit
-        </button>
+        <div className="flex gap-2">
+          <button
+            type="button"
+            onClick={() => onEdit && skill.status !== 'Approved' && onEdit(skill)}
+            disabled={skill.status === 'Approved'}
+            className={`rounded-md border px-3 py-1.5 text-sm font-medium transition ${
+              skill.status === 'Approved'
+                ? 'border-[var(--border-color)] text-[var(--text-color-secondary)] cursor-not-allowed opacity-60'
+                : 'border-[var(--border-color)] text-[var(--text-color)] hover:border-[color:var(--color-primary)] hover:text-[color:var(--color-primary)]'
+            }`}
+          >
+            Edit
+          </button>
+          {skill.status === 'Requested' && onDelete && (
+            <button
+              type="button"
+              onClick={() => onDelete(skill.id)}
+              className="rounded-md border border-red-300 px-3 py-1.5 text-sm font-medium text-red-600 transition hover:bg-red-50 hover:border-red-500"
+            >
+              Delete
+            </button>
+          )}
+        </div>
       </div>
     </div>
   )

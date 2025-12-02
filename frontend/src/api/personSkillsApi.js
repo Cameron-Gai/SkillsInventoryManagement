@@ -11,11 +11,8 @@ const personSkillsApi = {
   getUserSkills: (userId) => axios.get(`/person-skills/user/${userId}`),
 
   // Add a skill to current user's profile
-  addMySkill: (skillId, status = "Requested") =>
-    axios.post("/person-skills/me", {
-      skill_id: skillId,
-      status,
-    }),
+  addMySkill: (skillData) =>
+    axios.post("/person-skills/me", skillData),
 
   // Add a skill to a specific user (admin only)
   addUserSkill: (userId, skillId, status = "Requested") =>
