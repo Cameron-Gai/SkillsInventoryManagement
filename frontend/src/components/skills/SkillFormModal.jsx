@@ -1,21 +1,26 @@
 import { useEffect, useState } from 'react'
 
 const DEFAULT_FORM = {
-  name: '',
-  category: 'Core Skill',
+  skill_id: '',
   level: 'Intermediate',
   years: 1,
   frequency: 'Weekly',
-  status: 'active',
   notes: '',
 }
 
-export default function SkillFormModal({ isOpen, initialSkill, onSave, onClose }) {
+export default function SkillFormModal({ isOpen, initialSkill, availableSkills = [], onSave, onClose }) {
   const [form, setForm] = useState(DEFAULT_FORM)
+  const isEditing = Boolean(initialSkill)
 
   useEffect(() => {
     if (initialSkill) {
-      setForm(initialSkill)
+      setForm({
+        skill_id: initialSkill.id,
+        level: initialSkill.level || 'Intermediate',
+        years: initialSkill.years || 1,
+        frequency: initialSkill.frequency || 'Weekly',
+        notes: initialSkill.notes || '',
+      })
     } else {
       setForm(DEFAULT_FORM)
     }
@@ -54,30 +59,29 @@ export default function SkillFormModal({ isOpen, initialSkill, onSave, onClose }
 
         <form onSubmit={handleSubmit} className="mt-4 space-y-4">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-            <label className="text-sm font-medium text-[var(--text-color)]">
-              Skill Name
-              <input
-                required
-                name="name"
-                value={form.name}
-                onChange={handleChange}
-                className="mt-1 w-full rounded-md border border-[var(--border-color)] bg-[var(--background)] px-3 py-2 text-[var(--text-color)] focus:border-[color:var(--color-primary)] focus:outline-none"
-              />
-            </label>
-
-            <label className="text-sm font-medium text-[var(--text-color)]">
-              Category
-              <select
-                name="category"
-                value={form.category}
-                onChange={handleChange}
-                className="mt-1 w-full rounded-md border border-[var(--border-color)] bg-[var(--background)] px-3 py-2 text-[var(--text-color)] focus:border-[color:var(--color-primary)] focus:outline-none"
-              >
-                <option>Core Skill</option>
-                <option>Leadership</option>
-                <option>Framework</option>
-                <option>Tooling</option>
-              </select>
+            <label className="col-span-2 text-sm font-medium text-[var(--text-color)]">
+              Select Skill
+              {isEditing ? (
+                <div className="mt-1 w-full rounded-md border border-dashed border-[var(--border-color)] bg-[var(--background)] px-3 py-2 text-[var(--text-color)]">
+                  {initialSkill?.name} ({initialSkill?.type})
+                  <input type="hidden" name="skill_id" value={form.skill_id} />
+                </div>
+              ) : (
+                <select
+                  required
+                  name="skill_id"
+                  value={form.skill_id}
+                  onChange={handleChange}
+                  className="mt-1 w-full rounded-md border border-[var(--border-color)] bg-[var(--background)] px-3 py-2 text-[var(--text-color)] focus:border-[color:var(--color-primary)] focus:outline-none"
+                >
+                  <option value="">-- Choose a skill --</option>
+                  {availableSkills.map(skill => (
+                    <option key={skill.id} value={skill.id}>
+                      {skill.name} ({skill.type})
+                    </option>
+                  ))}
+                </select>
+              )}
             </label>
 
             <label className="text-sm font-medium text-[var(--text-color)]">
@@ -121,20 +125,6 @@ export default function SkillFormModal({ isOpen, initialSkill, onSave, onClose }
                 <option>Weekly</option>
                 <option>Monthly</option>
                 <option>Occasionally</option>
-              </select>
-            </label>
-
-            <label className="text-sm font-medium text-[var(--text-color)]">
-              Status
-              <select
-                name="status"
-                value={form.status}
-                onChange={handleChange}
-                className="mt-1 w-full rounded-md border border-[var(--border-color)] bg-[var(--background)] px-3 py-2 text-[var(--text-color)] focus:border-[color:var(--color-primary)] focus:outline-none"
-              >
-                <option value="active">Active</option>
-                <option value="pending">Pending</option>
-                <option value="archived">Archived</option>
               </select>
             </label>
           </div>

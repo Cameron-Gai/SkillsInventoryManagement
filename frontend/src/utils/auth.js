@@ -1,39 +1,12 @@
 const STORAGE_KEY = 'sim_user'
-
-export const devUsers = [
-  {
-    email: 'employee@skills.test',
-    password: 'password123',
-    role: 'employee',
-    name: 'Employee Erin',
-  },
-  {
-    email: 'manager@skills.test',
-    password: 'password123',
-    role: 'manager',
-    name: 'Manager Morgan',
-  },
-  {
-    email: 'admin@skills.test',
-    password: 'password123',
-    role: 'admin',
-    name: 'Admin Avery',
-  },
-]
-
-export function authenticateDevUser(email, password) {
-  const match = devUsers.find(
-    (user) => user.email.toLowerCase() === email.toLowerCase() && user.password === password,
-  )
-
-  if (!match) return null
-
-  const { password: _password, ...safeUser } = match
-  return safeUser
-}
+const TOKEN_KEY = 'sim_token'
 
 export function storeUser(user) {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(user))
+}
+
+export function storeToken(token) {
+  localStorage.setItem(TOKEN_KEY, token)
 }
 
 export function getStoredUser() {
@@ -48,8 +21,13 @@ export function getStoredUser() {
   }
 }
 
+export function getStoredToken() {
+  return localStorage.getItem(TOKEN_KEY)
+}
+
 export function clearStoredUser() {
   localStorage.removeItem(STORAGE_KEY)
+  localStorage.removeItem(TOKEN_KEY)
 }
 
 export function getDashboardPathForRole(role) {
@@ -63,3 +41,4 @@ export function getDashboardPathForRole(role) {
       return '/dashboard'
   }
 }
+

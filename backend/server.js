@@ -1,6 +1,14 @@
 const express = require('express');
+const dotenv = require('dotenv');
+dotenv.config();
 const cors = require('cors');
 const config = require('./src/config/config');
+const authRoutes = require('./src/routes/authRoutes');
+const usersRoutes = require('./src/routes/usersRoutes');
+const skillsRoutes = require('./src/routes/skillsRoutes');
+const personSkillsRoutes = require('./src/routes/personSkillsRoutes');
+const teamRoutes = require('./src/routes/teamRoutes');
+const db = require('./src/config/db');
 
 const app = express();
 
@@ -9,43 +17,39 @@ app.use(cors({
   origin: config.cors.origin,
   credentials: true,
 }));
+
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
 
-// Basic health check route
-app.get('/health', (req, res) => {
-  res.status(200).json({
-    status: 'OK',
-    timestamp: new Date().toISOString(),
-    environment: config.server.env
-  });
+// Root route
+app.get('/', (req, res) => {
+  res.json({ message: 'Skills Inventory Management API', version: '1.0.0' });
 });
 
-// API routes will be mounted here
-// Example: app.use(config.api.baseUrl, routes);
+// Auth routes
+app.use('/api', authRoutes);
 
-// 404 handler
-app.use((req, res) => {
-  res.status(404).json({
-    error: 'Not Found',
-    message: `Cannot ${req.method} ${req.url}`
-  });
-});
+// Users routes
+app.use('/api/users', usersRoutes);
 
-// Error handler
-app.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(err.status || 500).json({
-    error: err.message || 'Internal Server Error',
-    ...(config.server.env === 'development' && { stack: err.stack })
-  });
+// Skills routes
+app.use('/api/skills', skillsRoutes);
+
+// Person Skills routes
+app.use('/api/person-skills', personSkillsRoutes);
+
+// Team routes
+app.use('/api/team', teamRoutes);
+
+// Health check
+app.get('/health', async (req, res) => {
+  try {
+    const result = await db.query('SELECT NOW()');
+    res.status(200).json({ status: 'OK', timestamp: result.rows[0].now });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
 });
 
 // Start server
-const PORT = config.server.port;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT} in ${config.server.env} mode`);
-  console.log(`Health check available at http://localhost:${PORT}/health`);
-});
-
-module.exports = app;
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

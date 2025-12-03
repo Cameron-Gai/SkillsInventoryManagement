@@ -43,6 +43,33 @@
   --state-warn: #FEF3C7;
   --state-error: #FEE2E2;
 
+  /* Skill Level Colors (theirs) */
+  --level-beginner-bg: #FEF3C7;   /* amber-100 */
+  --level-beginner-fg: #92400E;   /* amber-900 */
+  --level-intermediate-bg: #DBEAFE; /* blue-100 */
+  --level-intermediate-fg: #1E40AF; /* blue-800 */
+  --level-advanced-bg: #EDE9FE;   /* purple-100 */
+  --level-advanced-fg: #5B21B6;   /* purple-800 */
+  --level-expert-bg: #D1FAE5;     /* emerald-100 */
+  --level-expert-fg: #065F46;     /* emerald-800 */
+
+  /* Accent colors for DataVolumeCounters and status badges */
+  --accent-info-bg: #DBEAFE;      /* blue-100 */
+  --accent-info-text: #1E40AF;    /* blue-800 */
+  --accent-info-border: #93C5FD;  /* blue-300 */
+  
+  --accent-success-bg: #D1FAE5;   /* emerald-100 */
+  --accent-success-text: #065F46; /* emerald-800 */
+  --accent-success-border: #6EE7B7; /* emerald-300 */
+  
+  --accent-warning-bg: #FEF3C7;   /* amber-100 */
+  --accent-warning-text: #92400E; /* amber-900 */
+  --accent-warning-border: #FCD34D; /* amber-300 */
+  
+  --accent-danger-bg: #FEE2E2;    /* red-100 */
+  --accent-danger-text: #991B1B;  /* red-800 */
+  --accent-danger-border: #FCA5A5; /* red-300 */
+
   /* Spacing scale (yours preserved) */
   --space-card: 1.25rem;
 }
@@ -72,4 +99,31 @@
   /* Text color in dark mode */
   --header-color: var(--text-color-contrast);
   --pending-color: var(--text-amber-200); /* amber for pending states */
+
+  /* Skill Level Colors (dark) */
+  --level-beginner-bg: #78350F;   /* amber-900-ish background */
+  --level-beginner-fg: #FDE68A;   /* amber-200 text */
+  --level-intermediate-bg: #1E3A8A; /* blue-900 */
+  --level-intermediate-fg: #93C5FD; /* blue-300 */
+  --level-advanced-bg: #4C1D95;   /* purple-900 */
+  --level-advanced-fg: #C4B5FD;   /* purple-300 */
+  --level-expert-bg: #064E3B;     /* emerald-900 */
+  --level-expert-fg: #A7F3D0;     /* emerald-200 */
+
+  /* Accent colors (dark mode) */
+  --accent-info-bg: #1E3A8A;      /* blue-900 */
+  --accent-info-text: #93C5FD;    /* blue-300 */
+  --accent-info-border: #3B82F6;  /* blue-500 */
+  
+  --accent-success-bg: #064E3B;   /* emerald-900 */
+  --accent-success-text: #A7F3D0; /* emerald-200 */
+  --accent-success-border: #10B981; /* emerald-500 */
+  
+  --accent-warning-bg: #78350F;   /* amber-900 */
+  --accent-warning-text: #FDE68A; /* amber-200 */
+  --accent-warning-border: #F59E0B; /* amber-500 */
+  
+  --accent-danger-bg: #7F1D1D;    /* red-900 */
+  --accent-danger-text: #FCA5A5;  /* red-300 */
+  --accent-danger-border: #EF4444; /* red-500 */
 }
