@@ -82,6 +82,7 @@
   --background: #121212;
   --card-background: #1F1F1F;
   --panel-background: #171717;
+  --background-muted: #1A1A1A; /* neutral muted surface for lists/cards */
 
   --text-color: #F8FAFC;
   --text-color-secondary: #E5E7EB;
