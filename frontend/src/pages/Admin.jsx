@@ -288,7 +288,7 @@ export default function Admin() {
                   </div>
                     <button
                       onClick={() => handleDeleteUser(user.person_id)}
-                      className="rounded-md border border-rose-200 bg-rose-50 px-3 py-1.5 text-sm font-semibold text-rose-700 transition hover:bg-rose-100 dark:border-rose-800 dark:bg-rose-900/30 dark:text-rose-200 dark:hover:bg-rose-900/50"
+                      className="rounded-md border border-rose-200 bg-rose-50 px-3 py-1.5 text-sm font-semibold text-rose-700 transition hover:bg-rose-100"
                     >
                       Delete
                     </button>
@@ -348,7 +348,7 @@ export default function Admin() {
                     </div>
                     <button
                       onClick={() => handleDeleteSkill(skill.id)}
-                      className="rounded-md border border-rose-200 bg-rose-50 px-3 py-1.5 text-sm font-semibold text-rose-700 transition hover:bg-rose-100 dark:border-rose-800 dark:bg-rose-900/30 dark:text-rose-200 dark:hover:bg-rose-900/50"
+                      className="rounded-md border border-rose-200 bg-rose-50 px-3 py-1.5 text-sm font-semibold text-rose-700 transition hover:bg-rose-100"
                     >
                       Delete
                     </button>
@@ -384,7 +384,7 @@ export default function Admin() {
                       </div>
                       <div className="flex gap-2">
                         <button onClick={() => setEditUserSkill({ person_id: r.person_id, skill: r.skill, level: r.level, years: r.years, frequency: r.frequency, notes: r.notes, name: r.name, username: r.username })} className="px-3 py-1.5 text-sm rounded border border-[var(--border-color)] text-[var(--text-color)]">Edit</button>
-                        <button onClick={() => setConfirmRequest({ person_id: r.person_id, skill_id: r.skill.id, action: 'delete' })} className="rounded-md border border-rose-200 bg-rose-50 px-3 py-1.5 text-sm font-semibold text-rose-700 transition hover:bg-rose-100 dark:border-rose-800 dark:bg-rose-900/30 dark:text-rose-200 dark:hover:bg-rose-900/50">Delete</button>
+                        <button onClick={() => setConfirmRequest({ person_id: r.person_id, skill_id: r.skill.id, action: 'delete' })} className="rounded-md border border-rose-200 bg-rose-50 px-3 py-1.5 text-sm font-semibold text-rose-700 transition hover:bg-rose-100">Delete</button>
                       </div>
                     </div>
                   </div>
@@ -472,14 +472,14 @@ export default function Admin() {
                         <button
                           type="button"
                           onClick={() => setConfirmRequest({ person_id: r.person_id, skill_id: r.skill.id, action: 'approve' })}
-                          className="rounded-md border border-emerald-200 bg-emerald-50 px-3 py-1.5 text-sm font-semibold text-emerald-700 transition hover:bg-emerald-100 dark:border-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-200 dark:hover:bg-emerald-900/50"
+                          className="rounded-md border border-emerald-200 bg-emerald-50 px-3 py-1.5 text-sm font-semibold text-emerald-700 transition hover:bg-emerald-100"
                         >
                           Approve
                         </button>
                         <button
                           type="button"
                           onClick={() => setConfirmRequest({ person_id: r.person_id, skill_id: r.skill.id, action: 'reject' })}
-                          className="rounded-md border border-rose-200 bg-rose-50 px-3 py-1.5 text-sm font-semibold text-rose-700 transition hover:bg-rose-100 dark:border-rose-800 dark:bg-rose-900/30 dark:text-rose-200 dark:hover:bg-rose-900/50"
+                          className="rounded-md border border-rose-200 bg-rose-50 px-3 py-1.5 text-sm font-semibold text-rose-700 transition hover:bg-rose-100"
                         >
                           Reject
                         </button>
@@ -612,7 +612,7 @@ export default function Admin() {
                                   justification: cr.justification || '',
                                 })
                               }}
-                              className={`rounded-md border border-emerald-200 bg-emerald-50 px-3 py-1.5 text-sm font-semibold text-emerald-700 transition hover:bg-emerald-100 dark:border-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-200 dark:hover:bg-emerald-900/50 ${busy || inEditMode ? 'opacity-60' : ''}`}
+                              className={`rounded-md border border-emerald-200 bg-emerald-50 px-3 py-1.5 text-sm font-semibold text-emerald-700 transition hover:bg-emerald-100 ${busy || inEditMode ? 'opacity-60' : ''}`}
                             >
                               Approve
                             </button>
@@ -620,7 +620,7 @@ export default function Admin() {
                               type="button"
                               disabled={busy || inEditMode}
                               onClick={async () => { try { await processCatalogRequest(cr.request_id, { action: 'reject' }); await reloadCatalogRequests(); showToast('Catalog request rejected', { variant: 'success' }) } catch (err) { setError('Reject failed: ' + err.message); showToast('Reject failed: ' + err.message, { variant: 'error' }) } }}
-                              className={`rounded-md border border-rose-200 bg-rose-50 px-3 py-1.5 text-sm font-semibold text-rose-700 transition hover:bg-rose-100 dark:border-rose-800 dark:bg-rose-900/30 dark:text-rose-200 dark:hover:bg-rose-900/50 ${busy || inEditMode ? 'opacity-60' : ''}`}
+                              className={`rounded-md border border-rose-200 bg-rose-50 px-3 py-1.5 text-sm font-semibold text-rose-700 transition hover:bg-rose-100 ${busy || inEditMode ? 'opacity-60' : ''}`}
                             >
                               Reject
                             </button>

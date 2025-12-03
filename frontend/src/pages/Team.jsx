@@ -276,53 +276,53 @@ export default function Team() {
         )}
 
         {/* Tab Navigation */}
-        <div className="flex gap-4 border-b border-[var(--border-color)]">
+        <div className="flex gap-2 border-b border-[var(--border-color)]">
           <button
             onClick={() => setActiveTab('overview')}
-            className={`px-4 py-2 font-medium border-b-2 transition ${
+            className={`px-4 py-2 text-sm font-medium transition-colors ${
               activeTab === 'overview'
-                ? 'border-[var(--color-primary)] text-[var(--color-primary)]'
-                : 'border-transparent text-[var(--text-color-secondary)] hover:text-[var(--text-color)]'
+                ? 'border-b-2 border-[color:var(--color-primary)] text-[color:var(--color-primary)]'
+                : 'text-[var(--text-color-secondary)] hover:text-[var(--text-color)]'
             }`}
           >
             Overview
           </button>
           <button
             onClick={() => setActiveTab('pending')}
-            className={`px-4 py-2 font-medium border-b-2 transition ${
+            className={`px-4 py-2 text-sm font-medium transition-colors ${
               activeTab === 'pending'
-                ? 'border-[var(--color-primary)] text-[var(--color-primary)]'
-                : 'border-transparent text-[var(--text-color-secondary)] hover:text-[var(--text-color)]'
+                ? 'border-b-2 border-[color:var(--color-primary)] text-[color:var(--color-primary)]'
+                : 'text-[var(--text-color-secondary)] hover:text-[var(--text-color)]'
             }`}
           >
             Pending Requests {pendingRequests.length > 0 && `(${pendingRequests.length})`}
           </button>
           <button
             onClick={() => setActiveTab('approved')}
-            className={`px-4 py-2 font-medium border-b-2 transition ${
+            className={`px-4 py-2 text-sm font-medium transition-colors ${
               activeTab === 'approved'
-                ? 'border-[var(--color-primary)] text-[var(--color-primary)]'
-                : 'border-transparent text-[var(--text-color-secondary)] hover:text-[var(--text-color)]'
+                ? 'border-b-2 border-[color:var(--color-primary)] text-[color:var(--color-primary)]'
+                : 'text-[var(--text-color-secondary)] hover:text-[var(--text-color)]'
             }`}
           >
             Approved Skills
           </button>
           <button
             onClick={() => setActiveTab('priorities')}
-            className={`px-4 py-2 font-medium border-b-2 transition ${
+            className={`px-4 py-2 text-sm font-medium transition-colors ${
               activeTab === 'priorities'
-                ? 'border-[var(--color-primary)] text-[var(--color-primary)]'
-                : 'border-transparent text-[var(--text-color-secondary)] hover:text-[var(--text-color)]'
+                ? 'border-b-2 border-[color:var(--color-primary)] text-[color:var(--color-primary)]'
+                : 'text-[var(--text-color-secondary)] hover:text-[var(--text-color)]'
             }`}
           >
             Team Priorities
           </button>
           <button
             onClick={() => setActiveTab('matches')}
-            className={`px-4 py-2 font-medium border-b-2 transition ${
+            className={`px-4 py-2 text-sm font-medium transition-colors ${
               activeTab === 'matches'
-                ? 'border-[var(--color-primary)] text-[var(--color-primary)]'
-                : 'border-transparent text-[var(--text-color-secondary)] hover:text-[var(--text-color)]'
+                ? 'border-b-2 border-[color:var(--color-primary)] text-[color:var(--color-primary)]'
+                : 'text-[var(--text-color-secondary)] hover:text-[var(--text-color)]'
             }`}
           >
             High Value Matches
@@ -505,14 +505,14 @@ export default function Team() {
                       <button
                         type="button"
                         onClick={() => handleApproveSkill(r.employeeId, r.id)}
-                        className="rounded-md border border-emerald-200 bg-emerald-50 px-3 py-1.5 text-sm font-semibold text-emerald-700 transition hover:bg-emerald-100 dark:border-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-200 dark:hover:bg-emerald-900/50"
+                        className="rounded-md border border-emerald-200 bg-emerald-50 px-3 py-1.5 text-sm font-semibold text-emerald-700 transition hover:bg-emerald-100"
                       >
                         Approve
                       </button>
                       <button
                         type="button"
                         onClick={() => handleRejectSkill(r.employeeId, r.id)}
-                        className="rounded-md border border-rose-200 bg-rose-50 px-3 py-1.5 text-sm font-semibold text-rose-700 transition hover:bg-rose-100 dark:border-rose-800 dark:bg-rose-900/30 dark:text-rose-200 dark:hover:bg-rose-900/50"
+                        className="rounded-md border border-rose-200 bg-rose-50 px-3 py-1.5 text-sm font-semibold text-rose-700 transition hover:bg-rose-100"
                       >
                         Reject
                       </button>
@@ -584,7 +584,7 @@ export default function Team() {
                       <div className="flex gap-2">
                         <button
                           onClick={() => setConfirmAction({ memberId: r.person_id, skillId: r.skill.id, action: 'deleteApproved' })}
-                          className="rounded-md border border-rose-200 bg-rose-50 px-3 py-1.5 text-sm font-semibold text-rose-700 transition hover:bg-rose-100 dark:border-rose-800 dark:bg-rose-900/30 dark:text-rose-200 dark:hover:bg-rose-900/50"
+                          className="rounded-md border border-rose-200 bg-rose-50 px-3 py-1.5 text-sm font-semibold text-rose-700 transition hover:bg-rose-100"
                         >
                           Delete
                         </button>
