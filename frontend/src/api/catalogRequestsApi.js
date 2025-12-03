@@ -23,3 +23,9 @@ export const editCatalogRequest = async (requestId, { skill_name, skill_type, ju
   const { data } = await api.patch(`/catalog-requests/${requestId}`, { skill_name, skill_type, justification });
   return data;
 };
+
+// Alias for editing to match Admin.jsx import
+export const updateCatalogRequest = async (requestId, payload) => {
+  const { data } = await api.patch(`/catalog-requests/${requestId}`, payload);
+  return data;
+};

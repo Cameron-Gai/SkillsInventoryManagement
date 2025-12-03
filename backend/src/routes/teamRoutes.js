@@ -146,7 +146,7 @@ router.get('/my-team/:memberId', authenticate, authorizeRoles('manager', 'admin'
 
     // Get skills for this member
     const skillsResult = await db.query(
-      `SELECT ps.skill_id, ps.status, ps.level, ps.years, ps.frequency, ps.notes,
+      `SELECT ps.skill_id, ps.status, ps.level, ps.years, ps.frequency, ps.notes, ps.requested_at,
               s.skill_name, s.skill_type
        FROM person_skill ps
        JOIN skill s ON ps.skill_id = s.skill_id
@@ -164,6 +164,7 @@ router.get('/my-team/:memberId', authenticate, authorizeRoles('manager', 'admin'
       years: skill.years,
       frequency: skill.frequency,
       notes: skill.notes,
+      requested_at: skill.requested_at,
     }));
 
     res.json({
