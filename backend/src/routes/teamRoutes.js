@@ -37,7 +37,7 @@ router.get('/admin/requests', authenticate, authorizeRoles('admin'), async (req,
        JOIN person p ON ps.person_id = p.person_id
        JOIN skill s ON ps.skill_id = s.skill_id
        ${where}
-       ORDER BY ps.person_id, s.skill_name
+       ORDER BY ps.requested_at ASC NULLS LAST, ps.person_id, s.skill_name
        LIMIT $${params.length + 1} OFFSET $${params.length + 2}`,
       [...params, Number(pageSize), offset]
     );
@@ -413,3 +413,29 @@ router.delete('/high-value-skills/:id', authenticate, authorizeRoles('manager', 
 });
 
 module.exports = router;
+
+// Summary of pending approvals by age buckets (admin)
+router.get('/admin/requests/summary', authenticate, authorizeRoles('admin'), async (req, res) => {
+  try {
+    const result = await db.query(
+      `SELECT
+         COUNT(*) FILTER (WHERE ps.status = 'Requested' AND ps.requested_at IS NOT NULL AND ps.requested_at >= NOW() - INTERVAL '3 days') AS new_count,
+         COUNT(*) FILTER (WHERE ps.status = 'Requested' AND ps.requested_at IS NOT NULL AND ps.requested_at < NOW() - INTERVAL '3 days' AND ps.requested_at >= NOW() - INTERVAL '7 days') AS mid_count,
+         COUNT(*) FILTER (WHERE ps.status = 'Requested' AND ps.requested_at IS NOT NULL AND ps.requested_at < NOW() - INTERVAL '7 days') AS old_count,
+         COUNT(*) FILTER (WHERE ps.status = 'Requested') AS pending_total
+       FROM person_skill ps`
+    );
+
+    const row = result.rows[0] || {};
+    res.json({
+      pending_total: Number(row.pending_total || 0),
+      buckets: {
+        new: Number(row.new_count || 0),
+        mid: Number(row.mid_count || 0),
+        old: Number(row.old_count || 0),
+      }
+    });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});

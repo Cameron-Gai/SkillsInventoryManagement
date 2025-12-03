@@ -73,8 +73,10 @@ export default function EmployeeSkillsPanel({ ownerLabel = 'your', userId = null
       }
       setIsModalOpen(false)
       setEditingSkill(null)
+      showToast('Skill saved', { variant: 'success' })
     } catch (err) {
-      setError('Failed to save skill: ' + err.message)
+      const msg = err.response?.data?.error || 'Failed to save skill'
+      showToast(msg, { variant: 'error' })
       console.error('Error saving skill:', err)
     }
   }

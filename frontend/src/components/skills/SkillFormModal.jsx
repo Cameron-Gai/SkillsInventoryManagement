@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 import { createCatalogRequest } from '@/api/catalogRequestsApi'
+import skillsApi from '@/api/skillsApi'
+import { getStoredUser } from '@/utils/auth'
 
 const DEFAULT_FORM = {
   skill_id: '',
@@ -16,6 +18,7 @@ export default function SkillFormModal({ isOpen, initialSkill, availableSkills =
   const [catalogForm, setCatalogForm] = useState({ skill_name: '', skill_type: 'Technology', justification: '' })
   const [error, setError] = useState(null)
   const [success, setSuccess] = useState(null)
+  const [filteredSkills, setFilteredSkills] = useState(availableSkills)
 
   useEffect(() => {
     if (initialSkill) {
@@ -30,6 +33,32 @@ export default function SkillFormModal({ isOpen, initialSkill, availableSkills =
       setForm(DEFAULT_FORM)
     }
   }, [initialSkill])
+
+  // Fetch available (not-yet-owned) skills when opening for add
+  useEffect(() => {
+    const run = async () => {
+      try {
+        setError(null)
+        const user = getStoredUser()
+        if (!user?.person_id) {
+          setFilteredSkills(availableSkills)
+          return
+        }
+        const resp = await skillsApi.getAvailableSkills(user.person_id)
+        // Normalize to {id,name,type} for dropdown
+        const normalized = resp.data
+          ? resp.data.map(s => ({ id: s.skill_id || s.id, name: s.skill_name || s.name, type: s.skill_type || s.type }))
+          : []
+        setFilteredSkills(normalized)
+      } catch (e) {
+        // fallback to provided list if API fails
+        setFilteredSkills(availableSkills)
+      }
+    }
+    if (isOpen && !isEditing) {
+      run()
+    }
+  }, [isOpen, isEditing, availableSkills])
 
   if (!isOpen) return null
 
@@ -49,7 +78,11 @@ export default function SkillFormModal({ isOpen, initialSkill, availableSkills =
       setError(null)
       setSuccess(null)
       if (!catalogForm.skill_name.trim()) {
-        setError('Skill name is required')
+        if (typeof window !== 'undefined' && typeof window.simShowToast === 'function') {
+          window.simShowToast('Skill name is required', { variant: 'error' })
+        } else {
+          setError('Skill name is required')
+        }
         return
       }
       await createCatalogRequest({
@@ -59,12 +92,21 @@ export default function SkillFormModal({ isOpen, initialSkill, availableSkills =
       })
       setShowCatalogRequest(false)
       setCatalogForm({ skill_name: '', skill_type: 'Technology', justification: '' })
-      setSuccess('Catalog request submitted')
-      setTimeout(() => setSuccess(null), 3000)
+      if (typeof window !== 'undefined' && typeof window.simShowToast === 'function') {
+        window.simShowToast('Catalog request submitted', { variant: 'success' })
+      } else {
+        setSuccess('Catalog request submitted')
+        setTimeout(() => setSuccess(null), 3000)
+      }
       onClose?.()
       onCatalogRequested?.()
     } catch (err) {
-      setError('Failed to submit catalog request: ' + err.message)
+      const msg = err.response?.data?.error || 'Failed to submit catalog request'
+      if (typeof window !== 'undefined' && typeof window.simShowToast === 'function') {
+        window.simShowToast(msg, { variant: 'error' })
+      } else {
+        setError(msg)
+      }
     }
   }
 
@@ -106,7 +148,7 @@ export default function SkillFormModal({ isOpen, initialSkill, availableSkills =
                     className="flex-1 rounded-md border border-[var(--border-color)] bg-[var(--background)] px-3 py-2 text-[var(--text-color)] focus:border-[color:var(--color-primary)] focus:outline-none"
                   >
                     <option value="">-- Choose a skill --</option>
-                    {availableSkills.map(skill => (
+                    {filteredSkills.map(skill => (
                       <option key={skill.id} value={skill.id}>
                         {skill.name} ({skill.type})
                       </option>

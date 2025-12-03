@@ -47,6 +47,17 @@ axiosInstance.interceptors.response.use(
       window.location.replace("/login");
     }
 
+    // Handle too many requests (limits) with a friendly toast/alert
+    if (error.response?.status === 429) {
+      const msg =
+        error.response?.data?.error ||
+        error.response?.data?.message ||
+        "You have reached the current request limit.";
+      if (typeof window !== 'undefined' && typeof window.simShowToast === 'function') {
+        window.simShowToast(msg, { variant: 'error' });
+      }
+    }
+
     return Promise.reject(error);
   }
 );

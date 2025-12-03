@@ -88,6 +88,17 @@ router.post('/me', authenticate, async (req, res) => {
 
     const skill = skillCheck.rows[0];
 
+    // Prevent duplicates: user cannot have more than one of the same skill
+    const existing = await db.query(
+      `SELECT 1 FROM person_skill WHERE person_id = $1 AND skill_id = $2 LIMIT 1`,
+      [userId, skill_id]
+    );
+    if (existing.rows.length > 0) {
+      return res.status(409).json({
+      error: 'Skill already exists for this user',
+      });
+    }
+
     // Determine if this is a new skill or an edit
     const existingRes = await db.query(
       'SELECT status, level FROM person_skill WHERE person_id = $1 AND skill_id = $2',
@@ -98,6 +109,14 @@ router.post('/me', authenticate, async (req, res) => {
 
     let result;
     if (existingRes.rows.length === 0) {
+      // Enforce max 3 pending skill requests for the current user
+      const pendingCountRes = await db.query(
+        `SELECT COUNT(*)::int AS cnt FROM person_skill WHERE person_id = $1 AND status = 'Requested'`,
+        [userId]
+      );
+      if ((pendingCountRes.rows[0].cnt || 0) >= 3) {
+        return res.status(429).json({ error: 'You have reached the limit of 3 pending skill requests.' });
+      }
       // New skill: always create as Requested
       result = await db.query(
         `INSERT INTO person_skill (person_id, skill_id, status, level, years, frequency, notes, requested_at)
@@ -112,6 +131,17 @@ router.post('/me', authenticate, async (req, res) => {
       const prevRank = LEVEL_ORDER[prevLevel] || 0;
       const nextRank = LEVEL_ORDER[nextLevel] || 0;
       const increased = nextRank > prevRank;
+
+      if (increased) {
+        // Enforce limit before pend the increase
+        const pendingCountRes = await db.query(
+          `SELECT COUNT(*)::int AS cnt FROM person_skill WHERE person_id = $1 AND status = 'Requested'`,
+          [userId]
+        );
+        if ((pendingCountRes.rows[0].cnt || 0) >= 3) {
+          return res.status(429).json({ error: 'You have reached the limit of 3 pending skill requests.' });
+        }
+      }
 
       result = await db.query(
         `UPDATE person_skill

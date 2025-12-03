@@ -80,6 +80,15 @@ router.post('/', authenticate, async (req, res) => {
       return res.status(409).json({ error: 'A Catalog Request for this skill is already pending.' });
     }
 
+    // Enforce max 1 pending catalog request per user
+    const pendingCatalogRes = await db.query(
+      `SELECT COUNT(*)::int AS cnt FROM skill_request WHERE requested_by = $1 AND status = 'Requested'`,
+      [req.user.person_id]
+    );
+    if ((pendingCatalogRes.rows[0].cnt || 0) >= 1) {
+      return res.status(429).json({ error: 'You already have an active catalog request.' });
+    }
+
     const insert = await db.query(
       `INSERT INTO skill_request (requested_by, skill_name, skill_type, justification)
        VALUES ($1, $2, $3, $4)

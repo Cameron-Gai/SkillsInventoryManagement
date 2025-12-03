@@ -15,6 +15,11 @@ export default function ToastProvider({ children }) {
     }, duration)
   }, [])
 
+  // Expose globally so non-React code (e.g., Axios interceptors) can trigger toasts
+  if (typeof window !== 'undefined') {
+    window.simShowToast = showToast
+  }
+
   return (
     <ToastContext.Provider value={{ showToast }}>
       {children}

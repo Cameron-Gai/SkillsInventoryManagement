@@ -25,6 +25,26 @@ router.get('/', authenticate, async (req, res) => {
   }
 });
 
+// List skills a person does NOT yet have (available to add)
+router.get('/available/:personId', authenticate, async (req, res) => {
+  try {
+    const { personId } = req.params;
+    const result = await db.query(
+      `SELECT s.skill_id, s.skill_name, s.skill_type
+       FROM skill s
+       WHERE NOT EXISTS (
+         SELECT 1 FROM person_skill ps
+         WHERE ps.person_id = $1 AND ps.skill_id = s.skill_id
+       )
+       ORDER BY s.skill_name ASC`,
+      [personId]
+    );
+    res.json(result.rows);
+  } catch (err) {
+    res.status(500).json({ error: 'Failed to fetch available skills' });
+  }
+});
+
 // Get a specific skill by ID (authenticated users)
 router.get('/:id', authenticate, async (req, res) => {
   try {

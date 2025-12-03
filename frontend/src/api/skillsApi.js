@@ -7,6 +7,9 @@ const skillsApi = {
   // Get all available skills
   getAllSkills: () => axios.get("/skills"),
 
+  // Get skills a person does NOT yet have
+  getAvailableSkills: (personId) => axios.get(`/skills/available/${personId}`),
+
   // Get a specific skill
   getSkill: (id) => axios.get(`/skills/${id}`),
 
