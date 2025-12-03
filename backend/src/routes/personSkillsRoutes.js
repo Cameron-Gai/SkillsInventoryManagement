@@ -88,15 +88,40 @@ router.post('/me', authenticate, async (req, res) => {
 
     const skill = skillCheck.rows[0];
 
-    // Employees can only add skills with 'Requested' status
-    const result = await db.query(
-      `INSERT INTO person_skill (person_id, skill_id, status, level, years, frequency, notes, requested_at)
-       VALUES ($1, $2, 'Requested', $3, $4, $5, $6, NOW())
-       ON CONFLICT (person_id, skill_id) 
-       DO UPDATE SET status = 'Requested', level = $3, years = $4, frequency = $5, notes = $6, requested_at = NOW()
-       RETURNING person_id, skill_id, status, level, years, frequency, notes, requested_at`,
-      [userId, skill_id, level, years, frequency, notes]
+    // Determine if this is a new skill or an edit
+    const existingRes = await db.query(
+      'SELECT status, level FROM person_skill WHERE person_id = $1 AND skill_id = $2',
+      [userId, skill_id]
     );
+
+    const LEVEL_ORDER = { beginner: 1, intermediate: 2, advanced: 3, expert: 4 };
+
+    let result;
+    if (existingRes.rows.length === 0) {
+      // New skill: always create as Requested
+      result = await db.query(
+        `INSERT INTO person_skill (person_id, skill_id, status, level, years, frequency, notes, requested_at)
+         VALUES ($1, $2, 'Requested', $3, $4, $5, $6, NOW())
+         RETURNING person_id, skill_id, status, level, years, frequency, notes, requested_at`,
+        [userId, skill_id, level, years, frequency, notes]
+      );
+    } else {
+      // Existing skill: only pend if level increases
+      const prevLevel = (existingRes.rows[0].level || '').toLowerCase();
+      const nextLevel = (level || '').toLowerCase();
+      const prevRank = LEVEL_ORDER[prevLevel] || 0;
+      const nextRank = LEVEL_ORDER[nextLevel] || 0;
+      const increased = nextRank > prevRank;
+
+      result = await db.query(
+        `UPDATE person_skill
+         SET level = $1, years = $2, frequency = $3, notes = $4
+         ${increased ? ", status = 'Requested', requested_at = NOW()" : ''}
+         WHERE person_id = $5 AND skill_id = $6
+         RETURNING person_id, skill_id, status, level, years, frequency, notes, requested_at`,
+        [level, years, frequency, notes, userId, skill_id]
+      );
+    }
 
     res.status(201).json({
       id: skill.skill_id,

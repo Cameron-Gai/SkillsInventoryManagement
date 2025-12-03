@@ -10,6 +10,7 @@ const DEFAULT_FORM = {
 
 export default function SkillFormModal({ isOpen, initialSkill, availableSkills = [], onSave, onClose }) {
   const [form, setForm] = useState(DEFAULT_FORM)
+  const isEditing = Boolean(initialSkill)
 
   useEffect(() => {
     if (initialSkill) {
@@ -60,20 +61,27 @@ export default function SkillFormModal({ isOpen, initialSkill, availableSkills =
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <label className="col-span-2 text-sm font-medium text-[var(--text-color)]">
               Select Skill
-              <select
-                required
-                name="skill_id"
-                value={form.skill_id}
-                onChange={handleChange}
-                className="mt-1 w-full rounded-md border border-[var(--border-color)] bg-[var(--background)] px-3 py-2 text-[var(--text-color)] focus:border-[color:var(--color-primary)] focus:outline-none"
-              >
-                <option value="">-- Choose a skill --</option>
-                {availableSkills.map(skill => (
-                  <option key={skill.id} value={skill.id}>
-                    {skill.name} ({skill.type})
-                  </option>
-                ))}
-              </select>
+              {isEditing ? (
+                <div className="mt-1 w-full rounded-md border border-dashed border-[var(--border-color)] bg-[var(--background)] px-3 py-2 text-[var(--text-color)]">
+                  {initialSkill?.name} ({initialSkill?.type})
+                  <input type="hidden" name="skill_id" value={form.skill_id} />
+                </div>
+              ) : (
+                <select
+                  required
+                  name="skill_id"
+                  value={form.skill_id}
+                  onChange={handleChange}
+                  className="mt-1 w-full rounded-md border border-[var(--border-color)] bg-[var(--background)] px-3 py-2 text-[var(--text-color)] focus:border-[color:var(--color-primary)] focus:outline-none"
+                >
+                  <option value="">-- Choose a skill --</option>
+                  {availableSkills.map(skill => (
+                    <option key={skill.id} value={skill.id}>
+                      {skill.name} ({skill.type})
+                    </option>
+                  ))}
+                </select>
+              )}
             </label>
 
             <label className="text-sm font-medium text-[var(--text-color)]">
