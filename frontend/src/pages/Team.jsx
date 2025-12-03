@@ -45,19 +45,19 @@ export default function Team() {
     return level === 'expert' && type === 'technology' && (freq === 'daily' || freq === 'weekly')
   }
 
-  const computeFitScoreEntry = (entry) => {
-    const proficiencyWeights = { expert: 1, advanced: 0.85, intermediate: 0.65, beginner: 0.4 }
-    const normalizedLevel = entry.level?.toLowerCase() || 'intermediate'
-    const baseScore = proficiencyWeights[normalizedLevel] ?? 0.55
-    
-    const experienceYears = typeof entry.years === 'number' ? entry.years : 0
-    const experienceBoost = Math.min(experienceYears / 10, 0.25)
-    
-    const statusValue = entry.status?.toLowerCase() ?? 'pending'
-    const statusBoost = statusValue === 'approved' ? 0.15 : statusValue === 'rejected' ? -0.1 : 0
-    
-    const proficiencyScore = Math.max(0.25, Math.min(1, baseScore + experienceBoost + statusBoost))
-    return Math.round(proficiencyScore * 100)
+  const timeAgo = (ts) => {
+    if (!ts) return ''
+    const dt = new Date(ts)
+    const now = new Date()
+    const diffMs = now - dt
+    const sec = Math.floor(diffMs / 1000)
+    const min = Math.floor(sec / 60)
+    const hr = Math.floor(min / 60)
+    const day = Math.floor(hr / 24)
+    if (day > 0) return `${day} day${day === 1 ? '' : 's'} ago`
+    if (hr > 0) return `${hr} hour${hr === 1 ? '' : 's'} ago`
+    if (min > 0) return `${min} minute${min === 1 ? '' : 's'} ago`
+    return `${sec} second${sec === 1 ? '' : 's'} ago`
   }
 
   useEffect(() => {
@@ -395,9 +395,11 @@ export default function Team() {
                                 {skill.frequency && (
                                   <span><span className="font-medium">Frequency:</span> {skill.frequency}</span>
                                 )}
-                                <span className="font-medium text-[color:var(--color-primary)]">
-                                  Fit: {computeFitScoreEntry({ ...skill, skill: { type: skill.type } })}/100
-                                </span>
+                                {skill.status === 'Requested' && skill.requested_at && (
+                                  <span className="font-medium text-[color:var(--color-primary)]">
+                                    Requested: {timeAgo(skill.requested_at)}
+                                  </span>
+                                )}
                               </div>
                               {skill.notes && (
                                 <p className="mt-1 text-xs text-[var(--text-color-secondary)] italic">
@@ -495,9 +497,11 @@ export default function Team() {
                         {request.frequency && (
                           <span><span className="font-medium">Frequency:</span> {request.frequency}</span>
                         )}
-                        <span className="font-medium text-[color:var(--color-primary)]">
-                          Fit: {computeFitScoreEntry({ ...request, skill: { type: request.type } })}/100
-                        </span>
+                        {request.requested_at && (
+                          <span className="font-medium text-[color:var(--color-primary)]">
+                            Requested: {timeAgo(request.requested_at)}
+                          </span>
+                        )}
                       </div>
                       {request.notes && (
                         <p className="mt-2 text-xs text-[var(--text-color-secondary)] italic">

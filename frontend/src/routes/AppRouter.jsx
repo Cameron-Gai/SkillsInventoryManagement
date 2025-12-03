@@ -4,6 +4,7 @@
 
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import ProtectedRoute from './ProtectedRoute'
+import RequireHasTeam from './RequireHasTeam'
 import { getDashboardPathForRole, getStoredUser } from '@/utils/auth'
 
 // Pages
@@ -53,7 +54,9 @@ export default function AppRouter() {
           path="/team"
           element={
             <ProtectedRoute role="manager">
-              <Team />
+              <RequireHasTeam>
+                <Team />
+              </RequireHasTeam>
             </ProtectedRoute>
           }
         />

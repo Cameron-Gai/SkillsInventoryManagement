@@ -32,15 +32,19 @@ function isHighValueEntry(entry) {
   return tech && highLevel && often
 }
 
-function computeFitScoreEntry(entry) {
-  const levelMap = { beginner: 1, intermediate: 2, advanced: 3, expert: 4 }
-  const freqMap = { daily: 1.0, weekly: 0.8, monthly: 0.5, occasionally: 0.3 }
-  const lvl = levelMap[(entry?.level || '').toLowerCase()] || 1
-  const freq = freqMap[(entry?.frequency || '').toLowerCase()] || 0.5
-  const years = Number(entry?.years || 0)
-  const yearsFactor = Math.min(1, years / 5)
-  const score = Math.round(lvl * 25 + freq * 25 + yearsFactor * 50)
-  return Math.max(0, Math.min(100, score))
+function timeAgo(ts) {
+  if (!ts) return ''
+  const dt = new Date(ts)
+  const now = new Date()
+  const diffMs = now - dt
+  const sec = Math.floor(diffMs / 1000)
+  const min = Math.floor(sec / 60)
+  const hr = Math.floor(min / 60)
+  const day = Math.floor(hr / 24)
+  if (day > 0) return `${day} day${day === 1 ? '' : 's'} ago`
+  if (hr > 0) return `${hr} hour${hr === 1 ? '' : 's'} ago`
+  if (min > 0) return `${min} minute${min === 1 ? '' : 's'} ago`
+  return `${sec} second${sec === 1 ? '' : 's'} ago`
 }
 
 export default function Admin() {
@@ -429,7 +433,7 @@ export default function Admin() {
                       )}
                     </div>
                     <p className="text-sm text-[var(--text-color-secondary)]">{r.name} • {r.username}</p>
-                    <div className="mt-2 grid grid-cols-2 md:grid-cols-4 gap-2 text-xs text-[var(--text-color-secondary)]">
+                      <div className="mt-2 grid grid-cols-2 md:grid-cols-4 gap-2 text-xs text-[var(--text-color-secondary)]">
                       {r.level && (
                         <div className="flex items-center gap-1">
                           <span className="font-medium">Level:</span>
@@ -438,7 +442,7 @@ export default function Admin() {
                       )}
                       {r.years !== null && r.years !== undefined && <div><span className="font-medium">Experience:</span> {r.years} yrs</div>}
                       {r.frequency && <div><span className="font-medium">Frequency:</span> {r.frequency}</div>}
-                      <div><span className="font-medium">Fit:</span> {computeFitScoreEntry(r)}</div>
+                        {r.requested_at && <div><span className="font-medium">Requested:</span> {timeAgo(r.requested_at)}</div>}
                     </div>
                     {r.notes && <p className="mt-2 text-xs italic text-[var(--text-color-secondary)]">"{r.notes}"</p>}
                   </div>

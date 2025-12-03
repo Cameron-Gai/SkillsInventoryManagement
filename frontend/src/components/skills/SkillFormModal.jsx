@@ -11,7 +11,7 @@ const DEFAULT_FORM = {
   notes: '',
 }
 
-export default function SkillFormModal({ isOpen, initialSkill, availableSkills = [], onSave, onClose, onCatalogRequested }) {
+export default function SkillFormModal({ isOpen, initialSkill, availableSkills = [], onSave, onClose, onCatalogRequested, onDelete }) {
   const [form, setForm] = useState(DEFAULT_FORM)
   const isEditing = Boolean(initialSkill)
   const [showCatalogRequest, setShowCatalogRequest] = useState(false)
@@ -236,6 +236,21 @@ export default function SkillFormModal({ isOpen, initialSkill, availableSkills =
             >
               Cancel
             </button>
+            {isEditing && (
+              <button
+                type="button"
+                onClick={() => {
+                  try {
+                    if (onDelete) onDelete(initialSkill.id)
+                  } finally {
+                    onClose?.()
+                  }
+                }}
+                className="rounded-md border border-red-300 px-4 py-2 text-sm font-medium text-red-600 transition hover:bg-red-50 hover:border-red-500"
+              >
+                Delete
+              </button>
+            )}
             <button
               type="submit"
               disabled={!form.skill_id}

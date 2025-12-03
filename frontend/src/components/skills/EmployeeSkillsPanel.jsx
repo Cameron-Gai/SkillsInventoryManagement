@@ -147,6 +147,7 @@ export default function EmployeeSkillsPanel({ ownerLabel = 'your', userId = null
         onSave={handleSave}
         onClose={() => setIsModalOpen(false)}
         onCatalogRequested={handleCatalogRequested}
+        onDelete={(id) => setDeleteConfirm(id)}
       />
       {/* Toasts handled globally by ToastProvider */}
 

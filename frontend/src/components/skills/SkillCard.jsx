@@ -62,7 +62,7 @@ export default function SkillCard({ skill, onEdit, onDelete }) {
         <p className="mt-3 text-sm text-[var(--text-color-secondary)]">{skill.notes}</p>
       )}
 
-      <div className="mt-4 flex flex-wrap items-center justify-between gap-3">
+      <div className="mt-4 flex items-end justify-between">
         <div className="text-xs text-[var(--text-color-secondary)] space-y-1">
           <div className="rounded-md bg-[var(--background-muted)] px-2 py-1 font-medium">Years: {skill.years}</div>
           <div className="rounded-md bg-[var(--background-muted)] px-2 py-1 font-medium">Usage: {skill.frequency}</div>
@@ -75,15 +75,6 @@ export default function SkillCard({ skill, onEdit, onDelete }) {
           >
             Edit
           </button>
-          {skill.status === 'Requested' && onDelete && (
-            <button
-              type="button"
-              onClick={() => onDelete(skill.id)}
-              className="rounded-md border border-red-300 px-3 py-1.5 text-sm font-medium text-red-600 transition hover:bg-red-50 hover:border-red-500"
-            >
-              Delete
-            </button>
-          )}
         </div>
       </div>
     </div>
