@@ -8,12 +8,20 @@ function derivePriority(score) {
 }
 
 function formatNotes(row) {
-  const teamPct = Math.round((Number(row.team_coverage) || 0) * 100);
-  const adoptionPct = Math.round((Number(row.employee_penetration) || 0) * 100);
+  const formatPercent = (val) => {
+    const pctRaw = (Number(val) || 0) * 100;
+    if (pctRaw > 0 && pctRaw < 1) {
+      const pct = Math.max(pctRaw, 0.1);
+      return `${pct.toFixed(1)}%`;
+    }
+    return `${Math.round(pctRaw)}%`;
+  };
+  const teamPctStr = formatPercent(row.team_coverage);
+  const adoptionPctStr = formatPercent(row.employee_penetration);
   const teamCount = Number(row.team_count) || 0;
   const employeeCount = Number(row.approved_employees) || 0;
 
-  return `${teamCount} teams (${teamPct}% coverage) marked this - ${adoptionPct}% of employees (about ${employeeCount}) are approved`;
+  return `${teamCount} teams (${teamPctStr} coverage) marked this - ${adoptionPctStr} of employees (about ${employeeCount}) are approved`;
 }
 
 async function computeCompanyFocusSkills(limit = 6, options = {}) {
@@ -81,12 +89,10 @@ async function computeCompanyFocusSkills(limit = 6, options = {}) {
        sts.total_priority_score,
        COALESCE(ses.approved_employees, 0) AS approved_employees,
        (sts.team_count::numeric / $1) AS team_coverage,
-       CASE
-         WHEN $2 = 0 THEN 0
-         ELSE COALESCE(ses.approved_employees, 0)::numeric / $2
-       END AS employee_penetration,
+       -- Use NULLIF to avoid division by zero and force numeric division
+       COALESCE(ses.approved_employees, 0)::numeric / NULLIF($2::numeric, 0) AS employee_penetration,
        (sts.team_count::numeric / $1) *
-         (1 - CASE WHEN $2 = 0 THEN 0 ELSE COALESCE(ses.approved_employees, 0)::numeric / $2 END) *
+         (1 - COALESCE(ses.approved_employees, 0)::numeric / NULLIF($2::numeric, 0)) *
          (1 + (sts.avg_priority_score - 1) / 2) AS score
      FROM skill_team_stats sts
      JOIN skill sk ON sk.skill_id = sts.skill_id
