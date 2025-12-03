@@ -243,8 +243,7 @@ export default function Team() {
           <p className="text-sm font-semibold uppercase tracking-wide text-[color:var(--color-primary)]">Manager UI</p>
           <h1 className="mt-2 text-3xl font-bold text-[var(--text-color)]">Team Management</h1>
           <p className="mt-3 max-w-3xl text-[var(--text-color-secondary)]">
-            Keep your own skills current while reviewing the team roster. Employee tooling remains available so managers can
-            update their personal inventory without switching contexts.
+            Manage your team’s skill inventory, review pending requests, and highlight priority capabilities for your team.
           </p>
         </header>
 
@@ -346,8 +345,8 @@ export default function Team() {
                     onClick={() => handleSelectMember(member.person_id)}
                     className={`w-full text-left rounded-lg border p-4 transition ${
                       selectedMember === member.person_id
-                        ? 'border-[var(--color-primary)] bg-[var(--background)]'
-                        : 'border-[var(--border-color)] hover:bg-[var(--background)]'
+                        ? 'border-[var(--color-primary)] bg-[var(--background-muted)]'
+                        : 'border-[var(--border-color)] hover:bg-[var(--background-muted)]'
                     }`}
                   >
                     <p className="font-medium text-[var(--text-color)]">{member.name}</p>
@@ -369,7 +368,7 @@ export default function Team() {
                       {memberDetails.skills.map((skill) => (
                         <li
                           key={skill.id}
-                          className="rounded border border-[var(--border-color)] p-3 text-sm"
+                          className="rounded border border-[var(--border-color)] bg-[var(--background-muted)] p-3 text-sm"
                         >
                           <div className="flex justify-between items-start gap-3">
                             <div className="flex-1">
@@ -549,9 +548,9 @@ export default function Team() {
             ) : approvedSkills.length === 0 ? (
               <p className="mt-4 text-[var(--text-color-secondary)]">No approved skills</p>
             ) : (
-              <div className="mt-4 space-y-3">
+                  <div className="mt-4 space-y-3">
                 {approvedSkills.map((r) => (
-                  <div key={`${r.person_id}-${r.skill.id}`} className="rounded-lg border border-[var(--border-color)] p-4">
+                      <div key={`${r.person_id}-${r.skill.id}`} className="rounded-lg border border-[var(--border-color)] bg-[var(--background-muted)] p-4">
                     <div className="flex items-start justify-between gap-3">
                       <div className="flex-1">
                         <div className="flex items-center gap-2 mb-1">
@@ -585,7 +584,7 @@ export default function Team() {
                       <div className="flex gap-2">
                         <button
                           onClick={() => setConfirmAction({ memberId: r.person_id, skillId: r.skill.id, action: 'deleteApproved' })}
-                          className="px-3 py-1.5 text-sm rounded border border-red-300 text-red-600 hover:bg-red-50 dark:hover:bg-red-900/20 transition"
+                          className="rounded-md border border-rose-200 bg-rose-50 px-3 py-1.5 text-sm font-semibold text-rose-700 transition hover:bg-rose-100"
                         >
                           Delete
                         </button>

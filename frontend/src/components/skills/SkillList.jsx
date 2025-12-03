@@ -3,7 +3,7 @@ import SkillCard from './SkillCard'
 export default function SkillList({ skills, onEdit, onDelete }) {
   if (!skills.length) {
     return (
-      <div className="rounded-lg border border-dashed border-[var(--border-color)] bg-[var(--card-background)] p-6 text-center text-[var(--text-color-secondary)]">
+      <div className="rounded-lg border border-dashed border-[var(--border-color)] bg-[var(--background-muted)] p-6 text-center text-[var(--text-color-secondary)]">
         No skills added yet. Use "Add Skill" to start your inventory.
       </div>
     )

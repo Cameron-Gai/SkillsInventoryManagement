@@ -42,16 +42,7 @@ export default function Dashboard() {
     fetchUser()
   }, [])
 
-  const heroCopy = useMemo(() => {
-    switch (user?.role) {
-      case 'manager':
-        return 'Managers keep their own profile up to date while reviewing their team.'
-      case 'admin':
-        return 'Admins retain the employee experience alongside platform controls.'
-      default:
-        return 'Track and grow your skills to unlock new opportunities.'
-    }
-  }, [user?.role])
+  const heroCopy = 'Track and grow your skills to unlock new opportunities.'
 
   const personalInsights = useMemo(() => {
     const summary = user?.skill_summary ?? {}

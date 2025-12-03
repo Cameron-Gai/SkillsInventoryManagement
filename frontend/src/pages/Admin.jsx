@@ -214,8 +214,7 @@ export default function Admin() {
           <p className="text-sm font-semibold uppercase tracking-wide text-[color:var(--color-primary)]">Admin UI</p>
           <h1 className="mt-2 text-3xl font-bold text-[var(--text-color)]">Platform Administration</h1>
           <p className="mt-3 max-w-3xl text-[var(--text-color-secondary)]">
-            Manage users, skills, and platform settings. You retain the full employee dashboard for your own profile while gaining
-            access to these administrative tools.
+            Administer users and the skills catalog, review approval queues, and maintain platform data integrity.
           </p>
         </header>
 
@@ -277,11 +276,11 @@ export default function Admin() {
         ) : activeTab === 'users' ? (
           <section className="rounded-xl border border-[var(--border-color)] bg-[var(--card-background)] p-6 shadow-sm">
             <h2 className="text-xl font-semibold text-[var(--text-color)]">Users</h2>
-            <div className="mt-4 space-y-2 max-h-96 overflow-y-auto">
+              <div className="mt-4 space-y-2 max-h-[70vh] overflow-y-auto">
               {users.map((user) => (
                 <div
                   key={user.person_id}
-                  className="flex items-center justify-between rounded-lg border border-[var(--border-color)] p-4"
+                    className="flex items-center justify-between rounded-lg border border-[var(--border-color)] bg-[var(--background-muted)] p-4"
                 >
                   <div>
                     <p className="font-medium text-[var(--text-color)]">{user.name}</p>
@@ -289,7 +288,7 @@ export default function Admin() {
                   </div>
                     <button
                       onClick={() => handleDeleteUser(user.person_id)}
-                      className="px-3 py-1 text-sm font-medium text-red-600 border border-red-200 rounded hover:bg-red-50"
+                      className="rounded-md border border-rose-200 bg-rose-50 px-3 py-1.5 text-sm font-semibold text-rose-700 transition hover:bg-rose-100"
                     >
                       Delete
                     </button>
@@ -337,11 +336,11 @@ export default function Admin() {
 
             <section className="rounded-xl border border-[var(--border-color)] bg-[var(--card-background)] p-6 shadow-sm">
               <h2 className="text-xl font-semibold text-[var(--text-color)]">Skills Library</h2>
-              <div className="mt-4 space-y-2 max-h-96 overflow-y-auto">
+              <div className="mt-4 space-y-2 max-h-[70vh] overflow-y-auto">
                 {skills.map((skill) => (
                   <div
                     key={skill.id}
-                    className="flex items-center justify-between rounded-lg border border-[var(--border-color)] p-4"
+                    className="flex items-center justify-between rounded-lg border border-[var(--border-color)] bg-[var(--background-muted)] p-4"
                   >
                     <div>
                       <p className="font-medium text-[var(--text-color)]">{skill.name}</p>
@@ -349,7 +348,7 @@ export default function Admin() {
                     </div>
                     <button
                       onClick={() => handleDeleteSkill(skill.id)}
-                      className="px-3 py-1 text-sm font-medium text-red-600 border border-red-200 rounded hover:bg-red-50"
+                      className="rounded-md border border-rose-200 bg-rose-50 px-3 py-1.5 text-sm font-semibold text-rose-700 transition hover:bg-rose-100"
                     >
                       Delete
                     </button>
@@ -371,7 +370,7 @@ export default function Admin() {
                 <p className="text-sm text-[var(--text-color-secondary)]">No approved skills found.</p>
               ) : (
                 requests.map((r) => (
-                  <div key={`${r.person_id}-${r.skill.id}`} className="rounded-lg border border-[var(--border-color)] p-4">
+                  <div key={`${r.person_id}-${r.skill.id}`} className="rounded-lg border border-[var(--border-color)] bg-[var(--background-muted)] p-4">
                     <div className="flex items-start justify-between gap-3">
                       <div className="flex-1">
                         <p className="font-semibold text-[var(--text-color)]">{r.skill.name}</p>
@@ -385,7 +384,7 @@ export default function Admin() {
                       </div>
                       <div className="flex gap-2">
                         <button onClick={() => setEditUserSkill({ person_id: r.person_id, skill: r.skill, level: r.level, years: r.years, frequency: r.frequency, notes: r.notes, name: r.name, username: r.username })} className="px-3 py-1.5 text-sm rounded border border-[var(--border-color)] text-[var(--text-color)]">Edit</button>
-                        <button onClick={() => setConfirmRequest({ person_id: r.person_id, skill_id: r.skill.id, action: 'delete' })} className="px-3 py-1.5 text-sm rounded border border-red-300 text-red-600">Delete</button>
+                        <button onClick={() => setConfirmRequest({ person_id: r.person_id, skill_id: r.skill.id, action: 'delete' })} className="rounded-md border border-rose-200 bg-rose-50 px-3 py-1.5 text-sm font-semibold text-rose-700 transition hover:bg-rose-100">Delete</button>
                       </div>
                     </div>
                   </div>
@@ -664,7 +663,7 @@ export default function Admin() {
                 <p className="text-sm text-[var(--text-color-secondary)]">No logs yet.</p>
               ) : (
                 logs.map((r) => (
-                  <div key={`log-${r.status}-${r.person_id}-${r.skill.id}`} className="rounded-lg border border-[var(--border-color)] p-4 flex items-start gap-4">
+                  <div key={`log-${r.status}-${r.person_id}-${r.skill.id}`} className="rounded-lg border border-[var(--border-color)] bg-[var(--background-muted)] p-4 flex items-start gap-4">
                     <div className="flex-1">
                       <div className="flex items-center gap-2">
                         <p className="font-semibold text-[var(--text-color)]">{r.skill.name}</p>
