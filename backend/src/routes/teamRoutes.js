@@ -2,6 +2,7 @@ const express = require('express');
 const { authenticate } = require('../config/auth/authMiddleware');
 const { authorizeRoles } = require('../config/auth/requireRole');
 const db = require('../config/db');
+const { ensureTeamHighValueSkillsTable } = require('../utils/highValueSkillsTable');
 
 const router = express.Router();
 // Admin: list all skill requests across the org with pagination
@@ -29,9 +30,9 @@ router.get('/admin/requests', authenticate, authorizeRoles('admin'), async (req,
     const total = Number(totalResult.rows[0].total || 0);
 
     const listResult = await db.query(
-      `SELECT ps.person_id, p.person_name, p.username,
+            `SELECT ps.person_id, p.person_name, p.username,
               ps.skill_id, s.skill_name, s.skill_type,
-              ps.status, ps.level, ps.years, ps.frequency, ps.notes
+              ps.status, ps.level, ps.years, ps.frequency, ps.notes, ps.requested_at
        FROM person_skill ps
        JOIN person p ON ps.person_id = p.person_id
        JOIN skill s ON ps.skill_id = s.skill_id
@@ -51,6 +52,7 @@ router.get('/admin/requests', authenticate, authorizeRoles('admin'), async (req,
       years: r.years,
       frequency: r.frequency,
       notes: r.notes,
+      requested_at: r.requested_at,
     }));
 
     res.json({ page: Number(page), pageSize: Number(pageSize), total, items });
@@ -84,6 +86,41 @@ router.get('/my-team', authenticate, authorizeRoles('manager', 'admin'), async (
     }));
 
     res.json(teamMembers);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// Manager: consolidated approved skills for all team members
+// NOTE: This route MUST come before /my-team/:memberId to avoid route conflict
+router.get('/my-team/approved-skills', authenticate, authorizeRoles('manager', 'admin'), async (req, res) => {
+  try {
+    const managerId = req.user.person_id;
+
+    const result = await db.query(
+      `SELECT p.person_id, p.person_name, p.username,
+              s.skill_id, s.skill_name, s.skill_type,
+              ps.level, ps.years, ps.frequency, ps.notes
+       FROM person_skill ps
+       JOIN person p ON ps.person_id = p.person_id
+       JOIN skill s ON ps.skill_id = s.skill_id
+       WHERE p.manager_person_id = $1 AND ps.status = 'Approved'
+       ORDER BY p.person_name, s.skill_name`,
+      [managerId]
+    );
+
+    const items = result.rows.map(r => ({
+      person_id: r.person_id,
+      name: r.person_name,
+      username: r.username,
+      skill: { id: r.skill_id, name: r.skill_name, type: r.skill_type },
+      level: r.level,
+      years: r.years,
+      frequency: r.frequency,
+      notes: r.notes,
+    }));
+
+    res.json(items);
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
@@ -165,59 +202,36 @@ router.get('/insights', authenticate, authorizeRoles('manager', 'admin'), async 
 
     // Get skill distribution across team
     const skillDistResult = await db.query(
-      `SELECT s.skill_name, COUNT(*) as user_count
+      `SELECT s.skill_name, s.skill_type, COUNT(*) as user_count
        FROM person_skill ps
        JOIN person p ON ps.person_id = p.person_id
        JOIN skill s ON ps.skill_id = s.skill_id
        WHERE p.manager_person_id = $1 AND ps.status = 'Approved'
-       GROUP BY s.skill_name
+       GROUP BY s.skill_name, s.skill_type
        ORDER BY user_count DESC
        LIMIT 10`,
+      [managerId]
+    );
+
+    // Get total approved skills count
+    const approvedCountResult = await db.query(
+      `SELECT COUNT(*) as approved_count
+       FROM person_skill ps
+       JOIN person p ON ps.person_id = p.person_id
+       WHERE p.manager_person_id = $1 AND ps.status = 'Approved'`,
       [managerId]
     );
 
     res.json({
       team_size: parseInt(teamCountResult.rows[0].team_size),
       pending_approvals: parseInt(pendingResult.rows[0].pending_count),
+      total_approved: parseInt(approvedCountResult.rows[0].approved_count),
       top_skills: skillDistResult.rows.map(row => ({
         skill_name: row.skill_name,
+        skill_type: row.skill_type,
         user_count: parseInt(row.user_count),
       })),
     });
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  }
-});
-
-// Manager: consolidated approved skills for all team members
-router.get('/my-team/approved-skills', authenticate, authorizeRoles('manager', 'admin'), async (req, res) => {
-  try {
-    const managerId = req.user.person_id;
-
-    const result = await db.query(
-      `SELECT p.person_id, p.person_name, p.username,
-              s.skill_id, s.skill_name, s.skill_type,
-              ps.level, ps.years, ps.frequency, ps.notes
-       FROM person_skill ps
-       JOIN person p ON ps.person_id = p.person_id
-       JOIN skill s ON ps.skill_id = s.skill_id
-       WHERE p.manager_person_id = $1 AND ps.status = 'Approved'
-       ORDER BY p.person_name, s.skill_name`,
-      [managerId]
-    );
-
-    const items = result.rows.map(r => ({
-      person_id: r.person_id,
-      name: r.person_name,
-      username: r.username,
-      skill: { id: r.skill_id, name: r.skill_name, type: r.skill_type },
-      level: r.level,
-      years: r.years,
-      frequency: r.frequency,
-      notes: r.notes,
-    }));
-
-    res.json(items);
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
@@ -304,6 +318,95 @@ router.patch('/my-team/:memberId/skills/:skillId/reject', authenticate, authoriz
       skill_id: result.rows[0].skill_id,
       status: result.rows[0].status,
     });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// ===== High-Value Skills Management =====
+
+const formatHighValueSkill = (row) => ({
+  id: row.id,
+  team_id: row.team_id,
+  skill_id: row.skill_id,
+  skill_name: row.skill_name,
+  skill_type: row.skill_type,
+  priority: row.priority,
+  notes: row.notes,
+  created_at: row.created_at,
+});
+
+router.get('/high-value-skills', authenticate, authorizeRoles('manager', 'admin'), async (req, res) => {
+  try {
+    await ensureTeamHighValueSkillsTable();
+    const managerId = req.user.person_id;
+
+    const result = await db.query(
+      `SELECT t.id, t.team_id, t.skill_id, t.priority, t.notes, t.created_at, s.skill_name, s.skill_type
+       FROM team_high_value_skills t
+       JOIN skill s ON s.skill_id = t.skill_id
+       WHERE t.team_id = $1
+       ORDER BY t.created_at DESC`,
+      [managerId]
+    );
+
+    res.json(result.rows.map(formatHighValueSkill));
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+router.post('/high-value-skills', authenticate, authorizeRoles('manager', 'admin'), async (req, res) => {
+  try {
+    await ensureTeamHighValueSkillsTable();
+    const managerId = req.user.person_id;
+    const { skill_id, priority = 'High', notes = '' } = req.body;
+
+    if (!skill_id) {
+      return res.status(400).json({ error: 'skill_id is required' });
+    }
+
+    const insertResult = await db.query(
+      `INSERT INTO team_high_value_skills (team_id, skill_id, priority, notes, assigned_by)
+       VALUES ($1, $2, $3, $4, $5)
+       ON CONFLICT (team_id, skill_id)
+       DO UPDATE SET priority = EXCLUDED.priority, notes = EXCLUDED.notes
+       RETURNING id`,
+      [managerId, skill_id, priority, notes, managerId]
+    );
+
+    const recordId = insertResult.rows[0].id;
+
+    const detailResult = await db.query(
+      `SELECT t.id, t.team_id, t.skill_id, t.priority, t.notes, t.created_at, s.skill_name, s.skill_type
+       FROM team_high_value_skills t
+       JOIN skill s ON s.skill_id = t.skill_id
+       WHERE t.id = $1 AND t.team_id = $2`,
+      [recordId, managerId]
+    );
+
+    res.status(201).json(formatHighValueSkill(detailResult.rows[0]));
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+router.delete('/high-value-skills/:id', authenticate, authorizeRoles('manager', 'admin'), async (req, res) => {
+  try {
+    await ensureTeamHighValueSkillsTable();
+    const managerId = req.user.person_id;
+    const { id } = req.params;
+
+    const result = await db.query(
+      'DELETE FROM team_high_value_skills WHERE id = $1 AND team_id = $2 RETURNING id',
+      [id, managerId]
+    );
+
+    if (result.rows.length === 0) {
+      return res.status(404).json({ error: 'High-value skill not found' });
+    }
+
+    res.json({ message: 'High-value skill removed', id: Number(id) });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }

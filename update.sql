@@ -1,3 +1,24 @@
+-- Add requested_at to person_skill for age-bucket calculations
+ALTER TABLE person_skill
+    ADD COLUMN IF NOT EXISTS requested_at TIMESTAMP NULL;
+
+-- Optionally initialize requested_at for current Requested records
+UPDATE person_skill
+SET requested_at = NOW()
+WHERE status = 'Requested' AND requested_at IS NULL;
+-- Add requested_at column to person_skill for age buckets
+ALTER TABLE person_skill
+    ADD COLUMN IF NOT EXISTS requested_at TIMESTAMP NULL;
+
+-- Backfill requested_at for currently Requested entries if missing
+UPDATE person_skill
+SET requested_at = COALESCE(requested_at, NOW())
+WHERE status = 'Requested' AND requested_at IS NULL;
+
+-- Optional: index to speed up admin requests filtering by status and requested_at
+CREATE INDEX IF NOT EXISTS idx_person_skill_status_requested_at
+    ON person_skill (status, requested_at);
+
 --Run every block one by one
 -- Person table
 --{ 1) run these first

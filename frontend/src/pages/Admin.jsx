@@ -7,6 +7,40 @@ import usersApi from '@/api/usersApi'
 import skillsApi from '@/api/skillsApi'
 import teamApi from '@/api/teamApi'
 
+function levelClasses(level) {
+  switch ((level || '').toLowerCase()) {
+    case 'beginner':
+      return 'bg-[color:var(--level-beginner-bg)] text-[color:var(--level-beginner-fg)]'
+    case 'intermediate':
+      return 'bg-[color:var(--level-intermediate-bg)] text-[color:var(--level-intermediate-fg)]'
+    case 'advanced':
+      return 'bg-[color:var(--level-advanced-bg)] text-[color:var(--level-advanced-fg)]'
+    case 'expert':
+      return 'bg-[color:var(--level-expert-bg)] text-[color:var(--level-expert-fg)]'
+    default:
+      return 'bg-[color:var(--background)] text-[color:var(--text-color)]'
+  }
+}
+
+function isHighValueEntry(entry) {
+  const tech = (entry?.skill?.type || '').toLowerCase() === 'technology'
+  const highLevel = (entry?.level || '').toLowerCase() === 'expert'
+  const freq = (entry?.frequency || '').toLowerCase()
+  const often = freq === 'daily' || freq === 'weekly'
+  return tech && highLevel && often
+}
+
+function computeFitScoreEntry(entry) {
+  const levelMap = { beginner: 1, intermediate: 2, advanced: 3, expert: 4 }
+  const freqMap = { daily: 1.0, weekly: 0.8, monthly: 0.5, occasionally: 0.3 }
+  const lvl = levelMap[(entry?.level || '').toLowerCase()] || 1
+  const freq = freqMap[(entry?.frequency || '').toLowerCase()] || 0.5
+  const years = Number(entry?.years || 0)
+  const yearsFactor = Math.min(1, years / 5)
+  const score = Math.round(lvl * 25 + freq * 25 + yearsFactor * 50)
+  return Math.max(0, Math.min(100, score))
+}
+
 export default function Admin() {
   const [users, setUsers] = useState([])
   const [skills, setSkills] = useState([])
@@ -17,10 +51,12 @@ export default function Admin() {
   const [requests, setRequests] = useState([])
   const [requestsPage, setRequestsPage] = useState(1)
   const [requestsTotal, setRequestsTotal] = useState(0)
+  const [pendingCount, setPendingCount] = useState(0) // Track pending requests count for tab display
   const [requestsFilter, setRequestsFilter] = useState('Requested') // pending-only
   const [confirmDeleteUserId, setConfirmDeleteUserId] = useState(null)
   const [confirmRequest, setConfirmRequest] = useState(null) // { person_id, skill_id, action: 'approve'|'reject' }
   const [logs, setLogs] = useState([])
+  const [editUserSkill, setEditUserSkill] = useState(null) // { person_id, skill: {id}, level, years, frequency, notes, name, username }
 
   useEffect(() => {
     const fetchData = async () => {
@@ -36,6 +72,7 @@ export default function Admin() {
         const reqRes = await teamApi.getAdminRequests({ page: 1, pageSize: 20, status: 'Requested' })
         setRequests(reqRes.data.items || [])
         setRequestsTotal(reqRes.data.total || 0)
+        setPendingCount(reqRes.data.total || 0)
         setRequestsFilter('Requested')
 
         // Initial logs: approved + canceled
@@ -68,6 +105,11 @@ export default function Admin() {
       setRequests(reqRes.data.items || [])
       setRequestsTotal(reqRes.data.total || 0)
       setRequestsPage(page)
+      
+      // Update pending count if loading pending requests
+      if (status === 'Requested') {
+        setPendingCount(reqRes.data.total || 0)
+      }
     } catch (err) {
       setError('Failed to load requests: ' + err.message)
     }
@@ -164,6 +206,16 @@ export default function Admin() {
             Users ({users.length})
           </button>
           <button
+            onClick={async () => { setActiveTab('requests'); await reloadRequests(1, 'Requested') }}
+            className={`px-4 py-2 font-medium border-b-2 transition ${
+              activeTab === 'requests'
+                ? 'border-[var(--color-primary)] text-[var(--color-primary)]'
+                : 'border-transparent text-[var(--text-color-secondary)] hover:text-[var(--text-color)]'
+            }`}
+          >
+            Approval Queue ({pendingCount})
+          </button>
+          <button
             onClick={() => setActiveTab('skills')}
             className={`px-4 py-2 font-medium border-b-2 transition ${
               activeTab === 'skills'
@@ -182,16 +234,6 @@ export default function Admin() {
             }`}
           >
             User Skills
-          </button>
-          <button
-            onClick={async () => { setActiveTab('requests'); await reloadRequests(1, 'Requested') }}
-            className={`px-4 py-2 font-medium border-b-2 transition ${
-              activeTab === 'requests'
-                ? 'border-[var(--color-primary)] text-[var(--color-primary)]'
-                : 'border-transparent text-[var(--text-color-secondary)] hover:text-[var(--text-color)]'
-            }`}
-          >
-            Requests ({requestsTotal})
           </button>
           <button
             onClick={async () => { setActiveTab('logs'); await reloadLogs() }}
@@ -317,6 +359,7 @@ export default function Admin() {
                         </div>
                       </div>
                       <div className="flex gap-2">
+                        <button onClick={() => setEditUserSkill({ person_id: r.person_id, skill: r.skill, level: r.level, years: r.years, frequency: r.frequency, notes: r.notes, name: r.name, username: r.username })} className="px-3 py-1.5 text-sm rounded border border-[var(--border-color)] text-[var(--text-color)]">Edit</button>
                         <button onClick={() => setConfirmRequest({ person_id: r.person_id, skill_id: r.skill.id, action: 'delete' })} className="px-3 py-1.5 text-sm rounded border border-red-300 text-red-600">Delete</button>
                       </div>
                     </div>
@@ -339,12 +382,21 @@ export default function Admin() {
                     <div className="flex items-center gap-2">
                       <p className="font-semibold text-[var(--text-color)]">{r.skill.name}</p>
                       <span className="text-xs px-2 py-0.5 rounded bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300">{r.skill.type}</span>
+                      {isHighValueEntry(r) && (
+                        <span className="text-xs px-2 py-0.5 rounded bg-amber-200 text-amber-800 dark:bg-amber-900 dark:text-amber-200">High-Value</span>
+                      )}
                     </div>
                     <p className="text-sm text-[var(--text-color-secondary)]">{r.name} • {r.username}</p>
                     <div className="mt-2 grid grid-cols-2 md:grid-cols-4 gap-2 text-xs text-[var(--text-color-secondary)]">
-                      {r.level && <div><span className="font-medium">Level:</span> {r.level}</div>}
+                      {r.level && (
+                        <div className="flex items-center gap-1">
+                          <span className="font-medium">Level:</span>
+                          <span className={`px-2 py-0.5 rounded ${levelClasses(r.level)}`}>{r.level}</span>
+                        </div>
+                      )}
                       {r.years !== null && r.years !== undefined && <div><span className="font-medium">Experience:</span> {r.years} yrs</div>}
                       {r.frequency && <div><span className="font-medium">Frequency:</span> {r.frequency}</div>}
+                      <div><span className="font-medium">Fit:</span> {computeFitScoreEntry(r)}</div>
                     </div>
                     {r.notes && <p className="mt-2 text-xs italic text-[var(--text-color-secondary)]">"{r.notes}"</p>}
                   </div>
@@ -476,6 +528,71 @@ export default function Admin() {
                 {confirmRequest.action === 'approve' ? 'Approve' : confirmRequest.action === 'reject' ? 'Cancel Request' : 'Delete'}
               </button>
             </div>
+          </div>
+        </div>
+      )}
+
+      {/* Edit User Skill Modal */}
+      {editUserSkill && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
+          <div className="w-full max-w-xl rounded-lg bg-[var(--card-background)] p-6 shadow-xl">
+            <div className="flex items-center justify-between">
+              <div>
+                <h3 className="text-xl font-semibold text-[var(--text-color)]">Edit Approved Skill</h3>
+                <p className="text-sm text-[var(--text-color-secondary)]">{editUserSkill.name} • {editUserSkill.username}</p>
+              </div>
+              <button type="button" onClick={() => setEditUserSkill(null)} className="rounded-md px-3 py-1.5 text-sm font-medium text-[var(--text-color-secondary)] hover:text-[color:var(--color-primary)]">Close</button>
+            </div>
+            <form className="mt-4 space-y-4" onSubmit={async (e) => {
+              e.preventDefault()
+              try {
+                await teamApi.updateUserSkillDetails(editUserSkill.person_id, editUserSkill.skill.id, {
+                  level: editUserSkill.level,
+                  years: editUserSkill.years,
+                  frequency: editUserSkill.frequency,
+                  notes: editUserSkill.notes,
+                })
+                setEditUserSkill(null)
+                await reloadRequests(1, 'Approved')
+              } catch (err) {
+                setError('Failed to update skill: ' + err.message)
+              }
+            }}>
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <label className="text-sm font-medium text-[var(--text-color)]">
+                  Proficiency
+                  <select value={editUserSkill.level || 'Intermediate'} onChange={(e) => setEditUserSkill(prev => ({ ...prev, level: e.target.value }))} className="mt-1 w-full rounded-md border border-[var(--border-color)] bg-[var(--background)] px-3 py-2 text-[var(--text-color)] focus:border-[color:var(--color-primary)] focus:outline-none">
+                    <option>Beginner</option>
+                    <option>Intermediate</option>
+                    <option>Advanced</option>
+                    <option>Expert</option>
+                  </select>
+                </label>
+                <label className="text-sm font-medium text-[var(--text-color)]">
+                  Years Experience
+                  <input type="number" min="0" value={editUserSkill.years || 0} onChange={(e) => setEditUserSkill(prev => ({ ...prev, years: Number(e.target.value) }))} className="mt-1 w-full rounded-md border border-[var(--border-color)] bg-[var(--background)] px-3 py-2 text-[var(--text-color)] focus:border-[color:var(--color-primary)] focus:outline-none" />
+                </label>
+              </div>
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <label className="text-sm font-medium text-[var(--text-color)]">
+                  Frequency
+                  <select value={editUserSkill.frequency || 'Weekly'} onChange={(e) => setEditUserSkill(prev => ({ ...prev, frequency: e.target.value }))} className="mt-1 w-full rounded-md border border-[var(--border-color)] bg-[var(--background)] px-3 py-2 text-[var(--text-color)] focus:border-[color:var(--color-primary)] focus:outline-none">
+                    <option>Daily</option>
+                    <option>Weekly</option>
+                    <option>Monthly</option>
+                    <option>Occasionally</option>
+                  </select>
+                </label>
+              </div>
+              <label className="block text-sm font-medium text-[var(--text-color)]">
+                Notes
+                <textarea rows="3" value={editUserSkill.notes || ''} onChange={(e) => setEditUserSkill(prev => ({ ...prev, notes: e.target.value }))} className="mt-1 w-full rounded-md border border-[var(--border-color)] bg-[var(--background)] px-3 py-2 text-[var(--text-color)] focus:border-[color:var(--color-primary)] focus:outline-none" />
+              </label>
+              <div className="flex justify-end gap-3 pt-2">
+                <button type="button" onClick={() => setEditUserSkill(null)} className="rounded-md border border-[var(--border-color)] px-4 py-2 text-sm font-medium text-[var(--text-color-secondary)] hover:border-[color:var(--color-primary)]">Cancel</button>
+                <button type="submit" className="rounded-md bg-[color:var(--color-primary)] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[color:var(--color-primary-dark)]">Save Changes</button>
+              </div>
+            </form>
           </div>
         </div>
       )}

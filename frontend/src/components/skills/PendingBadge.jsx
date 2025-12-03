@@ -1,5 +1,5 @@
 export default function PendingBadge({ status }) {
-  if (status !== 'pending') return null
+  if (status !== 'Requested') return null
 
   return (
     <span className="inline-flex items-center rounded-full bg-amber-600/25 px-2.5 py-1 text-xs font-semibold text-[var(--text-color)]">

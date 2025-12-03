@@ -3,10 +3,13 @@
 
 import { useState, useEffect } from 'react'
 import Sidebar from '@/components/Sidebar'
+import ApprovalQueuePriorityIndicator from '@/components/visuals/ApprovalQueuePriorityIndicator'
 import usersApi from '@/api/usersApi'
 import teamApi from '@/api/teamApi'
+import skillsApi from '@/api/skillsApi'
 
 export default function Team() {
+  const [activeTab, setActiveTab] = useState('overview') // 'overview' | 'pending' | 'approved' | 'priorities' | 'matches'
   const [teamMembers, setTeamMembers] = useState([])
   const [insights, setInsights] = useState(null)
   const [loading, setLoading] = useState(true)
@@ -16,6 +19,46 @@ export default function Team() {
   const [pendingRequests, setPendingRequests] = useState([])
   const [confirmAction, setConfirmAction] = useState(null) // { memberId, skillId, action: 'approve'|'reject' }
   const [approvedSkills, setApprovedSkills] = useState([])
+  
+  // High-value skills state
+  const [highValueSkills, setHighValueSkills] = useState([])
+  const [skillOptions, setSkillOptions] = useState([])
+  const [highValueForm, setHighValueForm] = useState({ skill_id: '', priority: 'High', notes: '' })
+  const [highValueError, setHighValueError] = useState(null)
+  const [highValueLoading, setHighValueLoading] = useState(false)
+
+  // Helper functions for visual accents (consistent with Admin)
+  const levelClasses = (level) => {
+    if (!level) return 'bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-300'
+    const l = level.toLowerCase()
+    if (l === 'beginner') return 'bg-[var(--level-beginner-bg)] text-[var(--level-beginner-fg)]'
+    if (l === 'intermediate') return 'bg-[var(--level-intermediate-bg)] text-[var(--level-intermediate-fg)]'
+    if (l === 'advanced') return 'bg-[var(--level-advanced-bg)] text-[var(--level-advanced-fg)]'
+    if (l === 'expert') return 'bg-[var(--level-expert-bg)] text-[var(--level-expert-fg)]'
+    return 'bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-300'
+  }
+
+  const isHighValueEntry = (entry) => {
+    const level = entry.level?.toLowerCase()
+    const type = (entry.skill?.type || entry.type)?.toLowerCase()
+    const freq = entry.frequency?.toLowerCase()
+    return level === 'expert' && type === 'technology' && (freq === 'daily' || freq === 'weekly')
+  }
+
+  const computeFitScoreEntry = (entry) => {
+    const proficiencyWeights = { expert: 1, advanced: 0.85, intermediate: 0.65, beginner: 0.4 }
+    const normalizedLevel = entry.level?.toLowerCase() || 'intermediate'
+    const baseScore = proficiencyWeights[normalizedLevel] ?? 0.55
+    
+    const experienceYears = typeof entry.years === 'number' ? entry.years : 0
+    const experienceBoost = Math.min(experienceYears / 10, 0.25)
+    
+    const statusValue = entry.status?.toLowerCase() ?? 'pending'
+    const statusBoost = statusValue === 'approved' ? 0.15 : statusValue === 'rejected' ? -0.1 : 0
+    
+    const proficiencyScore = Math.max(0.25, Math.min(1, baseScore + experienceBoost + statusBoost))
+    return Math.round(proficiencyScore * 100)
+  }
 
   useEffect(() => {
     const fetchTeamData = async () => {
@@ -23,20 +66,19 @@ export default function Team() {
         setLoading(true)
         setError(null)
 
-        const [teamRes, insightsRes] = await Promise.all([
+        const [teamRes, insightsRes, approvedRes, highValueRes, skillsRes] = await Promise.all([
           teamApi.getMyTeam(),
           teamApi.getTeamInsights(),
+          teamApi.getTeamApprovedSkills(),
+          teamApi.getHighValueSkills(),
+          skillsApi.getAllSkills(),
         ])
 
         setTeamMembers(teamRes.data || [])
         setInsights(insightsRes.data)
-        // Fetch consolidated approved skills for manager's team
-        try {
-          const approvedRes = await teamApi.getTeamApprovedSkills()
-          setApprovedSkills(approvedRes.data || [])
-        } catch (err) {
-          console.error('Error fetching approved team skills:', err)
-        }
+        setApprovedSkills(approvedRes.data || [])
+        setHighValueSkills(highValueRes.data || [])
+        setSkillOptions(skillsRes.data || [])
 
         // Fetch all team members' skills and collect pending requests
         const allPendingRequests = []
@@ -119,6 +161,73 @@ export default function Team() {
     }
   }
 
+  const handleAddHighValueSkill = async (e) => {
+    e.preventDefault()
+    if (!highValueForm.skill_id) {
+      setHighValueError('Please select a skill')
+      return
+    }
+    setHighValueLoading(true)
+    setHighValueError(null)
+    try {
+      const response = await teamApi.addHighValueSkill({
+        skill_id: Number(highValueForm.skill_id),
+        priority: highValueForm.priority,
+        notes: highValueForm.notes?.trim() || '',
+      })
+      setHighValueSkills((prev) => {
+        const filtered = prev.filter((item) => item.skill_id !== response.data.skill_id)
+        return [response.data, ...filtered]
+      })
+      setHighValueForm({ skill_id: '', priority: 'High', notes: '' })
+    } catch (err) {
+      setHighValueError('Failed to add high-value skill: ' + err.message)
+    } finally {
+      setHighValueLoading(false)
+    }
+  }
+
+  const handleDeleteHighValueSkill = async (id) => {
+    if (!window.confirm('Remove this high-value skill?')) return
+    try {
+      await teamApi.deleteHighValueSkill(id)
+      setHighValueSkills((prev) => prev.filter((skill) => skill.id !== id))
+    } catch (err) {
+      setHighValueError('Failed to remove high-value skill: ' + err.message)
+    }
+  }
+
+  const availableSkillOptions = skillOptions.filter((skill) => 
+    !highValueSkills.some((entry) => entry.skill_id === skill.id)
+  )
+
+  // Calculate data for visual components
+  const overviewCounts = insights ? {
+    skills: insights.total_approved || 0,
+    employees: insights.team_size || 0,
+    audits: insights.pending_approvals || 0,
+  } : {}
+
+  const approvalLatencyBuckets = (() => {
+    const now = Date.now()
+    const threeDays = 3 * 24 * 60 * 60 * 1000
+    const sevenDays = 7 * 24 * 60 * 60 * 1000
+    let underThree = 0, overThree = 0, overWeek = 0
+    
+    pendingRequests.forEach(req => {
+      if (req.requested_at) {
+        const age = now - new Date(req.requested_at).getTime()
+        if (age <= threeDays) underThree++
+        else if (age <= sevenDays) overThree++
+        else overWeek++
+      } else {
+        underThree++ // No timestamp, assume new
+      }
+    })
+    
+    return { underThree, overThree, overWeek }
+  })()
+
   return (
     <div className="flex min-h-screen bg-[var(--background)] text-[var(--text-color)]">
       <Sidebar />
@@ -139,106 +248,292 @@ export default function Team() {
           </p>
         </header>
 
-        {/* Pending Requests Section */}
-        {!loading && pendingRequests.length > 0 && (
-          <section className="rounded-xl border border-yellow-300 bg-yellow-50 dark:bg-yellow-900/20 p-6 shadow-sm">
+        {/* Approval Queue and Top Skills - Side by Side */}
+        {!loading && (
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {/* Top Team Skills */}
+            {insights && insights.top_skills && insights.top_skills.length > 0 && (
+              <section className="rounded-xl border border-[var(--border-color)] bg-[var(--card-background)] p-6 shadow-sm">
+                <h2 className="text-lg font-semibold text-[var(--text-color)] mb-3">Top Team Skills</h2>
+                <ul className="space-y-2">
+                  {insights.top_skills.slice(0, 5).map((skill) => (
+                    <li
+                      key={skill.skill_name}
+                      className="flex items-center justify-between text-sm"
+                    >
+                      <span className="text-[var(--text-color)]">{skill.skill_name}</span>
+                      <span className="text-[var(--text-color-secondary)]">
+                        {skill.user_count} {skill.user_count === 1 ? 'member' : 'members'}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            )}
+
+            {/* Approval Queue */}
+            <ApprovalQueuePriorityIndicator counts={approvalLatencyBuckets} />
+          </div>
+        )}
+
+        {/* Tab Navigation */}
+        <div className="flex gap-2 border-b border-[var(--border-color)]">
+          <button
+            onClick={() => setActiveTab('overview')}
+            className={`px-4 py-2 text-sm font-medium transition-colors ${
+              activeTab === 'overview'
+                ? 'border-b-2 border-[color:var(--color-primary)] text-[color:var(--color-primary)]'
+                : 'text-[var(--text-color-secondary)] hover:text-[var(--text-color)]'
+            }`}
+          >
+            Overview
+          </button>
+          <button
+            onClick={() => setActiveTab('pending')}
+            className={`px-4 py-2 text-sm font-medium transition-colors ${
+              activeTab === 'pending'
+                ? 'border-b-2 border-[color:var(--color-primary)] text-[color:var(--color-primary)]'
+                : 'text-[var(--text-color-secondary)] hover:text-[var(--text-color)]'
+            }`}
+          >
+            Pending Requests {pendingRequests.length > 0 && `(${pendingRequests.length})`}
+          </button>
+          <button
+            onClick={() => setActiveTab('approved')}
+            className={`px-4 py-2 text-sm font-medium transition-colors ${
+              activeTab === 'approved'
+                ? 'border-b-2 border-[color:var(--color-primary)] text-[color:var(--color-primary)]'
+                : 'text-[var(--text-color-secondary)] hover:text-[var(--text-color)]'
+            }`}
+          >
+            Approved Skills
+          </button>
+          <button
+            onClick={() => setActiveTab('priorities')}
+            className={`px-4 py-2 text-sm font-medium transition-colors ${
+              activeTab === 'priorities'
+                ? 'border-b-2 border-[color:var(--color-primary)] text-[color:var(--color-primary)]'
+                : 'text-[var(--text-color-secondary)] hover:text-[var(--text-color)]'
+            }`}
+          >
+            Team Priorities
+          </button>
+          <button
+            onClick={() => setActiveTab('matches')}
+            className={`px-4 py-2 text-sm font-medium transition-colors ${
+              activeTab === 'matches'
+                ? 'border-b-2 border-[color:var(--color-primary)] text-[color:var(--color-primary)]'
+                : 'text-[var(--text-color-secondary)] hover:text-[var(--text-color)]'
+            }`}
+          >
+            High Value Matches
+          </button>
+        </div>
+
+        {/* Overview Tab: Team Members List */}
+        {activeTab === 'overview' && (
+          <section className="rounded-xl border border-[var(--border-color)] bg-[var(--card-background)] p-6 shadow-sm">
+            <h2 className="text-xl font-semibold text-[var(--text-color)]">Team Members</h2>
+            {loading ? (
+              <p className="mt-4 text-[var(--text-color-secondary)]">Loading team members...</p>
+            ) : teamMembers.length === 0 ? (
+              <p className="mt-4 text-[var(--text-color-secondary)]">No team members found</p>
+            ) : (
+              <div className="mt-4 space-y-2">
+                {teamMembers.map((member) => (
+                  <button
+                    key={member.person_id}
+                    onClick={() => handleSelectMember(member.person_id)}
+                    className={`w-full text-left rounded-lg border p-4 transition ${
+                      selectedMember === member.person_id
+                        ? 'border-[var(--color-primary)] bg-[var(--background)]'
+                        : 'border-[var(--border-color)] hover:bg-[var(--background)]'
+                    }`}
+                  >
+                    <p className="font-medium text-[var(--text-color)]">{member.name}</p>
+                    <p className="text-sm text-[var(--text-color-secondary)]">Role: {member.role}</p>
+                  </button>
+                ))}
+              </div>
+            )}
+
+            {selectedMember && memberDetails && (
+              <div className="mt-6 rounded-lg border border-[var(--border-color)] p-4">
+                <h3 className="text-lg font-semibold text-[var(--text-color)]">Member Details: {memberDetails.name}</h3>
+                <div className="mt-4">
+                  <h4 className="font-medium text-[var(--text-color)]">Skills</h4>
+                  {memberDetails.skills.length === 0 ? (
+                    <p className="mt-2 text-sm text-[var(--text-color-secondary)]">No skills recorded</p>
+                  ) : (
+                    <ul className="mt-2 space-y-2">
+                      {memberDetails.skills.map((skill) => (
+                        <li
+                          key={skill.id}
+                          className="rounded border border-[var(--border-color)] p-3 text-sm"
+                        >
+                          <div className="flex justify-between items-start gap-3">
+                            <div className="flex-1">
+                              <div className="flex items-center gap-2 mb-1">
+                                <p className="font-medium text-[var(--text-color)]">{skill.name}</p>
+                                {skill.level && (
+                                  <span className={`px-2 py-0.5 rounded text-xs font-semibold ${levelClasses(skill.level)}`}>
+                                    {skill.level}
+                                  </span>
+                                )}
+                                {isHighValueEntry({ ...skill, skill: { type: skill.type } }) && (
+                                  <span className="px-2 py-0.5 rounded text-xs font-semibold bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-100">
+                                    ⭐ High-Value
+                                  </span>
+                                )}
+                              </div>
+                              <p className="text-xs text-[var(--text-color-secondary)]">{skill.type}</p>
+                              
+                              <div className="mt-2 flex items-center gap-4 text-xs text-[var(--text-color-secondary)]">
+                                {skill.years !== null && skill.years !== undefined && (
+                                  <span><span className="font-medium">Experience:</span> {skill.years} yrs</span>
+                                )}
+                                {skill.frequency && (
+                                  <span><span className="font-medium">Frequency:</span> {skill.frequency}</span>
+                                )}
+                                <span className="font-medium text-[color:var(--color-primary)]">
+                                  Fit: {computeFitScoreEntry({ ...skill, skill: { type: skill.type } })}/100
+                                </span>
+                              </div>
+                              {skill.notes && (
+                                <p className="mt-1 text-xs text-[var(--text-color-secondary)] italic">
+                                  "{skill.notes}"
+                                </p>
+                              )}
+                            </div>
+                            
+                            <div className="flex items-center gap-2">
+                              <span className={`px-2 py-1 rounded text-xs font-semibold whitespace-nowrap ${
+                                skill.status === 'Approved'
+                                  ? 'bg-green-100 text-green-700'
+                                  : skill.status === 'Requested'
+                                  ? 'bg-yellow-100 text-yellow-700'
+                                  : 'bg-red-100 text-red-700'
+                              }`}>
+                                {skill.status}
+                              </span>
+                              {skill.status === 'Requested' && (
+                                <div className="flex gap-1">
+                                  <button
+                                    onClick={() => setConfirmAction({ memberId: selectedMember, skillId: skill.id, action: 'approve' })}
+                                    className="flex items-center justify-center w-8 h-8 rounded-full bg-green-600 hover:bg-green-700 text-white transition"
+                                    title="Approve"
+                                  >
+                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                                    </svg>
+                                  </button>
+                                  <button
+                                    onClick={() => setConfirmAction({ memberId: selectedMember, skillId: skill.id, action: 'reject' })}
+                                    className="flex items-center justify-center w-8 h-8 rounded-full bg-red-600 hover:bg-red-700 text-white transition"
+                                    title="Reject"
+                                  >
+                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                  </button>
+                                </div>
+                              )}
+                            </div>
+                          </div>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              </div>
+            )}
+          </section>
+        )}
+
+        {/* Pending Requests Tab */}
+        {activeTab === 'pending' && (
+          <section className="rounded-xl border border-[var(--border-color)] bg-[var(--card-background)] p-6 shadow-sm">
             <h2 className="text-xl font-semibold text-[var(--text-color)] flex items-center gap-2">
               <span className="text-2xl">⏳</span>
               Pending Skill Requests ({pendingRequests.length})
             </h2>
-            <div className="mt-4 space-y-3">
-              {pendingRequests.map((request) => (
-                <div
-                  key={`${request.employeeId}-${request.id}`}
-                  className="rounded-lg border border-[var(--border-color)] bg-[var(--card-background)] p-4 flex items-start gap-4"
-                >
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-1">
-                      <p className="font-semibold text-[var(--text-color)]">{request.name}</p>
-                      <span className="text-xs px-2 py-0.5 rounded bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300">
-                        {request.type}
-                      </span>
-                    </div>
-                    <p className="text-sm text-[var(--text-color-secondary)] mb-2">
-                      Requested by: <span className="font-medium">{request.employeeName}</span>
-                    </p>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-2 text-xs text-[var(--text-color-secondary)]">
-                      {request.level && (
-                        <div className="flex items-center gap-1">
-                          <span className="font-medium">Level:</span> {request.level}
-                        </div>
-                      )}
-                      {request.years !== null && request.years !== undefined && (
-                        <div className="flex items-center gap-1">
-                          <span className="font-medium">Experience:</span> {request.years} yrs
-                        </div>
-                      )}
-                      {request.frequency && (
-                        <div className="flex items-center gap-1">
-                          <span className="font-medium">Frequency:</span> {request.frequency}
-                        </div>
-                      )}
-                    </div>
-                    {request.notes && (
-                      <p className="mt-2 text-xs text-[var(--text-color-secondary)] italic">
-                        "{request.notes}"
+            {loading ? (
+              <p className="mt-4 text-[var(--text-color-secondary)]">Loading...</p>
+            ) : pendingRequests.length === 0 ? (
+              <p className="mt-4 text-[var(--text-color-secondary)]">No pending requests</p>
+            ) : (
+              <div className="mt-4 space-y-3">
+                {pendingRequests.map((request) => (
+                  <div
+                    key={`${request.employeeId}-${request.id}`}
+                    className="rounded-lg border border-[var(--border-color)] p-4 flex items-start gap-4"
+                  >
+                    <div className="flex-1">
+                      <div className="flex items-center gap-2 mb-1">
+                        <p className="font-semibold text-[var(--text-color)]">{request.name}</p>
+                        {request.level && (
+                          <span className={`px-2 py-0.5 rounded text-xs font-semibold ${levelClasses(request.level)}`}>
+                            {request.level}
+                          </span>
+                        )}
+                        {isHighValueEntry({ ...request, skill: { type: request.type } }) && (
+                          <span className="px-2 py-0.5 rounded text-xs font-semibold bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-100">
+                            ⭐ High-Value
+                          </span>
+                        )}
+                        <span className="text-xs px-2 py-0.5 rounded bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300">
+                          {request.type}
+                        </span>
+                      </div>
+                      <p className="text-sm text-[var(--text-color-secondary)] mb-2">
+                        Requested by: <span className="font-medium">{request.employeeName}</span>
                       </p>
-                    )}
+                      <div className="flex items-center gap-4 text-xs text-[var(--text-color-secondary)]">
+                        {request.years !== null && request.years !== undefined && (
+                          <span><span className="font-medium">Experience:</span> {request.years} yrs</span>
+                        )}
+                        {request.frequency && (
+                          <span><span className="font-medium">Frequency:</span> {request.frequency}</span>
+                        )}
+                        <span className="font-medium text-[color:var(--color-primary)]">
+                          Fit: {computeFitScoreEntry({ ...request, skill: { type: request.type } })}/100
+                        </span>
+                      </div>
+                      {request.notes && (
+                        <p className="mt-2 text-xs text-[var(--text-color-secondary)] italic">
+                          "{request.notes}"
+                        </p>
+                      )}
+                    </div>
+                    <div className="flex gap-2 items-start">
+                      <button
+                        onClick={() => handleApproveSkill(request.employeeId, request.id)}
+                        className="flex items-center justify-center w-10 h-10 rounded-full bg-green-600 hover:bg-green-700 text-white transition-colors shadow-md"
+                        title="Approve"
+                      >
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                        </svg>
+                      </button>
+                      <button
+                        onClick={() => handleRejectSkill(request.employeeId, request.id)}
+                        className="flex items-center justify-center w-10 h-10 rounded-full bg-red-600 hover:bg-red-700 text-white transition-colors shadow-md"
+                        title="Reject"
+                      >
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                      </button>
+                    </div>
                   </div>
-                  <div className="flex gap-2 items-start">
-                    <button
-                      onClick={() => handleApproveSkill(request.employeeId, request.id)}
-                      className="flex items-center justify-center w-10 h-10 rounded-full bg-green-600 hover:bg-green-700 text-white transition-colors shadow-md"
-                      title="Approve"
-                    >
-                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                      </svg>
-                    </button>
-                    <button
-                      onClick={() => handleRejectSkill(request.employeeId, request.id)}
-                      className="flex items-center justify-center w-10 h-10 rounded-full bg-red-600 hover:bg-red-700 text-white transition-colors shadow-md"
-                      title="Reject"
-                    >
-                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M6 18L18 6M6 6l12 12" />
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-              ))}
-            </div>
+                ))}
+              </div>
+            )}
           </section>
         )}
 
-        {!loading && insights && (
-          <section className="rounded-xl border border-[var(--border-color)] bg-[var(--card-background)] p-6 shadow-sm">
-            <h2 className="text-xl font-semibold text-[var(--text-color)]">Team Snapshot</h2>
-            <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div className="rounded-lg border border-[var(--border-color)] p-4">
-                <p className="text-sm text-[var(--text-color-secondary)]">Team Size</p>
-                <p className="text-2xl font-bold text-[var(--text-color)]">{insights.team_size}</p>
-              </div>
-              <div className="rounded-lg border border-[var(--border-color)] p-4">
-                <p className="text-sm text-[var(--text-color-secondary)]">Pending Approvals</p>
-                <p className="text-2xl font-bold text-[var(--text-color)]">{insights.pending_approvals}</p>
-              </div>
-              <div className="rounded-lg border border-[var(--border-color)] p-4">
-                <p className="text-sm text-[var(--text-color-secondary)]">Top Skills</p>
-                <ul className="mt-2 space-y-1">
-                  {insights.top_skills.slice(0, 3).map((skill) => (
-                    <li key={skill.skill_name} className="text-sm text-[var(--text-color)]">
-                      {skill.skill_name} ({skill.user_count})
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </section>
-        )}
-
-        {/* Approved Skills (Team-wide) */}
-        {!loading && approvedSkills.length > 0 && (
+        {/* Approved Skills Tab */}
+        {activeTab === 'approved' && (
           <section className="rounded-xl border border-[var(--border-color)] bg-[var(--card-background)] p-6 shadow-sm">
             <div className="flex items-center justify-between">
               <h2 className="text-xl font-semibold text-[var(--text-color)]">Approved Skills (Team)</h2>
@@ -251,137 +546,251 @@ export default function Team() {
                     setError('Failed to refresh approved skills: ' + err.message)
                   }
                 }}
-                className="rounded-md border border-[var(--border-color)] px-3 py-1.5 text-sm"
+                className="rounded-md border border-[var(--border-color)] px-3 py-1.5 text-sm hover:border-[color:var(--color-primary)] transition"
               >
                 Refresh
               </button>
             </div>
-            <div className="mt-4 space-y-3">
-              {approvedSkills.map((r) => (
-                <div key={`${r.person_id}-${r.skill.id}`} className="rounded-lg border border-[var(--border-color)] p-4">
-                  <div className="flex items-start justify-between gap-3">
-                    <div className="flex-1">
-                      <p className="font-semibold text-[var(--text-color)]">{r.skill.name}</p>
-                      <p className="text-xs text-[var(--text-color-secondary)]">{r.name} • {r.username} • {r.skill.type}</p>
-                      <div className="mt-2 grid grid-cols-2 md:grid-cols-4 gap-2 text-xs text-[var(--text-color-secondary)]">
-                        {r.level && <div><span className="font-medium">Level:</span> {r.level}</div>}
-                        {r.years !== null && r.years !== undefined && <div><span className="font-medium">Experience:</span> {r.years} yrs</div>}
-                        {r.frequency && <div><span className="font-medium">Frequency:</span> {r.frequency}</div>}
-                        {r.notes && <div className="col-span-2"><span className="font-medium">Notes:</span> {r.notes}</div>}
+            {loading ? (
+              <p className="mt-4 text-[var(--text-color-secondary)]">Loading...</p>
+            ) : approvedSkills.length === 0 ? (
+              <p className="mt-4 text-[var(--text-color-secondary)]">No approved skills</p>
+            ) : (
+              <div className="mt-4 space-y-3">
+                {approvedSkills.map((r) => (
+                  <div key={`${r.person_id}-${r.skill.id}`} className="rounded-lg border border-[var(--border-color)] p-4">
+                    <div className="flex items-start justify-between gap-3">
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2 mb-1">
+                          <p className="font-semibold text-[var(--text-color)]">{r.skill.name}</p>
+                          {r.level && (
+                            <span className={`px-2 py-0.5 rounded text-xs font-semibold ${levelClasses(r.level)}`}>
+                              {r.level}
+                            </span>
+                          )}
+                          {isHighValueEntry(r) && (
+                            <span className="px-2 py-0.5 rounded text-xs font-semibold bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-100">
+                              ⭐ High-Value
+                            </span>
+                          )}
+                        </div>
+                        <p className="text-xs text-[var(--text-color-secondary)] mb-2">{r.name} • {r.username} • {r.skill.type}</p>
+                        <div className="flex items-center gap-4 text-xs text-[var(--text-color-secondary)]">
+                          {r.years !== null && r.years !== undefined && (
+                            <span><span className="font-medium">Experience:</span> {r.years} yrs</span>
+                          )}
+                          {r.frequency && (
+                            <span><span className="font-medium">Frequency:</span> {r.frequency}</span>
+                          )}
+                        </div>
+                        {r.notes && (
+                          <p className="mt-2 text-xs text-[var(--text-color-secondary)] italic">
+                            "{r.notes}"
+                          </p>
+                        )}
+                      </div>
+                      <div className="flex gap-2">
+                        <button
+                          onClick={() => setConfirmAction({ memberId: r.person_id, skillId: r.skill.id, action: 'deleteApproved' })}
+                          className="px-3 py-1.5 text-sm rounded border border-red-300 text-red-600 hover:bg-red-50 dark:hover:bg-red-900/20 transition"
+                        >
+                          Delete
+                        </button>
                       </div>
                     </div>
-                    <div className="flex gap-2">
-                      <button
-                        onClick={() => setConfirmAction({ memberId: r.person_id, skillId: r.skill.id, action: 'deleteApproved' })}
-                        className="px-3 py-1.5 text-sm rounded border border-red-300 text-red-600"
-                      >
-                        Delete
-                      </button>
-                    </div>
                   </div>
-                </div>
-              ))}
-            </div>
+                ))}
+              </div>
+            )}
           </section>
         )}
 
-        <section className="rounded-xl border border-[var(--border-color)] bg-[var(--card-background)] p-6 shadow-sm">
-          <h2 className="text-xl font-semibold text-[var(--text-color)]">Team Members</h2>
-          {loading ? (
-            <p className="mt-4 text-[var(--text-color-secondary)]">Loading team members...</p>
-          ) : teamMembers.length === 0 ? (
-            <p className="mt-4 text-[var(--text-color-secondary)]">No team members found</p>
-          ) : (
-            <div className="mt-4 space-y-2">
-              {teamMembers.map((member) => (
-                <button
-                  key={member.person_id}
-                  onClick={() => handleSelectMember(member.person_id)}
-                  className={`w-full text-left rounded-lg border p-4 transition ${
-                    selectedMember === member.person_id
-                      ? 'border-[var(--color-primary)] bg-[var(--background)]'
-                      : 'border-[var(--border-color)] hover:bg-[var(--background)]'
-                  }`}
-                >
-                  <p className="font-medium text-[var(--text-color)]">{member.name}</p>
-                  <p className="text-sm text-[var(--text-color-secondary)]">Role: {member.role}</p>
-                </button>
-              ))}
+        {/* Team Priorities Tab */}
+        {activeTab === 'priorities' && (
+          <section className="rounded-xl border border-[var(--border-color)] bg-[var(--card-background)] p-6 shadow-sm space-y-4">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-wide text-[color:var(--color-primary)]">High-Value Skills</p>
+              <h2 className="text-xl font-semibold text-[var(--text-color)]">Set Team Priorities</h2>
+              <p className="text-sm text-[var(--text-color-secondary)]">Define which skills your team should focus on developing.</p>
             </div>
-          )}
-        </section>
+            
+            <form onSubmit={handleAddHighValueSkill} className="grid gap-4 md:grid-cols-4">
+              <div className="md:col-span-2">
+                <label className="text-sm font-medium text-[var(--text-color)]">Skill</label>
+                <select
+                  value={highValueForm.skill_id}
+                  onChange={(e) => setHighValueForm(prev => ({ ...prev, skill_id: e.target.value }))}
+                  className="mt-1 block w-full rounded-md border border-[var(--border-color)] bg-[var(--background)] px-3 py-2 text-[var(--text-color)]"
+                  disabled={highValueLoading}
+                >
+                  <option value="">Select a skill...</option>
+                  {availableSkillOptions.map((skill) => (
+                    <option key={skill.id} value={skill.id}>{skill.name} • {skill.type}</option>
+                  ))}
+                </select>
+              </div>
+              <div>
+                <label className="text-sm font-medium text-[var(--text-color)]">Priority</label>
+                <select
+                  value={highValueForm.priority}
+                  onChange={(e) => setHighValueForm(prev => ({ ...prev, priority: e.target.value }))}
+                  className="mt-1 block w-full rounded-md border border-[var(--border-color)] bg-[var(--background)] px-3 py-2 text-[var(--text-color)]"
+                  disabled={highValueLoading}
+                >
+                  <option value="High">High</option>
+                  <option value="Medium">Medium</option>
+                  <option value="Low">Low</option>
+                </select>
+              </div>
+              <div className="flex items-end">
+                <button
+                  type="submit"
+                  disabled={highValueLoading}
+                  className="w-full rounded-md bg-[var(--color-primary)] px-4 py-2 text-white font-medium hover:bg-[var(--color-primary-dark)] disabled:opacity-60 transition"
+                >
+                  {highValueLoading ? 'Adding...' : 'Add Skill'}
+                </button>
+              </div>
+            </form>
 
-        {selectedMember && memberDetails && (
-          <section className="rounded-xl border border-[var(--border-color)] bg-[var(--card-background)] p-6 shadow-sm">
-            <h2 className="text-xl font-semibold text-[var(--text-color)]">Member Details: {memberDetails.name}</h2>
-            <div className="mt-4">
-              <h3 className="font-medium text-[var(--text-color)]">Skills</h3>
-              {memberDetails.skills.length === 0 ? (
-                <p className="mt-2 text-sm text-[var(--text-color-secondary)]">No skills recorded</p>
-              ) : (
-                <ul className="mt-2 space-y-2">
-                  {memberDetails.skills.map((skill) => (
-                    <li
-                      key={skill.id}
-                      className="rounded border border-[var(--border-color)] p-3 text-sm"
+            {highValueError && (
+              <p className="text-sm text-red-600">{highValueError}</p>
+            )}
+
+            {highValueSkills.length === 0 ? (
+              <p className="text-sm text-[var(--text-color-secondary)]">No high-value skills defined yet.</p>
+            ) : (
+              <div className="space-y-2">
+                {highValueSkills.map((skill) => (
+                  <div key={skill.id} className="flex items-center justify-between rounded-lg border border-[var(--border-color)] bg-[var(--background-muted)] p-4">
+                    <div>
+                      <p className="font-semibold text-[var(--text-color)]">{skill.skill_name}</p>
+                      <p className="text-xs text-[var(--text-color-secondary)]">
+                        {skill.skill_type} • Priority: {skill.priority}
+                        {skill.notes && ` • ${skill.notes}`}
+                      </p>
+                    </div>
+                    <button
+                      onClick={() => handleDeleteHighValueSkill(skill.id)}
+                      className="rounded-md border border-red-300 px-3 py-1.5 text-sm font-medium text-red-600 hover:bg-red-50 dark:hover:bg-red-900/20 transition"
                     >
-                      <div className="flex justify-between items-start">
-                        <div className="flex-1">
-                          <p className="font-medium text-[var(--text-color)]">{skill.name}</p>
-                          <p className="text-xs text-[var(--text-color-secondary)]">{skill.type}</p>
-                          
-                          {/* Show details for all skills */}
-                          <div className="mt-2 space-y-1 text-xs text-[var(--text-color-secondary)]">
-                            {skill.level && <p><span className="font-medium">Level:</span> {skill.level}</p>}
-                            {skill.years !== null && skill.years !== undefined && (
-                              <p><span className="font-medium">Experience:</span> {skill.years} years</p>
-                            )}
-                            {skill.frequency && <p><span className="font-medium">Frequency:</span> {skill.frequency}</p>}
-                            {skill.notes && (
-                              <p className="mt-1"><span className="font-medium">Notes:</span> {skill.notes}</p>
-                            )}
+                      Remove
+                    </button>
+                  </div>
+                ))}
+              </div>
+            )}
+          </section>
+        )}
+
+        {/* High Value Matches Tab */}
+        {activeTab === 'matches' && (
+          <section className="rounded-xl border border-[var(--border-color)] bg-[var(--card-background)] p-6 shadow-sm space-y-4">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-wide text-[color:var(--color-primary)]">High-Value Matches</p>
+              <h2 className="text-xl font-semibold text-[var(--text-color)]">Team Members with Priority Skills</h2>
+              <p className="text-sm text-[var(--text-color-secondary)]">Team members who have the high-value skills you've prioritized.</p>
+            </div>
+
+            {(() => {
+              const highValueSkillIds = new Set(highValueSkills.map(hvs => hvs.skill_id))
+              const matches = approvedSkills.filter(skill => highValueSkillIds.has(skill.skill.id))
+              
+              if (highValueSkills.length === 0) {
+                return (
+                  <p className="text-sm text-[var(--text-color-secondary)]">
+                    No high-value skills defined yet. Go to Team Priorities to set them.
+                  </p>
+                )
+              }
+
+              if (matches.length === 0) {
+                return (
+                  <p className="text-sm text-[var(--text-color-secondary)]">
+                    No team members have the prioritized skills yet. Encourage skill development!
+                  </p>
+                )
+              }
+
+              // Group by person to show each team member with their priority skills
+              const byPerson = matches.reduce((acc, match) => {
+                const personId = match.person_id
+                if (!acc[personId]) {
+                  acc[personId] = {
+                    person: { id: personId, name: match.name, username: match.username },
+                    skills: []
+                  }
+                }
+                acc[personId].skills.push(match)
+                return acc
+              }, {})
+
+              return (
+                <div className="space-y-3">
+                  {Object.values(byPerson).map(({ person, skills }) => {
+                    const totalFit = skills.reduce((sum, s) => sum + computeFitScoreEntry(s), 0)
+                    const avgFit = Math.round(totalFit / skills.length)
+                    
+                    return (
+                      <div key={person.id} className="rounded-xl border border-[var(--border-color)] bg-[var(--card-background)] p-4 shadow-sm space-y-4">
+                        <div className="flex items-start justify-between gap-4">
+                          <div>
+                            <h4 className="text-lg font-semibold text-[var(--text-color)]">{person.name}</h4>
+                            <p className="text-sm text-[var(--text-color-secondary)]">{person.role || 'manager'}</p>
+                            <p className="text-xs text-[var(--text-color-secondary)]">
+                              {skills.length} priority {skills.length === 1 ? 'match' : 'matches'}
+                            </p>
+                          </div>
+                          <div className="text-right space-y-1">
+                            <span className="inline-flex items-center rounded-full bg-green-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-green-700 dark:bg-green-900 dark:text-green-300">
+                              ● Great
+                            </span>
+                            <p className="text-xs text-[var(--text-color-secondary)]">
+                              Fit {avgFit}% match
+                            </p>
                           </div>
                         </div>
                         
-                        <div className="flex items-center gap-2 ml-4">
-                          <span className={`px-2 py-1 rounded text-xs font-semibold whitespace-nowrap ${
-                            skill.status === 'Approved'
-                              ? 'bg-green-100 text-green-700'
-                              : skill.status === 'Requested'
-                              ? 'bg-yellow-100 text-yellow-700'
-                              : 'bg-red-100 text-red-700'
-                          }`}>
-                            {skill.status}
-                          </span>
-                          {skill.status === 'Requested' && (
-                            <div className="flex gap-1">
-                              <button
-                                onClick={() => setConfirmAction({ memberId: selectedMember, skillId: skill.id, action: 'approve' })}
-                                className="flex items-center justify-center w-8 h-8 rounded-full bg-green-600 hover:bg-green-700 text-white transition"
-                                title="Approve"
-                              >
-                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                                </svg>
-                              </button>
-                              <button
-                                onClick={() => setConfirmAction({ memberId: selectedMember, skillId: skill.id, action: 'reject' })}
-                                className="flex items-center justify-center w-8 h-8 rounded-full bg-red-600 hover:bg-red-700 text-white transition"
-                                title="Reject"
-                              >
-                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M6 18L18 6M6 6l12 12" />
-                                </svg>
-                              </button>
-                            </div>
-                          )}
+                        <div className="space-y-2">
+                          {skills
+                            .sort((a, b) => computeFitScoreEntry(b) - computeFitScoreEntry(a))
+                            .map((skill) => {
+                              const matchedPriority = highValueSkills.find(hvs => hvs.skill_id === skill.skill.id)
+                              return (
+                                <div key={`${person.id}-${skill.skill.id}`} className="rounded-lg border border-[var(--border-color)] bg-[var(--background-muted)] p-3">
+                                  <div className="flex items-start justify-between gap-4">
+                                    <div className="flex-1">
+                                      <p className="text-sm font-medium text-[var(--text-color)]">{skill.skill.name}</p>
+                                      <p className="text-xs text-[var(--text-color-secondary)] mt-0.5">
+                                        {matchedPriority?.priority || 'High'} priority
+                                      </p>
+                                      <div className="mt-2 flex items-center gap-4 text-xs text-[var(--text-color-secondary)]">
+                                        <span>Proficiency: {skill.level || 'Intermediate'}</span>
+                                        <span>Usage: {skill.frequency || 'Not specified'}</span>
+                                        <span>Experience: {typeof skill.years === 'number' ? `${skill.years} yr${skill.years === 1 ? '' : 's'}` : 'Not specified'}</span>
+                                      </div>
+                                      {matchedPriority?.notes && (
+                                        <p className="mt-2 text-xs italic text-[var(--text-color-secondary)]">
+                                          Notes: {matchedPriority.notes}
+                                        </p>
+                                      )}
+                                      {skill.notes && !matchedPriority?.notes && (
+                                        <p className="mt-2 text-xs italic text-[var(--text-color-secondary)]">
+                                          Notes: {skill.notes}
+                                        </p>
+                                      )}
+                                    </div>
+                                  </div>
+                                </div>
+                              )
+                            })}
                         </div>
                       </div>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </div>
+                    )
+                  })}
+                </div>
+              )
+            })()}
           </section>
         )}
 

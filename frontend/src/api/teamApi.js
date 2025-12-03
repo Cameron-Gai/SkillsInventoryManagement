@@ -25,6 +25,10 @@ const teamApi = {
   updateMemberSkillDetails: (memberId, skillId, details) =>
     axios.put(`/person-skills/user/${memberId}/${skillId}/details`, details),
 
+  // Admin: update details for approved skill (alias)
+  updateUserSkillDetails: (userId, skillId, details) =>
+    axios.put(`/person-skills/user/${userId}/${skillId}/details`, details),
+
   // Delete a member's skill
   deleteMemberSkill: (memberId, skillId) =>
     axios.delete(`/person-skills/user/${memberId}/${skillId}`),
@@ -40,6 +44,11 @@ const teamApi = {
 
   // Manager: consolidated approved skills for team
   getTeamApprovedSkills: () => axios.get('/team/my-team/approved-skills'),
+
+  // High-value skills management
+  getHighValueSkills: () => axios.get('/team/high-value-skills'),
+  addHighValueSkill: (data) => axios.post('/team/high-value-skills', data),
+  deleteHighValueSkill: (id) => axios.delete(`/team/high-value-skills/${id}`),
 };
 
 export default teamApi;

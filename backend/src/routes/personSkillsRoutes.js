@@ -90,11 +90,11 @@ router.post('/me', authenticate, async (req, res) => {
 
     // Employees can only add skills with 'Requested' status
     const result = await db.query(
-      `INSERT INTO person_skill (person_id, skill_id, status, level, years, frequency, notes)
-       VALUES ($1, $2, 'Requested', $3, $4, $5, $6)
+      `INSERT INTO person_skill (person_id, skill_id, status, level, years, frequency, notes, requested_at)
+       VALUES ($1, $2, 'Requested', $3, $4, $5, $6, NOW())
        ON CONFLICT (person_id, skill_id) 
-       DO UPDATE SET status = 'Requested', level = $3, years = $4, frequency = $5, notes = $6
-       RETURNING person_id, skill_id, status, level, years, frequency, notes`,
+       DO UPDATE SET status = 'Requested', level = $3, years = $4, frequency = $5, notes = $6, requested_at = NOW()
+       RETURNING person_id, skill_id, status, level, years, frequency, notes, requested_at`,
       [userId, skill_id, level, years, frequency, notes]
     );
 
@@ -107,6 +107,7 @@ router.post('/me', authenticate, async (req, res) => {
       years: result.rows[0].years,
       frequency: result.rows[0].frequency,
       notes: result.rows[0].notes,
+      requested_at: result.rows[0].requested_at,
     });
   } catch (err) {
     console.error('Error in POST /person-skills/me:', err);
@@ -165,8 +166,9 @@ router.put('/me/:skillId', authenticate, async (req, res) => {
       return res.status(400).json({ error: 'status is required' });
     }
 
+    const setRequestedAt = status === 'Requested' ? ', requested_at = NOW()' : ''
     const result = await db.query(
-      'UPDATE person_skill SET status = $1 WHERE person_id = $2 AND skill_id = $3 RETURNING person_id, skill_id, status',
+      `UPDATE person_skill SET status = $1${setRequestedAt} WHERE person_id = $2 AND skill_id = $3 RETURNING person_id, skill_id, status, requested_at`,
       [status, userId, skillId]
     );
 
@@ -178,6 +180,7 @@ router.put('/me/:skillId', authenticate, async (req, res) => {
       person_id: result.rows[0].person_id,
       skill_id: result.rows[0].skill_id,
       status: result.rows[0].status,
+      requested_at: result.rows[0].requested_at,
     });
   } catch (err) {
     res.status(500).json({ error: err.message });

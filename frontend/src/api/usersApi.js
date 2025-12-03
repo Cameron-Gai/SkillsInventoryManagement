@@ -4,7 +4,7 @@
 import axios from "./axiosInstance";
 
 const usersApi = {
-  getProfile: () => axios.get("/users/me"),
+  getProfile: () => axios.get(`/users/me?_t=${Date.now()}`),
   updateProfile: (data) => axios.put("/users/me", data),
 
   // Manager/Admin examples
