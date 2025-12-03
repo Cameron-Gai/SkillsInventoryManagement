@@ -117,6 +117,3 @@ Pick a manager/admin from `public.person` (e.g., role `manager` or `is_admin=tru
 - Frontend 404s to `/api/v1`: set `VITE_API_URL=http://localhost:3000/api`.
 - CORS errors: set `CORS_ORIGIN=http://localhost:5173` (or your dev URL).
 - Duplicate inserts: many endpoints use `ON CONFLICT` to be idempotent.
-
-## License
-Internal coursework/project repository.
