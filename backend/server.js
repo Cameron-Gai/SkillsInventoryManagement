@@ -8,6 +8,7 @@ const usersRoutes = require('./src/routes/usersRoutes');
 const skillsRoutes = require('./src/routes/skillsRoutes');
 const personSkillsRoutes = require('./src/routes/personSkillsRoutes');
 const teamRoutes = require('./src/routes/teamRoutes');
+const catalogRequestsRoutes = require('./src/routes/catalogRequestsRoutes');
 const db = require('./src/config/db');
 
 const app = express();
@@ -39,6 +40,9 @@ app.use('/api/person-skills', personSkillsRoutes);
 
 // Team routes
 app.use('/api/team', teamRoutes);
+
+// Catalog Requests routes
+app.use('/api/catalog-requests', catalogRequestsRoutes);
 
 // Health check
 app.get('/health', async (req, res) => {

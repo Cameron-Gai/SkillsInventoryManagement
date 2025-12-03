@@ -117,6 +117,7 @@ export default function Dashboard() {
     return null
   }
 
+
   const renderSuggestedList = (title, description, data, emptyMessage) => {
     const sortedData = [...data].sort((a, b) => Number(a?.satisfied ?? false) - Number(b?.satisfied ?? false))
     const fallbackEmpty = 'There are no priorities set by your manager.'
@@ -195,6 +196,7 @@ export default function Dashboard() {
             {renderSuggestedList('Company Focus', 'Priority skills for the company.', companySuggestedSkills, 'There are no company priorities at this time.')}
           </section>
         )}
+
       </main>
     </div>
   )

@@ -1,6 +1,7 @@
 import { useMemo, useState, useEffect } from 'react'
 import SkillList from './SkillList'
 import SkillFormModal from './SkillFormModal'
+import { useToast } from '@/components/ToastProvider'
 import personSkillsApi from '@/api/personSkillsApi'
 import skillsApi from '@/api/skillsApi'
 
@@ -11,6 +12,7 @@ export default function EmployeeSkillsPanel({ ownerLabel = 'your', userId = null
   const [editingSkill, setEditingSkill] = useState(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
+  const { showToast } = useToast()
 
   // Fetch user's skills and available skills
   useEffect(() => {
@@ -77,6 +79,10 @@ export default function EmployeeSkillsPanel({ ownerLabel = 'your', userId = null
     }
   }
 
+  const handleCatalogRequested = () => {
+    showToast('Catalog request submitted', { variant: 'success' })
+  }
+
   const [deleteConfirm, setDeleteConfirm] = useState(null)
 
   const handleDelete = async (skillId) => {
@@ -138,7 +144,9 @@ export default function EmployeeSkillsPanel({ ownerLabel = 'your', userId = null
         availableSkills={allSkills}
         onSave={handleSave}
         onClose={() => setIsModalOpen(false)}
+        onCatalogRequested={handleCatalogRequested}
       />
+      {/* Toasts handled globally by ToastProvider */}
 
       {/* Delete Confirmation Modal */}
       {deleteConfirm && (

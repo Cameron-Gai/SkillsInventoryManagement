@@ -6,6 +6,8 @@ import Sidebar from '@/components/Sidebar'
 import usersApi from '@/api/usersApi'
 import skillsApi from '@/api/skillsApi'
 import teamApi from '@/api/teamApi'
+import { getCatalogRequests, processCatalogRequest } from '@/api/catalogRequestsApi'
+import { useToast } from '@/components/ToastProvider'
 
 function levelClasses(level) {
   switch ((level || '').toLowerCase()) {
@@ -42,6 +44,7 @@ function computeFitScoreEntry(entry) {
 }
 
 export default function Admin() {
+  const { showToast } = useToast()
   const [users, setUsers] = useState([])
   const [skills, setSkills] = useState([])
   const [loading, setLoading] = useState(true)
@@ -49,10 +52,13 @@ export default function Admin() {
   const [activeTab, setActiveTab] = useState('users') // 'users' | 'skills' | 'userSkills' | 'requests' | 'logs'
   const [newSkillForm, setNewSkillForm] = useState({ skill_name: '', skill_type: 'Technology' })
   const [requests, setRequests] = useState([])
+  const [catalogRequests, setCatalogRequests] = useState([])
   const [requestsPage, setRequestsPage] = useState(1)
   const [requestsTotal, setRequestsTotal] = useState(0)
   const [pendingCount, setPendingCount] = useState(0) // Track pending requests count for tab display
   const [requestsFilter, setRequestsFilter] = useState('Requested') // pending-only
+  const [requestsSubtab, setRequestsSubtab] = useState('skills') // 'skills' | 'catalog'
+  const pendingCatalogCount = catalogRequests.filter(cr => cr.status === 'Requested').length
   const [confirmDeleteUserId, setConfirmDeleteUserId] = useState(null)
   const [confirmRequest, setConfirmRequest] = useState(null) // { person_id, skill_id, action: 'approve'|'reject' }
   const [logs, setLogs] = useState([])
@@ -112,6 +118,16 @@ export default function Admin() {
       }
     } catch (err) {
       setError('Failed to load requests: ' + err.message)
+    }
+  }
+
+  const reloadCatalogRequests = async () => {
+    try {
+      const data = await getCatalogRequests()
+      // Only show pending in subtab badge and default list
+      setCatalogRequests(Array.isArray(data) ? data : [])
+    } catch (err) {
+      setError('Failed to load catalog requests: ' + err.message)
     }
   }
 
@@ -375,6 +391,32 @@ export default function Admin() {
               <div />
             </div>
 
+            {/* Subtabs for Approval Queue */}
+            <div className="mt-4 flex gap-2 border-b border-[var(--border-color)]">
+              <button
+                onClick={async () => { setRequestsSubtab('skills'); await reloadRequests(1, 'Requested') }}
+                className={`px-3 py-1.5 text-sm font-medium border-b-2 transition ${
+                  requestsSubtab === 'skills'
+                    ? 'border-[var(--color-primary)] text-[var(--color-primary)]'
+                    : 'border-transparent text-[var(--text-color-secondary)] hover:text-[var(--text-color)]'
+                }`}
+              >
+                Skill Requests
+              </button>
+              <button
+                onClick={async () => { setRequestsSubtab('catalog'); await reloadCatalogRequests() }}
+                className={`px-3 py-1.5 text-sm font-medium border-b-2 transition ${
+                  requestsSubtab === 'catalog'
+                    ? 'border-[var(--color-primary)] text-[var(--color-primary)]'
+                    : 'border-transparent text-[var(--text-color-secondary)] hover:text-[var(--text-color)]'
+                }`}
+              >
+                Catalog Requests {pendingCatalogCount > 0 ? `(${pendingCatalogCount})` : ''}
+              </button>
+            </div>
+
+            {/* Skill Requests list */}
+            {requestsSubtab === 'skills' && (
             <div className="mt-4 space-y-3">
               {requests.map((r) => (
                 <div key={`${r.person_id}-${r.skill.id}`} className="rounded-lg border border-[var(--border-color)] p-4 flex items-start gap-4">
@@ -426,24 +468,66 @@ export default function Admin() {
                 </div>
               ))}
             </div>
+            )}
 
-            <div className="mt-4 flex items-center justify-between">
-              <button
-                onClick={async () => { const p = Math.max(1, requestsPage - 1); await reloadRequests(p, 'Requested') }}
-                className="rounded-md border border-[var(--border-color)] px-3 py-1.5 text-sm"
-                disabled={requestsPage <= 1}
-              >
-                Previous
-              </button>
-              <p className="text-sm text-[var(--text-color-secondary)]">Page {requestsPage}</p>
-              <button
-                onClick={async () => { const p = requests.length < 20 ? requestsPage : requestsPage + 1; await reloadRequests(p, 'Requested') }}
-                className="rounded-md border border-[var(--border-color)] px-3 py-1.5 text-sm"
-                disabled={requests.length < 20}
-              >
-                Next
-              </button>
+            {/* Catalog Requests list */}
+            {requestsSubtab === 'catalog' && (
+            <div className="mt-4 space-y-3">
+              {catalogRequests.filter(cr => cr.status === 'Requested').length === 0 ? (
+                <p className="text-sm text-[var(--text-color-secondary)]">No pending catalog requests.</p>
+              ) : (
+                catalogRequests.filter(cr => cr.status === 'Requested').map((cr) => (
+                  <div key={`catalog-${cr.request_id}`} className="rounded-lg border border-[var(--border-color)] p-4 flex items-start gap-4">
+                    <div className="flex-1">
+                      <div className="flex items-center gap-2">
+                        <p className="font-semibold text-[var(--text-color)]">{cr.skill_name}</p>
+                        <span className="text-xs px-2 py-0.5 rounded bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300">{cr.skill_type}</span>
+                      </div>
+                      <p className="text-sm text-[var(--text-color-secondary)]">Requested by • {cr.requested_by_name || cr.requested_by}</p>
+                      {cr.justification && <p className="mt-2 text-xs italic text-[var(--text-color-secondary)]">"{cr.justification}"</p>}
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <span className="px-2 py-1 rounded text-xs font-semibold whitespace-nowrap bg-yellow-100 text-yellow-700">Requested</span>
+                      <button
+                        onClick={async () => { try { await processCatalogRequest(cr.request_id, { action: 'approve' }); await reloadCatalogRequests(); showToast('Catalog request approved', { variant: 'success' }) } catch (err) { setError('Approve failed: ' + err.message); showToast('Approve failed: ' + err.message, { variant: 'error' }) } }}
+                        className="flex items-center justify-center w-9 h-9 rounded-full bg-green-600 hover:bg-green-700 text-white transition"
+                        title="Approve"
+                      >
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>
+                      </button>
+                      <button
+                        onClick={async () => { try { await processCatalogRequest(cr.request_id, { action: 'reject' }); await reloadCatalogRequests(); showToast('Catalog request rejected', { variant: 'success' }) } catch (err) { setError('Reject failed: ' + err.message); showToast('Reject failed: ' + err.message, { variant: 'error' }) } }}
+                        className="flex items-center justify-center w-9 h-9 rounded-full bg-red-600 hover:bg-red-700 text-white transition"
+                        title="Reject"
+                      >
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M6 18L18 6M6 6l12 12" /></svg>
+                      </button>
+                    </div>
+                  </div>
+                ))
+              )}
             </div>
+            )}
+
+            {requestsSubtab === 'skills' && (
+              <div className="mt-4 flex items-center justify-between">
+                <button
+                  onClick={async () => { const p = Math.max(1, requestsPage - 1); await reloadRequests(p, 'Requested') }}
+                  className="rounded-md border border-[var(--border-color)] px-3 py-1.5 text-sm"
+                  disabled={requestsPage <= 1}
+                >
+                  Previous
+                </button>
+                <p className="text-sm text-[var(--text-color-secondary)]">Page {requestsPage}</p>
+                <button
+                  onClick={async () => { const p = requests.length < 20 ? requestsPage : requestsPage + 1; await reloadRequests(p, 'Requested') }}
+                  className="rounded-md border border-[var(--border-color)] px-3 py-1.5 text-sm"
+                  disabled={requests.length < 20}
+                >
+                  Next
+                </button>
+              </div>
+            )}
           </section>
         ) : (
           <section className="rounded-xl border border-[var(--border-color)] bg-[var(--card-background)] p-6 shadow-sm">

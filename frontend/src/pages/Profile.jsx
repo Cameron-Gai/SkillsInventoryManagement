@@ -54,6 +54,7 @@ export default function Profile() {
     }
   }
 
+
   return (
     <div className="p-10 space-y-6 bg-[var(--background)] text-[var(--text-color)] min-h-screen">
       <div className="flex items-center justify-between">
@@ -139,6 +140,7 @@ export default function Profile() {
           )}
         </div>
       )}
+
     </div>
   )
 }
