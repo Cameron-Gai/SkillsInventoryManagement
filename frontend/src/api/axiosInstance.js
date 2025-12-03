@@ -3,6 +3,7 @@
 // Handles base URL, headers, error management, and interceptors.
 
 import axios from "axios";
+import { clearStoredUser } from "@/utils/auth";
 
 const axiosInstance = axios.create({
   baseURL: import.meta.env.VITE_API_URL || "http://localhost:3000/api/v1",
@@ -41,9 +42,9 @@ axiosInstance.interceptors.response.use(
 
     // Handle unauthorized access globally
     if (error.response?.status === 401) {
-      // Token expired or invalid
-      localStorage.removeItem("token");
-      window.location.href = "/login";
+      // Token expired or invalid; clear stored session and force re-auth
+      clearStoredUser();
+      window.location.replace("/login");
     }
 
     return Promise.reject(error);
