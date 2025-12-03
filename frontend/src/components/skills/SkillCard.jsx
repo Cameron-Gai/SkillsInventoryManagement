@@ -36,7 +36,6 @@ function computeFitScore(skill) {
 
 export default function SkillCard({ skill, onEdit, onDelete }) {
   const levelBadgeClass = levelClasses(skill.level)
-  const fitScore = computeFitScore(skill)
   const highValue = isHighValue(skill)
 
   return (
@@ -64,10 +63,9 @@ export default function SkillCard({ skill, onEdit, onDelete }) {
       )}
 
       <div className="mt-4 flex flex-wrap items-center justify-between gap-3">
-        <div className="flex flex-wrap gap-2 text-xs text-[var(--text-color-secondary)]">
-          <span className="rounded-full bg-[var(--background)] px-2 py-1">Years: {skill.years}</span>
-          <span className="rounded-full bg-[var(--background)] px-2 py-1">Usage: {skill.frequency}</span>
-          <span className="rounded-full bg-[var(--background)] px-2 py-1">Fit: {fitScore}</span>
+        <div className="text-xs text-[var(--text-color-secondary)] space-y-1">
+          <div className="rounded-md bg-[var(--background-muted)] px-2 py-1 font-medium">Years: {skill.years}</div>
+          <div className="rounded-md bg-[var(--background-muted)] px-2 py-1 font-medium">Usage: {skill.frequency}</div>
         </div>
         <div className="flex gap-2">
           <button
@@ -88,9 +86,6 @@ export default function SkillCard({ skill, onEdit, onDelete }) {
           )}
         </div>
       </div>
-      {skill.status === 'Approved' && (
-        <p className="mt-2 text-xs text-[var(--text-color-secondary)]">Editing an approved skill will re-request approval.</p>
-      )}
     </div>
   )
 }
