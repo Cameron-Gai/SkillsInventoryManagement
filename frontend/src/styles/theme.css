@@ -84,6 +84,52 @@
   --panel-background: #171717;
   --background-muted: #1A1A1A; /* neutral muted surface for inner boxes */
 
+
+  /* Dark mode-friendly slider styling without altering light theme */
+  @media (prefers-color-scheme: dark) {
+    input[type="range"] {
+      appearance: none;
+      width: 100%;
+      background: transparent;
+    }
+    input[type="range"]:focus {
+      outline: none;
+    }
+    /* Track */
+    input[type="range"]::-webkit-slider-runnable-track {
+      height: 6px;
+      background-color: var(--border-color);
+      border-radius: 999px;
+    }
+    input[type="range"]::-moz-range-track {
+      height: 6px;
+      background-color: var(--border-color);
+      border-radius: 999px;
+    }
+    /* Thumb */
+    input[type="range"]::-webkit-slider-thumb {
+      appearance: none;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background-color: var(--text-color);
+      border: 2px solid var(--card-background);
+      margin-top: -4px; /* center thumb on track */
+    }
+    input[type="range"]::-moz-range-thumb {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background-color: var(--text-color);
+      border: 2px solid var(--card-background);
+    }
+    /* Active fill (optional) */
+    input[type="range"]::-moz-range-progress {
+      height: 6px;
+      background-color: var(--color-primary);
+      border-radius: 999px 0 0 999px;
+    }
+  }
   --text-color: #F8FAFC;
   --text-color-secondary: #E5E7EB;
   --text-color-subtle: #9CA3AF;

@@ -228,6 +228,9 @@ export default function Team() {
     return { underThree, overThree, overWeek }
   })()
 
+  // Feature flag: control visibility of High Value Matches render section
+  const showMatches = false
+
   return (
     <div className="flex min-h-screen bg-[var(--background)] text-[var(--text-color)]">
       <Sidebar />
@@ -253,20 +256,43 @@ export default function Team() {
             {/* Top Team Skills */}
             {insights && insights.top_skills && insights.top_skills.length > 0 && (
               <section className="rounded-xl border border-[var(--border-color)] bg-[var(--card-background)] p-6 shadow-sm">
-                <h2 className="text-lg font-semibold text-[var(--text-color)] mb-3">Top Team Skills</h2>
-                <ul className="space-y-2">
-                  {insights.top_skills.slice(0, 5).map((skill) => (
-                    <li
-                      key={skill.skill_name}
-                      className="flex items-center justify-between text-sm"
-                    >
-                      <span className="text-[var(--text-color)]">{skill.skill_name}</span>
-                      <span className="text-[var(--text-color-secondary)]">
-                        {skill.user_count} {skill.user_count === 1 ? 'member' : 'members'}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
+                <div className="flex items-center justify-between mb-4">
+                  <h2 className="text-lg font-semibold text-[var(--text-color)]">Top Team Skills</h2>
+                  <span className="text-xs text-[var(--text-color-secondary)]">Last 5</span>
+                </div>
+                {(() => {
+                  const top = insights.top_skills.slice(0, 5)
+                  const maxCount = Math.max(...top.map(s => Number(s.user_count) || 0), 1)
+                  return (
+                    <ul className="space-y-2">
+                      {top.map((skill) => {
+                        const count = Number(skill.user_count) || 0
+                        const pct = Math.round((count / maxCount) * 100)
+                        return (
+                          <li key={skill.skill_name} className="relative">
+                            <div className="absolute inset-y-0 left-0 right-0 rounded-md bg-[var(--background-muted)]" aria-hidden="true" />
+                            <div
+                              className="absolute inset-y-0 left-0 rounded-md bg-red-500/30 dark:bg-red-300/20"
+                              style={{ width: pct + '%' }}
+                              aria-hidden="true"
+                            />
+                            <div className="relative flex items-center justify-between rounded-md px-3 py-2">
+                              <span className="text-sm font-medium text-[var(--text-color)]">{skill.skill_name}</span>
+                              <span className="inline-flex items-center gap-2">
+                                <span className="text-xs text-[var(--text-color-secondary)]">
+                                  {count} {count === 1 ? 'member' : 'members'}
+                                </span>
+                                <span className="text-[10px] px-2 py-0.5 rounded-full bg-[var(--background)] text-[var(--text-color-secondary)]">
+                                  {pct}%
+                                </span>
+                              </span>
+                            </div>
+                          </li>
+                        )
+                      })}
+                    </ul>
+                  )
+                })()}
               </section>
             )}
 
@@ -279,54 +305,45 @@ export default function Team() {
         <div className="flex gap-2 border-b border-[var(--border-color)]">
           <button
             onClick={() => setActiveTab('overview')}
-            className={`px-4 py-2 text-sm font-medium transition-colors ${
+            className={`px-4 py-2 font-medium border-b-2 transition ${
               activeTab === 'overview'
-                ? 'border-b-2 border-[color:var(--color-primary)] text-[color:var(--color-primary)]'
-                : 'text-[var(--text-color-secondary)] hover:text-[var(--text-color)]'
+                ? 'border-[var(--color-primary)] text-[var(--color-primary)]'
+                : 'border-transparent text-[var(--text-color-secondary)] hover:text-[var(--text-color)]'
             }`}
           >
             Overview
           </button>
           <button
             onClick={() => setActiveTab('pending')}
-            className={`px-4 py-2 text-sm font-medium transition-colors ${
+            className={`px-4 py-2 font-medium border-b-2 transition ${
               activeTab === 'pending'
-                ? 'border-b-2 border-[color:var(--color-primary)] text-[color:var(--color-primary)]'
-                : 'text-[var(--text-color-secondary)] hover:text-[var(--text-color)]'
+                ? 'border-[var(--color-primary)] text-[var(--color-primary)]'
+                : 'border-transparent text-[var(--text-color-secondary)] hover:text-[var(--text-color)]'
             }`}
           >
             Pending Requests {pendingRequests.length > 0 && `(${pendingRequests.length})`}
           </button>
           <button
             onClick={() => setActiveTab('approved')}
-            className={`px-4 py-2 text-sm font-medium transition-colors ${
+            className={`px-4 py-2 font-medium border-b-2 transition ${
               activeTab === 'approved'
-                ? 'border-b-2 border-[color:var(--color-primary)] text-[color:var(--color-primary)]'
-                : 'text-[var(--text-color-secondary)] hover:text-[var(--text-color)]'
+                ? 'border-[var(--color-primary)] text-[var(--color-primary)]'
+                : 'border-transparent text-[var(--text-color-secondary)] hover:text-[var(--text-color)]'
             }`}
           >
             Approved Skills
           </button>
           <button
             onClick={() => setActiveTab('priorities')}
-            className={`px-4 py-2 text-sm font-medium transition-colors ${
+            className={`px-4 py-2 font-medium border-b-2 transition ${
               activeTab === 'priorities'
-                ? 'border-b-2 border-[color:var(--color-primary)] text-[color:var(--color-primary)]'
-                : 'text-[var(--text-color-secondary)] hover:text-[var(--text-color)]'
+                ? 'border-[var(--color-primary)] text-[var(--color-primary)]'
+                : 'border-transparent text-[var(--text-color-secondary)] hover:text-[var(--text-color)]'
             }`}
           >
             Team Priorities
           </button>
-          <button
-            onClick={() => setActiveTab('matches')}
-            className={`px-4 py-2 text-sm font-medium transition-colors ${
-              activeTab === 'matches'
-                ? 'border-b-2 border-[color:var(--color-primary)] text-[color:var(--color-primary)]'
-                : 'text-[var(--text-color-secondary)] hover:text-[var(--text-color)]'
-            }`}
-          >
-            High Value Matches
-          </button>
+          {/* High Value Matches tab removed (functionality retained for future) */}
         </div>
 
         {/* Overview Tab: Team Members List */}
@@ -364,86 +381,71 @@ export default function Team() {
                   {memberDetails.skills.length === 0 ? (
                     <p className="mt-2 text-sm text-[var(--text-color-secondary)]">No skills recorded</p>
                   ) : (
-                    <ul className="mt-2 space-y-2">
+                    <div className="mt-2 space-y-2">
                       {memberDetails.skills.map((skill) => (
-                        <li
+                        <div
                           key={skill.id}
-                          className="rounded border border-[var(--border-color)] bg-[var(--background-muted)] p-3 text-sm"
+                          className="rounded-lg border border-[var(--border-color)] bg-[var(--background-muted)] p-3 space-y-0"
                         >
-                          <div className="flex justify-between items-start gap-3">
+                          <div className="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between">
                             <div className="flex-1">
-                              <div className="flex items-center gap-2 mb-1">
-                                <p className="font-medium text-[var(--text-color)]">{skill.name}</p>
-                                {skill.level && (
-                                  <span className={`px-2 py-0.5 rounded text-xs font-semibold ${levelClasses(skill.level)}`}>
-                                    {skill.level}
-                                  </span>
+                              <p className="text-lg font-semibold text-[var(--text-color)]">
+                                {skill.name}
+                                {skill.type && (
+                                  <span className="ml-2 text-sm font-normal text-[var(--text-color-secondary)]">• {skill.type}</span>
                                 )}
-                                {isHighValueEntry({ ...skill, skill: { type: skill.type } }) && (
-                                  <span className="px-2 py-0.5 rounded text-xs font-semibold bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-100">
-                                    ⭐ High-Value
-                                  </span>
-                                )}
-                              </div>
-                              <p className="text-xs text-[var(--text-color-secondary)]">{skill.type}</p>
-                              
-                              <div className="mt-2 flex items-center gap-4 text-xs text-[var(--text-color-secondary)]">
-                                {skill.years !== null && skill.years !== undefined && (
-                                  <span><span className="font-medium">Experience:</span> {skill.years} yrs</span>
-                                )}
-                                {skill.frequency && (
-                                  <span><span className="font-medium">Frequency:</span> {skill.frequency}</span>
-                                )}
-                                {skill.status === 'Requested' && skill.requested_at && (
-                                  <span className="font-medium text-[color:var(--color-primary)]">
-                                    Requested: {timeAgo(skill.requested_at)}
-                                  </span>
-                                )}
-                              </div>
-                              {skill.notes && (
-                                <p className="mt-1 text-xs text-[var(--text-color-secondary)] italic">
-                                  "{skill.notes}"
-                                </p>
+                              </p>
+                              {skill.status === 'Requested' && skill.requested_at && (
+                                <p className="text-sm text-[var(--text-color-secondary)]">Requested {timeAgo(skill.requested_at)}</p>
                               )}
                             </div>
-                            
-                            <div className="flex items-center gap-2">
-                              <span className={`px-2 py-1 rounded text-xs font-semibold whitespace-nowrap ${
-                                skill.status === 'Approved'
-                                  ? 'bg-green-100 text-green-700'
-                                  : skill.status === 'Requested'
-                                  ? 'bg-yellow-100 text-yellow-700'
-                                  : 'bg-red-100 text-red-700'
-                              }`}>
-                                {skill.status}
-                              </span>
-                              {skill.status === 'Requested' && (
-                                <div className="flex gap-1">
-                                  <button
-                                    onClick={() => setConfirmAction({ memberId: selectedMember, skillId: skill.id, action: 'approve' })}
-                                    className="flex items-center justify-center w-8 h-8 rounded-full bg-green-600 hover:bg-green-700 text-white transition"
-                                    title="Approve"
-                                  >
-                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                                    </svg>
-                                  </button>
-                                  <button
-                                    onClick={() => setConfirmAction({ memberId: selectedMember, skillId: skill.id, action: 'reject' })}
-                                    className="flex items-center justify-center w-8 h-8 rounded-full bg-red-600 hover:bg-red-700 text-white transition"
-                                    title="Reject"
-                                  >
-                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M6 18L18 6M6 6l12 12" />
-                                    </svg>
-                                  </button>
-                                </div>
+                            <div className="text-right flex flex-col items-end gap-1">
+                              {skill.level && (
+                                <span className={`px-2 py-0.5 rounded text-xs font-semibold ${levelClasses(skill.level)}`}>{skill.level}</span>
+                              )}
+                              {skill.years !== null && skill.years !== undefined && (
+                                <p className="text-sm text-[var(--text-color-secondary)]">Experience: {skill.years} yrs</p>
+                              )}
+                              {skill.frequency && (
+                                <p className="text-sm text-[var(--text-color-secondary)]">Frequency: {skill.frequency}</p>
                               )}
                             </div>
                           </div>
-                        </li>
+
+                          {skill.notes && (
+                            <p className="text-base text-[var(--text-color-secondary)]">{skill.notes.trim()}</p>
+                          )}
+
+                          <div className="flex items-center justify-between">
+                            <span className={`px-2 py-1 rounded text-xs font-semibold whitespace-nowrap ${
+                              skill.status === 'Approved'
+                                ? 'bg-green-100 text-green-700'
+                                : skill.status === 'Requested'
+                                ? 'bg-yellow-100 text-yellow-700'
+                                : 'bg-red-100 text-red-700'
+                            }`}>
+                              {skill.status}
+                            </span>
+                            {skill.status === 'Requested' && (
+                              <div className="flex flex-wrap gap-2 justify-end">
+                                <button
+                                  onClick={() => setConfirmAction({ memberId: selectedMember, skillId: skill.id, action: 'approve' })}
+                                  className="rounded-md border border-emerald-200 bg-emerald-50 px-3 py-1.5 text-sm font-semibold text-emerald-700 transition hover:bg-emerald-100"
+                                >
+                                  Approve
+                                </button>
+                                <button
+                                  onClick={() => setConfirmAction({ memberId: selectedMember, skillId: skill.id, action: 'reject' })}
+                                  className="rounded-md border border-rose-200 bg-rose-50 px-3 py-1.5 text-sm font-semibold text-rose-700 transition hover:bg-rose-100"
+                                >
+                                  Reject
+                                </button>
+                              </div>
+                            )}
+                          </div>
+                        </div>
                       ))}
-                    </ul>
+                    </div>
                   )}
                 </div>
               </div>
@@ -482,6 +484,9 @@ export default function Team() {
                         </p>
                       </div>
                       <div className="text-right flex flex-col items-end gap-1">
+                        {r.level && (
+                          <span className={`px-2 py-0.5 rounded text-xs font-semibold ${levelClasses(r.level)}`}>{r.level}</span>
+                        )}
                         {r.years !== null && r.years !== undefined && (
                           <p className="text-sm text-[var(--text-color-secondary)]">Experience: {r.years} yrs</p>
                         )}
@@ -491,14 +496,6 @@ export default function Team() {
                       </div>
                     </div>
 
-                    <div className="mt-0 grid grid-cols-1 gap-2 sm:grid-cols-2 text-sm text-[var(--text-color-secondary)]">
-                      {r.level && (
-                        <div className="flex items-center gap-1">
-                          <span className="font-medium">Level:</span>
-                          <span className={`px-2 py-0.5 rounded ${levelClasses(r.level)}`}>{r.level}</span>
-                        </div>
-                      )}
-                    </div>
                     <p className="text-base text-[var(--text-color-secondary)]">{r.notes?.trim() || 'No notes provided.'}</p>
 
                     <div className="flex flex-wrap gap-2 justify-end">
@@ -548,47 +545,43 @@ export default function Team() {
             ) : approvedSkills.length === 0 ? (
               <p className="mt-4 text-[var(--text-color-secondary)]">No approved skills</p>
             ) : (
-                  <div className="mt-4 space-y-3">
+              <div className="mt-4 space-y-3">
                 {approvedSkills.map((r) => (
-                      <div key={`${r.person_id}-${r.skill.id}`} className="rounded-lg border border-[var(--border-color)] bg-[var(--background-muted)] p-4">
-                    <div className="flex items-start justify-between gap-3">
+                  <div key={`${r.person_id}-${r.skill.id}`} className="rounded-lg border border-[var(--border-color)] bg-[var(--background-muted)] p-3 space-y-0">
+                    <div className="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between">
                       <div className="flex-1">
-                        <div className="flex items-center gap-2 mb-1">
-                          <p className="font-semibold text-[var(--text-color)]">{r.skill.name}</p>
-                          {r.level && (
-                            <span className={`px-2 py-0.5 rounded text-xs font-semibold ${levelClasses(r.level)}`}>
-                              {r.level}
-                            </span>
+                        <p className="text-lg font-semibold text-[var(--text-color)]">
+                          {r.skill.name}
+                          {r.skill.type && (
+                            <span className="ml-2 text-sm font-normal text-[var(--text-color-secondary)]">• {r.skill.type}</span>
                           )}
-                          {isHighValueEntry(r) && (
-                            <span className="px-2 py-0.5 rounded text-xs font-semibold bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-100">
-                              ⭐ High-Value
-                            </span>
-                          )}
-                        </div>
-                        <p className="text-xs text-[var(--text-color-secondary)] mb-2">{r.name} • {r.username} • {r.skill.type}</p>
-                        <div className="flex items-center gap-4 text-xs text-[var(--text-color-secondary)]">
-                          {r.years !== null && r.years !== undefined && (
-                            <span><span className="font-medium">Experience:</span> {r.years} yrs</span>
-                          )}
-                          {r.frequency && (
-                            <span><span className="font-medium">Frequency:</span> {r.frequency}</span>
-                          )}
-                        </div>
-                        {r.notes && (
-                          <p className="mt-2 text-xs text-[var(--text-color-secondary)] italic">
-                            "{r.notes}"
-                          </p>
+                        </p>
+                        <p className="text-sm text-[var(--text-color-secondary)]">
+                          {r.name} ({r.username})
+                        </p>
+                      </div>
+                      <div className="text-right flex flex-col items-end gap-1">
+                        {r.level && (
+                          <span className={`px-2 py-0.5 rounded text-xs font-semibold ${levelClasses(r.level)}`}>{r.level}</span>
+                        )}
+                        {r.years !== null && r.years !== undefined && (
+                          <p className="text-sm text-[var(--text-color-secondary)]">Experience: {r.years} yrs</p>
+                        )}
+                        {r.frequency && (
+                          <p className="text-sm text-[var(--text-color-secondary)]">Frequency: {r.frequency}</p>
                         )}
                       </div>
-                      <div className="flex gap-2">
-                        <button
-                          onClick={() => setConfirmAction({ memberId: r.person_id, skillId: r.skill.id, action: 'deleteApproved' })}
-                          className="rounded-md border border-rose-200 bg-rose-50 px-3 py-1.5 text-sm font-semibold text-rose-700 transition hover:bg-rose-100"
-                        >
-                          Delete
-                        </button>
-                      </div>
+                    </div>
+
+                    <p className="text-base text-[var(--text-color-secondary)]">{r.notes?.trim() || 'No notes provided.'}</p>
+
+                    <div className="flex flex-wrap gap-2 justify-end">
+                      <button
+                        onClick={() => setConfirmAction({ memberId: r.person_id, skillId: r.skill.id, action: 'deleteApproved' })}
+                        className="rounded-md border border-rose-200 bg-rose-50 px-3 py-1.5 text-sm font-semibold text-rose-700 transition hover:bg-rose-100"
+                      >
+                        Delete
+                      </button>
                     </div>
                   </div>
                 ))}
@@ -676,7 +669,7 @@ export default function Team() {
         )}
 
         {/* High Value Matches Tab */}
-        {activeTab === 'matches' && (
+        {showMatches && activeTab === 'matches' && (
           <section className="rounded-xl border border-[var(--border-color)] bg-[var(--card-background)] p-6 shadow-sm space-y-4">
             <div>
               <p className="text-sm font-semibold uppercase tracking-wide text-[color:var(--color-primary)]">High-Value Matches</p>
