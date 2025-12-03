@@ -13,10 +13,10 @@
   --color-secondary-dark: #1F1F1F;
 
   /* Background System */
-  --background: #FFFFFF;        /* main background */
+  --background: #F0F2F5;        /* main background (slightly darker grey) */
   --card-background: #FFFFFF;   /* surfaces/cards */
   --panel-background: #F6F7F8;  /* sidebars, modals, credentials list */
-  --background-muted: #F2F4F6;  /* table rows, soft UI areas */
+  --background-muted: #F7F9FC;  /* table rows, soft UI areas (lighter grey) */
 
   /* Border + Divider */
   --border-color: #D1D5DB;
@@ -82,6 +82,7 @@
   --background: #121212;
   --card-background: #1F1F1F;
   --panel-background: #171717;
+  --background-muted: #1A1A1A; /* neutral muted surface for inner boxes */
 
   --text-color: #F8FAFC;
   --text-color-secondary: #E5E7EB;

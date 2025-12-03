@@ -201,6 +201,49 @@ router.get('/', authenticate, authorizeRoles('admin', 'manager'), async (req, re
   }
 });
 
+// Get all users with their approved skills (admin/manager only)
+router.get('/with-skills', authenticate, authorizeRoles('admin', 'manager'), async (req, res) => {
+  try {
+    const usersRes = await db.query(
+      'SELECT person_id, person_name, username, is_admin, manager_person_id, member_of_organization_id, role FROM person ORDER BY person_name'
+    );
+
+    const userIds = usersRes.rows.map(u => u.person_id);
+    let skillsMap = new Map();
+    if (userIds.length > 0) {
+      const skillsRes = await db.query(
+        `SELECT ps.person_id, ps.skill_id, ps.status, s.skill_name, s.skill_type
+         FROM person_skill ps
+         JOIN skill s ON s.skill_id = ps.skill_id
+         WHERE ps.person_id = ANY($1::int[])`,
+        [userIds]
+      );
+      skillsMap = skillsRes.rows.reduce((map, row) => {
+        const arr = map.get(row.person_id) || [];
+        arr.push({ id: row.skill_id, name: row.skill_name, type: row.skill_type, status: row.status });
+        map.set(row.person_id, arr);
+        return map;
+      }, new Map());
+    }
+
+    const users = usersRes.rows.map(user => ({
+      person_id: user.person_id,
+      name: user.person_name,
+      username: user.username,
+      role: user.role || (user.is_admin ? 'admin' : 'employee'),
+      is_admin: user.is_admin,
+      manager_id: user.manager_person_id,
+      organization_id: user.member_of_organization_id,
+      skills: skillsMap.get(user.person_id) || [],
+      skills_count: (skillsMap.get(user.person_id) || []).length,
+    }));
+
+    res.json(users);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
 // Get a specific user by ID (admin/manager only)
 router.get('/:id', authenticate, authorizeRoles('admin', 'manager'), async (req, res) => {
   try {

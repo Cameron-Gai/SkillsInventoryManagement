@@ -8,7 +8,7 @@ const usersApi = {
   updateProfile: (data) => axios.put("/users/me", data),
 
   // Manager/Admin examples
-  getAllUsers: () => axios.get("/users"),
+  getAllUsers: () => axios.get("/users/with-skills"),
   deleteUser: (id) => axios.delete(`/users/${id}`),
 };
 

@@ -39,7 +39,7 @@ export default function SkillCard({ skill, onEdit, onDelete }) {
   const highValue = isHighValue(skill)
 
   return (
-    <div className="rounded-lg border border-[var(--border-color)] bg-[var(--card-background)] p-4 shadow-sm">
+    <div className="rounded-lg border border-[var(--border-color)] bg-[var(--background-muted)] p-4 shadow-sm">
       <div className="flex items-start justify-between gap-3">
         <div>
           <div className="flex items-center gap-3">

@@ -1,50 +1,73 @@
 # Skills Inventory Backend
 
-This package hosts the Express.js backend for the Skills Inventory and Catalog System. It provides health checks, API routing, and centralized configuration for connecting to databases and other services.
+Express.js API for the Skills Inventory app. Connects to PostgreSQL, exposes role-based endpoints, and serves health checks.
 
 ## Prerequisites
 - Node.js 18+ and npm
-- Optional: PostgreSQL instance for persistence
+- PostgreSQL 14+ (or newer)
+- pgAdmin or `psql` CLI
 
-## Getting Started
-1. Install dependencies:
-   ```bash
-   npm install
-   ```
-2. Create a `.env` file in the `backend/` directory (see [Environment variables](#environment-variables)).
-3. Start the server:
-   ```bash
-   npm start
-   ```
-   The server runs on `PORT` (defaults to `3000`) and exposes a health check at `/health`.
+## Database Setup with `CamDB.sql`
+Use the root-level `CamDB.sql` to create a working schema with data.
 
-## Available Scripts
-- `npm start` – start the Express server.
-- `npm run dev` – same as `npm start` (placeholder for future dev tooling).
+Option A — pgAdmin:
+- Create database `skills_inventory`.
+- Open Query Tool → run `CamDB.sql`.
+- Verify with `SELECT COUNT(*) FROM public.person;`.
 
-## API Endpoints
-- `GET /health` – returns a JSON payload with status, timestamp, and active environment.
+Option B — `psql` on Windows PowerShell:
+
+```powershell
+psql -h localhost -U postgres -c "CREATE DATABASE skills_inventory;";
+psql -h localhost -U postgres -c "CREATE ROLE skills_user WITH LOGIN PASSWORD 'changeme';";
+psql -h localhost -U postgres -c "GRANT ALL PRIVILEGES ON DATABASE skills_inventory TO skills_user;";
+psql -h localhost -U postgres -d skills_inventory -f "c:\Users\Camer\OneDrive\Documents\GitHub\SkillsInventoryManagement\CamDB.sql";
+```
 
 ## Environment Variables
-Configuration defaults are defined in `src/config/config.js`. The following variables are supported:
+Copy `.env.example` to `.env` and adjust:
 
-- `PORT` (default `3000`)
-- `NODE_ENV` (default `development`)
-- `DB_HOST` (default `localhost`)
-- `DB_PORT` (default `5432`)
-- `DB_NAME` (default `skills_inventory`)
-- `DB_USER`
-- `DB_PASSWORD`
-- `JWT_SECRET`
-- `JWT_EXPIRES_IN` (default `24h`)
-- `API_VERSION` (default `v1`)
-- `API_BASE_URL` (default `/api`)
-- `CORS_ORIGIN` (default `http://localhost:3000`)
-- `LOG_LEVEL` (default `info`)
+```env
+PORT=3000
+NODE_ENV=development
+DB_HOST=localhost
+DB_PORT=5432
+DB_NAME=skills_inventory
+DB_USER=skills_user
+DB_PASSWORD=changeme
+JWT_SECRET=supersecret_dev_key_change_me
+JWT_EXPIRES_IN=24h
+API_VERSION=v1
+API_BASE_URL=/api
+CORS_ORIGIN=http://localhost:5173
+LOG_LEVEL=info
+```
 
-## Project Structure
-- `server.js` – Express application entry point, middleware, error handling, and server bootstrap.
-- `src/config/config.js` – Environment-based configuration values used throughout the backend.
+## Install & Run
+
+```powershell
+cd backend
+npm install
+npm run dev
+# Health check
+curl http://localhost:3000/health
+```
+
+## API Overview
+- `GET /health` — DB heartbeat
+- `POST /api/auth/login` — JWT login
+- Users: `/api/users/*`
+- Skills: `/api/skills/*`
+- Person skills: `/api/person-skills/*`
+- Team: `/api/team/*` (includes `high-value-skills`, `my-team`, approvals)
+
+## Login Tip (bcrypt)
+Dumped passwords are hashed. To set a known password:
+
+```powershell
+node -e "const bcrypt=require('bcrypt');bcrypt.hash('admin123',10).then(h=>console.log(h))";
+psql -h localhost -U postgres -d skills_inventory -c "UPDATE public.person SET password='<HASH>' WHERE username='mylo.hobbs';";
+```
 
 ## Notes
-- Additional routes, controllers, services, and database integrations can be added under `src/` following the layered architecture outlined in the root project README.
+- CORS defaults to `http://localhost:5173` for the Vite dev server.

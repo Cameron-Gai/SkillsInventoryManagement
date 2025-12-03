@@ -1,48 +1,52 @@
-# Skills Inventory Management Frontend
+# Skills Inventory Frontend
 
-A Vite-powered React SPA that will serve as the user interface for the Skills Inventory Management platform. The app currently provides placeholder routes for authentication, dashboards, and admin tooling so the navigation flow can be wired before backend APIs are available.
+Vite-powered React SPA for Skills Inventory Management.
 
 ## Prerequisites
-- Node.js 18+ (Vite requires modern Node features)
-- npm 9+ (comes with recent Node distributions)
+- Node.js 18+
+- Backend running at `http://localhost:3000`
+
+## Configure API Base URL
+This app uses `VITE_API_URL` as its base. The backend mounts routes at `/api` (not `/api/v1`).
+
+Create `frontend/.env`:
+
+```env
+VITE_API_URL=http://localhost:3000/api
+```
 
 ## Getting started
-1. Install dependencies:
-   ```bash
-   npm install
-   ```
-2. Start the development server with hot reload:
-   ```bash
-   npm run dev
-   ```
-   The app runs at the URL printed in the terminal (default: `http://localhost:5173`).
-3. Build for production:
-   ```bash
-   npm run build
-   ```
-4. Preview the production build locally:
-   ```bash
-   npm run preview
-   ```
-5. Lint the codebase:
-   ```bash
-   npm run lint
-   ```
+```powershell
+cd frontend
+npm install
+npm run dev
+# open http://localhost:5173
+```
+
+## Build & Preview
+```powershell
+npm run build
+npm run preview
+```
+
+## Lint
+```powershell
+npm run lint
+```
 
 ## Project structure
-- `src/main.jsx`: React entry point that mounts the router.
-- `src/routes/AppRouter.jsx`: Declares public and protected routes using React Router.
-- `src/routes/ProtectedRoute.jsx`: Simple placeholder guard that will later validate authentication and roles.
-- `src/pages/*`: Placeholder views for Login, Dashboard, Profile, Team, and Admin areas.
-- `src/index.css`: Vite starter styles (to be replaced with project-specific theme).
+- `src/api/*` – Axios clients (`axiosInstance` injects `Authorization` header when present)
+- `src/pages/*` – Login, Dashboard, Team, Admin views
+- `src/routes/*` – Router + protected route wrapper
+- `src/components/*` – UI building blocks
 
-## Routing overview
-- `/login`: Public entry point for authentication (placeholder for now).
-- `/dashboard`, `/profile`, `/team`: Protected employee/manager areas.
-- `/admin`: Admin-only placeholder guarded by the `role` prop on `ProtectedRoute`.
-- `*`: Unknown routes redirect to the login page.
+## Verify end-to-end
+1) Import DB via `CamDB.sql` (see root README).
+2) Start backend (`npm run dev` in `backend/`).
+3) Start frontend (`npm run dev` in `frontend/`).
+4) If you need a known password, set one via bcrypt and SQL (see root README).
 
-## Development notes
-- Path alias `@` resolves to `src/` (see `vite.config.js`).
-- Authentication and role checks are stubbed in `ProtectedRoute.jsx`; replace these with real logic when backend endpoints are available.
+## Notes
+- CORS default in backend is `http://localhost:5173`.
+- If you see requests to `/api/v1`, set `VITE_API_URL` as above.
 

@@ -228,6 +228,9 @@ export default function Team() {
     return { underThree, overThree, overWeek }
   })()
 
+  // Feature flag: control visibility of High Value Matches render section
+  const showMatches = false
+
   return (
     <div className="flex min-h-screen bg-[var(--background)] text-[var(--text-color)]">
       <Sidebar />
@@ -243,8 +246,7 @@ export default function Team() {
           <p className="text-sm font-semibold uppercase tracking-wide text-[color:var(--color-primary)]">Manager UI</p>
           <h1 className="mt-2 text-3xl font-bold text-[var(--text-color)]">Team Management</h1>
           <p className="mt-3 max-w-3xl text-[var(--text-color-secondary)]">
-            Keep your own skills current while reviewing the team roster. Employee tooling remains available so managers can
-            update their personal inventory without switching contexts.
+            Manage your team’s skill inventory, review pending requests, and highlight priority capabilities for your team.
           </p>
         </header>
 
@@ -280,54 +282,45 @@ export default function Team() {
         <div className="flex gap-2 border-b border-[var(--border-color)]">
           <button
             onClick={() => setActiveTab('overview')}
-            className={`px-4 py-2 text-sm font-medium transition-colors ${
+            className={`px-4 py-2 font-medium border-b-2 transition ${
               activeTab === 'overview'
-                ? 'border-b-2 border-[color:var(--color-primary)] text-[color:var(--color-primary)]'
-                : 'text-[var(--text-color-secondary)] hover:text-[var(--text-color)]'
+                ? 'border-[var(--color-primary)] text-[var(--color-primary)]'
+                : 'border-transparent text-[var(--text-color-secondary)] hover:text-[var(--text-color)]'
             }`}
           >
             Overview
           </button>
           <button
             onClick={() => setActiveTab('pending')}
-            className={`px-4 py-2 text-sm font-medium transition-colors ${
+            className={`px-4 py-2 font-medium border-b-2 transition ${
               activeTab === 'pending'
-                ? 'border-b-2 border-[color:var(--color-primary)] text-[color:var(--color-primary)]'
-                : 'text-[var(--text-color-secondary)] hover:text-[var(--text-color)]'
+                ? 'border-[var(--color-primary)] text-[var(--color-primary)]'
+                : 'border-transparent text-[var(--text-color-secondary)] hover:text-[var(--text-color)]'
             }`}
           >
             Pending Requests {pendingRequests.length > 0 && `(${pendingRequests.length})`}
           </button>
           <button
             onClick={() => setActiveTab('approved')}
-            className={`px-4 py-2 text-sm font-medium transition-colors ${
+            className={`px-4 py-2 font-medium border-b-2 transition ${
               activeTab === 'approved'
-                ? 'border-b-2 border-[color:var(--color-primary)] text-[color:var(--color-primary)]'
-                : 'text-[var(--text-color-secondary)] hover:text-[var(--text-color)]'
+                ? 'border-[var(--color-primary)] text-[var(--color-primary)]'
+                : 'border-transparent text-[var(--text-color-secondary)] hover:text-[var(--text-color)]'
             }`}
           >
             Approved Skills
           </button>
           <button
             onClick={() => setActiveTab('priorities')}
-            className={`px-4 py-2 text-sm font-medium transition-colors ${
+            className={`px-4 py-2 font-medium border-b-2 transition ${
               activeTab === 'priorities'
-                ? 'border-b-2 border-[color:var(--color-primary)] text-[color:var(--color-primary)]'
-                : 'text-[var(--text-color-secondary)] hover:text-[var(--text-color)]'
+                ? 'border-[var(--color-primary)] text-[var(--color-primary)]'
+                : 'border-transparent text-[var(--text-color-secondary)] hover:text-[var(--text-color)]'
             }`}
           >
             Team Priorities
           </button>
-          <button
-            onClick={() => setActiveTab('matches')}
-            className={`px-4 py-2 text-sm font-medium transition-colors ${
-              activeTab === 'matches'
-                ? 'border-b-2 border-[color:var(--color-primary)] text-[color:var(--color-primary)]'
-                : 'text-[var(--text-color-secondary)] hover:text-[var(--text-color)]'
-            }`}
-          >
-            High Value Matches
-          </button>
+          {/* High Value Matches tab removed (functionality retained for future) */}
         </div>
 
         {/* Overview Tab: Team Members List */}
@@ -346,8 +339,8 @@ export default function Team() {
                     onClick={() => handleSelectMember(member.person_id)}
                     className={`w-full text-left rounded-lg border p-4 transition ${
                       selectedMember === member.person_id
-                        ? 'border-[var(--color-primary)] bg-[var(--background)]'
-                        : 'border-[var(--border-color)] hover:bg-[var(--background)]'
+                        ? 'border-[var(--color-primary)] bg-[var(--background-muted)]'
+                        : 'border-[var(--border-color)] hover:bg-[var(--background-muted)]'
                     }`}
                   >
                     <p className="font-medium text-[var(--text-color)]">{member.name}</p>
@@ -369,7 +362,7 @@ export default function Team() {
                       {memberDetails.skills.map((skill) => (
                         <li
                           key={skill.id}
-                          className="rounded border border-[var(--border-color)] p-3 text-sm"
+                          className="rounded border border-[var(--border-color)] bg-[var(--background-muted)] p-3 text-sm"
                         >
                           <div className="flex justify-between items-start gap-3">
                             <div className="flex-1">
@@ -455,78 +448,67 @@ export default function Team() {
         {/* Pending Requests Tab */}
         {activeTab === 'pending' && (
           <section className="rounded-xl border border-[var(--border-color)] bg-[var(--card-background)] p-6 shadow-sm">
-            <h2 className="text-xl font-semibold text-[var(--text-color)] flex items-center gap-2">
-              <span className="text-2xl">⏳</span>
-              Pending Skill Requests ({pendingRequests.length})
-            </h2>
+            <div className="flex items-center justify-between">
+              <h2 className="text-xl font-semibold text-[var(--text-color)]">Pending Skill Requests</h2>
+              <div />
+            </div>
             {loading ? (
               <p className="mt-4 text-[var(--text-color-secondary)]">Loading...</p>
             ) : pendingRequests.length === 0 ? (
               <p className="mt-4 text-[var(--text-color-secondary)]">No pending requests</p>
             ) : (
-              <div className="mt-4 space-y-3">
-                {pendingRequests.map((request) => (
-                  <div
-                    key={`${request.employeeId}-${request.id}`}
-                    className="rounded-lg border border-[var(--border-color)] p-4 flex items-start gap-4"
-                  >
-                    <div className="flex-1">
-                      <div className="flex items-center gap-2 mb-1">
-                        <p className="font-semibold text-[var(--text-color)]">{request.name}</p>
-                        {request.level && (
-                          <span className={`px-2 py-0.5 rounded text-xs font-semibold ${levelClasses(request.level)}`}>
-                            {request.level}
-                          </span>
-                        )}
-                        {isHighValueEntry({ ...request, skill: { type: request.type } }) && (
-                          <span className="px-2 py-0.5 rounded text-xs font-semibold bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-100">
-                            ⭐ High-Value
-                          </span>
-                        )}
-                        <span className="text-xs px-2 py-0.5 rounded bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300">
-                          {request.type}
-                        </span>
-                      </div>
-                      <p className="text-sm text-[var(--text-color-secondary)] mb-2">
-                        Requested by: <span className="font-medium">{request.employeeName}</span>
-                      </p>
-                      <div className="flex items-center gap-4 text-xs text-[var(--text-color-secondary)]">
-                        {request.years !== null && request.years !== undefined && (
-                          <span><span className="font-medium">Experience:</span> {request.years} yrs</span>
-                        )}
-                        {request.frequency && (
-                          <span><span className="font-medium">Frequency:</span> {request.frequency}</span>
-                        )}
-                        {request.requested_at && (
-                          <span className="font-medium text-[color:var(--color-primary)]">
-                            Requested: {timeAgo(request.requested_at)}
-                          </span>
-                        )}
-                      </div>
-                      {request.notes && (
-                        <p className="mt-2 text-xs text-[var(--text-color-secondary)] italic">
-                          "{request.notes}"
+              <div className="mt-3 space-y-2">
+                {pendingRequests.map((r) => (
+                  <div key={`${r.employeeId}-${r.id}`} className="rounded-lg border border-[var(--border-color)] bg-[var(--background-muted)] p-3 space-y-0">
+                    <div className="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between">
+                      <div className="flex-1">
+                        <p className="text-lg font-semibold text-[var(--text-color)]">
+                          {r.name}
+                          {r.type && (
+                            <span className="ml-2 text-sm font-normal text-[var(--text-color-secondary)]">• {r.type}</span>
+                          )}
                         </p>
+                        <p className="text-sm text-[var(--text-color-secondary)]">
+                          Requested by {r.employeeName}
+                          {r.requested_at && (
+                            <span> {timeAgo(r.requested_at)}</span>
+                          )}
+                        </p>
+                      </div>
+                      <div className="text-right flex flex-col items-end gap-1">
+                        {r.years !== null && r.years !== undefined && (
+                          <p className="text-sm text-[var(--text-color-secondary)]">Experience: {r.years} yrs</p>
+                        )}
+                        {r.frequency && (
+                          <p className="text-sm text-[var(--text-color-secondary)]">Frequency: {r.frequency}</p>
+                        )}
+                      </div>
+                    </div>
+
+                    <div className="mt-0 grid grid-cols-1 gap-2 sm:grid-cols-2 text-sm text-[var(--text-color-secondary)]">
+                      {r.level && (
+                        <div className="flex items-center gap-1">
+                          <span className="font-medium">Level:</span>
+                          <span className={`px-2 py-0.5 rounded ${levelClasses(r.level)}`}>{r.level}</span>
+                        </div>
                       )}
                     </div>
-                    <div className="flex gap-2 items-start">
+                    <p className="text-base text-[var(--text-color-secondary)]">{r.notes?.trim() || 'No notes provided.'}</p>
+
+                    <div className="flex flex-wrap gap-2 justify-end">
                       <button
-                        onClick={() => handleApproveSkill(request.employeeId, request.id)}
-                        className="flex items-center justify-center w-10 h-10 rounded-full bg-green-600 hover:bg-green-700 text-white transition-colors shadow-md"
-                        title="Approve"
+                        type="button"
+                        onClick={() => handleApproveSkill(r.employeeId, r.id)}
+                        className="rounded-md border border-emerald-200 bg-emerald-50 px-3 py-1.5 text-sm font-semibold text-emerald-700 transition hover:bg-emerald-100"
                       >
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                        </svg>
+                        Approve
                       </button>
                       <button
-                        onClick={() => handleRejectSkill(request.employeeId, request.id)}
-                        className="flex items-center justify-center w-10 h-10 rounded-full bg-red-600 hover:bg-red-700 text-white transition-colors shadow-md"
-                        title="Reject"
+                        type="button"
+                        onClick={() => handleRejectSkill(r.employeeId, r.id)}
+                        className="rounded-md border border-rose-200 bg-rose-50 px-3 py-1.5 text-sm font-semibold text-rose-700 transition hover:bg-rose-100"
                       >
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M6 18L18 6M6 6l12 12" />
-                        </svg>
+                        Reject
                       </button>
                     </div>
                   </div>
@@ -560,9 +542,9 @@ export default function Team() {
             ) : approvedSkills.length === 0 ? (
               <p className="mt-4 text-[var(--text-color-secondary)]">No approved skills</p>
             ) : (
-              <div className="mt-4 space-y-3">
+                  <div className="mt-4 space-y-3">
                 {approvedSkills.map((r) => (
-                  <div key={`${r.person_id}-${r.skill.id}`} className="rounded-lg border border-[var(--border-color)] p-4">
+                      <div key={`${r.person_id}-${r.skill.id}`} className="rounded-lg border border-[var(--border-color)] bg-[var(--background-muted)] p-4">
                     <div className="flex items-start justify-between gap-3">
                       <div className="flex-1">
                         <div className="flex items-center gap-2 mb-1">
@@ -596,7 +578,7 @@ export default function Team() {
                       <div className="flex gap-2">
                         <button
                           onClick={() => setConfirmAction({ memberId: r.person_id, skillId: r.skill.id, action: 'deleteApproved' })}
-                          className="px-3 py-1.5 text-sm rounded border border-red-300 text-red-600 hover:bg-red-50 dark:hover:bg-red-900/20 transition"
+                          className="rounded-md border border-rose-200 bg-rose-50 px-3 py-1.5 text-sm font-semibold text-rose-700 transition hover:bg-rose-100"
                         >
                           Delete
                         </button>
@@ -688,7 +670,7 @@ export default function Team() {
         )}
 
         {/* High Value Matches Tab */}
-        {activeTab === 'matches' && (
+        {showMatches && activeTab === 'matches' && (
           <section className="rounded-xl border border-[var(--border-color)] bg-[var(--card-background)] p-6 shadow-sm space-y-4">
             <div>
               <p className="text-sm font-semibold uppercase tracking-wide text-[color:var(--color-primary)]">High-Value Matches</p>
