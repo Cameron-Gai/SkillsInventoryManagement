@@ -72,9 +72,6 @@ export default function Admin() {
   const [pendingCount, setPendingCount] = useState(0) // Track pending requests count for tab display
   const [requestsFilter, setRequestsFilter] = useState('Requested') // pending-only
   const [requestsSubtab, setRequestsSubtab] = useState('skills') // 'skills' | 'catalog'
-  const [requestsSearch, setRequestsSearch] = useState('') // local search for skill requests
-  const [catalogSearch, setCatalogSearch] = useState('') // local search for catalog requests
-  const [allPendingRequests, setAllPendingRequests] = useState(null) // aggregated across pages when searching
   const pendingCatalogCount = catalogRequests.filter(cr => cr.status === 'Requested').length
   const [confirmDeleteUserId, setConfirmDeleteUserId] = useState(null)
   const [confirmRequest, setConfirmRequest] = useState(null) // { person_id, skill_id, action: 'approve'|'reject' }
@@ -152,38 +149,6 @@ export default function Admin() {
       setError('Failed to load requests: ' + err.message)
     }
   }
-
-  // Load all pages of pending requests (for search across pages)
-  const loadAllPendingRequests = async () => {
-    try {
-      let page = 1
-      const pageSize = 50
-      const aggregated = []
-      while (true) {
-        const res = await teamApi.getAdminRequests({ page, pageSize, status: 'Requested' })
-        const items = res?.data?.items || []
-        aggregated.push(...items)
-        if (items.length < pageSize) break
-        page += 1
-      }
-      setAllPendingRequests(aggregated)
-    } catch (err) {
-      console.warn('Failed to aggregate pending requests', err)
-    }
-  }
-
-  // When searching, aggregate all pages once
-  useEffect(() => {
-    const q = requestsSearch.trim()
-    if (requestsSubtab === 'skills' && q) {
-      if (!allPendingRequests) {
-        loadAllPendingRequests()
-      }
-    }
-    if (!q) {
-      setAllPendingRequests(null)
-    }
-  }, [requestsSearch, requestsSubtab])
 
   const [editingCatalogId, setEditingCatalogId] = useState(null)
   const [editCatalogForm, setEditCatalogForm] = useState({ skill_name: '', skill_type: 'Technology', justification: '' })
@@ -659,40 +624,10 @@ export default function Admin() {
             {/* Skill Requests list (legacy-style to match catalog) */}
             {requestsSubtab === 'skills' && (
               <div className="mt-3 space-y-2">
-                <div className="flex items-center gap-2">
-                  <input
-                    type="text"
-                    value={requestsSearch}
-                    onChange={(e) => setRequestsSearch(e.target.value)}
-                    placeholder="Search by skill, requester, or username"
-                    className="w-full rounded-md border border-[var(--border-color)] bg-[var(--background)] px-3 py-2 text-[var(--text-color)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]"
-                  />
-                  <button
-                    type="button"
-                    onClick={() => setRequestsSearch('')}
-                    className="rounded-md border border-[var(--border-color)] px-3 py-2 text-sm text-[var(--text-color)] hover:bg-[var(--background)]"
-                  >
-                    Clear
-                  </button>
-                </div>
-                {(() => {
-                  const q = requestsSearch.trim().toLowerCase()
-                  const source = q && Array.isArray(allPendingRequests) ? allPendingRequests : (requests || [])
-                  const filtered = source.filter(r => {
-                    if (!q) return true
-                    const skillName = (r.skill?.name || '').toLowerCase()
-                    const requester = (r.name || '').toLowerCase()
-                    const username = (r.username || '').toLowerCase()
-                    return (
-                      skillName.includes(q) || requester.includes(q) || username.includes(q)
-                    )
-                  })
-                  if (filtered.length === 0) {
-                    return (
-                      <p className="text-base text-[var(--text-color-secondary)]">No requests match your search.</p>
-                    )
-                  }
-                  return filtered.map((r) => (
+                {requests.length === 0 ? (
+                  <p className="text-base text-[var(--text-color-secondary)]">All skill requests are up to date.</p>
+                ) : (
+                  requests.map((r) => (
                     <div key={`${r.person_id}-${r.skill.id}`} className="rounded-lg border border-[var(--border-color)] bg-[var(--background-muted)] p-3 space-y-0">
                       <div className="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between">
                         <div className="flex-1">
@@ -710,9 +645,6 @@ export default function Admin() {
                           </p>
                         </div>
                         <div className="text-right flex flex-col items-end gap-1">
-                          {r.level && (
-                            <span className={`px-2 py-0.5 rounded text-xs font-semibold ${levelClasses(r.level)}`}>{r.level}</span>
-                          )}
                           {r.years !== null && r.years !== undefined && (
                             <p className="text-sm text-[var(--text-color-secondary)]">Experience: {r.years} yrs</p>
                           )}
@@ -724,7 +656,13 @@ export default function Admin() {
 
                       {/* Details grid similar to catalog justification area */}
                       <div className="mt-0 grid grid-cols-1 gap-2 sm:grid-cols-2 text-sm text-[var(--text-color-secondary)]">
-                        {/* Level badge moved to the top-right */}
+                        {r.level && (
+                          <div className="flex items-center gap-1">
+                            <span className="font-medium">Level:</span>
+                            <span className={`px-2 py-0.5 rounded ${levelClasses(r.level)}`}>{r.level}</span>
+                          </div>
+                        )}
+                        {/* Frequency moved to top-right header */}
                       </div>
                       <p className="text-base text-[var(--text-color-secondary)]">{r.notes?.trim() || 'No notes provided.'}</p>
 
@@ -746,46 +684,18 @@ export default function Admin() {
                       </div>
                     </div>
                   ))
-                })()}
+                )}
               </div>
             )}
 
             {/* Catalog Requests list (legacy style) */}
             {requestsSubtab === 'catalog' && (
               <div className="mt-3 space-y-2">
-                <div className="flex items-center gap-2">
-                  <input
-                    type="text"
-                    value={catalogSearch}
-                    onChange={(e) => setCatalogSearch(e.target.value)}
-                    placeholder="Search by skill name, category, or requester"
-                    className="w-full rounded-md border border-[var(--border-color)] bg-[var(--background)] px-3 py-2 text-[var(--text-color)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]"
-                  />
-                  <button
-                    type="button"
-                    onClick={() => setCatalogSearch('')}
-                    className="rounded-md border border-[var(--border-color)] px-3 py-2 text-sm text-[var(--text-color)] hover:bg-[var(--background)]"
-                  >
-                    Clear
-                  </button>
-                </div>
-                {(() => {
-                  const q = catalogSearch.trim().toLowerCase()
-                  const pending = catalogRequests.filter(cr => cr.status === 'Requested')
-                  const filtered = pending.filter(cr => {
-                    if (!q) return true
-                    const name = (cr.skill_name || '').toLowerCase()
-                    const type = (cr.skill_type || '').toLowerCase()
-                    const requester = (cr.requested_by_name || cr.requested_by || '').toLowerCase()
-                    return name.includes(q) || type.includes(q) || requester.includes(q)
-                  })
-                  if (filtered.length === 0) {
-                    return (
-                      <p className="text-base text-[var(--text-color-secondary)]">No catalog requests match your search.</p>
-                    )
-                  }
-                  return (
-                  filtered
+                {catalogRequests.filter(cr => cr.status === 'Requested').length === 0 ? (
+                  <p className="text-base text-[var(--text-color-secondary)]">All catalog requests are up to date.</p>
+                ) : (
+                  catalogRequests
+                    .filter(cr => cr.status === 'Requested')
                     .map((cr) => {
                       const busy = savingCatalogEdit && editingCatalogId === cr.request_id
                       const inEditMode = editingCatalogId === cr.request_id
@@ -916,8 +826,7 @@ export default function Admin() {
                         </div>
                       )
                     })
-                  )
-                })()}
+                )}
               </div>
             )}
 
@@ -926,7 +835,7 @@ export default function Admin() {
                 <button
                   onClick={async () => { const p = Math.max(1, requestsPage - 1); await reloadRequests(p, 'Requested') }}
                   className="rounded-md border border-[var(--border-color)] px-3 py-1.5 text-sm"
-                  disabled={requestsPage <= 1 || (requestsSearch.trim().length > 0)}
+                  disabled={requestsPage <= 1}
                 >
                   Previous
                 </button>
@@ -934,7 +843,7 @@ export default function Admin() {
                 <button
                   onClick={async () => { const p = requests.length < 20 ? requestsPage : requestsPage + 1; await reloadRequests(p, 'Requested') }}
                   className="rounded-md border border-[var(--border-color)] px-3 py-1.5 text-sm"
-                  disabled={requests.length < 20 || (requestsSearch.trim().length > 0)}
+                  disabled={requests.length < 20}
                 >
                   Next
                 </button>

@@ -2,12 +2,12 @@
 -- PostgreSQL database dump
 --
 
-\restrict gaL3OF3hVAXo1K4Tbkhf0FddcUUiv0cfx7U5qbfWBQQ07VNYYifAU7ryOXjdDW7
+\restrict sgg1Ne7bskMSZCSFrryOBUaNB7JmNXMHYqJTpRkmueekEqfV8cBFbxQmKEd2JCE
 
 -- Dumped from database version 18.1
 -- Dumped by pg_dump version 18.1
 
--- Started on 2025-12-03 06:29:26
+-- Started on 2025-12-03 12:13:33
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -1499,5903 +1499,5905 @@ COPY public.person_project_assignment (person_id, project_id, status) FROM stdin
 --
 
 COPY public.person_skill (person_id, skill_id, status, level, years, frequency, notes, requested_at) FROM stdin;
-979	9	Requested	Intermediate	1	Weekly		2025-12-03 05:53:16.808433
-979	11	Requested	Intermediate	0	Weekly		2025-12-03 05:53:29.848261
-231	9	Requested	Expert	\N	\N	Seeded assignment	\N
-581	23	Requested	\N	\N	Monthly	Seeded request	2025-11-26 07:58:27.264874
-632	18	Approved	\N	\N	Daily	Seeded request	\N
-646	7	Approved	Expert	\N	Monthly	Seeded assignment	\N
-341	18	Approved	\N	\N	Rarely	Seeded request	\N
-756	25	Approved	Expert	9	\N	Seeded request	\N
-116	19	Approved	Intermediate	\N	Weekly	Seeded assignment	\N
-223	9	Approved	\N	10	\N	Seeded assignment	\N
-776	1	Approved	Advanced	\N	Rarely	Seeded assignment	\N
-196	17	Requested	Advanced	10	Daily	Seeded assignment	\N
-873	1	Requested	Intermediate	0	\N	Seeded assignment	\N
-151	25	Requested	\N	2	Monthly	Seeded assignment	\N
-472	22	Approved	Intermediate	2	Monthly	Seeded request	\N
-253	25	Approved	\N	10	Rarely	Seeded request	2025-11-26 05:07:27.264874
-816	21	Approved	\N	\N	\N	Seeded assignment	2025-11-17 02:48:27.264874
-696	8	Approved	\N	2	Monthly	Seeded request	\N
-109	21	Requested	Intermediate	\N	Daily	Seeded assignment	2025-11-26 03:56:27.264874
-352	13	Requested	\N	4	Daily	Seeded request	\N
-409	18	Approved	\N	\N	\N	Seeded assignment	2025-11-04 03:42:27.264874
-417	12	Requested	Beginner	3	Rarely	Seeded assignment	2025-11-05 16:12:27.264874
-876	20	Approved	\N	6	Rarely	Seeded assignment	\N
-901	4	Requested	Beginner	0	\N	Seeded assignment	2025-11-19 00:42:27.264874
-884	22	Requested	Beginner	7	Daily	Seeded request	\N
-861	21	Approved	\N	\N	\N	Seeded assignment	\N
-944	1	Approved	Beginner	6	\N	Seeded request	2025-11-18 14:46:27.264874
-331	3	Approved	Advanced	6	\N	Seeded assignment	2025-11-12 13:58:27.264874
-142	21	Approved	Intermediate	10	Rarely	Seeded assignment	2025-11-28 10:48:27.264874
-683	20	Approved	Intermediate	\N	Daily	Seeded assignment	\N
-798	3	Approved	Intermediate	\N	\N	Seeded request	2025-11-09 12:03:27.264874
-477	5	Requested	\N	\N	Monthly	Seeded assignment	\N
-920	16	Requested	\N	3	\N	Seeded request	\N
-782	6	Requested	Expert	4	\N	Seeded request	\N
-320	8	Requested	Intermediate	4	Weekly	Seeded request	2025-11-10 21:44:27.264874
-545	11	Requested	Advanced	\N	Weekly	Seeded assignment	2025-11-12 07:03:27.264874
-359	17	Approved	Intermediate	3	Weekly	Seeded assignment	\N
-241	21	Approved	Advanced	\N	Monthly	Seeded request	2025-11-18 12:21:27.264874
-51	13	Approved	\N	\N	\N	Seeded assignment	2025-11-18 11:32:27.264874
-197	18	Approved	\N	7	Monthly	Seeded request	2025-11-18 21:07:27.264874
-339	25	Requested	\N	\N	\N	Seeded request	\N
-441	19	Requested	\N	\N	\N	Seeded request	2025-11-04 05:59:27.264874
-825	10	Requested	\N	\N	Monthly	Seeded request	2025-11-12 01:14:27.264874
-702	18	Requested	Intermediate	\N	Monthly	Seeded assignment	\N
-555	10	Requested	Intermediate	2	Monthly	Seeded assignment	\N
-716	22	Approved	\N	7	Daily	Seeded assignment	\N
-808	3	Approved	Beginner	\N	Daily	Seeded assignment	\N
-741	8	Requested	Intermediate	7	Rarely	Seeded request	\N
-170	7	Requested	Expert	5	Rarely	Seeded request	2025-11-10 18:34:27.264874
-898	24	Approved	Advanced	\N	Rarely	Seeded assignment	\N
-527	9	Approved	Intermediate	\N	\N	Seeded request	\N
-773	9	Approved	Advanced	\N	Rarely	Seeded request	2025-11-25 12:04:27.264874
-157	4	Requested	\N	\N	Weekly	Seeded request	2025-11-15 00:17:27.264874
-43	1	Requested	Beginner	\N	Weekly	Seeded assignment	\N
-933	9	Approved	\N	\N	Weekly	Seeded request	2025-11-16 16:10:27.264874
-37	23	Requested	\N	\N	Monthly	Seeded assignment	2025-11-21 09:36:27.264874
-430	13	Approved	\N	\N	Rarely	Seeded assignment	\N
-166	22	Approved	Intermediate	\N	\N	Seeded request	2025-11-25 03:17:27.264874
-934	13	Approved	Intermediate	2	\N	Seeded assignment	2025-12-02 06:31:27.264874
-249	13	Requested	Advanced	\N	\N	Seeded assignment	2025-11-30 16:32:27.264874
-919	8	Requested	Expert	5	\N	Seeded assignment	2025-11-18 09:15:27.264874
-887	25	Approved	Beginner	3	Monthly	Seeded request	2025-11-30 08:08:27.264874
-434	11	Requested	Expert	10	Monthly	Seeded assignment	2025-11-17 12:10:27.264874
-659	16	Approved	Advanced	10	Daily	Seeded request	\N
-547	6	Approved	Advanced	4	\N	Seeded request	\N
-755	7	Approved	Advanced	7	Monthly	Seeded request	\N
-706	17	Approved	Advanced	6	Monthly	Seeded assignment	\N
-156	13	Requested	Advanced	\N	\N	Seeded request	\N
-215	23	Approved	\N	4	\N	Seeded assignment	\N
-709	18	Approved	Intermediate	\N	Rarely	Seeded assignment	2025-11-26 02:57:27.264874
-133	7	Requested	\N	4	\N	Seeded assignment	\N
-354	19	Requested	\N	\N	Rarely	Seeded request	2025-11-15 15:33:27.264874
-949	24	Approved	Intermediate	1	Daily	Seeded assignment	\N
-455	25	Approved	Beginner	\N	Monthly	Seeded request	\N
-616	3	Requested	\N	0	Weekly	Seeded assignment	\N
-961	11	Approved	Advanced	\N	\N	Seeded assignment	2025-11-14 12:24:27.264874
-511	5	Approved	\N	\N	Weekly	Seeded request	\N
-40	8	Approved	\N	\N	\N	Seeded request	2025-11-08 06:06:27.264874
-182	8	Approved	\N	9	Rarely	Seeded assignment	2025-11-03 17:22:27.264874
-97	11	Requested	Expert	1	Weekly	Seeded request	2025-11-11 11:50:27.264874
-209	25	Approved	Intermediate	4	\N	Seeded assignment	\N
-277	8	Approved	Expert	0	Monthly	Seeded assignment	2025-11-15 14:12:27.264874
-210	16	Approved	Intermediate	4	Monthly	Seeded request	2025-11-25 11:03:27.264874
-261	8	Requested	\N	1	\N	Seeded assignment	\N
-362	20	Requested	\N	6	\N	Seeded assignment	2025-11-22 02:55:27.264874
-937	23	Requested	Intermediate	\N	Daily	Seeded request	2025-11-20 19:19:27.264874
-597	1	Approved	Intermediate	\N	Daily	Seeded assignment	2025-11-03 19:31:27.264874
-800	6	Approved	\N	\N	Monthly	Seeded request	2025-11-17 05:15:27.264874
-169	1	Approved	\N	10	\N	Seeded assignment	\N
-421	7	Requested	\N	\N	\N	Seeded assignment	2025-11-12 02:18:27.264874
-37	7	Requested	\N	\N	Monthly	Seeded assignment	\N
-8	11	Approved	\N	0	\N	Seeded assignment	\N
-730	8	Requested	Expert	0	Monthly	Seeded assignment	\N
-564	5	Approved	Advanced	1	Rarely	Seeded request	\N
-418	13	Requested	Advanced	\N	Weekly	Seeded assignment	2025-11-11 00:50:27.264874
-573	3	Approved	\N	7	\N	Seeded request	2025-11-14 11:10:27.264874
-784	16	Approved	Advanced	0	Rarely	Seeded assignment	\N
-490	4	Requested	Intermediate	1	Monthly	Seeded request	2025-11-25 05:27:27.264874
-634	9	Approved	\N	0	\N	Seeded assignment	2025-11-19 03:52:27.264874
-259	3	Approved	\N	\N	Rarely	Seeded request	2025-11-15 12:02:27.264874
-204	18	Approved	Expert	2	\N	Seeded request	\N
-769	5	Approved	Intermediate	10	Daily	Seeded request	\N
-67	19	Approved	\N	7	Rarely	Seeded assignment	2025-11-26 05:06:27.264874
-89	24	Requested	Intermediate	\N	Daily	Seeded request	\N
-118	1	Requested	\N	\N	Monthly	Seeded assignment	2025-11-17 17:53:27.264874
-160	24	Requested	Advanced	\N	Monthly	Seeded request	\N
-48	18	Approved	Advanced	6	Weekly	Seeded assignment	2025-11-07 23:52:27.264874
-230	25	Approved	Advanced	\N	Weekly	Seeded assignment	2025-11-28 03:46:27.264874
-553	20	Approved	Advanced	2	\N	Seeded request	\N
-516	5	Approved	\N	\N	\N	Seeded assignment	\N
-71	21	Approved	Intermediate	\N	Rarely	Seeded assignment	\N
-697	20	Approved	\N	\N	Weekly	Seeded request	\N
-785	25	Approved	Beginner	7	\N	Seeded request	\N
-356	18	Approved	Intermediate	9	\N	Seeded assignment	\N
-940	20	Approved	\N	\N	\N	Seeded assignment	2025-11-17 20:04:27.264874
-844	19	Approved	\N	2	\N	Seeded assignment	2025-11-08 18:58:27.264874
-248	13	Approved	\N	3	\N	Seeded assignment	2025-12-02 21:28:27.264874
-579	6	Requested	Advanced	1	\N	Seeded request	\N
-688	19	Requested	\N	9	Monthly	Seeded assignment	2025-11-16 21:31:27.264874
-881	11	Requested	\N	6	Weekly	Seeded assignment	\N
-251	17	Approved	\N	3	Monthly	Seeded request	\N
-542	11	Approved	\N	7	Rarely	Seeded assignment	2025-11-11 09:02:27.264874
-288	24	Approved	\N	\N	Weekly	Seeded assignment	\N
-549	10	Requested	\N	5	Weekly	Seeded request	\N
-500	8	Approved	\N	4	Rarely	Seeded assignment	2025-11-18 02:21:27.264874
-937	7	Approved	\N	3	Daily	Seeded request	\N
-390	12	Requested	\N	2	Weekly	Seeded request	2025-12-01 08:04:27.264874
-779	24	Requested	\N	3	\N	Seeded assignment	\N
-91	8	Requested	Expert	\N	Monthly	Seeded assignment	\N
-944	9	Approved	\N	9	Monthly	Seeded request	\N
-421	23	Approved	Expert	\N	Monthly	Seeded assignment	2025-11-27 08:23:27.264874
-818	7	Requested	\N	\N	\N	Seeded assignment	\N
-82	25	Approved	\N	2	Weekly	Seeded assignment	2025-11-06 06:00:27.264874
-313	11	Approved	Advanced	\N	Weekly	Seeded request	2025-11-18 23:57:27.264874
-581	7	Approved	\N	3	\N	Seeded assignment	\N
-924	9	Approved	Expert	\N	Weekly	Seeded assignment	\N
-617	21	Approved	\N	2	Weekly	Seeded assignment	\N
-664	10	Requested	Expert	3	\N	Seeded assignment	2025-11-05 14:49:27.264874
-491	22	Approved	Beginner	\N	\N	Seeded request	2025-11-19 13:42:27.264874
-870	13	Approved	Advanced	\N	Monthly	Seeded request	2025-11-20 20:42:27.264874
-656	7	Requested	\N	3	\N	Seeded assignment	2025-11-12 12:16:27.264874
-689	6	Approved	Expert	1	\N	Seeded assignment	\N
-453	4	Approved	\N	1	Daily	Seeded request	\N
-365	8	Approved	Intermediate	8	Weekly	Seeded request	\N
-683	12	Approved	Intermediate	5	Rarely	Seeded assignment	\N
-971	18	Approved	Beginner	1	Weekly	Seeded request	\N
-519	7	Approved	Intermediate	\N	\N	Seeded assignment	2025-11-13 23:38:27.264874
-554	24	Requested	Beginner	\N	\N	Seeded assignment	2025-11-03 21:54:27.264874
-240	16	Approved	Beginner	10	Weekly	Seeded assignment	\N
-318	12	Approved	Expert	\N	Daily	Seeded assignment	2025-11-19 04:21:27.264874
-30	11	Approved	Beginner	\N	Daily	Seeded assignment	2025-11-13 18:40:27.264874
-169	9	Approved	\N	4	Weekly	Seeded request	2025-11-21 05:49:27.264874
-711	22	Approved	Expert	\N	Monthly	Seeded assignment	2025-11-25 20:38:27.264874
-470	12	Requested	\N	\N	Rarely	Seeded assignment	2025-11-22 13:34:27.264874
-87	9	Approved	\N	\N	\N	Seeded assignment	2025-11-05 20:48:27.264874
-88	4	Approved	Advanced	8	Monthly	Seeded assignment	\N
-567	19	Approved	\N	3	\N	Seeded request	\N
-481	5	Approved	\N	\N	\N	Seeded assignment	\N
-925	16	Requested	Advanced	3	Weekly	Seeded assignment	\N
-612	16	Approved	\N	1	Rarely	Seeded assignment	\N
-134	5	Approved	\N	\N	Daily	Seeded request	\N
-128	23	Requested	\N	9	Rarely	Seeded request	\N
-571	18	Approved	\N	3	Rarely	Seeded assignment	\N
-658	19	Requested	\N	8	\N	Seeded assignment	\N
-762	11	Requested	Advanced	\N	Weekly	Seeded request	2025-11-19 06:03:27.264874
-597	9	Requested	Advanced	6	\N	Seeded request	2025-11-20 16:00:27.264874
-661	7	Approved	Expert	0	\N	Seeded assignment	\N
-628	11	Approved	Expert	\N	Monthly	Seeded request	\N
-521	5	Requested	Expert	2	\N	Seeded assignment	2025-11-17 07:16:27.264874
-436	22	Approved	\N	8	\N	Seeded assignment	2025-11-25 16:47:27.264874
-282	21	Approved	Intermediate	\N	\N	Seeded assignment	\N
-395	19	Requested	Beginner	\N	Daily	Seeded assignment	\N
-731	9	Approved	Intermediate	3	\N	Seeded request	\N
-175	12	Approved	\N	\N	Daily	Seeded request	\N
-345	22	Requested	\N	\N	Daily	Seeded request	\N
-886	6	Requested	\N	3	Rarely	Seeded request	\N
-651	23	Approved	Expert	\N	\N	Seeded request	2025-11-26 20:41:27.264874
-216	6	Approved	\N	2	\N	Seeded assignment	\N
-501	18	Approved	Expert	\N	Weekly	Seeded request	2025-11-28 04:24:27.264874
-812	25	Requested	\N	\N	\N	Seeded request	2025-11-21 12:25:27.264874
-5	7	Requested	\N	\N	Rarely	Seeded assignment	\N
-765	24	Requested	\N	9	Monthly	Seeded assignment	2025-11-27 05:03:27.264874
-536	7	Approved	\N	6	\N	Seeded assignment	2025-11-10 03:30:27.264874
-719	7	Requested	Intermediate	4	Daily	Seeded request	\N
-152	7	Requested	Intermediate	6	Monthly	Seeded assignment	\N
-980	25	Approved	Advanced	\N	Monthly	Seeded request	\N
-190	16	Requested	\N	0	\N	Seeded assignment	2025-11-20 22:24:27.264874
-777	10	Requested	Expert	\N	Weekly	Seeded request	2025-11-04 14:26:27.264874
-837	7	Requested	\N	2	Rarely	Seeded request	2025-12-01 01:47:27.264874
-821	13	Approved	\N	10	Monthly	Seeded request	\N
-967	13	Approved	Intermediate	3	Daily	Seeded assignment	\N
-192	11	Requested	\N	10	Daily	Seeded assignment	\N
-514	5	Approved	Advanced	5	Rarely	Seeded assignment	\N
-444	23	Approved	Beginner	\N	\N	Seeded assignment	\N
-33	25	Requested	Advanced	7	Weekly	Seeded assignment	\N
-869	7	Approved	Intermediate	9	Rarely	Seeded assignment	\N
-456	6	Approved	\N	5	Daily	Seeded assignment	\N
-459	23	Approved	\N	\N	\N	Seeded assignment	\N
-354	18	Requested	Beginner	3	Weekly	Seeded request	2025-11-05 09:06:27.264874
-900	25	Requested	Beginner	7	Monthly	Seeded request	\N
-44	22	Requested	Beginner	0	\N	Seeded assignment	\N
-898	10	Requested	Advanced	10	\N	Seeded request	2025-11-24 22:10:27.264874
-162	5	Approved	\N	\N	\N	Seeded assignment	\N
-402	4	Approved	Advanced	\N	Weekly	Seeded request	\N
-2	10	Requested	\N	0	\N	Seeded assignment	2025-11-09 04:55:27.264874
-528	22	Requested	Intermediate	3	\N	Seeded assignment	\N
-49	3	Requested	\N	\N	Daily	Seeded request	2025-11-04 03:10:27.264874
-127	13	Requested	Intermediate	\N	Daily	Seeded assignment	\N
-117	19	Approved	\N	9	\N	Seeded assignment	2025-11-07 23:02:27.264874
-96	8	Requested	\N	\N	\N	Seeded assignment	2025-11-27 15:54:27.264874
-713	12	Approved	\N	\N	Rarely	Seeded assignment	2025-11-10 07:17:27.264874
-99	5	Approved	\N	\N	\N	Seeded assignment	2025-11-07 02:38:27.264874
-138	4	Requested	\N	\N	\N	Seeded assignment	2025-11-25 22:45:27.264874
-871	13	Requested	Advanced	9	\N	Seeded assignment	\N
-148	16	Requested	Advanced	4	\N	Seeded request	\N
-236	16	Requested	Beginner	3	Weekly	Seeded assignment	\N
-410	4	Approved	Advanced	\N	\N	Seeded assignment	\N
-372	3	Approved	Expert	7	\N	Seeded assignment	\N
-769	12	Approved	Intermediate	6	\N	Seeded assignment	\N
-179	13	Approved	Intermediate	1	Monthly	Seeded assignment	\N
-778	18	Approved	\N	\N	\N	Seeded request	2025-11-03 13:52:27.264874
-171	1	Requested	Intermediate	4	Monthly	Seeded request	\N
-387	11	Requested	\N	\N	Weekly	Seeded assignment	\N
-820	8	Approved	\N	\N	Rarely	Seeded request	\N
-505	10	Requested	\N	9	Monthly	Seeded assignment	\N
-591	12	Requested	\N	\N	\N	Seeded assignment	2025-11-15 13:48:27.264874
-904	1	Requested	\N	3	\N	Seeded assignment	\N
-114	19	Requested	Advanced	4	\N	Seeded request	\N
-385	18	Approved	\N	\N	\N	Seeded assignment	2025-11-22 02:51:27.264874
-588	17	Requested	Intermediate	8	Weekly	Seeded assignment	2025-12-02 03:40:27.264874
-24	6	Approved	Beginner	0	Daily	Seeded assignment	\N
-81	18	Requested	Expert	\N	Rarely	Seeded assignment	\N
-134	12	Requested	Expert	4	Monthly	Seeded assignment	\N
-985	13	Approved	Beginner	\N	\N	Seeded request	\N
-684	10	Requested	Advanced	5	Daily	Seeded request	\N
-929	9	Requested	Expert	1	\N	Seeded request	2025-12-02 03:46:27.264874
-4	16	Requested	\N	3	\N	Seeded assignment	\N
-143	10	Approved	Intermediate	\N	\N	Seeded request	\N
-523	25	Requested	Advanced	8	\N	Seeded request	\N
-823	17	Approved	Beginner	6	Daily	Seeded assignment	\N
-848	10	Requested	Intermediate	3	Weekly	Seeded assignment	\N
-614	10	Approved	Beginner	\N	Monthly	Seeded assignment	\N
-960	9	Approved	Advanced	\N	Weekly	Seeded assignment	\N
-596	7	Approved	\N	1	\N	Seeded request	\N
-381	10	Approved	\N	5	Monthly	Seeded assignment	\N
-469	3	Approved	\N	\N	Daily	Seeded assignment	\N
-736	6	Requested	Advanced	\N	\N	Seeded assignment	2025-11-16 14:06:27.264874
-54	1	Requested	\N	9	\N	Seeded assignment	\N
-80	5	Approved	\N	8	Monthly	Seeded assignment	2025-11-13 15:34:27.264874
-693	13	Approved	Advanced	0	Weekly	Seeded assignment	2025-12-01 17:25:27.264874
-910	24	Approved	Expert	8	Rarely	Seeded assignment	\N
-368	4	Approved	\N	10	\N	Seeded request	\N
-19	8	Requested	\N	\N	Daily	Seeded assignment	\N
-168	24	Approved	Expert	\N	\N	Seeded assignment	\N
-458	17	Requested	Intermediate	9	Rarely	Seeded assignment	\N
-959	13	Requested	\N	\N	Daily	Seeded request	2025-11-26 11:51:27.264874
-200	4	Approved	Intermediate	\N	Weekly	Seeded assignment	\N
-629	17	Requested	Advanced	\N	Daily	Seeded assignment	\N
-546	6	Approved	\N	6	\N	Seeded assignment	\N
-810	1	Approved	Beginner	5	\N	Seeded assignment	\N
-327	3	Approved	Intermediate	0	Monthly	Seeded request	\N
-632	19	Approved	Intermediate	0	\N	Seeded request	\N
-379	24	Requested	Beginner	3	Weekly	Seeded assignment	2025-11-19 11:27:27.264874
-877	13	Approved	\N	\N	Daily	Seeded request	\N
-706	21	Requested	\N	6	Rarely	Seeded request	2025-12-02 21:45:27.264874
-717	13	Requested	Beginner	9	Rarely	Seeded request	2025-11-11 06:24:27.264874
-52	6	Requested	Intermediate	5	Daily	Seeded request	2025-11-23 12:04:27.264874
-138	3	Approved	Expert	6	Rarely	Seeded request	\N
-255	10	Requested	\N	7	\N	Seeded request	2025-11-07 05:47:27.264874
-372	4	Requested	Beginner	\N	Monthly	Seeded assignment	2025-11-17 17:11:27.264874
-984	7	Approved	\N	1	Rarely	Seeded assignment	2025-11-30 09:54:27.264874
-622	19	Approved	Beginner	8	Weekly	Seeded request	\N
-145	25	Approved	Beginner	5	\N	Seeded request	2025-11-12 14:53:27.264874
-704	8	Requested	\N	0	\N	Seeded assignment	2025-12-02 01:52:27.264874
-36	9	Approved	Beginner	8	\N	Seeded assignment	2025-11-14 10:44:27.264874
-402	3	Approved	Advanced	\N	\N	Seeded request	2025-11-20 00:48:27.264874
-807	24	Approved	Intermediate	4	\N	Seeded assignment	\N
-66	10	Approved	Beginner	7	Rarely	Seeded assignment	\N
-913	6	Requested	\N	5	\N	Seeded assignment	2025-11-27 00:23:27.264874
-307	21	Requested	Intermediate	\N	Rarely	Seeded assignment	2025-11-12 10:08:27.264874
-163	25	Requested	\N	\N	Monthly	Seeded assignment	2025-11-04 11:44:27.264874
-631	7	Approved	Advanced	5	\N	Seeded request	2025-11-25 10:20:27.264874
-449	21	Requested	Advanced	6	Daily	Seeded assignment	2025-11-19 00:44:27.264874
-417	5	Approved	\N	6	Rarely	Seeded assignment	\N
-1	4	Requested	Advanced	1	Daily	Seeded assignment	\N
-608	16	Requested	Intermediate	10	\N	Seeded request	\N
-677	4	Approved	Beginner	2	Rarely	Seeded assignment	\N
-100	8	Approved	Advanced	\N	Rarely	Seeded request	\N
-899	21	Approved	Beginner	6	\N	Seeded assignment	\N
-811	5	Requested	Advanced	\N	\N	Seeded request	2025-12-02 15:37:27.264874
-310	24	Approved	Intermediate	2	Weekly	Seeded request	\N
-195	19	Requested	Intermediate	4	Monthly	Seeded request	2025-11-03 10:34:27.264874
-860	16	Requested	\N	1	Weekly	Seeded request	\N
-83	7	Requested	\N	6	\N	Seeded assignment	\N
-369	11	Approved	\N	6	\N	Seeded assignment	\N
-425	1	Approved	Beginner	3	Rarely	Seeded assignment	\N
-768	16	Requested	Advanced	\N	\N	Seeded request	\N
-252	17	Requested	Intermediate	\N	\N	Seeded request	\N
-462	23	Approved	Beginner	3	\N	Seeded assignment	2025-11-04 20:39:27.264874
-769	20	Approved	\N	6	Monthly	Seeded assignment	\N
-5	23	Approved	Advanced	0	Weekly	Seeded request	\N
-438	13	Requested	Advanced	\N	\N	Seeded assignment	\N
-196	21	Requested	\N	5	\N	Seeded request	\N
-829	16	Approved	Advanced	\N	Daily	Seeded assignment	\N
-651	7	Approved	Expert	\N	Rarely	Seeded request	2025-11-23 00:58:27.264874
-789	23	Requested	Advanced	\N	Monthly	Seeded assignment	\N
-816	17	Requested	Intermediate	6	\N	Seeded request	\N
-858	9	Requested	\N	\N	Daily	Seeded request	2025-11-24 03:35:27.264874
-743	16	Approved	Expert	\N	Rarely	Seeded request	\N
-536	23	Approved	Expert	1	Monthly	Seeded request	\N
-191	10	Approved	\N	\N	Weekly	Seeded request	\N
-664	24	Approved	Intermediate	\N	\N	Seeded assignment	2025-11-23 15:59:27.264874
-623	19	Approved	\N	8	\N	Seeded assignment	\N
-914	17	Requested	\N	5	Weekly	Seeded request	2025-11-30 14:04:27.264874
-227	9	Approved	\N	\N	Daily	Seeded assignment	\N
-469	4	Approved	\N	3	Weekly	Seeded assignment	\N
-39	10	Approved	Intermediate	8	Rarely	Seeded assignment	\N
-509	20	Approved	\N	1	Daily	Seeded request	2025-11-09 01:41:27.264874
-814	22	Approved	Beginner	10	\N	Seeded assignment	\N
-112	6	Requested	Beginner	5	\N	Seeded assignment	\N
-905	4	Approved	\N	\N	\N	Seeded assignment	2025-11-23 10:33:27.264874
-752	25	Requested	Advanced	1	Rarely	Seeded request	2025-11-23 14:05:27.264874
-98	25	Approved	Beginner	6	\N	Seeded assignment	\N
-349	13	Requested	\N	\N	Daily	Seeded assignment	\N
-968	12	Requested	Advanced	1	Daily	Seeded request	\N
-520	18	Approved	\N	4	\N	Seeded request	2025-11-24 12:39:27.264874
-958	17	Approved	Advanced	\N	\N	Seeded request	\N
-983	6	Requested	Beginner	1	Daily	Seeded assignment	\N
-74	20	Approved	\N	8	Daily	Seeded assignment	\N
-795	13	Approved	\N	0	\N	Seeded assignment	2025-11-30 11:50:27.264874
-869	23	Requested	\N	10	Weekly	Seeded assignment	2025-11-10 19:46:27.264874
-193	25	Requested	\N	7	\N	Seeded assignment	2025-11-17 19:30:27.264874
-45	4	Approved	Expert	\N	Weekly	Seeded request	\N
-726	3	Approved	\N	\N	Daily	Seeded request	2025-11-07 07:55:27.264874
-293	23	Approved	Beginner	8	Monthly	Seeded request	2025-11-04 16:11:27.264874
-835	18	Approved	\N	\N	Weekly	Seeded request	\N
-894	16	Approved	Expert	1	Weekly	Seeded assignment	\N
-243	25	Approved	Intermediate	\N	Monthly	Seeded assignment	2025-11-29 21:27:27.264874
-853	25	Requested	\N	0	Weekly	Seeded assignment	\N
-48	19	Requested	\N	\N	\N	Seeded request	\N
-861	17	Approved	\N	4	\N	Seeded assignment	2025-12-02 23:36:27.264874
-86	1	Approved	Advanced	\N	Weekly	Seeded assignment	\N
-510	16	Requested	\N	\N	Weekly	Seeded request	\N
-671	4	Approved	\N	\N	\N	Seeded assignment	\N
-84	20	Approved	Expert	2	Rarely	Seeded request	2025-11-30 01:54:27.264874
-562	22	Requested	\N	\N	Rarely	Seeded request	2025-11-13 13:45:27.264874
-948	3	Approved	Intermediate	\N	Rarely	Seeded request	\N
-346	7	Approved	Beginner	\N	\N	Seeded assignment	2025-11-25 11:47:27.264874
-76	11	Requested	\N	10	Daily	Seeded assignment	\N
-359	21	Approved	Advanced	\N	Monthly	Seeded request	\N
-790	16	Requested	Expert	5	Daily	Seeded request	\N
-322	20	Approved	\N	7	\N	Seeded assignment	2025-11-20 22:09:27.264874
-520	4	Approved	Beginner	\N	Monthly	Seeded assignment	\N
-780	12	Requested	Intermediate	7	Rarely	Seeded assignment	\N
-464	1	Approved	Advanced	\N	\N	Seeded assignment	\N
-923	17	Requested	\N	1	Weekly	Seeded assignment	\N
-331	19	Approved	\N	\N	Monthly	Seeded request	\N
-874	19	Requested	Beginner	10	Monthly	Seeded assignment	\N
-826	1	Approved	Intermediate	4	\N	Seeded assignment	\N
-9	19	Requested	Expert	\N	Rarely	Seeded assignment	2025-11-22 00:17:27.264874
-115	20	Approved	\N	\N	\N	Seeded request	2025-11-04 23:17:27.264874
-844	4	Approved	\N	8	Rarely	Seeded request	\N
-177	7	Approved	\N	\N	Rarely	Seeded request	\N
-906	12	Requested	\N	\N	Monthly	Seeded assignment	\N
-977	17	Requested	\N	8	Monthly	Seeded request	\N
-244	24	Requested	\N	7	Monthly	Seeded assignment	\N
-508	23	Approved	Advanced	9	Weekly	Seeded assignment	\N
-81	3	Approved	\N	3	Daily	Seeded request	2025-12-02 10:43:27.264874
-385	3	Approved	Intermediate	2	Monthly	Seeded assignment	2025-11-14 04:39:27.264874
-515	17	Requested	Beginner	10	Monthly	Seeded assignment	\N
-716	5	Approved	Intermediate	8	Rarely	Seeded assignment	2025-11-22 06:30:27.264874
-476	13	Approved	\N	2	\N	Seeded assignment	2025-11-28 12:59:27.264874
-934	16	Approved	Intermediate	4	Rarely	Seeded assignment	\N
-315	7	Approved	Beginner	\N	Weekly	Seeded assignment	\N
-14	13	Approved	Advanced	3	Monthly	Seeded assignment	\N
-530	21	Approved	Intermediate	10	Rarely	Seeded assignment	\N
-123	25	Requested	\N	\N	Rarely	Seeded request	\N
-830	9	Approved	\N	\N	\N	Seeded request	\N
-766	20	Approved	\N	\N	Monthly	Seeded request	2025-11-29 06:25:27.264874
-350	3	Approved	\N	\N	Daily	Seeded assignment	\N
-406	1	Requested	Advanced	\N	\N	Seeded assignment	2025-11-25 12:08:27.264874
-815	23	Requested	\N	4	\N	Seeded request	2025-11-12 23:06:27.264874
-29	9	Approved	Advanced	\N	Monthly	Seeded request	\N
-311	20	Approved	Intermediate	10	Daily	Seeded assignment	\N
-833	23	Requested	Intermediate	3	\N	Seeded assignment	\N
-189	17	Requested	\N	6	Daily	Seeded request	\N
-734	3	Approved	Advanced	0	Monthly	Seeded assignment	\N
-753	19	Approved	\N	8	\N	Seeded assignment	\N
-415	12	Requested	Intermediate	8	\N	Seeded assignment	2025-11-20 16:27:27.264874
-969	6	Approved	Expert	\N	Monthly	Seeded assignment	\N
-884	5	Approved	Intermediate	8	Monthly	Seeded assignment	\N
-721	16	Requested	Beginner	3	\N	Seeded request	\N
-951	4	Requested	Beginner	\N	Daily	Seeded request	\N
-616	19	Approved	Intermediate	\N	Daily	Seeded request	\N
-748	17	Approved	Intermediate	0	Monthly	Seeded request	2025-11-08 22:43:27.264874
-126	22	Approved	\N	\N	Monthly	Seeded request	2025-11-24 08:29:27.264874
-239	23	Approved	\N	3	Weekly	Seeded assignment	2025-11-06 06:14:27.264874
-176	5	Approved	\N	\N	Daily	Seeded assignment	2025-12-01 13:42:27.264874
-863	21	Approved	\N	0	Daily	Seeded request	\N
-677	18	Approved	\N	\N	Monthly	Seeded assignment	\N
-450	9	Approved	Expert	\N	\N	Seeded assignment	\N
-727	25	Requested	Advanced	10	Weekly	Seeded assignment	2025-11-12 02:25:27.264874
-569	10	Approved	Expert	5	Daily	Seeded assignment	\N
-781	25	Approved	Intermediate	\N	Daily	Seeded request	\N
-222	20	Approved	Beginner	10	Weekly	Seeded request	2025-11-06 07:05:27.264874
-431	5	Approved	\N	\N	Weekly	Seeded assignment	\N
-746	5	Requested	Intermediate	9	\N	Seeded assignment	2025-11-21 20:43:27.264874
-57	23	Requested	Intermediate	5	\N	Seeded assignment	\N
-718	21	Approved	\N	5	Monthly	Seeded assignment	\N
-273	9	Requested	\N	4	Monthly	Seeded assignment	\N
-429	21	Approved	\N	\N	Daily	Seeded request	\N
-552	9	Requested	\N	\N	\N	Seeded assignment	\N
-224	16	Requested	Intermediate	8	\N	Seeded request	2025-12-02 05:45:27.264874
-424	7	Approved	Expert	4	Weekly	Seeded assignment	2025-11-06 21:32:27.264874
-400	25	Approved	\N	\N	\N	Seeded request	\N
-213	6	Requested	Expert	8	\N	Seeded assignment	\N
-922	1	Approved	Advanced	\N	Weekly	Seeded assignment	\N
-473	25	Approved	Intermediate	\N	\N	Seeded assignment	\N
-822	21	Requested	\N	2	Weekly	Seeded assignment	2025-11-14 08:07:27.264874
-166	5	Approved	Expert	1	Weekly	Seeded assignment	\N
-237	12	Approved	Beginner	3	Weekly	Seeded assignment	2025-11-29 11:10:27.264874
-742	22	Requested	Intermediate	7	Rarely	Seeded assignment	2025-11-28 23:59:27.264874
-246	3	Approved	\N	10	\N	Seeded assignment	\N
-203	16	Requested	\N	8	Monthly	Seeded assignment	2025-11-12 11:32:27.264874
-724	1	Approved	Beginner	\N	\N	Seeded request	\N
-82	6	Requested	\N	1	Daily	Seeded request	\N
-500	10	Approved	\N	8	Daily	Seeded request	\N
-360	12	Requested	\N	7	Daily	Seeded assignment	\N
-968	22	Requested	Advanced	\N	Rarely	Seeded assignment	\N
-88	19	Approved	Intermediate	\N	Monthly	Seeded request	\N
-13	10	Approved	\N	9	Monthly	Seeded assignment	\N
-338	9	Approved	\N	\N	Daily	Seeded assignment	\N
-144	5	Approved	\N	\N	\N	Seeded request	\N
-269	3	Requested	Expert	\N	\N	Seeded assignment	\N
-202	21	Requested	Advanced	7	\N	Seeded request	2025-11-16 20:12:27.264874
-695	25	Requested	Beginner	7	Monthly	Seeded request	2025-11-07 21:10:27.264874
-46	10	Approved	Beginner	\N	Daily	Seeded assignment	\N
-217	13	Approved	\N	9	Rarely	Seeded request	\N
-607	1	Approved	\N	10	Daily	Seeded assignment	\N
-615	5	Requested	\N	\N	Monthly	Seeded assignment	2025-11-24 11:04:27.264874
-174	12	Approved	\N	1	\N	Seeded assignment	\N
-953	5	Requested	Intermediate	6	Monthly	Seeded assignment	\N
-47	17	Approved	Intermediate	8	Weekly	Seeded request	2025-11-27 07:31:27.264874
-775	24	Requested	\N	\N	Rarely	Seeded assignment	2025-11-28 00:34:27.264874
-534	3	Approved	Advanced	\N	\N	Seeded request	\N
-987	21	Approved	\N	3	Monthly	Seeded request	2025-11-18 10:44:27.264874
-932	22	Requested	\N	\N	\N	Seeded assignment	\N
-558	3	Requested	Beginner	6	Weekly	Seeded assignment	\N
-59	16	Approved	\N	\N	Weekly	Seeded request	\N
-493	24	Approved	Expert	\N	\N	Seeded assignment	\N
-424	23	Requested	\N	\N	Rarely	Seeded assignment	2025-11-12 13:11:27.264874
-111	20	Approved	Beginner	4	\N	Seeded assignment	\N
-407	18	Approved	\N	5	\N	Seeded assignment	2025-11-23 03:33:27.264874
-206	20	Requested	Expert	9	Rarely	Seeded assignment	2025-11-23 08:30:27.264874
-423	19	Approved	Intermediate	10	\N	Seeded assignment	\N
-502	16	Approved	\N	\N	Rarely	Seeded request	\N
-512	7	Approved	Intermediate	\N	\N	Seeded assignment	2025-11-24 01:57:27.264874
-284	7	Approved	\N	\N	\N	Seeded request	\N
-379	8	Requested	\N	7	\N	Seeded request	\N
-580	22	Approved	\N	9	Weekly	Seeded assignment	\N
-772	5	Requested	\N	\N	Monthly	Seeded request	2025-11-15 18:49:27.264874
-720	22	Requested	\N	\N	Weekly	Seeded request	\N
-280	17	Requested	Advanced	10	Rarely	Seeded request	2025-11-11 22:32:27.264874
-54	11	Requested	Beginner	\N	Weekly	Seeded assignment	\N
-67	3	Requested	Expert	2	Daily	Seeded assignment	\N
-479	7	Approved	Beginner	8	\N	Seeded assignment	2025-11-06 11:30:27.264874
-261	10	Requested	\N	6	Rarely	Seeded assignment	\N
-222	12	Requested	Expert	4	Monthly	Seeded assignment	\N
-557	4	Approved	\N	8	\N	Seeded request	\N
-516	22	Approved	\N	0	Weekly	Seeded request	\N
-890	20	Requested	Intermediate	1	Monthly	Seeded request	2025-11-27 18:48:27.264874
-749	5	Requested	Expert	7	Monthly	Seeded assignment	\N
-371	18	Approved	\N	2	\N	Seeded request	2025-11-24 08:46:27.264874
-488	22	Approved	Intermediate	6	Weekly	Seeded request	2025-11-04 00:59:27.264874
-465	7	Requested	\N	\N	\N	Seeded assignment	\N
-258	24	Approved	\N	\N	Weekly	Seeded assignment	2025-11-11 20:22:27.264874
-814	20	Requested	Intermediate	\N	\N	Seeded assignment	\N
-925	13	Requested	\N	5	\N	Seeded assignment	\N
-652	21	Requested	Expert	\N	\N	Seeded assignment	2025-12-03 03:44:27.264874
-68	21	Approved	Advanced	\N	Daily	Seeded assignment	2025-11-10 11:41:27.264874
-538	13	Approved	Beginner	\N	Daily	Seeded assignment	\N
-711	5	Requested	Advanced	1	Monthly	Seeded request	\N
-219	1	Approved	\N	1	Weekly	Seeded assignment	\N
-606	6	Requested	\N	6	Weekly	Seeded request	\N
-248	16	Approved	Beginner	\N	Rarely	Seeded request	\N
-347	18	Approved	\N	\N	\N	Seeded request	\N
-552	1	Approved	Intermediate	\N	\N	Seeded assignment	\N
-238	8	Requested	Advanced	10	Weekly	Seeded request	\N
-843	23	Approved	Beginner	\N	\N	Seeded assignment	\N
-159	4	Requested	Advanced	5	\N	Seeded assignment	\N
-567	3	Approved	\N	0	Daily	Seeded request	\N
-79	1	Requested	Expert	\N	Weekly	Seeded assignment	\N
-392	24	Approved	\N	\N	Rarely	Seeded assignment	\N
-311	12	Approved	\N	8	\N	Seeded assignment	\N
-302	9	Approved	Expert	\N	Daily	Seeded assignment	\N
-955	3	Approved	\N	\N	Monthly	Seeded assignment	\N
-177	23	Requested	\N	6	Rarely	Seeded assignment	2025-11-24 20:55:27.264874
-273	1	Requested	\N	10	Rarely	Seeded assignment	\N
-658	3	Approved	Intermediate	\N	Monthly	Seeded assignment	2025-11-18 13:25:27.264874
-715	22	Approved	\N	2	Rarely	Seeded assignment	\N
-857	11	Approved	\N	6	Monthly	Seeded request	2025-11-17 04:38:27.264874
-418	16	Approved	Expert	\N	\N	Seeded request	\N
-696	10	Approved	Beginner	9	Rarely	Seeded assignment	2025-11-07 07:44:27.264874
-792	13	Approved	\N	5	\N	Seeded assignment	2025-11-21 02:46:27.264874
-892	21	Approved	Advanced	\N	Rarely	Seeded assignment	\N
-891	17	Requested	\N	10	\N	Seeded request	\N
-351	9	Approved	\N	\N	\N	Seeded assignment	\N
-451	11	Requested	Advanced	10	\N	Seeded request	2025-12-03 04:22:27.264874
-410	18	Approved	\N	9	\N	Seeded request	2025-11-28 13:47:27.264874
-878	13	Requested	\N	7	Daily	Seeded assignment	\N
-882	7	Approved	Expert	6	Rarely	Seeded assignment	2025-11-30 02:00:27.264874
-207	16	Approved	Intermediate	\N	Weekly	Seeded request	\N
-761	3	Approved	Intermediate	2	Weekly	Seeded assignment	2025-11-28 04:38:27.264874
-173	13	Approved	Beginner	3	Daily	Seeded assignment	\N
-460	3	Approved	\N	2	\N	Seeded request	2025-11-14 19:03:27.264874
-271	1	Approved	Intermediate	\N	Rarely	Seeded assignment	\N
-547	25	Requested	Intermediate	\N	\N	Seeded request	\N
-211	17	Approved	Expert	7	\N	Seeded request	\N
-306	5	Approved	Beginner	\N	\N	Seeded assignment	\N
-391	10	Requested	Intermediate	3	Rarely	Seeded assignment	2025-11-06 08:41:27.264874
-907	5	Requested	Beginner	8	Rarely	Seeded request	\N
-463	16	Approved	\N	1	Daily	Seeded assignment	2025-11-09 21:40:27.264874
-11	7	Requested	Intermediate	4	Monthly	Seeded assignment	2025-11-30 02:34:27.264874
-320	10	Requested	\N	\N	Daily	Seeded assignment	2025-11-05 13:08:27.264874
-556	25	Approved	Advanced	\N	Rarely	Seeded request	\N
-491	5	Approved	Beginner	8	\N	Seeded request	\N
-733	8	Approved	Intermediate	\N	Rarely	Seeded assignment	\N
-448	5	Approved	\N	7	Monthly	Seeded request	\N
-833	7	Requested	\N	0	Monthly	Seeded assignment	\N
-678	18	Approved	\N	\N	\N	Seeded assignment	2025-11-18 12:18:27.264874
-906	20	Approved	Advanced	\N	\N	Seeded assignment	2025-11-24 23:01:27.264874
-115	12	Requested	\N	\N	\N	Seeded assignment	\N
-64	23	Approved	\N	\N	\N	Seeded assignment	\N
-922	9	Approved	Advanced	\N	Daily	Seeded request	2025-12-01 06:43:27.264874
-153	17	Approved	Expert	7	Monthly	Seeded assignment	\N
-963	5	Requested	\N	2	Rarely	Seeded assignment	2025-11-16 05:59:27.264874
-257	13	Requested	Expert	7	\N	Seeded request	2025-11-21 22:46:27.264874
-186	6	Approved	\N	8	\N	Seeded assignment	2025-11-16 19:42:27.264874
-675	3	Requested	Intermediate	\N	Rarely	Seeded assignment	\N
-388	20	Approved	Expert	8	\N	Seeded assignment	\N
-434	9	Approved	\N	7	Monthly	Seeded request	\N
-446	9	Requested	Expert	\N	Daily	Seeded request	\N
-891	21	Approved	Expert	6	Weekly	Seeded assignment	2025-11-04 04:54:27.264874
-262	1	Requested	\N	8	\N	Seeded request	2025-11-30 07:17:27.264874
-313	1	Approved	\N	5	Monthly	Seeded request	2025-11-06 02:09:27.264874
-176	20	Approved	Expert	\N	\N	Seeded request	\N
-92	5	Approved	\N	\N	\N	Seeded assignment	\N
-232	17	Approved	Beginner	9	Daily	Seeded request	2025-11-03 23:41:27.264874
-533	6	Approved	Advanced	8	\N	Seeded assignment	\N
-585	1	Approved	\N	\N	Monthly	Seeded request	2025-11-21 23:17:27.264874
-99	22	Approved	Intermediate	9	\N	Seeded assignment	2025-11-19 13:50:27.264874
-135	8	Requested	Expert	\N	Rarely	Seeded request	2025-11-06 01:04:27.264874
-228	8	Requested	Intermediate	\N	\N	Seeded assignment	\N
-729	21	Requested	\N	0	\N	Seeded assignment	2025-11-16 20:58:27.264874
-936	13	Approved	\N	10	Monthly	Seeded assignment	2025-11-08 15:16:27.264874
-140	21	Approved	Beginner	9	Daily	Seeded assignment	\N
-125	21	Approved	Intermediate	10	\N	Seeded assignment	\N
-959	16	Approved	\N	10	Weekly	Seeded request	\N
-363	3	Approved	Expert	\N	Rarely	Seeded assignment	\N
-647	23	Approved	Beginner	0	\N	Seeded request	\N
-129	4	Requested	Intermediate	\N	Monthly	Seeded request	2025-11-08 01:17:27.264874
-195	4	Requested	Expert	9	\N	Seeded request	\N
-153	21	Approved	\N	\N	Rarely	Seeded request	2025-11-18 11:58:27.264874
-531	1	Requested	Beginner	\N	Daily	Seeded request	2025-11-20 00:17:27.264874
-163	6	Requested	Beginner	\N	Daily	Seeded assignment	\N
-883	7	Approved	\N	9	\N	Seeded assignment	2025-12-01 11:39:27.264874
-97	9	Requested	Intermediate	4	Monthly	Seeded assignment	2025-11-16 20:50:27.264874
-174	5	Approved	Advanced	\N	\N	Seeded assignment	2025-11-13 01:46:27.264874
-930	4	Approved	\N	\N	Monthly	Seeded assignment	2025-11-15 16:40:27.264874
-211	21	Requested	Advanced	0	Daily	Seeded assignment	\N
-701	17	Requested	Beginner	2	Daily	Seeded assignment	\N
-903	4	Approved	Beginner	2	Monthly	Seeded request	2025-11-20 06:03:27.264874
-370	16	Approved	\N	\N	\N	Seeded assignment	\N
-601	23	Approved	Intermediate	0	Daily	Seeded assignment	\N
-62	22	Requested	Expert	6	Rarely	Seeded assignment	\N
-106	23	Approved	Intermediate	8	Daily	Seeded request	\N
-956	6	Approved	Advanced	\N	\N	Seeded request	\N
-681	23	Requested	Intermediate	\N	Weekly	Seeded assignment	\N
-58	19	Requested	\N	7	\N	Seeded assignment	2025-11-05 21:34:27.264874
-657	20	Requested	Advanced	3	Weekly	Seeded request	\N
-809	1	Approved	\N	9	\N	Seeded request	\N
-676	3	Requested	Intermediate	2	Rarely	Seeded request	2025-12-02 08:47:27.264874
-753	18	Approved	\N	7	Monthly	Seeded request	\N
-821	16	Approved	Intermediate	0	Daily	Seeded request	\N
-409	3	Requested	Advanced	\N	Rarely	Seeded request	\N
-732	16	Approved	\N	\N	Daily	Seeded request	2025-11-29 07:39:27.264874
-672	6	Approved	Intermediate	10	\N	Seeded assignment	\N
-517	13	Approved	\N	\N	Daily	Seeded request	\N
-242	13	Approved	\N	9	Rarely	Seeded request	2025-11-19 14:23:27.264874
-8	1	Requested	Advanced	0	\N	Seeded request	\N
-305	22	Requested	\N	\N	Weekly	Seeded request	2025-11-24 14:51:27.264874
-592	12	Approved	Beginner	\N	Rarely	Seeded request	\N
-907	12	Approved	Advanced	3	Monthly	Seeded assignment	\N
-827	8	Approved	Intermediate	5	\N	Seeded assignment	\N
-272	11	Requested	Expert	\N	Daily	Seeded assignment	\N
-648	13	Requested	\N	\N	\N	Seeded assignment	\N
-223	11	Requested	Advanced	9	Weekly	Seeded request	\N
-286	3	Approved	Expert	3	\N	Seeded assignment	\N
-422	19	Requested	Expert	\N	\N	Seeded assignment	\N
-865	17	Approved	Expert	\N	Monthly	Seeded assignment	\N
-78	10	Requested	Expert	6	\N	Seeded assignment	2025-11-26 04:22:27.264874
-539	13	Requested	Expert	4	\N	Seeded assignment	\N
-243	6	Requested	Advanced	8	\N	Seeded request	\N
-298	25	Requested	Expert	\N	Weekly	Seeded request	\N
-405	7	Approved	Beginner	\N	Monthly	Seeded request	\N
-467	13	Requested	\N	5	Rarely	Seeded assignment	\N
-620	23	Approved	Beginner	\N	Rarely	Seeded assignment	2025-12-02 18:13:27.264874
-916	20	Requested	\N	1	Monthly	Seeded assignment	\N
-91	24	Approved	Intermediate	0	\N	Seeded assignment	2025-11-25 10:11:27.264874
-180	16	Approved	Expert	\N	Weekly	Seeded request	2025-11-12 01:31:27.264874
-542	1	Requested	Intermediate	\N	\N	Seeded assignment	2025-11-26 17:13:27.264874
-175	22	Approved	Beginner	2	Weekly	Seeded assignment	2025-11-14 10:53:27.264874
-808	18	Approved	\N	4	Daily	Seeded assignment	\N
-641	3	Approved	\N	5	\N	Seeded assignment	\N
-204	4	Approved	\N	\N	Rarely	Seeded request	2025-11-16 04:51:27.264874
-494	17	Approved	\N	4	Monthly	Seeded assignment	2025-11-08 22:57:27.264874
-535	17	Requested	\N	5	Daily	Seeded assignment	\N
-671	19	Approved	Intermediate	1	\N	Seeded request	2025-11-04 15:02:27.264874
-690	25	Approved	\N	3	\N	Seeded request	\N
-68	17	Approved	\N	\N	\N	Seeded assignment	\N
-100	10	Approved	\N	2	Daily	Seeded assignment	\N
-972	18	Requested	\N	8	Weekly	Seeded assignment	\N
-411	18	Requested	Beginner	1	\N	Seeded assignment	2025-11-03 18:27:27.264874
-95	4	Requested	\N	9	\N	Seeded assignment	\N
-7	11	Approved	Intermediate	\N	Daily	Seeded request	2025-11-17 03:38:27.264874
-854	13	Requested	\N	4	Rarely	Seeded assignment	\N
-183	12	Requested	Advanced	10	Weekly	Seeded assignment	\N
-485	24	Approved	\N	4	\N	Seeded assignment	\N
-280	21	Approved	\N	4	\N	Seeded assignment	2025-11-14 21:51:27.264874
-686	6	Requested	Intermediate	9	Weekly	Seeded request	\N
-798	18	Approved	\N	8	Rarely	Seeded assignment	\N
-127	16	Approved	\N	\N	Daily	Seeded request	\N
-199	19	Requested	Advanced	1	Daily	Seeded request	\N
-389	3	Requested	\N	\N	\N	Seeded request	\N
-428	6	Approved	Beginner	0	Weekly	Seeded request	2025-11-28 09:34:27.264874
-10	6	Approved	Expert	\N	Daily	Seeded assignment	\N
-585	9	Approved	Beginner	3	\N	Seeded request	\N
-401	21	Approved	\N	9	\N	Seeded request	\N
-598	12	Approved	Expert	10	Daily	Seeded assignment	\N
-570	21	Approved	\N	\N	Monthly	Seeded assignment	\N
-417	22	Requested	\N	\N	Weekly	Seeded request	2025-11-23 19:32:27.264874
-482	11	Requested	\N	\N	Monthly	Seeded request	2025-11-05 09:14:27.264874
-34	8	Approved	Beginner	\N	\N	Seeded request	\N
-884	12	Approved	\N	0	Monthly	Seeded request	\N
-971	3	Approved	Beginner	5	\N	Seeded assignment	\N
-472	12	Approved	\N	5	\N	Seeded request	2025-11-24 00:38:27.264874
-439	16	Approved	\N	7	Daily	Seeded request	\N
-678	19	Requested	Intermediate	\N	Monthly	Seeded request	\N
-930	3	Approved	\N	\N	Rarely	Seeded assignment	\N
-668	5	Approved	\N	\N	Rarely	Seeded request	\N
-728	25	Approved	Intermediate	4	Weekly	Seeded assignment	\N
-748	21	Approved	Expert	3	Daily	Seeded request	\N
-18	8	Approved	Intermediate	\N	\N	Seeded assignment	2025-11-19 07:36:27.264874
-775	10	Approved	Beginner	2	\N	Seeded assignment	\N
-262	9	Approved	\N	5	Daily	Seeded assignment	2025-11-25 02:22:27.264874
-129	3	Approved	Advanced	3	Daily	Seeded assignment	\N
-165	21	Approved	Beginner	\N	\N	Seeded assignment	2025-11-16 09:29:27.264874
-900	6	Approved	\N	3	Rarely	Seeded assignment	\N
-743	13	Approved	Beginner	3	\N	Seeded request	\N
-405	23	Approved	Advanced	\N	Monthly	Seeded request	\N
-518	7	Requested	Beginner	\N	Rarely	Seeded request	2025-11-11 01:27:27.264874
-863	17	Approved	\N	\N	Daily	Seeded request	2025-11-10 22:51:27.264874
-225	13	Requested	Beginner	8	\N	Seeded assignment	\N
-760	13	Approved	\N	7	Daily	Seeded request	\N
-46	24	Approved	\N	4	Daily	Seeded assignment	2025-11-05 20:16:27.264874
-975	5	Requested	Advanced	\N	Weekly	Seeded request	\N
-434	1	Approved	Beginner	3	Rarely	Seeded assignment	2025-11-17 23:57:27.264874
-381	8	Approved	Advanced	2	\N	Seeded assignment	2025-11-21 01:59:27.264874
-757	20	Approved	Advanced	9	\N	Seeded assignment	2025-11-16 23:18:27.264874
-161	12	Approved	\N	\N	\N	Seeded assignment	\N
-332	24	Approved	\N	\N	Weekly	Seeded request	\N
-510	13	Approved	Beginner	\N	\N	Seeded assignment	2025-11-23 08:32:27.264874
-731	11	Approved	Advanced	\N	Monthly	Seeded request	2025-12-01 12:40:27.264874
-981	5	Approved	\N	8	\N	Seeded assignment	2025-11-16 13:29:27.264874
-137	23	Approved	Beginner	10	\N	Seeded assignment	2025-11-28 19:11:27.264874
-907	20	Requested	\N	10	Monthly	Seeded request	2025-11-18 18:36:27.264874
-117	4	Requested	\N	9	Weekly	Seeded request	\N
-349	16	Requested	Beginner	7	Monthly	Seeded assignment	\N
-448	20	Approved	Advanced	9	Weekly	Seeded request	2025-12-01 14:50:27.264874
-795	16	Requested	Intermediate	3	\N	Seeded assignment	2025-11-05 18:20:27.264874
-277	24	Approved	Expert	\N	Rarely	Seeded assignment	\N
-669	4	Requested	\N	\N	Monthly	Seeded assignment	\N
-896	17	Requested	Intermediate	2	Rarely	Seeded request	\N
-360	5	Approved	Advanced	8	Monthly	Seeded assignment	\N
-546	25	Approved	\N	\N	Rarely	Seeded assignment	\N
-178	6	Requested	Advanced	4	\N	Seeded request	\N
-577	7	Approved	Intermediate	7	Weekly	Seeded assignment	\N
-220	12	Approved	Intermediate	\N	\N	Seeded request	2025-11-15 05:10:27.264874
-740	20	Requested	Expert	0	Rarely	Seeded request	\N
-48	3	Approved	\N	1	\N	Seeded assignment	\N
-717	16	Requested	Beginner	\N	Weekly	Seeded assignment	\N
-839	6	Approved	Advanced	7	\N	Seeded request	\N
-950	16	Approved	Advanced	\N	Weekly	Seeded assignment	\N
-582	8	Requested	Beginner	\N	\N	Seeded request	\N
-923	21	Approved	Beginner	\N	Weekly	Seeded assignment	\N
-8	9	Approved	\N	7	Rarely	Seeded assignment	\N
-526	6	Requested	Advanced	\N	\N	Seeded assignment	\N
-559	6	Approved	Intermediate	\N	\N	Seeded assignment	\N
-902	11	Approved	\N	3	\N	Seeded assignment	\N
-275	19	Requested	Intermediate	8	Daily	Seeded request	\N
-102	8	Approved	Intermediate	\N	\N	Seeded assignment	\N
-898	8	Approved	Intermediate	2	Weekly	Seeded assignment	\N
-189	21	Approved	Beginner	\N	\N	Seeded request	2025-11-20 18:32:27.264874
-286	4	Approved	\N	\N	\N	Seeded request	\N
-637	25	Approved	Expert	10	Weekly	Seeded assignment	\N
-2	8	Approved	Expert	\N	Daily	Seeded request	\N
-200	19	Approved	Advanced	\N	\N	Seeded request	\N
-799	16	Approved	Intermediate	\N	Monthly	Seeded assignment	\N
-487	1	Approved	\N	8	Weekly	Seeded request	\N
-283	20	Approved	Expert	\N	Daily	Seeded assignment	\N
-942	23	Requested	\N	5	\N	Seeded request	2025-11-22 13:28:27.264874
-221	17	Approved	Advanced	\N	\N	Seeded request	\N
-623	3	Requested	Expert	\N	\N	Seeded assignment	\N
-602	11	Approved	Beginner	0	\N	Seeded request	2025-11-04 00:54:27.264874
-184	25	Approved	\N	\N	\N	Seeded request	\N
-986	4	Approved	Beginner	\N	\N	Seeded assignment	2025-11-10 09:51:27.264874
-648	8	Approved	Beginner	5	\N	Seeded assignment	2025-11-22 16:18:27.264874
-418	24	Requested	Intermediate	10	Rarely	Seeded request	2025-11-22 08:19:27.264874
-599	20	Approved	\N	1	Monthly	Seeded request	\N
-954	1	Approved	Advanced	1	Rarely	Seeded request	2025-11-23 10:11:27.264874
-539	8	Approved	Intermediate	\N	Weekly	Seeded assignment	\N
-467	8	Approved	Beginner	\N	Daily	Seeded assignment	\N
-498	16	Requested	\N	1	Weekly	Seeded request	2025-11-14 11:26:27.264874
-276	20	Requested	\N	1	Rarely	Seeded assignment	\N
-66	13	Requested	Intermediate	3	\N	Seeded request	\N
-27	18	Approved	\N	6	\N	Seeded request	2025-11-24 02:23:27.264874
-432	4	Approved	\N	\N	\N	Seeded request	2025-12-03 04:13:27.264874
-797	23	Requested	\N	\N	\N	Seeded assignment	2025-11-08 00:04:27.264874
-846	4	Approved	Advanced	10	Monthly	Seeded assignment	2025-11-10 06:50:27.264874
-697	17	Requested	Advanced	4	\N	Seeded assignment	2025-11-09 21:14:27.264874
-435	1	Approved	\N	2	\N	Seeded request	2025-11-16 05:42:27.264874
-421	3	Requested	\N	5	Rarely	Seeded request	\N
-553	17	Approved	Beginner	\N	Rarely	Seeded assignment	2025-11-08 03:05:27.264874
-517	8	Requested	\N	7	Monthly	Seeded request	2025-11-26 11:18:27.264874
-414	12	Requested	\N	2	Rarely	Seeded assignment	\N
-213	11	Approved	\N	8	Daily	Seeded assignment	2025-11-24 13:00:27.264874
-786	12	Approved	\N	0	Monthly	Seeded request	2025-11-10 00:53:27.264874
-383	7	Requested	Beginner	\N	Weekly	Seeded request	2025-11-20 04:50:27.264874
-942	18	Approved	Advanced	\N	Rarely	Seeded assignment	2025-11-24 01:52:27.264874
-324	19	Approved	\N	\N	\N	Seeded assignment	2025-11-06 01:48:27.264874
-593	4	Approved	\N	4	\N	Seeded assignment	2025-11-15 10:45:27.264874
-738	13	Approved	\N	\N	Daily	Seeded request	2025-11-12 10:46:27.264874
-216	9	Approved	\N	\N	\N	Seeded request	2025-12-01 02:41:27.264874
-573	23	Requested	\N	2	\N	Seeded assignment	\N
-88	7	Requested	\N	10	Weekly	Seeded assignment	\N
-888	8	Approved	\N	8	\N	Seeded request	2025-11-17 00:42:27.264874
-279	3	Approved	\N	10	\N	Seeded assignment	\N
-979	4	Approved	Beginner	2	Daily	Seeded assignment	2025-11-17 03:03:27.264874
-373	11	Requested	Advanced	\N	\N	Seeded request	2025-11-05 07:25:27.264874
-560	17	Requested	Intermediate	\N	Monthly	Seeded assignment	2025-11-23 01:29:27.264874
-108	22	Approved	\N	\N	Daily	Seeded assignment	\N
-838	18	Requested	\N	\N	Daily	Seeded request	2025-11-05 04:45:27.264874
-988	17	Approved	\N	\N	Weekly	Seeded assignment	\N
-643	22	Requested	\N	\N	Daily	Seeded assignment	\N
-447	10	Requested	Advanced	3	Weekly	Seeded request	2025-12-02 22:50:27.264874
-832	7	Requested	\N	6	Monthly	Seeded assignment	2025-11-29 07:30:27.264874
-12	19	Requested	\N	8	Daily	Seeded assignment	2025-11-27 21:42:27.264874
-218	11	Requested	\N	\N	Daily	Seeded assignment	2025-11-15 01:11:27.264874
-440	1	Approved	Beginner	9	Weekly	Seeded assignment	\N
-177	19	Requested	Intermediate	\N	Rarely	Seeded assignment	2025-11-12 00:15:27.264874
-788	21	Approved	\N	\N	Weekly	Seeded assignment	2025-11-28 13:14:27.264874
-294	8	Approved	\N	7	Rarely	Seeded assignment	\N
-439	10	Approved	Advanced	1	\N	Seeded request	2025-11-17 04:46:27.264874
-38	3	Requested	Expert	\N	\N	Seeded request	\N
-128	3	Approved	Advanced	0	\N	Seeded assignment	2025-11-19 18:00:27.264874
-228	13	Approved	Beginner	9	Monthly	Seeded request	2025-11-08 00:34:27.264874
-809	25	Approved	Advanced	\N	Rarely	Seeded assignment	\N
-847	20	Requested	\N	7	Daily	Seeded request	2025-11-05 20:38:27.264874
-483	25	Approved	Intermediate	9	\N	Seeded request	2025-11-19 16:37:27.264874
-679	16	Requested	Advanced	1	\N	Seeded request	\N
-736	9	Approved	Intermediate	\N	Daily	Seeded request	2025-11-08 08:36:27.264874
-843	19	Requested	\N	7	Weekly	Seeded assignment	\N
-576	16	Approved	Intermediate	6	\N	Seeded assignment	\N
-131	5	Approved	Expert	\N	Weekly	Seeded assignment	\N
-170	3	Requested	Expert	\N	Daily	Seeded request	\N
-745	18	Approved	\N	4	\N	Seeded request	\N
-489	5	Requested	Advanced	\N	Monthly	Seeded request	2025-11-28 17:50:27.264874
-437	20	Approved	Intermediate	9	\N	Seeded request	\N
-785	11	Requested	Beginner	\N	\N	Seeded assignment	2025-11-09 04:05:27.264874
-378	21	Requested	Advanced	8	Weekly	Seeded assignment	2025-11-23 20:19:27.264874
-537	5	Requested	Advanced	0	Rarely	Seeded assignment	2025-11-10 13:28:27.264874
-635	4	Approved	Expert	\N	Daily	Seeded assignment	2025-11-22 04:53:27.264874
-85	9	Approved	\N	\N	Monthly	Seeded request	\N
-184	9	Requested	\N	7	Weekly	Seeded assignment	\N
-290	6	Requested	Expert	1	\N	Seeded assignment	\N
-377	9	Requested	Intermediate	8	Daily	Seeded assignment	\N
-685	25	Requested	Beginner	\N	Rarely	Seeded request	\N
-398	16	Approved	Expert	\N	\N	Seeded request	\N
-613	8	Approved	Beginner	\N	Weekly	Seeded assignment	2025-11-14 06:48:27.264874
-725	3	Approved	Beginner	0	Monthly	Seeded assignment	2025-11-24 19:32:27.264874
-136	12	Requested	\N	10	Daily	Seeded assignment	\N
-405	18	Approved	\N	10	Weekly	Seeded assignment	\N
-126	21	Requested	Beginner	3	\N	Seeded assignment	\N
-511	21	Approved	\N	10	\N	Seeded assignment	2025-11-28 00:25:27.264874
-662	13	Requested	\N	8	Monthly	Seeded request	2025-11-06 17:34:27.264874
-753	7	Requested	Intermediate	\N	Rarely	Seeded assignment	2025-11-04 04:19:27.264874
-960	6	Requested	\N	3	Monthly	Seeded request	2025-12-01 02:44:27.264874
-443	9	Requested	Intermediate	6	\N	Seeded request	\N
-64	19	Requested	\N	\N	Rarely	Seeded request	\N
-791	6	Requested	\N	1	Weekly	Seeded assignment	\N
-637	9	Approved	\N	8	Daily	Seeded request	\N
-605	17	Requested	Intermediate	8	Daily	Seeded assignment	2025-11-15 01:48:27.264874
-429	22	Requested	\N	3	\N	Seeded assignment	2025-11-05 07:28:27.264874
-583	8	Requested	Expert	\N	Monthly	Seeded assignment	2025-11-07 05:54:27.264874
-718	22	Approved	\N	\N	Rarely	Seeded assignment	\N
-309	10	Approved	Intermediate	10	\N	Seeded assignment	\N
-650	8	Approved	Expert	7	Daily	Seeded assignment	\N
-23	6	Requested	\N	1	Monthly	Seeded request	\N
-50	24	Requested	\N	2	\N	Seeded request	\N
-823	5	Approved	Beginner	\N	Rarely	Seeded assignment	\N
-445	23	Requested	Beginner	0	Rarely	Seeded assignment	\N
-889	9	Approved	Beginner	7	Rarely	Seeded assignment	\N
-565	22	Requested	\N	1	Weekly	Seeded request	\N
-624	5	Requested	\N	5	\N	Seeded assignment	\N
-224	24	Approved	Intermediate	6	Rarely	Seeded request	2025-11-04 01:47:27.264874
-769	21	Approved	Beginner	5	Weekly	Seeded request	2025-11-15 10:25:27.264874
-732	10	Requested	Expert	4	Monthly	Seeded request	\N
-172	4	Requested	\N	10	Weekly	Seeded request	2025-11-19 22:18:27.264874
-947	24	Requested	\N	\N	\N	Seeded request	\N
-593	3	Requested	Beginner	5	Daily	Seeded assignment	2025-11-06 10:17:27.264874
-446	25	Requested	Advanced	0	\N	Seeded assignment	\N
-588	5	Requested	Intermediate	\N	Daily	Seeded request	\N
-728	1	Approved	Expert	0	Monthly	Seeded assignment	2025-11-27 19:59:27.264874
-71	5	Approved	\N	8	Weekly	Seeded assignment	2025-12-02 22:17:27.264874
-488	21	Approved	Intermediate	1	Monthly	Seeded request	2025-11-07 09:58:27.264874
-587	25	Requested	\N	\N	Daily	Seeded assignment	\N
-175	17	Requested	Expert	6	Daily	Seeded request	\N
-604	25	Approved	\N	9	Weekly	Seeded assignment	\N
-638	16	Approved	\N	8	\N	Seeded assignment	\N
-413	5	Requested	\N	10	\N	Seeded assignment	2025-11-23 01:27:27.264874
-987	22	Requested	Beginner	0	Monthly	Seeded assignment	2025-11-24 19:58:27.264874
-295	19	Requested	\N	3	Monthly	Seeded request	2025-11-27 12:05:27.264874
-214	18	Requested	Beginner	\N	Weekly	Seeded assignment	\N
-842	25	Requested	Beginner	6	Daily	Seeded assignment	\N
-266	22	Approved	Beginner	\N	Rarely	Seeded assignment	\N
-256	1	Approved	Beginner	\N	Daily	Seeded request	\N
-961	25	Requested	Advanced	\N	Daily	Seeded assignment	\N
-69	24	Requested	Beginner	10	Weekly	Seeded request	\N
-26	20	Approved	Expert	\N	Daily	Seeded assignment	\N
-458	5	Requested	\N	2	Rarely	Seeded assignment	2025-11-07 00:53:27.264874
-518	18	Requested	\N	\N	\N	Seeded request	\N
-581	3	Requested	\N	\N	\N	Seeded assignment	\N
-2	13	Approved	Advanced	9	\N	Seeded assignment	\N
-80	17	Approved	Intermediate	\N	\N	Seeded request	2025-11-18 01:00:27.264874
-486	18	Approved	Expert	3	Monthly	Seeded assignment	\N
-432	3	Approved	Intermediate	3	Rarely	Seeded assignment	2025-11-20 19:44:27.264874
-796	13	Approved	\N	\N	Daily	Seeded request	\N
-846	3	Requested	Expert	5	\N	Seeded assignment	\N
-72	13	Approved	\N	\N	Rarely	Seeded assignment	2025-11-08 01:39:27.264874
-939	10	Approved	Beginner	1	Monthly	Seeded assignment	2025-12-01 10:52:27.264874
-330	18	Approved	Intermediate	3	Daily	Seeded request	\N
-305	17	Approved	Advanced	4	Rarely	Seeded request	2025-11-22 06:06:27.264874
-913	9	Requested	Intermediate	\N	Daily	Seeded request	2025-11-18 05:11:27.264874
-312	17	Approved	\N	9	\N	Seeded request	\N
-833	19	Approved	\N	\N	Monthly	Seeded assignment	\N
-625	3	Approved	Intermediate	10	\N	Seeded assignment	2025-11-27 13:13:27.264874
-847	12	Approved	Expert	\N	Daily	Seeded request	2025-11-21 16:52:27.264874
-36	6	Requested	Expert	\N	Rarely	Seeded request	\N
-254	3	Approved	Advanced	\N	Daily	Seeded request	\N
-25	20	Approved	Beginner	3	\N	Seeded assignment	\N
-20	18	Approved	Advanced	7	\N	Seeded assignment	\N
-815	19	Requested	\N	\N	Rarely	Seeded assignment	\N
-32	1	Approved	Expert	4	Daily	Seeded assignment	\N
-941	22	Approved	\N	4	\N	Seeded request	\N
-251	12	Approved	Intermediate	5	Monthly	Seeded request	2025-11-08 01:50:27.264874
-239	19	Requested	Beginner	3	\N	Seeded request	\N
-541	20	Requested	Expert	10	Rarely	Seeded assignment	\N
-601	18	Requested	\N	\N	\N	Seeded assignment	\N
-139	13	Approved	\N	\N	Daily	Seeded request	\N
-453	23	Approved	\N	2	Monthly	Seeded assignment	\N
-614	13	Approved	Beginner	7	Daily	Seeded assignment	\N
-18	13	Approved	\N	5	Rarely	Seeded assignment	\N
-681	18	Requested	\N	3	Daily	Seeded assignment	\N
-829	8	Approved	\N	9	\N	Seeded assignment	\N
-353	4	Approved	\N	1	Monthly	Seeded request	\N
-616	23	Approved	Expert	8	Rarely	Seeded assignment	\N
-736	1	Approved	\N	10	\N	Seeded assignment	\N
-321	13	Requested	Intermediate	6	Daily	Seeded assignment	\N
-611	8	Requested	Beginner	2	\N	Seeded assignment	\N
-156	24	Requested	Advanced	1	\N	Seeded assignment	2025-11-19 17:41:27.264874
-452	18	Requested	Advanced	\N	\N	Seeded request	2025-11-12 21:31:27.264874
-818	3	Requested	Intermediate	\N	Rarely	Seeded request	\N
-151	11	Requested	Beginner	\N	Monthly	Seeded request	2025-11-23 03:40:27.264874
-937	3	Approved	Expert	8	\N	Seeded assignment	\N
-647	18	Requested	Advanced	3	\N	Seeded request	2025-11-23 02:51:27.264874
-185	25	Requested	Expert	8	\N	Seeded request	\N
-864	7	Approved	Expert	3	\N	Seeded request	\N
-921	11	Requested	Beginner	7	Daily	Seeded assignment	\N
-949	13	Requested	\N	1	Weekly	Seeded request	2025-11-29 12:12:27.264874
-253	11	Approved	Beginner	2	\N	Seeded assignment	2025-11-11 08:03:27.264874
-505	13	Approved	Advanced	1	\N	Seeded assignment	\N
-894	8	Requested	\N	2	\N	Seeded request	\N
-635	3	Approved	Beginner	5	Monthly	Seeded assignment	\N
-877	10	Approved	\N	10	Weekly	Seeded assignment	2025-11-03 18:15:27.264874
-563	19	Requested	\N	\N	Monthly	Seeded assignment	2025-11-19 08:12:27.264874
-786	20	Requested	Intermediate	\N	Weekly	Seeded assignment	\N
-170	4	Approved	Beginner	9	Daily	Seeded request	\N
-259	7	Requested	\N	8	\N	Seeded request	2025-11-14 07:45:27.264874
-667	20	Approved	Intermediate	\N	\N	Seeded assignment	\N
-959	10	Approved	\N	10	Weekly	Seeded assignment	2025-11-09 16:29:27.264874
-105	8	Approved	Advanced	\N	Rarely	Seeded assignment	\N
-699	17	Approved	\N	\N	Daily	Seeded assignment	\N
-550	18	Approved	Expert	\N	\N	Seeded request	2025-11-25 05:56:27.264874
-162	17	Requested	Intermediate	8	\N	Seeded assignment	\N
-465	19	Requested	Advanced	\N	Monthly	Seeded assignment	2025-11-03 11:16:27.264874
-171	6	Requested	Intermediate	\N	\N	Seeded assignment	\N
-690	9	Approved	Beginner	6	Daily	Seeded assignment	\N
-381	13	Approved	Intermediate	\N	\N	Seeded assignment	\N
-38	4	Approved	Intermediate	0	\N	Seeded assignment	2025-11-16 00:58:27.264874
-927	13	Requested	Beginner	\N	Monthly	Seeded request	\N
-594	13	Approved	\N	2	\N	Seeded request	\N
-245	7	Approved	\N	\N	Daily	Seeded assignment	2025-11-18 19:13:27.264874
-847	5	Approved	Intermediate	0	\N	Seeded request	\N
-982	8	Requested	\N	9	Weekly	Seeded assignment	\N
-950	24	Requested	Expert	5	\N	Seeded assignment	2025-11-30 03:04:27.264874
-390	21	Approved	Intermediate	7	\N	Seeded assignment	2025-11-16 10:40:27.264874
-153	22	Approved	Intermediate	2	Monthly	Seeded assignment	\N
-274	4	Requested	Expert	\N	\N	Seeded request	\N
-905	7	Approved	\N	\N	Weekly	Seeded request	\N
-469	7	Requested	Advanced	10	Daily	Seeded request	2025-11-16 16:02:27.264874
-771	8	Requested	Intermediate	9	\N	Seeded assignment	2025-11-12 16:19:27.264874
-507	3	Approved	Expert	\N	Weekly	Seeded assignment	2025-11-12 16:36:27.264874
-763	11	Approved	\N	\N	\N	Seeded request	\N
-627	16	Approved	Intermediate	10	Monthly	Seeded assignment	\N
-207	10	Requested	\N	7	\N	Seeded assignment	\N
-458	12	Approved	\N	6	\N	Seeded request	\N
-131	20	Approved	Beginner	\N	Weekly	Seeded assignment	2025-11-08 15:38:27.264874
-752	11	Approved	\N	6	Rarely	Seeded request	\N
-328	6	Approved	\N	10	Weekly	Seeded assignment	\N
-418	10	Approved	Expert	10	\N	Seeded assignment	\N
-413	12	Approved	Expert	0	Daily	Seeded assignment	\N
-537	20	Approved	Intermediate	\N	Rarely	Seeded assignment	2025-11-28 04:54:27.264874
-696	16	Approved	\N	\N	Rarely	Seeded assignment	\N
-198	12	Requested	Beginner	2	\N	Seeded request	\N
-137	19	Approved	Intermediate	1	Rarely	Seeded assignment	2025-11-10 08:56:27.264874
-252	20	Approved	Expert	\N	\N	Seeded assignment	\N
-272	6	Approved	Expert	8	Weekly	Seeded assignment	\N
-463	10	Requested	\N	5	Rarely	Seeded request	\N
-162	21	Approved	Beginner	\N	Daily	Seeded assignment	\N
-590	1	Approved	\N	\N	\N	Seeded assignment	2025-11-03 10:30:27.264874
-853	11	Approved	Intermediate	6	\N	Seeded assignment	\N
-591	17	Approved	\N	\N	Monthly	Seeded assignment	\N
-745	19	Approved	Expert	3	Monthly	Seeded request	2025-11-13 04:09:27.264874
-588	12	Approved	Advanced	8	Weekly	Seeded request	\N
-521	17	Approved	Expert	1	Monthly	Seeded assignment	2025-11-13 04:29:27.264874
-231	6	Approved	Expert	\N	Weekly	Seeded assignment	\N
-459	4	Approved	Beginner	2	\N	Seeded assignment	2025-11-22 05:39:27.264874
-268	13	Approved	\N	3	Weekly	Seeded assignment	\N
-741	16	Requested	Advanced	\N	Rarely	Seeded assignment	\N
-715	17	Approved	Beginner	\N	\N	Seeded assignment	2025-11-13 07:05:27.264874
-234	18	Approved	Expert	\N	Rarely	Seeded request	\N
-362	21	Approved	Expert	9	\N	Seeded request	\N
-674	11	Requested	Beginner	\N	Daily	Seeded assignment	\N
-56	22	Approved	Expert	\N	Rarely	Seeded assignment	2025-11-06 21:21:27.264874
-118	6	Requested	\N	\N	\N	Seeded assignment	\N
-361	16	Requested	\N	1	Daily	Seeded request	\N
-912	7	Approved	\N	10	\N	Seeded assignment	\N
-956	11	Approved	\N	6	\N	Seeded request	\N
-543	3	Approved	\N	\N	Daily	Seeded request	2025-11-19 00:06:27.264874
-644	20	Approved	\N	5	Rarely	Seeded assignment	\N
-599	5	Requested	Beginner	2	Rarely	Seeded assignment	\N
-726	23	Approved	\N	\N	\N	Seeded request	2025-11-11 03:35:27.264874
-282	12	Approved	\N	8	Daily	Seeded assignment	\N
-869	3	Approved	\N	4	Rarely	Seeded request	\N
-63	6	Requested	\N	2	\N	Seeded request	\N
-296	12	Approved	Beginner	0	\N	Seeded assignment	\N
-915	9	Approved	Expert	\N	Daily	Seeded assignment	\N
-524	20	Approved	Expert	3	Monthly	Seeded assignment	\N
-280	22	Approved	Advanced	\N	\N	Seeded request	2025-11-25 06:05:27.264874
-876	21	Requested	Advanced	\N	Monthly	Seeded assignment	\N
-90	10	Approved	Intermediate	3	Weekly	Seeded assignment	\N
-372	7	Approved	Intermediate	\N	Daily	Seeded assignment	\N
-516	17	Requested	Advanced	\N	\N	Seeded assignment	2025-11-20 05:40:27.264874
-308	6	Approved	\N	5	\N	Seeded assignment	2025-12-02 17:35:27.264874
-659	8	Requested	Expert	8	\N	Seeded request	\N
-59	10	Requested	\N	\N	Weekly	Seeded assignment	2025-11-17 14:56:27.264874
-473	1	Approved	Advanced	\N	\N	Seeded assignment	2025-11-23 02:12:27.264874
-80	21	Approved	Advanced	4	Monthly	Seeded request	2025-11-29 07:21:27.264874
-408	18	Requested	\N	1	\N	Seeded request	\N
-566	9	Approved	\N	\N	Rarely	Seeded assignment	2025-11-10 06:40:27.264874
-719	3	Approved	\N	7	Daily	Seeded assignment	\N
-200	23	Requested	Expert	8	Daily	Seeded assignment	\N
-210	8	Requested	\N	\N	Rarely	Seeded request	\N
-689	1	Requested	Advanced	3	Weekly	Seeded request	2025-11-16 16:36:27.264874
-851	4	Approved	Intermediate	7	\N	Seeded request	\N
-933	6	Requested	Beginner	8	Daily	Seeded assignment	2025-11-29 14:09:27.264874
-84	17	Approved	\N	5	Weekly	Seeded request	\N
-683	21	Approved	Advanced	\N	\N	Seeded request	\N
-336	25	Approved	Expert	2	Rarely	Seeded request	\N
-355	16	Approved	Intermediate	\N	Monthly	Seeded assignment	2025-11-13 10:26:27.264874
-182	16	Approved	Expert	\N	Weekly	Seeded assignment	\N
-783	6	Approved	Expert	5	Daily	Seeded assignment	2025-11-07 20:42:27.264874
-556	9	Requested	Beginner	7	\N	Seeded request	\N
-1	7	Requested	Expert	\N	\N	Seeded request	2025-11-10 13:07:27.264874
-369	25	Approved	Intermediate	8	Weekly	Seeded assignment	\N
-186	11	Requested	\N	8	Daily	Seeded assignment	2025-11-10 03:47:27.264874
-837	3	Approved	\N	5	Daily	Seeded assignment	\N
-357	12	Approved	Advanced	2	\N	Seeded assignment	2025-11-11 09:22:27.264874
-737	1	Approved	\N	\N	Monthly	Seeded request	\N
-878	8	Requested	\N	\N	Daily	Seeded assignment	2025-11-19 06:44:27.264874
-35	6	Requested	\N	1	Rarely	Seeded assignment	\N
-299	24	Approved	Advanced	3	Monthly	Seeded assignment	2025-11-30 12:35:27.264874
-484	16	Requested	Expert	\N	Daily	Seeded request	2025-11-14 06:33:27.264874
-602	6	Approved	Intermediate	4	\N	Seeded request	\N
-577	19	Requested	\N	8	\N	Seeded assignment	2025-11-07 14:55:27.264874
-378	17	Requested	Beginner	\N	\N	Seeded request	\N
-471	18	Requested	Intermediate	9	\N	Seeded assignment	\N
-459	3	Approved	\N	\N	\N	Seeded request	2025-11-22 07:05:27.264874
-17	12	Approved	Expert	0	Monthly	Seeded request	\N
-550	19	Requested	Intermediate	\N	Monthly	Seeded assignment	\N
-307	5	Approved	\N	\N	\N	Seeded request	2025-11-07 09:51:27.264874
-284	18	Approved	\N	\N	\N	Seeded assignment	\N
-655	20	Requested	Intermediate	\N	\N	Seeded assignment	2025-11-20 21:42:27.264874
-787	6	Requested	Intermediate	\N	Rarely	Seeded assignment	\N
-861	12	Requested	Beginner	5	Monthly	Seeded assignment	\N
-948	7	Requested	Advanced	0	\N	Seeded request	2025-11-11 21:39:27.264874
-821	24	Approved	Intermediate	\N	Weekly	Seeded assignment	2025-11-22 12:42:27.264874
-970	9	Approved	Advanced	\N	Rarely	Seeded assignment	\N
-442	18	Requested	Beginner	7	\N	Seeded request	\N
-200	7	Approved	Advanced	5	Weekly	Seeded assignment	\N
-287	1	Approved	Beginner	4	\N	Seeded assignment	2025-11-05 18:12:27.264874
-513	10	Approved	\N	8	\N	Seeded assignment	\N
-873	6	Approved	\N	2	\N	Seeded request	\N
-449	5	Approved	Beginner	\N	Rarely	Seeded assignment	\N
-485	16	Approved	Expert	\N	Daily	Seeded request	2025-11-20 01:14:27.264874
-939	24	Requested	\N	0	\N	Seeded assignment	2025-11-27 22:22:27.264874
-127	24	Approved	Advanced	9	Weekly	Seeded request	\N
-150	8	Approved	Beginner	\N	Rarely	Seeded assignment	\N
-943	8	Approved	Expert	\N	\N	Seeded assignment	2025-11-12 20:48:27.264874
-21	22	Requested	Advanced	\N	\N	Seeded request	2025-11-12 12:10:27.264874
-344	6	Approved	\N	2	\N	Seeded request	\N
-666	23	Requested	\N	9	Weekly	Seeded assignment	\N
-282	20	Approved	Advanced	9	Monthly	Seeded assignment	2025-11-19 08:19:27.264874
-368	7	Approved	Advanced	5	\N	Seeded request	\N
-776	6	Requested	Expert	8	\N	Seeded assignment	2025-11-18 17:50:27.264874
-126	17	Requested	Intermediate	6	Rarely	Seeded request	2025-11-17 07:21:27.264874
-815	18	Approved	\N	\N	\N	Seeded assignment	\N
-597	6	Approved	Advanced	\N	Weekly	Seeded request	\N
-552	25	Approved	Intermediate	3	Daily	Seeded assignment	\N
-800	1	Approved	Intermediate	6	\N	Seeded assignment	2025-11-28 12:31:27.264874
-20	19	Approved	\N	9	Monthly	Seeded request	\N
-245	23	Requested	\N	\N	Daily	Seeded request	\N
-631	3	Approved	Advanced	\N	Daily	Seeded assignment	\N
-156	10	Approved	Beginner	6	Weekly	Seeded assignment	\N
-189	22	Requested	Beginner	8	Weekly	Seeded request	\N
-169	6	Requested	Advanced	3	Rarely	Seeded assignment	\N
-486	19	Requested	\N	3	Rarely	Seeded assignment	\N
-812	11	Requested	Expert	\N	\N	Seeded assignment	\N
-886	9	Approved	\N	7	\N	Seeded assignment	\N
-518	19	Requested	Intermediate	3	Monthly	Seeded assignment	2025-11-05 19:14:27.264874
-731	6	Approved	Beginner	0	\N	Seeded request	2025-12-03 04:15:27.264874
-727	9	Approved	Intermediate	2	\N	Seeded assignment	2025-11-28 17:17:27.264874
-915	1	Approved	\N	\N	Rarely	Seeded assignment	2025-11-22 04:08:27.264874
-240	8	Approved	Expert	\N	Daily	Seeded assignment	2025-12-02 21:19:27.264874
-11	18	Requested	\N	\N	\N	Seeded assignment	\N
-980	11	Requested	Beginner	7	Daily	Seeded assignment	\N
-71	20	Approved	Beginner	1	\N	Seeded assignment	\N
-404	1	Approved	Expert	8	Weekly	Seeded assignment	2025-11-25 23:48:27.264874
-645	6	Requested	Intermediate	3	Rarely	Seeded request	\N
-83	3	Approved	\N	1	Monthly	Seeded request	\N
-194	10	Requested	Advanced	1	\N	Seeded assignment	\N
-475	4	Approved	\N	\N	Weekly	Seeded request	\N
-515	22	Requested	\N	2	Weekly	Seeded request	2025-11-05 23:44:27.264874
-338	25	Requested	\N	3	\N	Seeded assignment	2025-12-02 23:47:27.264874
-612	8	Approved	\N	\N	Daily	Seeded assignment	2025-11-03 13:47:27.264874
-925	8	Requested	Expert	3	\N	Seeded assignment	\N
-271	25	Approved	Advanced	3	Rarely	Seeded request	\N
-849	17	Requested	Advanced	2	Daily	Seeded assignment	\N
-538	8	Approved	Expert	0	Weekly	Seeded request	\N
-764	17	Approved	Beginner	6	\N	Seeded assignment	\N
-384	19	Requested	Beginner	6	\N	Seeded request	2025-11-16 03:58:27.264874
-370	24	Approved	Advanced	7	Monthly	Seeded request	\N
-633	11	Approved	Advanced	5	\N	Seeded request	\N
-131	12	Approved	Expert	4	Rarely	Seeded assignment	2025-11-17 12:34:27.264874
-458	20	Approved	Advanced	10	Weekly	Seeded request	\N
-700	19	Approved	Intermediate	\N	\N	Seeded request	2025-11-13 05:19:27.264874
-410	7	Approved	\N	1	\N	Seeded assignment	\N
-882	18	Requested	Beginner	9	Daily	Seeded assignment	\N
-168	13	Approved	Intermediate	4	Daily	Seeded assignment	2025-11-09 23:56:27.264874
-347	7	Requested	\N	\N	Weekly	Seeded request	\N
-477	17	Requested	Beginner	8	Daily	Seeded assignment	2025-12-02 07:20:27.264874
-499	16	Approved	Expert	1	Weekly	Seeded assignment	\N
-819	9	Approved	\N	\N	\N	Seeded request	2025-11-07 16:38:27.264874
-45	23	Requested	Intermediate	9	Weekly	Seeded request	\N
-25	5	Approved	Advanced	\N	Monthly	Seeded assignment	2025-11-17 04:19:27.264874
-689	9	Requested	Beginner	0	Rarely	Seeded request	\N
-893	9	Approved	Expert	6	Rarely	Seeded request	\N
-217	24	Approved	Expert	\N	\N	Seeded request	\N
-654	13	Requested	\N	5	\N	Seeded assignment	\N
-163	9	Requested	Expert	\N	\N	Seeded assignment	2025-11-04 21:17:27.264874
-744	8	Approved	Beginner	8	\N	Seeded assignment	\N
-576	13	Approved	Expert	0	Rarely	Seeded assignment	2025-11-05 10:58:27.264874
-104	9	Approved	Beginner	2	Daily	Seeded request	2025-11-27 00:22:27.264874
-857	25	Approved	Beginner	6	Rarely	Seeded assignment	\N
-433	18	Approved	\N	10	Monthly	Seeded assignment	2025-11-08 16:55:27.264874
-142	22	Approved	Advanced	5	Daily	Seeded assignment	\N
-333	11	Requested	Advanced	\N	Monthly	Seeded assignment	2025-11-15 14:04:27.264874
-834	4	Requested	\N	\N	Rarely	Seeded assignment	\N
-65	5	Approved	\N	9	\N	Seeded assignment	\N
-354	7	Approved	\N	\N	\N	Seeded request	2025-11-15 10:18:27.264874
-133	19	Requested	Expert	\N	\N	Seeded assignment	2025-11-08 10:54:27.264874
-108	5	Requested	Intermediate	\N	\N	Seeded request	2025-11-19 18:31:27.264874
-303	12	Approved	Advanced	7	Monthly	Seeded request	2025-11-12 20:43:27.264874
-493	13	Approved	Expert	9	Monthly	Seeded request	\N
-228	16	Requested	\N	\N	Rarely	Seeded assignment	\N
-135	16	Requested	Advanced	10	\N	Seeded assignment	2025-11-03 15:11:27.264874
-33	1	Requested	\N	1	Weekly	Seeded assignment	\N
-357	22	Approved	\N	6	\N	Seeded assignment	2025-11-11 01:34:27.264874
-844	23	Approved	Intermediate	\N	Weekly	Seeded assignment	2025-11-29 15:25:27.264874
-107	13	Requested	\N	6	Monthly	Seeded request	2025-11-18 15:06:27.264874
-179	8	Requested	\N	7	\N	Seeded request	2025-11-30 01:10:27.264874
-755	19	Requested	Advanced	0	Rarely	Seeded request	2025-11-10 15:17:27.264874
-492	19	Requested	Advanced	1	\N	Seeded request	\N
-820	13	Requested	Expert	1	\N	Seeded assignment	\N
-504	1	Approved	Expert	\N	Rarely	Seeded assignment	2025-11-27 16:43:27.264874
-551	8	Approved	\N	0	\N	Seeded assignment	\N
-12	3	Approved	Expert	2	\N	Seeded assignment	\N
-419	20	Approved	\N	\N	\N	Seeded assignment	\N
-534	23	Approved	\N	\N	Monthly	Seeded request	2025-11-21 02:33:27.264874
-644	22	Approved	\N	0	Weekly	Seeded assignment	\N
-147	21	Approved	Advanced	\N	Monthly	Seeded assignment	\N
-894	10	Requested	\N	\N	\N	Seeded assignment	\N
-314	20	Approved	\N	9	Daily	Seeded assignment	\N
-547	11	Approved	Expert	\N	\N	Seeded assignment	\N
-805	4	Requested	\N	\N	\N	Seeded assignment	2025-11-16 15:01:27.264874
-909	10	Requested	\N	4	Weekly	Seeded assignment	2025-11-07 13:36:27.264874
-269	23	Approved	Expert	9	\N	Seeded assignment	2025-11-13 15:42:27.264874
-587	6	Approved	Expert	\N	\N	Seeded request	\N
-914	22	Approved	\N	\N	\N	Seeded request	2025-11-14 17:24:27.264874
-421	19	Requested	\N	9	Daily	Seeded request	\N
-23	25	Approved	\N	\N	Rarely	Seeded assignment	2025-11-07 21:30:27.264874
-462	18	Requested	Intermediate	\N	\N	Seeded assignment	2025-11-17 09:52:27.264874
-598	21	Requested	\N	8	\N	Seeded assignment	\N
-884	21	Approved	Beginner	1	Rarely	Seeded assignment	2025-11-30 03:10:27.264874
-424	3	Approved	Intermediate	\N	\N	Seeded assignment	2025-11-12 17:54:27.264874
-281	12	Approved	Intermediate	10	Monthly	Seeded assignment	\N
-408	3	Approved	Advanced	7	Weekly	Seeded assignment	\N
-816	22	Approved	\N	\N	Monthly	Seeded assignment	2025-11-04 10:17:27.264874
-442	4	Requested	Expert	\N	Rarely	Seeded assignment	\N
-176	21	Approved	\N	8	Rarely	Seeded request	2025-11-22 01:57:27.264874
-904	25	Approved	Beginner	8	\N	Seeded assignment	2025-12-01 21:21:27.264874
-694	5	Approved	Expert	\N	\N	Seeded request	\N
-891	20	Requested	\N	9	Rarely	Seeded assignment	2025-12-01 15:18:27.264874
-774	1	Requested	Expert	5	\N	Seeded request	2025-11-26 02:17:27.264874
-737	11	Requested	Expert	1	Weekly	Seeded assignment	\N
-507	18	Requested	Beginner	5	Rarely	Seeded request	2025-11-27 18:18:27.264874
-734	7	Requested	\N	4	\N	Seeded request	\N
-729	20	Approved	\N	7	Daily	Seeded assignment	2025-11-17 15:56:27.264874
-712	12	Requested	\N	7	\N	Seeded request	2025-11-13 17:27:27.264874
-782	11	Requested	Beginner	4	Weekly	Seeded assignment	\N
-867	24	Approved	\N	4	Rarely	Seeded request	\N
-64	3	Approved	\N	\N	Rarely	Seeded request	2025-11-14 09:19:27.264874
-299	8	Approved	Intermediate	\N	Daily	Seeded request	\N
-640	16	Approved	Expert	6	Weekly	Seeded assignment	2025-11-26 09:32:27.264874
-160	16	Requested	Expert	6	Daily	Seeded assignment	\N
-431	21	Requested	Beginner	1	\N	Seeded assignment	\N
-487	6	Approved	\N	2	Rarely	Seeded request	\N
-56	20	Requested	Intermediate	8	Weekly	Seeded request	\N
-523	1	Requested	Intermediate	8	Daily	Seeded assignment	\N
-561	17	Approved	\N	\N	\N	Seeded assignment	\N
-229	17	Requested	Advanced	1	\N	Seeded assignment	\N
-896	5	Approved	Advanced	8	Daily	Seeded assignment	\N
-839	1	Approved	Intermediate	6	Daily	Seeded assignment	2025-11-11 10:07:27.264874
-974	22	Requested	Advanced	1	Weekly	Seeded assignment	2025-11-20 00:26:27.264874
-77	20	Requested	\N	2	\N	Seeded request	2025-11-16 01:02:27.264874
-125	20	Approved	Expert	7	\N	Seeded request	\N
-906	17	Approved	Intermediate	5	Rarely	Seeded assignment	2025-11-22 03:06:27.264874
-926	24	Approved	\N	\N	Weekly	Seeded request	\N
-761	23	Approved	Beginner	\N	Weekly	Seeded assignment	\N
-211	20	Approved	Beginner	\N	\N	Seeded request	\N
-193	9	Approved	Expert	0	Daily	Seeded assignment	\N
-563	4	Requested	Intermediate	7	Weekly	Seeded assignment	\N
-879	12	Approved	Expert	9	Rarely	Seeded assignment	\N
-978	10	Requested	\N	\N	Monthly	Seeded assignment	\N
-385	7	Requested	Advanced	\N	Monthly	Seeded request	2025-11-06 18:37:27.264874
-441	7	Approved	Advanced	0	Daily	Seeded assignment	\N
-350	23	Requested	Expert	7	Weekly	Seeded request	\N
-439	8	Requested	\N	4	Weekly	Seeded assignment	\N
-740	21	Requested	\N	2	Daily	Seeded request	\N
-859	24	Approved	Expert	\N	Rarely	Seeded assignment	\N
-962	21	Approved	Intermediate	5	Monthly	Seeded assignment	2025-11-12 17:25:27.264874
-145	1	Requested	Intermediate	\N	Weekly	Seeded request	\N
-144	21	Requested	\N	5	Monthly	Seeded request	\N
-615	21	Approved	\N	\N	\N	Seeded assignment	2025-11-17 05:37:27.264874
-337	11	Requested	Expert	3	Monthly	Seeded assignment	\N
-4	10	Approved	\N	\N	\N	Seeded assignment	\N
-495	25	Approved	Intermediate	\N	Monthly	Seeded assignment	\N
-432	19	Approved	Expert	5	Weekly	Seeded assignment	2025-11-22 12:06:27.264874
-212	21	Approved	Beginner	5	\N	Seeded request	2025-11-10 17:32:27.264874
-614	16	Requested	Advanced	4	\N	Seeded assignment	2025-11-27 03:23:27.264874
-77	12	Approved	\N	0	\N	Seeded assignment	\N
-781	11	Requested	\N	4	Weekly	Seeded request	\N
-476	24	Approved	Expert	\N	Daily	Seeded assignment	\N
-438	8	Requested	Advanced	6	Weekly	Seeded assignment	2025-11-17 18:26:27.264874
-14	24	Approved	\N	\N	Rarely	Seeded assignment	\N
-684	16	Requested	Beginner	9	Daily	Seeded request	\N
-687	18	Approved	Advanced	\N	\N	Seeded assignment	\N
-466	16	Approved	Expert	\N	\N	Seeded assignment	\N
-12	4	Approved	\N	8	Rarely	Seeded request	\N
-819	11	Approved	\N	1	Daily	Seeded request	2025-11-28 14:15:27.264874
-658	7	Requested	\N	\N	Rarely	Seeded assignment	2025-11-05 03:01:27.264874
-928	5	Requested	\N	0	Daily	Seeded request	\N
-567	7	Approved	\N	5	Weekly	Seeded assignment	2025-11-24 16:53:27.264874
-766	17	Approved	\N	\N	Rarely	Seeded request	\N
-813	11	Requested	\N	5	\N	Seeded assignment	\N
-186	1	Approved	Intermediate	\N	Daily	Seeded assignment	2025-11-21 14:05:27.264874
-568	10	Requested	\N	9	\N	Seeded assignment	2025-11-27 20:16:27.264874
-661	19	Requested	Beginner	10	\N	Seeded assignment	2025-11-20 21:39:27.264874
-891	12	Approved	\N	6	Weekly	Seeded request	2025-11-23 13:30:27.264874
-324	4	Approved	Advanced	\N	\N	Seeded assignment	\N
-749	21	Requested	Advanced	6	\N	Seeded request	\N
-313	6	Approved	\N	\N	Daily	Seeded assignment	\N
-210	24	Requested	Advanced	\N	\N	Seeded assignment	\N
-508	3	Approved	\N	1	Weekly	Seeded assignment	2025-11-26 23:07:27.264874
-494	5	Requested	\N	4	\N	Seeded assignment	2025-12-01 20:00:27.264874
-557	23	Requested	Advanced	6	Daily	Seeded assignment	\N
-633	9	Requested	\N	\N	\N	Seeded assignment	2025-11-06 09:54:27.264874
-763	1	Requested	Beginner	1	Weekly	Seeded request	\N
-648	10	Approved	\N	2	\N	Seeded assignment	2025-11-03 21:30:27.264874
-791	25	Requested	Advanced	\N	Monthly	Seeded assignment	\N
-78	13	Requested	\N	\N	Daily	Seeded request	\N
-346	18	Requested	Expert	4	\N	Seeded request	\N
-929	25	Requested	Intermediate	\N	Rarely	Seeded request	\N
-315	4	Approved	\N	0	\N	Seeded assignment	2025-11-19 00:22:27.264874
-739	5	Approved	\N	\N	Weekly	Seeded request	2025-12-01 17:38:27.264874
-704	13	Approved	\N	1	\N	Seeded request	\N
-803	5	Requested	Beginner	\N	Monthly	Seeded request	\N
-232	5	Approved	Expert	\N	Weekly	Seeded request	\N
-222	17	Approved	Expert	\N	Weekly	Seeded request	\N
-284	3	Approved	Intermediate	2	Rarely	Seeded assignment	\N
-570	20	Requested	Beginner	\N	\N	Seeded assignment	2025-11-28 20:21:27.264874
-692	5	Requested	Beginner	9	\N	Seeded assignment	2025-11-12 19:11:27.264874
-242	10	Approved	\N	\N	\N	Seeded assignment	2025-11-25 06:28:27.264874
-688	7	Requested	Advanced	8	\N	Seeded assignment	\N
-938	18	Requested	Beginner	\N	\N	Seeded assignment	2025-11-13 13:56:27.264874
-793	25	Approved	\N	8	Weekly	Seeded assignment	2025-11-16 02:19:27.264874
-190	10	Approved	Intermediate	1	\N	Seeded assignment	2025-11-20 04:27:27.264874
-777	16	Requested	Beginner	\N	\N	Seeded assignment	2025-11-12 13:36:27.264874
-582	16	Requested	\N	6	Monthly	Seeded assignment	2025-11-27 23:44:27.264874
-177	4	Requested	\N	\N	Daily	Seeded assignment	\N
-246	23	Approved	Expert	9	\N	Seeded assignment	2025-11-13 01:29:27.264874
-419	12	Approved	\N	\N	\N	Seeded assignment	2025-11-14 10:10:27.264874
-835	7	Approved	Beginner	\N	\N	Seeded assignment	2025-11-23 10:00:27.264874
-72	16	Approved	\N	\N	Monthly	Seeded assignment	2025-11-30 04:27:27.264874
-941	5	Requested	Advanced	4	Weekly	Seeded assignment	2025-11-30 18:12:27.264874
-636	12	Requested	Beginner	\N	Rarely	Seeded request	\N
-174	17	Approved	\N	\N	Daily	Seeded request	\N
-167	22	Approved	\N	\N	\N	Seeded request	\N
-595	12	Requested	Beginner	6	Rarely	Seeded assignment	\N
-86	25	Approved	Expert	5	Daily	Seeded assignment	\N
-559	9	Approved	\N	\N	Weekly	Seeded request	2025-11-11 16:57:27.264874
-655	22	Approved	Advanced	3	Daily	Seeded request	2025-11-14 17:57:27.264874
-862	23	Approved	\N	8	Monthly	Seeded request	2025-11-14 08:30:27.264874
-818	19	Requested	Advanced	6	Weekly	Seeded request	\N
-447	8	Approved	\N	9	Weekly	Seeded assignment	2025-11-16 00:45:27.264874
-885	11	Approved	Advanced	0	Daily	Seeded assignment	\N
-522	24	Requested	\N	2	Daily	Seeded assignment	\N
-920	24	Approved	Intermediate	7	\N	Seeded assignment	2025-11-04 13:37:27.264874
-57	3	Requested	\N	10	Monthly	Seeded assignment	2025-11-28 15:31:27.264874
-442	3	Approved	\N	\N	Weekly	Seeded assignment	\N
-664	16	Requested	\N	\N	\N	Seeded request	\N
-908	10	Requested	\N	\N	\N	Seeded request	2025-11-28 05:36:27.264874
-114	7	Approved	Advanced	\N	Monthly	Seeded assignment	2025-11-18 17:19:27.264874
-436	17	Approved	\N	6	Monthly	Seeded request	\N
-546	11	Requested	\N	\N	\N	Seeded assignment	2025-11-20 14:13:27.264874
-750	7	Approved	Advanced	\N	Rarely	Seeded assignment	2025-11-16 09:44:27.264874
-611	24	Approved	\N	4	\N	Seeded request	\N
-776	25	Requested	\N	10	\N	Seeded request	\N
-641	7	Approved	Advanced	10	Rarely	Seeded request	2025-11-08 16:16:27.264874
-756	1	Approved	\N	0	Weekly	Seeded request	2025-11-16 01:41:27.264874
-156	8	Requested	Beginner	8	Daily	Seeded request	2025-11-11 01:44:27.264874
-253	1	Approved	\N	5	\N	Seeded request	\N
-300	12	Approved	Intermediate	9	\N	Seeded request	2025-11-28 23:33:27.264874
-230	9	Approved	Beginner	\N	Weekly	Seeded request	\N
-249	8	Requested	Expert	\N	\N	Seeded request	2025-11-24 11:47:27.264874
-361	13	Approved	\N	8	\N	Seeded request	\N
-240	10	Approved	\N	\N	Rarely	Seeded assignment	\N
-565	12	Requested	Intermediate	8	Daily	Seeded request	\N
-829	24	Requested	Advanced	1	Monthly	Seeded assignment	\N
-872	1	Approved	Beginner	8	\N	Seeded assignment	2025-11-04 05:32:27.264874
-919	13	Approved	\N	1	Daily	Seeded request	\N
-902	25	Approved	Advanced	\N	Daily	Seeded assignment	\N
-217	10	Approved	\N	\N	\N	Seeded assignment	\N
-855	23	Approved	\N	8	Weekly	Seeded assignment	\N
-29	6	Requested	Advanced	\N	Daily	Seeded assignment	2025-11-27 07:11:27.264874
-928	12	Approved	Beginner	\N	Monthly	Seeded assignment	\N
-612	10	Approved	\N	\N	Daily	Seeded request	\N
-443	11	Approved	Beginner	3	Daily	Seeded request	\N
-538	10	Approved	Expert	8	Rarely	Seeded assignment	\N
-758	11	Requested	Advanced	\N	Daily	Seeded assignment	2025-11-21 02:51:27.264874
-106	4	Requested	\N	\N	Rarely	Seeded assignment	\N
-986	7	Approved	Intermediate	4	\N	Seeded assignment	\N
-875	11	Requested	Intermediate	6	\N	Seeded assignment	\N
-822	20	Approved	Intermediate	10	Weekly	Seeded request	\N
-125	5	Approved	Intermediate	8	Monthly	Seeded request	2025-11-16 04:46:27.264874
-681	4	Requested	Beginner	1	Monthly	Seeded assignment	\N
-592	17	Approved	Intermediate	4	Daily	Seeded request	\N
-15	5	Requested	Intermediate	6	Monthly	Seeded assignment	2025-11-30 19:08:27.264874
-286	7	Approved	\N	3	\N	Seeded assignment	\N
-721	8	Approved	Expert	\N	\N	Seeded assignment	\N
-93	9	Approved	Expert	9	Monthly	Seeded request	\N
-725	18	Approved	\N	4	Monthly	Seeded assignment	\N
-195	23	Approved	Expert	2	\N	Seeded assignment	\N
-647	4	Approved	Advanced	7	Daily	Seeded assignment	2025-11-10 20:18:27.264874
-427	11	Approved	Intermediate	\N	\N	Seeded assignment	\N
-894	24	Approved	Advanced	3	Monthly	Seeded request	2025-11-22 23:51:27.264874
-865	12	Requested	Expert	9	Rarely	Seeded request	\N
-757	17	Approved	\N	\N	Rarely	Seeded assignment	\N
-475	19	Approved	Advanced	8	Monthly	Seeded request	\N
-352	8	Requested	\N	1	\N	Seeded request	2025-11-17 04:13:27.264874
-883	3	Approved	Expert	\N	Daily	Seeded assignment	2025-11-13 20:53:27.264874
-703	8	Approved	Beginner	1	\N	Seeded assignment	\N
-802	1	Approved	\N	\N	Monthly	Seeded assignment	\N
-887	1	Requested	\N	1	\N	Seeded assignment	2025-11-23 16:07:27.264874
-867	10	Approved	\N	6	Weekly	Seeded assignment	\N
-213	9	Approved	\N	5	Monthly	Seeded request	\N
-486	4	Requested	Advanced	\N	Rarely	Seeded request	\N
-643	20	Approved	\N	8	Daily	Seeded assignment	2025-11-04 15:04:27.264874
-751	23	Requested	\N	9	Rarely	Seeded assignment	\N
-660	8	Approved	Advanced	\N	Weekly	Seeded request	\N
-828	23	Approved	\N	1	Rarely	Seeded assignment	2025-11-27 14:26:27.264874
-108	20	Requested	Advanced	\N	Weekly	Seeded request	\N
-852	16	Requested	Beginner	5	Rarely	Seeded request	\N
-962	17	Approved	Expert	0	\N	Seeded assignment	\N
-224	8	Approved	Expert	6	\N	Seeded request	\N
-399	16	Approved	\N	2	Daily	Seeded assignment	2025-11-24 16:43:27.264874
-708	7	Approved	\N	9	\N	Seeded request	2025-11-30 07:15:27.264874
-50	8	Requested	Intermediate	10	\N	Seeded assignment	\N
-251	22	Approved	\N	\N	Rarely	Seeded assignment	\N
-837	19	Approved	\N	\N	\N	Seeded assignment	2025-11-14 19:20:27.264874
-450	6	Approved	\N	6	\N	Seeded assignment	2025-11-10 05:47:27.264874
-513	8	Requested	\N	10	\N	Seeded assignment	\N
-492	18	Approved	\N	\N	Weekly	Seeded request	2025-11-26 19:28:27.264874
-586	8	Requested	\N	\N	Monthly	Seeded assignment	2025-11-07 11:38:27.264874
-978	24	Approved	Expert	\N	Monthly	Seeded assignment	2025-12-02 16:07:27.264874
-572	24	Approved	Beginner	\N	Monthly	Seeded assignment	\N
-549	16	Approved	\N	\N	Weekly	Seeded assignment	\N
-838	3	Requested	\N	\N	Weekly	Seeded request	2025-11-25 13:17:27.264874
-926	10	Approved	\N	\N	\N	Seeded assignment	\N
-804	12	Approved	\N	5	Rarely	Seeded request	\N
-276	22	Approved	Beginner	8	Weekly	Seeded assignment	\N
-279	18	Requested	\N	5	Daily	Seeded request	\N
-645	25	Requested	Intermediate	6	Rarely	Seeded assignment	2025-11-30 03:26:27.264874
-133	18	Approved	\N	\N	Monthly	Seeded request	\N
-739	12	Approved	Beginner	8	\N	Seeded assignment	2025-11-23 03:22:27.264874
-700	4	Approved	Advanced	\N	Monthly	Seeded assignment	2025-12-02 17:42:27.264874
-130	17	Requested	\N	\N	Daily	Seeded assignment	2025-11-27 09:06:27.264874
-320	13	Requested	Beginner	\N	\N	Seeded assignment	\N
-273	6	Approved	\N	2	Rarely	Seeded assignment	\N
-433	19	Approved	Advanced	8	Rarely	Seeded request	2025-11-06 04:47:27.264874
-529	8	Approved	Expert	2	Rarely	Seeded request	\N
-770	19	Approved	\N	8	\N	Seeded assignment	\N
-169	25	Requested	Advanced	\N	\N	Seeded request	\N
-247	21	Approved	Advanced	9	\N	Seeded request	\N
-87	25	Approved	Advanced	\N	\N	Seeded request	2025-11-09 17:44:27.264874
-772	17	Requested	Advanced	\N	Monthly	Seeded request	\N
-801	1	Approved	Expert	10	Monthly	Seeded request	2025-12-01 00:41:27.264874
-124	21	Approved	\N	\N	\N	Seeded assignment	\N
-935	18	Approved	\N	\N	Weekly	Seeded assignment	\N
-786	22	Requested	\N	10	Weekly	Seeded assignment	2025-11-09 11:19:27.264874
-281	5	Approved	Expert	\N	Rarely	Seeded assignment	\N
-367	11	Requested	Expert	3	\N	Seeded request	\N
-119	9	Requested	\N	\N	Weekly	Seeded assignment	\N
-334	6	Approved	\N	9	Rarely	Seeded assignment	2025-12-01 13:02:27.264874
-870	8	Approved	Beginner	7	Monthly	Seeded assignment	\N
-401	5	Approved	\N	\N	Weekly	Seeded assignment	2025-11-23 21:04:27.264874
-570	5	Approved	Intermediate	0	\N	Seeded assignment	\N
-229	21	Requested	\N	4	Rarely	Seeded request	\N
-872	9	Approved	\N	\N	\N	Seeded assignment	\N
-223	25	Requested	Advanced	7	\N	Seeded request	2025-11-08 13:46:27.264874
-176	17	Requested	Advanced	4	Rarely	Seeded assignment	\N
-681	3	Requested	Expert	8	Rarely	Seeded request	\N
-454	7	Requested	Beginner	5	\N	Seeded assignment	\N
-957	16	Approved	\N	\N	\N	Seeded assignment	\N
-530	12	Requested	Advanced	3	Daily	Seeded request	\N
-502	8	Approved	Beginner	\N	\N	Seeded assignment	2025-11-05 03:45:27.264874
-444	19	Approved	\N	\N	\N	Seeded assignment	\N
-975	21	Requested	Advanced	2	\N	Seeded request	2025-11-08 06:36:27.264874
-165	5	Approved	Beginner	\N	\N	Seeded request	\N
-653	12	Requested	\N	\N	Monthly	Seeded assignment	\N
-289	20	Requested	Beginner	2	\N	Seeded request	\N
-568	24	Approved	\N	\N	Monthly	Seeded assignment	\N
-981	21	Approved	Beginner	1	Monthly	Seeded request	2025-11-11 01:55:27.264874
-117	23	Approved	\N	3	Weekly	Seeded assignment	\N
-650	24	Approved	\N	2	Daily	Seeded request	2025-11-20 22:44:27.264874
-577	3	Approved	Advanced	\N	\N	Seeded request	\N
-941	20	Requested	\N	\N	Rarely	Seeded assignment	2025-11-26 11:07:27.264874
-938	19	Approved	Expert	\N	Rarely	Seeded assignment	2025-11-17 11:58:27.264874
-701	20	Approved	\N	3	Monthly	Seeded request	2025-11-10 02:30:27.264874
-101	9	Requested	\N	1	\N	Seeded request	2025-11-28 12:12:27.264874
-584	10	Requested	Expert	1	\N	Seeded assignment	\N
-550	3	Approved	\N	\N	\N	Seeded request	\N
-379	16	Approved	\N	6	\N	Seeded assignment	2025-11-11 14:26:27.264874
-220	17	Approved	\N	10	\N	Seeded request	\N
-643	12	Requested	Beginner	\N	Daily	Seeded assignment	\N
-976	13	Approved	Expert	\N	Rarely	Seeded assignment	2025-11-16 17:04:27.264874
-826	6	Approved	Beginner	0	Monthly	Seeded assignment	2025-11-23 01:10:27.264874
-897	13	Approved	Expert	2	\N	Seeded assignment	\N
-745	4	Approved	Beginner	5	Weekly	Seeded request	\N
-346	19	Approved	\N	\N	Weekly	Seeded assignment	\N
-48	7	Approved	Beginner	\N	Rarely	Seeded assignment	\N
-910	16	Approved	Beginner	2	Daily	Seeded assignment	2025-11-09 06:23:27.264874
-7	25	Requested	Beginner	\N	Monthly	Seeded request	2025-11-28 00:12:27.264874
-16	24	Approved	Intermediate	4	\N	Seeded request	\N
-197	23	Requested	Expert	\N	\N	Seeded request	\N
-515	5	Approved	Expert	9	Weekly	Seeded assignment	\N
-916	17	Approved	\N	7	\N	Seeded assignment	\N
-982	10	Approved	\N	\N	Daily	Seeded assignment	\N
-369	6	Approved	\N	\N	Rarely	Seeded request	\N
-622	7	Requested	\N	5	Rarely	Seeded assignment	\N
-984	19	Approved	\N	\N	Weekly	Seeded request	\N
-384	3	Approved	Expert	2	\N	Seeded request	2025-11-23 18:39:27.264874
-600	11	Approved	Advanced	7	Rarely	Seeded assignment	2025-11-18 22:22:27.264874
-879	5	Requested	\N	10	\N	Seeded assignment	\N
-82	1	Approved	Beginner	\N	Rarely	Seeded assignment	\N
-593	18	Approved	Intermediate	\N	\N	Seeded request	2025-11-09 07:59:27.264874
-360	21	Requested	Expert	\N	Daily	Seeded assignment	\N
-702	23	Approved	\N	\N	Rarely	Seeded request	2025-11-16 15:14:27.264874
-26	22	Approved	\N	8	Rarely	Seeded assignment	\N
-202	20	Approved	Advanced	7	\N	Seeded assignment	2025-11-09 11:57:27.264874
-394	8	Requested	\N	9	\N	Seeded assignment	2025-11-08 02:11:27.264874
-771	10	Requested	Expert	\N	\N	Seeded request	\N
-111	21	Approved	Advanced	0	Weekly	Seeded assignment	2025-11-28 02:06:27.264874
-562	21	Approved	Intermediate	\N	\N	Seeded assignment	\N
-887	9	Requested	\N	1	Monthly	Seeded assignment	\N
-922	6	Approved	\N	\N	\N	Seeded assignment	2025-12-03 01:21:27.264874
-767	23	Requested	Expert	\N	Rarely	Seeded request	2025-11-11 16:31:27.264874
-359	22	Approved	Intermediate	\N	Weekly	Seeded assignment	2025-11-14 17:40:27.264874
-213	1	Approved	Advanced	9	\N	Seeded assignment	\N
-571	7	Approved	\N	6	Monthly	Seeded request	\N
-952	5	Requested	Advanced	0	Rarely	Seeded assignment	\N
-928	20	Approved	Advanced	\N	Daily	Seeded assignment	\N
-598	17	Approved	\N	\N	Weekly	Seeded assignment	\N
-890	21	Approved	\N	\N	Daily	Seeded request	\N
-91	13	Requested	Intermediate	4	Daily	Seeded assignment	2025-11-27 18:56:27.264874
-13	13	Requested	\N	\N	\N	Seeded request	\N
-625	18	Approved	\N	3	Rarely	Seeded assignment	2025-11-06 19:11:27.264874
-801	9	Requested	\N	9	\N	Seeded request	2025-11-14 17:47:27.264874
-409	23	Approved	\N	\N	\N	Seeded assignment	\N
-148	24	Approved	\N	10	\N	Seeded assignment	2025-11-09 07:54:27.264874
-236	24	Requested	Advanced	\N	Weekly	Seeded assignment	\N
-330	3	Approved	\N	5	\N	Seeded assignment	\N
-472	17	Approved	Intermediate	1	Weekly	Seeded assignment	\N
-620	3	Approved	Intermediate	0	\N	Seeded request	\N
-209	9	Requested	Expert	0	\N	Seeded request	2025-11-22 10:27:27.264874
-544	21	Approved	\N	0	\N	Seeded request	2025-11-05 12:35:27.264874
-218	1	Approved	\N	10	\N	Seeded assignment	2025-11-26 08:04:27.264874
-440	11	Approved	\N	\N	Monthly	Seeded assignment	2025-11-07 10:36:27.264874
-854	24	Approved	Expert	\N	\N	Seeded request	\N
-286	23	Approved	\N	1	Monthly	Seeded request	2025-11-15 16:18:27.264874
-63	25	Approved	Intermediate	4	Daily	Seeded assignment	\N
-851	19	Approved	Advanced	\N	\N	Seeded request	\N
-233	13	Approved	Intermediate	3	Monthly	Seeded request	\N
-52	11	Requested	\N	\N	\N	Seeded assignment	2025-12-01 20:51:27.264874
-694	12	Approved	Intermediate	\N	\N	Seeded assignment	2025-11-25 13:59:27.264874
-129	7	Approved	\N	\N	Rarely	Seeded request	\N
-195	7	Approved	\N	10	Weekly	Seeded request	\N
-907	3	Approved	\N	5	Rarely	Seeded request	2025-11-06 02:42:27.264874
-337	8	Approved	\N	7	Daily	Seeded assignment	\N
-746	4	Approved	\N	1	Rarely	Seeded request	2025-12-01 10:15:27.264874
-405	17	Requested	\N	4	\N	Seeded assignment	2025-11-13 21:55:27.264874
-491	3	Approved	Intermediate	5	\N	Seeded request	\N
-705	8	Approved	\N	\N	Rarely	Seeded assignment	\N
-811	18	Requested	\N	1	\N	Seeded assignment	2025-11-14 01:37:27.264874
-202	7	Approved	Beginner	0	Rarely	Seeded request	\N
-807	25	Approved	\N	9	Monthly	Seeded request	\N
-886	8	Approved	Expert	\N	\N	Seeded request	2025-11-13 20:12:27.264874
-306	3	Approved	Advanced	\N	\N	Seeded assignment	2025-11-26 05:57:27.264874
-292	17	Requested	\N	4	\N	Seeded assignment	2025-11-22 07:34:27.264874
-632	12	Requested	\N	7	\N	Seeded assignment	\N
-417	18	Requested	Expert	1	\N	Seeded request	\N
-409	12	Approved	Advanced	3	Rarely	Seeded assignment	2025-11-18 07:40:27.264874
-605	18	Approved	Advanced	\N	Monthly	Seeded assignment	\N
-785	10	Approved	Advanced	\N	\N	Seeded assignment	\N
-963	3	Approved	Intermediate	3	Rarely	Seeded request	2025-11-07 20:48:27.264874
-659	1	Requested	\N	\N	Weekly	Seeded assignment	\N
-57	21	Requested	\N	0	\N	Seeded request	2025-11-07 01:45:27.264874
-399	25	Approved	\N	2	Weekly	Seeded request	\N
-852	25	Approved	Beginner	\N	Rarely	Seeded assignment	2025-11-04 17:16:27.264874
-691	12	Approved	Beginner	8	Monthly	Seeded assignment	2025-11-22 07:27:27.264874
-896	23	Approved	Advanced	\N	Monthly	Seeded request	\N
-955	5	Requested	Intermediate	7	\N	Seeded request	\N
-645	16	Requested	\N	\N	\N	Seeded assignment	\N
-134	19	Requested	Beginner	8	\N	Seeded assignment	2025-11-26 17:39:27.264874
-479	21	Approved	\N	\N	Daily	Seeded assignment	2025-11-13 17:33:27.264874
-930	20	Approved	\N	\N	Daily	Seeded assignment	\N
-903	20	Approved	Beginner	9	Rarely	Seeded request	2025-11-25 19:48:27.264874
-400	8	Approved	Intermediate	\N	Monthly	Seeded assignment	\N
-715	19	Requested	\N	\N	Rarely	Seeded assignment	\N
-406	13	Approved	\N	\N	Monthly	Seeded assignment	\N
-822	23	Requested	\N	\N	Rarely	Seeded assignment	2025-11-08 12:56:27.264874
-819	8	Approved	Expert	\N	Monthly	Seeded assignment	\N
-767	12	Requested	\N	4	Monthly	Seeded assignment	2025-11-24 03:37:27.264874
-183	3	Approved	Expert	8	Weekly	Seeded request	\N
-971	20	Approved	\N	5	Monthly	Seeded assignment	\N
-300	7	Approved	Advanced	2	Daily	Seeded request	\N
-186	24	Approved	\N	\N	Daily	Seeded assignment	2025-11-07 05:16:27.264874
-731	16	Requested	Expert	\N	Weekly	Seeded request	2025-11-25 19:41:27.264874
-87	16	Approved	\N	4	Rarely	Seeded request	2025-11-29 15:21:27.264874
-535	7	Approved	Expert	\N	\N	Seeded request	2025-11-24 20:19:27.264874
-795	11	Approved	\N	7	Weekly	Seeded assignment	\N
-395	5	Approved	\N	0	\N	Seeded assignment	\N
-349	11	Approved	Expert	4	Rarely	Seeded assignment	\N
-187	18	Requested	Beginner	2	\N	Seeded assignment	\N
-707	20	Requested	Advanced	2	Monthly	Seeded assignment	2025-11-15 08:39:27.264874
-471	21	Approved	\N	2	Weekly	Seeded assignment	\N
-612	9	Approved	\N	3	Monthly	Seeded request	\N
-745	17	Approved	\N	\N	Monthly	Seeded assignment	2025-11-06 21:04:27.264874
-521	19	Requested	Beginner	0	\N	Seeded request	\N
-67	5	Approved	Expert	\N	Daily	Seeded request	2025-11-13 17:24:27.264874
-457	5	Requested	Advanced	0	Weekly	Seeded assignment	\N
-226	6	Approved	Advanced	4	Rarely	Seeded request	\N
-752	24	Approved	\N	5	Rarely	Seeded assignment	\N
-747	1	Approved	Intermediate	8	\N	Seeded assignment	\N
-500	6	Approved	Intermediate	\N	Monthly	Seeded assignment	\N
-130	3	Approved	Beginner	5	Daily	Seeded assignment	2025-11-04 20:05:27.264874
-120	25	Approved	\N	\N	\N	Seeded request	\N
-516	19	Approved	Intermediate	\N	\N	Seeded request	\N
-776	16	Requested	Advanced	\N	Rarely	Seeded request	2025-11-29 16:50:27.264874
-573	22	Requested	\N	0	Rarely	Seeded request	2025-11-27 12:15:27.264874
-548	3	Requested	Beginner	\N	Daily	Seeded assignment	\N
-824	16	Requested	Beginner	8	Weekly	Seeded request	2025-12-01 18:17:27.264874
-911	4	Approved	Intermediate	4	Monthly	Seeded request	\N
-161	4	Approved	Advanced	8	Daily	Seeded request	\N
-771	1	Requested	\N	1	Daily	Seeded assignment	\N
-840	19	Approved	\N	6	Rarely	Seeded assignment	2025-11-11 23:03:27.264874
-716	4	Requested	\N	\N	Weekly	Seeded assignment	\N
-692	7	Approved	\N	10	Rarely	Seeded request	\N
-916	4	Requested	Advanced	\N	\N	Seeded assignment	\N
-108	23	Approved	Expert	\N	Daily	Seeded assignment	2025-11-24 12:23:27.264874
-657	4	Approved	Advanced	1	\N	Seeded assignment	\N
-950	11	Approved	Intermediate	5	\N	Seeded assignment	2025-11-19 06:35:27.264874
-6	19	Approved	Beginner	5	Weekly	Seeded request	\N
-509	19	Approved	Beginner	\N	Weekly	Seeded assignment	2025-11-28 14:06:27.264874
-520	5	Requested	\N	\N	Weekly	Seeded request	2025-11-27 05:09:27.264874
-717	11	Requested	\N	6	Monthly	Seeded assignment	2025-11-19 11:18:27.264874
-838	17	Requested	\N	\N	Rarely	Seeded assignment	2025-11-25 00:29:27.264874
-749	3	Approved	Expert	6	\N	Seeded assignment	\N
-835	5	Requested	\N	\N	\N	Seeded request	2025-11-06 01:40:27.264874
-649	16	Approved	\N	10	Weekly	Seeded assignment	\N
-173	9	Approved	Intermediate	9	Weekly	Seeded assignment	\N
-488	19	Approved	Beginner	\N	Daily	Seeded request	2025-11-28 20:04:27.264874
-117	12	Requested	Beginner	0	Weekly	Seeded assignment	2025-11-11 13:44:27.264874
-522	1	Requested	Beginner	\N	\N	Seeded assignment	\N
-590	8	Approved	Intermediate	\N	\N	Seeded request	\N
-940	18	Requested	\N	\N	\N	Seeded request	2025-11-24 23:30:27.264874
-672	24	Approved	Intermediate	2	Monthly	Seeded assignment	\N
-295	21	Requested	Intermediate	9	\N	Seeded request	\N
-797	22	Approved	\N	\N	\N	Seeded request	\N
-3	1	Requested	\N	\N	\N	Seeded assignment	\N
-269	5	Approved	Expert	\N	Daily	Seeded request	\N
-221	23	Requested	\N	2	\N	Seeded assignment	\N
-944	16	Requested	Beginner	2	\N	Seeded assignment	\N
-212	3	Approved	Beginner	\N	\N	Seeded request	2025-11-21 07:41:27.264874
-942	17	Approved	Expert	\N	Monthly	Seeded assignment	2025-11-30 06:17:27.264874
-358	7	Approved	Beginner	10	Weekly	Seeded assignment	\N
-201	1	Approved	\N	\N	Rarely	Seeded assignment	\N
-423	22	Approved	\N	1	Monthly	Seeded assignment	2025-11-10 22:31:27.264874
-943	9	Requested	\N	5	\N	Seeded request	2025-11-13 04:20:27.264874
-922	13	Requested	Beginner	4	Daily	Seeded request	\N
-193	24	Approved	Advanced	\N	Rarely	Seeded request	\N
-373	10	Approved	Expert	\N	Rarely	Seeded assignment	2025-11-25 02:30:27.264874
-484	6	Requested	\N	\N	Rarely	Seeded assignment	\N
-553	18	Requested	\N	2	Weekly	Seeded assignment	2025-11-08 01:26:27.264874
-558	5	Requested	Beginner	\N	\N	Seeded request	2025-11-21 16:12:27.264874
-94	18	Approved	Advanced	10	\N	Seeded assignment	2025-11-23 11:48:27.264874
-699	18	Approved	\N	7	Daily	Seeded assignment	2025-11-25 09:48:27.264874
-504	24	Requested	\N	1	\N	Seeded assignment	2025-11-23 21:44:27.264874
-362	18	Approved	\N	\N	Daily	Seeded request	\N
-843	21	Requested	\N	\N	Weekly	Seeded request	\N
-868	6	Approved	Advanced	\N	Monthly	Seeded request	\N
-332	6	Requested	Expert	\N	\N	Seeded assignment	2025-11-29 13:17:27.264874
-739	23	Approved	Beginner	8	\N	Seeded request	\N
-803	23	Approved	Beginner	\N	Daily	Seeded request	2025-11-14 02:49:27.264874
-551	11	Approved	Beginner	0	\N	Seeded assignment	\N
-267	5	Requested	Expert	\N	\N	Seeded request	\N
-643	7	Requested	Expert	3	Weekly	Seeded request	\N
-387	13	Requested	\N	\N	\N	Seeded request	\N
-711	4	Approved	\N	2	\N	Seeded request	2025-11-17 23:58:27.264874
-804	23	Requested	Expert	0	\N	Seeded assignment	\N
-915	8	Approved	Beginner	9	Weekly	Seeded assignment	2025-11-15 14:49:27.264874
-179	11	Approved	Intermediate	\N	Weekly	Seeded assignment	\N
-277	6	Requested	Beginner	\N	Monthly	Seeded request	\N
-270	10	Requested	Expert	2	\N	Seeded assignment	\N
-378	19	Approved	Intermediate	\N	\N	Seeded request	\N
-812	24	Requested	\N	5	Weekly	Seeded assignment	\N
-95	12	Requested	Intermediate	0	Daily	Seeded request	\N
-261	6	Approved	Advanced	2	\N	Seeded assignment	2025-11-23 19:46:27.264874
-246	5	Requested	Expert	10	Monthly	Seeded assignment	2025-11-16 22:17:27.264874
-289	23	Requested	\N	2	Rarely	Seeded request	\N
-285	17	Requested	Advanced	\N	\N	Seeded assignment	2025-11-19 15:47:27.264874
-653	7	Approved	Advanced	10	Rarely	Seeded assignment	\N
-709	20	Approved	\N	10	Rarely	Seeded request	2025-11-27 12:53:27.264874
-454	12	Requested	Advanced	10	Weekly	Seeded assignment	2025-11-27 12:19:27.264874
-556	8	Approved	\N	2	Rarely	Seeded assignment	2025-12-02 23:45:27.264874
-616	22	Requested	\N	5	Monthly	Seeded assignment	\N
-877	11	Requested	Advanced	2	Daily	Seeded request	\N
-601	17	Approved	\N	\N	\N	Seeded request	2025-11-11 07:00:27.264874
-73	6	Approved	Advanced	7	Weekly	Seeded request	2025-11-06 09:43:27.264874
-866	17	Approved	Expert	5	\N	Seeded request	2025-11-09 03:47:27.264874
-862	5	Approved	Intermediate	\N	\N	Seeded assignment	2025-11-24 08:42:27.264874
-501	5	Requested	\N	\N	\N	Seeded request	\N
-566	8	Approved	Intermediate	5	Monthly	Seeded request	\N
-900	24	Approved	Expert	3	\N	Seeded request	\N
-452	17	Requested	Expert	0	\N	Seeded request	\N
-878	1	Approved	\N	\N	Weekly	Seeded request	\N
-967	11	Requested	\N	6	\N	Seeded assignment	\N
-266	23	Approved	Expert	\N	\N	Seeded assignment	\N
-114	20	Approved	Expert	\N	Weekly	Seeded request	\N
-695	8	Approved	\N	4	\N	Seeded request	2025-11-22 07:37:27.264874
-750	20	Approved	Intermediate	\N	\N	Seeded assignment	2025-11-11 22:54:27.264874
-450	13	Approved	Intermediate	6	Daily	Seeded request	\N
-784	1	Requested	Expert	\N	Daily	Seeded request	\N
-212	4	Approved	\N	\N	Daily	Seeded request	2025-11-17 15:19:27.264874
-598	3	Approved	\N	\N	\N	Seeded request	2025-11-04 19:31:27.264874
-79	13	Approved	Expert	10	Daily	Seeded assignment	2025-11-16 12:41:27.264874
-973	19	Approved	\N	\N	Weekly	Seeded request	2025-11-10 03:33:27.264874
-312	18	Approved	Expert	2	Daily	Seeded assignment	\N
-683	18	Requested	\N	\N	Weekly	Seeded assignment	\N
-330	17	Requested	\N	6	Rarely	Seeded assignment	\N
-903	12	Requested	Beginner	0	Rarely	Seeded request	\N
-962	4	Approved	Expert	3	Rarely	Seeded request	\N
-930	12	Requested	Expert	6	Rarely	Seeded assignment	\N
-265	25	Approved	Beginner	4	\N	Seeded assignment	2025-11-29 00:05:27.264874
-272	16	Approved	\N	4	\N	Seeded request	\N
-477	19	Requested	\N	\N	\N	Seeded request	\N
-178	24	Requested	\N	5	Rarely	Seeded assignment	\N
-928	23	Approved	\N	1	Rarely	Seeded request	\N
-287	8	Approved	\N	\N	Rarely	Seeded request	\N
-180	11	Approved	Advanced	\N	Daily	Seeded assignment	2025-11-10 05:42:27.264874
-896	7	Approved	Beginner	5	\N	Seeded assignment	2025-11-17 19:20:27.264874
-328	16	Requested	Intermediate	\N	\N	Seeded request	2025-11-27 04:37:27.264874
-926	1	Requested	Intermediate	3	Rarely	Seeded request	\N
-409	20	Requested	\N	5	Weekly	Seeded assignment	\N
-300	23	Requested	\N	9	\N	Seeded assignment	\N
-657	3	Approved	\N	1	Monthly	Seeded request	\N
-986	20	Approved	\N	\N	Daily	Seeded assignment	\N
-470	18	Approved	Intermediate	\N	Weekly	Seeded request	\N
-168	25	Requested	\N	\N	\N	Seeded assignment	2025-12-03 01:03:27.264874
-627	6	Approved	Beginner	\N	\N	Seeded request	2025-11-09 12:45:27.264874
-559	24	Requested	\N	\N	\N	Seeded assignment	\N
-632	20	Approved	Beginner	9	\N	Seeded assignment	2025-11-16 05:47:27.264874
-606	10	Approved	Expert	\N	Monthly	Seeded assignment	\N
-384	17	Approved	\N	7	Daily	Seeded request	\N
-522	9	Approved	\N	\N	Monthly	Seeded assignment	\N
-622	12	Approved	\N	\N	Weekly	Seeded request	2025-11-06 20:24:27.264874
-557	5	Requested	Advanced	\N	Daily	Seeded request	2025-11-27 06:30:27.264874
-700	17	Requested	\N	\N	Daily	Seeded assignment	2025-11-03 17:26:27.264874
-255	25	Approved	Expert	\N	\N	Seeded request	2025-12-02 20:36:27.264874
-84	18	Approved	\N	5	\N	Seeded assignment	2025-11-16 14:46:27.264874
-397	21	Approved	\N	10	\N	Seeded assignment	\N
-663	4	Requested	Intermediate	7	Monthly	Seeded assignment	2025-11-07 12:09:27.264874
-281	7	Approved	\N	5	\N	Seeded assignment	2025-11-30 01:47:27.264874
-611	9	Requested	\N	\N	\N	Seeded request	2025-11-18 14:59:27.264874
-171	16	Approved	\N	10	\N	Seeded assignment	2025-11-20 15:29:27.264874
-407	22	Requested	Beginner	\N	Monthly	Seeded assignment	\N
-501	12	Approved	Expert	10	\N	Seeded request	\N
-680	4	Approved	Expert	5	\N	Seeded assignment	\N
-408	17	Approved	\N	\N	Monthly	Seeded request	2025-11-07 16:09:27.264874
-904	16	Approved	\N	\N	Daily	Seeded assignment	2025-11-16 03:19:27.264874
-4	1	Requested	Advanced	6	Weekly	Seeded request	\N
-21	7	Requested	Advanced	\N	\N	Seeded request	\N
-595	23	Requested	Advanced	8	\N	Seeded request	2025-11-05 02:50:27.264874
-751	5	Approved	Beginner	8	Daily	Seeded assignment	\N
-47	23	Approved	Beginner	8	Monthly	Seeded assignment	2025-11-21 01:49:27.264874
-828	5	Approved	Expert	9	Weekly	Seeded assignment	2025-11-28 16:45:27.264874
-814	3	Requested	Advanced	5	\N	Seeded assignment	2025-11-13 12:40:27.264874
-225	9	Approved	Advanced	\N	Weekly	Seeded assignment	\N
-748	7	Approved	\N	2	\N	Seeded request	2025-11-04 23:44:27.264874
-104	10	Approved	Expert	\N	Monthly	Seeded assignment	\N
-214	21	Requested	\N	1	Monthly	Seeded assignment	\N
-623	5	Requested	Intermediate	8	Weekly	Seeded request	\N
-165	7	Approved	Advanced	\N	\N	Seeded assignment	2025-11-13 13:32:27.264874
-356	5	Requested	Beginner	3	Weekly	Seeded assignment	\N
-371	22	Approved	\N	4	\N	Seeded assignment	\N
-159	12	Approved	\N	0	\N	Seeded assignment	\N
-112	8	Approved	\N	\N	\N	Seeded assignment	2025-11-11 13:32:27.264874
-267	12	Approved	\N	6	\N	Seeded assignment	\N
-613	1	Approved	\N	7	Monthly	Seeded assignment	2025-11-11 13:14:27.264874
-779	25	Approved	\N	\N	Monthly	Seeded assignment	2025-11-30 09:47:27.264874
-700	21	Approved	Intermediate	9	\N	Seeded assignment	\N
-204	5	Approved	Expert	6	Monthly	Seeded request	\N
-206	3	Requested	Beginner	\N	\N	Seeded request	\N
-288	25	Requested	Expert	0	Monthly	Seeded assignment	2025-11-25 02:58:27.264874
-840	18	Approved	Intermediate	3	\N	Seeded request	\N
-810	16	Requested	Advanced	1	\N	Seeded assignment	\N
-275	22	Approved	\N	\N	Daily	Seeded assignment	2025-11-04 07:18:27.264874
-531	13	Approved	Beginner	6	\N	Seeded assignment	2025-11-06 07:49:27.264874
-738	25	Approved	Expert	\N	\N	Seeded request	2025-11-27 21:53:27.264874
-558	20	Approved	\N	10	Weekly	Seeded assignment	\N
-568	1	Approved	Advanced	0	\N	Seeded assignment	\N
-713	18	Approved	\N	\N	Monthly	Seeded assignment	\N
-41	18	Approved	\N	\N	\N	Seeded request	\N
-237	3	Requested	\N	8	\N	Seeded assignment	2025-11-23 01:49:27.264874
-766	4	Requested	Intermediate	\N	\N	Seeded assignment	\N
-817	25	Approved	\N	\N	Monthly	Seeded assignment	\N
-895	9	Approved	\N	8	Weekly	Seeded assignment	\N
-981	3	Requested	\N	5	\N	Seeded request	\N
-521	18	Requested	Expert	10	\N	Seeded assignment	\N
-248	11	Requested	\N	4	Rarely	Seeded assignment	2025-11-18 19:40:27.264874
-222	4	Requested	Beginner	\N	Rarely	Seeded request	\N
-954	8	Requested	\N	9	\N	Seeded assignment	2025-11-17 12:09:27.264874
-92	4	Approved	Advanced	\N	Rarely	Seeded assignment	2025-11-22 01:17:27.264874
-945	3	Approved	Intermediate	2	Rarely	Seeded request	2025-11-21 01:55:27.264874
-158	6	Requested	Beginner	\N	\N	Seeded assignment	\N
-723	7	Requested	Advanced	\N	Weekly	Seeded request	\N
-187	19	Requested	Beginner	6	\N	Seeded request	2025-11-28 12:03:27.264874
-191	25	Approved	Intermediate	4	Daily	Seeded request	\N
-778	12	Approved	Advanced	4	Weekly	Seeded request	\N
-138	22	Requested	Advanced	0	Monthly	Seeded assignment	\N
-729	23	Approved	\N	1	Weekly	Seeded request	\N
-780	3	Approved	Advanced	\N	\N	Seeded request	\N
-483	13	Approved	Advanced	3	\N	Seeded assignment	2025-11-25 20:15:27.264874
-715	18	Approved	Beginner	\N	\N	Seeded assignment	2025-11-05 23:27:27.264874
-16	1	Requested	\N	4	Rarely	Seeded assignment	2025-11-25 19:50:27.264874
-228	25	Approved	Intermediate	9	Rarely	Seeded request	\N
-82	24	Requested	\N	5	Daily	Seeded assignment	2025-11-28 06:12:27.264874
-39	25	Approved	Advanced	3	\N	Seeded assignment	2025-11-09 07:39:27.264874
-638	6	Approved	\N	\N	Rarely	Seeded request	\N
-124	3	Requested	Beginner	\N	\N	Seeded assignment	2025-11-09 00:09:27.264874
-342	1	Approved	\N	7	\N	Seeded assignment	\N
-658	20	Requested	\N	10	Weekly	Seeded assignment	\N
-323	22	Approved	\N	0	Monthly	Seeded assignment	2025-11-08 18:12:27.264874
-497	21	Requested	\N	6	Weekly	Seeded assignment	2025-11-27 22:34:27.264874
-572	9	Approved	Advanced	8	\N	Seeded assignment	\N
-647	21	Approved	Expert	0	Weekly	Seeded request	\N
-955	20	Requested	\N	\N	Monthly	Seeded request	\N
-452	21	Approved	Advanced	\N	\N	Seeded assignment	\N
-712	7	Approved	\N	\N	\N	Seeded assignment	\N
-567	20	Requested	\N	9	Monthly	Seeded assignment	2025-12-03 03:51:27.264874
-53	16	Approved	Expert	9	\N	Seeded request	2025-11-27 21:24:27.264874
-52	8	Approved	Intermediate	9	\N	Seeded assignment	\N
-888	1	Approved	Intermediate	\N	Weekly	Seeded assignment	\N
-681	21	Approved	\N	1	Daily	Seeded assignment	2025-11-21 04:47:27.264874
-794	18	Requested	\N	2	Rarely	Seeded request	2025-11-18 14:42:27.264874
-761	20	Approved	Beginner	\N	\N	Seeded assignment	\N
-975	3	Requested	\N	4	\N	Seeded assignment	2025-11-11 07:15:27.264874
-811	19	Requested	Intermediate	\N	\N	Seeded request	\N
-601	21	Requested	Intermediate	9	Rarely	Seeded request	\N
-211	23	Approved	\N	0	Rarely	Seeded request	\N
-468	7	Approved	\N	\N	\N	Seeded assignment	\N
-672	10	Requested	\N	\N	Rarely	Seeded request	\N
-866	21	Requested	\N	\N	Daily	Seeded assignment	\N
-440	8	Requested	\N	8	\N	Seeded assignment	\N
-766	3	Approved	\N	5	Daily	Seeded request	\N
-882	17	Requested	Intermediate	\N	Rarely	Seeded assignment	\N
-32	8	Approved	Expert	8	Weekly	Seeded request	2025-12-01 03:40:27.264874
-116	20	Approved	Intermediate	2	\N	Seeded request	\N
-891	7	Approved	\N	7	Daily	Seeded request	\N
-515	23	Approved	Expert	5	Rarely	Seeded assignment	2025-11-09 15:30:27.264874
-929	16	Approved	\N	7	Weekly	Seeded request	\N
-849	18	Approved	\N	3	Daily	Seeded assignment	\N
-155	13	Requested	Expert	\N	Rarely	Seeded request	\N
-562	4	Approved	Intermediate	\N	Weekly	Seeded request	\N
-546	8	Requested	\N	7	Daily	Seeded request	2025-11-10 15:33:27.264874
-470	19	Approved	Expert	1	\N	Seeded assignment	\N
-767	5	Approved	Expert	0	Monthly	Seeded request	2025-11-25 15:24:27.264874
-793	16	Requested	Advanced	10	Rarely	Seeded assignment	2025-11-12 02:08:27.264874
-258	6	Approved	\N	\N	\N	Seeded assignment	2025-11-11 23:42:27.264874
-734	20	Approved	Advanced	\N	\N	Seeded request	\N
-980	10	Requested	Intermediate	1	Daily	Seeded request	2025-11-30 21:52:27.264874
-389	5	Approved	Advanced	6	\N	Seeded request	\N
-33	10	Requested	\N	2	\N	Seeded assignment	2025-12-02 05:52:27.264874
-311	3	Approved	\N	\N	Weekly	Seeded assignment	\N
-294	9	Requested	\N	\N	\N	Seeded assignment	2025-11-26 03:00:27.264874
-278	8	Approved	Beginner	\N	\N	Seeded assignment	2025-11-29 21:59:27.264874
-382	21	Approved	\N	0	\N	Seeded request	2025-11-08 11:54:27.264874
-923	23	Approved	\N	1	\N	Seeded assignment	\N
-19	6	Approved	Intermediate	1	Rarely	Seeded request	\N
-247	3	Approved	Advanced	7	Monthly	Seeded assignment	\N
-934	11	Approved	\N	7	\N	Seeded assignment	\N
-56	7	Requested	Advanced	1	Weekly	Seeded assignment	\N
-305	19	Requested	\N	\N	\N	Seeded request	2025-11-13 12:27:27.264874
-583	9	Requested	Expert	\N	Monthly	Seeded assignment	\N
-676	5	Requested	Expert	1	\N	Seeded assignment	\N
-101	24	Approved	\N	0	Daily	Seeded request	\N
-416	8	Approved	Beginner	\N	Weekly	Seeded assignment	\N
-909	1	Requested	\N	3	\N	Seeded request	\N
-409	5	Requested	Beginner	\N	Weekly	Seeded assignment	2025-11-08 09:06:27.264874
-77	7	Approved	\N	\N	\N	Seeded request	\N
-318	19	Approved	\N	9	\N	Seeded assignment	\N
-576	6	Requested	Beginner	\N	Weekly	Seeded assignment	2025-11-12 11:39:27.264874
-125	7	Approved	\N	8	\N	Seeded assignment	\N
-815	17	Approved	Advanced	2	\N	Seeded request	\N
-286	5	Requested	Beginner	10	Monthly	Seeded assignment	2025-11-17 04:22:27.264874
-778	20	Requested	\N	9	Monthly	Seeded assignment	\N
-295	17	Approved	Beginner	9	Rarely	Seeded assignment	2025-11-29 14:59:27.264874
-11	17	Approved	\N	\N	\N	Seeded request	\N
-427	8	Approved	Advanced	6	\N	Seeded request	2025-11-09 11:30:27.264874
-327	22	Requested	\N	10	\N	Seeded request	\N
-820	6	Requested	Advanced	\N	Weekly	Seeded request	2025-11-27 00:45:27.264874
-961	13	Approved	\N	\N	Rarely	Seeded request	\N
-510	1	Approved	\N	3	\N	Seeded request	\N
-575	23	Requested	Expert	2	\N	Seeded assignment	2025-12-02 19:43:27.264874
-81	20	Requested	Expert	0	\N	Seeded assignment	\N
-890	4	Requested	Expert	\N	Daily	Seeded assignment	2025-11-18 14:58:27.264874
-321	25	Requested	\N	8	Weekly	Seeded request	2025-11-21 04:26:27.264874
-401	23	Approved	Expert	\N	Rarely	Seeded request	\N
-570	23	Approved	Intermediate	0	Monthly	Seeded assignment	\N
-47	7	Requested	Expert	10	\N	Seeded request	2025-11-24 11:13:27.264874
-511	18	Requested	\N	\N	Monthly	Seeded assignment	2025-12-02 12:29:27.264874
-887	24	Approved	Expert	8	Weekly	Seeded request	\N
-267	20	Requested	Intermediate	\N	\N	Seeded assignment	\N
-415	4	Requested	\N	6	Daily	Seeded request	\N
-58	22	Approved	\N	\N	Rarely	Seeded assignment	\N
-31	17	Approved	Beginner	\N	Daily	Seeded request	\N
-728	8	Requested	\N	\N	Weekly	Seeded assignment	\N
-714	10	Requested	Expert	0	Rarely	Seeded assignment	\N
-673	6	Approved	\N	\N	\N	Seeded assignment	\N
-75	4	Approved	Advanced	3	Daily	Seeded assignment	2025-11-19 18:43:27.264874
-174	3	Approved	Beginner	7	Weekly	Seeded assignment	\N
-143	25	Approved	Intermediate	\N	Rarely	Seeded request	\N
-539	9	Requested	\N	5	Daily	Seeded request	\N
-660	11	Requested	Intermediate	5	\N	Seeded request	\N
-748	23	Approved	Advanced	\N	Weekly	Seeded request	\N
-848	25	Requested	\N	7	\N	Seeded assignment	\N
-856	24	Approved	\N	7	Monthly	Seeded assignment	\N
-912	22	Approved	Beginner	1	Monthly	Seeded assignment	\N
-314	7	Requested	Intermediate	3	\N	Seeded assignment	2025-11-07 18:16:27.264874
-465	17	Approved	Advanced	\N	Rarely	Seeded assignment	2025-11-16 18:47:27.264874
-419	7	Approved	\N	1	Weekly	Seeded request	2025-11-20 08:25:27.264874
-392	6	Approved	Expert	6	\N	Seeded request	2025-11-12 20:37:27.264874
-528	3	Requested	Advanced	8	Rarely	Seeded request	\N
-381	25	Approved	\N	4	\N	Seeded assignment	\N
-513	11	Requested	\N	\N	\N	Seeded assignment	\N
-745	21	Approved	Intermediate	\N	Daily	Seeded assignment	2025-11-29 16:13:27.264874
-606	24	Approved	Intermediate	0	Weekly	Seeded assignment	\N
-780	4	Requested	\N	\N	\N	Seeded assignment	2025-11-24 21:50:27.264874
-526	10	Approved	\N	1	\N	Seeded assignment	\N
-675	5	Approved	Expert	4	Rarely	Seeded request	2025-11-10 07:13:27.264874
-563	17	Approved	Intermediate	1	Rarely	Seeded request	\N
-529	11	Approved	Expert	0	Weekly	Seeded assignment	2025-11-25 12:29:27.264874
-862	20	Requested	Expert	3	Weekly	Seeded assignment	\N
-457	12	Approved	Intermediate	0	Rarely	Seeded assignment	\N
-742	18	Requested	Expert	7	\N	Seeded request	\N
-342	9	Requested	Expert	2	Rarely	Seeded assignment	2025-11-11 11:27:27.264874
-545	13	Approved	\N	\N	\N	Seeded request	2025-11-14 21:23:27.264874
-981	4	Requested	\N	\N	\N	Seeded request	\N
-69	11	Requested	Beginner	5	Rarely	Seeded request	\N
-222	3	Requested	Intermediate	\N	Weekly	Seeded request	\N
-860	1	Requested	\N	0	\N	Seeded assignment	\N
-503	5	Approved	\N	3	\N	Seeded request	\N
-635	21	Approved	Intermediate	\N	Daily	Seeded assignment	2025-11-16 11:42:27.264874
-955	22	Requested	\N	\N	Monthly	Seeded assignment	\N
-825	6	Requested	Intermediate	\N	\N	Seeded assignment	2025-11-10 03:12:27.264874
-974	23	Requested	Intermediate	0	Weekly	Seeded request	\N
-481	3	Requested	\N	\N	Daily	Seeded request	2025-11-18 07:23:27.264874
-906	18	Approved	Expert	3	Monthly	Seeded request	2025-11-06 06:28:27.264874
-658	22	Approved	Beginner	\N	Rarely	Seeded assignment	\N
-121	13	Approved	Advanced	2	Daily	Seeded assignment	2025-11-18 11:05:27.264874
-626	7	Approved	\N	\N	Weekly	Seeded assignment	\N
-703	1	Approved	Beginner	1	Monthly	Seeded request	2025-11-25 19:58:27.264874
-351	16	Requested	Expert	\N	Monthly	Seeded assignment	2025-11-21 15:58:27.264874
-361	25	Approved	Expert	\N	Monthly	Seeded assignment	2025-11-11 20:12:27.264874
-728	24	Approved	Expert	\N	\N	Seeded request	\N
-780	18	Requested	\N	9	\N	Seeded request	\N
-660	1	Approved	Expert	\N	Monthly	Seeded request	\N
-489	23	Approved	\N	\N	Monthly	Seeded request	\N
-735	1	Approved	\N	5	\N	Seeded request	2025-11-07 10:19:27.264874
-394	9	Requested	\N	10	Weekly	Seeded request	\N
-345	19	Requested	Intermediate	\N	Rarely	Seeded assignment	\N
-344	13	Approved	Advanced	8	Daily	Seeded request	2025-11-21 03:42:27.264874
-302	16	Approved	Beginner	8	Rarely	Seeded assignment	2025-11-14 11:48:27.264874
-386	16	Approved	Beginner	\N	\N	Seeded assignment	2025-11-30 08:46:27.264874
-782	10	Approved	Beginner	4	Monthly	Seeded request	\N
-824	13	Approved	Beginner	2	\N	Seeded assignment	2025-11-29 15:19:27.264874
-73	25	Approved	Advanced	1	Rarely	Seeded request	\N
-574	20	Approved	Beginner	8	Rarely	Seeded request	\N
-788	4	Approved	Expert	9	\N	Seeded assignment	2025-12-02 07:55:27.264874
-355	25	Approved	Advanced	\N	\N	Seeded assignment	2025-11-18 04:35:27.264874
-608	11	Requested	\N	1	Weekly	Seeded request	\N
-40	25	Approved	Advanced	5	\N	Seeded assignment	2025-11-05 21:17:27.264874
-698	9	Requested	\N	\N	\N	Seeded assignment	\N
-141	9	Approved	\N	7	Monthly	Seeded assignment	2025-11-28 11:58:27.264874
-410	20	Approved	\N	3	Rarely	Seeded assignment	\N
-922	16	Requested	\N	1	\N	Seeded request	2025-11-04 20:48:27.264874
-975	18	Requested	\N	5	\N	Seeded request	2025-11-29 10:58:27.264874
-506	16	Requested	Beginner	9	Rarely	Seeded assignment	\N
-630	8	Approved	Advanced	0	Daily	Seeded assignment	\N
-794	3	Approved	Beginner	10	Weekly	Seeded assignment	\N
-380	20	Requested	Beginner	\N	Weekly	Seeded request	2025-11-28 19:44:27.264874
-238	6	Requested	\N	8	Weekly	Seeded assignment	\N
-126	4	Requested	\N	\N	\N	Seeded assignment	2025-11-27 11:53:27.264874
-396	21	Approved	Intermediate	9	\N	Seeded assignment	\N
-963	19	Approved	Beginner	2	Rarely	Seeded request	2025-11-13 00:09:27.264874
-868	25	Requested	Beginner	4	Daily	Seeded assignment	\N
-448	19	Approved	Beginner	8	Weekly	Seeded assignment	\N
-463	9	Approved	Expert	9	Rarely	Seeded request	\N
-596	17	Approved	Beginner	0	Monthly	Seeded assignment	2025-11-26 23:51:27.264874
-124	18	Approved	\N	9	Weekly	Seeded request	2025-11-29 16:05:27.264874
-592	19	Approved	Intermediate	1	\N	Seeded request	\N
-935	21	Requested	\N	\N	\N	Seeded assignment	\N
-740	19	Approved	Advanced	\N	\N	Seeded request	\N
-677	12	Requested	Advanced	\N	Rarely	Seeded request	2025-11-26 01:29:27.264874
-333	10	Approved	Expert	\N	Rarely	Seeded assignment	\N
-534	22	Approved	\N	\N	Rarely	Seeded assignment	2025-11-20 21:07:27.264874
-880	10	Requested	Expert	2	\N	Seeded request	\N
-951	22	Requested	\N	\N	\N	Seeded request	2025-11-10 14:00:27.264874
-74	3	Approved	Beginner	5	Weekly	Seeded assignment	\N
-666	12	Approved	\N	6	\N	Seeded assignment	2025-11-03 11:46:27.264874
-736	24	Approved	\N	5	\N	Seeded assignment	\N
-743	11	Approved	Intermediate	\N	Weekly	Seeded request	\N
-544	18	Approved	\N	6	\N	Seeded request	\N
-475	17	Approved	Advanced	3	\N	Seeded assignment	\N
-536	17	Approved	Intermediate	9	Monthly	Seeded assignment	\N
-482	13	Requested	\N	0	Monthly	Seeded assignment	\N
-934	1	Approved	Expert	7	Weekly	Seeded request	\N
-546	24	Approved	Beginner	\N	Monthly	Seeded assignment	2025-11-10 12:58:27.264874
-619	18	Approved	Beginner	0	Daily	Seeded assignment	2025-11-03 22:12:27.264874
-948	20	Requested	\N	7	Rarely	Seeded assignment	2025-11-05 02:30:27.264874
-32	24	Requested	Beginner	5	\N	Seeded request	\N
-84	3	Approved	\N	\N	\N	Seeded assignment	2025-11-21 05:26:27.264874
-270	8	Approved	Beginner	\N	Daily	Seeded request	\N
-656	21	Requested	\N	\N	\N	Seeded request	2025-11-28 22:55:27.264874
-789	17	Approved	Intermediate	1	\N	Seeded assignment	\N
-462	17	Approved	Intermediate	5	Weekly	Seeded assignment	\N
-430	1	Requested	\N	5	Monthly	Seeded request	2025-11-13 14:50:27.264874
-611	11	Approved	Intermediate	\N	Monthly	Seeded assignment	\N
-558	22	Approved	\N	8	Weekly	Seeded assignment	\N
-404	10	Requested	\N	\N	\N	Seeded assignment	\N
-237	18	Approved	Intermediate	5	Rarely	Seeded request	2025-11-13 13:56:27.264874
-316	1	Approved	\N	2	\N	Seeded assignment	\N
-105	11	Approved	Expert	6	\N	Seeded assignment	\N
-169	13	Requested	\N	\N	\N	Seeded assignment	\N
-713	3	Requested	\N	9	Weekly	Seeded assignment	2025-11-23 03:18:27.264874
-200	20	Approved	\N	1	\N	Seeded request	2025-11-25 03:21:27.264874
-682	12	Approved	\N	1	\N	Seeded assignment	2025-11-20 14:52:27.264874
-964	1	Requested	Expert	\N	Rarely	Seeded assignment	\N
-372	12	Approved	\N	0	Weekly	Seeded assignment	2025-11-25 11:45:27.264874
-142	23	Approved	Beginner	5	Weekly	Seeded assignment	2025-11-21 19:24:27.264874
-573	5	Approved	\N	10	\N	Seeded assignment	\N
-556	10	Approved	Beginner	\N	Daily	Seeded request	\N
-895	11	Approved	Beginner	\N	Monthly	Seeded request	\N
-548	19	Approved	\N	7	Daily	Seeded assignment	2025-11-03 17:03:27.264874
-957	6	Requested	\N	9	Daily	Seeded request	2025-11-28 10:25:27.264874
-720	3	Approved	Expert	\N	\N	Seeded assignment	\N
-132	1	Requested	\N	\N	Weekly	Seeded assignment	2025-11-30 18:05:27.264874
-580	3	Approved	Expert	1	Weekly	Seeded request	\N
-325	23	Approved	Intermediate	8	\N	Seeded assignment	\N
-543	17	Approved	Intermediate	\N	\N	Seeded request	\N
-443	24	Approved	\N	10	Monthly	Seeded request	2025-11-06 05:58:27.264874
-339	8	Requested	Advanced	7	\N	Seeded assignment	\N
-282	7	Approved	\N	\N	\N	Seeded request	\N
-593	21	Approved	Expert	4	\N	Seeded assignment	2025-11-20 05:53:27.264874
-741	25	Approved	\N	\N	Rarely	Seeded assignment	2025-11-20 20:05:27.264874
-835	22	Approved	\N	\N	Rarely	Seeded request	\N
-477	4	Requested	\N	\N	Weekly	Seeded assignment	\N
-958	23	Approved	\N	4	Rarely	Seeded request	2025-11-03 12:00:27.264874
-50	9	Requested	Advanced	\N	Daily	Seeded request	2025-11-28 09:12:27.264874
-49	20	Requested	\N	\N	\N	Seeded request	\N
-539	11	Requested	Expert	\N	Rarely	Seeded request	\N
-725	21	Approved	Expert	5	Weekly	Seeded request	2025-12-01 02:11:27.264874
-889	24	Requested	Advanced	\N	Rarely	Seeded assignment	\N
-219	16	Approved	\N	\N	Weekly	Seeded request	\N
-616	5	Requested	Beginner	10	Daily	Seeded assignment	2025-11-12 23:16:27.264874
-224	9	Requested	Advanced	\N	Rarely	Seeded request	\N
-394	1	Requested	\N	\N	Monthly	Seeded assignment	2025-11-17 05:31:27.264874
-970	10	Approved	\N	4	\N	Seeded request	\N
-109	7	Requested	Beginner	\N	\N	Seeded request	2025-11-30 22:38:27.264874
-600	24	Approved	Expert	7	Monthly	Seeded assignment	\N
-682	20	Approved	\N	\N	\N	Seeded assignment	\N
-954	24	Approved	\N	4	Weekly	Seeded request	\N
-532	25	Requested	\N	\N	Rarely	Seeded request	2025-11-21 21:37:27.264874
-651	17	Approved	Beginner	2	\N	Seeded assignment	\N
-365	25	Requested	Expert	5	Rarely	Seeded request	2025-11-12 09:22:27.264874
-788	3	Approved	\N	\N	Rarely	Seeded assignment	2025-11-06 11:46:27.264874
-590	10	Approved	Advanced	10	\N	Seeded request	2025-11-11 12:24:27.264874
-7	13	Approved	Intermediate	3	Weekly	Seeded assignment	\N
-128	21	Requested	Intermediate	9	Rarely	Seeded request	2025-11-04 07:47:27.264874
-440	24	Requested	\N	10	\N	Seeded request	\N
-263	13	Approved	Expert	10	Daily	Seeded assignment	\N
-366	24	Approved	\N	5	\N	Seeded request	\N
-852	6	Approved	Advanced	\N	\N	Seeded request	\N
-897	25	Requested	Beginner	\N	\N	Seeded request	\N
-946	10	Approved	Beginner	1	Weekly	Seeded assignment	\N
-51	9	Approved	\N	8	Weekly	Seeded request	2025-11-30 03:19:27.264874
-218	8	Approved	Intermediate	7	\N	Seeded assignment	2025-11-05 23:48:27.264874
-968	3	Approved	\N	\N	Daily	Seeded request	2025-12-01 21:37:27.264874
-44	18	Requested	Intermediate	\N	\N	Seeded request	\N
-88	5	Requested	Beginner	7	\N	Seeded assignment	\N
-282	23	Requested	Beginner	\N	\N	Seeded assignment	\N
-666	20	Requested	Intermediate	9	\N	Seeded assignment	\N
-1	20	Requested	\N	2	\N	Seeded request	2025-11-16 03:22:27.264874
-325	7	Requested	Advanced	8	Daily	Seeded request	2025-11-27 06:54:27.264874
-913	24	Requested	Advanced	2	\N	Seeded assignment	2025-11-13 03:02:27.264874
-715	4	Approved	Expert	\N	\N	Seeded assignment	2025-12-01 01:19:27.264874
-938	17	Requested	Expert	5	\N	Seeded request	2025-11-25 00:12:27.264874
-698	1	Approved	Advanced	\N	\N	Seeded request	2025-11-04 15:44:27.264874
-371	12	Approved	Expert	8	Monthly	Seeded request	\N
-513	9	Approved	Intermediate	\N	\N	Seeded assignment	2025-11-05 22:31:27.264874
-141	1	Approved	\N	1	\N	Seeded request	2025-11-17 15:22:27.264874
-481	4	Requested	Intermediate	5	Monthly	Seeded assignment	\N
-9	5	Requested	Advanced	\N	Rarely	Seeded request	\N
-488	4	Approved	Expert	\N	Monthly	Seeded request	2025-12-01 19:24:27.264874
-527	13	Requested	Expert	9	Rarely	Seeded request	\N
-773	13	Approved	\N	2	\N	Seeded assignment	\N
-411	5	Approved	Intermediate	2	Monthly	Seeded assignment	\N
-311	18	Approved	\N	4	Daily	Seeded assignment	\N
-245	20	Approved	\N	9	Rarely	Seeded assignment	\N
-727	10	Requested	Expert	8	Monthly	Seeded assignment	2025-11-05 13:21:27.264874
-798	5	Approved	Expert	9	Rarely	Seeded assignment	2025-11-27 12:02:27.264874
-294	11	Approved	Beginner	1	Monthly	Seeded assignment	\N
-380	12	Approved	\N	\N	Weekly	Seeded request	\N
-327	20	Approved	\N	6	\N	Seeded request	\N
-90	1	Approved	Advanced	\N	\N	Seeded assignment	\N
-161	19	Approved	Advanced	\N	\N	Seeded assignment	\N
-490	5	Requested	Intermediate	4	\N	Seeded request	\N
-297	10	Requested	\N	\N	Weekly	Seeded assignment	\N
-984	17	Approved	Intermediate	2	Monthly	Seeded assignment	\N
-257	11	Requested	\N	2	\N	Seeded assignment	\N
-781	10	Approved	\N	3	Monthly	Seeded request	\N
-138	12	Approved	\N	\N	\N	Seeded request	\N
-492	21	Approved	Intermediate	1	\N	Seeded assignment	\N
-972	5	Approved	\N	5	\N	Seeded request	\N
-441	22	Approved	\N	9	\N	Seeded request	\N
-766	18	Approved	Intermediate	\N	Weekly	Seeded request	\N
-393	22	Requested	Advanced	\N	Rarely	Seeded assignment	\N
-326	21	Approved	Advanced	\N	\N	Seeded assignment	2025-12-02 22:04:27.264874
-574	12	Requested	Expert	\N	Daily	Seeded assignment	2025-11-14 01:12:27.264874
-893	10	Approved	Expert	\N	\N	Seeded assignment	2025-11-18 02:48:27.264874
-116	22	Approved	Expert	4	\N	Seeded request	2025-11-06 13:05:27.264874
-671	20	Approved	\N	6	Weekly	Seeded assignment	2025-11-19 03:50:27.264874
-851	17	Requested	Expert	\N	Monthly	Seeded assignment	\N
-83	17	Approved	Beginner	\N	Daily	Seeded request	2025-11-27 03:43:27.264874
-226	25	Requested	Advanced	\N	Daily	Seeded assignment	2025-11-16 06:31:27.264874
-474	17	Requested	Beginner	2	Daily	Seeded assignment	\N
-421	21	Requested	Expert	8	\N	Seeded assignment	2025-11-08 11:48:27.264874
-598	19	Requested	\N	\N	Monthly	Seeded assignment	\N
-112	24	Approved	Intermediate	9	\N	Seeded assignment	\N
-734	22	Approved	Beginner	\N	\N	Seeded assignment	\N
-936	11	Approved	Advanced	1	Daily	Seeded assignment	2025-11-06 04:21:27.264874
-500	25	Requested	Expert	8	Monthly	Seeded assignment	\N
-316	9	Approved	Expert	10	Daily	Seeded assignment	2025-11-03 08:30:27.264874
-115	18	Approved	Expert	2	Rarely	Seeded assignment	\N
-472	19	Approved	Beginner	\N	Daily	Seeded request	\N
-560	3	Requested	Beginner	\N	Daily	Seeded assignment	2025-11-19 11:39:27.264874
-717	9	Approved	Intermediate	\N	Monthly	Seeded request	\N
-832	12	Requested	\N	3	Rarely	Seeded assignment	2025-11-11 14:57:27.264874
-107	25	Approved	\N	10	\N	Seeded request	\N
-8	16	Approved	Intermediate	2	Daily	Seeded assignment	2025-11-22 21:07:27.264874
-988	3	Approved	Beginner	\N	Monthly	Seeded request	2025-11-18 18:22:27.264874
-356	22	Approved	\N	\N	\N	Seeded assignment	2025-11-22 19:16:27.264874
-61	20	Approved	Advanced	10	\N	Seeded assignment	\N
-493	25	Requested	Intermediate	\N	Monthly	Seeded request	2025-11-23 05:52:27.264874
-732	1	Requested	\N	0	Monthly	Seeded request	2025-11-20 20:49:27.264874
-774	8	Requested	\N	\N	Monthly	Seeded assignment	2025-11-18 08:27:27.264874
-948	5	Approved	Advanced	\N	\N	Seeded assignment	\N
-291	20	Approved	\N	7	Daily	Seeded request	\N
-111	19	Approved	Advanced	\N	\N	Seeded request	\N
-775	25	Approved	Expert	\N	\N	Seeded assignment	2025-11-25 09:57:27.264874
-496	23	Requested	Intermediate	8	\N	Seeded assignment	2025-11-18 02:10:27.264874
-864	20	Requested	Beginner	\N	\N	Seeded assignment	\N
-299	1	Approved	\N	8	Weekly	Seeded assignment	\N
-72	6	Requested	Intermediate	\N	\N	Seeded request	\N
-283	18	Requested	\N	2	Daily	Seeded assignment	\N
-150	11	Approved	Expert	8	\N	Seeded assignment	2025-11-10 01:14:27.264874
-899	7	Approved	\N	7	\N	Seeded assignment	\N
-926	11	Approved	Expert	\N	Daily	Seeded assignment	\N
-631	21	Approved	\N	0	Rarely	Seeded request	2025-11-05 06:34:27.264874
-19	25	Approved	Beginner	\N	\N	Seeded assignment	\N
-398	25	Approved	Expert	\N	Daily	Seeded assignment	2025-11-10 17:39:27.264874
-449	7	Approved	\N	8	Rarely	Seeded request	\N
-573	20	Approved	\N	5	Rarely	Seeded assignment	\N
-966	25	Approved	Intermediate	2	Daily	Seeded assignment	\N
-326	17	Approved	\N	\N	Rarely	Seeded assignment	\N
-751	22	Requested	Intermediate	\N	\N	Seeded assignment	\N
-305	4	Approved	Advanced	\N	Weekly	Seeded assignment	\N
-453	12	Approved	Beginner	6	\N	Seeded request	\N
-799	9	Approved	Beginner	9	Daily	Seeded assignment	2025-11-05 10:47:27.264874
-697	3	Requested	\N	\N	\N	Seeded request	\N
-80	4	Requested	Intermediate	\N	Daily	Seeded request	\N
-940	3	Requested	Expert	1	Weekly	Seeded assignment	\N
-744	1	Approved	\N	0	Rarely	Seeded assignment	2025-11-17 19:13:27.264874
-678	5	Approved	Intermediate	\N	Daily	Seeded request	\N
-28	16	Approved	Advanced	\N	\N	Seeded request	\N
-250	6	Approved	\N	5	\N	Seeded assignment	\N
-710	3	Requested	\N	8	Weekly	Seeded request	\N
-561	19	Approved	Beginner	0	Rarely	Seeded assignment	2025-11-17 07:37:27.264874
-136	7	Approved	\N	9	\N	Seeded request	2025-11-15 22:42:27.264874
-585	16	Approved	Advanced	\N	Daily	Seeded request	2025-11-22 03:34:27.264874
-757	18	Approved	Intermediate	\N	Rarely	Seeded assignment	2025-11-06 21:08:27.264874
-179	1	Requested	\N	\N	Monthly	Seeded request	2025-11-29 03:22:27.264874
-412	21	Requested	\N	\N	\N	Seeded request	\N
-491	18	Approved	\N	0	\N	Seeded request	\N
-907	18	Approved	\N	3	Rarely	Seeded request	2025-11-21 11:21:27.264874
-566	24	Requested	Intermediate	\N	Rarely	Seeded assignment	\N
-875	10	Approved	Intermediate	\N	Weekly	Seeded assignment	2025-11-07 09:28:27.264874
-170	17	Requested	Expert	\N	Rarely	Seeded request	\N
-945	19	Requested	Expert	0	Monthly	Seeded assignment	\N
-345	18	Approved	\N	7	Weekly	Seeded assignment	\N
-416	10	Approved	Intermediate	\N	Daily	Seeded request	2025-11-16 20:26:27.264874
-762	16	Approved	\N	10	\N	Seeded assignment	\N
-758	10	Requested	\N	3	Monthly	Seeded assignment	\N
-931	25	Approved	Advanced	1	Weekly	Seeded assignment	\N
-443	10	Requested	\N	10	\N	Seeded assignment	\N
-808	12	Requested	Advanced	7	Weekly	Seeded assignment	2025-11-10 21:18:27.264874
-938	21	Approved	Expert	\N	Weekly	Seeded assignment	2025-11-24 04:30:27.264874
-673	25	Approved	Beginner	0	Rarely	Seeded assignment	2025-11-27 10:28:27.264874
-459	21	Requested	\N	8	Weekly	Seeded assignment	\N
-436	18	Approved	Expert	0	Daily	Seeded assignment	2025-11-14 15:26:27.264874
-959	1	Requested	\N	\N	Weekly	Seeded assignment	\N
-347	5	Requested	Advanced	\N	\N	Seeded assignment	2025-11-30 20:52:27.264874
-841	21	Approved	Beginner	\N	\N	Seeded request	\N
-96	25	Approved	Beginner	1	Monthly	Seeded request	\N
-798	12	Requested	\N	\N	Weekly	Seeded assignment	\N
-128	17	Requested	Advanced	9	\N	Seeded assignment	2025-12-03 00:25:27.264874
-917	18	Requested	Advanced	\N	Daily	Seeded assignment	2025-11-26 14:16:27.264874
-25	7	Requested	Expert	\N	Daily	Seeded assignment	2025-11-28 17:20:27.264874
-24	10	Requested	Beginner	\N	\N	Seeded request	\N
-445	12	Approved	\N	2	Rarely	Seeded assignment	2025-11-22 20:57:27.264874
-571	22	Approved	\N	6	Weekly	Seeded assignment	\N
-411	12	Approved	Expert	9	Weekly	Seeded assignment	\N
-855	22	Requested	Beginner	7	Daily	Seeded assignment	\N
-162	4	Requested	Advanced	\N	\N	Seeded assignment	2025-11-16 16:12:27.264874
-402	5	Requested	Beginner	0	Weekly	Seeded request	\N
-370	1	Requested	\N	\N	Weekly	Seeded assignment	\N
-697	4	Requested	\N	4	\N	Seeded request	\N
-954	10	Requested	\N	\N	Daily	Seeded assignment	\N
-288	6	Requested	Expert	10	Daily	Seeded assignment	2025-11-07 11:05:27.264874
-846	17	Requested	Intermediate	3	\N	Seeded assignment	2025-11-12 17:36:27.264874
-80	3	Approved	\N	7	Weekly	Seeded request	\N
-115	19	Approved	\N	\N	Daily	Seeded assignment	\N
-472	18	Approved	Beginner	9	Weekly	Seeded request	2025-11-22 12:41:27.264874
-9	20	Requested	\N	1	\N	Seeded request	2025-11-13 20:20:27.264874
-10	8	Requested	Beginner	5	Weekly	Seeded request	\N
-747	11	Approved	Beginner	2	Rarely	Seeded assignment	2025-11-25 18:25:27.264874
-318	3	Approved	Advanced	\N	Daily	Seeded assignment	2025-11-10 07:06:27.264874
-322	19	Requested	\N	0	Monthly	Seeded assignment	\N
-495	13	Requested	Beginner	\N	Daily	Seeded assignment	2025-11-13 09:39:27.264874
-680	19	Approved	Beginner	3	Monthly	Seeded assignment	2025-11-03 15:13:27.264874
-490	20	Approved	\N	4	Rarely	Seeded request	\N
-950	1	Approved	\N	\N	Daily	Seeded assignment	2025-11-12 23:05:27.264874
-66	6	Requested	Advanced	\N	\N	Seeded assignment	\N
-114	22	Requested	Expert	\N	\N	Seeded assignment	\N
-340	17	Approved	Intermediate	5	\N	Seeded assignment	\N
-487	16	Approved	\N	6	Rarely	Seeded request	\N
-853	8	Approved	\N	9	\N	Seeded assignment	2025-11-07 16:38:27.264874
-127	9	Requested	Advanced	5	\N	Seeded request	\N
-157	12	Approved	Expert	6	Rarely	Seeded assignment	\N
-702	22	Approved	Expert	7	\N	Seeded assignment	\N
-522	11	Requested	\N	0	\N	Seeded request	2025-11-03 07:15:27.264874
-913	10	Approved	\N	\N	Monthly	Seeded request	\N
-359	23	Approved	Intermediate	7	Daily	Seeded request	\N
-123	24	Approved	\N	4	Rarely	Seeded assignment	2025-11-11 11:08:27.264874
-389	22	Requested	Beginner	8	\N	Seeded assignment	\N
-201	11	Requested	\N	\N	Rarely	Seeded request	\N
-503	12	Approved	Beginner	3	\N	Seeded request	\N
-691	22	Requested	Expert	\N	Rarely	Seeded assignment	\N
-590	24	Approved	Beginner	3	\N	Seeded assignment	\N
-440	10	Requested	\N	\N	Rarely	Seeded assignment	\N
-25	23	Requested	\N	10	Weekly	Seeded assignment	2025-11-12 08:46:27.264874
-220	18	Approved	Advanced	\N	\N	Seeded request	2025-11-06 12:15:27.264874
-439	1	Approved	Expert	\N	\N	Seeded request	\N
-599	7	Requested	\N	7	\N	Seeded request	\N
-551	9	Approved	\N	\N	Daily	Seeded assignment	\N
-14	11	Approved	\N	\N	\N	Seeded assignment	\N
-276	7	Approved	\N	8	Monthly	Seeded request	\N
-706	23	Approved	Beginner	\N	Daily	Seeded request	\N
-886	24	Requested	Intermediate	6	\N	Seeded assignment	2025-11-08 04:23:27.264874
-639	4	Approved	Beginner	9	Daily	Seeded request	\N
-704	25	Approved	\N	4	\N	Seeded request	\N
-859	11	Approved	Beginner	1	Weekly	Seeded request	\N
-187	4	Approved	Advanced	7	\N	Seeded request	\N
-337	24	Approved	Beginner	3	Daily	Seeded request	\N
-446	16	Approved	Advanced	4	Daily	Seeded assignment	\N
-362	3	Requested	\N	2	Daily	Seeded request	\N
-92	19	Approved	Advanced	9	Daily	Seeded assignment	2025-11-29 18:33:27.264874
-662	6	Approved	Beginner	6	Monthly	Seeded assignment	\N
-533	8	Approved	Intermediate	\N	\N	Seeded request	\N
-390	3	Requested	Intermediate	\N	Daily	Seeded assignment	\N
-961	16	Requested	\N	3	\N	Seeded assignment	2025-11-17 15:43:27.264874
-864	12	Requested	Intermediate	9	Weekly	Seeded request	\N
-811	4	Requested	Expert	7	\N	Seeded request	\N
-135	6	Requested	\N	2	\N	Seeded assignment	\N
-112	10	Approved	Expert	2	Monthly	Seeded assignment	\N
-343	8	Approved	Expert	\N	\N	Seeded assignment	\N
-937	17	Approved	\N	6	Daily	Seeded request	\N
-414	23	Approved	Intermediate	9	Monthly	Seeded request	\N
-291	12	Approved	\N	7	\N	Seeded assignment	\N
-604	16	Approved	\N	6	Weekly	Seeded assignment	\N
-39	6	Requested	\N	7	\N	Seeded request	\N
-86	13	Requested	\N	\N	\N	Seeded assignment	\N
-423	12	Requested	Advanced	\N	Rarely	Seeded request	2025-11-28 04:17:27.264874
-690	10	Approved	\N	2	Monthly	Seeded assignment	\N
-1	5	Approved	\N	1	\N	Seeded assignment	\N
-797	12	Requested	Expert	\N	\N	Seeded request	\N
-88	20	Approved	\N	8	\N	Seeded assignment	2025-11-10 10:13:27.264874
-158	25	Approved	\N	\N	\N	Seeded assignment	\N
-605	4	Approved	Intermediate	9	Daily	Seeded assignment	\N
-186	8	Requested	Intermediate	\N	Daily	Seeded request	2025-11-25 04:37:27.264874
-959	9	Requested	Expert	\N	Rarely	Seeded request	\N
-708	22	Approved	Beginner	0	Monthly	Seeded request	2025-11-20 00:10:27.264874
-689	24	Approved	\N	\N	Daily	Seeded assignment	2025-11-17 20:24:27.264874
-795	1	Approved	\N	6	Monthly	Seeded request	2025-11-24 00:57:27.264874
-460	21	Approved	Advanced	\N	Monthly	Seeded assignment	\N
-227	8	Requested	Beginner	\N	Rarely	Seeded request	\N
-144	7	Requested	\N	8	\N	Seeded request	\N
-617	19	Approved	\N	\N	Weekly	Seeded request	\N
-740	7	Approved	\N	7	\N	Seeded assignment	2025-11-09 07:30:27.264874
-980	13	Approved	\N	1	\N	Seeded assignment	\N
-244	9	Approved	\N	8	Weekly	Seeded request	\N
-446	10	Requested	Advanced	6	\N	Seeded assignment	2025-11-08 07:51:27.264874
-935	22	Approved	\N	5	\N	Seeded assignment	\N
-786	18	Approved	Intermediate	2	\N	Seeded assignment	\N
-957	11	Approved	\N	4	\N	Seeded assignment	2025-11-24 09:35:27.264874
-863	4	Approved	\N	2	Daily	Seeded request	\N
-265	11	Approved	\N	4	\N	Seeded request	\N
-746	23	Requested	Beginner	8	Weekly	Seeded assignment	\N
-414	18	Requested	Advanced	\N	\N	Seeded assignment	\N
-576	1	Requested	Expert	\N	Daily	Seeded assignment	2025-11-07 08:36:27.264874
-235	24	Requested	Beginner	0	\N	Seeded request	2025-11-24 15:31:27.264874
-105	6	Approved	Intermediate	7	\N	Seeded request	\N
-655	19	Approved	\N	9	Rarely	Seeded request	\N
-818	22	Approved	Expert	\N	Weekly	Seeded request	2025-11-10 18:47:27.264874
-909	6	Approved	Expert	2	\N	Seeded request	\N
-396	22	Approved	Beginner	1	Daily	Seeded assignment	\N
-403	9	Requested	\N	2	Daily	Seeded request	\N
-548	7	Approved	Intermediate	6	Monthly	Seeded assignment	\N
-112	16	Requested	\N	2	\N	Seeded assignment	\N
-149	18	Approved	Advanced	\N	\N	Seeded assignment	\N
-329	25	Approved	Advanced	\N	\N	Seeded assignment	2025-12-01 19:23:27.264874
-759	1	Requested	Advanced	10	Weekly	Seeded request	\N
-54	8	Approved	Beginner	\N	\N	Seeded assignment	2025-11-11 01:23:27.264874
-232	3	Requested	Intermediate	2	\N	Seeded request	\N
-97	10	Requested	\N	2	\N	Seeded request	\N
-563	5	Approved	Intermediate	5	Rarely	Seeded assignment	2025-11-20 23:27:27.264874
-130	7	Approved	Intermediate	0	Monthly	Seeded assignment	\N
-127	25	Approved	\N	9	\N	Seeded assignment	\N
-749	7	Requested	\N	10	\N	Seeded request	2025-11-28 23:56:27.264874
-225	6	Approved	Advanced	2	Daily	Seeded assignment	\N
-760	6	Requested	\N	10	\N	Seeded assignment	2025-11-14 04:35:27.264874
-709	17	Requested	Intermediate	9	\N	Seeded request	\N
-892	3	Approved	\N	3	\N	Seeded assignment	\N
-395	21	Approved	\N	0	Weekly	Seeded assignment	\N
-681	20	Approved	Intermediate	2	Weekly	Seeded request	2025-11-05 15:56:27.264874
-691	17	Requested	Intermediate	1	Rarely	Seeded assignment	\N
-600	16	Requested	Beginner	0	Daily	Seeded assignment	2025-11-16 23:24:27.264874
-711	7	Requested	Advanced	8	\N	Seeded assignment	\N
-917	7	Approved	\N	8	Rarely	Seeded request	\N
-744	25	Approved	Beginner	8	Daily	Seeded assignment	\N
-768	6	Approved	Intermediate	\N	Monthly	Seeded request	\N
-954	16	Approved	\N	0	\N	Seeded assignment	2025-11-08 23:47:27.264874
-704	9	Approved	Expert	8	\N	Seeded assignment	2025-11-20 07:22:27.264874
-978	6	Approved	\N	8	Monthly	Seeded assignment	2025-11-08 16:20:27.264874
-238	11	Requested	Advanced	4	Daily	Seeded assignment	\N
-20	20	Requested	Expert	3	\N	Seeded assignment	\N
-389	17	Requested	Beginner	8	\N	Seeded request	\N
-661	22	Requested	Advanced	\N	\N	Seeded assignment	\N
-205	17	Requested	\N	7	Weekly	Seeded assignment	2025-11-18 15:36:27.264874
-392	1	Requested	\N	9	Weekly	Seeded assignment	2025-11-11 00:05:27.264874
-508	5	Approved	Advanced	\N	Daily	Seeded assignment	2025-11-11 17:33:27.264874
-641	17	Requested	\N	3	Rarely	Seeded assignment	2025-11-23 03:20:27.264874
-65	4	Requested	Expert	\N	Weekly	Seeded request	\N
-882	5	Requested	Advanced	1	Rarely	Seeded request	2025-11-05 21:40:27.264874
-436	7	Requested	\N	1	\N	Seeded request	\N
-551	25	Approved	Expert	3	Rarely	Seeded assignment	\N
-219	24	Requested	\N	10	Monthly	Seeded assignment	\N
-340	22	Requested	Intermediate	\N	Rarely	Seeded request	\N
-652	3	Approved	Intermediate	\N	Monthly	Seeded assignment	\N
-620	20	Approved	Intermediate	2	Weekly	Seeded assignment	\N
-202	3	Approved	\N	\N	Weekly	Seeded request	\N
-269	21	Approved	\N	8	Rarely	Seeded assignment	\N
-700	20	Requested	Beginner	10	\N	Seeded assignment	2025-11-06 18:28:27.264874
-589	16	Approved	\N	\N	\N	Seeded request	\N
-913	16	Requested	\N	\N	Monthly	Seeded assignment	\N
-413	19	Approved	Intermediate	\N	\N	Seeded assignment	2025-11-05 13:32:27.264874
-959	25	Requested	\N	\N	Weekly	Seeded assignment	2025-11-04 02:06:27.264874
-266	3	Approved	\N	\N	\N	Seeded assignment	\N
-931	1	Approved	Beginner	10	Monthly	Seeded request	2025-11-17 02:44:27.264874
-638	9	Approved	Intermediate	\N	Daily	Seeded request	\N
-254	22	Approved	\N	7	Daily	Seeded request	2025-11-29 08:10:27.264874
-559	13	Approved	Expert	3	\N	Seeded assignment	\N
-833	5	Approved	\N	6	\N	Seeded assignment	2025-11-16 23:30:27.264874
-592	7	Requested	\N	9	Daily	Seeded request	2025-11-25 21:36:27.264874
-440	16	Approved	Intermediate	9	\N	Seeded request	\N
-754	6	Approved	\N	5	Rarely	Seeded assignment	2025-11-08 10:06:27.264874
-884	23	Requested	Expert	0	Monthly	Seeded request	\N
-530	4	Requested	Beginner	\N	Weekly	Seeded assignment	2025-11-30 15:28:27.264874
-163	13	Approved	Intermediate	10	Weekly	Seeded assignment	2025-11-07 21:02:27.264874
-657	7	Requested	Expert	4	\N	Seeded assignment	2025-11-07 09:03:27.264874
-917	23	Requested	Intermediate	\N	Rarely	Seeded request	\N
-403	1	Requested	\N	2	\N	Seeded assignment	2025-11-21 21:54:27.264874
-583	6	Approved	Expert	9	Monthly	Seeded assignment	\N
-650	6	Approved	Beginner	5	\N	Seeded assignment	\N
-120	11	Approved	Beginner	6	\N	Seeded assignment	2025-11-22 18:42:27.264874
-313	10	Approved	Intermediate	1	\N	Seeded request	\N
-85	16	Requested	Beginner	\N	\N	Seeded request	2025-11-20 00:28:27.264874
-568	6	Approved	\N	3	\N	Seeded assignment	\N
-30	10	Requested	Intermediate	\N	Weekly	Seeded assignment	2025-11-05 15:13:27.264874
-290	8	Approved	Intermediate	10	\N	Seeded request	\N
-292	20	Requested	\N	1	Weekly	Seeded assignment	\N
-420	23	Requested	\N	5	\N	Seeded request	\N
-113	4	Requested	Beginner	3	Weekly	Seeded assignment	2025-12-02 11:53:27.264874
-384	12	Approved	\N	\N	Weekly	Seeded assignment	\N
-493	9	Approved	\N	7	\N	Seeded assignment	\N
-956	13	Requested	Advanced	\N	\N	Seeded assignment	\N
-622	17	Approved	Advanced	0	Weekly	Seeded request	\N
-820	9	Approved	\N	6	Monthly	Seeded assignment	\N
-55	22	Requested	\N	5	\N	Seeded request	\N
-232	4	Approved	\N	6	Rarely	Seeded request	\N
-916	7	Approved	Advanced	\N	Weekly	Seeded assignment	2025-11-18 05:20:27.264874
-613	6	Approved	Intermediate	6	Rarely	Seeded assignment	2025-11-26 03:15:27.264874
-803	4	Approved	\N	\N	Monthly	Seeded request	\N
-911	7	Requested	\N	\N	Monthly	Seeded assignment	2025-11-07 04:45:27.264874
-826	24	Approved	Beginner	\N	Daily	Seeded request	2025-11-09 03:56:27.264874
-416	16	Requested	\N	\N	\N	Seeded request	\N
-762	10	Requested	\N	7	\N	Seeded assignment	2025-11-27 20:57:27.264874
-129	17	Requested	Expert	6	Weekly	Seeded request	2025-11-16 21:03:27.264874
-214	12	Requested	\N	9	Daily	Seeded assignment	\N
-437	18	Approved	\N	\N	Monthly	Seeded assignment	\N
-863	3	Approved	Intermediate	9	\N	Seeded request	\N
-137	20	Requested	Expert	6	Daily	Seeded request	\N
-343	13	Approved	Intermediate	0	Monthly	Seeded assignment	\N
-592	23	Approved	\N	4	\N	Seeded assignment	\N
-397	12	Approved	\N	8	\N	Seeded request	\N
-941	4	Approved	Advanced	3	Rarely	Seeded assignment	\N
-665	11	Requested	Advanced	6	\N	Seeded request	\N
-330	12	Approved	\N	1	\N	Seeded request	2025-11-29 20:09:27.264874
-903	17	Approved	Expert	\N	\N	Seeded assignment	\N
-628	10	Approved	Advanced	1	Monthly	Seeded assignment	2025-11-17 22:05:27.264874
-862	21	Approved	Beginner	4	\N	Seeded assignment	\N
-759	9	Requested	Advanced	8	\N	Seeded request	\N
-807	11	Approved	\N	9	\N	Seeded assignment	\N
-285	12	Requested	Beginner	10	Monthly	Seeded request	\N
-615	23	Approved	Beginner	5	Weekly	Seeded request	\N
-888	6	Requested	Advanced	7	Rarely	Seeded assignment	2025-11-14 23:07:27.264874
-918	5	Approved	\N	1	Rarely	Seeded assignment	2025-12-02 09:39:27.264874
-106	12	Requested	\N	\N	Rarely	Seeded request	\N
-146	13	Approved	Beginner	\N	Daily	Seeded request	2025-11-14 22:40:27.264874
-454	17	Requested	Beginner	\N	Rarely	Seeded assignment	\N
-483	10	Approved	\N	\N	\N	Seeded request	2025-11-29 18:18:27.264874
-8	10	Requested	\N	0	\N	Seeded assignment	2025-11-13 15:47:27.264874
-116	21	Requested	\N	9	Weekly	Seeded request	2025-11-21 12:07:27.264874
-653	3	Requested	Intermediate	\N	Monthly	Seeded request	\N
-431	7	Requested	Advanced	8	Daily	Seeded request	\N
-266	4	Approved	Advanced	\N	\N	Seeded request	\N
-399	11	Approved	\N	3	Daily	Seeded assignment	\N
-865	4	Approved	\N	8	Monthly	Seeded assignment	\N
-382	20	Approved	Advanced	\N	Monthly	Seeded assignment	2025-11-24 02:14:27.264874
-497	12	Requested	Beginner	2	\N	Seeded request	2025-11-13 16:24:27.264874
-164	1	Approved	Advanced	\N	Monthly	Seeded request	\N
-816	19	Requested	Intermediate	2	\N	Seeded request	2025-11-17 00:31:27.264874
-728	16	Approved	\N	4	Rarely	Seeded assignment	2025-11-03 09:40:27.264874
-438	25	Approved	\N	6	Rarely	Seeded assignment	\N
-542	10	Approved	Intermediate	\N	Daily	Seeded assignment	\N
-772	23	Approved	Beginner	\N	Rarely	Seeded request	2025-11-14 21:40:27.264874
-68	4	Approved	Advanced	\N	Daily	Seeded assignment	\N
-861	19	Approved	Beginner	\N	Monthly	Seeded assignment	2025-11-05 12:48:27.264874
-65	3	Approved	Intermediate	5	Rarely	Seeded request	2025-11-21 08:49:27.264874
-142	19	Approved	\N	\N	Weekly	Seeded assignment	\N
-638	1	Requested	\N	\N	Rarely	Seeded assignment	2025-12-01 06:39:27.264874
-166	7	Requested	Intermediate	10	\N	Seeded assignment	\N
-724	24	Requested	Beginner	\N	\N	Seeded assignment	2025-11-09 13:38:27.264874
-883	20	Approved	Intermediate	10	Daily	Seeded request	\N
-324	5	Approved	Expert	\N	Weekly	Seeded request	\N
-369	24	Approved	Intermediate	6	\N	Seeded request	2025-11-17 13:11:27.264874
-241	19	Requested	\N	2	\N	Seeded assignment	2025-11-16 20:24:27.264874
-357	19	Approved	Intermediate	10	\N	Seeded assignment	\N
-928	4	Requested	\N	\N	Daily	Seeded assignment	2025-12-02 03:03:27.264874
-158	1	Requested	Intermediate	4	Weekly	Seeded request	\N
-81	21	Approved	Advanced	0	\N	Seeded request	2025-11-08 12:43:27.264874
-243	13	Approved	Intermediate	\N	Rarely	Seeded assignment	\N
-492	22	Approved	Beginner	2	Weekly	Seeded assignment	2025-11-10 20:27:27.264874
-220	7	Approved	Beginner	\N	\N	Seeded request	\N
-393	21	Approved	Intermediate	\N	\N	Seeded assignment	2025-11-28 03:35:27.264874
-648	6	Approved	Intermediate	0	Rarely	Seeded assignment	2025-11-27 23:33:27.264874
-749	23	Approved	Beginner	10	Weekly	Seeded request	\N
-931	9	Approved	Beginner	9	\N	Seeded assignment	2025-11-11 12:01:27.264874
-577	12	Requested	\N	4	\N	Seeded request	\N
-673	9	Approved	Beginner	\N	\N	Seeded request	2025-11-30 22:06:27.264874
-336	24	Approved	Beginner	\N	\N	Seeded assignment	\N
-441	21	Approved	Advanced	8	Weekly	Seeded assignment	\N
-276	18	Requested	\N	\N	Daily	Seeded request	\N
-425	8	Requested	Advanced	\N	Weekly	Seeded assignment	\N
-309	25	Requested	Intermediate	2	Weekly	Seeded request	\N
-216	16	Approved	Advanced	8	\N	Seeded request	\N
-836	11	Approved	\N	\N	\N	Seeded assignment	2025-11-26 00:23:27.264874
-778	21	Requested	Beginner	6	Monthly	Seeded request	\N
-621	17	Requested	\N	\N	Daily	Seeded assignment	\N
-532	9	Approved	\N	8	\N	Seeded request	\N
-365	9	Approved	\N	10	Daily	Seeded request	\N
-631	22	Requested	Intermediate	3	\N	Seeded assignment	\N
-727	16	Requested	Intermediate	\N	Monthly	Seeded assignment	\N
-189	3	Requested	Expert	9	Rarely	Seeded assignment	2025-11-10 08:28:27.264874
-229	7	Requested	Beginner	\N	Monthly	Seeded request	\N
-47	4	Approved	\N	10	Rarely	Seeded request	2025-11-21 05:39:27.264874
-119	13	Approved	Expert	4	\N	Seeded request	2025-11-25 02:31:27.264874
-43	8	Approved	\N	5	Daily	Seeded assignment	2025-12-01 21:17:27.264874
-595	4	Requested	\N	1	Rarely	Seeded request	\N
-561	7	Requested	\N	1	Monthly	Seeded request	\N
-921	13	Requested	\N	0	Daily	Seeded request	2025-11-27 13:38:27.264874
-949	11	Approved	\N	1	\N	Seeded request	\N
-361	1	Approved	Advanced	3	\N	Seeded request	2025-11-08 02:08:27.264874
-474	22	Approved	\N	3	Weekly	Seeded assignment	\N
-478	18	Requested	Intermediate	9	Rarely	Seeded request	2025-11-05 18:52:27.264874
-505	11	Approved	\N	6	Weekly	Seeded request	\N
-397	5	Approved	Advanced	10	Daily	Seeded request	2025-11-22 08:20:27.264874
-636	4	Requested	Advanced	2	Daily	Seeded request	2025-11-10 16:01:27.264874
-387	10	Approved	\N	5	Daily	Seeded request	\N
-705	16	Requested	\N	\N	\N	Seeded assignment	2025-11-13 12:15:27.264874
-703	25	Approved	Advanced	2	Monthly	Seeded assignment	2025-11-05 16:19:27.264874
-851	22	Requested	Advanced	\N	Daily	Seeded assignment	\N
-214	5	Approved	Intermediate	5	Weekly	Seeded request	\N
-139	11	Approved	Intermediate	\N	Weekly	Seeded assignment	\N
-756	13	Requested	\N	3	Weekly	Seeded assignment	2025-11-19 10:18:27.264874
-663	23	Requested	Expert	\N	Weekly	Seeded request	2025-12-02 19:15:27.264874
-831	24	Approved	\N	3	\N	Seeded request	2025-11-15 21:57:27.264874
-735	25	Approved	Expert	\N	\N	Seeded assignment	\N
-925	6	Requested	Intermediate	\N	\N	Seeded assignment	2025-11-24 13:23:27.264874
-680	23	Approved	\N	\N	Rarely	Seeded assignment	\N
-136	19	Approved	Expert	3	Rarely	Seeded request	\N
-454	21	Approved	Intermediate	4	Weekly	Seeded request	2025-11-27 11:05:27.264874
-924	8	Requested	\N	8	Weekly	Seeded request	2025-11-17 22:37:27.264874
-461	9	Requested	Intermediate	5	\N	Seeded assignment	\N
+978	10	Approved	Expert	12	Weekly	Seeded assignment	2025-11-30 07:16:09.934399
+978	7	Approved	Advanced	2	Daily	Seeded request	2025-11-12 07:16:09.934399
+369	3	Approved	Intermediate	15	Monthly	Seeded assignment	2025-11-10 02:10:27.264874
+700	6	Approved	Intermediate	7	Daily	Seeded request	\N
+196	8	Approved	Beginner	13	Weekly	Seeded assignment	2025-11-06 06:03:27.264874
+643	24	Approved	Expert	5	Monthly	Seeded request	2025-11-23 18:02:27.264874
+936	12	Approved	Expert	11	Weekly	Seeded request	\N
+178	7	Approved	Expert	10	Monthly	Seeded assignment	\N
+577	6	Approved	Intermediate	3	Weekly	Seeded assignment	\N
+393	1	Approved	Intermediate	3	Daily	Seeded request	2025-11-24 05:21:27.264874
+539	12	Approved	Expert	13	Daily	Seeded assignment	2025-11-09 17:47:27.264874
+467	12	Approved	Advanced	8	Monthly	Seeded request	\N
+757	13	Approved	Intermediate	5	Daily	Seeded assignment	\N
+355	17	Approved	Beginner	3	Weekly	Seeded assignment	\N
+90	22	Approved	Expert	2	Daily	Seeded assignment	2025-11-08 20:11:27.264874
+280	10	Approved	Beginner	12	Occasionally	Seeded assignment	2025-11-30 17:07:27.264874
+502	22	Approved	Beginner	3	Daily	Seeded assignment	2025-11-14 11:57:27.264874
+171	18	Approved	Advanced	10	Weekly	Seeded assignment	\N
+464	3	Approved	Beginner	13	Daily	Seeded assignment	\N
+150	5	Approved	Advanced	3	Occasionally	Seeded assignment	\N
+526	7	Approved	Intermediate	7	Daily	Seeded request	\N
+596	25	Approved	Expert	4	Monthly	Seeded assignment	\N
+839	7	Approved	Expert	15	Monthly	Seeded assignment	\N
+899	8	Approved	Intermediate	11	Daily	Seeded request	\N
+917	13	Approved	Beginner	13	Daily	Seeded assignment	2025-11-13 02:10:27.264874
+387	4	Approved	Intermediate	5	Weekly	Seeded assignment	2025-11-25 09:40:27.264874
+621	1	Approved	Beginner	5	Occasionally	Seeded assignment	\N
+76	3	Approved	Expert	15	Monthly	Seeded assignment	2025-11-25 07:04:27.264874
+275	11	Approved	Advanced	10	Weekly	Seeded assignment	\N
+649	19	Approved	Expert	6	Monthly	Seeded assignment	2025-11-27 00:07:27.264874
+694	24	Approved	Expert	5	Occasionally	Seeded request	\N
+307	8	Approved	Beginner	5	Monthly	Seeded assignment	\N
+78	21	Approved	Expert	5	Monthly	Seeded assignment	\N
+149	8	Approved	Intermediate	0	Daily	Seeded request	\N
+611	20	Approved	Expert	14	Monthly	Seeded assignment	\N
+334	3	Approved	Intermediate	14	Occasionally	Seeded request	\N
+452	6	Approved	Expert	0	Daily	Seeded assignment	\N
+888	12	Approved	Advanced	1	Occasionally	Seeded assignment	\N
+148	12	Approved	Beginner	10	Daily	Seeded assignment	2025-11-15 22:15:27.264874
+236	12	Approved	Advanced	2	Weekly	Seeded assignment	\N
+845	3	Approved	Advanced	8	Weekly	Seeded assignment	\N
+720	16	Approved	Intermediate	12	Daily	Seeded assignment	2025-11-18 13:45:27.264874
+792	5	Approved	Intermediate	6	Occasionally	Seeded request	2025-11-28 23:26:27.264874
+726	11	Approved	Intermediate	15	Weekly	Seeded assignment	2025-11-13 06:49:27.264874
+718	24	Approved	Expert	3	Occasionally	Seeded request	2025-11-24 15:59:27.264874
+429	24	Approved	Expert	4	Occasionally	Seeded assignment	\N
+396	25	Approved	Advanced	12	Weekly	Seeded assignment	2025-11-22 22:12:27.264874
+818	25	Approved	Beginner	0	Monthly	Seeded assignment	\N
+177	6	Approved	Beginner	12	Monthly	Seeded request	\N
+3	20	Approved	Beginner	10	Weekly	Seeded assignment	\N
+231	18	Approved	Advanced	5	Weekly	Seeded assignment	2025-11-05 12:05:27.264874
+967	22	Approved	Intermediate	15	Weekly	Seeded assignment	\N
+140	10	Requested	Advanced	7	Weekly	Seeded assignment	2025-11-11 07:16:09.934399
+272	18	Approved	Intermediate	8	Monthly	Seeded request	\N
+277	21	Approved	Beginner	4	Weekly	Seeded assignment	2025-11-27 06:04:27.264874
+341	9	Approved	Expert	8	Monthly	Seeded assignment	\N
+301	24	Approved	Expert	0	Occasionally	Seeded request	\N
+538	12	Approved	Expert	9	Weekly	Seeded assignment	\N
+401	24	Approved	Beginner	8	Monthly	Seeded request	2025-11-19 20:00:27.264874
+876	16	Approved	Beginner	12	Monthly	Seeded assignment	2025-11-05 04:10:27.264874
+454	1	Approved	Beginner	5	Occasionally	Seeded assignment	\N
+4	5	Approved	Beginner	5	Occasionally	Seeded request	\N
+641	9	Approved	Expert	5	Occasionally	Seeded request	2025-11-17 07:11:27.264874
+751	1	Approved	Intermediate	0	Monthly	Seeded request	\N
+704	17	Approved	Beginner	8	Daily	Seeded assignment	\N
+164	17	Approved	Expert	4	Weekly	Seeded assignment	\N
+960	19	Approved	Intermediate	13	Weekly	Seeded assignment	\N
+445	11	Approved	Intermediate	1	Monthly	Seeded assignment	\N
+748	24	Approved	Advanced	6	Weekly	Seeded assignment	\N
+37	25	Approved	Advanced	6	Monthly	Seeded request	2025-11-21 05:53:27.264874
+188	18	Approved	Beginner	0	Occasionally	Seeded assignment	\N
+375	18	Approved	Expert	9	Occasionally	Seeded request	\N
+878	12	Approved	Expert	10	Monthly	Seeded assignment	\N
+373	7	Approved	Beginner	9	Weekly	Seeded assignment	\N
+129	1	Approved	Beginner	1	Occasionally	Seeded assignment	\N
+888	5	Approved	Expert	14	Occasionally	Seeded request	\N
+712	24	Approved	Advanced	14	Monthly	Seeded request	\N
+425	19	Approved	Intermediate	2	Monthly	Seeded request	2025-11-18 11:09:27.264874
+618	19	Approved	Intermediate	5	Daily	Seeded request	2025-11-29 23:59:27.264874
+971	1	Approved	Intermediate	5	Monthly	Seeded request	2025-12-01 13:57:27.264874
+575	24	Approved	Intermediate	4	Monthly	Seeded assignment	\N
+322	13	Approved	Intermediate	1	Daily	Seeded assignment	2025-11-21 22:59:27.264874
+804	10	Approved	Beginner	14	Daily	Seeded assignment	\N
+926	12	Approved	Expert	2	Weekly	Seeded request	\N
+693	22	Approved	Advanced	5	Monthly	Seeded assignment	\N
+254	25	Approved	Beginner	10	Occasionally	Seeded request	\N
+524	8	Approved	Expert	0	Weekly	Seeded assignment	\N
+260	18	Approved	Expert	12	Weekly	Seeded request	\N
+604	3	Approved	Expert	2	Occasionally	Seeded request	2025-12-01 02:29:27.264874
+585	4	Approved	Expert	2	Monthly	Seeded assignment	\N
+979	18	Requested	Intermediate	1	Weekly		2025-12-03 10:34:52.911767
+979	22	Approved	Intermediate	1	Weekly		2025-12-03 10:34:50.152705
+692	10	Approved	Expert	8	Occasionally	Seeded assignment	\N
+390	16	Approved	Beginner	6	Monthly	Seeded assignment	2025-11-05 04:24:27.264874
+14	12	Approved	Intermediate	1	Weekly	Seeded request	\N
+339	7	Approved	Beginner	10	Weekly	Seeded request	\N
+101	7	Approved	Intermediate	1	Daily	Seeded assignment	\N
+374	25	Approved	Advanced	3	Daily	Seeded request	2025-11-14 23:09:27.264874
+296	8	Approved	Advanced	2	Monthly	Seeded assignment	\N
+673	17	Approved	Expert	11	Daily	Seeded assignment	\N
+901	4	Requested	Advanced	4	Daily	Seeded assignment	2025-11-18 07:16:09.934399
+884	22	Requested	Advanced	4	Monthly	Seeded request	2025-11-15 07:16:09.934399
+477	5	Requested	Advanced	1	Occasionally	Seeded assignment	2025-11-11 07:16:09.934399
+920	16	Requested	Expert	11	Daily	Seeded request	2025-11-20 07:16:09.934399
+782	6	Requested	Advanced	9	Occasionally	Seeded request	2025-11-22 07:16:09.934399
+320	8	Requested	Advanced	12	Monthly	Seeded request	2025-11-05 07:16:09.934399
+545	11	Requested	Expert	14	Monthly	Seeded assignment	2025-11-25 07:16:09.934399
+339	25	Requested	Intermediate	5	Daily	Seeded request	2025-11-18 07:16:09.934399
+441	19	Requested	Intermediate	4	Weekly	Seeded request	2025-11-05 07:16:09.934399
+825	10	Requested	Beginner	3	Occasionally	Seeded request	2025-11-20 07:16:09.934399
+702	18	Requested	Advanced	2	Monthly	Seeded assignment	2025-11-12 07:16:09.934399
+555	10	Requested	Advanced	0	Monthly	Seeded assignment	2025-11-09 07:16:09.934399
+741	8	Requested	Advanced	4	Daily	Seeded request	2025-11-08 07:16:09.934399
+170	7	Requested	Intermediate	13	Occasionally	Seeded request	2025-11-18 07:16:09.934399
+157	4	Requested	Advanced	15	Daily	Seeded request	2025-11-27 07:16:09.934399
+43	1	Requested	Advanced	12	Monthly	Seeded assignment	2025-11-08 07:16:09.934399
+37	23	Requested	Advanced	3	Weekly	Seeded assignment	2025-12-02 07:16:09.934399
+249	13	Requested	Expert	4	Daily	Seeded assignment	2025-11-14 07:16:09.934399
+919	8	Requested	Beginner	5	Weekly	Seeded assignment	2025-11-23 07:16:09.934399
+434	11	Requested	Beginner	5	Daily	Seeded assignment	2025-11-14 07:16:09.934399
+156	13	Requested	Intermediate	11	Daily	Seeded request	2025-11-14 07:16:09.934399
+133	7	Requested	Intermediate	8	Weekly	Seeded assignment	2025-11-09 07:16:09.934399
+354	19	Requested	Expert	11	Daily	Seeded request	2025-11-22 07:16:09.934399
+616	3	Requested	Intermediate	6	Daily	Seeded assignment	2025-11-30 07:16:09.934399
+97	11	Requested	Intermediate	14	Weekly	Seeded request	2025-11-16 07:16:09.934399
+261	8	Requested	Expert	8	Daily	Seeded assignment	2025-11-25 07:16:09.934399
+362	20	Requested	Advanced	0	Daily	Seeded assignment	2025-11-23 07:16:09.934399
+937	23	Requested	Beginner	6	Occasionally	Seeded request	2025-11-08 07:16:09.934399
+421	7	Requested	Intermediate	10	Weekly	Seeded assignment	2025-11-20 07:16:09.934399
+37	7	Requested	Intermediate	14	Weekly	Seeded assignment	2025-12-02 07:16:09.934399
+730	8	Requested	Expert	11	Occasionally	Seeded assignment	2025-11-15 07:16:09.934399
+418	13	Requested	Intermediate	13	Weekly	Seeded assignment	2025-11-03 07:16:09.934399
+490	4	Requested	Advanced	11	Occasionally	Seeded request	2025-11-17 07:16:09.934399
+89	24	Requested	Advanced	9	Weekly	Seeded request	2025-11-23 07:16:09.934399
+118	1	Requested	Expert	15	Daily	Seeded assignment	2025-11-19 07:16:09.934399
+160	24	Requested	Beginner	1	Daily	Seeded request	2025-11-17 07:16:09.934399
+579	6	Requested	Advanced	3	Weekly	Seeded request	2025-11-20 07:16:09.934399
+688	19	Requested	Beginner	1	Monthly	Seeded assignment	2025-11-15 07:16:09.934399
+881	11	Requested	Expert	8	Occasionally	Seeded assignment	2025-11-05 07:16:09.934399
+549	10	Requested	Advanced	15	Weekly	Seeded request	2025-11-03 07:16:09.934399
+390	12	Requested	Beginner	9	Monthly	Seeded request	2025-11-23 07:16:09.934399
+779	24	Requested	Expert	12	Occasionally	Seeded assignment	2025-11-07 07:16:09.934399
+91	8	Requested	Advanced	2	Daily	Seeded assignment	2025-11-19 07:16:09.934399
+818	7	Requested	Intermediate	5	Occasionally	Seeded assignment	2025-11-20 07:16:09.934399
+664	10	Requested	Intermediate	13	Occasionally	Seeded assignment	2025-11-29 07:16:09.934399
+656	7	Requested	Advanced	14	Occasionally	Seeded assignment	2025-11-25 07:16:09.934399
+554	24	Requested	Intermediate	11	Occasionally	Seeded assignment	2025-11-28 07:16:09.934399
+470	12	Requested	Expert	7	Occasionally	Seeded assignment	2025-11-09 07:16:09.934399
+925	16	Requested	Beginner	6	Daily	Seeded assignment	2025-11-27 07:16:09.934399
+128	23	Requested	Intermediate	5	Daily	Seeded request	2025-11-06 07:16:09.934399
+658	19	Requested	Advanced	7	Occasionally	Seeded assignment	2025-11-05 07:16:09.934399
+762	11	Requested	Advanced	15	Occasionally	Seeded request	2025-11-20 07:16:09.934399
+597	9	Requested	Intermediate	10	Daily	Seeded request	2025-11-07 07:16:09.934399
+521	5	Requested	Advanced	14	Weekly	Seeded assignment	2025-11-20 07:16:09.934399
+395	19	Requested	Advanced	12	Occasionally	Seeded assignment	2025-11-13 07:16:09.934399
+345	22	Requested	Advanced	7	Occasionally	Seeded request	2025-12-01 07:16:09.934399
+886	6	Requested	Advanced	15	Occasionally	Seeded request	2025-11-29 07:16:09.934399
+812	25	Requested	Expert	11	Occasionally	Seeded request	2025-11-12 07:16:09.934399
+5	7	Requested	Beginner	2	Weekly	Seeded assignment	2025-11-13 07:16:09.934399
+765	24	Requested	Advanced	13	Weekly	Seeded assignment	2025-11-16 07:16:09.934399
+719	7	Requested	Advanced	3	Weekly	Seeded request	2025-11-18 07:16:09.934399
+152	7	Requested	Beginner	0	Weekly	Seeded assignment	2025-11-10 07:16:09.934399
+190	16	Requested	Beginner	0	Occasionally	Seeded assignment	2025-11-06 07:16:09.934399
+777	10	Requested	Advanced	7	Weekly	Seeded request	2025-11-13 07:16:09.934399
+837	7	Requested	Advanced	10	Monthly	Seeded request	2025-11-28 07:16:09.934399
+192	11	Requested	Beginner	4	Occasionally	Seeded assignment	2025-11-04 07:16:09.934399
+33	25	Requested	Intermediate	12	Occasionally	Seeded assignment	2025-11-11 07:16:09.934399
+354	18	Requested	Expert	0	Daily	Seeded request	2025-11-12 07:16:09.934399
+900	25	Requested	Intermediate	9	Occasionally	Seeded request	2025-11-08 07:16:09.934399
+44	22	Requested	Expert	4	Daily	Seeded assignment	2025-11-25 07:16:09.934399
+898	10	Requested	Advanced	3	Weekly	Seeded request	2025-11-26 07:16:09.934399
+2	10	Requested	Expert	2	Occasionally	Seeded assignment	2025-11-03 07:16:09.934399
+528	22	Requested	Advanced	11	Weekly	Seeded assignment	2025-11-24 07:16:09.934399
+49	3	Requested	Beginner	5	Occasionally	Seeded request	2025-12-01 07:16:09.934399
+127	13	Requested	Intermediate	9	Monthly	Seeded assignment	2025-11-09 07:16:09.934399
+96	8	Requested	Expert	2	Monthly	Seeded assignment	2025-11-26 07:16:09.934399
+138	4	Requested	Beginner	14	Daily	Seeded assignment	2025-11-26 07:16:09.934399
+871	13	Requested	Advanced	0	Weekly	Seeded assignment	2025-11-28 07:16:09.934399
+148	16	Requested	Intermediate	3	Monthly	Seeded request	2025-11-24 07:16:09.934399
+236	16	Requested	Expert	1	Occasionally	Seeded assignment	2025-11-07 07:16:09.934399
+977	17	Approved	Intermediate	6	Monthly	Seeded request	2025-11-29 07:16:09.934399
+979	20	Approved	Expert	15	Daily	Seeded request	\N
+171	1	Requested	Beginner	11	Occasionally	Seeded request	2025-11-21 07:16:09.934399
+387	11	Requested	Beginner	0	Monthly	Seeded assignment	2025-11-14 07:16:09.934399
+505	10	Requested	Advanced	1	Daily	Seeded assignment	2025-11-07 07:16:09.934399
+591	12	Requested	Expert	12	Occasionally	Seeded assignment	2025-11-21 07:16:09.934399
+904	1	Requested	Beginner	6	Monthly	Seeded assignment	2025-11-12 07:16:09.934399
+114	19	Requested	Expert	12	Daily	Seeded request	2025-11-11 07:16:09.934399
+588	17	Requested	Advanced	15	Monthly	Seeded assignment	2025-11-25 07:16:09.934399
+81	18	Requested	Advanced	8	Weekly	Seeded assignment	2025-11-23 07:16:09.934399
+134	12	Requested	Advanced	10	Weekly	Seeded assignment	2025-11-27 07:16:09.934399
+684	10	Requested	Expert	7	Weekly	Seeded request	2025-11-29 07:16:09.934399
+929	9	Requested	Beginner	5	Monthly	Seeded request	2025-11-08 07:16:09.934399
+4	16	Requested	Beginner	12	Monthly	Seeded assignment	2025-11-23 07:16:09.934399
+523	25	Requested	Intermediate	13	Monthly	Seeded request	2025-11-03 07:16:09.934399
+848	10	Requested	Beginner	14	Monthly	Seeded assignment	2025-11-17 07:16:09.934399
+736	6	Requested	Advanced	14	Weekly	Seeded assignment	2025-11-22 07:16:09.934399
+54	1	Requested	Beginner	1	Occasionally	Seeded assignment	2025-11-16 07:16:09.934399
+19	8	Requested	Intermediate	11	Monthly	Seeded assignment	2025-11-21 07:16:09.934399
+458	17	Requested	Advanced	5	Daily	Seeded assignment	2025-11-18 07:16:09.934399
+959	13	Requested	Intermediate	12	Occasionally	Seeded request	2025-12-02 07:16:09.934399
+629	17	Requested	Beginner	0	Occasionally	Seeded assignment	2025-11-11 07:16:09.934399
+379	24	Requested	Beginner	9	Weekly	Seeded assignment	2025-11-29 07:16:09.934399
+706	21	Requested	Beginner	13	Occasionally	Seeded request	2025-11-21 07:16:09.934399
+717	13	Requested	Beginner	3	Weekly	Seeded request	2025-11-06 07:16:09.934399
+52	6	Requested	Advanced	6	Monthly	Seeded request	2025-11-03 07:16:09.934399
+255	10	Requested	Expert	3	Monthly	Seeded request	2025-11-09 07:16:09.934399
+372	4	Requested	Expert	1	Weekly	Seeded assignment	2025-12-01 07:16:09.934399
+704	8	Requested	Expert	14	Monthly	Seeded assignment	2025-11-28 07:16:09.934399
+913	6	Requested	Intermediate	0	Occasionally	Seeded assignment	2025-11-22 07:16:09.934399
+307	21	Requested	Advanced	3	Occasionally	Seeded assignment	2025-11-16 07:16:09.934399
+163	25	Requested	Intermediate	1	Weekly	Seeded assignment	2025-11-07 07:16:09.934399
+449	21	Requested	Beginner	9	Daily	Seeded assignment	2025-12-02 07:16:09.934399
+1	4	Requested	Intermediate	4	Weekly	Seeded assignment	2025-11-27 07:16:09.934399
+608	16	Requested	Expert	6	Occasionally	Seeded request	2025-11-11 07:16:09.934399
+811	5	Requested	Advanced	13	Occasionally	Seeded request	2025-11-12 07:16:09.934399
+195	19	Requested	Intermediate	13	Occasionally	Seeded request	2025-12-02 07:16:09.934399
+860	16	Requested	Intermediate	11	Monthly	Seeded request	2025-12-02 07:16:09.934399
+83	7	Requested	Intermediate	6	Occasionally	Seeded assignment	2025-11-12 07:16:09.934399
+768	16	Requested	Intermediate	2	Occasionally	Seeded request	2025-11-19 07:16:09.934399
+252	17	Requested	Beginner	1	Weekly	Seeded request	2025-11-16 07:16:09.934399
+438	13	Requested	Expert	8	Daily	Seeded assignment	2025-11-24 07:16:09.934399
+196	21	Requested	Expert	10	Weekly	Seeded request	2025-11-23 07:16:09.934399
+789	23	Requested	Beginner	7	Daily	Seeded assignment	2025-11-30 07:16:09.934399
+816	17	Requested	Intermediate	0	Monthly	Seeded request	2025-11-24 07:16:09.934399
+858	9	Requested	Advanced	5	Daily	Seeded request	2025-11-12 07:16:09.934399
+914	17	Requested	Advanced	11	Occasionally	Seeded request	2025-11-25 07:16:09.934399
+112	6	Requested	Expert	11	Weekly	Seeded assignment	2025-11-05 07:16:09.934399
+752	25	Requested	Advanced	2	Daily	Seeded request	2025-11-26 07:16:09.934399
+349	13	Requested	Expert	5	Monthly	Seeded assignment	2025-11-23 07:16:09.934399
+968	12	Requested	Intermediate	15	Weekly	Seeded request	2025-11-29 07:16:09.934399
+983	6	Requested	Intermediate	14	Daily	Seeded assignment	2025-11-19 07:16:09.934399
+869	23	Requested	Advanced	14	Occasionally	Seeded assignment	2025-11-18 07:16:09.934399
+193	25	Requested	Beginner	6	Monthly	Seeded assignment	2025-12-01 07:16:09.934399
+853	25	Requested	Advanced	9	Occasionally	Seeded assignment	2025-11-21 07:16:09.934399
+48	19	Requested	Intermediate	3	Weekly	Seeded request	2025-11-29 07:16:09.934399
+510	16	Requested	Advanced	10	Daily	Seeded request	2025-11-08 07:16:09.934399
+562	22	Requested	Beginner	7	Monthly	Seeded request	2025-11-10 07:16:09.934399
+76	11	Requested	Advanced	1	Daily	Seeded assignment	2025-11-07 07:16:09.934399
+790	16	Requested	Expert	14	Occasionally	Seeded request	2025-11-08 07:16:09.934399
+780	12	Requested	Beginner	15	Occasionally	Seeded assignment	2025-12-02 07:16:09.934399
+923	17	Requested	Advanced	15	Daily	Seeded assignment	2025-11-19 07:16:09.934399
+874	19	Requested	Intermediate	8	Weekly	Seeded assignment	2025-11-12 07:16:09.934399
+9	19	Requested	Beginner	11	Occasionally	Seeded assignment	2025-11-21 07:16:09.934399
+906	12	Requested	Beginner	8	Daily	Seeded assignment	2025-11-18 07:16:09.934399
+244	24	Requested	Beginner	9	Occasionally	Seeded assignment	2025-11-13 07:16:09.934399
+515	17	Requested	Intermediate	3	Occasionally	Seeded assignment	2025-11-15 07:16:09.934399
+123	25	Requested	Advanced	7	Occasionally	Seeded request	2025-11-23 07:16:09.934399
+406	1	Requested	Advanced	1	Daily	Seeded assignment	2025-11-30 07:16:09.934399
+815	23	Requested	Beginner	4	Daily	Seeded request	2025-11-30 07:16:09.934399
+833	23	Requested	Advanced	7	Daily	Seeded assignment	2025-11-16 07:16:09.934399
+189	17	Requested	Beginner	7	Monthly	Seeded request	2025-11-29 07:16:09.934399
+415	12	Requested	Advanced	2	Weekly	Seeded assignment	2025-11-13 07:16:09.934399
+721	16	Requested	Beginner	7	Weekly	Seeded request	2025-11-30 07:16:09.934399
+951	4	Requested	Intermediate	10	Occasionally	Seeded request	2025-11-22 07:16:09.934399
+727	25	Requested	Intermediate	9	Monthly	Seeded assignment	2025-11-05 07:16:09.934399
+746	5	Requested	Intermediate	2	Occasionally	Seeded assignment	2025-11-10 07:16:09.934399
+57	23	Requested	Expert	4	Daily	Seeded assignment	2025-12-02 07:16:09.934399
+273	9	Requested	Beginner	1	Weekly	Seeded assignment	2025-11-27 07:16:09.934399
+552	9	Requested	Expert	1	Weekly	Seeded assignment	2025-11-14 07:16:09.934399
+224	16	Requested	Advanced	7	Occasionally	Seeded request	2025-11-18 07:16:09.934399
+213	6	Requested	Expert	0	Weekly	Seeded assignment	2025-11-08 07:16:09.934399
+822	21	Requested	Expert	10	Weekly	Seeded assignment	2025-12-01 07:16:09.934399
+742	22	Requested	Intermediate	12	Weekly	Seeded assignment	2025-12-02 07:16:09.934399
+203	16	Requested	Expert	5	Weekly	Seeded assignment	2025-11-25 07:16:09.934399
+82	6	Requested	Beginner	14	Occasionally	Seeded request	2025-11-17 07:16:09.934399
+979	23	Approved	Intermediate	1	Weekly		2025-12-03 10:34:47.574154
+360	12	Requested	Beginner	4	Weekly	Seeded assignment	2025-11-08 07:16:09.934399
+968	22	Requested	Beginner	2	Weekly	Seeded assignment	2025-11-03 07:16:09.934399
+269	3	Requested	Expert	2	Weekly	Seeded assignment	2025-11-21 07:16:09.934399
+202	21	Requested	Beginner	1	Daily	Seeded request	2025-11-14 07:16:09.934399
+695	25	Requested	Advanced	10	Monthly	Seeded request	2025-11-15 07:16:09.934399
+615	5	Requested	Advanced	8	Monthly	Seeded assignment	2025-11-03 07:16:09.934399
+953	5	Requested	Intermediate	5	Monthly	Seeded assignment	2025-11-03 07:16:09.934399
+775	24	Requested	Expert	0	Weekly	Seeded assignment	2025-11-20 07:16:09.934399
+932	22	Requested	Advanced	3	Monthly	Seeded assignment	2025-11-08 07:16:09.934399
+558	3	Requested	Beginner	7	Occasionally	Seeded assignment	2025-11-05 07:16:09.934399
+424	23	Requested	Advanced	2	Daily	Seeded assignment	2025-11-05 07:16:09.934399
+206	20	Requested	Intermediate	8	Monthly	Seeded assignment	2025-11-18 07:16:09.934399
+379	8	Requested	Beginner	15	Daily	Seeded request	2025-11-29 07:16:09.934399
+772	5	Requested	Beginner	4	Weekly	Seeded request	2025-11-19 07:16:09.934399
+720	22	Requested	Beginner	12	Monthly	Seeded request	2025-11-11 07:16:09.934399
+280	17	Requested	Advanced	1	Occasionally	Seeded request	2025-11-29 07:16:09.934399
+54	11	Requested	Beginner	11	Monthly	Seeded assignment	2025-11-12 07:16:09.934399
+67	3	Requested	Advanced	6	Monthly	Seeded assignment	2025-11-27 07:16:09.934399
+261	10	Requested	Beginner	3	Occasionally	Seeded assignment	2025-11-20 07:16:09.934399
+222	12	Requested	Beginner	12	Weekly	Seeded assignment	2025-11-10 07:16:09.934399
+824	18	Approved	Advanced	3	Occasionally	Seeded assignment	\N
+890	20	Requested	Expert	15	Daily	Seeded request	2025-11-05 07:16:09.934399
+749	5	Requested	Expert	10	Monthly	Seeded assignment	2025-11-11 07:16:09.934399
+465	7	Requested	Beginner	5	Daily	Seeded assignment	2025-11-05 07:16:09.934399
+814	20	Requested	Expert	15	Monthly	Seeded assignment	2025-11-19 07:16:09.934399
+925	13	Requested	Intermediate	4	Occasionally	Seeded assignment	2025-11-08 07:16:09.934399
+652	21	Requested	Intermediate	7	Monthly	Seeded assignment	2025-11-13 07:16:09.934399
+711	5	Requested	Intermediate	10	Weekly	Seeded request	2025-11-08 07:16:09.934399
+606	6	Requested	Intermediate	15	Weekly	Seeded request	2025-11-23 07:16:09.934399
+238	8	Requested	Intermediate	12	Weekly	Seeded request	2025-12-02 07:16:09.934399
+159	4	Requested	Expert	0	Monthly	Seeded assignment	2025-11-23 07:16:09.934399
+79	1	Requested	Intermediate	12	Daily	Seeded assignment	2025-11-26 07:16:09.934399
+177	23	Requested	Expert	10	Weekly	Seeded assignment	2025-11-26 07:16:09.934399
+273	1	Requested	Advanced	4	Monthly	Seeded assignment	2025-11-03 07:16:09.934399
+891	17	Requested	Advanced	8	Weekly	Seeded request	2025-11-20 07:16:09.934399
+451	11	Requested	Expert	15	Weekly	Seeded request	2025-11-09 07:16:09.934399
+878	13	Requested	Advanced	12	Daily	Seeded assignment	2025-11-13 07:16:09.934399
+547	25	Requested	Intermediate	4	Monthly	Seeded request	2025-11-22 07:16:09.934399
+391	10	Requested	Expert	11	Monthly	Seeded assignment	2025-11-25 07:16:09.934399
+907	5	Requested	Intermediate	9	Occasionally	Seeded request	2025-11-29 07:16:09.934399
+11	7	Requested	Advanced	2	Monthly	Seeded assignment	2025-11-05 07:16:09.934399
+320	10	Requested	Intermediate	12	Occasionally	Seeded assignment	2025-11-26 07:16:09.934399
+833	7	Requested	Beginner	13	Monthly	Seeded assignment	2025-11-19 07:16:09.934399
+115	12	Requested	Advanced	11	Daily	Seeded assignment	2025-11-12 07:16:09.934399
+963	5	Requested	Intermediate	6	Monthly	Seeded assignment	2025-11-03 07:16:09.934399
+257	13	Requested	Beginner	7	Weekly	Seeded request	2025-11-15 07:16:09.934399
+675	3	Requested	Expert	13	Daily	Seeded assignment	2025-11-23 07:16:09.934399
+446	9	Requested	Advanced	10	Monthly	Seeded request	2025-11-30 07:16:09.934399
+262	1	Requested	Beginner	10	Monthly	Seeded request	2025-11-14 07:16:09.934399
+135	8	Requested	Beginner	3	Monthly	Seeded request	2025-11-08 07:16:09.934399
+228	8	Requested	Advanced	0	Daily	Seeded assignment	2025-11-13 07:16:09.934399
+729	21	Requested	Intermediate	0	Weekly	Seeded assignment	2025-11-21 07:16:09.934399
+129	4	Requested	Intermediate	8	Occasionally	Seeded request	2025-12-01 07:16:09.934399
+195	4	Requested	Beginner	9	Occasionally	Seeded request	2025-11-20 07:16:09.934399
+531	1	Requested	Advanced	8	Monthly	Seeded request	2025-11-14 07:16:09.934399
+163	6	Requested	Intermediate	11	Monthly	Seeded assignment	2025-11-07 07:16:09.934399
+97	9	Requested	Expert	2	Weekly	Seeded assignment	2025-11-20 07:16:09.934399
+211	21	Requested	Expert	6	Occasionally	Seeded assignment	2025-11-10 07:16:09.934399
+701	17	Requested	Expert	10	Daily	Seeded assignment	2025-11-10 07:16:09.934399
+62	22	Requested	Intermediate	3	Monthly	Seeded assignment	2025-11-24 07:16:09.934399
+681	23	Requested	Beginner	5	Monthly	Seeded assignment	2025-11-09 07:16:09.934399
+58	19	Requested	Intermediate	2	Monthly	Seeded assignment	2025-11-09 07:16:09.934399
+657	20	Requested	Expert	5	Monthly	Seeded request	2025-11-28 07:16:09.934399
+676	3	Requested	Expert	1	Weekly	Seeded request	2025-11-09 07:16:09.934399
+409	3	Requested	Intermediate	2	Occasionally	Seeded request	2025-11-10 07:16:09.934399
+8	1	Requested	Expert	7	Weekly	Seeded request	2025-11-14 07:16:09.934399
+305	22	Requested	Intermediate	12	Occasionally	Seeded request	2025-11-20 07:16:09.934399
+272	11	Requested	Beginner	7	Daily	Seeded assignment	2025-11-25 07:16:09.934399
+648	13	Requested	Expert	1	Occasionally	Seeded assignment	2025-11-07 07:16:09.934399
+223	11	Requested	Beginner	2	Occasionally	Seeded request	2025-11-18 07:16:09.934399
+422	19	Requested	Intermediate	8	Weekly	Seeded assignment	2025-11-18 07:16:09.934399
+78	10	Requested	Intermediate	1	Monthly	Seeded assignment	2025-11-25 07:16:09.934399
+539	13	Requested	Expert	9	Weekly	Seeded assignment	2025-11-30 07:16:09.934399
+243	6	Requested	Beginner	6	Monthly	Seeded request	2025-11-25 07:16:09.934399
+298	25	Requested	Beginner	0	Daily	Seeded request	2025-11-14 07:16:09.934399
+467	13	Requested	Expert	15	Monthly	Seeded assignment	2025-11-08 07:16:09.934399
+916	20	Requested	Beginner	8	Monthly	Seeded assignment	2025-11-17 07:16:09.934399
+542	1	Requested	Advanced	14	Occasionally	Seeded assignment	2025-11-20 07:16:09.934399
+535	17	Requested	Intermediate	8	Daily	Seeded assignment	2025-11-13 07:16:09.934399
+972	18	Requested	Advanced	15	Monthly	Seeded assignment	2025-11-10 07:16:09.934399
+411	18	Requested	Advanced	3	Weekly	Seeded assignment	2025-11-18 07:16:09.934399
+95	4	Requested	Intermediate	8	Occasionally	Seeded assignment	2025-11-20 07:16:09.934399
+854	13	Requested	Beginner	2	Occasionally	Seeded assignment	2025-11-13 07:16:09.934399
+183	12	Requested	Advanced	1	Daily	Seeded assignment	2025-11-19 07:16:09.934399
+686	6	Requested	Expert	6	Occasionally	Seeded request	2025-11-19 07:16:09.934399
+199	19	Requested	Advanced	14	Monthly	Seeded request	2025-11-28 07:16:09.934399
+389	3	Requested	Advanced	12	Daily	Seeded request	2025-11-14 07:16:09.934399
+135	16	Approved	Beginner	5	Monthly	Seeded assignment	2025-11-03 07:16:09.934399
+95	26	Approved	\N	\N	\N	\N	\N
+979	26	Requested	Intermediate	1	Weekly		2025-12-03 11:28:04.691782
+979	6	Approved	Intermediate	1	Weekly		2025-12-03 11:41:10.769746
+417	22	Requested	Advanced	8	Daily	Seeded request	2025-11-03 07:16:09.934399
+86	13	Requested	Expert	0	Daily	Seeded assignment	2025-11-09 07:16:09.934399
+482	11	Requested	Expert	13	Weekly	Seeded request	2025-11-18 07:16:09.934399
+595	4	Requested	Expert	7	Weekly	Seeded request	2025-12-01 07:16:09.934399
+678	19	Requested	Intermediate	9	Occasionally	Seeded request	2025-11-11 07:16:09.934399
+225	13	Requested	Advanced	9	Monthly	Seeded assignment	2025-11-20 07:16:09.934399
+975	5	Requested	Beginner	11	Occasionally	Seeded request	2025-11-29 07:16:09.934399
+907	20	Requested	Expert	9	Occasionally	Seeded request	2025-11-21 07:16:09.934399
+117	4	Requested	Advanced	1	Daily	Seeded request	2025-11-27 07:16:09.934399
+349	16	Requested	Beginner	15	Daily	Seeded assignment	2025-11-20 07:16:09.934399
+795	16	Requested	Advanced	13	Monthly	Seeded assignment	2025-11-11 07:16:09.934399
+669	4	Requested	Expert	1	Daily	Seeded assignment	2025-11-04 07:16:09.934399
+896	17	Requested	Advanced	0	Weekly	Seeded request	2025-11-23 07:16:09.934399
+178	6	Requested	Intermediate	2	Weekly	Seeded request	2025-11-15 07:16:09.934399
+740	20	Requested	Beginner	12	Monthly	Seeded request	2025-11-27 07:16:09.934399
+717	16	Requested	Advanced	3	Occasionally	Seeded assignment	2025-12-01 07:16:09.934399
+582	8	Requested	Advanced	10	Occasionally	Seeded request	2025-11-08 07:16:09.934399
+526	6	Requested	Beginner	2	Occasionally	Seeded assignment	2025-11-29 07:16:09.934399
+275	19	Requested	Beginner	1	Daily	Seeded request	2025-11-04 07:16:09.934399
+942	23	Requested	Advanced	1	Monthly	Seeded request	2025-12-02 07:16:09.934399
+623	3	Requested	Beginner	1	Daily	Seeded assignment	2025-11-25 07:16:09.934399
+418	24	Requested	Expert	11	Monthly	Seeded request	2025-11-09 07:16:09.934399
+498	16	Requested	Advanced	12	Daily	Seeded request	2025-11-24 07:16:09.934399
+276	20	Requested	Intermediate	10	Daily	Seeded assignment	2025-11-30 07:16:09.934399
+66	13	Requested	Advanced	3	Daily	Seeded request	2025-11-29 07:16:09.934399
+797	23	Requested	Expert	1	Weekly	Seeded assignment	2025-11-28 07:16:09.934399
+697	17	Requested	Beginner	6	Occasionally	Seeded assignment	2025-11-14 07:16:09.934399
+421	3	Requested	Expert	9	Daily	Seeded request	2025-11-26 07:16:09.934399
+517	8	Requested	Advanced	10	Monthly	Seeded request	2025-11-12 07:16:09.934399
+414	12	Requested	Intermediate	15	Daily	Seeded assignment	2025-11-29 07:16:09.934399
+550	19	Requested	Intermediate	1	Occasionally	Seeded assignment	2025-11-12 07:16:09.934399
+290	6	Requested	Expert	5	Daily	Seeded assignment	2025-11-08 07:16:09.934399
+377	9	Requested	Advanced	5	Occasionally	Seeded assignment	2025-11-09 07:16:09.934399
+685	25	Requested	Expert	6	Daily	Seeded request	2025-11-20 07:16:09.934399
+136	12	Requested	Intermediate	4	Daily	Seeded assignment	2025-11-22 07:16:09.934399
+126	21	Requested	Expert	6	Daily	Seeded assignment	2025-11-13 07:16:09.934399
+662	13	Requested	Beginner	7	Monthly	Seeded request	2025-11-11 07:16:09.934399
+753	7	Requested	Advanced	8	Weekly	Seeded assignment	2025-11-03 07:16:09.934399
+960	6	Requested	Expert	2	Weekly	Seeded request	2025-11-13 07:16:09.934399
+64	19	Requested	Intermediate	6	Occasionally	Seeded request	2025-11-06 07:16:09.934399
+791	6	Requested	Beginner	4	Daily	Seeded assignment	2025-11-19 07:16:09.934399
+605	17	Requested	Advanced	2	Occasionally	Seeded assignment	2025-11-08 07:16:09.934399
+429	22	Requested	Beginner	9	Weekly	Seeded assignment	2025-11-24 07:16:09.934399
+583	8	Requested	Intermediate	8	Weekly	Seeded assignment	2025-11-11 07:16:09.934399
+23	6	Requested	Expert	7	Daily	Seeded request	2025-11-23 07:16:09.934399
+50	24	Requested	Beginner	2	Monthly	Seeded request	2025-11-20 07:16:09.934399
+445	23	Requested	Expert	15	Weekly	Seeded assignment	2025-11-09 07:16:09.934399
+565	22	Requested	Advanced	4	Weekly	Seeded request	2025-11-25 07:16:09.934399
+624	5	Requested	Intermediate	7	Weekly	Seeded assignment	2025-11-08 07:16:09.934399
+732	10	Requested	Expert	5	Occasionally	Seeded request	2025-11-19 07:16:09.934399
+172	4	Requested	Intermediate	12	Weekly	Seeded request	2025-11-10 07:16:09.934399
+947	24	Requested	Beginner	1	Monthly	Seeded request	2025-11-24 07:16:09.934399
+593	3	Requested	Intermediate	11	Occasionally	Seeded assignment	2025-11-07 07:16:09.934399
+446	25	Requested	Beginner	2	Monthly	Seeded assignment	2025-11-16 07:16:09.934399
+588	5	Requested	Expert	1	Occasionally	Seeded request	2025-11-11 07:16:09.934399
+587	25	Requested	Advanced	8	Occasionally	Seeded assignment	2025-11-18 07:16:09.934399
+175	17	Requested	Intermediate	7	Monthly	Seeded request	2025-11-27 07:16:09.934399
+413	5	Requested	Intermediate	1	Monthly	Seeded assignment	2025-11-13 07:16:09.934399
+987	22	Requested	Advanced	14	Occasionally	Seeded assignment	2025-11-11 07:16:09.934399
+295	19	Requested	Beginner	7	Daily	Seeded request	2025-11-12 07:16:09.934399
+214	18	Requested	Advanced	5	Daily	Seeded assignment	2025-11-29 07:16:09.934399
+842	25	Requested	Intermediate	12	Monthly	Seeded assignment	2025-11-03 07:16:09.934399
+961	25	Requested	Advanced	9	Daily	Seeded assignment	2025-11-20 07:16:09.934399
+69	24	Requested	Expert	12	Occasionally	Seeded request	2025-11-16 07:16:09.934399
+458	5	Requested	Advanced	10	Daily	Seeded assignment	2025-11-16 07:16:09.934399
+518	18	Requested	Beginner	5	Occasionally	Seeded request	2025-11-30 07:16:09.934399
+581	3	Requested	Advanced	12	Weekly	Seeded assignment	2025-11-20 07:16:09.934399
+846	3	Requested	Intermediate	8	Daily	Seeded assignment	2025-11-20 07:16:09.934399
+913	9	Requested	Expert	11	Daily	Seeded request	2025-11-26 07:16:09.934399
+36	6	Requested	Beginner	13	Occasionally	Seeded request	2025-11-17 07:16:09.934399
+815	19	Requested	Expert	11	Occasionally	Seeded assignment	2025-11-30 07:16:09.934399
+239	19	Requested	Beginner	2	Occasionally	Seeded request	2025-11-17 07:16:09.934399
+541	20	Requested	Advanced	9	Monthly	Seeded assignment	2025-11-17 07:16:09.934399
+601	18	Requested	Advanced	14	Weekly	Seeded assignment	2025-11-19 07:16:09.934399
+681	18	Requested	Expert	5	Weekly	Seeded assignment	2025-11-07 07:16:09.934399
+321	13	Requested	Advanced	5	Weekly	Seeded assignment	2025-11-10 07:16:09.934399
+611	8	Requested	Beginner	11	Monthly	Seeded assignment	2025-11-14 07:16:09.934399
+156	24	Requested	Advanced	8	Weekly	Seeded assignment	2025-11-22 07:16:09.934399
+452	18	Requested	Beginner	11	Daily	Seeded request	2025-11-08 07:16:09.934399
+818	3	Requested	Advanced	15	Daily	Seeded request	2025-11-07 07:16:09.934399
+151	11	Requested	Expert	3	Occasionally	Seeded request	2025-11-14 07:16:09.934399
+647	18	Requested	Beginner	6	Monthly	Seeded request	2025-11-06 07:16:09.934399
+185	25	Requested	Beginner	8	Daily	Seeded request	2025-11-06 07:16:09.934399
+921	11	Requested	Beginner	3	Monthly	Seeded assignment	2025-11-09 07:16:09.934399
+949	13	Requested	Intermediate	7	Weekly	Seeded request	2025-11-03 07:16:09.934399
+894	8	Requested	Intermediate	9	Weekly	Seeded request	2025-11-25 07:16:09.934399
+563	19	Requested	Intermediate	10	Monthly	Seeded assignment	2025-11-24 07:16:09.934399
+786	20	Requested	Advanced	7	Daily	Seeded assignment	2025-11-21 07:16:09.934399
+259	7	Requested	Advanced	6	Weekly	Seeded request	2025-11-22 07:16:09.934399
+162	17	Requested	Beginner	3	Daily	Seeded assignment	2025-11-06 07:16:09.934399
+465	19	Requested	Intermediate	10	Daily	Seeded assignment	2025-11-13 07:16:09.934399
+171	6	Requested	Intermediate	7	Weekly	Seeded assignment	2025-11-06 07:16:09.934399
+927	13	Requested	Beginner	6	Occasionally	Seeded request	2025-11-19 07:16:09.934399
+982	8	Requested	Advanced	3	Daily	Seeded assignment	2025-11-05 07:16:09.934399
+950	24	Requested	Intermediate	4	Occasionally	Seeded assignment	2025-11-20 07:16:09.934399
+274	4	Requested	Advanced	13	Daily	Seeded request	2025-11-18 07:16:09.934399
+469	7	Requested	Intermediate	14	Monthly	Seeded request	2025-11-08 07:16:09.934399
+771	8	Requested	Beginner	7	Occasionally	Seeded assignment	2025-12-01 07:16:09.934399
+207	10	Requested	Advanced	9	Daily	Seeded assignment	2025-11-08 07:16:09.934399
+198	12	Requested	Advanced	14	Weekly	Seeded request	2025-11-25 07:16:09.934399
+463	10	Requested	Intermediate	8	Daily	Seeded request	2025-11-14 07:16:09.934399
+741	16	Requested	Advanced	5	Daily	Seeded assignment	2025-11-09 07:16:09.934399
+674	11	Requested	Expert	1	Occasionally	Seeded assignment	2025-12-02 07:16:09.934399
+118	6	Requested	Expert	3	Weekly	Seeded assignment	2025-11-23 07:16:09.934399
+361	16	Requested	Expert	9	Monthly	Seeded request	2025-11-07 07:16:09.934399
+599	5	Requested	Intermediate	14	Weekly	Seeded assignment	2025-11-25 07:16:09.934399
+63	6	Requested	Beginner	4	Monthly	Seeded request	2025-11-26 07:16:09.934399
+876	21	Requested	Intermediate	2	Weekly	Seeded assignment	2025-11-04 07:16:09.934399
+516	17	Requested	Intermediate	13	Monthly	Seeded assignment	2025-11-19 07:16:09.934399
+659	8	Requested	Intermediate	3	Daily	Seeded request	2025-11-10 07:16:09.934399
+59	10	Requested	Intermediate	6	Monthly	Seeded assignment	2025-11-03 07:16:09.934399
+408	18	Requested	Advanced	3	Monthly	Seeded request	2025-11-17 07:16:09.934399
+200	23	Requested	Beginner	15	Monthly	Seeded assignment	2025-11-19 07:16:09.934399
+210	8	Requested	Advanced	7	Monthly	Seeded request	2025-11-27 07:16:09.934399
+689	1	Requested	Beginner	8	Occasionally	Seeded request	2025-11-27 07:16:09.934399
+933	6	Requested	Advanced	12	Weekly	Seeded assignment	2025-11-06 07:16:09.934399
+556	9	Requested	Beginner	6	Daily	Seeded request	2025-11-18 07:16:09.934399
+1	7	Requested	Intermediate	5	Weekly	Seeded request	2025-11-09 07:16:09.934399
+186	11	Requested	Beginner	0	Occasionally	Seeded assignment	2025-11-15 07:16:09.934399
+878	8	Requested	Intermediate	13	Occasionally	Seeded assignment	2025-11-29 07:16:09.934399
+35	6	Requested	Intermediate	13	Weekly	Seeded assignment	2025-11-05 07:16:09.934399
+484	16	Requested	Beginner	6	Daily	Seeded request	2025-11-06 07:16:09.934399
+577	19	Requested	Intermediate	13	Occasionally	Seeded assignment	2025-11-17 07:16:09.934399
+378	17	Requested	Advanced	14	Monthly	Seeded request	2025-11-03 07:16:09.934399
+471	18	Requested	Advanced	10	Daily	Seeded assignment	2025-11-27 07:16:09.934399
+655	20	Requested	Expert	11	Occasionally	Seeded assignment	2025-11-28 07:16:09.934399
+787	6	Requested	Intermediate	14	Daily	Seeded assignment	2025-11-23 07:16:09.934399
+861	12	Requested	Intermediate	3	Occasionally	Seeded assignment	2025-11-30 07:16:09.934399
+948	7	Requested	Beginner	14	Daily	Seeded request	2025-11-23 07:16:09.934399
+442	18	Requested	Intermediate	13	Monthly	Seeded request	2025-11-28 07:16:09.934399
+939	24	Requested	Advanced	11	Occasionally	Seeded assignment	2025-11-07 07:16:09.934399
+21	22	Requested	Advanced	10	Daily	Seeded request	2025-11-13 07:16:09.934399
+666	23	Requested	Intermediate	9	Monthly	Seeded assignment	2025-12-02 07:16:09.934399
+776	6	Requested	Expert	0	Daily	Seeded assignment	2025-11-04 07:16:09.934399
+126	17	Requested	Beginner	7	Monthly	Seeded request	2025-11-07 07:16:09.934399
+245	23	Requested	Advanced	5	Daily	Seeded request	2025-11-05 07:16:09.934399
+189	22	Requested	Intermediate	11	Occasionally	Seeded request	2025-11-17 07:16:09.934399
+169	6	Requested	Expert	13	Occasionally	Seeded assignment	2025-11-14 07:16:09.934399
+486	19	Requested	Expert	7	Weekly	Seeded assignment	2025-11-30 07:16:09.934399
+812	11	Requested	Beginner	2	Weekly	Seeded assignment	2025-11-13 07:16:09.934399
+518	19	Requested	Expert	15	Weekly	Seeded assignment	2025-11-12 07:16:09.934399
+11	18	Requested	Expert	13	Monthly	Seeded assignment	2025-11-07 07:16:09.934399
+980	11	Requested	Advanced	8	Weekly	Seeded assignment	2025-11-30 07:16:09.934399
+645	6	Requested	Beginner	10	Monthly	Seeded request	2025-11-30 07:16:09.934399
+194	10	Requested	Beginner	3	Daily	Seeded assignment	2025-11-25 07:16:09.934399
+515	22	Requested	Intermediate	7	Weekly	Seeded request	2025-11-23 07:16:09.934399
+338	25	Requested	Beginner	14	Occasionally	Seeded assignment	2025-11-23 07:16:09.934399
+925	8	Requested	Advanced	15	Weekly	Seeded assignment	2025-11-17 07:16:09.934399
+849	17	Requested	Intermediate	4	Monthly	Seeded assignment	2025-11-12 07:16:09.934399
+384	19	Requested	Advanced	6	Monthly	Seeded request	2025-11-30 07:16:09.934399
+882	18	Requested	Advanced	8	Daily	Seeded assignment	2025-11-03 07:16:09.934399
+347	7	Requested	Intermediate	1	Monthly	Seeded request	2025-11-12 07:16:09.934399
+477	17	Requested	Beginner	6	Daily	Seeded assignment	2025-11-26 07:16:09.934399
+45	23	Requested	Expert	11	Monthly	Seeded request	2025-11-19 07:16:09.934399
+689	9	Requested	Expert	12	Daily	Seeded request	2025-11-13 07:16:09.934399
+654	13	Requested	Expert	11	Occasionally	Seeded assignment	2025-11-05 07:16:09.934399
+163	9	Requested	Expert	6	Daily	Seeded assignment	2025-11-09 07:16:09.934399
+333	11	Requested	Advanced	6	Weekly	Seeded assignment	2025-11-09 07:16:09.934399
+834	4	Requested	Advanced	7	Weekly	Seeded assignment	2025-11-25 07:16:09.934399
+133	19	Requested	Beginner	14	Daily	Seeded assignment	2025-11-12 07:16:09.934399
+108	5	Requested	Beginner	2	Daily	Seeded request	2025-11-20 07:16:09.934399
+228	16	Requested	Advanced	1	Occasionally	Seeded assignment	2025-11-09 07:16:09.934399
+33	1	Requested	Intermediate	1	Occasionally	Seeded assignment	2025-11-22 07:16:09.934399
+107	13	Requested	Expert	14	Occasionally	Seeded request	2025-11-15 07:16:09.934399
+179	8	Requested	Beginner	10	Daily	Seeded request	2025-11-07 07:16:09.934399
+755	19	Requested	Advanced	14	Weekly	Seeded request	2025-11-27 07:16:09.934399
+492	19	Requested	Expert	11	Daily	Seeded request	2025-12-01 07:16:09.934399
+820	13	Requested	Beginner	4	Monthly	Seeded assignment	2025-11-26 07:16:09.934399
+894	10	Requested	Expert	12	Occasionally	Seeded assignment	2025-11-19 07:16:09.934399
+805	4	Requested	Beginner	14	Occasionally	Seeded assignment	2025-11-05 07:16:09.934399
+909	10	Requested	Expert	14	Occasionally	Seeded assignment	2025-11-17 07:16:09.934399
+421	19	Requested	Advanced	3	Monthly	Seeded request	2025-11-17 07:16:09.934399
+462	18	Requested	Intermediate	12	Daily	Seeded assignment	2025-11-30 07:16:09.934399
+598	21	Requested	Beginner	13	Weekly	Seeded assignment	2025-11-28 07:16:09.934399
+442	4	Requested	Expert	11	Weekly	Seeded assignment	2025-11-20 07:16:09.934399
+891	20	Requested	Beginner	3	Monthly	Seeded assignment	2025-11-12 07:16:09.934399
+774	1	Requested	Expert	4	Daily	Seeded request	2025-11-16 07:16:09.934399
+737	11	Requested	Advanced	14	Weekly	Seeded assignment	2025-11-10 07:16:09.934399
+507	18	Requested	Beginner	8	Monthly	Seeded request	2025-11-25 07:16:09.934399
+734	7	Requested	Intermediate	0	Daily	Seeded request	2025-11-17 07:16:09.934399
+712	12	Requested	Beginner	8	Weekly	Seeded request	2025-11-07 07:16:09.934399
+782	11	Requested	Beginner	4	Monthly	Seeded assignment	2025-11-23 07:16:09.934399
+160	16	Requested	Intermediate	10	Monthly	Seeded assignment	2025-11-26 07:16:09.934399
+431	21	Requested	Advanced	13	Weekly	Seeded assignment	2025-11-30 07:16:09.934399
+56	20	Requested	Expert	3	Daily	Seeded request	2025-11-22 07:16:09.934399
+523	1	Requested	Advanced	10	Daily	Seeded assignment	2025-11-03 07:16:09.934399
+229	17	Requested	Advanced	11	Occasionally	Seeded assignment	2025-11-12 07:16:09.934399
+974	22	Requested	Beginner	1	Occasionally	Seeded assignment	2025-11-23 07:16:09.934399
+77	20	Requested	Expert	5	Monthly	Seeded request	2025-12-01 07:16:09.934399
+563	4	Requested	Beginner	3	Occasionally	Seeded assignment	2025-11-09 07:16:09.934399
+385	7	Requested	Expert	12	Occasionally	Seeded request	2025-11-17 07:16:09.934399
+350	23	Requested	Beginner	1	Occasionally	Seeded request	2025-11-12 07:16:09.934399
+439	8	Requested	Intermediate	2	Monthly	Seeded assignment	2025-11-28 07:16:09.934399
+740	21	Requested	Advanced	7	Occasionally	Seeded request	2025-11-22 07:16:09.934399
+145	1	Requested	Advanced	3	Monthly	Seeded request	2025-11-17 07:16:09.934399
+144	21	Requested	Expert	12	Occasionally	Seeded request	2025-11-07 07:16:09.934399
+337	11	Requested	Advanced	1	Daily	Seeded assignment	2025-11-23 07:16:09.934399
+614	16	Requested	Advanced	5	Daily	Seeded assignment	2025-11-19 07:16:09.934399
+781	11	Requested	Expert	4	Daily	Seeded request	2025-11-21 07:16:09.934399
+438	8	Requested	Expert	3	Daily	Seeded assignment	2025-11-28 07:16:09.934399
+684	16	Requested	Beginner	9	Monthly	Seeded request	2025-11-16 07:16:09.934399
+658	7	Requested	Beginner	15	Monthly	Seeded assignment	2025-11-09 07:16:09.934399
+928	5	Requested	Beginner	15	Monthly	Seeded request	2025-11-08 07:16:09.934399
+813	11	Requested	Advanced	12	Monthly	Seeded assignment	2025-11-03 07:16:09.934399
+568	10	Requested	Expert	5	Occasionally	Seeded assignment	2025-11-19 07:16:09.934399
+661	19	Requested	Intermediate	5	Monthly	Seeded assignment	2025-12-01 07:16:09.934399
+749	21	Requested	Beginner	8	Monthly	Seeded request	2025-11-05 07:16:09.934399
+210	24	Requested	Intermediate	12	Weekly	Seeded assignment	2025-11-09 07:16:09.934399
+494	5	Requested	Beginner	5	Weekly	Seeded assignment	2025-11-16 07:16:09.934399
+557	23	Requested	Beginner	3	Daily	Seeded assignment	2025-11-03 07:16:09.934399
+633	9	Requested	Beginner	14	Daily	Seeded assignment	2025-11-29 07:16:09.934399
+763	1	Requested	Expert	15	Daily	Seeded request	2025-11-03 07:16:09.934399
+791	25	Requested	Advanced	1	Weekly	Seeded assignment	2025-11-29 07:16:09.934399
+78	13	Requested	Expert	2	Occasionally	Seeded request	2025-12-01 07:16:09.934399
+346	18	Requested	Beginner	14	Monthly	Seeded request	2025-11-22 07:16:09.934399
+929	25	Requested	Advanced	5	Daily	Seeded request	2025-11-25 07:16:09.934399
+803	5	Requested	Beginner	14	Monthly	Seeded request	2025-12-01 07:16:09.934399
+570	20	Requested	Advanced	6	Daily	Seeded assignment	2025-11-16 07:16:09.934399
+692	5	Requested	Beginner	6	Monthly	Seeded assignment	2025-11-13 07:16:09.934399
+688	7	Requested	Beginner	1	Weekly	Seeded assignment	2025-12-01 07:16:09.934399
+938	18	Requested	Advanced	8	Monthly	Seeded assignment	2025-11-28 07:16:09.934399
+777	16	Requested	Beginner	12	Daily	Seeded assignment	2025-11-27 07:16:09.934399
+582	16	Requested	Intermediate	14	Daily	Seeded assignment	2025-11-09 07:16:09.934399
+177	4	Requested	Expert	2	Weekly	Seeded assignment	2025-11-05 07:16:09.934399
+941	5	Requested	Beginner	15	Weekly	Seeded assignment	2025-11-06 07:16:09.934399
+636	12	Requested	Advanced	10	Occasionally	Seeded request	2025-11-12 07:16:09.934399
+595	12	Requested	Intermediate	7	Weekly	Seeded assignment	2025-11-07 07:16:09.934399
+818	19	Requested	Expert	4	Occasionally	Seeded request	2025-11-26 07:16:09.934399
+522	24	Requested	Intermediate	12	Daily	Seeded assignment	2025-12-01 07:16:09.934399
+57	3	Requested	Advanced	11	Weekly	Seeded assignment	2025-11-07 07:16:09.934399
+664	16	Requested	Beginner	4	Monthly	Seeded request	2025-11-06 07:16:09.934399
+908	10	Requested	Intermediate	0	Monthly	Seeded request	2025-11-07 07:16:09.934399
+546	11	Requested	Expert	8	Occasionally	Seeded assignment	2025-11-05 07:16:09.934399
+776	25	Requested	Intermediate	0	Daily	Seeded request	2025-11-22 07:16:09.934399
+156	8	Requested	Intermediate	9	Occasionally	Seeded request	2025-11-26 07:16:09.934399
+249	8	Requested	Advanced	3	Monthly	Seeded request	2025-12-01 07:16:09.934399
+565	12	Requested	Expert	0	Weekly	Seeded request	2025-11-12 07:16:09.934399
+829	24	Requested	Intermediate	11	Occasionally	Seeded assignment	2025-11-19 07:16:09.934399
+29	6	Requested	Expert	4	Weekly	Seeded assignment	2025-11-18 07:16:09.934399
+758	11	Requested	Intermediate	7	Occasionally	Seeded assignment	2025-11-21 07:16:09.934399
+106	4	Requested	Expert	7	Weekly	Seeded assignment	2025-11-08 07:16:09.934399
+875	11	Requested	Advanced	7	Occasionally	Seeded assignment	2025-11-15 07:16:09.934399
+681	4	Requested	Advanced	3	Monthly	Seeded assignment	2025-11-13 07:16:09.934399
+15	5	Requested	Advanced	4	Occasionally	Seeded assignment	2025-11-12 07:16:09.934399
+865	12	Requested	Beginner	14	Daily	Seeded request	2025-11-20 07:16:09.934399
+352	8	Requested	Beginner	3	Weekly	Seeded request	2025-11-21 07:16:09.934399
+887	1	Requested	Intermediate	3	Occasionally	Seeded assignment	2025-11-24 07:16:09.934399
+486	4	Requested	Beginner	7	Monthly	Seeded request	2025-11-08 07:16:09.934399
+751	23	Requested	Intermediate	0	Weekly	Seeded assignment	2025-11-18 07:16:09.934399
+108	20	Requested	Intermediate	4	Daily	Seeded request	2025-12-01 07:16:09.934399
+852	16	Requested	Expert	1	Occasionally	Seeded request	2025-11-27 07:16:09.934399
+50	8	Requested	Intermediate	11	Daily	Seeded assignment	2025-11-30 07:16:09.934399
+513	8	Requested	Advanced	9	Weekly	Seeded assignment	2025-11-10 07:16:09.934399
+586	8	Requested	Expert	7	Monthly	Seeded assignment	2025-11-10 07:16:09.934399
+838	3	Requested	Expert	9	Monthly	Seeded request	2025-11-07 07:16:09.934399
+279	18	Requested	Intermediate	15	Monthly	Seeded request	2025-11-24 07:16:09.934399
+645	25	Requested	Expert	6	Daily	Seeded assignment	2025-11-20 07:16:09.934399
+130	17	Requested	Beginner	3	Weekly	Seeded assignment	2025-12-02 07:16:09.934399
+320	13	Requested	Expert	14	Daily	Seeded assignment	2025-11-06 07:16:09.934399
+169	25	Requested	Advanced	10	Weekly	Seeded request	2025-11-23 07:16:09.934399
+772	17	Requested	Expert	13	Monthly	Seeded request	2025-11-29 07:16:09.934399
+786	22	Requested	Advanced	7	Occasionally	Seeded assignment	2025-11-16 07:16:09.934399
+367	11	Requested	Advanced	1	Daily	Seeded request	2025-11-25 07:16:09.934399
+119	9	Requested	Expert	3	Daily	Seeded assignment	2025-11-09 07:16:09.934399
+229	21	Requested	Beginner	9	Weekly	Seeded request	2025-11-21 07:16:09.934399
+223	25	Requested	Expert	6	Daily	Seeded request	2025-11-29 07:16:09.934399
+176	17	Requested	Advanced	0	Occasionally	Seeded assignment	2025-11-09 07:16:09.934399
+681	3	Requested	Intermediate	13	Monthly	Seeded request	2025-11-29 07:16:09.934399
+454	7	Requested	Advanced	0	Weekly	Seeded assignment	2025-11-15 07:16:09.934399
+530	12	Requested	Expert	2	Monthly	Seeded request	2025-11-20 07:16:09.934399
+975	21	Requested	Advanced	14	Occasionally	Seeded request	2025-11-03 07:16:09.934399
+653	12	Requested	Expert	10	Monthly	Seeded assignment	2025-11-16 07:16:09.934399
+289	20	Requested	Advanced	2	Weekly	Seeded request	2025-11-12 07:16:09.934399
+941	20	Requested	Intermediate	4	Monthly	Seeded assignment	2025-11-18 07:16:09.934399
+101	9	Requested	Advanced	3	Monthly	Seeded request	2025-11-04 07:16:09.934399
+584	10	Requested	Beginner	11	Occasionally	Seeded assignment	2025-11-04 07:16:09.934399
+643	12	Requested	Intermediate	14	Weekly	Seeded assignment	2025-11-17 07:16:09.934399
+7	25	Requested	Expert	10	Weekly	Seeded request	2025-11-29 07:16:09.934399
+197	23	Requested	Expert	9	Weekly	Seeded request	2025-11-27 07:16:09.934399
+622	7	Requested	Beginner	11	Monthly	Seeded assignment	2025-11-04 07:16:09.934399
+879	5	Requested	Advanced	10	Daily	Seeded assignment	2025-11-30 07:16:09.934399
+360	21	Requested	Beginner	1	Occasionally	Seeded assignment	2025-11-11 07:16:09.934399
+394	8	Requested	Advanced	13	Occasionally	Seeded assignment	2025-11-20 07:16:09.934399
+771	10	Requested	Advanced	7	Occasionally	Seeded request	2025-11-12 07:16:09.934399
+887	9	Requested	Advanced	6	Daily	Seeded assignment	2025-11-17 07:16:09.934399
+767	23	Requested	Intermediate	5	Daily	Seeded request	2025-11-03 07:16:09.934399
+952	5	Requested	Beginner	11	Daily	Seeded assignment	2025-11-19 07:16:09.934399
+91	13	Requested	Expert	10	Weekly	Seeded assignment	2025-11-12 07:16:09.934399
+13	13	Requested	Advanced	12	Monthly	Seeded request	2025-11-10 07:16:09.934399
+801	9	Requested	Expert	12	Monthly	Seeded request	2025-11-29 07:16:09.934399
+236	24	Requested	Intermediate	2	Monthly	Seeded assignment	2025-11-07 07:16:09.934399
+209	9	Requested	Expert	2	Weekly	Seeded request	2025-11-30 07:16:09.934399
+52	11	Requested	Expert	8	Occasionally	Seeded assignment	2025-11-14 07:16:09.934399
+405	17	Requested	Intermediate	13	Occasionally	Seeded assignment	2025-11-23 07:16:09.934399
+811	18	Requested	Advanced	10	Occasionally	Seeded assignment	2025-11-03 07:16:09.934399
+292	17	Requested	Advanced	0	Daily	Seeded assignment	2025-11-05 07:16:09.934399
+632	12	Requested	Advanced	9	Daily	Seeded assignment	2025-11-17 07:16:09.934399
+417	18	Requested	Beginner	0	Daily	Seeded request	2025-11-13 07:16:09.934399
+659	1	Requested	Advanced	12	Occasionally	Seeded assignment	2025-11-15 07:16:09.934399
+57	21	Requested	Advanced	4	Daily	Seeded request	2025-11-03 07:16:09.934399
+955	5	Requested	Advanced	1	Monthly	Seeded request	2025-11-04 07:16:09.934399
+645	16	Requested	Intermediate	12	Weekly	Seeded assignment	2025-11-30 07:16:09.934399
+134	19	Requested	Beginner	4	Weekly	Seeded assignment	2025-11-25 07:16:09.934399
+715	19	Requested	Advanced	6	Weekly	Seeded assignment	2025-11-11 07:16:09.934399
+822	23	Requested	Intermediate	1	Daily	Seeded assignment	2025-11-03 07:16:09.934399
+767	12	Requested	Beginner	7	Occasionally	Seeded assignment	2025-11-15 07:16:09.934399
+731	16	Requested	Advanced	14	Monthly	Seeded request	2025-11-20 07:16:09.934399
+187	18	Requested	Beginner	6	Monthly	Seeded assignment	2025-11-03 07:16:09.934399
+707	20	Requested	Intermediate	2	Monthly	Seeded assignment	2025-11-05 07:16:09.934399
+521	19	Requested	Intermediate	5	Daily	Seeded request	2025-11-09 07:16:09.934399
+457	5	Requested	Intermediate	15	Weekly	Seeded assignment	2025-11-30 07:16:09.934399
+776	16	Requested	Beginner	7	Daily	Seeded request	2025-11-15 07:16:09.934399
+573	22	Requested	Expert	4	Occasionally	Seeded request	2025-11-06 07:16:09.934399
+548	3	Requested	Expert	13	Occasionally	Seeded assignment	2025-11-09 07:16:09.934399
+824	16	Requested	Expert	10	Daily	Seeded request	2025-11-12 07:16:09.934399
+771	1	Requested	Expert	2	Monthly	Seeded assignment	2025-11-14 07:16:09.934399
+716	4	Requested	Beginner	2	Weekly	Seeded assignment	2025-11-28 07:16:09.934399
+916	4	Requested	Advanced	8	Daily	Seeded assignment	2025-11-15 07:16:09.934399
+520	5	Requested	Intermediate	13	Occasionally	Seeded request	2025-11-03 07:16:09.934399
+717	11	Requested	Beginner	8	Monthly	Seeded assignment	2025-11-11 07:16:09.934399
+838	17	Requested	Intermediate	11	Monthly	Seeded assignment	2025-11-06 07:16:09.934399
+835	5	Requested	Advanced	3	Occasionally	Seeded request	2025-11-08 07:16:09.934399
+117	12	Requested	Expert	4	Monthly	Seeded assignment	2025-11-04 07:16:09.934399
+522	1	Requested	Intermediate	0	Occasionally	Seeded assignment	2025-11-12 07:16:09.934399
+940	18	Requested	Expert	5	Occasionally	Seeded request	2025-11-27 07:16:09.934399
+295	21	Requested	Intermediate	8	Occasionally	Seeded request	2025-12-02 07:16:09.934399
+3	1	Requested	Expert	15	Weekly	Seeded assignment	2025-11-03 07:16:09.934399
+221	23	Requested	Beginner	6	Occasionally	Seeded assignment	2025-11-14 07:16:09.934399
+944	16	Requested	Expert	6	Daily	Seeded assignment	2025-11-13 07:16:09.934399
+943	9	Requested	Expert	14	Weekly	Seeded request	2025-11-04 07:16:09.934399
+922	13	Requested	Advanced	2	Occasionally	Seeded request	2025-11-25 07:16:09.934399
+484	6	Requested	Beginner	7	Monthly	Seeded assignment	2025-11-30 07:16:09.934399
+553	18	Requested	Advanced	1	Monthly	Seeded assignment	2025-11-09 07:16:09.934399
+558	5	Requested	Advanced	9	Weekly	Seeded request	2025-11-21 07:16:09.934399
+504	24	Requested	Intermediate	2	Monthly	Seeded assignment	2025-11-14 07:16:09.934399
+843	21	Requested	Intermediate	13	Monthly	Seeded request	2025-11-25 07:16:09.934399
+332	6	Requested	Intermediate	3	Occasionally	Seeded assignment	2025-11-30 07:16:09.934399
+267	5	Requested	Beginner	7	Occasionally	Seeded request	2025-11-21 07:16:09.934399
+643	7	Requested	Beginner	6	Monthly	Seeded request	2025-11-05 07:16:09.934399
+387	13	Requested	Advanced	13	Monthly	Seeded request	2025-11-18 07:16:09.934399
+804	23	Requested	Expert	9	Weekly	Seeded assignment	2025-11-06 07:16:09.934399
+277	6	Requested	Advanced	7	Occasionally	Seeded request	2025-11-27 07:16:09.934399
+270	10	Requested	Advanced	4	Weekly	Seeded assignment	2025-11-23 07:16:09.934399
+812	24	Requested	Intermediate	3	Monthly	Seeded assignment	2025-11-14 07:16:09.934399
+95	12	Requested	Intermediate	8	Monthly	Seeded request	2025-11-23 07:16:09.934399
+246	5	Requested	Beginner	11	Occasionally	Seeded assignment	2025-11-11 07:16:09.934399
+289	23	Requested	Intermediate	14	Monthly	Seeded request	2025-11-04 07:16:09.934399
+285	17	Requested	Beginner	8	Occasionally	Seeded assignment	2025-11-24 07:16:09.934399
+454	12	Requested	Advanced	8	Daily	Seeded assignment	2025-11-08 07:16:09.934399
+616	22	Requested	Advanced	0	Occasionally	Seeded assignment	2025-11-12 07:16:09.934399
+877	11	Requested	Advanced	11	Monthly	Seeded request	2025-11-18 07:16:09.934399
+501	5	Requested	Intermediate	2	Occasionally	Seeded request	2025-11-28 07:16:09.934399
+452	17	Requested	Expert	3	Occasionally	Seeded request	2025-11-06 07:16:09.934399
+967	11	Requested	Advanced	0	Weekly	Seeded assignment	2025-11-22 07:16:09.934399
+784	1	Requested	Expert	7	Occasionally	Seeded request	2025-11-24 07:16:09.934399
+683	18	Requested	Beginner	12	Monthly	Seeded assignment	2025-11-12 07:16:09.934399
+330	17	Requested	Advanced	4	Daily	Seeded assignment	2025-11-08 07:16:09.934399
+903	12	Requested	Beginner	6	Monthly	Seeded request	2025-12-02 07:16:09.934399
+930	12	Requested	Expert	9	Occasionally	Seeded assignment	2025-11-10 07:16:09.934399
+477	19	Requested	Advanced	9	Daily	Seeded request	2025-11-09 07:16:09.934399
+231	9	Requested	Intermediate	1	Monthly	Seeded assignment	2025-11-24 07:16:09.934399
+178	24	Requested	Advanced	10	Weekly	Seeded assignment	2025-11-23 07:16:09.934399
+328	16	Requested	Intermediate	9	Occasionally	Seeded request	2025-11-14 07:16:09.934399
+926	1	Requested	Beginner	12	Monthly	Seeded request	2025-11-13 07:16:09.934399
+409	20	Requested	Expert	4	Daily	Seeded assignment	2025-11-23 07:16:09.934399
+300	23	Requested	Advanced	8	Weekly	Seeded assignment	2025-11-26 07:16:09.934399
+168	25	Requested	Advanced	4	Monthly	Seeded assignment	2025-11-13 07:16:09.934399
+559	24	Requested	Beginner	3	Monthly	Seeded assignment	2025-11-17 07:16:09.934399
+557	5	Requested	Intermediate	6	Monthly	Seeded request	2025-11-11 07:16:09.934399
+700	17	Requested	Beginner	8	Monthly	Seeded assignment	2025-11-19 07:16:09.934399
+663	4	Requested	Beginner	3	Monthly	Seeded assignment	2025-11-26 07:16:09.934399
+611	9	Requested	Beginner	11	Weekly	Seeded request	2025-11-25 07:16:09.934399
+407	22	Requested	Beginner	9	Monthly	Seeded assignment	2025-12-01 07:16:09.934399
+4	1	Requested	Advanced	0	Monthly	Seeded request	2025-11-18 07:16:09.934399
+21	7	Requested	Beginner	4	Monthly	Seeded request	2025-11-11 07:16:09.934399
+595	23	Requested	Advanced	6	Monthly	Seeded request	2025-12-01 07:16:09.934399
+814	3	Requested	Expert	8	Occasionally	Seeded assignment	2025-11-20 07:16:09.934399
+214	21	Requested	Intermediate	1	Daily	Seeded assignment	2025-12-01 07:16:09.934399
+623	5	Requested	Beginner	0	Daily	Seeded request	2025-11-23 07:16:09.934399
+356	5	Requested	Expert	14	Weekly	Seeded assignment	2025-11-15 07:16:09.934399
+206	3	Requested	Beginner	1	Weekly	Seeded request	2025-11-07 07:16:09.934399
+288	25	Requested	Intermediate	3	Daily	Seeded assignment	2025-11-18 07:16:09.934399
+810	16	Requested	Intermediate	12	Monthly	Seeded assignment	2025-11-21 07:16:09.934399
+237	3	Requested	Intermediate	9	Monthly	Seeded assignment	2025-11-20 07:16:09.934399
+766	4	Requested	Expert	0	Monthly	Seeded assignment	2025-11-23 07:16:09.934399
+981	3	Requested	Advanced	5	Daily	Seeded request	2025-11-17 07:16:09.934399
+521	18	Requested	Intermediate	13	Daily	Seeded assignment	2025-11-12 07:16:09.934399
+248	11	Requested	Intermediate	12	Monthly	Seeded assignment	2025-11-27 07:16:09.934399
+222	4	Requested	Beginner	8	Daily	Seeded request	2025-11-20 07:16:09.934399
+954	8	Requested	Intermediate	5	Monthly	Seeded assignment	2025-11-21 07:16:09.934399
+158	6	Requested	Beginner	1	Weekly	Seeded assignment	2025-11-07 07:16:09.934399
+723	7	Requested	Intermediate	14	Monthly	Seeded request	2025-11-18 07:16:09.934399
+187	19	Requested	Beginner	8	Occasionally	Seeded request	2025-11-04 07:16:09.934399
+138	22	Requested	Advanced	14	Monthly	Seeded assignment	2025-11-28 07:16:09.934399
+16	1	Requested	Expert	2	Daily	Seeded assignment	2025-11-20 07:16:09.934399
+82	24	Requested	Intermediate	13	Monthly	Seeded assignment	2025-11-21 07:16:09.934399
+124	3	Requested	Intermediate	15	Daily	Seeded assignment	2025-11-08 07:16:09.934399
+658	20	Requested	Advanced	15	Occasionally	Seeded assignment	2025-11-07 07:16:09.934399
+497	21	Requested	Beginner	13	Weekly	Seeded assignment	2025-11-18 07:16:09.934399
+955	20	Requested	Intermediate	12	Monthly	Seeded request	2025-11-05 07:16:09.934399
+567	20	Requested	Expert	12	Daily	Seeded assignment	2025-11-30 07:16:09.934399
+794	18	Requested	Advanced	15	Daily	Seeded request	2025-12-02 07:16:09.934399
+975	3	Requested	Advanced	13	Monthly	Seeded assignment	2025-11-08 07:16:09.934399
+811	19	Requested	Beginner	10	Daily	Seeded request	2025-11-30 07:16:09.934399
+601	21	Requested	Beginner	5	Weekly	Seeded request	2025-11-22 07:16:09.934399
+672	10	Requested	Expert	3	Occasionally	Seeded request	2025-12-01 07:16:09.934399
+866	21	Requested	Advanced	4	Weekly	Seeded assignment	2025-11-21 07:16:09.934399
+440	8	Requested	Advanced	11	Weekly	Seeded assignment	2025-11-05 07:16:09.934399
+882	17	Requested	Advanced	4	Daily	Seeded assignment	2025-11-04 07:16:09.934399
+155	13	Requested	Intermediate	5	Daily	Seeded request	2025-11-13 07:16:09.934399
+546	8	Requested	Beginner	5	Monthly	Seeded request	2025-11-14 07:16:09.934399
+793	16	Requested	Beginner	11	Occasionally	Seeded assignment	2025-11-10 07:16:09.934399
+980	10	Requested	Advanced	12	Occasionally	Seeded request	2025-11-06 07:16:09.934399
+33	10	Requested	Beginner	1	Daily	Seeded assignment	2025-11-25 07:16:09.934399
+294	9	Requested	Intermediate	5	Occasionally	Seeded assignment	2025-11-26 07:16:09.934399
+56	7	Requested	Intermediate	12	Monthly	Seeded assignment	2025-11-29 07:16:09.934399
+305	19	Requested	Intermediate	1	Weekly	Seeded request	2025-11-17 07:16:09.934399
+583	9	Requested	Expert	8	Occasionally	Seeded assignment	2025-11-21 07:16:09.934399
+676	5	Requested	Advanced	15	Weekly	Seeded assignment	2025-11-16 07:16:09.934399
+909	1	Requested	Advanced	14	Weekly	Seeded request	2025-11-16 07:16:09.934399
+409	5	Requested	Intermediate	11	Monthly	Seeded assignment	2025-11-27 07:16:09.934399
+576	6	Requested	Expert	6	Daily	Seeded assignment	2025-11-24 07:16:09.934399
+286	5	Requested	Advanced	10	Occasionally	Seeded assignment	2025-11-18 07:16:09.934399
+778	20	Requested	Beginner	15	Daily	Seeded assignment	2025-11-11 07:16:09.934399
+327	22	Requested	Intermediate	15	Occasionally	Seeded request	2025-11-26 07:16:09.934399
+820	6	Requested	Intermediate	11	Daily	Seeded request	2025-11-09 07:16:09.934399
+575	23	Requested	Intermediate	3	Daily	Seeded assignment	2025-11-14 07:16:09.934399
+81	20	Requested	Advanced	9	Monthly	Seeded assignment	2025-12-01 07:16:09.934399
+890	4	Requested	Beginner	1	Monthly	Seeded assignment	2025-11-28 07:16:09.934399
+321	25	Requested	Expert	7	Daily	Seeded request	2025-11-16 07:16:09.934399
+47	7	Requested	Beginner	13	Occasionally	Seeded request	2025-11-17 07:16:09.934399
+511	18	Requested	Advanced	11	Occasionally	Seeded assignment	2025-11-19 07:16:09.934399
+267	20	Requested	Intermediate	14	Monthly	Seeded assignment	2025-11-07 07:16:09.934399
+415	4	Requested	Advanced	8	Monthly	Seeded request	2025-11-28 07:16:09.934399
+728	8	Requested	Beginner	1	Daily	Seeded assignment	2025-11-16 07:16:09.934399
+714	10	Requested	Expert	7	Daily	Seeded assignment	2025-11-15 07:16:09.934399
+539	9	Requested	Beginner	2	Monthly	Seeded request	2025-11-17 07:16:09.934399
+660	11	Requested	Advanced	0	Occasionally	Seeded request	2025-11-23 07:16:09.934399
+848	25	Requested	Intermediate	2	Daily	Seeded assignment	2025-11-12 07:16:09.934399
+314	7	Requested	Advanced	10	Occasionally	Seeded assignment	2025-11-15 07:16:09.934399
+528	3	Requested	Advanced	9	Daily	Seeded request	2025-11-10 07:16:09.934399
+513	11	Requested	Advanced	12	Occasionally	Seeded assignment	2025-11-03 07:16:09.934399
+780	4	Requested	Beginner	2	Occasionally	Seeded assignment	2025-11-30 07:16:09.934399
+862	20	Requested	Beginner	1	Occasionally	Seeded assignment	2025-11-25 07:16:09.934399
+742	18	Requested	Intermediate	9	Monthly	Seeded request	2025-11-23 07:16:09.934399
+342	9	Requested	Intermediate	4	Daily	Seeded assignment	2025-11-28 07:16:09.934399
+981	4	Requested	Expert	0	Occasionally	Seeded request	2025-11-04 07:16:09.934399
+69	11	Requested	Advanced	12	Monthly	Seeded request	2025-11-27 07:16:09.934399
+222	3	Requested	Intermediate	15	Daily	Seeded request	2025-11-10 07:16:09.934399
+860	1	Requested	Expert	2	Occasionally	Seeded assignment	2025-11-05 07:16:09.934399
+955	22	Requested	Expert	1	Daily	Seeded assignment	2025-11-27 07:16:09.934399
+825	6	Requested	Expert	8	Occasionally	Seeded assignment	2025-11-22 07:16:09.934399
+974	23	Requested	Beginner	8	Occasionally	Seeded request	2025-11-23 07:16:09.934399
+481	3	Requested	Intermediate	7	Daily	Seeded request	2025-11-24 07:16:09.934399
+351	16	Requested	Expert	0	Occasionally	Seeded assignment	2025-11-24 07:16:09.934399
+780	18	Requested	Beginner	5	Daily	Seeded request	2025-11-26 07:16:09.934399
+394	9	Requested	Intermediate	5	Daily	Seeded request	2025-11-10 07:16:09.934399
+345	19	Requested	Advanced	12	Monthly	Seeded assignment	2025-11-13 07:16:09.934399
+608	11	Requested	Expert	2	Weekly	Seeded request	2025-11-14 07:16:09.934399
+698	9	Requested	Advanced	12	Weekly	Seeded assignment	2025-11-28 07:16:09.934399
+922	16	Requested	Expert	11	Occasionally	Seeded request	2025-11-03 07:16:09.934399
+975	18	Requested	Beginner	0	Weekly	Seeded request	2025-11-21 07:16:09.934399
+506	16	Requested	Intermediate	3	Weekly	Seeded assignment	2025-11-19 07:16:09.934399
+380	20	Requested	Advanced	1	Monthly	Seeded request	2025-11-09 07:16:09.934399
+238	6	Requested	Intermediate	8	Daily	Seeded assignment	2025-11-14 07:16:09.934399
+126	4	Requested	Beginner	2	Daily	Seeded assignment	2025-11-11 07:16:09.934399
+868	25	Requested	Intermediate	13	Weekly	Seeded assignment	2025-11-18 07:16:09.934399
+935	21	Requested	Beginner	10	Weekly	Seeded assignment	2025-11-15 07:16:09.934399
+677	12	Requested	Intermediate	0	Occasionally	Seeded request	2025-11-30 07:16:09.934399
+880	10	Requested	Beginner	9	Occasionally	Seeded request	2025-11-09 07:16:09.934399
+951	22	Requested	Advanced	13	Weekly	Seeded request	2025-11-10 07:16:09.934399
+482	13	Requested	Beginner	10	Monthly	Seeded assignment	2025-11-04 07:16:09.934399
+948	20	Requested	Beginner	5	Daily	Seeded assignment	2025-11-14 07:16:09.934399
+32	24	Requested	Expert	9	Monthly	Seeded request	2025-11-23 07:16:09.934399
+656	21	Requested	Advanced	1	Weekly	Seeded request	2025-11-22 07:16:09.934399
+430	1	Requested	Advanced	0	Monthly	Seeded request	2025-11-19 07:16:09.934399
+404	10	Requested	Expert	11	Occasionally	Seeded assignment	2025-11-26 07:16:09.934399
+169	13	Requested	Advanced	11	Weekly	Seeded assignment	2025-11-08 07:16:09.934399
+713	3	Requested	Beginner	2	Weekly	Seeded assignment	2025-11-12 07:16:09.934399
+964	1	Requested	Intermediate	15	Weekly	Seeded assignment	2025-11-12 07:16:09.934399
+957	6	Requested	Advanced	8	Daily	Seeded request	2025-11-29 07:16:09.934399
+132	1	Requested	Beginner	15	Weekly	Seeded assignment	2025-11-11 07:16:09.934399
+339	8	Requested	Expert	0	Weekly	Seeded assignment	2025-11-19 07:16:09.934399
+477	4	Requested	Beginner	5	Monthly	Seeded assignment	2025-11-08 07:16:09.934399
+50	9	Requested	Beginner	12	Weekly	Seeded request	2025-11-18 07:16:09.934399
+539	11	Requested	Beginner	8	Monthly	Seeded request	2025-11-06 07:16:09.934399
+889	24	Requested	Beginner	1	Occasionally	Seeded assignment	2025-11-24 07:16:09.934399
+616	5	Requested	Intermediate	8	Daily	Seeded assignment	2025-11-25 07:16:09.934399
+224	9	Requested	Intermediate	10	Monthly	Seeded request	2025-12-02 07:16:09.934399
+394	1	Requested	Expert	9	Occasionally	Seeded assignment	2025-11-05 07:16:09.934399
+109	7	Requested	Advanced	5	Daily	Seeded request	2025-11-13 07:16:09.934399
+532	25	Requested	Beginner	0	Occasionally	Seeded request	2025-11-15 07:16:09.934399
+365	25	Requested	Expert	8	Daily	Seeded request	2025-11-30 07:16:09.934399
+128	21	Requested	Intermediate	8	Weekly	Seeded request	2025-11-22 07:16:09.934399
+440	24	Requested	Advanced	2	Daily	Seeded request	2025-11-23 07:16:09.934399
+897	25	Requested	Beginner	6	Occasionally	Seeded request	2025-11-18 07:16:09.934399
+44	18	Requested	Beginner	3	Monthly	Seeded request	2025-12-02 07:16:09.934399
+88	5	Requested	Advanced	14	Monthly	Seeded assignment	2025-11-07 07:16:09.934399
+282	23	Requested	Beginner	6	Occasionally	Seeded assignment	2025-11-20 07:16:09.934399
+666	20	Requested	Expert	8	Weekly	Seeded assignment	2025-12-01 07:16:09.934399
+1	20	Requested	Intermediate	4	Occasionally	Seeded request	2025-11-30 07:16:09.934399
+325	7	Requested	Beginner	5	Occasionally	Seeded request	2025-11-22 07:16:09.934399
+913	24	Requested	Beginner	14	Daily	Seeded assignment	2025-11-10 07:16:09.934399
+938	17	Requested	Beginner	14	Monthly	Seeded request	2025-11-16 07:16:09.934399
+481	4	Requested	Expert	1	Monthly	Seeded assignment	2025-11-06 07:16:09.934399
+9	5	Requested	Expert	11	Daily	Seeded request	2025-11-16 07:16:09.934399
+527	13	Requested	Intermediate	6	Occasionally	Seeded request	2025-11-27 07:16:09.934399
+727	10	Requested	Expert	7	Occasionally	Seeded assignment	2025-11-07 07:16:09.934399
+490	5	Requested	Intermediate	13	Daily	Seeded request	2025-12-02 07:16:09.934399
+297	10	Requested	Intermediate	13	Monthly	Seeded assignment	2025-11-08 07:16:09.934399
+257	11	Requested	Expert	6	Daily	Seeded assignment	2025-11-10 07:16:09.934399
+393	22	Requested	Advanced	6	Daily	Seeded assignment	2025-11-10 07:16:09.934399
+574	12	Requested	Expert	5	Daily	Seeded assignment	2025-11-10 07:16:09.934399
+851	17	Requested	Beginner	11	Occasionally	Seeded assignment	2025-11-20 07:16:09.934399
+226	25	Requested	Beginner	12	Monthly	Seeded assignment	2025-12-02 07:16:09.934399
+474	17	Requested	Expert	0	Monthly	Seeded assignment	2025-11-21 07:16:09.934399
+421	21	Requested	Intermediate	12	Monthly	Seeded assignment	2025-11-30 07:16:09.934399
+598	19	Requested	Expert	6	Monthly	Seeded assignment	2025-11-08 07:16:09.934399
+500	25	Requested	Intermediate	11	Weekly	Seeded assignment	2025-11-30 07:16:09.934399
+560	3	Requested	Beginner	4	Weekly	Seeded assignment	2025-11-12 07:16:09.934399
+832	12	Requested	Intermediate	14	Monthly	Seeded assignment	2025-11-19 07:16:09.934399
+493	25	Requested	Expert	12	Daily	Seeded request	2025-11-28 07:16:09.934399
+732	1	Requested	Intermediate	13	Weekly	Seeded request	2025-11-12 07:16:09.934399
+774	8	Requested	Expert	7	Occasionally	Seeded assignment	2025-11-09 07:16:09.934399
+496	23	Requested	Advanced	2	Monthly	Seeded assignment	2025-11-17 07:16:09.934399
+864	20	Requested	Beginner	10	Monthly	Seeded assignment	2025-11-29 07:16:09.934399
+72	6	Requested	Intermediate	8	Daily	Seeded request	2025-11-15 07:16:09.934399
+283	18	Requested	Beginner	9	Daily	Seeded assignment	2025-12-01 07:16:09.934399
+751	22	Requested	Expert	12	Weekly	Seeded assignment	2025-12-02 07:16:09.934399
+697	3	Requested	Intermediate	9	Monthly	Seeded request	2025-11-25 07:16:09.934399
+80	4	Requested	Beginner	0	Monthly	Seeded request	2025-11-14 07:16:09.934399
+940	3	Requested	Intermediate	9	Daily	Seeded assignment	2025-11-20 07:16:09.934399
+710	3	Requested	Intermediate	4	Occasionally	Seeded request	2025-11-09 07:16:09.934399
+179	1	Requested	Advanced	4	Occasionally	Seeded request	2025-11-05 07:16:09.934399
+412	21	Requested	Advanced	11	Weekly	Seeded request	2025-11-24 07:16:09.934399
+566	24	Requested	Intermediate	3	Weekly	Seeded assignment	2025-11-28 07:16:09.934399
+170	17	Requested	Beginner	6	Daily	Seeded request	2025-11-04 07:16:09.934399
+945	19	Requested	Beginner	6	Daily	Seeded assignment	2025-11-03 07:16:09.934399
+758	10	Requested	Beginner	13	Monthly	Seeded assignment	2025-11-26 07:16:09.934399
+443	10	Requested	Advanced	0	Monthly	Seeded assignment	2025-12-01 07:16:09.934399
+808	12	Requested	Beginner	2	Weekly	Seeded assignment	2025-11-17 07:16:09.934399
+459	21	Requested	Expert	15	Monthly	Seeded assignment	2025-11-06 07:16:09.934399
+959	1	Requested	Expert	14	Daily	Seeded assignment	2025-11-11 07:16:09.934399
+347	5	Requested	Beginner	12	Monthly	Seeded assignment	2025-11-21 07:16:09.934399
+798	12	Requested	Advanced	4	Occasionally	Seeded assignment	2025-11-19 07:16:09.934399
+128	17	Requested	Intermediate	12	Daily	Seeded assignment	2025-11-16 07:16:09.934399
+917	18	Requested	Beginner	6	Occasionally	Seeded assignment	2025-11-13 07:16:09.934399
+25	7	Requested	Expert	4	Monthly	Seeded assignment	2025-11-10 07:16:09.934399
+24	10	Requested	Intermediate	7	Weekly	Seeded request	2025-11-14 07:16:09.934399
+855	22	Requested	Expert	8	Weekly	Seeded assignment	2025-11-16 07:16:09.934399
+162	4	Requested	Beginner	15	Weekly	Seeded assignment	2025-11-06 07:16:09.934399
+402	5	Requested	Advanced	8	Weekly	Seeded request	2025-11-06 07:16:09.934399
+370	1	Requested	Beginner	5	Daily	Seeded assignment	2025-11-29 07:16:09.934399
+697	4	Requested	Beginner	10	Occasionally	Seeded request	2025-11-27 07:16:09.934399
+954	10	Requested	Advanced	15	Daily	Seeded assignment	2025-11-09 07:16:09.934399
+288	6	Requested	Advanced	5	Monthly	Seeded assignment	2025-11-22 07:16:09.934399
+846	17	Requested	Beginner	11	Monthly	Seeded assignment	2025-11-19 07:16:09.934399
+9	20	Requested	Intermediate	10	Weekly	Seeded request	2025-11-26 07:16:09.934399
+10	8	Requested	Advanced	12	Occasionally	Seeded request	2025-12-01 07:16:09.934399
+322	19	Requested	Beginner	10	Daily	Seeded assignment	2025-11-09 07:16:09.934399
+495	13	Requested	Intermediate	0	Weekly	Seeded assignment	2025-11-29 07:16:09.934399
+66	6	Requested	Beginner	5	Weekly	Seeded assignment	2025-11-22 07:16:09.934399
+114	22	Requested	Expert	13	Weekly	Seeded assignment	2025-11-05 07:16:09.934399
+127	9	Requested	Expert	14	Daily	Seeded request	2025-11-12 07:16:09.934399
+522	11	Requested	Beginner	8	Daily	Seeded request	2025-11-29 07:16:09.934399
+389	22	Requested	Expert	5	Occasionally	Seeded assignment	2025-11-23 07:16:09.934399
+201	11	Requested	Beginner	14	Monthly	Seeded request	2025-11-30 07:16:09.934399
+691	22	Requested	Expert	11	Occasionally	Seeded assignment	2025-11-17 07:16:09.934399
+440	10	Requested	Beginner	9	Daily	Seeded assignment	2025-11-22 07:16:09.934399
+25	23	Requested	Advanced	10	Occasionally	Seeded assignment	2025-12-02 07:16:09.934399
+599	7	Requested	Advanced	12	Weekly	Seeded request	2025-11-20 07:16:09.934399
+886	24	Requested	Beginner	2	Daily	Seeded assignment	2025-11-19 07:16:09.934399
+362	3	Requested	Advanced	7	Monthly	Seeded request	2025-11-17 07:16:09.934399
+390	3	Requested	Intermediate	1	Occasionally	Seeded assignment	2025-11-06 07:16:09.934399
+961	16	Requested	Intermediate	8	Monthly	Seeded assignment	2025-12-02 07:16:09.934399
+864	12	Requested	Intermediate	2	Daily	Seeded request	2025-11-11 07:16:09.934399
+811	4	Requested	Advanced	12	Weekly	Seeded request	2025-12-01 07:16:09.934399
+135	6	Requested	Intermediate	10	Occasionally	Seeded assignment	2025-11-30 07:16:09.934399
+39	6	Requested	Beginner	13	Monthly	Seeded request	2025-12-02 07:16:09.934399
+423	12	Requested	Expert	2	Monthly	Seeded request	2025-11-09 07:16:09.934399
+797	12	Requested	Intermediate	15	Weekly	Seeded request	2025-11-21 07:16:09.934399
+186	8	Requested	Beginner	8	Occasionally	Seeded request	2025-11-09 07:16:09.934399
+959	9	Requested	Expert	15	Daily	Seeded request	2025-11-29 07:16:09.934399
+227	8	Requested	Intermediate	6	Monthly	Seeded request	2025-11-29 07:16:09.934399
+144	7	Requested	Intermediate	14	Weekly	Seeded request	2025-11-07 07:16:09.934399
+446	10	Requested	Advanced	14	Weekly	Seeded assignment	2025-12-02 07:16:09.934399
+746	23	Requested	Advanced	14	Daily	Seeded assignment	2025-12-02 07:16:09.934399
+414	18	Requested	Intermediate	11	Occasionally	Seeded assignment	2025-11-09 07:16:09.934399
+576	1	Requested	Intermediate	0	Daily	Seeded assignment	2025-11-10 07:16:09.934399
+235	24	Requested	Intermediate	0	Daily	Seeded request	2025-11-16 07:16:09.934399
+403	9	Requested	Advanced	5	Monthly	Seeded request	2025-11-21 07:16:09.934399
+112	16	Requested	Beginner	10	Monthly	Seeded assignment	2025-11-24 07:16:09.934399
+759	1	Requested	Advanced	1	Occasionally	Seeded request	2025-11-12 07:16:09.934399
+232	3	Requested	Advanced	2	Daily	Seeded request	2025-11-26 07:16:09.934399
+97	10	Requested	Expert	1	Monthly	Seeded request	2025-11-06 07:16:09.934399
+749	7	Requested	Expert	5	Monthly	Seeded request	2025-11-18 07:16:09.934399
+760	6	Requested	Advanced	12	Daily	Seeded assignment	2025-11-24 07:16:09.934399
+709	17	Requested	Advanced	0	Occasionally	Seeded request	2025-12-02 07:16:09.934399
+691	17	Requested	Advanced	6	Daily	Seeded assignment	2025-11-17 07:16:09.934399
+600	16	Requested	Beginner	12	Monthly	Seeded assignment	2025-11-11 07:16:09.934399
+711	7	Requested	Expert	0	Daily	Seeded assignment	2025-11-21 07:16:09.934399
+238	11	Requested	Expert	6	Weekly	Seeded assignment	2025-11-28 07:16:09.934399
+20	20	Requested	Expert	13	Daily	Seeded assignment	2025-11-17 07:16:09.934399
+389	17	Requested	Beginner	8	Weekly	Seeded request	2025-11-25 07:16:09.934399
+661	22	Requested	Expert	10	Occasionally	Seeded assignment	2025-11-29 07:16:09.934399
+205	17	Requested	Expert	12	Daily	Seeded assignment	2025-11-21 07:16:09.934399
+392	1	Requested	Beginner	6	Daily	Seeded assignment	2025-11-23 07:16:09.934399
+641	17	Requested	Expert	6	Daily	Seeded assignment	2025-11-08 07:16:09.934399
+65	4	Requested	Expert	3	Monthly	Seeded request	2025-11-26 07:16:09.934399
+882	5	Requested	Expert	1	Weekly	Seeded request	2025-11-18 07:16:09.934399
+436	7	Requested	Beginner	10	Occasionally	Seeded request	2025-11-14 07:16:09.934399
+219	24	Requested	Intermediate	9	Weekly	Seeded assignment	2025-11-09 07:16:09.934399
+340	22	Requested	Beginner	10	Monthly	Seeded request	2025-12-01 07:16:09.934399
+700	20	Requested	Beginner	6	Monthly	Seeded assignment	2025-11-21 07:16:09.934399
+913	16	Requested	Intermediate	1	Daily	Seeded assignment	2025-11-04 07:16:09.934399
+959	25	Requested	Expert	5	Monthly	Seeded assignment	2025-11-06 07:16:09.934399
+592	7	Requested	Intermediate	15	Daily	Seeded request	2025-11-21 07:16:09.934399
+884	23	Requested	Beginner	4	Daily	Seeded request	2025-11-06 07:16:09.934399
+530	4	Requested	Advanced	13	Monthly	Seeded assignment	2025-11-12 07:16:09.934399
+657	7	Requested	Advanced	9	Monthly	Seeded assignment	2025-11-14 07:16:09.934399
+917	23	Requested	Advanced	9	Daily	Seeded request	2025-11-12 07:16:09.934399
+403	1	Requested	Advanced	13	Weekly	Seeded assignment	2025-11-30 07:16:09.934399
+85	16	Requested	Expert	6	Weekly	Seeded request	2025-11-06 07:16:09.934399
+30	10	Requested	Expert	0	Occasionally	Seeded assignment	2025-11-04 07:16:09.934399
+292	20	Requested	Beginner	2	Weekly	Seeded assignment	2025-11-20 07:16:09.934399
+420	23	Requested	Intermediate	0	Monthly	Seeded request	2025-11-12 07:16:09.934399
+113	4	Requested	Expert	11	Occasionally	Seeded assignment	2025-11-25 07:16:09.934399
+956	13	Requested	Advanced	1	Weekly	Seeded assignment	2025-11-21 07:16:09.934399
+55	22	Requested	Beginner	15	Monthly	Seeded request	2025-11-04 07:16:09.934399
+911	7	Requested	Beginner	3	Daily	Seeded assignment	2025-11-24 07:16:09.934399
+416	16	Requested	Beginner	10	Occasionally	Seeded request	2025-11-19 07:16:09.934399
+762	10	Requested	Advanced	4	Weekly	Seeded assignment	2025-11-17 07:16:09.934399
+129	17	Requested	Intermediate	12	Monthly	Seeded request	2025-11-17 07:16:09.934399
+214	12	Requested	Expert	3	Occasionally	Seeded assignment	2025-11-18 07:16:09.934399
+137	20	Requested	Advanced	4	Daily	Seeded request	2025-11-09 07:16:09.934399
+665	11	Requested	Advanced	0	Weekly	Seeded request	2025-11-05 07:16:09.934399
+759	9	Requested	Beginner	13	Monthly	Seeded request	2025-11-14 07:16:09.934399
+285	12	Requested	Advanced	11	Weekly	Seeded request	2025-11-22 07:16:09.934399
+888	6	Requested	Advanced	12	Daily	Seeded assignment	2025-11-05 07:16:09.934399
+106	12	Requested	Expert	6	Weekly	Seeded request	2025-11-05 07:16:09.934399
+454	17	Requested	Expert	14	Monthly	Seeded assignment	2025-12-02 07:16:09.934399
+8	10	Requested	Expert	13	Daily	Seeded assignment	2025-11-23 07:16:09.934399
+116	21	Requested	Expert	14	Occasionally	Seeded request	2025-11-18 07:16:09.934399
+653	3	Requested	Intermediate	6	Occasionally	Seeded request	2025-11-23 07:16:09.934399
+431	7	Requested	Advanced	1	Monthly	Seeded request	2025-11-04 07:16:09.934399
+816	19	Requested	Intermediate	9	Occasionally	Seeded request	2025-11-28 07:16:09.934399
+638	1	Requested	Expert	5	Weekly	Seeded assignment	2025-11-28 07:16:09.934399
+166	7	Requested	Advanced	1	Daily	Seeded assignment	2025-11-15 07:16:09.934399
+724	24	Requested	Intermediate	4	Occasionally	Seeded assignment	2025-11-22 07:16:09.934399
+241	19	Requested	Advanced	10	Occasionally	Seeded assignment	2025-11-27 07:16:09.934399
+928	4	Requested	Intermediate	13	Weekly	Seeded assignment	2025-11-22 07:16:09.934399
+158	1	Requested	Beginner	14	Weekly	Seeded request	2025-11-26 07:16:09.934399
+577	12	Requested	Expert	10	Daily	Seeded request	2025-11-03 07:16:09.934399
+276	18	Requested	Expert	8	Weekly	Seeded request	2025-11-19 07:16:09.934399
+425	8	Requested	Expert	3	Occasionally	Seeded assignment	2025-11-13 07:16:09.934399
+309	25	Requested	Intermediate	10	Daily	Seeded request	2025-11-19 07:16:09.934399
+778	21	Requested	Beginner	6	Monthly	Seeded request	2025-11-04 07:16:09.934399
+621	17	Requested	Advanced	13	Weekly	Seeded assignment	2025-11-07 07:16:09.934399
+631	22	Requested	Advanced	15	Monthly	Seeded assignment	2025-11-13 07:16:09.934399
+727	16	Requested	Advanced	11	Monthly	Seeded assignment	2025-11-16 07:16:09.934399
+189	3	Requested	Beginner	12	Daily	Seeded assignment	2025-12-01 07:16:09.934399
+9	17	Requested	Expert	11	Weekly	Seeded assignment	2025-11-27 07:16:09.934399
+229	7	Requested	Intermediate	12	Occasionally	Seeded request	2025-11-11 07:16:09.934399
+561	7	Requested	Beginner	15	Daily	Seeded request	2025-11-26 07:16:09.934399
+921	13	Requested	Advanced	6	Daily	Seeded request	2025-11-08 07:16:09.934399
+478	18	Requested	Expert	6	Daily	Seeded request	2025-11-25 07:16:09.934399
+636	4	Requested	Advanced	14	Weekly	Seeded request	2025-11-20 07:16:09.934399
+705	16	Requested	Expert	15	Daily	Seeded assignment	2025-12-02 07:16:09.934399
+851	22	Requested	Advanced	9	Monthly	Seeded assignment	2025-11-04 07:16:09.934399
+756	13	Requested	Expert	4	Monthly	Seeded assignment	2025-11-30 07:16:09.934399
+663	23	Requested	Advanced	13	Occasionally	Seeded request	2025-11-04 07:16:09.934399
+925	6	Requested	Intermediate	12	Weekly	Seeded assignment	2025-11-11 07:16:09.934399
+924	8	Requested	Advanced	10	Daily	Seeded request	2025-11-26 07:16:09.934399
+461	9	Requested	Expert	11	Daily	Seeded assignment	2025-12-02 07:16:09.934399
+385	17	Requested	Advanced	3	Occasionally	Seeded assignment	2025-11-09 07:16:09.934399
+339	13	Requested	Intermediate	1	Occasionally	Seeded request	2025-11-05 07:16:09.934399
+356	21	Requested	Intermediate	2	Occasionally	Seeded request	2025-11-15 07:16:09.934399
+71	18	Requested	Advanced	15	Daily	Seeded assignment	2025-11-21 07:16:09.934399
+261	1	Requested	Expert	7	Weekly	Seeded request	2025-11-22 07:16:09.934399
+815	20	Requested	Beginner	10	Occasionally	Seeded assignment	2025-11-15 07:16:09.934399
+897	9	Requested	Expert	0	Occasionally	Seeded assignment	2025-11-23 07:16:09.934399
+908	6	Requested	Intermediate	2	Daily	Seeded request	2025-11-17 07:16:09.934399
+204	21	Requested	Advanced	10	Weekly	Seeded assignment	2025-11-29 07:16:09.934399
+185	24	Requested	Advanced	13	Monthly	Seeded assignment	2025-11-23 07:16:09.934399
+938	22	Requested	Expert	12	Weekly	Seeded assignment	2025-11-06 07:16:09.934399
+304	16	Requested	Advanced	4	Monthly	Seeded assignment	2025-11-17 07:16:09.934399
+296	18	Requested	Expert	8	Monthly	Seeded request	2025-11-29 07:16:09.934399
+970	16	Requested	Intermediate	7	Occasionally	Seeded assignment	2025-11-14 07:16:09.934399
+31	20	Requested	Expert	14	Monthly	Seeded request	2025-11-18 07:16:09.934399
+528	23	Requested	Intermediate	11	Occasionally	Seeded assignment	2025-11-05 07:16:09.934399
+622	21	Requested	Expert	15	Occasionally	Seeded request	2025-11-25 07:16:09.934399
+887	13	Requested	Beginner	4	Weekly	Seeded assignment	2025-11-07 07:16:09.934399
+891	4	Requested	Advanced	1	Weekly	Seeded assignment	2025-11-15 07:16:09.934399
+430	25	Requested	Advanced	0	Occasionally	Seeded assignment	2025-11-06 07:16:09.934399
+627	1	Requested	Intermediate	4	Monthly	Seeded assignment	2025-11-18 07:16:09.934399
+943	6	Requested	Advanced	2	Daily	Seeded request	2025-11-18 07:16:09.934399
+634	8	Requested	Intermediate	6	Weekly	Seeded assignment	2025-11-19 07:16:09.934399
+284	20	Requested	Beginner	10	Monthly	Seeded assignment	2025-12-02 07:16:09.934399
+619	7	Requested	Beginner	15	Monthly	Seeded assignment	2025-11-08 07:16:09.934399
+964	25	Requested	Intermediate	3	Daily	Seeded request	2025-11-28 07:16:09.934399
+500	9	Requested	Intermediate	8	Weekly	Seeded request	2025-11-13 07:16:09.934399
+408	12	Requested	Beginner	4	Weekly	Seeded assignment	2025-12-01 07:16:09.934399
+412	22	Requested	Intermediate	8	Occasionally	Seeded request	2025-11-15 07:16:09.934399
+721	25	Requested	Beginner	4	Occasionally	Seeded assignment	2025-11-11 07:16:09.934399
+918	12	Requested	Expert	12	Weekly	Seeded request	2025-11-08 07:16:09.934399
+205	21	Requested	Advanced	15	Daily	Seeded assignment	2025-11-15 07:16:09.934399
+465	12	Requested	Expert	1	Occasionally	Seeded assignment	2025-12-02 07:16:09.934399
+750	21	Requested	Advanced	9	Weekly	Seeded assignment	2025-11-06 07:16:09.934399
+880	16	Requested	Advanced	7	Occasionally	Seeded assignment	2025-11-10 07:16:09.934399
+335	5	Requested	Expert	9	Weekly	Seeded request	2025-11-27 07:16:09.934399
+599	19	Requested	Intermediate	1	Weekly	Seeded assignment	2025-11-18 07:16:09.934399
+357	18	Requested	Advanced	10	Weekly	Seeded assignment	2025-11-11 07:16:09.934399
+433	22	Requested	Intermediate	10	Occasionally	Seeded assignment	2025-11-27 07:16:09.934399
+479	12	Requested	Intermediate	14	Weekly	Seeded request	2025-11-14 07:16:09.934399
+207	25	Requested	Intermediate	14	Monthly	Seeded assignment	2025-11-17 07:16:09.934399
+404	16	Requested	Advanced	11	Monthly	Seeded assignment	2025-11-16 07:16:09.934399
+532	1	Requested	Advanced	6	Occasionally	Seeded request	2025-11-13 07:16:09.934399
+642	22	Requested	Intermediate	4	Weekly	Seeded request	2025-11-05 07:16:09.934399
+789	22	Requested	Advanced	10	Weekly	Seeded assignment	2025-11-20 07:16:09.934399
+965	9	Requested	Advanced	8	Monthly	Seeded request	2025-11-07 07:16:09.934399
+942	5	Requested	Expert	6	Weekly	Seeded request	2025-11-17 07:16:09.934399
+308	8	Requested	Expert	9	Weekly	Seeded assignment	2025-11-06 07:16:09.934399
+152	22	Requested	Expert	8	Monthly	Seeded request	2025-11-06 07:16:09.934399
+575	4	Requested	Beginner	3	Monthly	Seeded assignment	2025-11-27 07:16:09.934399
+531	24	Requested	Beginner	10	Monthly	Seeded request	2025-11-03 07:16:09.934399
+476	6	Requested	Intermediate	13	Monthly	Seeded request	2025-11-17 07:16:09.934399
+837	22	Requested	Intermediate	6	Weekly	Seeded request	2025-11-24 07:16:09.934399
+93	13	Requested	Beginner	9	Occasionally	Seeded assignment	2025-11-12 07:16:09.934399
+27	5	Requested	Beginner	14	Occasionally	Seeded assignment	2025-11-29 07:16:09.934399
+632	21	Requested	Advanced	13	Monthly	Seeded assignment	2025-11-18 07:16:09.934399
+708	21	Requested	Beginner	10	Daily	Seeded request	2025-11-05 07:16:09.934399
+663	7	Requested	Intermediate	12	Daily	Seeded request	2025-11-22 07:16:09.934399
+59	25	Requested	Expert	11	Occasionally	Seeded assignment	2025-11-30 07:16:09.934399
+405	5	Requested	Intermediate	4	Weekly	Seeded assignment	2025-11-06 07:16:09.934399
+82	13	Requested	Expert	12	Weekly	Seeded request	2025-11-09 07:16:09.934399
+779	11	Requested	Beginner	4	Occasionally	Seeded assignment	2025-11-15 07:16:09.934399
+675	21	Requested	Intermediate	11	Daily	Seeded assignment	2025-11-12 07:16:09.934399
+537	18	Requested	Intermediate	1	Weekly	Seeded assignment	2025-11-07 07:16:09.934399
+117	21	Requested	Expert	13	Monthly	Seeded request	2025-12-01 07:16:09.934399
+287	16	Requested	Beginner	8	Monthly	Seeded assignment	2025-11-19 07:16:09.934399
+320	9	Requested	Advanced	2	Occasionally	Seeded assignment	2025-12-01 07:16:09.934399
+564	7	Requested	Intermediate	11	Daily	Seeded assignment	2025-11-09 07:16:09.934399
+484	11	Requested	Intermediate	0	Monthly	Seeded assignment	2025-11-11 07:16:09.934399
+447	6	Requested	Intermediate	13	Weekly	Seeded assignment	2025-11-27 07:16:09.934399
+770	12	Requested	Advanced	13	Daily	Seeded request	2025-11-21 07:16:09.934399
+89	1	Requested	Expert	12	Monthly	Seeded request	2025-11-27 07:16:09.934399
+954	13	Requested	Advanced	8	Monthly	Seeded assignment	2025-11-04 07:16:09.934399
+49	17	Requested	Advanced	12	Monthly	Seeded request	2025-11-29 07:16:09.934399
+21	18	Requested	Expert	0	Monthly	Seeded request	2025-12-01 07:16:09.934399
+366	13	Requested	Intermediate	11	Occasionally	Seeded assignment	2025-11-23 07:16:09.934399
+281	18	Requested	Advanced	6	Monthly	Seeded assignment	2025-11-11 07:16:09.934399
+935	5	Requested	Intermediate	15	Weekly	Seeded request	2025-11-17 07:16:09.934399
+898	9	Requested	Advanced	0	Occasionally	Seeded assignment	2025-11-04 07:16:09.934399
+936	25	Requested	Expert	7	Occasionally	Seeded request	2025-11-07 07:16:09.934399
+18	9	Requested	Advanced	3	Monthly	Seeded assignment	2025-11-06 07:16:09.934399
+629	3	Requested	Expert	10	Monthly	Seeded assignment	2025-11-27 07:16:09.934399
+198	3	Requested	Beginner	14	Monthly	Seeded assignment	2025-11-17 07:16:09.934399
+684	9	Requested	Expert	7	Monthly	Seeded assignment	2025-11-18 07:16:09.934399
+905	17	Requested	Advanced	14	Weekly	Seeded request	2025-12-02 07:16:09.934399
+63	24	Requested	Expert	3	Weekly	Seeded request	2025-11-12 07:16:09.934399
+199	17	Requested	Intermediate	10	Weekly	Seeded assignment	2025-11-19 07:16:09.934399
+715	7	Requested	Intermediate	0	Occasionally	Seeded assignment	2025-11-26 07:16:09.934399
+879	18	Requested	Beginner	2	Weekly	Seeded request	2025-11-15 07:16:09.934399
+86	10	Requested	Expert	11	Occasionally	Seeded assignment	2025-11-09 07:16:09.934399
+148	25	Requested	Advanced	9	Daily	Seeded assignment	2025-11-22 07:16:09.934399
+851	20	Requested	Expert	2	Daily	Seeded request	2025-11-30 07:16:09.934399
+308	24	Requested	Advanced	12	Daily	Seeded request	2025-11-28 07:16:09.934399
+494	19	Requested	Expert	0	Monthly	Seeded assignment	2025-12-01 07:16:09.934399
+142	4	Requested	Expert	3	Occasionally	Seeded assignment	2025-11-22 07:16:09.934399
+857	10	Requested	Advanced	8	Weekly	Seeded assignment	2025-11-26 07:16:09.934399
+70	25	Requested	Intermediate	6	Monthly	Seeded assignment	2025-11-21 07:16:09.934399
+760	25	Requested	Advanced	0	Occasionally	Seeded request	2025-11-12 07:16:09.934399
+939	6	Requested	Advanced	3	Weekly	Seeded request	2025-11-05 07:16:09.934399
+743	25	Requested	Advanced	2	Daily	Seeded assignment	2025-11-09 07:16:09.934399
+211	18	Requested	Beginner	12	Monthly	Seeded request	2025-11-14 07:16:09.934399
+646	5	Requested	Beginner	10	Occasionally	Seeded request	2025-11-25 07:16:09.934399
+36	10	Requested	Advanced	3	Monthly	Seeded assignment	2025-11-29 07:16:09.934399
+252	3	Requested	Advanced	9	Daily	Seeded request	2025-11-30 07:16:09.934399
+728	13	Requested	Beginner	13	Monthly	Seeded assignment	2025-11-06 07:16:09.934399
+752	16	Requested	Expert	0	Weekly	Seeded request	2025-11-25 07:16:09.934399
+451	10	Requested	Beginner	0	Monthly	Seeded assignment	2025-11-10 07:16:09.934399
+611	25	Requested	Expert	11	Daily	Seeded request	2025-11-10 07:16:09.934399
+323	17	Requested	Expert	5	Occasionally	Seeded request	2025-11-25 07:16:09.934399
+167	4	Requested	Advanced	14	Daily	Seeded assignment	2025-11-15 07:16:09.934399
+243	16	Requested	Advanced	4	Monthly	Seeded assignment	2025-11-11 07:16:09.934399
+843	22	Requested	Advanced	3	Occasionally	Seeded request	2025-11-25 07:16:09.934399
+72	1	Requested	Beginner	9	Daily	Seeded assignment	2025-11-06 07:16:09.934399
+609	19	Requested	Beginner	8	Daily	Seeded assignment	2025-11-29 07:16:09.934399
+38	5	Requested	Advanced	6	Weekly	Seeded assignment	2025-11-22 07:16:09.934399
+128	5	Requested	Advanced	12	Occasionally	Seeded assignment	2025-11-13 07:16:09.934399
+256	13	Requested	Intermediate	2	Daily	Seeded request	2025-11-12 07:16:09.934399
+849	7	Requested	Beginner	11	Weekly	Seeded assignment	2025-11-28 07:16:09.934399
+315	22	Requested	Intermediate	1	Daily	Seeded request	2025-11-17 07:16:09.934399
+278	13	Requested	Intermediate	13	Daily	Seeded assignment	2025-11-17 07:16:09.934399
+588	4	Requested	Advanced	1	Weekly	Seeded assignment	2025-11-26 07:16:09.934399
+924	24	Requested	Intermediate	7	Weekly	Seeded assignment	2025-11-11 07:16:09.934399
+798	21	Requested	Beginner	8	Weekly	Seeded request	2025-11-28 07:16:09.934399
+837	20	Requested	Beginner	2	Daily	Seeded request	2025-11-26 07:16:09.934399
+446	8	Requested	Beginner	11	Daily	Seeded request	2025-11-08 07:16:09.934399
+241	3	Requested	Intermediate	15	Weekly	Seeded assignment	2025-11-30 07:16:09.934399
+546	13	Requested	Beginner	0	Monthly	Seeded assignment	2025-11-14 07:16:09.934399
+6	23	Requested	Beginner	5	Weekly	Seeded request	2025-11-25 07:16:09.934399
+490	21	Requested	Intermediate	0	Weekly	Seeded assignment	2025-11-04 07:16:09.934399
+24	13	Requested	Expert	8	Daily	Seeded request	2025-12-01 07:16:09.934399
+54	10	Requested	Beginner	4	Daily	Seeded assignment	2025-11-19 07:16:09.934399
+47	18	Requested	Advanced	4	Occasionally	Seeded assignment	2025-11-15 07:16:09.934399
+103	10	Requested	Intermediate	0	Monthly	Seeded assignment	2025-11-29 07:16:09.934399
+364	25	Requested	Beginner	2	Daily	Seeded request	2025-11-25 07:16:09.934399
+608	25	Requested	Expert	1	Weekly	Seeded request	2025-11-14 07:16:09.934399
+597	24	Requested	Advanced	8	Weekly	Seeded assignment	2025-11-27 07:16:09.934399
+543	20	Requested	Beginner	14	Daily	Seeded assignment	2025-11-28 07:16:09.934399
+868	11	Requested	Expert	10	Daily	Seeded request	2025-11-16 07:16:09.934399
+965	11	Requested	Intermediate	1	Weekly	Seeded assignment	2025-11-10 07:16:09.934399
+84	23	Requested	Expert	7	Weekly	Seeded assignment	2025-11-05 07:16:09.934399
+433	20	Requested	Advanced	10	Weekly	Seeded assignment	2025-11-08 07:16:09.934399
+629	4	Requested	Advanced	15	Occasionally	Seeded request	2025-12-01 07:16:09.934399
+753	21	Requested	Expert	8	Weekly	Seeded assignment	2025-11-22 07:16:09.934399
+348	11	Requested	Advanced	4	Occasionally	Seeded request	2025-11-13 07:16:09.934399
+652	18	Requested	Advanced	2	Occasionally	Seeded assignment	2025-12-02 07:16:09.934399
+68	18	Requested	Advanced	0	Occasionally	Seeded assignment	2025-11-04 07:16:09.934399
+374	12	Requested	Intermediate	2	Daily	Seeded assignment	2025-11-22 07:16:09.934399
+25	3	Requested	Beginner	6	Weekly	Seeded request	2025-11-14 07:16:09.934399
+78	11	Requested	Expert	6	Occasionally	Seeded assignment	2025-11-20 07:16:09.934399
+948	21	Requested	Expert	0	Monthly	Seeded assignment	2025-11-26 07:16:09.934399
+353	12	Requested	Intermediate	15	Daily	Seeded assignment	2025-11-11 07:16:09.934399
+210	25	Requested	Expert	13	Occasionally	Seeded assignment	2025-11-21 07:16:09.934399
+474	5	Requested	Expert	0	Weekly	Seeded assignment	2025-11-06 07:16:09.934399
+397	22	Requested	Intermediate	7	Daily	Seeded request	2025-11-22 07:16:09.934399
+266	18	Requested	Expert	3	Weekly	Seeded assignment	2025-11-22 07:16:09.934399
+7	10	Requested	Beginner	13	Weekly	Seeded assignment	2025-11-15 07:16:09.934399
+850	16	Requested	Beginner	6	Daily	Seeded request	2025-11-20 07:16:09.934399
+421	12	Requested	Beginner	15	Weekly	Seeded assignment	2025-11-15 07:16:09.934399
+793	24	Requested	Advanced	1	Monthly	Seeded request	2025-11-08 07:16:09.934399
+982	25	Requested	Expert	4	Monthly	Seeded assignment	2025-12-01 07:16:09.934399
+747	25	Requested	Advanced	4	Weekly	Seeded request	2025-11-21 07:16:09.934399
+756	16	Requested	Beginner	6	Monthly	Seeded assignment	2025-11-26 07:16:09.934399
+375	10	Requested	Beginner	7	Occasionally	Seeded request	2025-11-21 07:16:09.934399
+497	22	Requested	Advanced	8	Daily	Seeded assignment	2025-11-29 07:16:09.934399
+886	13	Requested	Intermediate	0	Occasionally	Seeded request	2025-11-04 07:16:09.934399
+847	4	Requested	Expert	15	Monthly	Seeded request	2025-11-06 07:16:09.934399
+941	18	Requested	Expert	9	Daily	Seeded request	2025-11-10 07:16:09.934399
+453	17	Requested	Intermediate	2	Occasionally	Seeded request	2025-11-09 07:16:09.934399
+541	3	Requested	Expert	9	Occasionally	Seeded assignment	2025-11-12 07:16:09.934399
+402	21	Requested	Beginner	9	Occasionally	Seeded request	2025-11-06 07:16:09.934399
+473	13	Requested	Beginner	1	Daily	Seeded assignment	2025-11-10 07:16:09.934399
+610	13	Requested	Advanced	9	Monthly	Seeded assignment	2025-11-18 07:16:09.934399
+789	5	Requested	Intermediate	5	Occasionally	Seeded assignment	2025-11-20 07:16:09.934399
+469	21	Requested	Beginner	1	Weekly	Seeded assignment	2025-11-19 07:16:09.934399
+719	5	Requested	Advanced	6	Monthly	Seeded request	2025-11-11 07:16:09.934399
+152	5	Requested	Intermediate	2	Occasionally	Seeded request	2025-11-29 07:16:09.934399
+423	17	Requested	Expert	11	Weekly	Seeded request	2025-11-08 07:16:09.934399
+901	17	Requested	Beginner	5	Weekly	Seeded request	2025-11-20 07:16:09.934399
+649	10	Requested	Beginner	3	Occasionally	Seeded request	2025-11-06 07:16:09.934399
+755	20	Requested	Advanced	10	Monthly	Seeded request	2025-11-07 07:16:09.934399
+61	17	Requested	Intermediate	4	Weekly	Seeded request	2025-11-11 07:16:09.934399
+595	19	Requested	Advanced	3	Occasionally	Seeded assignment	2025-11-20 07:16:09.934399
+47	19	Requested	Advanced	7	Occasionally	Seeded request	2025-11-22 07:16:09.934399
+62	7	Requested	Beginner	12	Weekly	Seeded assignment	2025-11-30 07:16:09.934399
+422	21	Requested	Advanced	1	Daily	Seeded assignment	2025-11-23 07:16:09.934399
+51	6	Requested	Advanced	6	Monthly	Seeded assignment	2025-11-23 07:16:09.934399
+931	11	Requested	Beginner	3	Occasionally	Seeded assignment	2025-11-13 07:16:09.934399
+338	8	Requested	Intermediate	2	Weekly	Seeded request	2025-11-30 07:16:09.934399
+276	3	Requested	Beginner	0	Monthly	Seeded assignment	2025-12-02 07:16:09.934399
+60	21	Requested	Beginner	5	Occasionally	Seeded assignment	2025-11-09 07:16:09.934399
+293	5	Requested	Beginner	4	Weekly	Seeded assignment	2025-11-14 07:16:09.934399
+573	17	Requested	Intermediate	14	Monthly	Seeded assignment	2025-11-24 07:16:09.934399
+317	12	Requested	Expert	9	Weekly	Seeded request	2025-11-24 07:16:09.934399
+235	8	Requested	Advanced	1	Occasionally	Seeded assignment	2025-11-20 07:16:09.934399
+639	23	Requested	Intermediate	5	Monthly	Seeded assignment	2025-12-01 07:16:09.934399
+307	4	Requested	Intermediate	4	Daily	Seeded request	2025-12-01 07:16:09.934399
+867	25	Requested	Intermediate	8	Monthly	Seeded assignment	2025-11-12 07:16:09.934399
+912	21	Requested	Beginner	15	Weekly	Seeded assignment	2025-11-23 07:16:09.934399
+107	11	Requested	Expert	13	Weekly	Seeded assignment	2025-11-17 07:16:09.934399
+964	6	Requested	Expert	11	Occasionally	Seeded assignment	2025-11-08 07:16:09.934399
+56	19	Requested	Expert	14	Monthly	Seeded assignment	2025-11-10 07:16:09.934399
+822	18	Requested	Advanced	12	Monthly	Seeded assignment	2025-11-17 07:16:09.934399
+312	7	Requested	Expert	1	Monthly	Seeded assignment	2025-11-21 07:16:09.934399
+966	11	Requested	Expert	10	Daily	Seeded assignment	2025-11-12 07:16:09.934399
+77	19	Requested	Intermediate	4	Daily	Seeded assignment	2025-11-27 07:16:09.934399
+140	19	Requested	Expert	12	Weekly	Seeded request	2025-11-23 07:16:09.934399
+305	7	Requested	Expert	15	Occasionally	Seeded assignment	2025-11-22 07:16:09.934399
+29	8	Requested	Expert	1	Weekly	Seeded assignment	2025-11-29 07:16:09.934399
+292	22	Requested	Beginner	3	Occasionally	Seeded assignment	2025-11-04 07:16:09.934399
+547	13	Requested	Expert	4	Monthly	Seeded assignment	2025-11-28 07:16:09.934399
+3	4	Requested	Beginner	5	Monthly	Seeded assignment	2025-11-13 07:16:09.934399
+884	1	Requested	Expert	2	Weekly	Seeded assignment	2025-11-27 07:16:09.934399
+283	9	Requested	Intermediate	15	Daily	Seeded assignment	2025-11-09 07:16:09.934399
+110	20	Requested	Advanced	5	Monthly	Seeded assignment	2025-11-25 07:16:09.934399
+165	6	Requested	Advanced	8	Daily	Seeded request	2025-11-04 07:16:09.934399
+900	21	Requested	Advanced	8	Daily	Seeded assignment	2025-11-18 07:16:09.934399
+395	13	Requested	Expert	9	Weekly	Seeded request	2025-11-27 07:16:09.934399
+459	8	Requested	Advanced	11	Weekly	Seeded request	2025-11-17 07:16:09.934399
+144	9	Requested	Beginner	6	Weekly	Seeded request	2025-11-30 07:16:09.934399
+444	8	Requested	Advanced	2	Daily	Seeded assignment	2025-11-06 07:16:09.934399
+423	16	Requested	Intermediate	5	Occasionally	Seeded assignment	2025-11-16 07:16:09.934399
+291	16	Requested	Advanced	8	Occasionally	Seeded request	2025-11-28 07:16:09.934399
+604	12	Requested	Expert	13	Weekly	Seeded assignment	2025-11-23 07:16:09.934399
+881	20	Requested	Intermediate	12	Monthly	Seeded assignment	2025-11-13 07:16:09.934399
+483	20	Requested	Expert	11	Monthly	Seeded assignment	2025-11-26 07:16:09.934399
+870	19	Requested	Advanced	1	Monthly	Seeded request	2025-11-27 07:16:09.934399
+838	10	Requested	Expert	11	Monthly	Seeded assignment	2025-11-25 07:16:09.934399
+61	16	Requested	Beginner	5	Weekly	Seeded assignment	2025-12-01 07:16:09.934399
+403	7	Requested	Beginner	5	Weekly	Seeded request	2025-11-24 07:16:09.934399
+584	4	Requested	Advanced	6	Daily	Seeded assignment	2025-11-27 07:16:09.934399
+240	3	Requested	Intermediate	3	Daily	Seeded assignment	2025-11-07 07:16:09.934399
+158	7	Requested	Beginner	2	Monthly	Seeded assignment	2025-11-05 07:16:09.934399
+879	6	Requested	Advanced	7	Occasionally	Seeded assignment	2025-11-20 07:16:09.934399
+269	13	Requested	Beginner	1	Monthly	Seeded assignment	2025-11-06 07:16:09.934399
+141	19	Requested	Advanced	11	Occasionally	Seeded assignment	2025-12-01 07:16:09.934399
+264	25	Requested	Advanced	11	Occasionally	Seeded request	2025-11-19 07:16:09.934399
+592	9	Requested	Expert	0	Weekly	Seeded request	2025-11-11 07:16:09.934399
+977	6	Requested	Advanced	9	Monthly	Seeded request	2025-11-13 07:16:09.934399
+631	8	Requested	Expert	9	Occasionally	Seeded request	2025-11-23 07:16:09.934399
+526	21	Requested	Advanced	5	Occasionally	Seeded assignment	2025-11-10 07:16:09.934399
+558	13	Requested	Intermediate	11	Daily	Seeded assignment	2025-11-21 07:16:09.934399
+67	13	Requested	Intermediate	9	Daily	Seeded request	2025-11-03 07:16:09.934399
+918	24	Requested	Beginner	15	Monthly	Seeded assignment	2025-11-12 07:16:09.934399
+714	21	Requested	Expert	10	Occasionally	Seeded request	2025-11-09 07:16:09.934399
+386	5	Requested	Beginner	11	Monthly	Seeded assignment	2025-11-28 07:16:09.934399
+431	1	Requested	Intermediate	13	Monthly	Seeded assignment	2025-11-09 07:16:09.934399
+230	17	Requested	Beginner	9	Weekly	Seeded assignment	2025-11-29 07:16:09.934399
+468	6	Requested	Expert	13	Monthly	Seeded assignment	2025-11-22 07:16:09.934399
+639	11	Requested	Beginner	6	Occasionally	Seeded request	2025-11-13 07:16:09.934399
+538	3	Requested	Expert	6	Daily	Seeded assignment	2025-11-10 07:16:09.934399
+774	21	Requested	Intermediate	0	Weekly	Seeded assignment	2025-11-04 07:16:09.934399
+835	13	Requested	Intermediate	11	Weekly	Seeded assignment	2025-11-23 07:16:09.934399
+721	19	Requested	Beginner	6	Daily	Seeded request	2025-11-25 07:16:09.934399
+926	4	Requested	Beginner	6	Daily	Seeded request	2025-11-16 07:16:09.934399
+455	17	Requested	Beginner	8	Occasionally	Seeded assignment	2025-11-27 07:16:09.934399
+262	12	Requested	Intermediate	8	Daily	Seeded assignment	2025-11-07 07:16:09.934399
+100	23	Requested	Intermediate	12	Occasionally	Seeded assignment	2025-11-23 07:16:09.934399
+398	7	Requested	Intermediate	10	Occasionally	Seeded request	2025-11-13 07:16:09.934399
+667	25	Requested	Intermediate	8	Occasionally	Seeded request	2025-11-23 07:16:09.934399
+130	1	Requested	Expert	14	Monthly	Seeded assignment	2025-11-24 07:16:09.934399
+729	6	Requested	Advanced	12	Daily	Seeded assignment	2025-11-14 07:16:09.934399
+867	4	Requested	Intermediate	3	Monthly	Seeded request	2025-11-27 07:16:09.934399
+212	1	Requested	Beginner	5	Daily	Seeded request	2025-11-15 07:16:09.934399
+654	7	Requested	Beginner	5	Weekly	Seeded assignment	2025-11-25 07:16:09.934399
+263	22	Requested	Advanced	7	Daily	Seeded assignment	2025-11-15 07:16:09.934399
+173	4	Requested	Advanced	12	Monthly	Seeded assignment	2025-12-01 07:16:09.934399
+149	25	Requested	Beginner	9	Occasionally	Seeded assignment	2025-11-20 07:16:09.934399
+239	24	Requested	Advanced	5	Occasionally	Seeded assignment	2025-11-24 07:16:09.934399
+876	11	Requested	Beginner	0	Monthly	Seeded request	2025-11-06 07:16:09.934399
+354	13	Requested	Intermediate	8	Occasionally	Seeded request	2025-11-29 07:16:09.934399
+706	25	Requested	Intermediate	2	Daily	Seeded assignment	2025-11-08 07:16:09.934399
+145	21	Requested	Advanced	14	Occasionally	Seeded assignment	2025-11-08 07:16:09.934399
+246	13	Requested	Advanced	6	Monthly	Seeded request	2025-12-02 07:16:09.934399
+874	16	Requested	Advanced	6	Daily	Seeded request	2025-11-06 07:16:09.934399
+798	16	Requested	Advanced	4	Occasionally	Seeded assignment	2025-11-14 07:16:09.934399
+538	4	Requested	Expert	11	Weekly	Seeded request	2025-11-03 07:16:09.934399
+166	9	Requested	Beginner	8	Monthly	Seeded assignment	2025-11-11 07:16:09.934399
+672	21	Requested	Advanced	0	Monthly	Seeded assignment	2025-11-03 07:16:09.934399
+925	4	Requested	Expert	13	Occasionally	Seeded assignment	2025-11-21 07:16:09.934399
+543	8	Requested	Advanced	5	Weekly	Seeded request	2025-11-10 07:16:09.934399
+815	24	Requested	Expert	10	Occasionally	Seeded assignment	2025-11-26 07:16:09.934399
+98	21	Requested	Beginner	4	Occasionally	Seeded assignment	2025-12-01 07:16:09.934399
+220	9	Requested	Expert	4	Weekly	Seeded assignment	2025-11-16 07:16:09.934399
+604	20	Requested	Beginner	13	Occasionally	Seeded assignment	2025-11-15 07:16:09.934399
+805	24	Requested	Advanced	4	Monthly	Seeded assignment	2025-11-07 07:16:09.934399
+842	20	Requested	Advanced	2	Daily	Seeded assignment	2025-11-18 07:16:09.934399
+434	20	Requested	Beginner	14	Weekly	Seeded request	2025-11-08 07:16:09.934399
+62	11	Requested	Beginner	14	Weekly	Seeded assignment	2025-11-24 07:16:09.934399
+146	21	Requested	Expert	13	Weekly	Seeded assignment	2025-11-27 07:16:09.934399
+763	21	Requested	Expert	0	Daily	Seeded assignment	2025-11-29 07:16:09.934399
+217	4	Requested	Advanced	10	Monthly	Seeded request	2025-11-27 07:16:09.934399
+308	22	Requested	Expert	11	Daily	Seeded request	2025-11-30 07:16:09.934399
+834	24	Requested	Expert	6	Weekly	Seeded assignment	2025-11-13 07:16:09.934399
+552	5	Requested	Beginner	1	Weekly	Seeded request	2025-11-21 07:16:09.934399
+193	17	Requested	Advanced	10	Occasionally	Seeded assignment	2025-11-22 07:16:09.934399
+202	6	Requested	Intermediate	2	Weekly	Seeded assignment	2025-11-06 07:16:09.934399
+349	19	Requested	Advanced	7	Monthly	Seeded assignment	2025-11-22 07:16:09.934399
+661	8	Requested	Beginner	13	Occasionally	Seeded assignment	2025-11-23 07:16:09.934399
+853	17	Requested	Intermediate	13	Daily	Seeded request	2025-11-30 07:16:09.934399
+17	25	Requested	Expert	1	Daily	Seeded assignment	2025-11-18 07:16:09.934399
+342	4	Requested	Intermediate	1	Weekly	Seeded assignment	2025-11-26 07:16:09.934399
+945	9	Requested	Expert	9	Occasionally	Seeded request	2025-11-18 07:16:09.934399
+754	3	Requested	Expert	1	Weekly	Seeded assignment	2025-11-19 07:16:09.934399
+857	22	Requested	Expert	15	Daily	Seeded assignment	2025-11-25 07:16:09.934399
+138	16	Requested	Advanced	14	Daily	Seeded request	2025-11-20 07:16:09.934399
+415	9	Requested	Expert	13	Daily	Seeded assignment	2025-11-23 07:16:09.934399
+532	7	Requested	Advanced	14	Occasionally	Seeded assignment	2025-12-01 07:16:09.934399
+519	8	Requested	Advanced	7	Occasionally	Seeded request	2025-11-29 07:16:09.934399
+438	19	Requested	Expert	2	Daily	Seeded request	2025-11-17 07:16:09.934399
+428	17	Requested	Expert	11	Monthly	Seeded assignment	2025-11-16 07:16:09.934399
+262	5	Requested	Advanced	6	Monthly	Seeded request	2025-11-18 07:16:09.934399
+524	25	Requested	Beginner	4	Occasionally	Seeded assignment	2025-11-21 07:16:09.934399
+242	4	Requested	Advanced	14	Daily	Seeded request	2025-11-10 07:16:09.934399
+44	1	Requested	Beginner	4	Weekly	Seeded assignment	2025-11-05 07:16:09.934399
+581	8	Requested	Intermediate	6	Daily	Seeded assignment	2025-11-20 07:16:09.934399
+619	9	Requested	Expert	7	Daily	Seeded request	2025-11-07 07:16:09.934399
+870	18	Requested	Beginner	9	Monthly	Seeded request	2025-11-13 07:16:09.934399
+113	6	Requested	Advanced	4	Monthly	Seeded request	2025-11-28 07:16:09.934399
+937	8	Requested	Beginner	7	Monthly	Seeded assignment	2025-11-29 07:16:09.934399
+348	23	Requested	Advanced	6	Monthly	Seeded assignment	2025-11-22 07:16:09.934399
+707	13	Requested	Expert	8	Weekly	Seeded assignment	2025-11-29 07:16:09.934399
+799	19	Requested	Beginner	1	Monthly	Seeded assignment	2025-11-07 07:16:09.934399
+261	23	Requested	Intermediate	15	Weekly	Seeded assignment	2025-12-02 07:16:09.934399
+936	4	Requested	Beginner	5	Occasionally	Seeded assignment	2025-11-26 07:16:09.934399
+40	23	Requested	Intermediate	14	Monthly	Seeded request	2025-11-19 07:16:09.934399
+182	23	Requested	Intermediate	13	Monthly	Seeded assignment	2025-11-05 07:16:09.934399
+892	6	Requested	Intermediate	9	Monthly	Seeded assignment	2025-11-29 07:16:09.934399
+338	12	Requested	Beginner	11	Daily	Seeded request	2025-11-22 07:16:09.934399
+790	3	Requested	Expert	2	Monthly	Seeded assignment	2025-11-18 07:16:09.934399
+489	25	Requested	Beginner	5	Monthly	Seeded assignment	2025-11-11 07:16:09.934399
+569	7	Requested	Intermediate	11	Weekly	Seeded assignment	2025-11-28 07:16:09.934399
+408	10	Requested	Advanced	7	Weekly	Seeded request	2025-11-25 07:16:09.934399
+840	11	Requested	Beginner	13	Daily	Seeded request	2025-11-12 07:16:09.934399
+894	3	Requested	Intermediate	7	Weekly	Seeded request	2025-11-03 07:16:09.934399
+361	23	Requested	Beginner	2	Monthly	Seeded request	2025-11-24 07:16:09.934399
+206	9	Requested	Advanced	15	Daily	Seeded assignment	2025-11-08 07:16:09.934399
+41	11	Requested	Advanced	10	Occasionally	Seeded request	2025-11-07 07:16:09.934399
+464	12	Requested	Expert	8	Daily	Seeded request	2025-11-20 07:16:09.934399
+242	3	Requested	Advanced	7	Monthly	Seeded assignment	2025-11-26 07:16:09.934399
+352	18	Requested	Beginner	10	Occasionally	Seeded request	2025-11-07 07:16:09.934399
+286	13	Requested	Advanced	13	Weekly	Seeded assignment	2025-11-15 07:16:09.934399
+182	7	Requested	Intermediate	0	Monthly	Seeded assignment	2025-11-28 07:16:09.934399
+735	18	Requested	Intermediate	8	Occasionally	Seeded assignment	2025-11-18 07:16:09.934399
+279	8	Requested	Advanced	5	Occasionally	Seeded assignment	2025-11-16 07:16:09.934399
+197	13	Requested	Intermediate	2	Monthly	Seeded request	2025-11-19 07:16:09.934399
+221	6	Requested	Advanced	10	Daily	Seeded assignment	2025-11-26 07:16:09.934399
+20	24	Requested	Intermediate	14	Monthly	Seeded request	2025-11-11 07:16:09.934399
+668	1	Requested	Advanced	7	Weekly	Seeded assignment	2025-11-29 07:16:09.934399
+968	11	Requested	Expert	14	Daily	Seeded assignment	2025-12-01 07:16:09.934399
+551	19	Requested	Expert	2	Daily	Seeded request	2025-11-20 07:16:09.934399
+406	12	Requested	Intermediate	15	Occasionally	Seeded assignment	2025-11-26 07:16:09.934399
+619	6	Requested	Advanced	11	Weekly	Seeded assignment	2025-11-23 07:16:09.934399
+92	9	Requested	Beginner	10	Daily	Seeded assignment	2025-11-19 07:16:09.934399
+919	7	Requested	Intermediate	13	Monthly	Seeded request	2025-11-07 07:16:09.934399
+529	18	Requested	Beginner	14	Weekly	Seeded request	2025-11-21 07:16:09.934399
+831	5	Requested	Intermediate	4	Occasionally	Seeded request	2025-11-05 07:16:09.934399
+415	1	Requested	Advanced	9	Monthly	Seeded assignment	2025-11-20 07:16:09.934399
+618	22	Requested	Intermediate	9	Daily	Seeded request	2025-11-17 07:16:09.934399
+69	18	Requested	Expert	2	Daily	Seeded request	2025-11-13 07:16:09.934399
+709	13	Requested	Beginner	13	Weekly	Seeded assignment	2025-11-20 07:16:09.934399
+55	8	Requested	Intermediate	12	Occasionally	Seeded assignment	2025-11-20 07:16:09.934399
+741	7	Requested	Intermediate	7	Occasionally	Seeded assignment	2025-11-19 07:16:09.934399
+373	21	Requested	Expert	3	Monthly	Seeded assignment	2025-11-18 07:16:09.934399
+430	18	Requested	Advanced	13	Daily	Seeded request	2025-11-04 07:16:09.934399
+294	3	Requested	Beginner	15	Monthly	Seeded request	2025-11-09 07:16:09.934399
+487	5	Requested	Expert	10	Monthly	Seeded assignment	2025-11-10 07:16:09.934399
+322	9	Requested	Advanced	6	Monthly	Seeded request	2025-11-30 07:16:09.934399
+213	21	Requested	Expert	10	Occasionally	Seeded assignment	2025-11-04 07:16:09.934399
+299	19	Requested	Expert	14	Weekly	Seeded assignment	2025-11-30 07:16:09.934399
+609	6	Requested	Beginner	15	Daily	Seeded request	2025-11-28 07:16:09.934399
+663	9	Requested	Beginner	8	Monthly	Seeded assignment	2025-11-16 07:16:09.934399
+642	10	Requested	Beginner	2	Daily	Seeded assignment	2025-11-24 07:16:09.934399
+814	11	Requested	Intermediate	4	Weekly	Seeded assignment	2025-11-19 07:16:09.934399
+602	5	Requested	Beginner	10	Occasionally	Seeded request	2025-11-29 07:16:09.934399
+964	4	Requested	Intermediate	13	Monthly	Seeded assignment	2025-11-17 07:16:09.934399
+70	18	Requested	Beginner	6	Monthly	Seeded request	2025-11-16 07:16:09.934399
+225	18	Requested	Advanced	9	Daily	Seeded assignment	2025-11-27 07:16:09.934399
+770	10	Requested	Expert	2	Daily	Seeded request	2025-11-25 07:16:09.934399
+932	9	Requested	Advanced	5	Occasionally	Seeded assignment	2025-12-01 07:16:09.934399
+149	6	Requested	Beginner	6	Monthly	Seeded request	2025-12-02 07:16:09.934399
+269	16	Requested	Expert	9	Daily	Seeded assignment	2025-11-08 07:16:09.934399
+943	19	Requested	Beginner	9	Monthly	Seeded request	2025-11-26 07:16:09.934399
+333	17	Requested	Intermediate	3	Occasionally	Seeded assignment	2025-11-13 07:16:09.934399
+414	6	Requested	Intermediate	3	Monthly	Seeded request	2025-11-24 07:16:09.934399
+800	17	Requested	Advanced	1	Weekly	Seeded assignment	2025-11-03 07:16:09.934399
+667	6	Requested	Advanced	0	Occasionally	Seeded assignment	2025-11-20 07:16:09.934399
+880	17	Requested	Intermediate	5	Occasionally	Seeded assignment	2025-11-18 07:16:09.934399
+902	5	Requested	Intermediate	4	Daily	Seeded assignment	2025-11-17 07:16:09.934399
+406	22	Requested	Advanced	11	Monthly	Seeded request	2025-11-15 07:16:09.934399
+777	7	Requested	Intermediate	14	Occasionally	Seeded request	2025-11-30 07:16:09.934399
+786	6	Requested	Advanced	6	Monthly	Seeded assignment	2025-11-04 07:16:09.934399
+191	23	Requested	Advanced	4	Occasionally	Seeded assignment	2025-11-28 07:16:09.934399
+954	21	Requested	Expert	0	Occasionally	Seeded assignment	2025-11-27 07:16:09.934399
+67	16	Requested	Beginner	2	Occasionally	Seeded request	2025-11-12 07:16:09.934399
+457	16	Requested	Beginner	11	Monthly	Seeded assignment	2025-11-13 07:16:09.934399
+719	10	Requested	Beginner	8	Monthly	Seeded request	2025-11-10 07:16:09.934399
+554	23	Requested	Beginner	15	Daily	Seeded assignment	2025-11-17 07:16:09.934399
+817	23	Requested	Advanced	11	Monthly	Seeded assignment	2025-11-17 07:16:09.934399
+302	22	Requested	Beginner	13	Weekly	Seeded request	2025-11-29 07:16:09.934399
+481	9	Requested	Intermediate	2	Occasionally	Seeded request	2025-11-17 07:16:09.934399
+929	12	Requested	Intermediate	9	Weekly	Seeded request	2025-11-11 07:16:09.934399
+612	19	Requested	Intermediate	8	Daily	Seeded assignment	2025-11-21 07:16:09.934399
+925	19	Requested	Intermediate	4	Daily	Seeded request	2025-11-08 07:16:09.934399
+955	16	Requested	Beginner	14	Weekly	Seeded request	2025-11-29 07:16:09.934399
+927	7	Requested	Advanced	3	Monthly	Seeded assignment	2025-11-08 07:16:09.934399
+591	9	Requested	Intermediate	15	Daily	Seeded request	2025-11-24 07:16:09.934399
+364	18	Requested	Beginner	9	Daily	Seeded request	2025-11-14 07:16:09.934399
+636	25	Requested	Intermediate	5	Occasionally	Seeded assignment	2025-11-14 07:16:09.934399
+291	13	Requested	Advanced	9	Occasionally	Seeded request	2025-11-05 07:16:09.934399
+86	12	Requested	Intermediate	4	Daily	Seeded assignment	2025-11-15 07:16:09.934399
+486	8	Requested	Advanced	11	Occasionally	Seeded assignment	2025-11-11 07:16:09.934399
+201	19	Requested	Intermediate	8	Weekly	Seeded assignment	2025-11-11 07:16:09.934399
+557	16	Requested	Intermediate	15	Occasionally	Seeded assignment	2025-11-18 07:16:09.934399
+81	16	Requested	Intermediate	15	Monthly	Seeded assignment	2025-11-28 07:16:09.934399
+393	16	Requested	Expert	2	Occasionally	Seeded assignment	2025-12-02 07:16:09.934399
+303	25	Requested	Advanced	3	Daily	Seeded assignment	2025-11-27 07:16:09.934399
+257	18	Requested	Advanced	1	Monthly	Seeded assignment	2025-11-07 07:16:09.934399
+631	10	Requested	Intermediate	9	Occasionally	Seeded assignment	2025-11-04 07:16:09.934399
+53	12	Requested	Advanced	8	Occasionally	Seeded assignment	2025-11-27 07:16:09.934399
+317	24	Requested	Intermediate	11	Daily	Seeded assignment	2025-11-14 07:16:09.934399
+297	17	Requested	Intermediate	9	Daily	Seeded assignment	2025-12-02 07:16:09.934399
+255	7	Requested	Beginner	11	Occasionally	Seeded request	2025-11-17 07:16:09.934399
+580	1	Requested	Advanced	2	Occasionally	Seeded assignment	2025-11-08 07:16:09.934399
+973	9	Requested	Beginner	9	Daily	Seeded assignment	2025-11-11 07:16:09.934399
+90	4	Requested	Beginner	11	Occasionally	Seeded request	2025-11-08 07:16:09.934399
+27	8	Requested	Beginner	12	Weekly	Seeded request	2025-12-02 07:16:09.934399
+841	10	Requested	Intermediate	7	Daily	Seeded assignment	2025-12-02 07:16:09.934399
+450	22	Requested	Beginner	5	Monthly	Seeded assignment	2025-11-17 07:16:09.934399
+463	4	Requested	Beginner	10	Occasionally	Seeded request	2025-11-27 07:16:09.934399
+123	17	Requested	Intermediate	8	Daily	Seeded assignment	2025-11-04 07:16:09.934399
+189	25	Requested	Beginner	13	Daily	Seeded assignment	2025-11-22 07:16:09.934399
+618	20	Requested	Intermediate	7	Occasionally	Seeded assignment	2025-12-01 07:16:09.934399
+593	24	Requested	Beginner	3	Occasionally	Seeded assignment	2025-11-06 07:16:09.934399
+354	16	Requested	Expert	0	Monthly	Seeded assignment	2025-11-24 07:16:09.934399
+527	5	Requested	Intermediate	2	Weekly	Seeded request	2025-11-04 07:16:09.934399
+783	5	Requested	Intermediate	15	Weekly	Seeded assignment	2025-11-18 07:16:09.934399
+228	7	Requested	Beginner	5	Weekly	Seeded request	2025-12-02 07:16:09.934399
+54	12	Requested	Beginner	6	Daily	Seeded request	2025-11-18 07:16:09.934399
+529	3	Requested	Beginner	7	Weekly	Seeded request	2025-11-27 07:16:09.934399
+191	7	Requested	Intermediate	7	Daily	Seeded request	2025-11-23 07:16:09.934399
+806	17	Requested	Beginner	13	Monthly	Seeded request	2025-11-04 07:16:09.934399
+338	22	Requested	Expert	11	Daily	Seeded assignment	2025-11-22 07:16:09.934399
+546	21	Requested	Intermediate	13	Daily	Seeded request	2025-11-28 07:16:09.934399
+637	17	Requested	Intermediate	6	Occasionally	Seeded assignment	2025-11-11 07:16:09.934399
+710	9	Requested	Advanced	4	Occasionally	Seeded assignment	2025-11-28 07:16:09.934399
+99	1	Requested	Expert	8	Weekly	Seeded request	2025-11-12 07:16:09.934399
+707	16	Requested	Expert	2	Monthly	Seeded assignment	2025-11-19 07:16:09.934399
+768	19	Requested	Advanced	14	Daily	Seeded assignment	2025-11-19 07:16:09.934399
+626	6	Requested	Beginner	8	Occasionally	Seeded assignment	2025-11-18 07:16:09.934399
+805	8	Requested	Expert	1	Weekly	Seeded assignment	2025-11-11 07:16:09.934399
+833	8	Requested	Expert	1	Occasionally	Seeded assignment	2025-11-20 07:16:09.934399
+572	19	Requested	Advanced	12	Occasionally	Seeded assignment	2025-11-30 07:16:09.934399
+811	9	Requested	Beginner	4	Monthly	Seeded request	2025-11-07 07:16:09.934399
+262	22	Requested	Expert	4	Daily	Seeded request	2025-11-24 07:16:09.934399
+24	17	Requested	Expert	8	Weekly	Seeded request	2025-11-03 07:16:09.934399
+946	21	Requested	Beginner	4	Occasionally	Seeded assignment	2025-11-07 07:16:09.934399
+924	20	Requested	Intermediate	14	Daily	Seeded assignment	2025-11-15 07:16:09.934399
+985	4	Requested	Expert	6	Monthly	Seeded assignment	2025-11-12 07:16:09.934399
+85	17	Requested	Beginner	13	Monthly	Seeded assignment	2025-11-18 07:16:09.934399
+925	18	Requested	Expert	10	Monthly	Seeded assignment	2025-11-27 07:16:09.934399
+309	3	Requested	Beginner	2	Weekly	Seeded assignment	2025-11-28 07:16:09.934399
+36	5	Requested	Advanced	8	Monthly	Seeded request	2025-11-20 07:16:09.934399
+762	22	Requested	Advanced	11	Weekly	Seeded assignment	2025-11-27 07:16:09.934399
+471	8	Requested	Advanced	4	Weekly	Seeded request	2025-11-13 07:16:09.934399
+560	9	Requested	Beginner	6	Daily	Seeded assignment	2025-11-08 07:16:09.934399
+479	8	Requested	Intermediate	5	Monthly	Seeded assignment	2025-11-26 07:16:09.934399
+268	23	Requested	Beginner	8	Weekly	Seeded assignment	2025-11-29 07:16:09.934399
+896	25	Requested	Expert	11	Daily	Seeded assignment	2025-11-24 07:16:09.934399
+609	25	Requested	Intermediate	1	Occasionally	Seeded assignment	2025-11-13 07:16:09.934399
+634	20	Requested	Beginner	13	Daily	Seeded request	2025-11-06 07:16:09.934399
+133	10	Requested	Advanced	1	Weekly	Seeded request	2025-11-26 07:16:09.934399
+943	18	Requested	Advanced	9	Monthly	Seeded assignment	2025-11-17 07:16:09.934399
+732	4	Requested	Intermediate	6	Weekly	Seeded assignment	2025-11-08 07:16:09.934399
+858	5	Requested	Intermediate	1	Weekly	Seeded assignment	2025-11-05 07:16:09.934399
+902	20	Requested	Beginner	0	Monthly	Seeded assignment	2025-11-15 07:16:09.934399
+456	17	Requested	Intermediate	7	Daily	Seeded request	2025-11-07 07:16:09.934399
+171	5	Requested	Expert	5	Monthly	Seeded assignment	2025-11-11 07:16:09.934399
+260	12	Requested	Advanced	14	Monthly	Seeded request	2025-11-29 07:16:09.934399
+685	22	Requested	Intermediate	7	Weekly	Seeded assignment	2025-11-06 07:16:09.934399
+344	20	Requested	Advanced	12	Occasionally	Seeded request	2025-11-10 07:16:09.934399
+175	1	Requested	Intermediate	15	Occasionally	Seeded assignment	2025-11-25 07:16:09.934399
+181	21	Requested	Advanced	11	Occasionally	Seeded assignment	2025-11-27 07:16:09.934399
+155	22	Requested	Expert	0	Monthly	Seeded assignment	2025-11-08 07:16:09.934399
+342	19	Requested	Advanced	1	Monthly	Seeded request	2025-11-21 07:16:09.934399
+659	18	Requested	Expert	7	Occasionally	Seeded assignment	2025-11-10 07:16:09.934399
+83	24	Requested	Beginner	15	Daily	Seeded request	2025-11-15 07:16:09.934399
+417	1	Requested	Beginner	15	Monthly	Seeded request	2025-11-20 07:16:09.934399
+517	19	Requested	Advanced	3	Daily	Seeded assignment	2025-11-10 07:16:09.934399
+527	20	Requested	Beginner	6	Occasionally	Seeded request	2025-12-02 07:16:09.934399
+861	6	Requested	Advanced	10	Occasionally	Seeded assignment	2025-11-20 07:16:09.934399
+635	10	Requested	Beginner	9	Weekly	Seeded assignment	2025-11-20 07:16:09.934399
+514	9	Requested	Expert	11	Occasionally	Seeded request	2025-11-09 07:16:09.934399
+987	25	Requested	Advanced	12	Daily	Seeded request	2025-11-08 07:16:09.934399
+187	1	Requested	Intermediate	12	Occasionally	Seeded assignment	2025-11-27 07:16:09.934399
+865	25	Requested	Expert	2	Weekly	Seeded request	2025-11-29 07:16:09.934399
+639	1	Requested	Beginner	9	Occasionally	Seeded assignment	2025-11-13 07:16:09.934399
+661	10	Requested	Advanced	9	Daily	Seeded assignment	2025-11-15 07:16:09.934399
+263	20	Requested	Advanced	13	Weekly	Seeded assignment	2025-11-20 07:16:09.934399
+1	13	Requested	Beginner	3	Weekly	Seeded assignment	2025-11-10 07:16:09.934399
+447	4	Requested	Intermediate	0	Occasionally	Seeded assignment	2025-11-19 07:16:09.934399
+676	16	Requested	Advanced	12	Monthly	Seeded request	2025-12-02 07:16:09.934399
+821	3	Requested	Advanced	5	Monthly	Seeded assignment	2025-11-08 07:16:09.934399
+924	12	Requested	Advanced	5	Weekly	Seeded request	2025-11-24 07:16:09.934399
+22	13	Requested	Beginner	8	Daily	Seeded assignment	2025-11-05 07:16:09.934399
+315	8	Requested	Beginner	10	Occasionally	Seeded assignment	2025-11-10 07:16:09.934399
+651	24	Requested	Expert	3	Weekly	Seeded request	2025-11-09 07:16:09.934399
+656	10	Requested	Intermediate	11	Occasionally	Seeded request	2025-12-01 07:16:09.934399
+254	10	Requested	Advanced	14	Weekly	Seeded request	2025-11-21 07:16:09.934399
+716	11	Requested	Expert	5	Occasionally	Seeded assignment	2025-11-24 07:16:09.934399
+892	25	Requested	Beginner	14	Monthly	Seeded assignment	2025-12-01 07:16:09.934399
+920	18	Requested	Advanced	4	Weekly	Seeded assignment	2025-11-17 07:16:09.934399
+372	13	Requested	Advanced	11	Weekly	Seeded request	2025-11-09 07:16:09.934399
+412	24	Requested	Beginner	1	Daily	Seeded assignment	2025-11-29 07:16:09.934399
+739	25	Requested	Expert	13	Monthly	Seeded request	2025-11-12 07:16:09.934399
+876	9	Requested	Beginner	11	Occasionally	Seeded request	2025-11-20 07:16:09.934399
+201	18	Requested	Expert	9	Monthly	Seeded request	2025-11-05 07:16:09.934399
+164	3	Requested	Intermediate	10	Monthly	Seeded assignment	2025-11-21 07:16:09.934399
+561	6	Requested	Advanced	13	Daily	Seeded assignment	2025-11-18 07:16:09.934399
+415	6	Requested	Advanced	10	Monthly	Seeded assignment	2025-11-27 07:16:09.934399
+850	20	Requested	Beginner	5	Daily	Seeded request	2025-11-08 07:16:09.934399
+565	9	Requested	Intermediate	10	Weekly	Seeded assignment	2025-11-22 07:16:09.934399
+630	20	Requested	Beginner	7	Daily	Seeded assignment	2025-11-17 07:16:09.934399
+465	13	Requested	Intermediate	7	Weekly	Seeded request	2025-11-19 07:16:09.934399
+158	3	Requested	Beginner	5	Daily	Seeded request	2025-11-07 07:16:09.934399
+733	18	Requested	Advanced	10	Occasionally	Seeded assignment	2025-11-06 07:16:09.934399
+18	19	Requested	Expert	12	Weekly	Seeded assignment	2025-11-11 07:16:09.934399
+498	4	Requested	Expert	9	Occasionally	Seeded assignment	2025-11-13 07:16:09.934399
+33	5	Requested	Expert	1	Weekly	Seeded request	2025-12-02 07:16:09.934399
+139	19	Requested	Intermediate	11	Monthly	Seeded request	2025-11-05 07:16:09.934399
+205	10	Requested	Advanced	4	Weekly	Seeded request	2025-11-19 07:16:09.934399
+589	22	Requested	Advanced	6	Occasionally	Seeded request	2025-11-12 07:16:09.934399
+780	6	Requested	Expert	15	Occasionally	Seeded assignment	2025-11-25 07:16:09.934399
+825	18	Requested	Beginner	12	Monthly	Seeded assignment	2025-11-29 07:16:09.934399
+185	17	Requested	Beginner	10	Daily	Seeded request	2025-11-04 07:16:09.934399
+750	10	Requested	Intermediate	2	Weekly	Seeded request	2025-11-26 07:16:09.934399
+97	17	Requested	Beginner	14	Monthly	Seeded request	2025-11-04 07:16:09.934399
+11	13	Requested	Expert	10	Daily	Seeded assignment	2025-11-27 07:16:09.934399
+922	21	Requested	Expert	8	Daily	Seeded assignment	2025-11-12 07:16:09.934399
+72	19	Requested	Advanced	3	Weekly	Seeded assignment	2025-11-11 07:16:09.934399
+336	21	Requested	Beginner	12	Daily	Seeded assignment	2025-11-16 07:16:09.934399
+386	21	Requested	Beginner	13	Daily	Seeded request	2025-11-04 07:16:09.934399
+890	6	Requested	Expert	8	Weekly	Seeded assignment	2025-11-26 07:16:09.934399
+168	18	Requested	Advanced	7	Weekly	Seeded assignment	2025-11-03 07:16:09.934399
+921	20	Requested	Intermediate	9	Weekly	Seeded request	2025-11-15 07:16:09.934399
+508	13	Requested	Expert	8	Monthly	Seeded request	2025-11-14 07:16:09.934399
+690	22	Requested	Intermediate	3	Weekly	Seeded assignment	2025-11-20 07:16:09.934399
+175	25	Requested	Beginner	4	Monthly	Seeded request	2025-11-08 07:16:09.934399
+587	17	Requested	Beginner	11	Monthly	Seeded assignment	2025-11-16 07:16:09.934399
+100	4	Requested	Beginner	8	Monthly	Seeded assignment	2025-11-15 07:16:09.934399
+542	17	Requested	Beginner	14	Weekly	Seeded request	2025-11-13 07:16:09.934399
+685	17	Requested	Advanced	12	Weekly	Seeded assignment	2025-11-03 07:16:09.934399
+58	8	Requested	Expert	0	Monthly	Seeded assignment	2025-11-30 07:16:09.934399
+110	17	Requested	Beginner	15	Weekly	Seeded assignment	2025-11-12 07:16:09.934399
+872	12	Requested	Intermediate	15	Monthly	Seeded request	2025-11-14 07:16:09.934399
+605	25	Requested	Beginner	3	Monthly	Seeded assignment	2025-11-06 07:16:09.934399
+356	10	Requested	Intermediate	12	Occasionally	Seeded assignment	2025-11-12 07:16:09.934399
+234	13	Requested	Advanced	2	Occasionally	Seeded assignment	2025-11-03 07:16:09.934399
+256	22	Requested	Intermediate	9	Monthly	Seeded request	2025-11-14 07:16:09.934399
+931	3	Requested	Advanced	14	Occasionally	Seeded assignment	2025-11-12 07:16:09.934399
+836	18	Requested	Advanced	1	Occasionally	Seeded assignment	2025-11-04 07:16:09.934399
+358	1	Requested	Intermediate	11	Occasionally	Seeded request	2025-11-23 07:16:09.934399
+707	10	Requested	Beginner	5	Occasionally	Seeded request	2025-11-21 07:16:09.934399
+199	8	Requested	Beginner	3	Monthly	Seeded request	2025-11-05 07:16:09.934399
+324	13	Requested	Beginner	10	Occasionally	Seeded request	2025-12-01 07:16:09.934399
+988	25	Requested	Intermediate	13	Daily	Seeded assignment	2025-11-15 07:16:09.934399
+493	3	Requested	Beginner	11	Daily	Seeded assignment	2025-11-10 07:16:09.934399
+184	22	Requested	Advanced	8	Occasionally	Seeded request	2025-11-13 07:16:09.934399
+146	5	Requested	Advanced	10	Weekly	Seeded assignment	2025-11-11 07:16:09.934399
+450	21	Requested	Beginner	3	Monthly	Seeded assignment	2025-11-18 07:16:09.934399
+855	10	Requested	Beginner	8	Weekly	Seeded assignment	2025-11-17 07:16:09.934399
+192	21	Requested	Expert	7	Weekly	Seeded assignment	2025-11-20 07:16:09.934399
+28	17	Requested	Intermediate	15	Weekly	Seeded request	2025-11-20 07:16:09.934399
+327	8	Requested	Advanced	6	Daily	Seeded assignment	2025-11-26 07:16:09.934399
+758	22	Requested	Advanced	15	Occasionally	Seeded assignment	2025-11-04 07:16:09.934399
+552	21	Requested	Expert	7	Daily	Seeded assignment	2025-11-22 07:16:09.934399
+606	12	Requested	Expert	6	Daily	Seeded assignment	2025-11-03 07:16:09.934399
+847	11	Requested	Advanced	1	Weekly	Seeded assignment	2025-11-15 07:16:09.934399
+245	8	Requested	Intermediate	4	Occasionally	Seeded request	2025-11-21 07:16:09.934399
+747	7	Requested	Intermediate	11	Daily	Seeded request	2025-11-07 07:16:09.934399
+966	3	Requested	Intermediate	3	Weekly	Seeded request	2025-11-07 07:16:09.934399
+398	3	Requested	Intermediate	12	Occasionally	Seeded assignment	2025-11-06 07:16:09.934399
+296	11	Requested	Intermediate	15	Daily	Seeded request	2025-11-04 07:16:09.934399
+569	3	Requested	Beginner	7	Occasionally	Seeded assignment	2025-11-23 07:16:09.934399
+962	6	Requested	Expert	8	Daily	Seeded request	2025-11-18 07:16:09.934399
+806	22	Requested	Intermediate	1	Monthly	Seeded request	2025-11-29 07:16:09.934399
+101	5	Requested	Expert	2	Weekly	Seeded assignment	2025-11-16 07:16:09.934399
+841	16	Requested	Intermediate	13	Weekly	Seeded assignment	2025-11-13 07:16:09.934399
+236	23	Requested	Intermediate	1	Weekly	Seeded assignment	2025-11-07 07:16:09.934399
+125	1	Requested	Intermediate	15	Weekly	Seeded assignment	2025-11-21 07:16:09.934399
+163	12	Requested	Expert	7	Monthly	Seeded assignment	2025-11-03 07:16:09.934399
+153	1	Requested	Advanced	14	Monthly	Seeded request	2025-11-15 07:16:09.934399
+341	24	Requested	Intermediate	9	Daily	Seeded request	2025-11-15 07:16:09.934399
+895	7	Requested	Expert	6	Weekly	Seeded assignment	2025-11-28 07:16:09.934399
+412	16	Requested	Beginner	4	Daily	Seeded assignment	2025-11-19 07:16:09.934399
+190	23	Requested	Advanced	3	Occasionally	Seeded assignment	2025-11-20 07:16:09.934399
+20	13	Requested	Beginner	14	Occasionally	Seeded assignment	2025-11-16 07:16:09.934399
+397	13	Requested	Intermediate	15	Weekly	Seeded request	2025-11-18 07:16:09.934399
+641	24	Requested	Expert	4	Monthly	Seeded assignment	2025-11-13 07:16:09.934399
+21	9	Requested	Beginner	7	Occasionally	Seeded request	2025-11-11 07:16:09.934399
+627	4	Requested	Intermediate	1	Daily	Seeded assignment	2025-11-24 07:16:09.934399
+70	7	Requested	Expert	9	Weekly	Seeded request	2025-11-03 07:16:09.934399
+277	4	Requested	Expert	15	Weekly	Seeded assignment	2025-11-05 07:16:09.934399
+385	10	Requested	Advanced	12	Occasionally	Seeded assignment	2025-11-18 07:16:09.934399
+34	18	Requested	Beginner	10	Occasionally	Seeded assignment	2025-11-22 07:16:09.934399
+752	12	Requested	Intermediate	6	Occasionally	Seeded request	2025-11-29 07:16:09.934399
+285	13	Requested	Expert	0	Occasionally	Seeded request	2025-11-19 07:16:09.934399
+633	20	Requested	Intermediate	7	Monthly	Seeded assignment	2025-11-24 07:16:09.934399
+511	25	Requested	Beginner	15	Occasionally	Seeded request	2025-11-22 07:16:09.934399
+919	4	Requested	Beginner	2	Occasionally	Seeded request	2025-11-16 07:16:09.934399
+607	17	Requested	Beginner	2	Daily	Seeded assignment	2025-11-19 07:16:09.934399
+621	10	Requested	Intermediate	13	Monthly	Seeded request	2025-11-27 07:16:09.934399
+550	13	Requested	Intermediate	13	Daily	Seeded request	2025-11-18 07:16:09.934399
+499	3	Requested	Beginner	12	Weekly	Seeded request	2025-11-24 07:16:09.934399
+734	10	Requested	Advanced	13	Occasionally	Seeded request	2025-11-22 07:16:09.934399
+46	4	Requested	Expert	14	Weekly	Seeded assignment	2025-11-14 07:16:09.934399
+73	4	Requested	Advanced	14	Monthly	Seeded assignment	2025-11-06 07:16:09.934399
+977	9	Requested	Beginner	14	Weekly	Seeded request	2025-11-05 07:16:09.934399
+708	24	Requested	Intermediate	12	Daily	Seeded request	2025-11-13 07:16:09.934399
+754	7	Requested	Expert	10	Weekly	Seeded assignment	2025-11-28 07:16:09.934399
+483	21	Requested	Beginner	4	Weekly	Seeded request	2025-11-24 07:16:09.934399
+672	12	Requested	Expert	4	Monthly	Seeded request	2025-11-09 07:16:09.934399
+782	22	Requested	Beginner	2	Occasionally	Seeded assignment	2025-11-05 07:16:09.934399
+572	23	Requested	Beginner	4	Monthly	Seeded assignment	2025-11-07 07:16:09.934399
+650	7	Requested	Beginner	9	Weekly	Seeded assignment	2025-11-06 07:16:09.934399
+583	7	Requested	Beginner	2	Monthly	Seeded assignment	2025-12-01 07:16:09.934399
+233	4	Requested	Intermediate	7	Occasionally	Seeded request	2025-11-08 07:16:09.934399
+140	9	Requested	Advanced	12	Occasionally	Seeded assignment	2025-11-27 07:16:09.934399
+204	24	Requested	Beginner	14	Monthly	Seeded request	2025-11-30 07:16:09.934399
+980	12	Requested	Beginner	6	Monthly	Seeded assignment	2025-11-10 07:16:09.934399
+93	5	Requested	Expert	13	Weekly	Seeded assignment	2025-11-28 07:16:09.934399
+89	18	Requested	Beginner	14	Weekly	Seeded assignment	2025-11-23 07:16:09.934399
+695	22	Requested	Intermediate	7	Daily	Seeded assignment	2025-11-17 07:16:09.934399
+351	17	Requested	Expert	6	Occasionally	Seeded assignment	2025-11-12 07:16:09.934399
+785	5	Requested	Intermediate	7	Weekly	Seeded assignment	2025-11-12 07:16:09.934399
+686	20	Requested	Intermediate	2	Occasionally	Seeded request	2025-11-19 07:16:09.934399
+41	25	Requested	Advanced	6	Daily	Seeded request	2025-11-17 07:16:09.934399
+751	24	Requested	Beginner	6	Monthly	Seeded request	2025-11-26 07:16:09.934399
+840	25	Requested	Expert	0	Weekly	Seeded assignment	2025-11-05 07:16:09.934399
+831	21	Requested	Beginner	0	Monthly	Seeded assignment	2025-11-15 07:16:09.934399
+978	23	Canceled	Advanced	9	Daily	Seeded assignment	2025-11-11 07:16:09.934399
+320	3	Requested	Intermediate	5	Weekly	Seeded assignment	2025-11-04 07:16:09.934399
+301	1	Requested	Advanced	8	Daily	Seeded assignment	2025-11-26 07:16:09.934399
+56	9	Requested	Advanced	8	Weekly	Seeded request	2025-11-24 07:16:09.934399
+472	6	Requested	Expert	9	Monthly	Seeded request	2025-11-25 07:16:09.934399
+836	19	Requested	Advanced	12	Occasionally	Seeded request	2025-11-25 07:16:09.934399
+176	6	Requested	Advanced	15	Weekly	Seeded assignment	2025-11-09 07:16:09.934399
+404	22	Requested	Advanced	7	Daily	Seeded assignment	2025-11-26 07:16:09.934399
+930	24	Requested	Beginner	6	Weekly	Seeded request	2025-12-02 07:16:09.934399
+481	25	Requested	Advanced	13	Occasionally	Seeded request	2025-11-22 07:16:09.934399
+895	23	Requested	Advanced	3	Daily	Seeded request	2025-12-01 07:16:09.934399
+342	7	Requested	Advanced	12	Daily	Seeded assignment	2025-11-12 07:16:09.934399
+487	21	Requested	Expert	8	Daily	Seeded request	2025-11-14 07:16:09.934399
+383	8	Requested	Intermediate	4	Monthly	Seeded request	2025-11-18 07:16:09.934399
+839	12	Requested	Advanced	12	Monthly	Seeded request	2025-11-08 07:16:09.934399
+332	3	Requested	Beginner	8	Occasionally	Seeded request	2025-11-28 07:16:09.934399
+242	7	Requested	Expert	11	Monthly	Seeded request	2025-11-22 07:16:09.934399
+977	1	Requested	Expert	0	Occasionally	Seeded request	2025-11-22 07:16:09.934399
+145	20	Requested	Advanced	14	Monthly	Seeded request	2025-11-27 07:16:09.934399
+292	13	Requested	Intermediate	5	Daily	Seeded assignment	2025-11-18 07:16:09.934399
+453	8	Requested	Intermediate	8	Daily	Seeded request	2025-11-23 07:16:09.934399
+914	11	Requested	Expert	11	Daily	Seeded assignment	2025-11-28 07:16:09.934399
+195	8	Requested	Intermediate	1	Occasionally	Seeded assignment	2025-11-30 07:16:09.934399
+35	21	Requested	Advanced	14	Occasionally	Seeded assignment	2025-11-17 07:16:09.934399
+695	12	Requested	Intermediate	1	Monthly	Seeded request	2025-11-23 07:16:09.934399
+721	23	Requested	Advanced	8	Weekly	Seeded assignment	2025-11-26 07:16:09.934399
+366	5	Requested	Expert	2	Monthly	Seeded assignment	2025-11-27 07:16:09.934399
+575	11	Requested	Beginner	11	Daily	Seeded request	2025-11-17 07:16:09.934399
+17	1	Requested	Advanced	6	Occasionally	Seeded assignment	2025-11-30 07:16:09.934399
+944	21	Requested	Intermediate	1	Monthly	Seeded assignment	2025-11-27 07:16:09.934399
+321	3	Requested	Beginner	1	Occasionally	Seeded assignment	2025-11-03 07:16:09.934399
+893	20	Requested	Expert	10	Weekly	Seeded request	2025-11-06 07:16:09.934399
+903	8	Requested	Intermediate	0	Weekly	Seeded assignment	2025-11-12 07:16:09.934399
+154	21	Requested	Expert	11	Occasionally	Seeded request	2025-11-20 07:16:09.934399
+478	9	Requested	Expert	10	Daily	Seeded assignment	2025-11-28 07:16:09.934399
+816	1	Requested	Advanced	8	Weekly	Seeded assignment	2025-11-20 07:16:09.934399
+317	13	Requested	Intermediate	15	Daily	Seeded request	2025-11-06 07:16:09.934399
+78	19	Requested	Intermediate	2	Weekly	Seeded assignment	2025-11-16 07:16:09.934399
+297	20	Requested	Advanced	10	Daily	Seeded assignment	2025-11-10 07:16:09.934399
+710	6	Requested	Intermediate	6	Daily	Seeded assignment	2025-11-07 07:16:09.934399
+290	17	Requested	Advanced	5	Weekly	Seeded request	2025-11-17 07:16:09.934399
+824	21	Requested	Expert	3	Daily	Seeded assignment	2025-11-24 07:16:09.934399
+215	13	Requested	Advanced	4	Occasionally	Seeded assignment	2025-12-01 07:16:09.934399
+499	18	Requested	Expert	11	Occasionally	Seeded assignment	2025-11-27 07:16:09.934399
+383	24	Requested	Beginner	1	Monthly	Seeded request	2025-11-07 07:16:09.934399
+633	22	Requested	Intermediate	9	Weekly	Seeded request	2025-11-22 07:16:09.934399
+333	12	Requested	Advanced	12	Monthly	Seeded assignment	2025-11-23 07:16:09.934399
+885	20	Requested	Beginner	5	Daily	Seeded assignment	2025-11-09 07:16:09.934399
+87	21	Requested	Intermediate	2	Monthly	Seeded request	2025-11-27 07:16:09.934399
+123	20	Requested	Expert	13	Daily	Seeded request	2025-11-27 07:16:09.934399
+356	8	Requested	Advanced	1	Weekly	Seeded request	2025-11-22 07:16:09.934399
+178	22	Requested	Intermediate	4	Daily	Seeded assignment	2025-11-21 07:16:09.934399
+442	16	Requested	Advanced	9	Daily	Seeded request	2025-11-19 07:16:09.934399
+547	12	Requested	Expert	4	Weekly	Seeded request	2025-11-22 07:16:09.934399
+489	1	Requested	Intermediate	10	Monthly	Seeded request	2025-11-07 07:16:09.934399
+751	8	Requested	Expert	11	Occasionally	Seeded assignment	2025-11-13 07:16:09.934399
+301	11	Requested	Intermediate	5	Daily	Seeded request	2025-11-26 07:16:09.934399
+870	7	Requested	Beginner	13	Monthly	Seeded assignment	2025-11-19 07:16:09.934399
+43	21	Requested	Expert	3	Occasionally	Seeded request	2025-11-03 07:16:09.934399
+226	18	Requested	Advanced	6	Weekly	Seeded assignment	2025-11-24 07:16:09.934399
+244	19	Requested	Intermediate	12	Occasionally	Seeded request	2025-11-21 07:16:09.934399
+31	16	Requested	Expert	2	Monthly	Seeded assignment	2025-11-06 07:16:09.934399
+640	4	Requested	Advanced	11	Monthly	Seeded request	2025-11-24 07:16:09.934399
+104	22	Requested	Intermediate	7	Monthly	Seeded assignment	2025-11-12 07:16:09.934399
+96	19	Requested	Beginner	12	Monthly	Seeded request	2025-11-16 07:16:09.934399
+12	16	Requested	Intermediate	4	Weekly	Seeded assignment	2025-11-11 07:16:09.934399
+39	3	Requested	Expert	6	Weekly	Seeded request	2025-11-07 07:16:09.934399
+7	21	Requested	Advanced	4	Weekly	Seeded assignment	2025-11-22 07:16:09.934399
+128	13	Requested	Expert	1	Weekly	Seeded assignment	2025-11-25 07:16:09.934399
+578	20	Requested	Expert	2	Occasionally	Seeded assignment	2025-11-17 07:16:09.934399
+945	25	Requested	Expert	0	Occasionally	Seeded assignment	2025-11-24 07:16:09.934399
+810	17	Requested	Intermediate	15	Daily	Seeded request	2025-11-03 07:16:09.934399
+171	17	Requested	Beginner	6	Weekly	Seeded assignment	2025-11-25 07:16:09.934399
+404	20	Requested	Advanced	4	Weekly	Seeded request	2025-11-18 07:16:09.934399
+975	25	Requested	Intermediate	1	Daily	Seeded assignment	2025-11-06 07:16:09.934399
+223	21	Requested	Advanced	13	Daily	Seeded assignment	2025-12-01 07:16:09.934399
+949	4	Requested	Advanced	11	Occasionally	Seeded assignment	2025-11-20 07:16:09.934399
+636	11	Requested	Intermediate	12	Weekly	Seeded assignment	2025-11-16 07:16:09.934399
+668	25	Requested	Expert	12	Daily	Seeded assignment	2025-11-13 07:16:09.934399
+868	18	Requested	Expert	0	Monthly	Seeded assignment	2025-11-12 07:16:09.934399
+947	7	Requested	Advanced	0	Daily	Seeded request	2025-11-17 07:16:09.934399
+965	18	Requested	Beginner	9	Monthly	Seeded assignment	2025-11-21 07:16:09.934399
+118	21	Requested	Intermediate	9	Occasionally	Seeded assignment	2025-11-20 07:16:09.934399
+699	6	Requested	Expert	9	Monthly	Seeded request	2025-11-29 07:16:09.934399
+371	10	Requested	Advanced	2	Monthly	Seeded request	2025-11-15 07:16:09.934399
+640	3	Requested	Beginner	8	Occasionally	Seeded assignment	2025-11-13 07:16:09.934399
+184	5	Requested	Intermediate	15	Monthly	Seeded request	2025-11-11 07:16:09.934399
+796	4	Requested	Expert	10	Occasionally	Seeded request	2025-12-01 07:16:09.934399
+53	17	Requested	Advanced	13	Daily	Seeded assignment	2025-11-10 07:16:09.934399
+377	5	Requested	Advanced	0	Monthly	Seeded request	2025-11-03 07:16:09.934399
+326	13	Requested	Intermediate	3	Monthly	Seeded request	2025-11-27 07:16:09.934399
+175	6	Requested	Expert	10	Monthly	Seeded request	2025-11-14 07:16:09.934399
+10	22	Requested	Expert	3	Monthly	Seeded assignment	2025-11-29 07:16:09.934399
+686	22	Requested	Expert	15	Weekly	Seeded assignment	2025-11-16 07:16:09.934399
+966	19	Requested	Advanced	6	Daily	Seeded request	2025-11-17 07:16:09.934399
+287	20	Requested	Expert	9	Occasionally	Seeded assignment	2025-11-09 07:16:09.934399
+172	13	Requested	Advanced	2	Occasionally	Seeded assignment	2025-11-23 07:16:09.934399
+206	25	Requested	Advanced	15	Monthly	Seeded assignment	2025-11-29 07:16:09.934399
+610	20	Requested	Intermediate	10	Weekly	Seeded assignment	2025-12-02 07:16:09.934399
+893	12	Requested	Expert	7	Occasionally	Seeded assignment	2025-11-16 07:16:09.934399
+654	19	Requested	Advanced	1	Monthly	Seeded request	2025-11-06 07:16:09.934399
+817	3	Requested	Intermediate	2	Occasionally	Seeded request	2025-12-02 07:16:09.934399
+576	19	Requested	Advanced	13	Daily	Seeded request	2025-11-05 07:16:09.934399
+933	21	Requested	Expert	10	Daily	Seeded request	2025-12-02 07:16:09.934399
+674	22	Requested	Expert	8	Weekly	Seeded assignment	2025-11-22 07:16:09.934399
+853	22	Requested	Expert	7	Monthly	Seeded assignment	2025-11-06 07:16:09.934399
+843	16	Requested	Beginner	14	Weekly	Seeded request	2025-11-08 07:16:09.934399
+702	8	Requested	Expert	5	Monthly	Seeded assignment	2025-11-23 07:16:09.934399
+582	4	Requested	Intermediate	1	Monthly	Seeded assignment	2025-11-06 07:16:09.934399
+32	5	Requested	Expert	13	Daily	Seeded assignment	2025-12-02 07:16:09.934399
+279	13	Requested	Expert	10	Daily	Seeded assignment	2025-11-17 07:16:09.934399
+197	8	Requested	Advanced	14	Weekly	Seeded request	2025-11-25 07:16:09.934399
+813	12	Requested	Advanced	8	Daily	Seeded assignment	2025-11-05 07:16:09.934399
+779	3	Requested	Beginner	3	Occasionally	Seeded request	2025-11-05 07:16:09.934399
+370	23	Requested	Advanced	6	Occasionally	Seeded assignment	2025-11-12 07:16:09.934399
+687	13	Requested	Expert	0	Occasionally	Seeded assignment	2025-11-24 07:16:09.934399
+13	19	Requested	Beginner	1	Daily	Seeded request	2025-11-30 07:16:09.934399
+564	6	Requested	Beginner	9	Occasionally	Seeded request	2025-11-29 07:16:09.934399
+693	23	Requested	Beginner	11	Weekly	Seeded request	2025-11-21 07:16:09.934399
+946	5	Requested	Advanced	6	Weekly	Seeded request	2025-11-28 07:16:09.934399
+260	17	Requested	Advanced	14	Occasionally	Seeded request	2025-11-10 07:16:09.934399
+534	8	Requested	Expert	11	Weekly	Seeded assignment	2025-11-24 07:16:09.934399
+497	16	Requested	Intermediate	7	Occasionally	Seeded assignment	2025-11-05 07:16:09.934399
+569	19	Requested	Beginner	8	Weekly	Seeded request	2025-11-24 07:16:09.934399
+688	8	Requested	Intermediate	10	Weekly	Seeded assignment	2025-11-04 07:16:09.934399
+120	4	Requested	Expert	3	Monthly	Seeded assignment	2025-11-09 07:16:09.934399
+730	19	Requested	Beginner	15	Monthly	Seeded assignment	2025-11-08 07:16:09.934399
+307	9	Requested	Beginner	12	Occasionally	Seeded assignment	2025-11-03 07:16:09.934399
+550	16	Requested	Beginner	2	Occasionally	Seeded request	2025-11-25 07:16:09.934399
+379	3	Requested	Advanced	8	Daily	Seeded request	2025-11-19 07:16:09.934399
+422	24	Requested	Beginner	15	Weekly	Seeded assignment	2025-11-29 07:16:09.934399
+692	11	Requested	Intermediate	0	Monthly	Seeded assignment	2025-11-14 07:16:09.934399
+803	11	Requested	Intermediate	2	Daily	Seeded assignment	2025-11-16 07:16:09.934399
+525	21	Requested	Beginner	3	Occasionally	Seeded request	2025-11-07 07:16:09.934399
+794	6	Requested	Advanced	0	Weekly	Seeded assignment	2025-11-09 07:16:09.934399
+499	19	Requested	Intermediate	14	Weekly	Seeded assignment	2025-12-01 07:16:09.934399
+366	20	Requested	Expert	6	Occasionally	Seeded assignment	2025-11-28 07:16:09.934399
+589	20	Requested	Advanced	1	Weekly	Seeded assignment	2025-11-26 07:16:09.934399
+802	22	Requested	Intermediate	0	Daily	Seeded request	2025-11-11 07:16:09.934399
+912	24	Requested	Expert	10	Weekly	Seeded assignment	2025-12-01 07:16:09.934399
+435	20	Requested	Beginner	10	Daily	Seeded request	2025-11-26 07:16:09.934399
+781	5	Requested	Intermediate	6	Daily	Seeded assignment	2025-11-19 07:16:09.934399
+227	21	Requested	Expert	14	Monthly	Seeded assignment	2025-11-24 07:16:09.934399
+266	11	Requested	Beginner	10	Daily	Seeded assignment	2025-11-23 07:16:09.934399
+427	12	Requested	Expert	14	Daily	Seeded assignment	2025-11-07 07:16:09.934399
+411	10	Requested	Advanced	12	Occasionally	Seeded assignment	2025-12-02 07:16:09.934399
+158	18	Requested	Expert	13	Daily	Seeded assignment	2025-11-18 07:16:09.934399
+733	3	Requested	Advanced	13	Occasionally	Seeded assignment	2025-11-13 07:16:09.934399
+682	24	Requested	Beginner	11	Occasionally	Seeded assignment	2025-11-17 07:16:09.934399
+388	25	Requested	Expert	12	Daily	Seeded assignment	2025-11-28 07:16:09.934399
+274	13	Requested	Beginner	7	Daily	Seeded request	2025-12-01 07:16:09.934399
+557	8	Requested	Intermediate	9	Weekly	Seeded assignment	2025-11-12 07:16:09.934399
+293	13	Requested	Beginner	13	Monthly	Seeded request	2025-11-17 07:16:09.934399
+973	6	Requested	Beginner	9	Monthly	Seeded request	2025-11-08 07:16:09.934399
+745	16	Requested	Advanced	13	Daily	Seeded assignment	2025-11-04 07:16:09.934399
+435	12	Requested	Advanced	7	Monthly	Seeded request	2025-11-23 07:16:09.934399
+667	1	Requested	Expert	1	Daily	Seeded assignment	2025-11-03 07:16:09.934399
+654	18	Requested	Advanced	9	Occasionally	Seeded request	2025-11-20 07:16:09.934399
+137	16	Requested	Expert	9	Daily	Seeded request	2025-11-12 07:16:09.934399
+871	7	Requested	Beginner	1	Occasionally	Seeded assignment	2025-11-22 07:16:09.934399
+637	20	Requested	Advanced	1	Daily	Seeded request	2025-11-21 07:16:09.934399
+610	5	Requested	Advanced	1	Daily	Seeded assignment	2025-11-04 07:16:09.934399
+782	5	Requested	Intermediate	3	Daily	Seeded assignment	2025-11-03 07:16:09.934399
+789	13	Requested	Advanced	11	Daily	Seeded assignment	2025-11-20 07:16:09.934399
+719	13	Requested	Beginner	15	Occasionally	Seeded assignment	2025-11-19 07:16:09.934399
+627	19	Requested	Intermediate	2	Weekly	Seeded request	2025-11-13 07:16:09.934399
+849	6	Requested	Intermediate	9	Occasionally	Seeded assignment	2025-11-09 07:16:09.934399
+275	24	Requested	Intermediate	10	Daily	Seeded request	2025-11-16 07:16:09.934399
+837	13	Requested	Expert	8	Monthly	Seeded request	2025-11-29 07:16:09.934399
+957	4	Requested	Expert	8	Monthly	Seeded request	2025-11-17 07:16:09.934399
+216	20	Requested	Beginner	5	Monthly	Seeded assignment	2025-11-23 07:16:09.934399
+693	7	Requested	Expert	4	Monthly	Seeded request	2025-11-28 07:16:09.934399
+573	10	Requested	Expert	13	Daily	Seeded request	2025-11-22 07:16:09.934399
+298	12	Requested	Expert	7	Weekly	Seeded assignment	2025-11-05 07:16:09.934399
+942	16	Requested	Intermediate	4	Weekly	Seeded assignment	2025-12-01 07:16:09.934399
+877	7	Requested	Intermediate	13	Daily	Seeded assignment	2025-11-14 07:16:09.934399
+402	24	Requested	Intermediate	9	Monthly	Seeded request	2025-11-07 07:16:09.934399
+323	24	Requested	Expert	10	Monthly	Seeded assignment	2025-11-26 07:16:09.934399
+456	20	Requested	Intermediate	7	Monthly	Seeded assignment	2025-11-22 07:16:09.934399
+46	19	Requested	Intermediate	0	Occasionally	Seeded assignment	2025-11-06 07:16:09.934399
+549	3	Requested	Intermediate	2	Monthly	Seeded assignment	2025-11-11 07:16:09.934399
+121	17	Requested	Beginner	9	Monthly	Seeded request	2025-11-09 07:16:09.934399
+203	5	Requested	Advanced	2	Weekly	Seeded request	2025-11-28 07:16:09.934399
+719	6	Requested	Beginner	12	Weekly	Seeded assignment	2025-11-12 07:16:09.934399
+462	6	Requested	Beginner	14	Monthly	Seeded request	2025-11-08 07:16:09.934399
+783	3	Requested	Beginner	3	Daily	Seeded request	2025-11-25 07:16:09.934399
+51	5	Requested	Intermediate	10	Occasionally	Seeded request	2025-11-23 07:16:09.934399
+449	10	Requested	Beginner	13	Occasionally	Seeded assignment	2025-11-14 07:16:09.934399
+709	11	Requested	Intermediate	2	Occasionally	Seeded request	2025-11-25 07:16:09.934399
+717	12	Requested	Expert	9	Daily	Seeded request	2025-11-05 07:16:09.934399
+50	5	Requested	Intermediate	6	Weekly	Seeded assignment	2025-11-21 07:16:09.934399
+179	20	Requested	Advanced	4	Weekly	Seeded assignment	2025-11-22 07:16:09.934399
+624	24	Requested	Beginner	8	Monthly	Seeded assignment	2025-11-16 07:16:09.934399
+20	25	Requested	Beginner	0	Occasionally	Seeded assignment	2025-11-11 07:16:09.934399
+367	23	Requested	Intermediate	1	Daily	Seeded assignment	2025-11-17 07:16:09.934399
+588	24	Requested	Advanced	15	Daily	Seeded request	2025-11-25 07:16:09.934399
+447	12	Requested	Expert	9	Occasionally	Seeded assignment	2025-11-10 07:16:09.934399
+176	16	Requested	Beginner	0	Daily	Seeded request	2025-11-24 07:16:09.934399
+352	5	Requested	Beginner	6	Monthly	Seeded request	2025-11-20 07:16:09.934399
+154	4	Requested	Beginner	7	Occasionally	Seeded assignment	2025-11-23 07:16:09.934399
+377	7	Requested	Expert	3	Occasionally	Seeded assignment	2025-11-16 07:16:09.934399
+866	25	Requested	Advanced	9	Daily	Seeded request	2025-11-12 07:16:09.934399
+366	23	Requested	Advanced	1	Weekly	Seeded assignment	2025-11-10 07:16:09.934399
+77	8	Requested	Advanced	0	Monthly	Seeded assignment	2025-11-16 07:16:09.934399
+259	1	Requested	Advanced	3	Occasionally	Seeded assignment	2025-11-27 07:16:09.934399
+35	4	Requested	Intermediate	8	Monthly	Seeded assignment	2025-11-11 07:16:09.934399
+329	20	Requested	Advanced	15	Monthly	Seeded assignment	2025-11-30 07:16:09.934399
+875	7	Requested	Beginner	11	Monthly	Seeded assignment	2025-12-01 07:16:09.934399
+602	4	Requested	Intermediate	1	Weekly	Seeded assignment	2025-11-28 07:16:09.934399
+864	1	Requested	Advanced	15	Monthly	Seeded request	2025-11-11 07:16:09.934399
+934	5	Requested	Expert	1	Daily	Seeded request	2025-11-26 07:16:09.934399
+136	10	Requested	Advanced	3	Occasionally	Seeded assignment	2025-11-05 07:16:09.934399
+691	11	Requested	Advanced	9	Weekly	Seeded assignment	2025-11-05 07:16:09.934399
+291	1	Requested	Beginner	13	Monthly	Seeded request	2025-11-20 07:16:09.934399
+967	20	Requested	Intermediate	3	Monthly	Seeded request	2025-11-18 07:16:09.934399
+732	20	Requested	Beginner	7	Monthly	Seeded assignment	2025-11-26 07:16:09.934399
+657	16	Requested	Beginner	9	Occasionally	Seeded assignment	2025-11-19 07:16:09.934399
+702	11	Requested	Intermediate	13	Weekly	Seeded request	2025-11-30 07:16:09.934399
+873	4	Requested	Beginner	7	Daily	Seeded request	2025-11-28 07:16:09.934399
+28	18	Requested	Intermediate	1	Occasionally	Seeded assignment	2025-11-07 07:16:09.934399
+43	3	Requested	Expert	5	Occasionally	Seeded request	2025-11-14 07:16:09.934399
+958	24	Requested	Beginner	1	Weekly	Seeded request	2025-11-25 07:16:09.934399
+637	23	Requested	Intermediate	4	Daily	Seeded request	2025-11-06 07:16:09.934399
+531	18	Requested	Beginner	13	Weekly	Seeded assignment	2025-11-07 07:16:09.934399
+564	13	Requested	Expert	13	Monthly	Seeded request	2025-12-02 07:16:09.934399
+687	6	Requested	Advanced	12	Occasionally	Seeded request	2025-11-19 07:16:09.934399
+923	8	Requested	Beginner	9	Daily	Seeded request	2025-11-18 07:16:09.934399
+438	20	Requested	Advanced	6	Daily	Seeded assignment	2025-11-16 07:16:09.934399
+41	13	Requested	Advanced	13	Daily	Seeded assignment	2025-11-24 07:16:09.934399
+345	16	Requested	Expert	13	Monthly	Seeded assignment	2025-12-01 07:16:09.934399
+109	24	Requested	Advanced	8	Occasionally	Seeded request	2025-11-13 07:16:09.934399
+600	7	Requested	Intermediate	10	Weekly	Seeded assignment	2025-11-22 07:16:09.934399
+773	4	Requested	Beginner	5	Weekly	Seeded assignment	2025-11-06 07:16:09.934399
+954	7	Requested	Beginner	6	Weekly	Seeded request	2025-11-05 07:16:09.934399
+85	23	Requested	Advanced	5	Weekly	Seeded request	2025-11-15 07:16:09.934399
+6	13	Requested	Expert	15	Occasionally	Seeded request	2025-11-18 07:16:09.934399
+744	12	Requested	Beginner	7	Occasionally	Seeded assignment	2025-11-14 07:16:09.934399
+8	18	Requested	Intermediate	1	Occasionally	Seeded request	2025-12-01 07:16:09.934399
+204	11	Requested	Beginner	1	Weekly	Seeded request	2025-11-23 07:16:09.934399
+251	10	Requested	Expert	6	Daily	Seeded assignment	2025-11-15 07:16:09.934399
+310	17	Requested	Intermediate	7	Daily	Seeded request	2025-11-17 07:16:09.934399
+121	3	Requested	Expert	7	Monthly	Seeded request	2025-11-17 07:16:09.934399
+809	18	Requested	Expert	5	Weekly	Seeded assignment	2025-11-26 07:16:09.934399
+594	21	Requested	Intermediate	8	Daily	Seeded request	2025-11-05 07:16:09.934399
+283	16	Requested	Expert	13	Weekly	Seeded request	2025-11-10 07:16:09.934399
+466	21	Requested	Advanced	13	Weekly	Seeded assignment	2025-11-18 07:16:09.934399
+881	18	Requested	Expert	3	Weekly	Seeded request	2025-11-19 07:16:09.934399
+130	16	Requested	Expert	14	Daily	Seeded request	2025-11-24 07:16:09.934399
+983	7	Requested	Beginner	12	Occasionally	Seeded assignment	2025-11-21 07:16:09.934399
+61	9	Requested	Advanced	10	Daily	Seeded request	2025-11-27 07:16:09.934399
+693	12	Requested	Expert	11	Monthly	Seeded request	2025-11-30 07:16:09.934399
+346	6	Requested	Advanced	3	Weekly	Seeded assignment	2025-11-08 07:16:09.934399
+943	22	Requested	Beginner	12	Daily	Seeded request	2025-11-29 07:16:09.934399
+321	21	Requested	Intermediate	5	Monthly	Seeded assignment	2025-11-11 07:16:09.934399
+740	16	Requested	Advanced	7	Monthly	Seeded assignment	2025-12-01 07:16:09.934399
+599	10	Requested	Advanced	11	Monthly	Seeded assignment	2025-11-29 07:16:09.934399
+537	24	Requested	Expert	8	Occasionally	Seeded request	2025-11-30 07:16:09.934399
+962	16	Requested	Intermediate	2	Daily	Seeded assignment	2025-11-17 07:16:09.934399
+813	23	Requested	Expert	5	Occasionally	Seeded request	2025-11-26 07:16:09.934399
+927	17	Requested	Beginner	13	Daily	Seeded assignment	2025-11-21 07:16:09.934399
+466	17	Requested	Advanced	6	Monthly	Seeded assignment	2025-12-02 07:16:09.934399
+4	22	Requested	Beginner	1	Daily	Seeded assignment	2025-11-28 07:16:09.934399
+407	1	Requested	Intermediate	4	Weekly	Seeded assignment	2025-11-22 07:16:09.934399
+822	8	Requested	Beginner	11	Occasionally	Seeded request	2025-11-15 07:16:09.934399
+329	5	Requested	Beginner	0	Occasionally	Seeded assignment	2025-11-16 07:16:09.934399
+198	10	Requested	Beginner	14	Monthly	Seeded assignment	2025-11-25 07:16:09.934399
+929	3	Requested	Intermediate	12	Daily	Seeded assignment	2025-11-10 07:16:09.934399
+463	12	Requested	Expert	13	Occasionally	Seeded assignment	2025-11-07 07:16:09.934399
+568	22	Requested	Advanced	7	Daily	Seeded assignment	2025-11-11 07:16:09.934399
+185	19	Requested	Expert	9	Occasionally	Seeded assignment	2025-11-22 07:16:09.934399
+116	11	Requested	Expert	1	Monthly	Seeded request	2025-11-28 07:16:09.934399
+327	9	Requested	Intermediate	1	Daily	Seeded assignment	2025-11-17 07:16:09.934399
+62	13	Requested	Expert	3	Weekly	Seeded assignment	2025-12-01 07:16:09.934399
+208	16	Requested	Beginner	7	Occasionally	Seeded assignment	2025-11-07 07:16:09.934399
+694	8	Requested	Expert	11	Occasionally	Seeded assignment	2025-11-09 07:16:09.934399
+695	7	Requested	Intermediate	9	Weekly	Seeded request	2025-11-10 07:16:09.934399
+796	17	Requested	Beginner	12	Occasionally	Seeded request	2025-11-16 07:16:09.934399
+870	12	Requested	Beginner	4	Occasionally	Seeded assignment	2025-11-23 07:16:09.934399
+517	22	Requested	Advanced	4	Weekly	Seeded assignment	2025-11-26 07:16:09.934399
+26	24	Requested	Intermediate	12	Daily	Seeded request	2025-11-28 07:16:09.934399
+296	10	Requested	Beginner	4	Daily	Seeded request	2025-11-26 07:16:09.934399
+155	19	Requested	Expert	3	Monthly	Seeded request	2025-12-01 07:16:09.934399
+834	25	Requested	Beginner	14	Daily	Seeded assignment	2025-11-30 07:16:09.934399
+618	3	Requested	Expert	15	Occasionally	Seeded assignment	2025-11-25 07:16:09.934399
+800	7	Requested	Expert	2	Monthly	Seeded request	2025-11-26 07:16:09.934399
+470	13	Requested	Advanced	7	Daily	Seeded request	2025-11-10 07:16:09.934399
+352	20	Requested	Intermediate	1	Daily	Seeded assignment	2025-12-02 07:16:09.934399
+64	25	Requested	Advanced	10	Occasionally	Seeded assignment	2025-12-01 07:16:09.934399
+566	23	Requested	Intermediate	6	Occasionally	Seeded request	2025-11-11 07:16:09.934399
+227	3	Requested	Intermediate	0	Weekly	Seeded assignment	2025-11-28 07:16:09.934399
+578	23	Requested	Beginner	7	Occasionally	Seeded request	2025-11-18 07:16:09.934399
+685	19	Requested	Beginner	2	Daily	Seeded assignment	2025-11-23 07:16:09.934399
+701	8	Requested	Expert	0	Occasionally	Seeded assignment	2025-11-17 07:16:09.934399
+60	1	Requested	Intermediate	3	Monthly	Seeded request	2025-11-09 07:16:09.934399
+289	8	Requested	Expert	8	Weekly	Seeded request	2025-11-22 07:16:09.934399
+765	21	Requested	Beginner	11	Weekly	Seeded assignment	2025-11-21 07:16:09.934399
+525	3	Requested	Beginner	7	Daily	Seeded assignment	2025-11-04 07:16:09.934399
+510	22	Requested	Expert	13	Daily	Seeded request	2025-11-30 07:16:09.934399
+603	8	Requested	Beginner	0	Occasionally	Seeded assignment	2025-11-15 07:16:09.934399
+109	10	Requested	Advanced	12	Monthly	Seeded assignment	2025-11-28 07:16:09.934399
+909	22	Requested	Advanced	6	Weekly	Seeded assignment	2025-11-10 07:16:09.934399
+905	1	Requested	Expert	13	Occasionally	Seeded assignment	2025-11-20 07:16:09.934399
+334	18	Requested	Intermediate	10	Daily	Seeded request	2025-11-06 07:16:09.934399
+396	6	Requested	Expert	14	Monthly	Seeded request	2025-11-22 07:16:09.934399
+203	12	Requested	Intermediate	2	Weekly	Seeded assignment	2025-11-20 07:16:09.934399
+245	1	Requested	Advanced	6	Daily	Seeded assignment	2025-11-17 07:16:09.934399
+698	20	Requested	Intermediate	6	Weekly	Seeded request	2025-11-12 07:16:09.934399
+309	5	Requested	Expert	8	Monthly	Seeded request	2025-11-23 07:16:09.934399
+451	3	Requested	Advanced	3	Occasionally	Seeded assignment	2025-11-10 07:16:09.934399
+666	1	Requested	Intermediate	0	Daily	Seeded assignment	2025-11-23 07:16:09.934399
+658	11	Requested	Advanced	11	Monthly	Seeded assignment	2025-11-26 07:16:09.934399
+264	24	Requested	Expert	2	Monthly	Seeded assignment	2025-12-01 07:16:09.934399
+324	25	Requested	Advanced	15	Weekly	Seeded request	2025-12-01 07:16:09.934399
+122	19	Requested	Expert	8	Daily	Seeded request	2025-11-24 07:16:09.934399
+519	6	Requested	Advanced	10	Occasionally	Seeded assignment	2025-11-10 07:16:09.934399
+754	22	Requested	Beginner	15	Occasionally	Seeded request	2025-11-08 07:16:09.934399
+981	16	Requested	Beginner	8	Weekly	Seeded assignment	2025-11-11 07:16:09.934399
+424	25	Requested	Advanced	7	Occasionally	Seeded request	2025-11-09 07:16:09.934399
+572	22	Requested	Advanced	4	Occasionally	Seeded assignment	2025-11-20 07:16:09.934399
+323	9	Requested	Advanced	5	Monthly	Seeded request	2025-11-21 07:16:09.934399
+408	25	Requested	Advanced	0	Occasionally	Seeded assignment	2025-11-15 07:16:09.934399
+132	12	Requested	Beginner	13	Daily	Seeded assignment	2025-11-30 07:16:09.934399
+340	6	Requested	Intermediate	3	Weekly	Seeded assignment	2025-11-11 07:16:09.934399
+89	17	Requested	Intermediate	10	Daily	Seeded request	2025-11-08 07:16:09.934399
+640	17	Requested	Expert	9	Occasionally	Seeded assignment	2025-11-26 07:16:09.934399
+337	7	Requested	Expert	15	Weekly	Seeded request	2025-11-03 07:16:09.934399
+28	19	Requested	Advanced	7	Monthly	Seeded request	2025-11-15 07:16:09.934399
+22	1	Requested	Expert	9	Weekly	Seeded assignment	2025-11-24 07:16:09.934399
+737	23	Requested	Expert	13	Occasionally	Seeded assignment	2025-11-13 07:16:09.934399
+233	17	Requested	Intermediate	15	Occasionally	Seeded assignment	2025-11-12 07:16:09.934399
+192	3	Requested	Beginner	3	Occasionally	Seeded request	2025-11-21 07:16:09.934399
+264	8	Requested	Expert	0	Occasionally	Seeded request	2025-11-16 07:16:09.934399
+260	19	Requested	Beginner	11	Monthly	Seeded assignment	2025-11-04 07:16:09.934399
+535	24	Requested	Intermediate	5	Daily	Seeded request	2025-11-04 07:16:09.934399
+126	16	Requested	Expert	0	Monthly	Seeded assignment	2025-11-09 07:16:09.934399
+474	25	Requested	Advanced	13	Occasionally	Seeded assignment	2025-12-02 07:16:09.934399
+659	5	Requested	Intermediate	15	Weekly	Seeded assignment	2025-11-28 07:16:09.934399
+576	21	Requested	Intermediate	4	Monthly	Seeded assignment	2025-11-28 07:16:09.934399
+654	21	Requested	Beginner	2	Monthly	Seeded assignment	2025-11-19 07:16:09.934399
+682	11	Requested	Intermediate	9	Monthly	Seeded assignment	2025-12-01 07:16:09.934399
+569	17	Requested	Beginner	1	Weekly	Seeded assignment	2025-11-26 07:16:09.934399
+984	25	Requested	Advanced	10	Monthly	Seeded assignment	2025-11-12 07:16:09.934399
+788	16	Requested	Expert	11	Occasionally	Seeded assignment	2025-11-26 07:16:09.934399
+583	20	Requested	Intermediate	15	Occasionally	Seeded assignment	2025-11-04 07:16:09.934399
+712	10	Requested	Beginner	13	Occasionally	Seeded request	2025-11-27 07:16:09.934399
+328	19	Requested	Expert	13	Weekly	Seeded request	2025-11-12 07:16:09.934399
+358	24	Requested	Beginner	1	Occasionally	Seeded assignment	2025-11-23 07:16:09.934399
+477	16	Requested	Advanced	8	Occasionally	Seeded assignment	2025-11-12 07:16:09.934399
+393	9	Requested	Advanced	13	Monthly	Seeded assignment	2025-11-06 07:16:09.934399
+290	18	Requested	Intermediate	9	Monthly	Seeded request	2025-11-19 07:16:09.934399
+406	4	Requested	Intermediate	10	Weekly	Seeded request	2025-11-14 07:16:09.934399
+504	23	Requested	Advanced	8	Daily	Seeded assignment	2025-11-04 07:16:09.934399
+116	9	Requested	Expert	0	Monthly	Seeded request	2025-11-25 07:16:09.934399
+113	24	Requested	Expert	0	Occasionally	Seeded assignment	2025-11-25 07:16:09.934399
+844	1	Requested	Advanced	8	Weekly	Seeded request	2025-11-07 07:16:09.934399
+412	25	Requested	Beginner	3	Daily	Seeded request	2025-11-13 07:16:09.934399
+686	7	Requested	Beginner	11	Weekly	Seeded request	2025-11-29 07:16:09.934399
+376	10	Requested	Expert	8	Occasionally	Seeded request	2025-11-11 07:16:09.934399
+365	17	Requested	Beginner	9	Weekly	Seeded request	2025-11-04 07:16:09.934399
+723	10	Requested	Beginner	7	Weekly	Seeded request	2025-11-24 07:16:09.934399
+25	8	Requested	Expert	8	Occasionally	Seeded assignment	2025-12-02 07:16:09.934399
+548	13	Requested	Beginner	11	Monthly	Seeded assignment	2025-11-07 07:16:09.934399
+391	17	Requested	Expert	2	Monthly	Seeded assignment	2025-11-16 07:16:09.934399
+772	13	Requested	Expert	10	Monthly	Seeded request	2025-11-11 07:16:09.934399
+501	1	Requested	Intermediate	6	Weekly	Seeded request	2025-11-17 07:16:09.934399
+221	24	Requested	Expert	12	Occasionally	Seeded request	2025-11-21 07:16:09.934399
+26	8	Requested	Advanced	14	Monthly	Seeded assignment	2025-11-25 07:16:09.934399
+243	23	Requested	Beginner	13	Occasionally	Seeded assignment	2025-11-26 07:16:09.934399
+98	23	Requested	Intermediate	10	Weekly	Seeded assignment	2025-11-12 07:16:09.934399
+722	21	Requested	Beginner	10	Weekly	Seeded request	2025-11-12 07:16:09.934399
+79	4	Requested	Advanced	2	Weekly	Seeded assignment	2025-11-04 07:16:09.934399
+953	13	Requested	Beginner	13	Weekly	Seeded request	2025-11-30 07:16:09.934399
+65	24	Requested	Intermediate	13	Daily	Seeded assignment	2025-11-26 07:16:09.934399
+574	11	Requested	Beginner	4	Occasionally	Seeded request	2025-11-27 07:16:09.934399
+43	19	Requested	Intermediate	3	Monthly	Seeded assignment	2025-11-23 07:16:09.934399
+403	21	Requested	Expert	0	Weekly	Seeded request	2025-11-23 07:16:09.934399
+244	21	Requested	Beginner	15	Daily	Seeded request	2025-11-05 07:16:09.934399
+754	20	Requested	Expert	2	Monthly	Seeded assignment	2025-11-27 07:16:09.934399
+29	4	Requested	Beginner	3	Weekly	Seeded assignment	2025-11-23 07:16:09.934399
+907	13	Requested	Beginner	2	Occasionally	Seeded assignment	2025-11-28 07:16:09.934399
+951	9	Requested	Expert	4	Occasionally	Seeded request	2025-11-12 07:16:09.934399
+790	20	Requested	Beginner	12	Weekly	Seeded request	2025-11-24 07:16:09.934399
+904	18	Requested	Beginner	2	Weekly	Seeded assignment	2025-11-13 07:16:09.934399
+332	17	Requested	Intermediate	3	Daily	Seeded request	2025-11-28 07:16:09.934399
+46	17	Requested	Beginner	6	Weekly	Seeded request	2025-11-22 07:16:09.934399
+863	24	Requested	Beginner	13	Daily	Seeded assignment	2025-11-06 07:16:09.934399
+121	19	Requested	Intermediate	10	Monthly	Seeded assignment	2025-11-22 07:16:09.934399
+634	19	Requested	Expert	7	Daily	Seeded assignment	2025-11-15 07:16:09.934399
+784	5	Requested	Intermediate	0	Daily	Seeded request	2025-11-17 07:16:09.934399
+878	5	Requested	Beginner	13	Weekly	Seeded request	2025-11-08 07:16:09.934399
+70	20	Requested	Expert	14	Weekly	Seeded assignment	2025-11-15 07:16:09.934399
+713	16	Requested	Beginner	11	Occasionally	Seeded assignment	2025-11-07 07:16:09.934399
+760	20	Requested	Beginner	5	Occasionally	Seeded request	2025-11-06 07:16:09.934399
+350	1	Requested	Advanced	10	Monthly	Seeded assignment	2025-11-04 07:16:09.934399
+801	23	Requested	Advanced	4	Daily	Seeded request	2025-11-27 07:16:09.934399
+201	20	Requested	Beginner	10	Weekly	Seeded assignment	2025-11-22 07:16:09.934399
+535	10	Requested	Intermediate	8	Monthly	Seeded assignment	2025-11-18 07:16:09.934399
+652	10	Requested	Intermediate	7	Weekly	Seeded request	2025-11-23 07:16:09.934399
+630	23	Requested	Beginner	8	Daily	Seeded request	2025-12-01 07:16:09.934399
+93	7	Requested	Intermediate	15	Monthly	Seeded request	2025-11-26 07:16:09.934399
+732	22	Requested	Expert	4	Monthly	Seeded assignment	2025-11-27 07:16:09.934399
+209	23	Requested	Beginner	0	Monthly	Seeded assignment	2025-11-21 07:16:09.934399
+455	23	Requested	Advanced	13	Daily	Seeded request	2025-11-28 07:16:09.934399
+252	8	Requested	Advanced	11	Occasionally	Seeded request	2025-11-14 07:16:09.934399
+702	9	Requested	Expert	12	Daily	Seeded assignment	2025-11-20 07:16:09.934399
+180	22	Requested	Beginner	12	Monthly	Seeded assignment	2025-12-02 07:16:09.934399
+771	20	Requested	Expert	10	Occasionally	Seeded assignment	2025-11-07 07:16:09.934399
+317	25	Requested	Beginner	3	Monthly	Seeded assignment	2025-11-15 07:16:09.934399
+9	11	Requested	Beginner	6	Occasionally	Seeded assignment	2025-11-26 07:16:09.934399
+871	22	Requested	Intermediate	5	Daily	Seeded request	2025-11-27 07:16:09.934399
+982	20	Requested	Beginner	15	Daily	Seeded request	2025-11-26 07:16:09.934399
+881	4	Requested	Expert	12	Monthly	Seeded assignment	2025-11-27 07:16:09.934399
+865	10	Requested	Intermediate	12	Daily	Seeded assignment	2025-12-02 07:16:09.934399
+446	3	Requested	Beginner	0	Daily	Seeded request	2025-11-23 07:16:09.934399
+117	9	Requested	Beginner	11	Weekly	Seeded request	2025-11-08 07:16:09.934399
+236	5	Requested	Advanced	12	Monthly	Seeded request	2025-11-18 07:16:09.934399
+122	4	Requested	Expert	0	Weekly	Seeded request	2025-11-30 07:16:09.934399
+434	3	Requested	Intermediate	4	Monthly	Seeded assignment	2025-11-19 07:16:09.934399
+424	6	Requested	Advanced	9	Occasionally	Seeded assignment	2025-12-01 07:16:09.934399
+628	4	Requested	Expert	0	Daily	Seeded request	2025-11-24 07:16:09.934399
+342	5	Requested	Intermediate	9	Occasionally	Seeded assignment	2025-11-16 07:16:09.934399
+744	22	Requested	Expert	10	Weekly	Seeded request	2025-11-29 07:16:09.934399
+941	10	Requested	Expert	6	Daily	Seeded request	2025-11-05 07:16:09.934399
+28	4	Requested	Advanced	0	Daily	Seeded request	2025-12-02 07:16:09.934399
+846	25	Requested	Expert	6	Daily	Seeded assignment	2025-11-15 07:16:09.934399
+519	25	Requested	Expert	13	Daily	Seeded assignment	2025-11-25 07:16:09.934399
+943	12	Requested	Beginner	7	Weekly	Seeded assignment	2025-11-17 07:16:09.934399
+803	10	Requested	Expert	14	Occasionally	Seeded request	2025-11-26 07:16:09.934399
+756	23	Requested	Intermediate	5	Weekly	Seeded request	2025-11-29 07:16:09.934399
+648	5	Requested	Advanced	3	Monthly	Seeded assignment	2025-11-22 07:16:09.934399
+95	9	Requested	Intermediate	8	Monthly	Seeded assignment	2025-11-29 07:16:09.934399
+634	18	Requested	Expert	8	Monthly	Seeded request	2025-11-08 07:16:09.934399
+872	7	Requested	Intermediate	2	Monthly	Seeded assignment	2025-11-28 07:16:09.934399
+171	19	Requested	Intermediate	2	Monthly	Seeded assignment	2025-11-16 07:16:09.934399
+729	24	Requested	Intermediate	4	Monthly	Seeded request	2025-12-01 07:16:09.934399
+623	9	Requested	Beginner	1	Occasionally	Seeded assignment	2025-11-08 07:16:09.934399
+725	25	Requested	Expert	15	Monthly	Seeded assignment	2025-11-29 07:16:09.934399
+135	5	Requested	Expert	6	Weekly	Seeded request	2025-11-09 07:16:09.934399
+571	25	Requested	Beginner	9	Weekly	Seeded assignment	2025-11-09 07:16:09.934399
+319	4	Requested	Expert	7	Weekly	Seeded request	2025-11-22 07:16:09.934399
+974	13	Requested	Beginner	6	Monthly	Seeded assignment	2025-11-13 07:16:09.934399
+383	7	Requested	Intermediate	3	Occasionally	Seeded request	2025-11-09 07:16:09.934399
+573	23	Requested	Advanced	14	Daily	Seeded assignment	2025-12-01 07:16:09.934399
+88	7	Requested	Beginner	1	Daily	Seeded assignment	2025-11-04 07:16:09.934399
+373	11	Requested	Intermediate	13	Daily	Seeded request	2025-11-08 07:16:09.934399
+560	17	Requested	Beginner	10	Occasionally	Seeded assignment	2025-11-17 07:16:09.934399
+838	18	Requested	Beginner	12	Weekly	Seeded request	2025-11-21 07:16:09.934399
+643	22	Requested	Beginner	1	Weekly	Seeded assignment	2025-11-12 07:16:09.934399
+447	10	Requested	Expert	13	Daily	Seeded request	2025-11-05 07:16:09.934399
+832	7	Requested	Expert	3	Occasionally	Seeded assignment	2025-11-06 07:16:09.934399
+12	19	Requested	Intermediate	4	Occasionally	Seeded assignment	2025-11-19 07:16:09.934399
+218	11	Requested	Expert	6	Weekly	Seeded assignment	2025-12-02 07:16:09.934399
+177	19	Requested	Advanced	1	Weekly	Seeded assignment	2025-11-11 07:16:09.934399
+38	3	Requested	Beginner	10	Monthly	Seeded request	2025-11-16 07:16:09.934399
+847	20	Requested	Advanced	1	Weekly	Seeded request	2025-11-11 07:16:09.934399
+679	16	Requested	Beginner	5	Monthly	Seeded request	2025-11-29 07:16:09.934399
+843	19	Requested	Advanced	9	Weekly	Seeded assignment	2025-11-26 07:16:09.934399
+170	3	Requested	Advanced	11	Monthly	Seeded request	2025-11-06 07:16:09.934399
+489	5	Requested	Intermediate	11	Weekly	Seeded request	2025-11-22 07:16:09.934399
+785	11	Requested	Beginner	12	Weekly	Seeded assignment	2025-12-02 07:16:09.934399
+378	21	Requested	Expert	2	Monthly	Seeded assignment	2025-11-07 07:16:09.934399
+537	5	Requested	Intermediate	12	Monthly	Seeded assignment	2025-11-17 07:16:09.934399
+184	9	Requested	Beginner	11	Occasionally	Seeded assignment	2025-11-03 07:16:09.934399
+443	9	Requested	Expert	4	Occasionally	Seeded request	2025-11-18 07:16:09.934399
+497	12	Requested	Expert	12	Occasionally	Seeded request	2025-11-04 07:16:09.934399
+293	9	Requested	Beginner	13	Monthly	Seeded assignment	2025-11-18 07:16:09.934399
+373	19	Requested	Beginner	15	Monthly	Seeded request	2025-11-22 07:16:09.934399
+662	20	Requested	Advanced	9	Weekly	Seeded assignment	2025-11-19 07:16:09.934399
+180	21	Requested	Beginner	10	Daily	Seeded assignment	2025-11-23 07:16:09.934399
+74	10	Requested	Expert	0	Weekly	Seeded request	2025-12-02 07:16:09.934399
+965	22	Requested	Beginner	8	Weekly	Seeded assignment	2025-11-23 07:16:09.934399
+639	24	Requested	Advanced	8	Occasionally	Seeded assignment	2025-11-07 07:16:09.934399
+2	12	Requested	Advanced	12	Monthly	Seeded assignment	2025-11-11 07:16:09.934399
+796	12	Requested	Intermediate	11	Monthly	Seeded request	2025-11-10 07:16:09.934399
+533	18	Requested	Beginner	11	Weekly	Seeded assignment	2025-11-11 07:16:09.934399
+858	23	Requested	Intermediate	15	Daily	Seeded request	2025-11-28 07:16:09.934399
+918	11	Requested	Beginner	11	Occasionally	Seeded request	2025-11-16 07:16:09.934399
+516	10	Requested	Beginner	6	Daily	Seeded request	2025-11-13 07:16:09.934399
+713	10	Requested	Expert	9	Occasionally	Seeded assignment	2025-11-22 07:16:09.934399
+769	10	Requested	Beginner	3	Occasionally	Seeded request	2025-11-28 07:16:09.934399
+123	4	Requested	Intermediate	0	Weekly	Seeded request	2025-11-07 07:16:09.934399
+693	21	Requested	Expert	2	Daily	Seeded assignment	2025-11-16 07:16:09.934399
+798	6	Requested	Beginner	14	Occasionally	Seeded assignment	2025-11-07 07:16:09.934399
+874	6	Requested	Advanced	15	Occasionally	Seeded assignment	2025-11-28 07:16:09.934399
+10	18	Requested	Beginner	3	Monthly	Seeded request	2025-11-07 07:16:09.934399
+861	21	Approved	Expert	13	Monthly	Seeded assignment	\N
+346	9	Requested	Intermediate	11	Monthly	Seeded assignment	2025-11-29 07:16:09.934399
+253	19	Requested	Intermediate	13	Daily	Seeded request	2025-11-14 07:16:09.934399
+165	16	Requested	Expert	0	Weekly	Seeded assignment	2025-11-20 07:16:09.934399
+412	9	Requested	Advanced	10	Daily	Seeded assignment	2025-11-26 07:16:09.934399
+782	4	Requested	Advanced	4	Daily	Seeded assignment	2025-11-28 07:16:09.934399
+570	16	Requested	Intermediate	6	Weekly	Seeded assignment	2025-11-22 07:16:09.934399
+239	11	Requested	Beginner	8	Occasionally	Seeded request	2025-11-04 07:16:09.934399
+227	7	Requested	Advanced	7	Occasionally	Seeded assignment	2025-11-25 07:16:09.934399
+845	23	Requested	Beginner	11	Occasionally	Seeded assignment	2025-11-19 07:16:09.934399
+510	17	Requested	Expert	1	Daily	Seeded assignment	2025-11-08 07:16:09.934399
+111	10	Requested	Expert	15	Weekly	Seeded request	2025-12-01 07:16:09.934399
+109	16	Requested	Expert	0	Occasionally	Seeded assignment	2025-11-07 07:16:09.934399
+917	24	Requested	Beginner	0	Daily	Seeded assignment	2025-11-14 07:16:09.934399
+882	1	Requested	Beginner	13	Monthly	Seeded assignment	2025-11-12 07:16:09.934399
+694	13	Requested	Advanced	15	Daily	Seeded request	2025-11-29 07:16:09.934399
+812	4	Requested	Beginner	7	Weekly	Seeded request	2025-11-14 07:16:09.934399
+500	12	Requested	Advanced	9	Monthly	Seeded assignment	2025-11-23 07:16:09.934399
+33	4	Requested	Intermediate	9	Weekly	Seeded assignment	2025-11-29 07:16:09.934399
+408	9	Requested	Expert	0	Occasionally	Seeded assignment	2025-11-25 07:16:09.934399
+360	10	Requested	Expert	7	Weekly	Seeded assignment	2025-11-29 07:16:09.934399
+678	25	Requested	Expert	12	Monthly	Seeded request	2025-12-02 07:16:09.934399
+552	7	Requested	Beginner	10	Monthly	Seeded assignment	2025-11-07 07:16:09.934399
+204	18	Approved	Expert	15	Daily	Seeded request	\N
+512	9	Requested	Expert	1	Monthly	Seeded request	2025-11-27 07:16:09.934399
+985	13	Approved	Beginner	2	Weekly	Seeded request	\N
+34	22	Requested	Beginner	11	Daily	Seeded request	2025-11-20 07:16:09.934399
+365	20	Requested	Expert	12	Monthly	Seeded assignment	2025-11-09 07:16:09.934399
+819	18	Requested	Intermediate	3	Occasionally	Seeded assignment	2025-11-05 07:16:09.934399
+400	18	Requested	Intermediate	6	Occasionally	Seeded assignment	2025-11-23 07:16:09.934399
+164	5	Requested	Intermediate	12	Occasionally	Seeded assignment	2025-11-27 07:16:09.934399
+208	10	Requested	Expert	7	Occasionally	Seeded request	2025-11-09 07:16:09.934399
+813	18	Requested	Intermediate	8	Occasionally	Seeded assignment	2025-11-26 07:16:09.934399
+387	23	Requested	Advanced	8	Weekly	Seeded request	2025-11-04 07:16:09.934399
+173	21	Requested	Expert	13	Daily	Seeded assignment	2025-11-18 07:16:09.934399
+257	17	Requested	Beginner	4	Weekly	Seeded request	2025-11-27 07:16:09.934399
+707	6	Requested	Advanced	8	Occasionally	Seeded assignment	2025-11-13 07:16:09.934399
+942	9	Requested	Advanced	11	Daily	Seeded request	2025-11-18 07:16:09.934399
+650	21	Requested	Expert	9	Monthly	Seeded assignment	2025-12-02 07:16:09.934399
+583	21	Requested	Advanced	6	Occasionally	Seeded assignment	2025-11-19 07:16:09.934399
+261	5	Requested	Advanced	4	Monthly	Seeded assignment	2025-11-22 07:16:09.934399
+326	11	Requested	Expert	14	Occasionally	Seeded request	2025-11-26 07:16:09.934399
+772	10	Requested	Advanced	2	Weekly	Seeded assignment	2025-11-12 07:16:09.934399
+415	24	Requested	Beginner	0	Daily	Seeded request	2025-11-06 07:16:09.934399
+968	8	Requested	Expert	5	Weekly	Seeded request	2025-11-13 07:16:09.934399
+73	5	Requested	Intermediate	5	Monthly	Seeded request	2025-11-26 07:16:09.934399
+830	9	Approved	Expert	5	Weekly	Seeded request	\N
+700	9	Requested	Intermediate	4	Monthly	Seeded assignment	2025-11-07 07:16:09.934399
+832	25	Requested	Advanced	8	Weekly	Seeded assignment	2025-11-05 07:16:09.934399
+976	5	Requested	Expert	9	Weekly	Seeded assignment	2025-11-18 07:16:09.934399
+147	10	Requested	Advanced	13	Daily	Seeded request	2025-11-25 07:16:09.934399
+897	5	Requested	Advanced	1	Daily	Seeded request	2025-11-15 07:16:09.934399
+883	1	Requested	Expert	9	Monthly	Seeded request	2025-11-11 07:16:09.934399
+576	12	Requested	Expert	9	Monthly	Seeded assignment	2025-12-02 07:16:09.934399
+26	16	Requested	Advanced	9	Daily	Seeded assignment	2025-11-16 07:16:09.934399
+238	22	Requested	Intermediate	5	Occasionally	Seeded request	2025-11-10 07:16:09.934399
+258	12	Requested	Expert	7	Monthly	Seeded assignment	2025-11-15 07:16:09.934399
+747	17	Requested	Beginner	5	Weekly	Seeded request	2025-11-29 07:16:09.934399
+281	13	Requested	Expert	1	Monthly	Seeded assignment	2025-11-30 07:16:09.934399
+301	13	Requested	Beginner	15	Weekly	Seeded request	2025-11-14 07:16:09.934399
+382	1	Requested	Advanced	0	Weekly	Seeded request	2025-11-04 07:16:09.934399
+30	7	Requested	Intermediate	2	Daily	Seeded request	2025-11-09 07:16:09.934399
+19	12	Requested	Expert	13	Daily	Seeded assignment	2025-11-20 07:16:09.934399
+528	24	Requested	Intermediate	2	Weekly	Seeded request	2025-11-28 07:16:09.934399
+616	25	Requested	Advanced	15	Monthly	Seeded assignment	2025-11-11 07:16:09.934399
+564	5	Approved	Advanced	7	Weekly	Seeded request	\N
+573	3	Approved	Beginner	11	Occasionally	Seeded request	2025-11-14 11:10:27.264874
+784	16	Approved	Intermediate	5	Monthly	Seeded assignment	\N
+634	9	Approved	Expert	7	Weekly	Seeded assignment	2025-11-19 03:52:27.264874
+534	3	Approved	Intermediate	9	Occasionally	Seeded request	\N
+109	21	Requested	Beginner	14	Weekly	Seeded assignment	2025-11-13 07:16:09.934399
+352	13	Requested	Expert	15	Weekly	Seeded request	2025-11-04 07:16:09.934399
+417	12	Requested	Beginner	5	Occasionally	Seeded assignment	2025-11-18 07:16:09.934399
+632	18	Approved	Advanced	11	Occasionally	Seeded request	\N
+646	7	Approved	Expert	11	Monthly	Seeded assignment	\N
+756	25	Approved	Beginner	13	Monthly	Seeded request	\N
+116	19	Approved	Beginner	10	Daily	Seeded assignment	\N
+223	9	Approved	Intermediate	4	Monthly	Seeded assignment	\N
+776	1	Approved	Beginner	6	Weekly	Seeded assignment	\N
+472	22	Approved	Intermediate	5	Daily	Seeded request	\N
+253	25	Approved	Expert	6	Monthly	Seeded request	2025-11-26 05:07:27.264874
+816	21	Approved	Advanced	14	Occasionally	Seeded assignment	2025-11-17 02:48:27.264874
+696	8	Approved	Advanced	7	Monthly	Seeded request	\N
+409	18	Approved	Beginner	1	Daily	Seeded assignment	2025-11-04 03:42:27.264874
+876	20	Approved	Advanced	10	Monthly	Seeded assignment	\N
+191	10	Approved	Advanced	10	Daily	Seeded request	\N
+664	24	Approved	Beginner	7	Monthly	Seeded assignment	2025-11-23 15:59:27.264874
+623	19	Approved	Beginner	5	Monthly	Seeded assignment	\N
+227	9	Approved	Advanced	3	Monthly	Seeded assignment	\N
+469	4	Approved	Expert	5	Occasionally	Seeded assignment	\N
+39	10	Approved	Beginner	1	Daily	Seeded assignment	\N
+338	9	Approved	Intermediate	15	Weekly	Seeded assignment	\N
+144	5	Approved	Advanced	13	Occasionally	Seeded request	\N
+46	10	Approved	Beginner	4	Occasionally	Seeded assignment	\N
+217	13	Approved	Intermediate	13	Occasionally	Seeded request	\N
+607	1	Approved	Beginner	15	Occasionally	Seeded assignment	\N
+174	12	Approved	Advanced	0	Occasionally	Seeded assignment	\N
+47	17	Approved	Beginner	6	Monthly	Seeded request	2025-11-27 07:31:27.264874
+882	7	Approved	Intermediate	10	Occasionally	Seeded assignment	2025-11-30 02:00:27.264874
+761	3	Approved	Intermediate	15	Occasionally	Seeded assignment	2025-11-28 04:38:27.264874
+173	13	Approved	Intermediate	15	Occasionally	Seeded assignment	\N
+460	3	Approved	Expert	11	Occasionally	Seeded request	2025-11-14 19:03:27.264874
+271	1	Approved	Expert	1	Occasionally	Seeded assignment	\N
+211	17	Approved	Intermediate	5	Daily	Seeded request	\N
+306	5	Approved	Intermediate	6	Daily	Seeded assignment	\N
+463	16	Approved	Advanced	3	Monthly	Seeded assignment	2025-11-09 21:40:27.264874
+556	25	Approved	Beginner	6	Weekly	Seeded request	\N
+491	5	Approved	Advanced	2	Monthly	Seeded request	\N
+733	8	Approved	Advanced	15	Daily	Seeded assignment	\N
+448	5	Approved	Advanced	11	Occasionally	Seeded request	\N
+678	18	Approved	Expert	0	Weekly	Seeded assignment	2025-11-18 12:18:27.264874
+906	20	Approved	Advanced	1	Monthly	Seeded assignment	2025-11-24 23:01:27.264874
+794	24	Requested	Advanced	9	Daily	Seeded request	2025-11-04 07:16:09.934399
+625	1	Requested	Intermediate	14	Daily	Seeded request	2025-11-12 07:16:09.934399
+873	23	Requested	Advanced	12	Weekly	Seeded assignment	2025-11-16 07:16:09.934399
+492	9	Requested	Beginner	1	Monthly	Seeded assignment	2025-11-10 07:16:09.934399
+677	6	Requested	Beginner	13	Daily	Seeded assignment	2025-11-27 07:16:09.934399
+435	4	Requested	Expert	12	Occasionally	Seeded assignment	2025-11-19 07:16:09.934399
+622	25	Requested	Advanced	7	Weekly	Seeded assignment	2025-11-04 07:16:09.934399
+544	8	Requested	Expert	4	Weekly	Seeded request	2025-11-07 07:16:09.934399
+866	11	Requested	Expert	12	Daily	Seeded request	2025-11-25 07:16:09.934399
+814	8	Requested	Intermediate	1	Daily	Seeded assignment	2025-11-08 07:16:09.934399
+35	7	Requested	Advanced	8	Weekly	Seeded assignment	2025-11-17 07:16:09.934399
+726	6	Requested	Intermediate	7	Occasionally	Seeded request	2025-12-02 07:16:09.934399
+38	1	Requested	Advanced	1	Monthly	Seeded assignment	2025-11-15 07:16:09.934399
+184	4	Requested	Advanced	0	Monthly	Seeded assignment	2025-12-02 07:16:09.934399
+154	7	Requested	Expert	13	Daily	Seeded assignment	2025-11-26 07:16:09.934399
+367	3	Requested	Beginner	6	Monthly	Seeded assignment	2025-11-26 07:16:09.934399
+933	23	Requested	Advanced	2	Monthly	Seeded request	2025-11-26 07:16:09.934399
+64	23	Approved	Expert	13	Occasionally	Seeded assignment	\N
+944	1	Approved	Expert	5	Occasionally	Seeded request	2025-11-18 14:46:27.264874
+331	3	Approved	Intermediate	15	Weekly	Seeded assignment	2025-11-12 13:58:27.264874
+142	21	Approved	Expert	0	Monthly	Seeded assignment	2025-11-28 10:48:27.264874
+683	20	Approved	Expert	11	Monthly	Seeded assignment	\N
+798	3	Approved	Intermediate	4	Daily	Seeded request	2025-11-09 12:03:27.264874
+359	17	Approved	Expert	1	Weekly	Seeded assignment	\N
+241	21	Approved	Expert	11	Occasionally	Seeded request	2025-11-18 12:21:27.264874
+318	12	Approved	Intermediate	15	Monthly	Seeded assignment	2025-11-19 04:21:27.264874
+30	11	Approved	Intermediate	6	Weekly	Seeded assignment	2025-11-13 18:40:27.264874
+614	10	Approved	Advanced	5	Daily	Seeded assignment	\N
+960	9	Approved	Intermediate	1	Daily	Seeded assignment	\N
+596	7	Approved	Advanced	3	Monthly	Seeded request	\N
+381	10	Approved	Intermediate	13	Occasionally	Seeded assignment	\N
+469	3	Approved	Expert	13	Weekly	Seeded assignment	\N
+80	5	Approved	Advanced	6	Daily	Seeded assignment	2025-11-13 15:34:27.264874
+693	13	Approved	Expert	3	Monthly	Seeded assignment	2025-12-01 17:25:27.264874
+910	24	Approved	Expert	12	Monthly	Seeded assignment	\N
+368	4	Approved	Beginner	9	Weekly	Seeded request	\N
+168	24	Approved	Advanced	11	Weekly	Seeded assignment	\N
+200	4	Approved	Beginner	13	Occasionally	Seeded assignment	\N
+546	6	Approved	Beginner	11	Daily	Seeded assignment	\N
+810	1	Approved	Beginner	9	Occasionally	Seeded assignment	\N
+327	3	Approved	Expert	1	Monthly	Seeded request	\N
+632	19	Approved	Advanced	7	Daily	Seeded request	\N
+877	13	Approved	Expert	11	Daily	Seeded request	\N
+138	3	Approved	Beginner	3	Daily	Seeded request	\N
+984	7	Approved	Beginner	8	Weekly	Seeded assignment	2025-11-30 09:54:27.264874
+622	19	Approved	Intermediate	6	Occasionally	Seeded request	\N
+145	25	Approved	Intermediate	15	Occasionally	Seeded request	2025-11-12 14:53:27.264874
+36	9	Approved	Intermediate	8	Monthly	Seeded assignment	2025-11-14 10:44:27.264874
+402	3	Approved	Expert	8	Daily	Seeded request	2025-11-20 00:48:27.264874
+807	24	Approved	Expert	14	Weekly	Seeded assignment	\N
+66	10	Approved	Beginner	4	Occasionally	Seeded assignment	\N
+631	7	Approved	Beginner	1	Occasionally	Seeded request	2025-11-25 10:20:27.264874
+417	5	Approved	Beginner	6	Daily	Seeded assignment	\N
+677	4	Approved	Intermediate	6	Daily	Seeded assignment	\N
+100	8	Approved	Expert	8	Occasionally	Seeded request	\N
+899	21	Approved	Intermediate	12	Weekly	Seeded assignment	\N
+310	24	Approved	Expert	14	Occasionally	Seeded request	\N
+369	11	Approved	Expert	12	Daily	Seeded assignment	\N
+425	1	Approved	Advanced	5	Daily	Seeded assignment	\N
+462	23	Approved	Advanced	3	Daily	Seeded assignment	2025-11-04 20:39:27.264874
+769	20	Approved	Advanced	5	Occasionally	Seeded assignment	\N
+5	23	Approved	Expert	1	Occasionally	Seeded request	\N
+829	16	Approved	Intermediate	12	Weekly	Seeded assignment	\N
+216	9	Approved	Expert	7	Daily	Seeded request	2025-12-01 02:41:27.264874
+176	5	Approved	Beginner	2	Monthly	Seeded assignment	2025-12-01 13:42:27.264874
+677	18	Approved	Expert	3	Weekly	Seeded assignment	\N
+987	21	Approved	Beginner	8	Daily	Seeded request	2025-11-18 10:44:27.264874
+59	16	Approved	Beginner	3	Monthly	Seeded request	\N
+493	24	Approved	Advanced	5	Weekly	Seeded assignment	\N
+111	20	Approved	Intermediate	1	Weekly	Seeded assignment	\N
+407	18	Approved	Beginner	3	Weekly	Seeded assignment	2025-11-23 03:33:27.264874
+423	19	Approved	Advanced	4	Monthly	Seeded assignment	\N
+502	16	Approved	Beginner	10	Weekly	Seeded request	\N
+635	9	Requested	Expert	14	Weekly	Seeded request	2025-11-14 07:16:09.934399
+603	16	Requested	Beginner	2	Weekly	Seeded assignment	2025-11-21 07:16:09.934399
+836	12	Requested	Beginner	3	Occasionally	Seeded request	2025-11-20 07:16:09.934399
+776	7	Requested	Intermediate	15	Monthly	Seeded request	2025-12-01 07:16:09.934399
+739	16	Requested	Advanced	12	Weekly	Seeded assignment	2025-11-27 07:16:09.934399
+71	13	Requested	Advanced	7	Daily	Seeded assignment	2025-11-22 07:16:09.934399
+248	21	Requested	Intermediate	10	Monthly	Seeded request	2025-11-27 07:16:09.934399
+692	16	Requested	Intermediate	15	Monthly	Seeded assignment	2025-11-09 07:16:09.934399
+435	3	Requested	Beginner	3	Occasionally	Seeded assignment	2025-11-19 07:16:09.934399
+120	12	Requested	Beginner	4	Monthly	Seeded assignment	2025-11-07 07:16:09.934399
+652	16	Requested	Beginner	14	Occasionally	Seeded request	2025-11-03 07:16:09.934399
+555	20	Requested	Intermediate	9	Weekly	Seeded assignment	2025-11-20 07:16:09.934399
+78	22	Requested	Expert	1	Occasionally	Seeded request	2025-11-22 07:16:09.934399
+664	12	Requested	Expert	1	Monthly	Seeded request	2025-11-18 07:16:09.934399
+494	16	Requested	Beginner	4	Monthly	Seeded assignment	2025-11-28 07:16:09.934399
+906	8	Requested	Intermediate	14	Daily	Seeded assignment	2025-11-22 07:16:09.934399
+733	20	Requested	Intermediate	1	Occasionally	Seeded request	2025-11-11 07:16:09.934399
+669	25	Requested	Expert	13	Monthly	Seeded assignment	2025-11-29 07:16:09.934399
+305	10	Requested	Beginner	13	Weekly	Seeded assignment	2025-11-16 07:16:09.934399
+574	6	Requested	Intermediate	2	Occasionally	Seeded request	2025-11-17 07:16:09.934399
+300	16	Requested	Intermediate	9	Daily	Seeded assignment	2025-11-21 07:16:09.934399
+594	5	Requested	Expert	1	Monthly	Seeded request	2025-11-20 07:16:09.934399
+279	1	Requested	Intermediate	2	Occasionally	Seeded assignment	2025-11-18 07:16:09.934399
+366	3	Requested	Intermediate	6	Weekly	Seeded assignment	2025-11-06 07:16:09.934399
+272	23	Requested	Beginner	14	Monthly	Seeded assignment	2025-11-10 07:16:09.934399
+223	23	Requested	Beginner	8	Daily	Seeded request	2025-11-15 07:16:09.934399
+620	11	Requested	Advanced	5	Occasionally	Seeded assignment	2025-11-05 07:16:09.934399
+518	11	Requested	Advanced	7	Weekly	Seeded request	2025-11-12 07:16:09.934399
+665	12	Requested	Expert	12	Occasionally	Seeded request	2025-11-19 07:16:09.934399
+655	13	Requested	Intermediate	6	Weekly	Seeded assignment	2025-11-12 07:16:09.934399
+172	1	Requested	Advanced	5	Occasionally	Seeded request	2025-11-10 07:16:09.934399
+229	8	Requested	Advanced	2	Weekly	Seeded request	2025-11-11 07:16:09.934399
+84	10	Requested	Intermediate	2	Monthly	Seeded assignment	2025-11-21 07:16:09.934399
+346	1	Requested	Intermediate	2	Occasionally	Seeded assignment	2025-11-20 07:16:09.934399
+521	10	Requested	Advanced	9	Occasionally	Seeded assignment	2025-11-26 07:16:09.934399
+665	5	Requested	Beginner	8	Weekly	Seeded assignment	2025-11-16 07:16:09.934399
+752	18	Requested	Expert	6	Daily	Seeded request	2025-11-10 07:16:09.934399
+848	12	Requested	Beginner	6	Weekly	Seeded assignment	2025-11-20 07:16:09.934399
+729	16	Requested	Expert	13	Weekly	Seeded assignment	2025-11-24 07:16:09.934399
+911	8	Requested	Advanced	6	Occasionally	Seeded assignment	2025-11-04 07:16:09.934399
+304	4	Requested	Beginner	11	Daily	Seeded assignment	2025-11-19 07:16:09.934399
+594	12	Requested	Advanced	6	Occasionally	Seeded assignment	2025-11-06 07:16:09.934399
+98	18	Requested	Intermediate	5	Occasionally	Seeded assignment	2025-11-22 07:16:09.934399
+89	20	Requested	Intermediate	4	Daily	Seeded request	2025-11-12 07:16:09.934399
+640	20	Requested	Expert	3	Daily	Seeded request	2025-11-07 07:16:09.934399
+255	20	Requested	Advanced	12	Occasionally	Seeded request	2025-11-14 07:16:09.934399
+753	6	Requested	Expert	14	Occasionally	Seeded request	2025-11-14 07:16:09.934399
+474	9	Requested	Advanced	10	Occasionally	Seeded request	2025-11-30 07:16:09.934399
+468	16	Requested	Intermediate	12	Weekly	Seeded assignment	2025-11-04 07:16:09.934399
+799	21	Requested	Beginner	0	Monthly	Seeded request	2025-11-20 07:16:09.934399
+851	9	Requested	Intermediate	2	Occasionally	Seeded request	2025-11-28 07:16:09.934399
+157	6	Requested	Intermediate	14	Monthly	Seeded assignment	2025-11-16 07:16:09.934399
+306	8	Requested	Beginner	7	Daily	Seeded assignment	2025-11-09 07:16:09.934399
+139	20	Requested	Advanced	14	Daily	Seeded request	2025-11-16 07:16:09.934399
+614	20	Requested	Expert	2	Occasionally	Seeded assignment	2025-11-18 07:16:09.934399
+508	11	Requested	Advanced	2	Monthly	Seeded assignment	2025-11-19 07:16:09.934399
+973	10	Requested	Intermediate	5	Weekly	Seeded assignment	2025-11-18 07:16:09.934399
+633	18	Requested	Beginner	13	Weekly	Seeded assignment	2025-11-28 07:16:09.934399
+267	25	Requested	Advanced	13	Monthly	Seeded assignment	2025-11-15 07:16:09.934399
+249	17	Requested	Expert	14	Daily	Seeded request	2025-11-05 07:16:09.934399
+929	23	Requested	Expert	0	Monthly	Seeded assignment	2025-11-18 07:16:09.934399
+152	1	Requested	Advanced	7	Occasionally	Seeded assignment	2025-11-19 07:16:09.934399
+505	20	Requested	Beginner	10	Daily	Seeded request	2025-11-10 07:16:09.934399
+817	12	Requested	Intermediate	8	Weekly	Seeded request	2025-11-11 07:16:09.934399
+819	3	Requested	Beginner	15	Monthly	Seeded request	2025-11-25 07:16:09.934399
+5	1	Requested	Beginner	7	Occasionally	Seeded request	2025-11-21 07:16:09.934399
+938	9	Requested	Intermediate	3	Daily	Seeded assignment	2025-11-11 07:16:09.934399
+61	6	Requested	Advanced	9	Monthly	Seeded request	2025-11-11 07:16:09.934399
+425	23	Requested	Expert	5	Daily	Seeded assignment	2025-11-05 07:16:09.934399
+901	6	Requested	Expert	15	Daily	Seeded request	2025-11-14 07:16:09.934399
+554	12	Requested	Beginner	9	Occasionally	Seeded request	2025-11-10 07:16:09.934399
+512	11	Requested	Beginner	1	Monthly	Seeded assignment	2025-11-24 07:16:09.934399
+944	9	Approved	Expert	13	Occasionally	Seeded request	\N
+123	3	Requested	Advanced	3	Occasionally	Seeded assignment	2025-11-11 07:16:09.934399
+756	19	Requested	Expert	15	Monthly	Seeded request	2025-12-01 07:16:09.934399
+641	6	Requested	Intermediate	0	Weekly	Seeded assignment	2025-11-24 07:16:09.934399
+653	13	Requested	Intermediate	15	Weekly	Seeded request	2025-11-17 07:16:09.934399
+830	7	Requested	Advanced	2	Occasionally	Seeded request	2025-11-17 07:16:09.934399
+283	24	Requested	Advanced	1	Monthly	Seeded request	2025-11-20 07:16:09.934399
+24	19	Requested	Advanced	14	Daily	Seeded request	2025-11-26 07:16:09.934399
+608	17	Requested	Beginner	3	Monthly	Seeded assignment	2025-11-25 07:16:09.934399
+750	6	Requested	Intermediate	3	Occasionally	Seeded assignment	2025-11-09 07:16:09.934399
+827	22	Requested	Expert	15	Daily	Seeded assignment	2025-11-10 07:16:09.934399
+336	23	Requested	Intermediate	10	Occasionally	Seeded request	2025-11-29 07:16:09.934399
+29	7	Requested	Expert	15	Monthly	Seeded request	2025-11-15 07:16:09.934399
+426	20	Requested	Advanced	11	Weekly	Seeded request	2025-11-18 07:16:09.934399
+563	1	Requested	Advanced	9	Daily	Seeded assignment	2025-11-03 07:16:09.934399
+512	1	Requested	Expert	8	Monthly	Seeded assignment	2025-11-23 07:16:09.934399
+258	5	Requested	Beginner	6	Occasionally	Seeded assignment	2025-11-24 07:16:09.934399
+428	3	Requested	Intermediate	12	Monthly	Seeded request	2025-11-29 07:16:09.934399
+584	21	Requested	Beginner	12	Monthly	Seeded assignment	2025-11-25 07:16:09.934399
+131	16	Requested	Advanced	6	Monthly	Seeded request	2025-11-20 07:16:09.934399
+986	6	Requested	Beginner	1	Weekly	Seeded request	2025-11-28 07:16:09.934399
+234	9	Requested	Expert	11	Monthly	Seeded request	2025-11-25 07:16:09.934399
+672	3	Requested	Intermediate	8	Weekly	Seeded request	2025-11-20 07:16:09.934399
+948	25	Requested	Intermediate	0	Occasionally	Seeded assignment	2025-11-16 07:16:09.934399
+643	13	Requested	Expert	11	Daily	Seeded assignment	2025-11-07 07:16:09.934399
+371	25	Requested	Intermediate	8	Daily	Seeded assignment	2025-11-14 07:16:09.934399
+99	8	Requested	Beginner	0	Monthly	Seeded request	2025-11-13 07:16:09.934399
+770	11	Requested	Advanced	9	Weekly	Seeded assignment	2025-11-11 07:16:09.934399
+544	10	Requested	Advanced	15	Weekly	Seeded assignment	2025-11-04 07:16:09.934399
+135	22	Requested	Expert	0	Occasionally	Seeded assignment	2025-11-30 07:16:09.934399
+332	20	Requested	Intermediate	6	Daily	Seeded assignment	2025-11-10 07:16:09.934399
+325	16	Requested	Advanced	4	Daily	Seeded request	2025-11-27 07:16:09.934399
+362	8	Requested	Beginner	12	Monthly	Seeded assignment	2025-11-10 07:16:09.934399
+880	18	Requested	Advanced	14	Occasionally	Seeded assignment	2025-11-25 07:16:09.934399
+406	23	Requested	Intermediate	8	Weekly	Seeded assignment	2025-11-28 07:16:09.934399
+348	20	Requested	Expert	2	Monthly	Seeded assignment	2025-11-30 07:16:09.934399
+619	10	Requested	Advanced	9	Weekly	Seeded assignment	2025-11-12 07:16:09.934399
+284	9	Requested	Advanced	13	Occasionally	Seeded request	2025-11-29 07:16:09.934399
+98	4	Requested	Beginner	11	Monthly	Seeded assignment	2025-11-04 07:16:09.934399
+226	20	Requested	Expert	11	Occasionally	Seeded assignment	2025-11-08 07:16:09.934399
+623	6	Requested	Advanced	14	Monthly	Seeded assignment	2025-11-07 07:16:09.934399
+674	4	Requested	Expert	10	Daily	Seeded assignment	2025-11-27 07:16:09.934399
+233	20	Requested	Advanced	12	Occasionally	Seeded assignment	2025-11-09 07:16:09.934399
+774	3	Requested	Advanced	2	Daily	Seeded assignment	2025-11-04 07:16:09.934399
+271	23	Requested	Advanced	2	Occasionally	Seeded assignment	2025-11-06 07:16:09.934399
+946	18	Requested	Expert	5	Monthly	Seeded request	2025-11-14 07:16:09.934399
+10	4	Requested	Expert	11	Weekly	Seeded request	2025-11-12 07:16:09.934399
+763	4	Requested	Beginner	7	Weekly	Seeded assignment	2025-12-02 07:16:09.934399
+261	12	Requested	Expert	11	Daily	Seeded request	2025-11-13 07:16:09.934399
+273	23	Requested	Intermediate	11	Occasionally	Seeded request	2025-11-22 07:16:09.934399
+348	12	Requested	Beginner	5	Occasionally	Seeded assignment	2025-11-30 07:16:09.934399
+553	8	Requested	Expert	12	Occasionally	Seeded assignment	2025-11-19 07:16:09.934399
+716	24	Requested	Expert	3	Occasionally	Seeded request	2025-11-30 07:16:09.934399
+102	22	Requested	Intermediate	6	Occasionally	Seeded request	2025-11-15 07:16:09.934399
+911	24	Requested	Expert	7	Weekly	Seeded assignment	2025-11-24 07:16:09.934399
+898	22	Requested	Expert	6	Occasionally	Seeded request	2025-11-19 07:16:09.934399
+526	3	Requested	Expert	8	Weekly	Seeded assignment	2025-11-14 07:16:09.934399
+848	22	Requested	Expert	2	Weekly	Seeded request	2025-11-21 07:16:09.934399
+461	20	Requested	Beginner	5	Weekly	Seeded assignment	2025-12-02 07:16:09.934399
+613	17	Requested	Intermediate	2	Occasionally	Seeded request	2025-12-02 07:16:09.934399
+166	24	Requested	Expert	5	Weekly	Seeded assignment	2025-11-25 07:16:09.934399
+247	10	Requested	Beginner	13	Weekly	Seeded assignment	2025-11-30 07:16:09.934399
+337	18	Requested	Intermediate	3	Weekly	Seeded assignment	2025-11-11 07:16:09.934399
+478	16	Requested	Intermediate	10	Monthly	Seeded request	2025-11-27 07:16:09.934399
+369	7	Requested	Advanced	2	Daily	Seeded assignment	2025-11-22 07:16:09.934399
+295	9	Requested	Expert	1	Daily	Seeded request	2025-11-21 07:16:09.934399
+830	23	Requested	Advanced	12	Weekly	Seeded request	2025-11-15 07:16:09.934399
+358	13	Requested	Intermediate	13	Occasionally	Seeded assignment	2025-11-16 07:16:09.934399
+571	6	Requested	Beginner	1	Occasionally	Seeded assignment	2025-12-01 07:16:09.934399
+949	22	Requested	Advanced	13	Weekly	Seeded request	2025-11-05 07:16:09.934399
+589	19	Requested	Advanced	0	Occasionally	Seeded assignment	2025-11-09 07:16:09.934399
+434	7	Requested	Beginner	2	Monthly	Seeded request	2025-11-03 07:16:09.934399
+492	11	Requested	Advanced	5	Occasionally	Seeded request	2025-11-06 07:16:09.934399
+378	8	Requested	Beginner	15	Monthly	Seeded request	2025-11-14 07:16:09.934399
+214	1	Requested	Expert	8	Occasionally	Seeded assignment	2025-11-21 07:16:09.934399
+792	17	Requested	Advanced	15	Weekly	Seeded request	2025-11-18 07:16:09.934399
+722	12	Requested	Beginner	5	Occasionally	Seeded assignment	2025-11-19 07:16:09.934399
+784	17	Requested	Beginner	14	Weekly	Seeded request	2025-11-10 07:16:09.934399
+953	10	Requested	Expert	15	Occasionally	Seeded assignment	2025-11-27 07:16:09.934399
+483	23	Requested	Advanced	12	Daily	Seeded assignment	2025-11-25 07:16:09.934399
+599	16	Requested	Intermediate	3	Occasionally	Seeded assignment	2025-11-22 07:16:09.934399
+314	13	Requested	Advanced	5	Occasionally	Seeded assignment	2025-11-12 07:16:09.934399
+148	21	Requested	Expert	6	Occasionally	Seeded assignment	2025-11-10 07:16:09.934399
+448	10	Requested	Advanced	10	Daily	Seeded assignment	2025-11-17 07:16:09.934399
+55	11	Requested	Beginner	8	Daily	Seeded assignment	2025-11-30 07:16:09.934399
+426	5	Requested	Advanced	10	Weekly	Seeded assignment	2025-11-13 07:16:09.934399
+278	18	Requested	Beginner	13	Weekly	Seeded request	2025-11-27 07:16:09.934399
+452	1	Requested	Beginner	13	Daily	Seeded request	2025-11-09 07:16:09.934399
+544	24	Requested	Intermediate	14	Daily	Seeded request	2025-11-24 07:16:09.934399
+969	3	Requested	Beginner	11	Occasionally	Seeded assignment	2025-11-20 07:16:09.934399
+517	21	Requested	Advanced	2	Occasionally	Seeded assignment	2025-11-18 07:16:09.934399
+585	23	Requested	Beginner	11	Occasionally	Seeded assignment	2025-11-17 07:16:09.934399
+665	22	Requested	Advanced	11	Occasionally	Seeded assignment	2025-11-28 07:16:09.934399
+393	6	Requested	Expert	2	Monthly	Seeded assignment	2025-11-15 07:16:09.934399
+648	21	Requested	Expert	9	Weekly	Seeded assignment	2025-11-18 07:16:09.934399
+81	6	Requested	Intermediate	5	Weekly	Seeded request	2025-11-05 07:16:09.934399
+237	24	Requested	Beginner	10	Occasionally	Seeded assignment	2025-11-26 07:16:09.934399
+240	17	Requested	Advanced	12	Monthly	Seeded assignment	2025-11-14 07:16:09.934399
+427	18	Requested	Expert	15	Daily	Seeded assignment	2025-11-24 07:16:09.934399
+151	4	Requested	Intermediate	5	Monthly	Seeded assignment	2025-11-04 07:16:09.934399
+920	17	Requested	Advanced	4	Monthly	Seeded assignment	2025-11-18 07:16:09.934399
+522	17	Requested	Intermediate	8	Occasionally	Seeded request	2025-11-11 07:16:09.934399
+600	18	Requested	Beginner	12	Monthly	Seeded assignment	2025-11-09 07:16:09.934399
+259	3	Approved	Beginner	0	Daily	Seeded request	2025-11-15 12:02:27.264874
+769	5	Approved	Intermediate	3	Weekly	Seeded request	\N
+67	19	Approved	Advanced	0	Occasionally	Seeded assignment	2025-11-26 05:06:27.264874
+48	18	Approved	Expert	8	Daily	Seeded assignment	2025-11-07 23:52:27.264874
+230	25	Approved	Beginner	9	Weekly	Seeded assignment	2025-11-28 03:46:27.264874
+553	20	Approved	Beginner	5	Weekly	Seeded request	\N
+516	5	Approved	Expert	2	Weekly	Seeded assignment	\N
+71	21	Approved	Beginner	14	Occasionally	Seeded assignment	\N
+697	20	Approved	Beginner	1	Weekly	Seeded request	\N
+785	25	Approved	Advanced	8	Monthly	Seeded request	\N
+356	18	Approved	Intermediate	0	Daily	Seeded assignment	\N
+940	20	Approved	Expert	14	Occasionally	Seeded assignment	2025-11-17 20:04:27.264874
+844	19	Approved	Intermediate	14	Weekly	Seeded assignment	2025-11-08 18:58:27.264874
+248	13	Approved	Advanced	12	Daily	Seeded assignment	2025-12-02 21:28:27.264874
+251	17	Approved	Beginner	7	Weekly	Seeded request	\N
+542	11	Approved	Advanced	0	Weekly	Seeded assignment	2025-11-11 09:02:27.264874
+288	24	Approved	Advanced	2	Occasionally	Seeded assignment	\N
+500	8	Approved	Advanced	11	Occasionally	Seeded assignment	2025-11-18 02:21:27.264874
+937	7	Approved	Beginner	15	Monthly	Seeded request	\N
+402	4	Approved	Expert	14	Daily	Seeded request	\N
+117	19	Approved	Expert	4	Occasionally	Seeded assignment	2025-11-07 23:02:27.264874
+713	12	Approved	Intermediate	8	Weekly	Seeded assignment	2025-11-10 07:17:27.264874
+99	5	Approved	Expert	6	Occasionally	Seeded assignment	2025-11-07 02:38:27.264874
+410	4	Approved	Beginner	2	Weekly	Seeded assignment	\N
+372	3	Approved	Intermediate	7	Occasionally	Seeded assignment	\N
+769	12	Approved	Beginner	4	Monthly	Seeded assignment	\N
+179	13	Approved	Intermediate	9	Monthly	Seeded assignment	\N
+778	18	Approved	Intermediate	14	Monthly	Seeded request	2025-11-03 13:52:27.264874
+820	8	Approved	Expert	13	Weekly	Seeded request	\N
+385	18	Approved	Advanced	2	Weekly	Seeded assignment	2025-11-22 02:51:27.264874
+24	6	Approved	Beginner	2	Weekly	Seeded assignment	\N
+581	23	Requested	Beginner	8	Weekly	Seeded request	2025-11-05 07:16:09.934399
+196	17	Requested	Expert	10	Occasionally	Seeded assignment	2025-11-25 07:16:09.934399
+873	1	Requested	Intermediate	5	Occasionally	Seeded assignment	2025-11-29 07:16:09.934399
+151	25	Requested	Expert	6	Monthly	Seeded assignment	2025-11-17 07:16:09.934399
+341	18	Approved	Expert	2	Monthly	Seeded request	\N
+509	20	Approved	Beginner	15	Monthly	Seeded request	2025-11-09 01:41:27.264874
+814	22	Approved	Advanced	10	Weekly	Seeded assignment	\N
+905	4	Approved	Intermediate	3	Monthly	Seeded assignment	2025-11-23 10:33:27.264874
+98	25	Approved	Expert	8	Occasionally	Seeded assignment	\N
+520	18	Approved	Intermediate	6	Occasionally	Seeded request	2025-11-24 12:39:27.264874
+958	17	Approved	Intermediate	5	Occasionally	Seeded request	\N
+74	20	Approved	Expert	10	Weekly	Seeded assignment	\N
+795	13	Approved	Expert	9	Occasionally	Seeded assignment	2025-11-30 11:50:27.264874
+45	4	Approved	Intermediate	14	Weekly	Seeded request	\N
+726	3	Approved	Expert	14	Daily	Seeded request	2025-11-07 07:55:27.264874
+293	23	Approved	Advanced	8	Monthly	Seeded request	2025-11-04 16:11:27.264874
+835	18	Approved	Beginner	6	Monthly	Seeded request	\N
+894	16	Approved	Expert	12	Weekly	Seeded assignment	\N
+243	25	Approved	Beginner	1	Weekly	Seeded assignment	2025-11-29 21:27:27.264874
+863	21	Approved	Intermediate	5	Monthly	Seeded request	\N
+450	9	Approved	Beginner	7	Daily	Seeded assignment	\N
+569	10	Approved	Intermediate	0	Weekly	Seeded assignment	\N
+781	25	Approved	Beginner	0	Occasionally	Seeded request	\N
+222	20	Approved	Advanced	14	Monthly	Seeded request	2025-11-06 07:05:27.264874
+431	5	Approved	Intermediate	6	Occasionally	Seeded assignment	\N
+718	21	Approved	Expert	10	Weekly	Seeded assignment	\N
+429	21	Approved	Advanced	5	Daily	Seeded request	\N
+424	7	Approved	Expert	0	Daily	Seeded assignment	2025-11-06 21:32:27.264874
+400	25	Approved	Expert	6	Occasionally	Seeded request	\N
+922	1	Approved	Advanced	3	Daily	Seeded assignment	\N
+473	25	Approved	Beginner	0	Weekly	Seeded assignment	\N
+166	5	Approved	Beginner	0	Monthly	Seeded assignment	\N
+237	12	Approved	Intermediate	5	Occasionally	Seeded assignment	2025-11-29 11:10:27.264874
+246	3	Approved	Advanced	15	Weekly	Seeded assignment	\N
+724	1	Approved	Beginner	1	Daily	Seeded request	\N
+500	10	Approved	Intermediate	11	Daily	Seeded request	\N
+88	19	Approved	Advanced	7	Daily	Seeded request	\N
+13	10	Approved	Intermediate	13	Daily	Seeded assignment	\N
+51	13	Approved	Beginner	15	Monthly	Seeded assignment	2025-11-18 11:32:27.264874
+197	18	Approved	Beginner	7	Monthly	Seeded request	2025-11-18 21:07:27.264874
+716	22	Approved	Advanced	7	Monthly	Seeded assignment	\N
+808	3	Approved	Advanced	8	Occasionally	Seeded assignment	\N
+898	24	Approved	Intermediate	1	Weekly	Seeded assignment	\N
+527	9	Approved	Intermediate	1	Weekly	Seeded request	\N
+773	9	Approved	Beginner	2	Daily	Seeded request	2025-11-25 12:04:27.264874
+933	9	Approved	Expert	11	Weekly	Seeded request	2025-11-16 16:10:27.264874
+430	13	Approved	Intermediate	9	Daily	Seeded assignment	\N
+166	22	Approved	Advanced	8	Occasionally	Seeded request	2025-11-25 03:17:27.264874
+934	13	Approved	Intermediate	0	Daily	Seeded assignment	2025-12-02 06:31:27.264874
+887	25	Approved	Expert	8	Daily	Seeded request	2025-11-30 08:08:27.264874
+659	16	Approved	Advanced	1	Daily	Seeded request	\N
+547	6	Approved	Advanced	0	Daily	Seeded request	\N
+755	7	Approved	Beginner	12	Weekly	Seeded request	\N
+706	17	Approved	Expert	15	Occasionally	Seeded assignment	\N
+215	23	Approved	Expert	8	Weekly	Seeded assignment	\N
+709	18	Approved	Beginner	2	Daily	Seeded assignment	2025-11-26 02:57:27.264874
+949	24	Approved	Beginner	12	Monthly	Seeded assignment	\N
+455	25	Approved	Advanced	2	Monthly	Seeded request	\N
+961	11	Approved	Advanced	15	Monthly	Seeded assignment	2025-11-14 12:24:27.264874
+511	5	Approved	Advanced	11	Occasionally	Seeded request	\N
+40	8	Approved	Expert	4	Occasionally	Seeded request	2025-11-08 06:06:27.264874
+182	8	Approved	Beginner	6	Monthly	Seeded assignment	2025-11-03 17:22:27.264874
+209	25	Approved	Advanced	15	Daily	Seeded assignment	\N
+277	8	Approved	Expert	14	Occasionally	Seeded assignment	2025-11-15 14:12:27.264874
+210	16	Approved	Advanced	9	Weekly	Seeded request	2025-11-25 11:03:27.264874
+597	1	Approved	Expert	2	Monthly	Seeded assignment	2025-11-03 19:31:27.264874
+800	6	Approved	Expert	13	Monthly	Seeded request	2025-11-17 05:15:27.264874
+169	1	Approved	Expert	9	Monthly	Seeded assignment	\N
+8	11	Approved	Intermediate	13	Monthly	Seeded assignment	\N
+421	23	Approved	Expert	15	Monthly	Seeded assignment	2025-11-27 08:23:27.264874
+82	25	Approved	Expert	14	Monthly	Seeded assignment	2025-11-06 06:00:27.264874
+313	11	Approved	Advanced	10	Occasionally	Seeded request	2025-11-18 23:57:27.264874
+581	7	Approved	Intermediate	4	Weekly	Seeded assignment	\N
+924	9	Approved	Advanced	2	Weekly	Seeded assignment	\N
+617	21	Approved	Intermediate	9	Monthly	Seeded assignment	\N
+491	22	Approved	Expert	10	Daily	Seeded request	2025-11-19 13:42:27.264874
+870	13	Approved	Beginner	3	Daily	Seeded request	2025-11-20 20:42:27.264874
+689	6	Approved	Beginner	12	Monthly	Seeded assignment	\N
+453	4	Approved	Advanced	6	Weekly	Seeded request	\N
+365	8	Approved	Expert	8	Weekly	Seeded request	\N
+683	12	Approved	Advanced	1	Daily	Seeded assignment	\N
+971	18	Approved	Advanced	9	Weekly	Seeded request	\N
+519	7	Approved	Expert	1	Daily	Seeded assignment	2025-11-13 23:38:27.264874
+240	16	Approved	Intermediate	6	Monthly	Seeded assignment	\N
+169	9	Approved	Beginner	12	Occasionally	Seeded request	2025-11-21 05:49:27.264874
+711	22	Approved	Intermediate	5	Weekly	Seeded assignment	2025-11-25 20:38:27.264874
+87	9	Approved	Beginner	4	Daily	Seeded assignment	2025-11-05 20:48:27.264874
+88	4	Approved	Beginner	13	Occasionally	Seeded assignment	\N
+567	19	Approved	Expert	5	Monthly	Seeded request	\N
+481	5	Approved	Expert	15	Occasionally	Seeded assignment	\N
+612	16	Approved	Expert	10	Daily	Seeded assignment	\N
+134	5	Approved	Expert	5	Daily	Seeded request	\N
+571	18	Approved	Intermediate	4	Monthly	Seeded assignment	\N
+661	7	Approved	Expert	10	Daily	Seeded assignment	\N
+628	11	Approved	Expert	4	Occasionally	Seeded request	\N
+436	22	Approved	Intermediate	3	Daily	Seeded assignment	2025-11-25 16:47:27.264874
+282	21	Approved	Intermediate	12	Occasionally	Seeded assignment	\N
+731	9	Approved	Expert	10	Weekly	Seeded request	\N
+175	12	Approved	Advanced	10	Daily	Seeded request	\N
+651	23	Approved	Expert	8	Daily	Seeded request	2025-11-26 20:41:27.264874
+216	6	Approved	Intermediate	8	Monthly	Seeded assignment	\N
+501	18	Approved	Advanced	7	Occasionally	Seeded request	2025-11-28 04:24:27.264874
+536	7	Approved	Intermediate	5	Monthly	Seeded assignment	2025-11-10 03:30:27.264874
+980	25	Approved	Expert	1	Monthly	Seeded request	\N
+821	13	Approved	Beginner	13	Occasionally	Seeded request	\N
+967	13	Approved	Advanced	2	Occasionally	Seeded assignment	\N
+514	5	Approved	Intermediate	13	Occasionally	Seeded assignment	\N
+444	23	Approved	Intermediate	10	Weekly	Seeded assignment	\N
+869	7	Approved	Expert	7	Monthly	Seeded assignment	\N
+456	6	Approved	Beginner	9	Monthly	Seeded assignment	\N
+459	23	Approved	Expert	13	Weekly	Seeded assignment	\N
+162	5	Approved	Expert	3	Occasionally	Seeded assignment	\N
+143	10	Approved	Expert	11	Weekly	Seeded request	\N
+823	17	Approved	Intermediate	5	Monthly	Seeded assignment	\N
+651	7	Approved	Beginner	14	Weekly	Seeded request	2025-11-23 00:58:27.264874
+743	16	Approved	Beginner	11	Weekly	Seeded request	\N
+536	23	Approved	Expert	8	Weekly	Seeded request	\N
+861	17	Approved	Intermediate	6	Weekly	Seeded assignment	2025-12-02 23:36:27.264874
+86	1	Approved	Beginner	12	Weekly	Seeded assignment	\N
+671	4	Approved	Intermediate	4	Occasionally	Seeded assignment	\N
+84	20	Approved	Intermediate	8	Monthly	Seeded request	2025-11-30 01:54:27.264874
+948	3	Approved	Intermediate	13	Occasionally	Seeded request	\N
+346	7	Approved	Beginner	6	Weekly	Seeded assignment	2025-11-25 11:47:27.264874
+359	21	Approved	Advanced	11	Daily	Seeded request	\N
+322	20	Approved	Expert	5	Daily	Seeded assignment	2025-11-20 22:09:27.264874
+520	4	Approved	Beginner	5	Occasionally	Seeded assignment	\N
+464	1	Approved	Expert	11	Monthly	Seeded assignment	\N
+331	19	Approved	Expert	3	Daily	Seeded request	\N
+826	1	Approved	Beginner	15	Weekly	Seeded assignment	\N
+115	20	Approved	Beginner	13	Occasionally	Seeded request	2025-11-04 23:17:27.264874
+844	4	Approved	Intermediate	0	Weekly	Seeded request	\N
+177	7	Approved	Expert	1	Monthly	Seeded request	\N
+508	23	Approved	Advanced	9	Monthly	Seeded assignment	\N
+81	3	Approved	Intermediate	2	Monthly	Seeded request	2025-12-02 10:43:27.264874
+385	3	Approved	Beginner	3	Occasionally	Seeded assignment	2025-11-14 04:39:27.264874
+716	5	Approved	Advanced	13	Monthly	Seeded assignment	2025-11-22 06:30:27.264874
+476	13	Approved	Expert	5	Occasionally	Seeded assignment	2025-11-28 12:59:27.264874
+934	16	Approved	Beginner	6	Occasionally	Seeded assignment	\N
+315	7	Approved	Intermediate	4	Daily	Seeded assignment	\N
+14	13	Approved	Expert	6	Weekly	Seeded assignment	\N
+530	21	Approved	Expert	8	Daily	Seeded assignment	\N
+766	20	Approved	Expert	10	Weekly	Seeded request	2025-11-29 06:25:27.264874
+350	3	Approved	Intermediate	6	Monthly	Seeded assignment	\N
+29	9	Approved	Expert	4	Monthly	Seeded request	\N
+311	20	Approved	Beginner	15	Daily	Seeded assignment	\N
+734	3	Approved	Advanced	1	Weekly	Seeded assignment	\N
+753	19	Approved	Intermediate	15	Occasionally	Seeded assignment	\N
+969	6	Approved	Intermediate	15	Weekly	Seeded assignment	\N
+884	5	Approved	Intermediate	14	Monthly	Seeded assignment	\N
+616	19	Approved	Advanced	4	Weekly	Seeded request	\N
+748	17	Approved	Expert	2	Weekly	Seeded request	2025-11-08 22:43:27.264874
+126	22	Approved	Expert	10	Occasionally	Seeded request	2025-11-24 08:29:27.264874
+239	23	Approved	Expert	15	Monthly	Seeded assignment	2025-11-06 06:14:27.264874
+512	7	Approved	Expert	15	Weekly	Seeded assignment	2025-11-24 01:57:27.264874
+284	7	Approved	Advanced	15	Monthly	Seeded request	\N
+580	22	Approved	Intermediate	1	Daily	Seeded assignment	\N
+479	7	Approved	Intermediate	13	Monthly	Seeded assignment	2025-11-06 11:30:27.264874
+557	4	Approved	Intermediate	13	Monthly	Seeded request	\N
+516	22	Approved	Expert	14	Monthly	Seeded request	\N
+371	18	Approved	Advanced	1	Monthly	Seeded request	2025-11-24 08:46:27.264874
+405	18	Approved	Advanced	5	Weekly	Seeded assignment	\N
+488	22	Approved	Beginner	3	Weekly	Seeded request	2025-11-04 00:59:27.264874
+258	24	Approved	Expert	5	Monthly	Seeded assignment	2025-11-11 20:22:27.264874
+68	21	Approved	Advanced	4	Daily	Seeded assignment	2025-11-10 11:41:27.264874
+538	13	Approved	Intermediate	4	Weekly	Seeded assignment	\N
+219	1	Approved	Beginner	13	Monthly	Seeded assignment	\N
+248	16	Approved	Intermediate	11	Occasionally	Seeded request	\N
+347	18	Approved	Beginner	5	Occasionally	Seeded request	\N
+552	1	Approved	Expert	14	Daily	Seeded assignment	\N
+843	23	Approved	Advanced	14	Monthly	Seeded assignment	\N
+567	3	Approved	Expert	6	Monthly	Seeded request	\N
+392	24	Approved	Expert	15	Daily	Seeded assignment	\N
+311	12	Approved	Expert	15	Monthly	Seeded assignment	\N
+302	9	Approved	Expert	14	Daily	Seeded assignment	\N
+955	3	Approved	Beginner	10	Monthly	Seeded assignment	\N
+658	3	Approved	Expert	4	Daily	Seeded assignment	2025-11-18 13:25:27.264874
+715	22	Approved	Intermediate	12	Daily	Seeded assignment	\N
+857	11	Approved	Beginner	6	Daily	Seeded request	2025-11-17 04:38:27.264874
+418	16	Approved	Beginner	14	Occasionally	Seeded request	\N
+696	10	Approved	Beginner	12	Daily	Seeded assignment	2025-11-07 07:44:27.264874
+792	13	Approved	Beginner	1	Occasionally	Seeded assignment	2025-11-21 02:46:27.264874
+892	21	Approved	Intermediate	0	Monthly	Seeded assignment	\N
+351	9	Approved	Intermediate	4	Daily	Seeded assignment	\N
+410	18	Approved	Advanced	0	Weekly	Seeded request	2025-11-28 13:47:27.264874
+207	16	Approved	Expert	14	Daily	Seeded request	\N
+922	9	Approved	Beginner	7	Occasionally	Seeded request	2025-12-01 06:43:27.264874
+153	17	Approved	Advanced	14	Monthly	Seeded assignment	\N
+186	6	Approved	Expert	14	Weekly	Seeded assignment	2025-11-16 19:42:27.264874
+388	20	Approved	Intermediate	5	Daily	Seeded assignment	\N
+434	9	Approved	Expert	6	Daily	Seeded request	\N
+891	21	Approved	Beginner	12	Daily	Seeded assignment	2025-11-04 04:54:27.264874
+313	1	Approved	Expert	15	Monthly	Seeded request	2025-11-06 02:09:27.264874
+176	20	Approved	Intermediate	7	Weekly	Seeded request	\N
+92	5	Approved	Advanced	6	Daily	Seeded assignment	\N
+232	17	Approved	Beginner	2	Daily	Seeded request	2025-11-03 23:41:27.264874
+533	6	Approved	Expert	3	Daily	Seeded assignment	\N
+585	1	Approved	Advanced	14	Occasionally	Seeded request	2025-11-21 23:17:27.264874
+99	22	Approved	Intermediate	8	Weekly	Seeded assignment	2025-11-19 13:50:27.264874
+936	13	Approved	Intermediate	11	Daily	Seeded assignment	2025-11-08 15:16:27.264874
+140	21	Approved	Beginner	14	Daily	Seeded assignment	\N
+125	21	Approved	Intermediate	1	Daily	Seeded assignment	\N
+959	16	Approved	Expert	11	Weekly	Seeded request	\N
+363	3	Approved	Beginner	11	Monthly	Seeded assignment	\N
+647	23	Approved	Beginner	10	Weekly	Seeded request	\N
+153	21	Approved	Expert	1	Occasionally	Seeded request	2025-11-18 11:58:27.264874
+883	7	Approved	Expert	13	Weekly	Seeded assignment	2025-12-01 11:39:27.264874
+174	5	Approved	Expert	15	Daily	Seeded assignment	2025-11-13 01:46:27.264874
+930	4	Approved	Beginner	11	Daily	Seeded assignment	2025-11-15 16:40:27.264874
+903	4	Approved	Expert	4	Occasionally	Seeded request	2025-11-20 06:03:27.264874
+370	16	Approved	Beginner	15	Weekly	Seeded assignment	\N
+601	23	Approved	Expert	14	Weekly	Seeded assignment	\N
+106	23	Approved	Beginner	6	Monthly	Seeded request	\N
+956	6	Approved	Intermediate	4	Monthly	Seeded request	\N
+809	1	Approved	Expert	6	Daily	Seeded request	\N
+753	18	Approved	Intermediate	15	Weekly	Seeded request	\N
+821	16	Approved	Intermediate	3	Monthly	Seeded request	\N
+732	16	Approved	Advanced	6	Monthly	Seeded request	2025-11-29 07:39:27.264874
+672	6	Approved	Expert	4	Weekly	Seeded assignment	\N
+517	13	Approved	Intermediate	5	Weekly	Seeded request	\N
+242	13	Approved	Expert	11	Daily	Seeded request	2025-11-19 14:23:27.264874
+592	12	Approved	Expert	12	Monthly	Seeded request	\N
+907	12	Approved	Advanced	13	Daily	Seeded assignment	\N
+827	8	Approved	Advanced	2	Daily	Seeded assignment	\N
+286	3	Approved	Intermediate	6	Occasionally	Seeded assignment	\N
+34	8	Approved	Expert	15	Monthly	Seeded request	\N
+865	17	Approved	Beginner	13	Weekly	Seeded assignment	\N
+405	7	Approved	Expert	2	Weekly	Seeded request	\N
+620	23	Approved	Advanced	15	Weekly	Seeded assignment	2025-12-02 18:13:27.264874
+91	24	Approved	Beginner	15	Monthly	Seeded assignment	2025-11-25 10:11:27.264874
+180	16	Approved	Advanced	12	Daily	Seeded request	2025-11-12 01:31:27.264874
+175	22	Approved	Expert	11	Weekly	Seeded assignment	2025-11-14 10:53:27.264874
+808	18	Approved	Expert	13	Occasionally	Seeded assignment	\N
+641	3	Approved	Expert	2	Daily	Seeded assignment	\N
+204	4	Approved	Beginner	10	Weekly	Seeded request	2025-11-16 04:51:27.264874
+494	17	Approved	Advanced	4	Daily	Seeded assignment	2025-11-08 22:57:27.264874
+671	19	Approved	Advanced	11	Monthly	Seeded request	2025-11-04 15:02:27.264874
+690	25	Approved	Advanced	10	Occasionally	Seeded request	\N
+68	17	Approved	Intermediate	9	Weekly	Seeded assignment	\N
+100	10	Approved	Expert	7	Occasionally	Seeded assignment	\N
+7	11	Approved	Intermediate	6	Monthly	Seeded request	2025-11-17 03:38:27.264874
+485	24	Approved	Intermediate	4	Occasionally	Seeded assignment	\N
+280	21	Approved	Beginner	11	Occasionally	Seeded assignment	2025-11-14 21:51:27.264874
+798	18	Approved	Advanced	15	Monthly	Seeded assignment	\N
+127	16	Approved	Intermediate	0	Weekly	Seeded request	\N
+428	6	Approved	Advanced	13	Occasionally	Seeded request	2025-11-28 09:34:27.264874
+10	6	Approved	Expert	2	Weekly	Seeded assignment	\N
+585	9	Approved	Beginner	2	Monthly	Seeded request	\N
+401	21	Approved	Beginner	14	Weekly	Seeded request	\N
+598	12	Approved	Advanced	2	Occasionally	Seeded assignment	\N
+570	21	Approved	Advanced	6	Monthly	Seeded assignment	\N
+884	12	Approved	Advanced	15	Weekly	Seeded request	\N
+971	3	Approved	Intermediate	8	Daily	Seeded assignment	\N
+472	12	Approved	Advanced	10	Monthly	Seeded request	2025-11-24 00:38:27.264874
+439	16	Approved	Intermediate	10	Weekly	Seeded request	\N
+930	3	Approved	Intermediate	6	Monthly	Seeded assignment	\N
+668	5	Approved	Expert	4	Daily	Seeded request	\N
+728	25	Approved	Beginner	10	Monthly	Seeded assignment	\N
+748	21	Approved	Advanced	14	Occasionally	Seeded request	\N
+18	8	Approved	Expert	11	Occasionally	Seeded assignment	2025-11-19 07:36:27.264874
+775	10	Approved	Expert	11	Daily	Seeded assignment	\N
+262	9	Approved	Beginner	3	Monthly	Seeded assignment	2025-11-25 02:22:27.264874
+129	3	Approved	Beginner	1	Daily	Seeded assignment	\N
+165	21	Approved	Advanced	14	Daily	Seeded assignment	2025-11-16 09:29:27.264874
+900	6	Approved	Beginner	8	Occasionally	Seeded assignment	\N
+743	13	Approved	Beginner	4	Monthly	Seeded request	\N
+405	23	Approved	Expert	15	Occasionally	Seeded request	\N
+863	17	Approved	Expert	14	Monthly	Seeded request	2025-11-10 22:51:27.264874
+760	13	Approved	Expert	4	Weekly	Seeded request	\N
+46	24	Approved	Beginner	10	Monthly	Seeded assignment	2025-11-05 20:16:27.264874
+434	1	Approved	Advanced	12	Weekly	Seeded assignment	2025-11-17 23:57:27.264874
+381	8	Approved	Beginner	5	Daily	Seeded assignment	2025-11-21 01:59:27.264874
+757	20	Approved	Advanced	15	Weekly	Seeded assignment	2025-11-16 23:18:27.264874
+161	12	Approved	Advanced	10	Daily	Seeded assignment	\N
+332	24	Approved	Intermediate	8	Occasionally	Seeded request	\N
+510	13	Approved	Intermediate	11	Daily	Seeded assignment	2025-11-23 08:32:27.264874
+731	11	Approved	Beginner	15	Daily	Seeded request	2025-12-01 12:40:27.264874
+981	5	Approved	Intermediate	1	Occasionally	Seeded assignment	2025-11-16 13:29:27.264874
+137	23	Approved	Beginner	8	Daily	Seeded assignment	2025-11-28 19:11:27.264874
+448	20	Approved	Beginner	15	Weekly	Seeded request	2025-12-01 14:50:27.264874
+277	24	Approved	Expert	13	Daily	Seeded assignment	\N
+360	5	Approved	Intermediate	3	Daily	Seeded assignment	\N
+546	25	Approved	Intermediate	15	Occasionally	Seeded assignment	\N
+577	7	Approved	Expert	8	Weekly	Seeded assignment	\N
+220	12	Approved	Intermediate	9	Monthly	Seeded request	2025-11-15 05:10:27.264874
+48	3	Approved	Intermediate	15	Monthly	Seeded assignment	\N
+839	6	Approved	Beginner	9	Weekly	Seeded request	\N
+950	16	Approved	Expert	11	Weekly	Seeded assignment	\N
+923	21	Approved	Advanced	5	Daily	Seeded assignment	\N
+8	9	Approved	Advanced	9	Occasionally	Seeded assignment	\N
+559	6	Approved	Advanced	5	Occasionally	Seeded assignment	\N
+902	11	Approved	Beginner	6	Monthly	Seeded assignment	\N
+102	8	Approved	Expert	8	Daily	Seeded assignment	\N
+898	8	Approved	Intermediate	4	Weekly	Seeded assignment	\N
+189	21	Approved	Beginner	5	Occasionally	Seeded request	2025-11-20 18:32:27.264874
+286	4	Approved	Intermediate	5	Daily	Seeded request	\N
+637	25	Approved	Beginner	14	Weekly	Seeded assignment	\N
+2	8	Approved	Expert	9	Occasionally	Seeded request	\N
+200	19	Approved	Beginner	14	Weekly	Seeded request	\N
+799	16	Approved	Intermediate	11	Weekly	Seeded assignment	\N
+487	1	Approved	Expert	8	Occasionally	Seeded request	\N
+283	20	Approved	Expert	4	Occasionally	Seeded assignment	\N
+221	17	Approved	Intermediate	10	Occasionally	Seeded request	\N
+602	11	Approved	Beginner	10	Occasionally	Seeded request	2025-11-04 00:54:27.264874
+184	25	Approved	Expert	8	Weekly	Seeded request	\N
+986	4	Approved	Expert	12	Occasionally	Seeded assignment	2025-11-10 09:51:27.264874
+648	8	Approved	Expert	3	Daily	Seeded assignment	2025-11-22 16:18:27.264874
+599	20	Approved	Intermediate	0	Monthly	Seeded request	\N
+954	1	Approved	Expert	8	Monthly	Seeded request	2025-11-23 10:11:27.264874
+539	8	Approved	Intermediate	5	Daily	Seeded assignment	\N
+467	8	Approved	Expert	8	Weekly	Seeded assignment	\N
+27	18	Approved	Intermediate	3	Weekly	Seeded request	2025-11-24 02:23:27.264874
+432	4	Approved	Expert	6	Daily	Seeded request	2025-12-03 04:13:27.264874
+846	4	Approved	Intermediate	7	Occasionally	Seeded assignment	2025-11-10 06:50:27.264874
+435	1	Approved	Beginner	7	Weekly	Seeded request	2025-11-16 05:42:27.264874
+553	17	Approved	Expert	4	Occasionally	Seeded assignment	2025-11-08 03:05:27.264874
+213	11	Approved	Beginner	5	Daily	Seeded assignment	2025-11-24 13:00:27.264874
+786	12	Approved	Intermediate	11	Occasionally	Seeded request	2025-11-10 00:53:27.264874
+942	18	Approved	Expert	8	Monthly	Seeded assignment	2025-11-24 01:52:27.264874
+324	19	Approved	Advanced	8	Daily	Seeded assignment	2025-11-06 01:48:27.264874
+593	4	Approved	Beginner	5	Occasionally	Seeded assignment	2025-11-15 10:45:27.264874
+738	13	Approved	Beginner	11	Daily	Seeded request	2025-11-12 10:46:27.264874
+888	8	Approved	Beginner	10	Occasionally	Seeded request	2025-11-17 00:42:27.264874
+279	3	Approved	Beginner	0	Monthly	Seeded assignment	\N
+108	22	Approved	Beginner	1	Monthly	Seeded assignment	\N
+988	17	Approved	Intermediate	4	Daily	Seeded assignment	\N
+440	1	Approved	Intermediate	9	Daily	Seeded assignment	\N
+788	21	Approved	Intermediate	6	Daily	Seeded assignment	2025-11-28 13:14:27.264874
+294	8	Approved	Advanced	12	Occasionally	Seeded assignment	\N
+439	10	Approved	Intermediate	7	Monthly	Seeded request	2025-11-17 04:46:27.264874
+518	7	Requested	Expert	5	Occasionally	Seeded request	2025-11-27 07:16:09.934399
+128	3	Approved	Beginner	1	Weekly	Seeded assignment	2025-11-19 18:00:27.264874
+228	13	Approved	Advanced	4	Weekly	Seeded request	2025-11-08 00:34:27.264874
+809	25	Approved	Beginner	7	Daily	Seeded assignment	\N
+483	25	Approved	Beginner	12	Weekly	Seeded request	2025-11-19 16:37:27.264874
+736	9	Approved	Beginner	8	Monthly	Seeded request	2025-11-08 08:36:27.264874
+576	16	Approved	Expert	11	Occasionally	Seeded assignment	\N
+131	5	Approved	Expert	5	Monthly	Seeded assignment	\N
+745	18	Approved	Beginner	5	Weekly	Seeded request	\N
+437	20	Approved	Beginner	13	Daily	Seeded request	\N
+635	4	Approved	Intermediate	0	Monthly	Seeded assignment	2025-11-22 04:53:27.264874
+85	9	Approved	Advanced	1	Daily	Seeded request	\N
+398	16	Approved	Intermediate	5	Daily	Seeded request	\N
+613	8	Approved	Beginner	1	Weekly	Seeded assignment	2025-11-14 06:48:27.264874
+725	3	Approved	Intermediate	7	Occasionally	Seeded assignment	2025-11-24 19:32:27.264874
+511	21	Approved	Beginner	1	Weekly	Seeded assignment	2025-11-28 00:25:27.264874
+637	9	Approved	Intermediate	10	Occasionally	Seeded request	\N
+718	22	Approved	Expert	2	Monthly	Seeded assignment	\N
+309	10	Approved	Intermediate	12	Occasionally	Seeded assignment	\N
+650	8	Approved	Beginner	9	Daily	Seeded assignment	\N
+823	5	Approved	Beginner	1	Occasionally	Seeded assignment	\N
+889	9	Approved	Beginner	14	Occasionally	Seeded assignment	\N
+224	24	Approved	Beginner	1	Monthly	Seeded request	2025-11-04 01:47:27.264874
+769	21	Approved	Beginner	12	Monthly	Seeded request	2025-11-15 10:25:27.264874
+728	1	Approved	Expert	15	Monthly	Seeded assignment	2025-11-27 19:59:27.264874
+71	5	Approved	Advanced	14	Daily	Seeded assignment	2025-12-02 22:17:27.264874
+488	21	Approved	Intermediate	8	Weekly	Seeded request	2025-11-07 09:58:27.264874
+604	25	Approved	Advanced	0	Monthly	Seeded assignment	\N
+638	16	Approved	Advanced	6	Weekly	Seeded assignment	\N
+266	22	Approved	Expert	9	Occasionally	Seeded assignment	\N
+256	1	Approved	Advanced	7	Monthly	Seeded request	\N
+26	20	Approved	Intermediate	3	Occasionally	Seeded assignment	\N
+2	13	Approved	Intermediate	14	Daily	Seeded assignment	\N
+80	17	Approved	Intermediate	3	Weekly	Seeded request	2025-11-18 01:00:27.264874
+486	18	Approved	Intermediate	6	Monthly	Seeded assignment	\N
+432	3	Approved	Intermediate	12	Weekly	Seeded assignment	2025-11-20 19:44:27.264874
+796	13	Approved	Intermediate	11	Occasionally	Seeded request	\N
+72	13	Approved	Expert	8	Monthly	Seeded assignment	2025-11-08 01:39:27.264874
+939	10	Approved	Intermediate	9	Daily	Seeded assignment	2025-12-01 10:52:27.264874
+330	18	Approved	Intermediate	5	Monthly	Seeded request	\N
+305	17	Approved	Beginner	4	Monthly	Seeded request	2025-11-22 06:06:27.264874
+312	17	Approved	Advanced	1	Monthly	Seeded request	\N
+833	19	Approved	Beginner	11	Daily	Seeded assignment	\N
+625	3	Approved	Advanced	7	Monthly	Seeded assignment	2025-11-27 13:13:27.264874
+847	12	Approved	Beginner	1	Daily	Seeded request	2025-11-21 16:52:27.264874
+254	3	Approved	Advanced	6	Monthly	Seeded request	\N
+25	20	Approved	Advanced	3	Occasionally	Seeded assignment	\N
+20	18	Approved	Beginner	11	Daily	Seeded assignment	\N
+32	1	Approved	Advanced	0	Daily	Seeded assignment	\N
+941	22	Approved	Intermediate	8	Daily	Seeded request	\N
+251	12	Approved	Intermediate	7	Occasionally	Seeded request	2025-11-08 01:50:27.264874
+139	13	Approved	Expert	4	Occasionally	Seeded request	\N
+453	23	Approved	Expert	13	Occasionally	Seeded assignment	\N
+614	13	Approved	Beginner	11	Weekly	Seeded assignment	\N
+18	13	Approved	Intermediate	0	Monthly	Seeded assignment	\N
+829	8	Approved	Intermediate	7	Monthly	Seeded assignment	\N
+353	4	Approved	Expert	6	Weekly	Seeded request	\N
+616	23	Approved	Advanced	6	Occasionally	Seeded assignment	\N
+736	1	Approved	Beginner	5	Daily	Seeded assignment	\N
+937	3	Approved	Intermediate	13	Weekly	Seeded assignment	\N
+864	7	Approved	Intermediate	12	Daily	Seeded request	\N
+253	11	Approved	Expert	15	Daily	Seeded assignment	2025-11-11 08:03:27.264874
+505	13	Approved	Advanced	2	Occasionally	Seeded assignment	\N
+635	3	Approved	Advanced	7	Occasionally	Seeded assignment	\N
+877	10	Approved	Beginner	14	Monthly	Seeded assignment	2025-11-03 18:15:27.264874
+170	4	Approved	Intermediate	14	Occasionally	Seeded request	\N
+667	20	Approved	Beginner	15	Occasionally	Seeded assignment	\N
+959	10	Approved	Intermediate	7	Daily	Seeded assignment	2025-11-09 16:29:27.264874
+105	8	Approved	Intermediate	2	Weekly	Seeded assignment	\N
+699	17	Approved	Beginner	7	Occasionally	Seeded assignment	\N
+550	18	Approved	Beginner	12	Daily	Seeded request	2025-11-25 05:56:27.264874
+690	9	Approved	Expert	6	Weekly	Seeded assignment	\N
+381	13	Approved	Beginner	7	Occasionally	Seeded assignment	\N
+38	4	Approved	Advanced	11	Weekly	Seeded assignment	2025-11-16 00:58:27.264874
+594	13	Approved	Advanced	0	Monthly	Seeded request	\N
+245	7	Approved	Advanced	2	Daily	Seeded assignment	2025-11-18 19:13:27.264874
+847	5	Approved	Advanced	13	Monthly	Seeded request	\N
+390	21	Approved	Beginner	8	Occasionally	Seeded assignment	2025-11-16 10:40:27.264874
+153	22	Approved	Expert	5	Daily	Seeded assignment	\N
+905	7	Approved	Advanced	2	Monthly	Seeded request	\N
+507	3	Approved	Expert	11	Occasionally	Seeded assignment	2025-11-12 16:36:27.264874
+763	11	Approved	Advanced	10	Monthly	Seeded request	\N
+627	16	Approved	Beginner	6	Occasionally	Seeded assignment	\N
+458	12	Approved	Intermediate	4	Daily	Seeded request	\N
+131	20	Approved	Expert	4	Monthly	Seeded assignment	2025-11-08 15:38:27.264874
+752	11	Approved	Expert	15	Occasionally	Seeded request	\N
+328	6	Approved	Expert	1	Monthly	Seeded assignment	\N
+418	10	Approved	Beginner	12	Occasionally	Seeded assignment	\N
+413	12	Approved	Expert	6	Occasionally	Seeded assignment	\N
+537	20	Approved	Advanced	12	Weekly	Seeded assignment	2025-11-28 04:54:27.264874
+696	16	Approved	Beginner	11	Occasionally	Seeded assignment	\N
+137	19	Approved	Intermediate	8	Monthly	Seeded assignment	2025-11-10 08:56:27.264874
+252	20	Approved	Advanced	7	Occasionally	Seeded assignment	\N
+272	6	Approved	Intermediate	11	Daily	Seeded assignment	\N
+162	21	Approved	Expert	3	Monthly	Seeded assignment	\N
+590	1	Approved	Expert	2	Daily	Seeded assignment	2025-11-03 10:30:27.264874
+853	11	Approved	Intermediate	13	Monthly	Seeded assignment	\N
+591	17	Approved	Expert	12	Daily	Seeded assignment	\N
+217	24	Approved	Beginner	7	Monthly	Seeded request	\N
+745	19	Approved	Expert	7	Occasionally	Seeded request	2025-11-13 04:09:27.264874
+588	12	Approved	Intermediate	12	Monthly	Seeded request	\N
+521	17	Approved	Advanced	8	Weekly	Seeded assignment	2025-11-13 04:29:27.264874
+231	6	Approved	Intermediate	12	Occasionally	Seeded assignment	\N
+459	4	Approved	Advanced	11	Weekly	Seeded assignment	2025-11-22 05:39:27.264874
+268	13	Approved	Expert	5	Daily	Seeded assignment	\N
+715	17	Approved	Advanced	3	Daily	Seeded assignment	2025-11-13 07:05:27.264874
+234	18	Approved	Beginner	11	Monthly	Seeded request	\N
+362	21	Approved	Expert	2	Weekly	Seeded request	\N
+56	22	Approved	Expert	12	Occasionally	Seeded assignment	2025-11-06 21:21:27.264874
+912	7	Approved	Intermediate	10	Monthly	Seeded assignment	\N
+956	11	Approved	Advanced	11	Weekly	Seeded request	\N
+543	3	Approved	Expert	12	Monthly	Seeded request	2025-11-19 00:06:27.264874
+644	20	Approved	Advanced	14	Occasionally	Seeded assignment	\N
+726	23	Approved	Beginner	13	Occasionally	Seeded request	2025-11-11 03:35:27.264874
+282	12	Approved	Intermediate	13	Daily	Seeded assignment	\N
+869	3	Approved	Expert	2	Weekly	Seeded request	\N
+296	12	Approved	Expert	4	Occasionally	Seeded assignment	\N
+915	9	Approved	Intermediate	12	Daily	Seeded assignment	\N
+524	20	Approved	Beginner	8	Daily	Seeded assignment	\N
+280	22	Approved	Advanced	8	Occasionally	Seeded request	2025-11-25 06:05:27.264874
+90	10	Approved	Beginner	1	Daily	Seeded assignment	\N
+372	7	Approved	Advanced	2	Occasionally	Seeded assignment	\N
+308	6	Approved	Beginner	0	Occasionally	Seeded assignment	2025-12-02 17:35:27.264874
+473	1	Approved	Expert	0	Weekly	Seeded assignment	2025-11-23 02:12:27.264874
+80	21	Approved	Expert	0	Daily	Seeded request	2025-11-29 07:21:27.264874
+566	9	Approved	Beginner	9	Occasionally	Seeded assignment	2025-11-10 06:40:27.264874
+719	3	Approved	Advanced	15	Weekly	Seeded assignment	\N
+851	4	Approved	Advanced	2	Daily	Seeded request	\N
+84	17	Approved	Intermediate	2	Occasionally	Seeded request	\N
+683	21	Approved	Expert	12	Daily	Seeded request	\N
+336	25	Approved	Beginner	14	Occasionally	Seeded request	\N
+12	3	Approved	Intermediate	8	Occasionally	Seeded assignment	\N
+355	16	Approved	Intermediate	10	Monthly	Seeded assignment	2025-11-13 10:26:27.264874
+182	16	Approved	Expert	8	Occasionally	Seeded assignment	\N
+783	6	Approved	Beginner	7	Occasionally	Seeded assignment	2025-11-07 20:42:27.264874
+369	25	Approved	Intermediate	2	Monthly	Seeded assignment	\N
+837	3	Approved	Expert	2	Occasionally	Seeded assignment	\N
+357	12	Approved	Expert	3	Occasionally	Seeded assignment	2025-11-11 09:22:27.264874
+737	1	Approved	Intermediate	11	Daily	Seeded request	\N
+299	24	Approved	Beginner	10	Weekly	Seeded assignment	2025-11-30 12:35:27.264874
+602	6	Approved	Advanced	14	Monthly	Seeded request	\N
+459	3	Approved	Expert	10	Daily	Seeded request	2025-11-22 07:05:27.264874
+17	12	Approved	Expert	14	Daily	Seeded request	\N
+307	5	Approved	Advanced	8	Monthly	Seeded request	2025-11-07 09:51:27.264874
+284	18	Approved	Intermediate	3	Weekly	Seeded assignment	\N
+821	24	Approved	Beginner	3	Daily	Seeded assignment	2025-11-22 12:42:27.264874
+970	9	Approved	Expert	6	Monthly	Seeded assignment	\N
+200	7	Approved	Advanced	10	Weekly	Seeded assignment	\N
+287	1	Approved	Intermediate	14	Weekly	Seeded assignment	2025-11-05 18:12:27.264874
+513	10	Approved	Advanced	7	Daily	Seeded assignment	\N
+873	6	Approved	Beginner	12	Occasionally	Seeded request	\N
+449	5	Approved	Intermediate	6	Daily	Seeded assignment	\N
+485	16	Approved	Advanced	5	Weekly	Seeded request	2025-11-20 01:14:27.264874
+127	24	Approved	Beginner	2	Monthly	Seeded request	\N
+150	8	Approved	Advanced	1	Daily	Seeded assignment	\N
+943	8	Approved	Expert	11	Monthly	Seeded assignment	2025-11-12 20:48:27.264874
+344	6	Approved	Intermediate	11	Monthly	Seeded request	\N
+282	20	Approved	Intermediate	10	Occasionally	Seeded assignment	2025-11-19 08:19:27.264874
+368	7	Approved	Advanced	6	Daily	Seeded request	\N
+815	18	Approved	Intermediate	1	Weekly	Seeded assignment	\N
+597	6	Approved	Expert	8	Monthly	Seeded request	\N
+552	25	Approved	Expert	13	Daily	Seeded assignment	\N
+800	1	Approved	Beginner	10	Occasionally	Seeded assignment	2025-11-28 12:31:27.264874
+20	19	Approved	Intermediate	12	Occasionally	Seeded request	\N
+631	3	Approved	Beginner	12	Occasionally	Seeded assignment	\N
+156	10	Approved	Intermediate	6	Weekly	Seeded assignment	\N
+886	9	Approved	Beginner	1	Weekly	Seeded assignment	\N
+731	6	Approved	Expert	9	Monthly	Seeded request	2025-12-03 04:15:27.264874
+727	9	Approved	Expert	0	Monthly	Seeded assignment	2025-11-28 17:17:27.264874
+915	1	Approved	Expert	4	Occasionally	Seeded assignment	2025-11-22 04:08:27.264874
+240	8	Approved	Intermediate	4	Occasionally	Seeded assignment	2025-12-02 21:19:27.264874
+71	20	Approved	Beginner	5	Weekly	Seeded assignment	\N
+404	1	Approved	Intermediate	14	Occasionally	Seeded assignment	2025-11-25 23:48:27.264874
+83	3	Approved	Beginner	11	Occasionally	Seeded request	\N
+475	4	Approved	Beginner	15	Occasionally	Seeded request	\N
+612	8	Approved	Intermediate	3	Occasionally	Seeded assignment	2025-11-03 13:47:27.264874
+271	25	Approved	Expert	12	Monthly	Seeded request	\N
+538	8	Approved	Intermediate	13	Weekly	Seeded request	\N
+764	17	Approved	Beginner	9	Daily	Seeded assignment	\N
+370	24	Approved	Intermediate	6	Weekly	Seeded request	\N
+633	11	Approved	Intermediate	11	Weekly	Seeded request	\N
+131	12	Approved	Intermediate	2	Occasionally	Seeded assignment	2025-11-17 12:34:27.264874
+458	20	Approved	Expert	3	Weekly	Seeded request	\N
+700	19	Approved	Expert	5	Weekly	Seeded request	2025-11-13 05:19:27.264874
+410	7	Approved	Intermediate	3	Daily	Seeded assignment	\N
+168	13	Approved	Advanced	5	Weekly	Seeded assignment	2025-11-09 23:56:27.264874
+499	16	Approved	Intermediate	1	Daily	Seeded assignment	\N
+819	9	Approved	Intermediate	0	Weekly	Seeded request	2025-11-07 16:38:27.264874
+25	5	Approved	Beginner	3	Monthly	Seeded assignment	2025-11-17 04:19:27.264874
+893	9	Approved	Expert	0	Daily	Seeded request	\N
+744	8	Approved	Beginner	13	Daily	Seeded assignment	\N
+212	21	Approved	Expert	0	Occasionally	Seeded request	2025-11-10 17:32:27.264874
+576	13	Approved	Beginner	2	Weekly	Seeded assignment	2025-11-05 10:58:27.264874
+104	9	Approved	Advanced	9	Daily	Seeded request	2025-11-27 00:22:27.264874
+857	25	Approved	Expert	1	Weekly	Seeded assignment	\N
+433	18	Approved	Beginner	11	Daily	Seeded assignment	2025-11-08 16:55:27.264874
+142	22	Approved	Advanced	10	Weekly	Seeded assignment	\N
+65	5	Approved	Expert	15	Weekly	Seeded assignment	\N
+354	7	Approved	Expert	8	Weekly	Seeded request	2025-11-15 10:18:27.264874
+303	12	Approved	Beginner	0	Weekly	Seeded request	2025-11-12 20:43:27.264874
+493	13	Approved	Expert	5	Monthly	Seeded request	\N
+357	22	Approved	Intermediate	5	Monthly	Seeded assignment	2025-11-11 01:34:27.264874
+844	23	Approved	Beginner	12	Daily	Seeded assignment	2025-11-29 15:25:27.264874
+504	1	Approved	Expert	1	Monthly	Seeded assignment	2025-11-27 16:43:27.264874
+551	8	Approved	Advanced	2	Weekly	Seeded assignment	\N
+419	20	Approved	Advanced	0	Weekly	Seeded assignment	\N
+534	23	Approved	Intermediate	11	Monthly	Seeded request	2025-11-21 02:33:27.264874
+644	22	Approved	Intermediate	8	Occasionally	Seeded assignment	\N
+147	21	Approved	Beginner	8	Weekly	Seeded assignment	\N
+314	20	Approved	Beginner	6	Monthly	Seeded assignment	\N
+547	11	Approved	Advanced	12	Weekly	Seeded assignment	\N
+269	23	Approved	Expert	5	Daily	Seeded assignment	2025-11-13 15:42:27.264874
+587	6	Approved	Beginner	6	Weekly	Seeded request	\N
+914	22	Approved	Advanced	5	Occasionally	Seeded request	2025-11-14 17:24:27.264874
+23	25	Approved	Beginner	0	Weekly	Seeded assignment	2025-11-07 21:30:27.264874
+884	21	Approved	Beginner	12	Weekly	Seeded assignment	2025-11-30 03:10:27.264874
+424	3	Approved	Advanced	5	Occasionally	Seeded assignment	2025-11-12 17:54:27.264874
+281	12	Approved	Intermediate	4	Occasionally	Seeded assignment	\N
+408	3	Approved	Expert	10	Weekly	Seeded assignment	\N
+816	22	Approved	Beginner	10	Weekly	Seeded assignment	2025-11-04 10:17:27.264874
+176	21	Approved	Beginner	5	Weekly	Seeded request	2025-11-22 01:57:27.264874
+904	25	Approved	Intermediate	12	Weekly	Seeded assignment	2025-12-01 21:21:27.264874
+694	5	Approved	Intermediate	8	Daily	Seeded request	\N
+729	20	Approved	Expert	11	Daily	Seeded assignment	2025-11-17 15:56:27.264874
+867	24	Approved	Expert	6	Occasionally	Seeded request	\N
+64	3	Approved	Advanced	3	Weekly	Seeded request	2025-11-14 09:19:27.264874
+299	8	Approved	Intermediate	13	Daily	Seeded request	\N
+640	16	Approved	Expert	4	Monthly	Seeded assignment	2025-11-26 09:32:27.264874
+487	6	Approved	Beginner	4	Weekly	Seeded request	\N
+561	17	Approved	Advanced	9	Daily	Seeded assignment	\N
+896	5	Approved	Advanced	7	Occasionally	Seeded assignment	\N
+839	1	Approved	Advanced	0	Weekly	Seeded assignment	2025-11-11 10:07:27.264874
+125	20	Approved	Intermediate	6	Weekly	Seeded request	\N
+906	17	Approved	Advanced	5	Daily	Seeded assignment	2025-11-22 03:06:27.264874
+926	24	Approved	Expert	4	Occasionally	Seeded request	\N
+761	23	Approved	Beginner	8	Daily	Seeded assignment	\N
+211	20	Approved	Intermediate	8	Monthly	Seeded request	\N
+193	9	Approved	Beginner	0	Daily	Seeded assignment	\N
+879	12	Approved	Expert	15	Occasionally	Seeded assignment	\N
+441	7	Approved	Beginner	6	Weekly	Seeded assignment	\N
+859	24	Approved	Intermediate	0	Occasionally	Seeded assignment	\N
+962	21	Approved	Expert	5	Occasionally	Seeded assignment	2025-11-12 17:25:27.264874
+615	21	Approved	Beginner	2	Occasionally	Seeded assignment	2025-11-17 05:37:27.264874
+4	10	Approved	Beginner	5	Occasionally	Seeded assignment	\N
+495	25	Approved	Expert	3	Weekly	Seeded assignment	\N
+442	3	Approved	Advanced	12	Monthly	Seeded assignment	\N
+432	19	Approved	Intermediate	14	Daily	Seeded assignment	2025-11-22 12:06:27.264874
+77	12	Approved	Expert	12	Occasionally	Seeded assignment	\N
+476	24	Approved	Expert	10	Weekly	Seeded assignment	\N
+14	24	Approved	Beginner	9	Weekly	Seeded assignment	\N
+687	18	Approved	Intermediate	3	Monthly	Seeded assignment	\N
+466	16	Approved	Advanced	2	Monthly	Seeded assignment	\N
+12	4	Approved	Beginner	12	Occasionally	Seeded request	\N
+819	11	Approved	Intermediate	15	Monthly	Seeded request	2025-11-28 14:15:27.264874
+567	7	Approved	Intermediate	7	Daily	Seeded assignment	2025-11-24 16:53:27.264874
+766	17	Approved	Intermediate	3	Daily	Seeded request	\N
+186	1	Approved	Beginner	11	Occasionally	Seeded assignment	2025-11-21 14:05:27.264874
+891	12	Approved	Advanced	0	Weekly	Seeded request	2025-11-23 13:30:27.264874
+324	4	Approved	Intermediate	13	Monthly	Seeded assignment	\N
+313	6	Approved	Beginner	12	Occasionally	Seeded assignment	\N
+508	3	Approved	Advanced	9	Occasionally	Seeded assignment	2025-11-26 23:07:27.264874
+648	10	Approved	Expert	10	Weekly	Seeded assignment	2025-11-03 21:30:27.264874
+315	4	Approved	Expert	6	Weekly	Seeded assignment	2025-11-19 00:22:27.264874
+739	5	Approved	Intermediate	15	Daily	Seeded request	2025-12-01 17:38:27.264874
+704	13	Approved	Intermediate	10	Daily	Seeded request	\N
+232	5	Approved	Beginner	0	Monthly	Seeded request	\N
+222	17	Approved	Expert	0	Occasionally	Seeded request	\N
+284	3	Approved	Intermediate	11	Daily	Seeded assignment	\N
+242	10	Approved	Expert	2	Occasionally	Seeded assignment	2025-11-25 06:28:27.264874
+793	25	Approved	Beginner	5	Weekly	Seeded assignment	2025-11-16 02:19:27.264874
+190	10	Approved	Beginner	13	Weekly	Seeded assignment	2025-11-20 04:27:27.264874
+246	23	Approved	Beginner	3	Weekly	Seeded assignment	2025-11-13 01:29:27.264874
+419	12	Approved	Beginner	8	Monthly	Seeded assignment	2025-11-14 10:10:27.264874
+835	7	Approved	Intermediate	4	Daily	Seeded assignment	2025-11-23 10:00:27.264874
+72	16	Approved	Beginner	14	Weekly	Seeded assignment	2025-11-30 04:27:27.264874
+174	17	Approved	Beginner	10	Weekly	Seeded request	\N
+167	22	Approved	Advanced	1	Monthly	Seeded request	\N
+86	25	Approved	Expert	9	Occasionally	Seeded assignment	\N
+559	9	Approved	Intermediate	13	Monthly	Seeded request	2025-11-11 16:57:27.264874
+655	22	Approved	Beginner	6	Weekly	Seeded request	2025-11-14 17:57:27.264874
+862	23	Approved	Advanced	7	Weekly	Seeded request	2025-11-14 08:30:27.264874
+447	8	Approved	Beginner	12	Weekly	Seeded assignment	2025-11-16 00:45:27.264874
+885	11	Approved	Advanced	14	Daily	Seeded assignment	\N
+920	24	Approved	Advanced	2	Occasionally	Seeded assignment	2025-11-04 13:37:27.264874
+114	7	Approved	Beginner	9	Weekly	Seeded assignment	2025-11-18 17:19:27.264874
+436	17	Approved	Advanced	13	Monthly	Seeded request	\N
+750	7	Approved	Advanced	12	Occasionally	Seeded assignment	2025-11-16 09:44:27.264874
+611	24	Approved	Advanced	13	Weekly	Seeded request	\N
+641	7	Approved	Beginner	0	Daily	Seeded request	2025-11-08 16:16:27.264874
+756	1	Approved	Expert	6	Occasionally	Seeded request	2025-11-16 01:41:27.264874
+253	1	Approved	Advanced	14	Daily	Seeded request	\N
+300	12	Approved	Intermediate	5	Occasionally	Seeded request	2025-11-28 23:33:27.264874
+230	9	Approved	Beginner	5	Occasionally	Seeded request	\N
+361	13	Approved	Advanced	2	Daily	Seeded request	\N
+240	10	Approved	Expert	12	Daily	Seeded assignment	\N
+872	1	Approved	Expert	2	Occasionally	Seeded assignment	2025-11-04 05:32:27.264874
+919	13	Approved	Advanced	2	Daily	Seeded request	\N
+902	25	Approved	Advanced	4	Monthly	Seeded assignment	\N
+217	10	Approved	Beginner	6	Daily	Seeded assignment	\N
+855	23	Approved	Advanced	15	Occasionally	Seeded assignment	\N
+928	12	Approved	Advanced	1	Monthly	Seeded assignment	\N
+612	10	Approved	Expert	1	Monthly	Seeded request	\N
+443	11	Approved	Beginner	7	Monthly	Seeded request	\N
+538	10	Approved	Beginner	6	Weekly	Seeded assignment	\N
+986	7	Approved	Expert	4	Weekly	Seeded assignment	\N
+822	20	Approved	Intermediate	13	Weekly	Seeded request	\N
+125	5	Approved	Intermediate	1	Occasionally	Seeded request	2025-11-16 04:46:27.264874
+592	17	Approved	Intermediate	1	Monthly	Seeded request	\N
+286	7	Approved	Beginner	1	Daily	Seeded assignment	\N
+721	8	Approved	Beginner	9	Daily	Seeded assignment	\N
+93	9	Approved	Expert	7	Weekly	Seeded request	\N
+725	18	Approved	Advanced	13	Daily	Seeded assignment	\N
+195	23	Approved	Advanced	13	Weekly	Seeded assignment	\N
+647	4	Approved	Intermediate	13	Daily	Seeded assignment	2025-11-10 20:18:27.264874
+427	11	Approved	Advanced	1	Weekly	Seeded assignment	\N
+894	24	Approved	Beginner	3	Weekly	Seeded request	2025-11-22 23:51:27.264874
+757	17	Approved	Beginner	14	Daily	Seeded assignment	\N
+475	19	Approved	Advanced	14	Weekly	Seeded request	\N
+883	3	Approved	Advanced	2	Monthly	Seeded assignment	2025-11-13 20:53:27.264874
+703	8	Approved	Intermediate	14	Occasionally	Seeded assignment	\N
+802	1	Approved	Expert	13	Occasionally	Seeded assignment	\N
+867	10	Approved	Intermediate	12	Daily	Seeded assignment	\N
+213	9	Approved	Expert	5	Occasionally	Seeded request	\N
+643	20	Approved	Expert	13	Daily	Seeded assignment	2025-11-04 15:04:27.264874
+660	8	Approved	Beginner	15	Occasionally	Seeded request	\N
+828	23	Approved	Expert	2	Weekly	Seeded assignment	2025-11-27 14:26:27.264874
+962	17	Approved	Expert	6	Occasionally	Seeded assignment	\N
+224	8	Approved	Intermediate	12	Weekly	Seeded request	\N
+399	16	Approved	Intermediate	4	Monthly	Seeded assignment	2025-11-24 16:43:27.264874
+708	7	Approved	Advanced	4	Weekly	Seeded request	2025-11-30 07:15:27.264874
+251	22	Approved	Expert	8	Occasionally	Seeded assignment	\N
+837	19	Approved	Intermediate	10	Monthly	Seeded assignment	2025-11-14 19:20:27.264874
+450	6	Approved	Advanced	5	Daily	Seeded assignment	2025-11-10 05:47:27.264874
+492	18	Approved	Expert	7	Occasionally	Seeded request	2025-11-26 19:28:27.264874
+978	24	Approved	Advanced	10	Occasionally	Seeded assignment	2025-12-02 16:07:27.264874
+572	24	Approved	Beginner	6	Daily	Seeded assignment	\N
+549	16	Approved	Advanced	13	Weekly	Seeded assignment	\N
+926	10	Approved	Expert	2	Daily	Seeded assignment	\N
+804	12	Approved	Intermediate	2	Monthly	Seeded request	\N
+276	22	Approved	Advanced	7	Weekly	Seeded assignment	\N
+133	18	Approved	Beginner	2	Daily	Seeded request	\N
+739	12	Approved	Beginner	1	Weekly	Seeded assignment	2025-11-23 03:22:27.264874
+700	4	Approved	Beginner	6	Weekly	Seeded assignment	2025-12-02 17:42:27.264874
+273	6	Approved	Beginner	6	Monthly	Seeded assignment	\N
+433	19	Approved	Beginner	2	Occasionally	Seeded request	2025-11-06 04:47:27.264874
+529	8	Approved	Intermediate	2	Monthly	Seeded request	\N
+770	19	Approved	Beginner	8	Weekly	Seeded assignment	\N
+247	21	Approved	Advanced	13	Monthly	Seeded request	\N
+87	25	Approved	Beginner	10	Occasionally	Seeded request	2025-11-09 17:44:27.264874
+801	1	Approved	Beginner	11	Weekly	Seeded request	2025-12-01 00:41:27.264874
+124	21	Approved	Expert	7	Monthly	Seeded assignment	\N
+935	18	Approved	Expert	11	Monthly	Seeded assignment	\N
+281	5	Approved	Beginner	7	Occasionally	Seeded assignment	\N
+334	6	Approved	Beginner	10	Occasionally	Seeded assignment	2025-12-01 13:02:27.264874
+870	8	Approved	Beginner	3	Occasionally	Seeded assignment	\N
+401	5	Approved	Expert	9	Occasionally	Seeded assignment	2025-11-23 21:04:27.264874
+570	5	Approved	Intermediate	12	Monthly	Seeded assignment	\N
+872	9	Approved	Intermediate	9	Daily	Seeded assignment	\N
+957	16	Approved	Advanced	9	Monthly	Seeded assignment	\N
+502	8	Approved	Expert	2	Monthly	Seeded assignment	2025-11-05 03:45:27.264874
+444	19	Approved	Beginner	8	Weekly	Seeded assignment	\N
+165	5	Approved	Intermediate	14	Monthly	Seeded request	\N
+568	24	Approved	Beginner	8	Weekly	Seeded assignment	\N
+815	17	Approved	Expert	13	Daily	Seeded request	\N
+981	21	Approved	Expert	8	Occasionally	Seeded request	2025-11-11 01:55:27.264874
+117	23	Approved	Advanced	14	Occasionally	Seeded assignment	\N
+650	24	Approved	Beginner	13	Weekly	Seeded request	2025-11-20 22:44:27.264874
+577	3	Approved	Beginner	0	Monthly	Seeded request	\N
+938	19	Approved	Advanced	12	Weekly	Seeded assignment	2025-11-17 11:58:27.264874
+701	20	Approved	Intermediate	7	Occasionally	Seeded request	2025-11-10 02:30:27.264874
+550	3	Approved	Intermediate	3	Monthly	Seeded request	\N
+379	16	Approved	Advanced	6	Occasionally	Seeded assignment	2025-11-11 14:26:27.264874
+220	17	Approved	Intermediate	0	Weekly	Seeded request	\N
+976	13	Approved	Intermediate	12	Daily	Seeded assignment	2025-11-16 17:04:27.264874
+826	6	Approved	Expert	14	Daily	Seeded assignment	2025-11-23 01:10:27.264874
+897	13	Approved	Expert	2	Monthly	Seeded assignment	\N
+745	4	Approved	Beginner	3	Occasionally	Seeded request	\N
+346	19	Approved	Advanced	12	Monthly	Seeded assignment	\N
+48	7	Approved	Advanced	13	Occasionally	Seeded assignment	\N
+910	16	Approved	Expert	3	Weekly	Seeded assignment	2025-11-09 06:23:27.264874
+16	24	Approved	Beginner	11	Monthly	Seeded request	\N
+515	5	Approved	Intermediate	1	Occasionally	Seeded assignment	\N
+916	17	Approved	Advanced	2	Occasionally	Seeded assignment	\N
+982	10	Approved	Advanced	8	Daily	Seeded assignment	\N
+369	6	Approved	Expert	1	Monthly	Seeded request	\N
+984	19	Approved	Intermediate	3	Monthly	Seeded request	\N
+384	3	Approved	Intermediate	8	Daily	Seeded request	2025-11-23 18:39:27.264874
+600	11	Approved	Intermediate	0	Daily	Seeded assignment	2025-11-18 22:22:27.264874
+82	1	Approved	Advanced	14	Weekly	Seeded assignment	\N
+593	18	Approved	Intermediate	0	Weekly	Seeded request	2025-11-09 07:59:27.264874
+702	23	Approved	Beginner	13	Weekly	Seeded request	2025-11-16 15:14:27.264874
+26	22	Approved	Beginner	8	Occasionally	Seeded assignment	\N
+202	20	Approved	Expert	6	Monthly	Seeded assignment	2025-11-09 11:57:27.264874
+111	21	Approved	Beginner	7	Monthly	Seeded assignment	2025-11-28 02:06:27.264874
+562	21	Approved	Advanced	7	Occasionally	Seeded assignment	\N
+922	6	Approved	Intermediate	11	Daily	Seeded assignment	2025-12-03 01:21:27.264874
+359	22	Approved	Advanced	5	Weekly	Seeded assignment	2025-11-14 17:40:27.264874
+213	1	Approved	Intermediate	4	Daily	Seeded assignment	\N
+571	7	Approved	Intermediate	13	Weekly	Seeded request	\N
+928	20	Approved	Beginner	7	Daily	Seeded assignment	\N
+720	3	Approved	Beginner	10	Daily	Seeded assignment	\N
+598	17	Approved	Expert	15	Monthly	Seeded assignment	\N
+890	21	Approved	Beginner	10	Monthly	Seeded request	\N
+625	18	Approved	Beginner	9	Occasionally	Seeded assignment	2025-11-06 19:11:27.264874
+409	23	Approved	Beginner	1	Daily	Seeded assignment	\N
+148	24	Approved	Beginner	13	Weekly	Seeded assignment	2025-11-09 07:54:27.264874
+330	3	Approved	Intermediate	12	Monthly	Seeded assignment	\N
+472	17	Approved	Intermediate	0	Monthly	Seeded assignment	\N
+620	3	Approved	Beginner	5	Daily	Seeded request	\N
+544	21	Approved	Intermediate	12	Daily	Seeded request	2025-11-05 12:35:27.264874
+218	1	Approved	Advanced	6	Occasionally	Seeded assignment	2025-11-26 08:04:27.264874
+440	11	Approved	Advanced	10	Occasionally	Seeded assignment	2025-11-07 10:36:27.264874
+854	24	Approved	Expert	3	Weekly	Seeded request	\N
+286	23	Approved	Intermediate	4	Weekly	Seeded request	2025-11-15 16:18:27.264874
+63	25	Approved	Intermediate	6	Occasionally	Seeded assignment	\N
+851	19	Approved	Advanced	6	Weekly	Seeded request	\N
+233	13	Approved	Beginner	15	Occasionally	Seeded request	\N
+694	12	Approved	Expert	10	Daily	Seeded assignment	2025-11-25 13:59:27.264874
+129	7	Approved	Intermediate	8	Weekly	Seeded request	\N
+195	7	Approved	Intermediate	9	Daily	Seeded request	\N
+907	3	Approved	Expert	10	Weekly	Seeded request	2025-11-06 02:42:27.264874
+337	8	Approved	Expert	0	Daily	Seeded assignment	\N
+746	4	Approved	Expert	10	Daily	Seeded request	2025-12-01 10:15:27.264874
+491	3	Approved	Advanced	11	Occasionally	Seeded request	\N
+705	8	Approved	Beginner	11	Occasionally	Seeded assignment	\N
+886	8	Approved	Expert	6	Daily	Seeded request	2025-11-13 20:12:27.264874
+202	7	Approved	Intermediate	15	Daily	Seeded request	\N
+807	25	Approved	Intermediate	3	Weekly	Seeded request	\N
+306	3	Approved	Advanced	7	Daily	Seeded assignment	2025-11-26 05:57:27.264874
+409	12	Approved	Beginner	5	Occasionally	Seeded assignment	2025-11-18 07:40:27.264874
+605	18	Approved	Beginner	9	Occasionally	Seeded assignment	\N
+785	10	Approved	Expert	2	Weekly	Seeded assignment	\N
+963	3	Approved	Beginner	15	Daily	Seeded request	2025-11-07 20:48:27.264874
+399	25	Approved	Advanced	3	Occasionally	Seeded request	\N
+852	25	Approved	Expert	13	Weekly	Seeded assignment	2025-11-04 17:16:27.264874
+691	12	Approved	Beginner	7	Monthly	Seeded assignment	2025-11-22 07:27:27.264874
+896	23	Approved	Beginner	10	Occasionally	Seeded request	\N
+479	21	Approved	Intermediate	0	Daily	Seeded assignment	2025-11-13 17:33:27.264874
+930	20	Approved	Intermediate	13	Weekly	Seeded assignment	\N
+903	20	Approved	Expert	11	Daily	Seeded request	2025-11-25 19:48:27.264874
+400	8	Approved	Advanced	12	Monthly	Seeded assignment	\N
+406	13	Approved	Beginner	0	Daily	Seeded assignment	\N
+819	8	Approved	Advanced	15	Weekly	Seeded assignment	\N
+183	3	Approved	Expert	0	Daily	Seeded request	\N
+971	20	Approved	Expert	1	Occasionally	Seeded assignment	\N
+300	7	Approved	Advanced	11	Weekly	Seeded request	\N
+186	24	Approved	Beginner	12	Monthly	Seeded assignment	2025-11-07 05:16:27.264874
+87	16	Approved	Expert	3	Occasionally	Seeded request	2025-11-29 15:21:27.264874
+535	7	Approved	Intermediate	8	Monthly	Seeded request	2025-11-24 20:19:27.264874
+795	11	Approved	Advanced	3	Monthly	Seeded assignment	\N
+395	5	Approved	Advanced	6	Occasionally	Seeded assignment	\N
+349	11	Approved	Intermediate	7	Weekly	Seeded assignment	\N
+471	21	Approved	Advanced	10	Occasionally	Seeded assignment	\N
+612	9	Approved	Beginner	14	Weekly	Seeded request	\N
+745	17	Approved	Intermediate	4	Daily	Seeded assignment	2025-11-06 21:04:27.264874
+67	5	Approved	Advanced	1	Daily	Seeded request	2025-11-13 17:24:27.264874
+226	6	Approved	Advanced	10	Occasionally	Seeded request	\N
+752	24	Approved	Advanced	3	Weekly	Seeded assignment	\N
+747	1	Approved	Beginner	0	Weekly	Seeded assignment	\N
+500	6	Approved	Advanced	9	Monthly	Seeded assignment	\N
+130	3	Approved	Beginner	10	Monthly	Seeded assignment	2025-11-04 20:05:27.264874
+120	25	Approved	Advanced	11	Daily	Seeded request	\N
+516	19	Approved	Intermediate	15	Monthly	Seeded request	\N
+911	4	Approved	Advanced	6	Weekly	Seeded request	\N
+161	4	Approved	Advanced	5	Occasionally	Seeded request	\N
+840	19	Approved	Intermediate	3	Monthly	Seeded assignment	2025-11-11 23:03:27.264874
+692	7	Approved	Intermediate	10	Weekly	Seeded request	\N
+108	23	Approved	Advanced	6	Daily	Seeded assignment	2025-11-24 12:23:27.264874
+657	4	Approved	Advanced	13	Monthly	Seeded assignment	\N
+950	11	Approved	Expert	9	Occasionally	Seeded assignment	2025-11-19 06:35:27.264874
+6	19	Approved	Advanced	13	Occasionally	Seeded request	\N
+509	19	Approved	Advanced	2	Monthly	Seeded assignment	2025-11-28 14:06:27.264874
+749	3	Approved	Beginner	2	Weekly	Seeded assignment	\N
+649	16	Approved	Beginner	15	Weekly	Seeded assignment	\N
+173	9	Approved	Advanced	3	Weekly	Seeded assignment	\N
+488	19	Approved	Expert	3	Occasionally	Seeded request	2025-11-28 20:04:27.264874
+590	8	Approved	Intermediate	7	Monthly	Seeded request	\N
+672	24	Approved	Expert	10	Weekly	Seeded assignment	\N
+797	22	Approved	Advanced	2	Daily	Seeded request	\N
+269	5	Approved	Beginner	11	Occasionally	Seeded request	\N
+212	3	Approved	Beginner	3	Daily	Seeded request	2025-11-21 07:41:27.264874
+942	17	Approved	Intermediate	14	Occasionally	Seeded assignment	2025-11-30 06:17:27.264874
+758	17	Approved	Expert	7	Daily	Seeded request	\N
+908	18	Approved	Expert	3	Monthly	Seeded request	2025-11-12 03:06:27.264874
+699	1	Approved	Intermediate	6	Weekly	Seeded assignment	\N
+358	7	Approved	Intermediate	12	Daily	Seeded assignment	\N
+201	1	Approved	Advanced	15	Weekly	Seeded assignment	\N
+423	22	Approved	Intermediate	15	Daily	Seeded assignment	2025-11-10 22:31:27.264874
+193	24	Approved	Advanced	10	Weekly	Seeded request	\N
+373	10	Approved	Advanced	3	Occasionally	Seeded assignment	2025-11-25 02:30:27.264874
+94	18	Approved	Intermediate	11	Daily	Seeded assignment	2025-11-23 11:48:27.264874
+699	18	Approved	Expert	7	Occasionally	Seeded assignment	2025-11-25 09:48:27.264874
+362	18	Approved	Beginner	0	Monthly	Seeded request	\N
+868	6	Approved	Expert	15	Weekly	Seeded request	\N
+739	23	Approved	Beginner	9	Occasionally	Seeded request	\N
+803	23	Approved	Beginner	1	Occasionally	Seeded request	2025-11-14 02:49:27.264874
+551	11	Approved	Intermediate	7	Monthly	Seeded assignment	\N
+711	4	Approved	Intermediate	12	Daily	Seeded request	2025-11-17 23:58:27.264874
+915	8	Approved	Intermediate	8	Weekly	Seeded assignment	2025-11-15 14:49:27.264874
+179	11	Approved	Intermediate	4	Daily	Seeded assignment	\N
+378	19	Approved	Beginner	10	Occasionally	Seeded request	\N
+261	6	Approved	Advanced	7	Occasionally	Seeded assignment	2025-11-23 19:46:27.264874
+653	7	Approved	Beginner	5	Occasionally	Seeded assignment	\N
+709	20	Approved	Advanced	12	Occasionally	Seeded request	2025-11-27 12:53:27.264874
+556	8	Approved	Expert	15	Occasionally	Seeded assignment	2025-12-02 23:45:27.264874
+601	17	Approved	Advanced	8	Monthly	Seeded request	2025-11-11 07:00:27.264874
+73	6	Approved	Intermediate	2	Daily	Seeded request	2025-11-06 09:43:27.264874
+866	17	Approved	Advanced	7	Weekly	Seeded request	2025-11-09 03:47:27.264874
+862	5	Approved	Beginner	12	Occasionally	Seeded assignment	2025-11-24 08:42:27.264874
+566	8	Approved	Advanced	5	Daily	Seeded request	\N
+900	24	Approved	Expert	7	Weekly	Seeded request	\N
+878	1	Approved	Intermediate	14	Weekly	Seeded request	\N
+266	23	Approved	Expert	2	Daily	Seeded assignment	\N
+114	20	Approved	Expert	3	Weekly	Seeded request	\N
+695	8	Approved	Advanced	10	Monthly	Seeded request	2025-11-22 07:37:27.264874
+750	20	Approved	Advanced	12	Daily	Seeded assignment	2025-11-11 22:54:27.264874
+450	13	Approved	Expert	10	Daily	Seeded request	\N
+212	4	Approved	Advanced	11	Daily	Seeded request	2025-11-17 15:19:27.264874
+598	3	Approved	Beginner	5	Occasionally	Seeded request	2025-11-04 19:31:27.264874
+79	13	Approved	Beginner	10	Occasionally	Seeded assignment	2025-11-16 12:41:27.264874
+973	19	Approved	Advanced	9	Weekly	Seeded request	2025-11-10 03:33:27.264874
+312	18	Approved	Intermediate	11	Daily	Seeded assignment	\N
+962	4	Approved	Advanced	11	Daily	Seeded request	\N
+265	25	Approved	Expert	8	Weekly	Seeded assignment	2025-11-29 00:05:27.264874
+272	16	Approved	Advanced	11	Occasionally	Seeded request	\N
+928	23	Approved	Expert	10	Occasionally	Seeded request	\N
+287	8	Approved	Advanced	3	Weekly	Seeded request	\N
+306	11	Approved	Beginner	9	Weekly	Seeded assignment	\N
+439	3	Approved	Beginner	9	Weekly	Seeded request	\N
+530	25	Approved	Advanced	15	Monthly	Seeded request	2025-11-23 05:24:27.264874
+427	17	Approved	Intermediate	8	Monthly	Seeded assignment	\N
+588	6	Approved	Intermediate	5	Monthly	Seeded request	\N
+368	13	Approved	Expert	0	Occasionally	Seeded assignment	\N
+608	19	Approved	Expert	7	Weekly	Seeded assignment	2025-11-04 19:34:27.264874
+907	11	Approved	Beginner	14	Occasionally	Seeded assignment	\N
+693	4	Approved	Beginner	0	Weekly	Seeded request	\N
+642	24	Approved	Advanced	5	Daily	Seeded assignment	2025-11-27 13:55:27.264874
+971	16	Approved	Advanced	8	Weekly	Seeded request	2025-11-15 04:52:27.264874
+53	5	Approved	Advanced	14	Occasionally	Seeded request	\N
+377	17	Approved	Intermediate	6	Monthly	Seeded assignment	\N
+180	11	Approved	Expert	15	Weekly	Seeded assignment	2025-11-10 05:42:27.264874
+896	7	Approved	Advanced	12	Monthly	Seeded assignment	2025-11-17 19:20:27.264874
+657	3	Approved	Advanced	9	Daily	Seeded request	\N
+986	20	Approved	Beginner	12	Daily	Seeded assignment	\N
+470	18	Approved	Intermediate	7	Weekly	Seeded request	\N
+627	6	Approved	Advanced	13	Occasionally	Seeded request	2025-11-09 12:45:27.264874
+632	20	Approved	Expert	14	Weekly	Seeded assignment	2025-11-16 05:47:27.264874
+606	10	Approved	Advanced	1	Daily	Seeded assignment	\N
+384	17	Approved	Intermediate	5	Daily	Seeded request	\N
+522	9	Approved	Beginner	2	Occasionally	Seeded assignment	\N
+622	12	Approved	Advanced	10	Daily	Seeded request	2025-11-06 20:24:27.264874
+255	25	Approved	Expert	11	Daily	Seeded request	2025-12-02 20:36:27.264874
+84	18	Approved	Advanced	4	Monthly	Seeded assignment	2025-11-16 14:46:27.264874
+397	21	Approved	Beginner	15	Weekly	Seeded assignment	\N
+281	7	Approved	Advanced	9	Occasionally	Seeded assignment	2025-11-30 01:47:27.264874
+171	16	Approved	Expert	10	Daily	Seeded assignment	2025-11-20 15:29:27.264874
+501	12	Approved	Expert	3	Daily	Seeded request	\N
+680	4	Approved	Advanced	3	Monthly	Seeded assignment	\N
+408	17	Approved	Expert	9	Daily	Seeded request	2025-11-07 16:09:27.264874
+904	16	Approved	Intermediate	4	Weekly	Seeded assignment	2025-11-16 03:19:27.264874
+751	5	Approved	Beginner	8	Weekly	Seeded assignment	\N
+47	23	Approved	Advanced	10	Monthly	Seeded assignment	2025-11-21 01:49:27.264874
+828	5	Approved	Intermediate	11	Weekly	Seeded assignment	2025-11-28 16:45:27.264874
+225	9	Approved	Beginner	8	Weekly	Seeded assignment	\N
+748	7	Approved	Beginner	7	Daily	Seeded request	2025-11-04 23:44:27.264874
+104	10	Approved	Expert	12	Occasionally	Seeded assignment	\N
+165	7	Approved	Beginner	5	Occasionally	Seeded assignment	2025-11-13 13:32:27.264874
+371	22	Approved	Advanced	2	Occasionally	Seeded assignment	\N
+159	12	Approved	Advanced	10	Monthly	Seeded assignment	\N
+112	8	Approved	Beginner	3	Daily	Seeded assignment	2025-11-11 13:32:27.264874
+267	12	Approved	Expert	10	Daily	Seeded assignment	\N
+613	1	Approved	Intermediate	15	Daily	Seeded assignment	2025-11-11 13:14:27.264874
+779	25	Approved	Advanced	4	Occasionally	Seeded assignment	2025-11-30 09:47:27.264874
+700	21	Approved	Intermediate	11	Monthly	Seeded assignment	\N
+204	5	Approved	Intermediate	2	Weekly	Seeded request	\N
+840	18	Approved	Advanced	15	Monthly	Seeded request	\N
+275	22	Approved	Intermediate	10	Weekly	Seeded assignment	2025-11-04 07:18:27.264874
+531	13	Approved	Advanced	12	Occasionally	Seeded assignment	2025-11-06 07:49:27.264874
+738	25	Approved	Beginner	11	Occasionally	Seeded request	2025-11-27 21:53:27.264874
+558	20	Approved	Beginner	11	Monthly	Seeded assignment	\N
+568	1	Approved	Advanced	3	Weekly	Seeded assignment	\N
+713	18	Approved	Beginner	0	Weekly	Seeded assignment	\N
+41	18	Approved	Advanced	7	Occasionally	Seeded request	\N
+817	25	Approved	Intermediate	10	Monthly	Seeded assignment	\N
+895	9	Approved	Beginner	12	Daily	Seeded assignment	\N
+980	13	Approved	Expert	9	Daily	Seeded assignment	\N
+92	4	Approved	Advanced	2	Occasionally	Seeded assignment	2025-11-22 01:17:27.264874
+882	8	Approved	Intermediate	2	Weekly	Seeded request	2025-11-27 18:22:27.264874
+32	17	Approved	Expert	4	Occasionally	Seeded assignment	2025-11-17 07:46:27.264874
+726	13	Approved	Advanced	10	Monthly	Seeded assignment	2025-11-24 19:01:27.264874
+353	10	Approved	Beginner	15	Weekly	Seeded assignment	2025-11-15 23:57:27.264874
+827	7	Requested	Intermediate	9	Monthly	Seeded assignment	2025-11-28 07:16:09.934399
+571	16	Approved	Intermediate	15	Weekly	Seeded request	2025-12-01 22:32:27.264874
+945	3	Approved	Expert	1	Occasionally	Seeded request	2025-11-21 01:55:27.264874
+191	25	Approved	Expert	12	Daily	Seeded request	\N
+778	12	Approved	Beginner	5	Monthly	Seeded request	\N
+729	23	Approved	Intermediate	2	Weekly	Seeded request	\N
+780	3	Approved	Advanced	1	Occasionally	Seeded request	\N
+483	13	Approved	Intermediate	7	Monthly	Seeded assignment	2025-11-25 20:15:27.264874
+715	18	Approved	Beginner	14	Occasionally	Seeded assignment	2025-11-05 23:27:27.264874
+228	25	Approved	Intermediate	11	Monthly	Seeded request	\N
+39	25	Approved	Intermediate	12	Occasionally	Seeded assignment	2025-11-09 07:39:27.264874
+638	6	Approved	Intermediate	4	Monthly	Seeded request	\N
+342	1	Approved	Intermediate	5	Daily	Seeded assignment	\N
+323	22	Approved	Expert	12	Daily	Seeded assignment	2025-11-08 18:12:27.264874
+572	9	Approved	Advanced	6	Occasionally	Seeded assignment	\N
+647	21	Approved	Intermediate	7	Monthly	Seeded request	\N
+452	21	Approved	Beginner	0	Occasionally	Seeded assignment	\N
+712	7	Approved	Intermediate	11	Monthly	Seeded assignment	\N
+53	16	Approved	Expert	8	Daily	Seeded request	2025-11-27 21:24:27.264874
+52	8	Approved	Intermediate	13	Daily	Seeded assignment	\N
+888	1	Approved	Intermediate	10	Occasionally	Seeded assignment	\N
+681	21	Approved	Expert	5	Monthly	Seeded assignment	2025-11-21 04:47:27.264874
+761	20	Approved	Beginner	12	Occasionally	Seeded assignment	\N
+211	23	Approved	Expert	15	Monthly	Seeded request	\N
+468	7	Approved	Expert	12	Monthly	Seeded assignment	\N
+766	3	Approved	Beginner	1	Weekly	Seeded request	\N
+32	8	Approved	Advanced	15	Occasionally	Seeded request	2025-12-01 03:40:27.264874
+116	20	Approved	Advanced	1	Weekly	Seeded request	\N
+891	7	Approved	Expert	12	Daily	Seeded request	\N
+515	23	Approved	Intermediate	1	Monthly	Seeded assignment	2025-11-09 15:30:27.264874
+929	16	Approved	Beginner	3	Daily	Seeded request	\N
+849	18	Approved	Advanced	12	Daily	Seeded assignment	\N
+562	4	Approved	Beginner	3	Occasionally	Seeded request	\N
+470	19	Approved	Advanced	10	Weekly	Seeded assignment	\N
+767	5	Approved	Intermediate	5	Weekly	Seeded request	2025-11-25 15:24:27.264874
+258	6	Approved	Expert	0	Monthly	Seeded assignment	2025-11-11 23:42:27.264874
+734	20	Approved	Intermediate	12	Occasionally	Seeded request	\N
+389	5	Approved	Advanced	7	Monthly	Seeded request	\N
+311	3	Approved	Expert	15	Weekly	Seeded assignment	\N
+278	8	Approved	Advanced	13	Monthly	Seeded assignment	2025-11-29 21:59:27.264874
+382	21	Approved	Expert	5	Daily	Seeded request	2025-11-08 11:54:27.264874
+923	23	Approved	Intermediate	9	Monthly	Seeded assignment	\N
+19	6	Approved	Expert	3	Weekly	Seeded request	\N
+247	3	Approved	Beginner	8	Monthly	Seeded assignment	\N
+934	11	Approved	Beginner	1	Daily	Seeded assignment	\N
+765	7	Approved	Advanced	11	Weekly	Seeded request	2025-11-13 07:53:27.264874
+475	24	Approved	Advanced	0	Monthly	Seeded request	2025-11-15 18:35:27.264874
+508	8	Approved	Expert	6	Weekly	Seeded assignment	\N
+152	24	Approved	Beginner	5	Occasionally	Seeded assignment	2025-11-20 19:35:27.264874
+183	11	Approved	Expert	7	Monthly	Seeded assignment	\N
+917	11	Approved	Intermediate	5	Daily	Seeded assignment	\N
+304	21	Approved	Expert	6	Occasionally	Seeded request	\N
+120	23	Approved	Beginner	4	Occasionally	Seeded assignment	\N
+970	21	Approved	Intermediate	0	Daily	Seeded assignment	2025-11-24 11:55:27.264874
+670	9	Approved	Intermediate	3	Occasionally	Seeded request	\N
+881	22	Approved	Intermediate	0	Weekly	Seeded assignment	\N
+525	5	Approved	Advanced	15	Monthly	Seeded request	\N
+375	12	Approved	Intermediate	2	Occasionally	Seeded assignment	\N
+101	24	Approved	Expert	10	Occasionally	Seeded request	\N
+416	8	Approved	Advanced	13	Daily	Seeded assignment	\N
+77	7	Approved	Beginner	3	Weekly	Seeded request	\N
+318	19	Approved	Intermediate	6	Monthly	Seeded assignment	\N
+125	7	Approved	Advanced	11	Occasionally	Seeded assignment	\N
+295	17	Approved	Advanced	10	Occasionally	Seeded assignment	2025-11-29 14:59:27.264874
+11	17	Approved	Beginner	13	Daily	Seeded request	\N
+427	8	Approved	Advanced	10	Occasionally	Seeded request	2025-11-09 11:30:27.264874
+961	13	Approved	Intermediate	4	Occasionally	Seeded request	\N
+510	1	Approved	Intermediate	14	Monthly	Seeded request	\N
+401	23	Approved	Intermediate	3	Monthly	Seeded request	\N
+570	23	Approved	Advanced	11	Weekly	Seeded assignment	\N
+887	24	Approved	Expert	9	Daily	Seeded request	\N
+58	22	Approved	Expert	10	Occasionally	Seeded assignment	\N
+31	17	Approved	Intermediate	11	Daily	Seeded request	\N
+673	6	Approved	Intermediate	13	Weekly	Seeded assignment	\N
+75	4	Approved	Advanced	12	Monthly	Seeded assignment	2025-11-19 18:43:27.264874
+174	3	Approved	Expert	3	Weekly	Seeded assignment	\N
+143	25	Approved	Advanced	11	Weekly	Seeded request	\N
+748	23	Approved	Advanced	7	Monthly	Seeded request	\N
+856	24	Approved	Beginner	3	Occasionally	Seeded assignment	\N
+912	22	Approved	Advanced	5	Occasionally	Seeded assignment	\N
+465	17	Approved	Expert	0	Daily	Seeded assignment	2025-11-16 18:47:27.264874
+419	7	Approved	Advanced	7	Weekly	Seeded request	2025-11-20 08:25:27.264874
+392	6	Approved	Advanced	6	Monthly	Seeded request	2025-11-12 20:37:27.264874
+381	25	Approved	Intermediate	3	Monthly	Seeded assignment	\N
+745	21	Approved	Intermediate	5	Monthly	Seeded assignment	2025-11-29 16:13:27.264874
+606	24	Approved	Intermediate	15	Weekly	Seeded assignment	\N
+526	10	Approved	Intermediate	7	Weekly	Seeded assignment	\N
+675	5	Approved	Expert	12	Daily	Seeded request	2025-11-10 07:13:27.264874
+563	17	Approved	Beginner	14	Monthly	Seeded request	\N
+529	11	Approved	Advanced	15	Occasionally	Seeded assignment	2025-11-25 12:29:27.264874
+457	12	Approved	Intermediate	9	Occasionally	Seeded assignment	\N
+545	13	Approved	Beginner	12	Monthly	Seeded request	2025-11-14 21:23:27.264874
+503	5	Approved	Intermediate	9	Monthly	Seeded request	\N
+635	21	Approved	Expert	14	Weekly	Seeded assignment	2025-11-16 11:42:27.264874
+906	18	Approved	Intermediate	6	Weekly	Seeded request	2025-11-06 06:28:27.264874
+658	22	Approved	Expert	10	Monthly	Seeded assignment	\N
+410	13	Approved	Expert	5	Weekly	Seeded assignment	\N
+988	9	Approved	Expert	4	Occasionally	Seeded request	\N
+95	16	Approved	Intermediate	4	Weekly	Seeded request	2025-11-07 01:12:27.264874
+347	13	Approved	Expert	15	Monthly	Seeded request	2025-11-17 05:51:27.264874
+563	8	Approved	Advanced	1	Monthly	Seeded assignment	\N
+689	21	Approved	Advanced	12	Occasionally	Seeded assignment	\N
+216	17	Approved	Expert	0	Occasionally	Seeded assignment	\N
+380	13	Approved	Beginner	9	Monthly	Seeded assignment	2025-11-21 07:57:27.264874
+527	12	Approved	Expert	14	Weekly	Seeded assignment	\N
+512	8	Approved	Intermediate	3	Monthly	Seeded request	\N
+783	12	Approved	Intermediate	8	Occasionally	Seeded assignment	\N
+121	20	Approved	Expert	6	Monthly	Seeded request	2025-11-15 21:35:27.264874
+399	23	Approved	Intermediate	15	Daily	Seeded request	2025-11-27 22:51:27.264874
+876	1	Approved	Intermediate	0	Monthly	Seeded assignment	\N
+470	1	Approved	Advanced	3	Monthly	Seeded assignment	\N
+429	25	Approved	Advanced	7	Monthly	Seeded assignment	\N
+751	16	Approved	Beginner	15	Daily	Seeded assignment	2025-11-22 22:53:27.264874
+492	10	Approved	Expert	2	Monthly	Seeded assignment	\N
+447	3	Approved	Advanced	12	Monthly	Seeded assignment	\N
+615	11	Approved	Beginner	1	Daily	Seeded request	\N
+121	13	Approved	Beginner	9	Weekly	Seeded assignment	2025-11-18 11:05:27.264874
+626	7	Approved	Advanced	0	Weekly	Seeded assignment	\N
+703	1	Approved	Intermediate	5	Occasionally	Seeded request	2025-11-25 19:58:27.264874
+361	25	Approved	Intermediate	14	Occasionally	Seeded assignment	2025-11-11 20:12:27.264874
+728	24	Approved	Expert	3	Daily	Seeded request	\N
+660	1	Approved	Beginner	7	Daily	Seeded request	\N
+489	23	Approved	Advanced	8	Daily	Seeded request	\N
+735	1	Approved	Beginner	13	Weekly	Seeded request	2025-11-07 10:19:27.264874
+344	13	Approved	Intermediate	7	Monthly	Seeded request	2025-11-21 03:42:27.264874
+302	16	Approved	Advanced	6	Monthly	Seeded assignment	2025-11-14 11:48:27.264874
+386	16	Approved	Expert	8	Weekly	Seeded assignment	2025-11-30 08:46:27.264874
+782	10	Approved	Beginner	7	Occasionally	Seeded request	\N
+824	13	Approved	Expert	13	Occasionally	Seeded assignment	2025-11-29 15:19:27.264874
+73	25	Approved	Intermediate	8	Monthly	Seeded request	\N
+574	20	Approved	Beginner	0	Daily	Seeded request	\N
+788	4	Approved	Expert	1	Weekly	Seeded assignment	2025-12-02 07:55:27.264874
+355	25	Approved	Advanced	15	Monthly	Seeded assignment	2025-11-18 04:35:27.264874
+40	25	Approved	Expert	15	Monthly	Seeded assignment	2025-11-05 21:17:27.264874
+141	9	Approved	Beginner	12	Daily	Seeded assignment	2025-11-28 11:58:27.264874
+410	20	Approved	Advanced	13	Monthly	Seeded assignment	\N
+630	8	Approved	Beginner	4	Monthly	Seeded assignment	\N
+794	3	Approved	Intermediate	11	Daily	Seeded assignment	\N
+396	21	Approved	Advanced	12	Occasionally	Seeded assignment	\N
+963	19	Approved	Beginner	11	Monthly	Seeded request	2025-11-13 00:09:27.264874
+448	19	Approved	Intermediate	6	Occasionally	Seeded assignment	\N
+463	9	Approved	Expert	11	Daily	Seeded request	\N
+596	17	Approved	Advanced	7	Weekly	Seeded assignment	2025-11-26 23:51:27.264874
+124	18	Approved	Beginner	0	Occasionally	Seeded request	2025-11-29 16:05:27.264874
+592	19	Approved	Beginner	10	Weekly	Seeded request	\N
+740	19	Approved	Expert	10	Weekly	Seeded request	\N
+333	10	Approved	Advanced	0	Occasionally	Seeded assignment	\N
+534	22	Approved	Advanced	10	Occasionally	Seeded assignment	2025-11-20 21:07:27.264874
+74	3	Approved	Intermediate	10	Weekly	Seeded assignment	\N
+666	12	Approved	Intermediate	10	Daily	Seeded assignment	2025-11-03 11:46:27.264874
+736	24	Approved	Expert	15	Occasionally	Seeded assignment	\N
+743	11	Approved	Intermediate	5	Weekly	Seeded request	\N
+544	18	Approved	Beginner	0	Monthly	Seeded request	\N
+475	17	Approved	Advanced	2	Weekly	Seeded assignment	\N
+536	17	Approved	Expert	10	Weekly	Seeded assignment	\N
+934	1	Approved	Advanced	9	Daily	Seeded request	\N
+546	24	Approved	Advanced	2	Weekly	Seeded assignment	2025-11-10 12:58:27.264874
+776	20	Approved	Advanced	8	Monthly	Seeded assignment	2025-11-11 02:34:27.264874
+705	21	Approved	Expert	10	Occasionally	Seeded assignment	2025-11-27 09:43:27.264874
+697	9	Approved	Advanced	5	Daily	Seeded assignment	\N
+728	17	Approved	Intermediate	11	Occasionally	Seeded assignment	2025-11-23 12:23:27.264874
+727	21	Approved	Intermediate	3	Weekly	Seeded assignment	2025-11-14 07:42:27.264874
+172	10	Approved	Beginner	2	Occasionally	Seeded assignment	\N
+63	20	Approved	Intermediate	12	Monthly	Seeded assignment	\N
+494	25	Approved	Intermediate	7	Daily	Seeded assignment	2025-12-01 05:44:27.264874
+671	13	Approved	Advanced	4	Daily	Seeded request	2025-11-25 01:36:27.264874
+524	6	Approved	Advanced	2	Daily	Seeded assignment	\N
+179	3	Approved	Beginner	11	Weekly	Seeded request	2025-11-03 20:44:27.264874
+68	25	Approved	Expert	4	Monthly	Seeded assignment	2025-11-06 12:33:27.264874
+687	24	Approved	Intermediate	15	Daily	Seeded assignment	2025-11-11 05:40:27.264874
+910	23	Approved	Expert	10	Occasionally	Seeded assignment	2025-11-12 11:11:27.264874
+619	18	Approved	Beginner	7	Daily	Seeded assignment	2025-11-03 22:12:27.264874
+84	3	Approved	Intermediate	2	Daily	Seeded assignment	2025-11-21 05:26:27.264874
+270	8	Approved	Advanced	5	Weekly	Seeded request	\N
+789	17	Approved	Advanced	4	Occasionally	Seeded assignment	\N
+462	17	Approved	Advanced	3	Occasionally	Seeded assignment	\N
+611	11	Approved	Beginner	13	Monthly	Seeded assignment	\N
+558	22	Approved	Intermediate	0	Daily	Seeded assignment	\N
+237	18	Approved	Beginner	1	Monthly	Seeded request	2025-11-13 13:56:27.264874
+316	1	Approved	Expert	8	Occasionally	Seeded assignment	\N
+105	11	Approved	Intermediate	4	Weekly	Seeded assignment	\N
+200	20	Approved	Advanced	11	Daily	Seeded request	2025-11-25 03:21:27.264874
+682	12	Approved	Intermediate	8	Daily	Seeded assignment	2025-11-20 14:52:27.264874
+372	12	Approved	Beginner	11	Occasionally	Seeded assignment	2025-11-25 11:45:27.264874
+142	23	Approved	Advanced	9	Monthly	Seeded assignment	2025-11-21 19:24:27.264874
+573	5	Approved	Intermediate	0	Weekly	Seeded assignment	\N
+556	10	Approved	Advanced	2	Daily	Seeded request	\N
+895	11	Approved	Expert	4	Occasionally	Seeded request	\N
+548	19	Approved	Advanced	15	Weekly	Seeded assignment	2025-11-03 17:03:27.264874
+580	3	Approved	Expert	7	Daily	Seeded request	\N
+325	23	Approved	Advanced	12	Occasionally	Seeded assignment	\N
+543	17	Approved	Intermediate	9	Weekly	Seeded request	\N
+443	24	Approved	Advanced	12	Weekly	Seeded request	2025-11-06 05:58:27.264874
+282	7	Approved	Beginner	10	Daily	Seeded request	\N
+593	21	Approved	Advanced	9	Weekly	Seeded assignment	2025-11-20 05:53:27.264874
+741	25	Approved	Advanced	7	Occasionally	Seeded assignment	2025-11-20 20:05:27.264874
+835	22	Approved	Expert	3	Weekly	Seeded request	\N
+958	23	Approved	Beginner	11	Monthly	Seeded request	2025-11-03 12:00:27.264874
+725	21	Approved	Advanced	8	Occasionally	Seeded request	2025-12-01 02:11:27.264874
+219	16	Approved	Beginner	9	Daily	Seeded request	\N
+970	10	Approved	Expert	6	Occasionally	Seeded request	\N
+600	24	Approved	Intermediate	13	Monthly	Seeded assignment	\N
+682	20	Approved	Expert	10	Monthly	Seeded assignment	\N
+954	24	Approved	Intermediate	14	Monthly	Seeded request	\N
+651	17	Approved	Advanced	1	Daily	Seeded assignment	\N
+788	3	Approved	Advanced	0	Daily	Seeded assignment	2025-11-06 11:46:27.264874
+590	10	Approved	Advanced	12	Daily	Seeded request	2025-11-11 12:24:27.264874
+7	13	Approved	Beginner	11	Monthly	Seeded assignment	\N
+263	13	Approved	Expert	15	Occasionally	Seeded assignment	\N
+366	24	Approved	Intermediate	12	Daily	Seeded request	\N
+852	6	Approved	Advanced	1	Weekly	Seeded request	\N
+946	10	Approved	Intermediate	2	Occasionally	Seeded assignment	\N
+638	11	Approved	Intermediate	7	Weekly	Seeded request	\N
+476	18	Approved	Beginner	8	Daily	Seeded assignment	\N
+690	17	Approved	Expert	4	Weekly	Seeded request	\N
+935	10	Approved	Beginner	15	Daily	Seeded assignment	\N
+644	6	Approved	Advanced	4	Occasionally	Seeded assignment	\N
+309	4	Approved	Advanced	4	Daily	Seeded assignment	\N
+873	12	Approved	Advanced	8	Weekly	Seeded assignment	2025-11-23 04:25:27.264874
+199	13	Approved	Advanced	8	Weekly	Seeded assignment	\N
+549	7	Approved	Expert	7	Occasionally	Seeded assignment	2025-11-13 20:36:27.264874
+287	21	Approved	Intermediate	8	Daily	Seeded request	2025-12-01 22:30:27.264874
+669	16	Approved	Expert	6	Daily	Seeded request	\N
+985	3	Approved	Advanced	8	Occasionally	Seeded request	\N
+852	7	Approved	Beginner	4	Monthly	Seeded request	\N
+708	16	Approved	Beginner	0	Daily	Seeded assignment	\N
+210	18	Approved	Beginner	4	Daily	Seeded request	2025-11-09 14:49:27.264874
+390	9	Approved	Advanced	11	Occasionally	Seeded request	2025-11-07 21:57:27.264874
+51	9	Approved	Beginner	14	Daily	Seeded request	2025-11-30 03:19:27.264874
+218	8	Approved	Intermediate	13	Weekly	Seeded assignment	2025-11-05 23:48:27.264874
+968	3	Approved	Intermediate	12	Monthly	Seeded request	2025-12-01 21:37:27.264874
+715	4	Approved	Intermediate	15	Occasionally	Seeded assignment	2025-12-01 01:19:27.264874
+698	1	Approved	Intermediate	13	Daily	Seeded request	2025-11-04 15:44:27.264874
+371	12	Approved	Advanced	4	Weekly	Seeded request	\N
+513	9	Approved	Advanced	15	Daily	Seeded assignment	2025-11-05 22:31:27.264874
+141	1	Approved	Advanced	11	Daily	Seeded request	2025-11-17 15:22:27.264874
+488	4	Approved	Intermediate	4	Occasionally	Seeded request	2025-12-01 19:24:27.264874
+773	13	Approved	Advanced	14	Monthly	Seeded assignment	\N
+411	5	Approved	Expert	15	Monthly	Seeded assignment	\N
+311	18	Approved	Intermediate	8	Daily	Seeded assignment	\N
+245	20	Approved	Expert	6	Weekly	Seeded assignment	\N
+798	5	Approved	Intermediate	5	Monthly	Seeded assignment	2025-11-27 12:02:27.264874
+294	11	Approved	Beginner	15	Occasionally	Seeded assignment	\N
+380	12	Approved	Expert	3	Occasionally	Seeded request	\N
+327	20	Approved	Expert	8	Occasionally	Seeded request	\N
+90	1	Approved	Beginner	11	Weekly	Seeded assignment	\N
+161	19	Approved	Advanced	1	Occasionally	Seeded assignment	\N
+984	17	Approved	Advanced	13	Monthly	Seeded assignment	\N
+781	10	Approved	Intermediate	8	Weekly	Seeded request	\N
+138	12	Approved	Advanced	2	Weekly	Seeded request	\N
+492	21	Approved	Intermediate	7	Daily	Seeded assignment	\N
+972	5	Approved	Intermediate	15	Occasionally	Seeded request	\N
+441	22	Approved	Expert	1	Occasionally	Seeded request	\N
+766	18	Approved	Advanced	6	Daily	Seeded request	\N
+326	21	Approved	Advanced	12	Daily	Seeded assignment	2025-12-02 22:04:27.264874
+893	10	Approved	Intermediate	15	Occasionally	Seeded assignment	2025-11-18 02:48:27.264874
+116	22	Approved	Expert	9	Occasionally	Seeded request	2025-11-06 13:05:27.264874
+671	20	Approved	Intermediate	5	Monthly	Seeded assignment	2025-11-19 03:50:27.264874
+83	17	Approved	Intermediate	11	Occasionally	Seeded request	2025-11-27 03:43:27.264874
+112	24	Approved	Beginner	10	Monthly	Seeded assignment	\N
+734	22	Approved	Beginner	7	Monthly	Seeded assignment	\N
+936	11	Approved	Beginner	1	Weekly	Seeded assignment	2025-11-06 04:21:27.264874
+316	9	Approved	Beginner	9	Daily	Seeded assignment	2025-11-03 08:30:27.264874
+115	18	Approved	Advanced	14	Monthly	Seeded assignment	\N
+472	19	Approved	Intermediate	7	Monthly	Seeded request	\N
+49	20	Requested	Intermediate	2	Daily	Seeded request	2025-11-17 07:16:09.934399
+717	9	Approved	Expert	15	Monthly	Seeded request	\N
+107	25	Approved	Intermediate	0	Occasionally	Seeded request	\N
+8	16	Approved	Intermediate	5	Daily	Seeded assignment	2025-11-22 21:07:27.264874
+988	3	Approved	Expert	2	Weekly	Seeded request	2025-11-18 18:22:27.264874
+356	22	Approved	Intermediate	11	Occasionally	Seeded assignment	2025-11-22 19:16:27.264874
+363	16	Approved	Advanced	9	Weekly	Seeded request	2025-11-28 12:03:27.264874
+375	20	Approved	Expert	3	Weekly	Seeded assignment	2025-11-12 06:05:27.264874
+388	11	Approved	Beginner	11	Weekly	Seeded assignment	\N
+325	6	Approved	Intermediate	1	Occasionally	Seeded assignment	2025-11-03 06:37:27.264874
+185	22	Approved	Intermediate	5	Weekly	Seeded assignment	\N
+555	23	Approved	Intermediate	12	Monthly	Seeded request	\N
+482	12	Approved	Beginner	1	Occasionally	Seeded assignment	2025-11-24 15:31:27.264874
+974	6	Approved	Beginner	5	Occasionally	Seeded assignment	\N
+875	13	Approved	Beginner	1	Daily	Seeded assignment	\N
+568	19	Approved	Advanced	14	Daily	Seeded assignment	2025-11-16 14:35:27.264874
+598	11	Approved	Intermediate	15	Monthly	Seeded assignment	\N
+589	17	Approved	Beginner	5	Weekly	Seeded assignment	\N
+988	1	Approved	Expert	0	Occasionally	Seeded assignment	\N
+61	20	Approved	Intermediate	5	Monthly	Seeded assignment	\N
+948	5	Approved	Advanced	9	Weekly	Seeded assignment	\N
+291	20	Approved	Advanced	13	Monthly	Seeded request	\N
+111	19	Approved	Advanced	0	Daily	Seeded request	\N
+775	25	Approved	Advanced	9	Occasionally	Seeded assignment	2025-11-25 09:57:27.264874
+299	1	Approved	Intermediate	15	Monthly	Seeded assignment	\N
+150	11	Approved	Advanced	1	Monthly	Seeded assignment	2025-11-10 01:14:27.264874
+899	7	Approved	Beginner	9	Daily	Seeded assignment	\N
+926	11	Approved	Expert	15	Occasionally	Seeded assignment	\N
+631	21	Approved	Intermediate	4	Daily	Seeded request	2025-11-05 06:34:27.264874
+19	25	Approved	Advanced	5	Monthly	Seeded assignment	\N
+398	25	Approved	Beginner	14	Weekly	Seeded assignment	2025-11-10 17:39:27.264874
+449	7	Approved	Intermediate	15	Monthly	Seeded request	\N
+573	20	Approved	Beginner	0	Monthly	Seeded assignment	\N
+966	25	Approved	Expert	2	Daily	Seeded assignment	\N
+326	17	Approved	Advanced	13	Daily	Seeded assignment	\N
+305	4	Approved	Expert	15	Monthly	Seeded assignment	\N
+453	12	Approved	Intermediate	5	Monthly	Seeded request	\N
+799	9	Approved	Expert	11	Weekly	Seeded assignment	2025-11-05 10:47:27.264874
+744	1	Approved	Expert	11	Weekly	Seeded assignment	2025-11-17 19:13:27.264874
+678	5	Approved	Expert	12	Monthly	Seeded request	\N
+28	16	Approved	Beginner	1	Daily	Seeded request	\N
+250	6	Approved	Intermediate	10	Monthly	Seeded assignment	\N
+561	19	Approved	Beginner	8	Monthly	Seeded assignment	2025-11-17 07:37:27.264874
+136	7	Approved	Advanced	13	Occasionally	Seeded request	2025-11-15 22:42:27.264874
+585	16	Approved	Advanced	13	Occasionally	Seeded request	2025-11-22 03:34:27.264874
+757	18	Approved	Expert	14	Occasionally	Seeded assignment	2025-11-06 21:08:27.264874
+491	18	Approved	Intermediate	10	Occasionally	Seeded request	\N
+907	18	Approved	Expert	15	Daily	Seeded request	2025-11-21 11:21:27.264874
+875	10	Approved	Advanced	6	Weekly	Seeded assignment	2025-11-07 09:28:27.264874
+345	18	Approved	Advanced	13	Weekly	Seeded assignment	\N
+416	10	Approved	Advanced	11	Weekly	Seeded request	2025-11-16 20:26:27.264874
+762	16	Approved	Advanced	3	Occasionally	Seeded assignment	\N
+931	25	Approved	Advanced	2	Daily	Seeded assignment	\N
+938	21	Approved	Intermediate	12	Occasionally	Seeded assignment	2025-11-24 04:30:27.264874
+673	25	Approved	Advanced	12	Daily	Seeded assignment	2025-11-27 10:28:27.264874
+436	18	Approved	Advanced	13	Daily	Seeded assignment	2025-11-14 15:26:27.264874
+841	21	Approved	Advanced	13	Daily	Seeded request	\N
+96	25	Approved	Intermediate	13	Occasionally	Seeded request	\N
+445	12	Approved	Advanced	3	Occasionally	Seeded assignment	2025-11-22 20:57:27.264874
+571	22	Approved	Expert	10	Occasionally	Seeded assignment	\N
+411	12	Approved	Intermediate	8	Weekly	Seeded assignment	\N
+80	3	Approved	Expert	15	Weekly	Seeded request	\N
+115	19	Approved	Intermediate	0	Weekly	Seeded assignment	\N
+472	18	Approved	Expert	3	Monthly	Seeded request	2025-11-22 12:41:27.264874
+747	11	Approved	Intermediate	4	Occasionally	Seeded assignment	2025-11-25 18:25:27.264874
+318	3	Approved	Intermediate	12	Occasionally	Seeded assignment	2025-11-10 07:06:27.264874
+680	19	Approved	Intermediate	0	Occasionally	Seeded assignment	2025-11-03 15:13:27.264874
+967	3	Approved	Advanced	13	Monthly	Seeded assignment	\N
+490	20	Approved	Advanced	11	Monthly	Seeded request	\N
+950	1	Approved	Intermediate	8	Monthly	Seeded assignment	2025-11-12 23:05:27.264874
+340	17	Approved	Advanced	10	Weekly	Seeded assignment	\N
+487	16	Approved	Advanced	12	Weekly	Seeded request	\N
+853	8	Approved	Advanced	14	Daily	Seeded assignment	2025-11-07 16:38:27.264874
+157	12	Approved	Intermediate	8	Daily	Seeded assignment	\N
+702	22	Approved	Expert	1	Occasionally	Seeded assignment	\N
+913	10	Approved	Beginner	8	Monthly	Seeded request	\N
+359	23	Approved	Intermediate	14	Daily	Seeded request	\N
+123	24	Approved	Advanced	5	Daily	Seeded assignment	2025-11-11 11:08:27.264874
+503	12	Approved	Expert	13	Weekly	Seeded request	\N
+590	24	Approved	Expert	7	Daily	Seeded assignment	\N
+220	18	Approved	Advanced	0	Monthly	Seeded request	2025-11-06 12:15:27.264874
+439	1	Approved	Intermediate	6	Weekly	Seeded request	\N
+551	9	Approved	Intermediate	12	Occasionally	Seeded assignment	\N
+14	11	Approved	Advanced	15	Monthly	Seeded assignment	\N
+276	7	Approved	Beginner	15	Monthly	Seeded request	\N
+706	23	Approved	Beginner	7	Weekly	Seeded request	\N
+639	4	Approved	Expert	6	Monthly	Seeded request	\N
+704	25	Approved	Intermediate	1	Monthly	Seeded request	\N
+859	11	Approved	Expert	13	Weekly	Seeded request	\N
+187	4	Approved	Advanced	13	Occasionally	Seeded request	\N
+337	24	Approved	Advanced	1	Monthly	Seeded request	\N
+446	16	Approved	Intermediate	4	Daily	Seeded assignment	\N
+92	19	Approved	Beginner	5	Occasionally	Seeded assignment	2025-11-29 18:33:27.264874
+662	6	Approved	Advanced	3	Weekly	Seeded assignment	\N
+533	8	Approved	Advanced	15	Weekly	Seeded request	\N
+112	10	Approved	Advanced	14	Occasionally	Seeded assignment	\N
+343	8	Approved	Intermediate	0	Daily	Seeded assignment	\N
+937	17	Approved	Expert	2	Occasionally	Seeded request	\N
+414	23	Approved	Beginner	4	Monthly	Seeded request	\N
+291	12	Approved	Beginner	5	Daily	Seeded assignment	\N
+604	16	Approved	Expert	14	Daily	Seeded assignment	\N
+690	10	Approved	Advanced	9	Daily	Seeded assignment	\N
+1	5	Approved	Advanced	13	Occasionally	Seeded assignment	\N
+88	20	Approved	Beginner	15	Daily	Seeded assignment	2025-11-10 10:13:27.264874
+158	25	Approved	Intermediate	8	Monthly	Seeded assignment	\N
+605	4	Approved	Beginner	14	Occasionally	Seeded assignment	\N
+708	22	Approved	Advanced	3	Daily	Seeded request	2025-11-20 00:10:27.264874
+689	24	Approved	Expert	11	Monthly	Seeded assignment	2025-11-17 20:24:27.264874
+795	1	Approved	Expert	9	Occasionally	Seeded request	2025-11-24 00:57:27.264874
+460	21	Approved	Advanced	11	Weekly	Seeded assignment	\N
+617	19	Approved	Intermediate	14	Weekly	Seeded request	\N
+319	17	Approved	Beginner	1	Daily	Seeded assignment	\N
+911	11	Approved	Advanced	7	Monthly	Seeded request	2025-11-12 01:41:27.264874
+916	11	Approved	Advanced	3	Weekly	Seeded assignment	\N
+404	21	Approved	Beginner	5	Daily	Seeded request	\N
+294	19	Approved	Beginner	2	Daily	Seeded assignment	\N
+803	25	Approved	Expert	7	Daily	Seeded assignment	2025-11-18 02:16:27.264874
+120	7	Approved	Expert	3	Daily	Seeded assignment	\N
+545	22	Approved	Advanced	11	Daily	Seeded assignment	2025-11-27 02:55:27.264874
+113	25	Approved	Expert	0	Occasionally	Seeded request	\N
+960	5	Approved	Advanced	15	Occasionally	Seeded request	\N
+76	21	Approved	Advanced	12	Weekly	Seeded request	\N
+75	6	Approved	Expert	13	Monthly	Seeded request	\N
+284	13	Approved	Advanced	0	Monthly	Seeded assignment	\N
+94	25	Approved	Beginner	8	Occasionally	Seeded assignment	2025-11-06 17:45:27.264874
+740	7	Approved	Expert	1	Occasionally	Seeded assignment	2025-11-09 07:30:27.264874
+244	9	Approved	Advanced	1	Daily	Seeded request	\N
+935	22	Approved	Intermediate	12	Monthly	Seeded assignment	\N
+786	18	Approved	Intermediate	5	Monthly	Seeded assignment	\N
+957	11	Approved	Beginner	0	Monthly	Seeded assignment	2025-11-24 09:35:27.264874
+863	4	Approved	Expert	1	Weekly	Seeded request	\N
+265	11	Approved	Intermediate	0	Occasionally	Seeded request	\N
+105	6	Approved	Advanced	9	Daily	Seeded request	\N
+655	19	Approved	Beginner	15	Monthly	Seeded request	\N
+818	22	Approved	Advanced	1	Weekly	Seeded request	2025-11-10 18:47:27.264874
+909	6	Approved	Advanced	4	Weekly	Seeded request	\N
+396	22	Approved	Advanced	13	Weekly	Seeded assignment	\N
+548	7	Approved	Advanced	9	Monthly	Seeded assignment	\N
+149	18	Approved	Intermediate	9	Occasionally	Seeded assignment	\N
+329	25	Approved	Advanced	11	Occasionally	Seeded assignment	2025-12-01 19:23:27.264874
+54	8	Approved	Intermediate	12	Monthly	Seeded assignment	2025-11-11 01:23:27.264874
+563	5	Approved	Intermediate	14	Occasionally	Seeded assignment	2025-11-20 23:27:27.264874
+130	7	Approved	Advanced	7	Daily	Seeded assignment	\N
+127	25	Approved	Intermediate	10	Monthly	Seeded assignment	\N
+225	6	Approved	Intermediate	1	Weekly	Seeded assignment	\N
+892	3	Approved	Expert	12	Occasionally	Seeded assignment	\N
+395	21	Approved	Advanced	13	Occasionally	Seeded assignment	\N
+681	20	Approved	Expert	0	Daily	Seeded request	2025-11-05 15:56:27.264874
+917	7	Approved	Beginner	9	Occasionally	Seeded request	\N
+744	25	Approved	Expert	13	Monthly	Seeded assignment	\N
+768	6	Approved	Advanced	15	Occasionally	Seeded request	\N
+954	16	Approved	Expert	11	Monthly	Seeded assignment	2025-11-08 23:47:27.264874
+704	9	Approved	Beginner	10	Daily	Seeded assignment	2025-11-20 07:22:27.264874
+978	6	Approved	Expert	8	Weekly	Seeded assignment	2025-11-08 16:20:27.264874
+508	5	Approved	Beginner	0	Occasionally	Seeded assignment	2025-11-11 17:33:27.264874
+551	25	Approved	Intermediate	12	Occasionally	Seeded assignment	\N
+652	3	Approved	Expert	6	Daily	Seeded assignment	\N
+620	20	Approved	Advanced	3	Daily	Seeded assignment	\N
+202	3	Approved	Intermediate	8	Weekly	Seeded request	\N
+479	13	Approved	Beginner	6	Daily	Seeded request	\N
+889	22	Approved	Intermediate	4	Weekly	Seeded assignment	\N
+969	12	Approved	Intermediate	6	Monthly	Seeded request	\N
+676	10	Approved	Expert	5	Weekly	Seeded assignment	\N
+845	21	Approved	Advanced	0	Occasionally	Seeded request	2025-11-19 01:26:27.264874
+979	16	Approved	Advanced	7	Daily	Seeded request	\N
+530	1	Approved	Expert	4	Daily	Seeded assignment	\N
+3	23	Approved	Beginner	0	Daily	Seeded request	2025-11-10 03:55:27.264874
+455	20	Approved	Advanced	11	Daily	Seeded assignment	2025-11-26 01:38:27.264874
+538	7	Approved	Beginner	3	Daily	Seeded request	\N
+217	7	Approved	Beginner	3	Daily	Seeded request	2025-11-22 17:10:27.264874
+625	16	Approved	Expert	2	Weekly	Seeded request	\N
+202	9	Approved	Advanced	15	Daily	Seeded assignment	\N
+767	10	Approved	Expert	3	Weekly	Seeded assignment	2025-11-08 17:14:27.264874
+980	5	Approved	Beginner	0	Monthly	Seeded request	2025-11-18 15:25:27.264874
+57	13	Approved	Intermediate	11	Occasionally	Seeded assignment	2025-11-18 19:02:27.264874
+641	10	Approved	Intermediate	12	Occasionally	Seeded request	2025-11-15 18:51:27.264874
+826	21	Approved	Intermediate	12	Weekly	Seeded assignment	2025-11-21 18:39:27.264874
+114	10	Approved	Advanced	15	Daily	Seeded request	2025-11-11 12:52:27.264874
+678	8	Approved	Intermediate	5	Occasionally	Seeded request	2025-11-16 07:20:27.264874
+100	3	Approved	Expert	6	Occasionally	Seeded assignment	2025-11-21 01:25:27.264874
+197	10	Approved	Advanced	8	Monthly	Seeded assignment	2025-11-26 23:08:27.264874
+298	22	Approved	Expert	11	Occasionally	Seeded assignment	2025-11-04 08:02:27.264874
+398	4	Approved	Intermediate	12	Weekly	Seeded assignment	\N
+604	17	Approved	Beginner	13	Weekly	Seeded request	2025-11-12 18:08:27.264874
+295	13	Approved	Intermediate	11	Daily	Seeded assignment	2025-11-05 10:00:27.264874
+701	9	Approved	Advanced	4	Weekly	Seeded assignment	\N
+269	21	Approved	Expert	10	Occasionally	Seeded assignment	\N
+589	16	Approved	Intermediate	4	Monthly	Seeded request	\N
+413	19	Approved	Expert	4	Weekly	Seeded assignment	2025-11-05 13:32:27.264874
+266	3	Approved	Intermediate	8	Daily	Seeded assignment	\N
+931	1	Approved	Expert	8	Occasionally	Seeded request	2025-11-17 02:44:27.264874
+638	9	Approved	Expert	1	Daily	Seeded request	\N
+254	22	Approved	Intermediate	0	Weekly	Seeded request	2025-11-29 08:10:27.264874
+559	13	Approved	Expert	7	Monthly	Seeded assignment	\N
+833	5	Approved	Advanced	1	Monthly	Seeded assignment	2025-11-16 23:30:27.264874
+440	16	Approved	Intermediate	10	Occasionally	Seeded request	\N
+754	6	Approved	Expert	0	Daily	Seeded assignment	2025-11-08 10:06:27.264874
+163	13	Approved	Beginner	15	Weekly	Seeded assignment	2025-11-07 21:02:27.264874
+583	6	Approved	Expert	4	Occasionally	Seeded assignment	\N
+650	6	Approved	Beginner	1	Daily	Seeded assignment	\N
+120	11	Approved	Advanced	13	Monthly	Seeded assignment	2025-11-22 18:42:27.264874
+313	10	Approved	Expert	11	Weekly	Seeded request	\N
+568	6	Approved	Intermediate	9	Monthly	Seeded assignment	\N
+290	8	Approved	Intermediate	12	Monthly	Seeded request	\N
+384	12	Approved	Intermediate	0	Weekly	Seeded assignment	\N
+493	9	Approved	Expert	9	Occasionally	Seeded assignment	\N
+622	17	Approved	Intermediate	12	Occasionally	Seeded request	\N
+820	9	Approved	Expert	9	Monthly	Seeded assignment	\N
+232	4	Approved	Beginner	10	Monthly	Seeded request	\N
+916	7	Approved	Intermediate	8	Monthly	Seeded assignment	2025-11-18 05:20:27.264874
+613	6	Approved	Expert	1	Weekly	Seeded assignment	2025-11-26 03:15:27.264874
+803	4	Approved	Beginner	9	Daily	Seeded request	\N
+826	24	Approved	Intermediate	0	Daily	Seeded request	2025-11-09 03:56:27.264874
+437	18	Approved	Beginner	12	Daily	Seeded assignment	\N
+863	3	Approved	Beginner	8	Occasionally	Seeded request	\N
+343	13	Approved	Intermediate	3	Daily	Seeded assignment	\N
+592	23	Approved	Intermediate	15	Occasionally	Seeded assignment	\N
+397	12	Approved	Intermediate	10	Monthly	Seeded request	\N
+941	4	Approved	Intermediate	7	Daily	Seeded assignment	\N
+330	12	Approved	Intermediate	11	Monthly	Seeded request	2025-11-29 20:09:27.264874
+903	17	Approved	Beginner	7	Daily	Seeded assignment	\N
+628	10	Approved	Expert	0	Daily	Seeded assignment	2025-11-17 22:05:27.264874
+862	21	Approved	Intermediate	6	Weekly	Seeded assignment	\N
+807	11	Approved	Intermediate	8	Weekly	Seeded assignment	\N
+615	23	Approved	Beginner	1	Daily	Seeded request	\N
+918	5	Approved	Advanced	8	Occasionally	Seeded assignment	2025-12-02 09:39:27.264874
+146	13	Approved	Beginner	7	Occasionally	Seeded request	2025-11-14 22:40:27.264874
+483	10	Approved	Beginner	0	Daily	Seeded request	2025-11-29 18:18:27.264874
+266	4	Approved	Advanced	1	Occasionally	Seeded request	\N
+961	17	Approved	Intermediate	3	Daily	Seeded request	\N
+367	22	Approved	Beginner	14	Monthly	Seeded assignment	2025-11-05 09:37:27.264874
+675	10	Approved	Intermediate	10	Daily	Seeded assignment	\N
+265	18	Approved	Advanced	3	Weekly	Seeded request	\N
+506	21	Approved	Intermediate	5	Weekly	Seeded assignment	2025-11-27 19:06:27.264874
+557	24	Approved	Intermediate	12	Occasionally	Seeded assignment	\N
+796	19	Approved	Expert	10	Monthly	Seeded request	\N
+414	11	Approved	Expert	12	Monthly	Seeded assignment	2025-11-09 23:21:27.264874
+709	10	Approved	Expert	3	Monthly	Seeded assignment	\N
+119	20	Approved	Beginner	10	Occasionally	Seeded assignment	2025-11-12 10:39:27.264874
+80	9	Requested	Intermediate	5	Occasionally	Seeded assignment	2025-11-13 07:16:09.934399
+493	4	Approved	Intermediate	3	Occasionally	Seeded assignment	\N
+399	11	Approved	Intermediate	8	Daily	Seeded assignment	\N
+865	4	Approved	Intermediate	1	Weekly	Seeded assignment	\N
+382	20	Approved	Expert	12	Occasionally	Seeded assignment	2025-11-24 02:14:27.264874
+164	1	Approved	Intermediate	7	Weekly	Seeded request	\N
+728	16	Approved	Advanced	4	Monthly	Seeded assignment	2025-11-03 09:40:27.264874
+438	25	Approved	Advanced	7	Daily	Seeded assignment	\N
+542	10	Approved	Expert	15	Weekly	Seeded assignment	\N
+772	23	Approved	Advanced	9	Monthly	Seeded request	2025-11-14 21:40:27.264874
+68	4	Approved	Advanced	11	Monthly	Seeded assignment	\N
+861	19	Approved	Expert	1	Monthly	Seeded assignment	2025-11-05 12:48:27.264874
+65	3	Approved	Expert	11	Daily	Seeded request	2025-11-21 08:49:27.264874
+142	19	Approved	Advanced	13	Occasionally	Seeded assignment	\N
+883	20	Approved	Advanced	2	Occasionally	Seeded request	\N
+324	5	Approved	Advanced	8	Monthly	Seeded request	\N
+369	24	Approved	Intermediate	11	Daily	Seeded request	2025-11-17 13:11:27.264874
+357	19	Approved	Advanced	12	Occasionally	Seeded assignment	\N
+909	4	Approved	Expert	5	Daily	Seeded request	\N
+81	21	Approved	Beginner	10	Occasionally	Seeded request	2025-11-08 12:43:27.264874
+243	13	Approved	Beginner	5	Weekly	Seeded assignment	\N
+492	22	Approved	Intermediate	8	Occasionally	Seeded assignment	2025-11-10 20:27:27.264874
+220	7	Approved	Intermediate	0	Monthly	Seeded request	\N
+393	21	Approved	Beginner	13	Daily	Seeded assignment	2025-11-28 03:35:27.264874
+648	6	Approved	Advanced	5	Occasionally	Seeded assignment	2025-11-27 23:33:27.264874
+749	23	Approved	Intermediate	9	Weekly	Seeded request	\N
+931	9	Approved	Beginner	3	Occasionally	Seeded assignment	2025-11-11 12:01:27.264874
+673	9	Approved	Advanced	6	Monthly	Seeded request	2025-11-30 22:06:27.264874
+336	24	Approved	Beginner	0	Weekly	Seeded assignment	\N
+441	21	Approved	Intermediate	7	Daily	Seeded assignment	\N
+216	16	Approved	Beginner	2	Daily	Seeded request	\N
+836	11	Approved	Beginner	15	Monthly	Seeded assignment	2025-11-26 00:23:27.264874
+532	9	Approved	Beginner	14	Occasionally	Seeded request	\N
+365	9	Approved	Intermediate	14	Monthly	Seeded request	\N
+47	4	Approved	Advanced	11	Daily	Seeded request	2025-11-21 05:39:27.264874
+119	13	Approved	Expert	6	Daily	Seeded request	2025-11-25 02:31:27.264874
+43	8	Approved	Expert	15	Occasionally	Seeded assignment	2025-12-01 21:17:27.264874
+949	11	Approved	Intermediate	15	Monthly	Seeded request	\N
+361	1	Approved	Expert	11	Daily	Seeded request	2025-11-08 02:08:27.264874
+474	22	Approved	Beginner	8	Occasionally	Seeded assignment	\N
+307	11	Approved	Intermediate	2	Weekly	Seeded assignment	\N
+582	19	Approved	Advanced	8	Daily	Seeded assignment	\N
+739	9	Approved	Advanced	1	Occasionally	Seeded request	\N
+892	9	Approved	Advanced	12	Monthly	Seeded request	\N
+734	24	Approved	Advanced	4	Weekly	Seeded request	\N
+774	5	Approved	Expert	14	Occasionally	Seeded assignment	2025-11-11 05:40:27.264874
+363	10	Approved	Beginner	7	Weekly	Seeded assignment	\N
+621	24	Approved	Intermediate	8	Weekly	Seeded assignment	2025-11-21 20:57:27.264874
+722	3	Approved	Beginner	12	Weekly	Seeded assignment	2025-11-18 23:44:27.264874
+476	23	Approved	Expert	7	Occasionally	Seeded assignment	\N
+775	4	Approved	Advanced	14	Weekly	Seeded assignment	2025-11-28 23:05:27.264874
+694	1	Approved	Advanced	1	Occasionally	Seeded assignment	\N
+807	18	Approved	Expert	13	Weekly	Seeded assignment	\N
+264	11	Approved	Expert	15	Weekly	Seeded assignment	\N
+567	24	Approved	Expert	14	Daily	Seeded assignment	\N
+151	12	Approved	Expert	15	Weekly	Seeded assignment	\N
+95	10	Approved	Advanced	1	Weekly	Seeded request	2025-11-15 05:32:27.264874
+662	19	Approved	Intermediate	7	Occasionally	Seeded request	2025-12-02 08:39:27.264874
+533	5	Approved	Beginner	13	Monthly	Seeded assignment	\N
+64	13	Approved	Intermediate	14	Weekly	Seeded assignment	\N
+119	12	Approved	Advanced	14	Daily	Seeded assignment	\N
+659	7	Approved	Expert	8	Daily	Seeded assignment	\N
+623	10	Approved	Expert	7	Occasionally	Seeded request	\N
+372	8	Approved	Expert	15	Weekly	Seeded assignment	\N
+505	11	Approved	Beginner	0	Occasionally	Seeded request	\N
+397	5	Approved	Beginner	13	Monthly	Seeded request	2025-11-22 08:20:27.264874
+387	10	Approved	Expert	8	Weekly	Seeded request	\N
+703	25	Approved	Expert	9	Daily	Seeded assignment	2025-11-05 16:19:27.264874
+214	5	Approved	Expert	12	Weekly	Seeded request	\N
+139	11	Approved	Expert	11	Daily	Seeded assignment	\N
+831	24	Approved	Advanced	4	Daily	Seeded request	2025-11-15 21:57:27.264874
+735	25	Approved	Intermediate	6	Occasionally	Seeded assignment	\N
+680	23	Approved	Expert	12	Occasionally	Seeded assignment	\N
+136	19	Approved	Beginner	13	Monthly	Seeded request	\N
+454	21	Approved	Beginner	5	Monthly	Seeded request	2025-11-27 11:05:27.264874
 819	16	Approved	Expert	7	Weekly	Seeded assignment	\N
-466	11	Approved	\N	5	Monthly	Seeded assignment	\N
-385	17	Requested	\N	\N	Weekly	Seeded assignment	2025-11-03 20:08:27.264874
-315	12	Approved	\N	\N	\N	Seeded request	\N
-376	3	Approved	Intermediate	\N	Monthly	Seeded assignment	2025-11-04 07:14:27.264874
-339	13	Requested	Advanced	\N	\N	Seeded request	\N
-400	16	Approved	\N	\N	Daily	Seeded request	\N
-356	21	Requested	Intermediate	6	Monthly	Seeded request	\N
-71	18	Requested	\N	4	\N	Seeded assignment	\N
-261	1	Requested	\N	1	Weekly	Seeded request	\N
-927	11	Approved	Advanced	9	Monthly	Seeded request	\N
-815	20	Requested	\N	7	\N	Seeded assignment	2025-11-19 05:51:27.264874
-897	9	Requested	Beginner	\N	\N	Seeded assignment	2025-11-03 16:37:27.264874
-97	24	Approved	Expert	5	Daily	Seeded assignment	\N
-976	9	Approved	\N	0	\N	Seeded request	\N
-823	18	Approved	Intermediate	6	Rarely	Seeded assignment	2025-11-04 16:40:27.264874
-908	6	Requested	Intermediate	6	Monthly	Seeded request	2025-11-23 07:53:27.264874
-780	7	Approved	\N	\N	\N	Seeded assignment	2025-11-19 01:06:27.264874
-204	21	Requested	Advanced	7	Daily	Seeded assignment	2025-11-09 01:45:27.264874
-332	1	Approved	Intermediate	\N	Daily	Seeded assignment	2025-11-29 15:07:27.264874
-842	24	Approved	\N	10	Monthly	Seeded request	\N
-529	25	Approved	Advanced	\N	Weekly	Seeded assignment	2025-11-24 21:46:27.264874
-185	24	Requested	Beginner	\N	Rarely	Seeded assignment	2025-12-03 00:43:27.264874
-938	22	Requested	Beginner	8	\N	Seeded assignment	\N
-706	19	Approved	Advanced	1	\N	Seeded assignment	\N
-304	16	Requested	Beginner	\N	Weekly	Seeded assignment	\N
-296	18	Requested	\N	\N	Rarely	Seeded request	2025-11-10 20:59:27.264874
-970	16	Requested	Advanced	6	\N	Seeded assignment	2025-11-20 13:49:27.264874
-31	20	Requested	Expert	\N	Daily	Seeded request	\N
-528	23	Requested	Intermediate	5	\N	Seeded assignment	\N
-622	21	Requested	\N	8	\N	Seeded request	\N
-273	10	Approved	Beginner	\N	\N	Seeded request	2025-11-28 19:52:27.264874
-887	13	Requested	Beginner	3	Rarely	Seeded assignment	\N
-806	16	Approved	Expert	2	Rarely	Seeded assignment	\N
-696	1	Approved	Intermediate	10	\N	Seeded request	2025-11-08 00:51:27.264874
-324	12	Approved	Beginner	\N	\N	Seeded request	2025-11-08 03:16:27.264874
-855	21	Approved	Expert	0	Daily	Seeded request	\N
-891	4	Requested	\N	\N	Daily	Seeded assignment	2025-12-01 02:50:27.264874
-430	25	Requested	\N	\N	Weekly	Seeded assignment	\N
-627	1	Requested	Advanced	3	\N	Seeded assignment	\N
-943	6	Requested	Beginner	10	Daily	Seeded request	\N
-730	9	Approved	Beginner	0	Weekly	Seeded assignment	\N
-634	8	Requested	Intermediate	\N	Rarely	Seeded assignment	2025-11-12 09:24:27.264874
-284	20	Requested	\N	1	\N	Seeded assignment	2025-11-17 20:43:27.264874
-619	7	Requested	\N	0	\N	Seeded assignment	2025-11-23 08:07:27.264874
-655	18	Approved	\N	\N	Rarely	Seeded assignment	2025-11-22 05:22:27.264874
-964	25	Requested	Expert	7	Rarely	Seeded request	2025-11-12 03:20:27.264874
-651	22	Approved	\N	5	Rarely	Seeded assignment	\N
-15	4	Approved	\N	\N	Daily	Seeded assignment	2025-11-14 10:33:27.264874
-579	16	Approved	\N	5	Daily	Seeded request	\N
-862	17	Approved	Beginner	\N	Weekly	Seeded request	2025-12-01 09:26:27.264874
-898	11	Approved	Intermediate	7	\N	Seeded assignment	2025-11-09 20:52:27.264874
-500	9	Requested	\N	2	\N	Seeded request	2025-11-04 13:05:27.264874
-563	20	Approved	Advanced	\N	\N	Seeded assignment	\N
-786	19	Approved	Advanced	\N	Daily	Seeded request	2025-11-28 03:23:27.264874
-301	3	Approved	\N	6	\N	Seeded request	\N
-226	9	Approved	Intermediate	\N	\N	Seeded assignment	2025-11-04 07:20:27.264874
-408	12	Requested	Advanced	6	\N	Seeded assignment	2025-11-06 09:23:27.264874
-412	22	Requested	Intermediate	1	\N	Seeded request	2025-11-06 10:21:27.264874
-721	25	Requested	Intermediate	\N	Weekly	Seeded assignment	2025-11-26 05:03:27.264874
-195	21	Approved	\N	\N	Daily	Seeded request	2025-11-21 18:25:27.264874
-35	8	Approved	\N	10	\N	Seeded assignment	\N
-285	5	Approved	\N	\N	Daily	Seeded assignment	2025-11-14 00:57:27.264874
-681	5	Approved	Advanced	4	Weekly	Seeded assignment	\N
-617	18	Approved	\N	2	Daily	Seeded request	\N
-125	4	Approved	Expert	0	Monthly	Seeded assignment	2025-12-01 23:54:27.264874
-784	6	Approved	\N	\N	\N	Seeded request	\N
-274	22	Approved	Expert	4	\N	Seeded request	\N
-814	7	Approved	Expert	3	\N	Seeded assignment	2025-11-16 05:52:27.264874
-918	12	Requested	Advanced	\N	Weekly	Seeded request	\N
-106	5	Approved	Advanced	\N	Monthly	Seeded assignment	2025-11-15 03:48:27.264874
-167	18	Approved	\N	\N	\N	Seeded assignment	\N
-205	21	Requested	Advanced	0	\N	Seeded assignment	2025-11-21 11:08:27.264874
-465	12	Requested	Beginner	9	Weekly	Seeded assignment	2025-11-10 06:34:27.264874
-826	10	Approved	\N	0	\N	Seeded assignment	\N
-44	7	Approved	Expert	\N	Weekly	Seeded assignment	2025-11-30 15:48:27.264874
-30	24	Approved	Advanced	\N	Weekly	Seeded request	2025-11-21 06:46:27.264874
-554	11	Approved	\N	3	Rarely	Seeded request	2025-11-19 02:12:27.264874
-750	21	Requested	\N	\N	\N	Seeded assignment	\N
-688	17	Approved	Intermediate	\N	\N	Seeded assignment	\N
-880	16	Requested	Expert	\N	Weekly	Seeded assignment	2025-11-20 18:22:27.264874
-335	5	Requested	Expert	\N	Weekly	Seeded request	\N
-528	7	Approved	Intermediate	8	\N	Seeded assignment	2025-11-28 19:39:27.264874
-599	19	Requested	Beginner	4	\N	Seeded assignment	\N
-357	18	Requested	Intermediate	10	Daily	Seeded assignment	\N
-785	13	Approved	Expert	1	Monthly	Seeded assignment	\N
-433	22	Requested	Beginner	7	Daily	Seeded assignment	\N
-479	12	Requested	Beginner	\N	\N	Seeded request	\N
-210	6	Approved	Expert	\N	\N	Seeded request	\N
-237	23	Approved	\N	\N	\N	Seeded request	2025-11-15 15:39:27.264874
-230	13	Approved	Expert	5	\N	Seeded request	2025-11-13 22:13:27.264874
-480	3	Approved	\N	\N	\N	Seeded assignment	\N
-496	19	Approved	Expert	3	Weekly	Seeded assignment	\N
-969	13	Approved	Beginner	\N	\N	Seeded assignment	2025-11-15 23:54:27.264874
-207	25	Requested	\N	1	\N	Seeded assignment	\N
-404	16	Requested	Advanced	\N	Daily	Seeded assignment	2025-11-19 02:12:27.264874
-424	20	Approved	\N	1	\N	Seeded assignment	\N
-532	1	Requested	Intermediate	\N	Daily	Seeded request	\N
-142	18	Approved	Intermediate	3	Weekly	Seeded assignment	\N
-773	8	Approved	Expert	2	Weekly	Seeded request	2025-11-07 13:44:27.264874
-783	8	Approved	Beginner	6	Weekly	Seeded assignment	2025-11-18 04:44:27.264874
-642	22	Requested	Advanced	3	Weekly	Seeded request	\N
-789	22	Requested	\N	3	Weekly	Seeded assignment	2025-11-16 12:48:27.264874
-965	9	Requested	Beginner	6	\N	Seeded request	2025-11-23 07:34:27.264874
-558	17	Approved	\N	9	\N	Seeded request	\N
-816	18	Approved	Intermediate	1	Monthly	Seeded request	\N
-942	5	Requested	Advanced	\N	Weekly	Seeded request	\N
-308	8	Requested	Intermediate	\N	\N	Seeded assignment	\N
-859	6	Approved	\N	10	Rarely	Seeded request	2025-11-12 00:56:27.264874
-152	22	Requested	Beginner	3	Weekly	Seeded request	2025-11-07 20:08:27.264874
-442	12	Approved	\N	4	Daily	Seeded assignment	\N
-575	4	Requested	Expert	9	Daily	Seeded assignment	2025-11-09 13:38:27.264874
-76	10	Approved	Advanced	\N	Monthly	Seeded request	\N
-251	19	Approved	Beginner	\N	Monthly	Seeded request	\N
-531	24	Requested	Advanced	\N	Daily	Seeded request	\N
-476	6	Requested	\N	\N	Rarely	Seeded request	2025-11-17 14:16:27.264874
-837	22	Requested	Advanced	\N	\N	Seeded request	2025-11-21 23:40:27.264874
-93	13	Requested	Advanced	1	Daily	Seeded assignment	\N
-47	3	Approved	Advanced	1	Rarely	Seeded request	\N
-27	5	Requested	\N	10	Daily	Seeded assignment	\N
-632	21	Requested	Intermediate	\N	Weekly	Seeded assignment	2025-11-13 23:22:27.264874
-351	10	Approved	Expert	8	Daily	Seeded assignment	\N
-234	20	Approved	Advanced	0	Monthly	Seeded request	\N
-208	7	Approved	\N	10	Daily	Seeded assignment	\N
-165	4	Approved	\N	\N	Daily	Seeded request	2025-12-01 15:56:27.264874
-748	4	Approved	Expert	\N	\N	Seeded request	\N
-708	21	Requested	\N	5	Daily	Seeded request	\N
-663	7	Requested	Advanced	\N	\N	Seeded request	\N
-42	25	Approved	Expert	3	\N	Seeded assignment	\N
-460	17	Approved	\N	\N	\N	Seeded request	\N
-610	16	Approved	\N	\N	\N	Seeded assignment	\N
-920	6	Approved	Advanced	7	\N	Seeded request	2025-11-20 07:58:27.264874
-59	25	Requested	\N	9	Monthly	Seeded assignment	2025-11-27 15:07:27.264874
-405	5	Requested	\N	4	Daily	Seeded assignment	2025-11-12 08:27:27.264874
-82	13	Requested	Expert	9	Monthly	Seeded request	2025-11-24 20:32:27.264874
-680	7	Approved	Beginner	\N	Daily	Seeded request	2025-11-26 11:34:27.264874
-489	18	Approved	\N	4	Rarely	Seeded assignment	2025-11-26 17:21:27.264874
-745	5	Approved	Expert	\N	Rarely	Seeded assignment	\N
-779	11	Requested	Beginner	5	\N	Seeded assignment	\N
-675	21	Requested	\N	2	Weekly	Seeded assignment	2025-11-14 08:28:27.264874
-506	10	Approved	Beginner	\N	\N	Seeded assignment	2025-11-10 05:25:27.264874
-741	9	Approved	\N	4	\N	Seeded request	\N
-537	18	Requested	Expert	\N	Daily	Seeded assignment	2025-11-13 13:22:27.264874
-117	21	Requested	Intermediate	\N	\N	Seeded request	2025-11-25 21:58:27.264874
-287	16	Requested	Beginner	\N	Daily	Seeded assignment	2025-11-08 09:02:27.264874
-974	18	Approved	Advanced	\N	Daily	Seeded assignment	\N
-426	9	Approved	Expert	\N	Daily	Seeded assignment	\N
-724	10	Approved	Expert	7	\N	Seeded request	\N
-320	9	Requested	\N	9	\N	Seeded assignment	\N
-303	4	Approved	Advanced	5	\N	Seeded request	2025-11-11 11:49:27.264874
-542	24	Approved	Advanced	\N	Monthly	Seeded assignment	2025-11-21 22:12:27.264874
-288	11	Approved	\N	\N	\N	Seeded assignment	\N
-738	11	Approved	\N	\N	Weekly	Seeded assignment	\N
-13	1	Approved	Intermediate	7	\N	Seeded request	2025-11-26 00:12:27.264874
-231	24	Approved	Beginner	7	Weekly	Seeded request	2025-11-06 15:12:27.264874
-564	7	Requested	Beginner	0	Rarely	Seeded assignment	\N
-232	19	Approved	\N	\N	\N	Seeded request	\N
-484	11	Requested	Advanced	8	Weekly	Seeded assignment	\N
-840	7	Approved	Beginner	6	\N	Seeded request	2025-11-30 22:33:27.264874
-742	23	Approved	Expert	\N	\N	Seeded assignment	2025-12-01 05:22:27.264874
-223	24	Approved	Beginner	\N	\N	Seeded assignment	2025-11-24 21:18:27.264874
-447	6	Requested	Advanced	4	\N	Seeded assignment	2025-11-07 16:53:27.264874
-770	12	Requested	Beginner	\N	\N	Seeded request	2025-11-25 12:18:27.264874
-788	23	Approved	Advanced	\N	Rarely	Seeded request	\N
-41	7	Approved	Intermediate	4	Rarely	Seeded assignment	\N
-483	8	Approved	\N	6	\N	Seeded request	\N
-89	1	Requested	Intermediate	1	\N	Seeded request	\N
-881	8	Approved	\N	4	Daily	Seeded assignment	\N
-827	1	Approved	Intermediate	\N	\N	Seeded request	2025-11-12 09:55:27.264874
-303	18	Approved	\N	9	\N	Seeded request	\N
-954	13	Requested	Intermediate	\N	\N	Seeded assignment	\N
-49	17	Requested	Advanced	\N	Monthly	Seeded request	\N
-471	22	Approved	Advanced	\N	Rarely	Seeded request	\N
-968	23	Approved	\N	\N	Weekly	Seeded request	\N
-509	7	Approved	Advanced	\N	Monthly	Seeded request	\N
-569	11	Approved	\N	3	Weekly	Seeded assignment	2025-11-04 22:13:27.264874
-714	16	Approved	\N	4	Monthly	Seeded assignment	\N
-167	3	Approved	\N	\N	Monthly	Seeded request	2025-11-21 21:35:27.264874
-701	19	Approved	Beginner	\N	Rarely	Seeded assignment	2025-11-17 15:22:27.264874
-617	3	Approved	\N	\N	Daily	Seeded assignment	2025-11-04 23:39:27.264874
-21	18	Requested	\N	1	Daily	Seeded request	\N
-366	13	Requested	\N	\N	Monthly	Seeded assignment	\N
-58	17	Approved	Expert	\N	Rarely	Seeded request	\N
-31	22	Approved	Beginner	10	Rarely	Seeded assignment	\N
-717	6	Approved	Advanced	\N	\N	Seeded request	\N
-536	12	Approved	Advanced	\N	Weekly	Seeded request	\N
-57	22	Approved	Advanced	\N	Weekly	Seeded assignment	\N
-13	11	Approved	\N	1	Weekly	Seeded assignment	2025-11-24 15:19:27.264874
-252	4	Approved	Expert	6	Daily	Seeded assignment	\N
-281	18	Requested	Intermediate	7	Monthly	Seeded assignment	\N
-589	13	Approved	Beginner	\N	Rarely	Seeded request	\N
-935	5	Requested	Intermediate	5	Weekly	Seeded request	\N
-358	19	Approved	\N	\N	Weekly	Seeded request	\N
-401	18	Approved	Expert	10	Weekly	Seeded assignment	2025-11-13 08:44:27.264874
-655	3	Approved	Expert	0	Daily	Seeded assignment	\N
-898	9	Requested	\N	\N	\N	Seeded assignment	\N
-396	5	Approved	Advanced	\N	\N	Seeded assignment	\N
-936	25	Requested	\N	2	Rarely	Seeded request	\N
-298	13	Approved	Intermediate	2	Weekly	Seeded assignment	\N
-467	25	Approved	Advanced	\N	Rarely	Seeded request	\N
-527	24	Approved	\N	5	\N	Seeded request	2025-11-26 08:18:27.264874
-797	21	Approved	Beginner	3	\N	Seeded assignment	\N
-648	25	Approved	Advanced	6	\N	Seeded assignment	2025-11-30 01:42:27.264874
-18	9	Requested	Intermediate	2	Daily	Seeded assignment	\N
-629	3	Requested	Intermediate	\N	Weekly	Seeded assignment	\N
-198	3	Requested	\N	3	Monthly	Seeded assignment	\N
-684	9	Requested	Advanced	4	\N	Seeded assignment	\N
-30	8	Approved	\N	7	\N	Seeded assignment	2025-11-13 15:48:27.264874
-905	17	Requested	\N	1	\N	Seeded request	\N
-540	11	Approved	\N	4	\N	Seeded assignment	2025-11-10 07:26:27.264874
-16	25	Approved	\N	8	\N	Seeded assignment	\N
-712	18	Approved	\N	2	\N	Seeded request	2025-11-28 13:00:27.264874
-291	21	Approved	Beginner	4	Weekly	Seeded assignment	2025-11-19 01:38:27.264874
-805	22	Approved	Intermediate	3	\N	Seeded request	\N
-260	24	Approved	Intermediate	8	Weekly	Seeded assignment	2025-12-01 16:20:27.264874
-626	3	Approved	\N	6	\N	Seeded assignment	\N
-17	4	Approved	\N	\N	Monthly	Seeded request	\N
-762	8	Approved	Expert	6	Monthly	Seeded assignment	\N
-63	24	Requested	Intermediate	\N	Monthly	Seeded request	\N
-122	8	Approved	Advanced	1	\N	Seeded assignment	\N
-979	5	Approved	Advanced	0	Weekly	Seeded request	2025-11-30 23:36:27.264874
-624	3	Approved	Intermediate	\N	Monthly	Seeded request	\N
-199	17	Requested	Beginner	9	Rarely	Seeded assignment	2025-11-27 13:49:27.264874
-715	7	Requested	Advanced	9	Daily	Seeded assignment	2025-11-17 13:29:27.264874
-241	4	Approved	Expert	6	Weekly	Seeded assignment	2025-11-07 12:56:27.264874
-83	20	Approved	Advanced	1	Weekly	Seeded request	2025-11-19 20:12:27.264874
-723	18	Approved	Advanced	2	Daily	Seeded assignment	\N
-879	18	Requested	Advanced	\N	\N	Seeded request	2025-11-05 23:37:27.264874
-461	11	Approved	Intermediate	1	Daily	Seeded request	2025-11-10 17:31:27.264874
-86	10	Requested	\N	10	Rarely	Seeded assignment	2025-11-14 10:19:27.264874
-508	22	Approved	Beginner	0	\N	Seeded request	\N
-148	25	Requested	\N	\N	Monthly	Seeded assignment	\N
-851	20	Requested	Advanced	4	\N	Seeded request	2025-12-02 17:39:27.264874
-308	24	Requested	Beginner	10	\N	Seeded request	\N
-494	19	Requested	\N	2	Weekly	Seeded assignment	\N
-834	22	Approved	Expert	\N	\N	Seeded assignment	\N
-882	22	Approved	Expert	\N	Weekly	Seeded request	2025-11-14 14:07:27.264874
-142	4	Requested	\N	\N	\N	Seeded assignment	2025-11-06 06:15:27.264874
-671	17	Approved	Expert	2	Daily	Seeded assignment	\N
-857	10	Requested	Beginner	7	Monthly	Seeded assignment	2025-11-17 04:56:27.264874
-70	25	Requested	Expert	\N	\N	Seeded assignment	\N
-760	25	Requested	\N	\N	Monthly	Seeded request	2025-11-29 23:56:27.264874
-939	6	Requested	\N	2	Daily	Seeded request	\N
-743	25	Requested	\N	10	Monthly	Seeded assignment	\N
-160	9	Approved	Beginner	4	Weekly	Seeded request	\N
-211	18	Requested	Expert	\N	Weekly	Seeded request	\N
-640	9	Approved	\N	6	Daily	Seeded assignment	\N
-646	5	Requested	Intermediate	5	Weekly	Seeded request	2025-11-03 10:52:27.264874
-36	10	Requested	Advanced	0	\N	Seeded assignment	2025-11-28 10:55:27.264874
-252	3	Requested	Intermediate	\N	Daily	Seeded request	\N
-728	13	Requested	Intermediate	5	Weekly	Seeded assignment	\N
-752	16	Requested	Beginner	\N	Rarely	Seeded request	\N
-451	10	Requested	Intermediate	10	\N	Seeded assignment	\N
-611	25	Requested	\N	\N	Weekly	Seeded request	\N
-64	22	Approved	Expert	2	Monthly	Seeded request	2025-11-08 05:45:27.264874
-323	17	Requested	Intermediate	3	Daily	Seeded request	\N
-167	4	Requested	\N	\N	Daily	Seeded assignment	\N
-243	16	Requested	Beginner	10	\N	Seeded assignment	2025-11-08 10:57:27.264874
-507	20	Approved	Expert	\N	\N	Seeded assignment	2025-11-11 05:31:27.264874
-843	22	Requested	Beginner	\N	Weekly	Seeded request	2025-12-01 20:09:27.264874
-53	10	Approved	Beginner	8	Daily	Seeded assignment	2025-11-07 10:05:27.264874
-72	1	Requested	Beginner	7	Daily	Seeded assignment	\N
-609	19	Requested	Beginner	\N	Weekly	Seeded assignment	\N
-738	9	Approved	Intermediate	10	\N	Seeded assignment	\N
-347	17	Approved	\N	\N	\N	Seeded assignment	2025-11-14 17:53:27.264874
-299	6	Approved	\N	1	Weekly	Seeded request	\N
-38	5	Requested	\N	2	Daily	Seeded assignment	\N
-128	5	Requested	Intermediate	\N	\N	Seeded assignment	\N
-234	22	Approved	Expert	10	\N	Seeded request	\N
-741	11	Approved	\N	\N	Monthly	Seeded request	\N
-256	13	Requested	Advanced	\N	Rarely	Seeded request	\N
-832	21	Approved	Beginner	\N	\N	Seeded assignment	\N
-984	12	Approved	Beginner	\N	Weekly	Seeded request	2025-11-28 18:34:27.264874
-537	3	Approved	\N	2	\N	Seeded assignment	2025-11-11 01:35:27.264874
-23	10	Approved	\N	9	Monthly	Seeded assignment	2025-11-09 10:35:27.264874
-967	6	Approved	Beginner	\N	Daily	Seeded request	\N
-591	23	Approved	\N	1	\N	Seeded request	\N
-55	5	Approved	\N	6	Weekly	Seeded assignment	2025-11-04 07:35:27.264874
-764	7	Approved	Intermediate	\N	\N	Seeded assignment	2025-11-14 04:28:27.264874
-849	7	Requested	Advanced	9	Daily	Seeded assignment	\N
-315	22	Requested	\N	\N	Monthly	Seeded request	2025-11-18 21:28:27.264874
-278	13	Requested	\N	5	Rarely	Seeded assignment	\N
-580	23	Approved	Advanced	\N	Weekly	Seeded assignment	\N
-5	20	Approved	Intermediate	\N	Weekly	Seeded request	\N
-588	4	Requested	\N	\N	Rarely	Seeded assignment	\N
-874	21	Approved	\N	7	Rarely	Seeded assignment	2025-11-16 01:33:27.264874
-924	24	Requested	\N	8	\N	Seeded assignment	\N
-956	16	Requested	\N	\N	\N	Seeded request	\N
-505	1	Approved	Beginner	5	\N	Seeded request	\N
-280	18	Approved	\N	2	Daily	Seeded request	2025-12-01 03:41:27.264874
-798	21	Requested	\N	0	Weekly	Seeded request	\N
-65	19	Approved	Advanced	\N	Weekly	Seeded assignment	2025-11-11 12:47:27.264874
-228	9	Approved	Advanced	4	\N	Seeded assignment	\N
-331	21	Approved	\N	10	\N	Seeded request	\N
-152	20	Approved	Expert	\N	\N	Seeded assignment	\N
-742	7	Approved	Expert	9	\N	Seeded request	\N
-71	4	Approved	Intermediate	7	\N	Seeded assignment	2025-11-05 10:03:27.264874
-475	20	Approved	Advanced	\N	Daily	Seeded request	\N
-837	20	Requested	\N	9	Daily	Seeded request	2025-11-09 20:01:27.264874
-446	8	Requested	Beginner	\N	Rarely	Seeded request	2025-11-29 05:33:27.264874
-488	23	Approved	\N	\N	Weekly	Seeded request	\N
-241	3	Requested	Expert	\N	\N	Seeded assignment	\N
-877	6	Approved	\N	\N	Daily	Seeded request	\N
-546	13	Requested	Intermediate	3	\N	Seeded assignment	2025-11-11 16:17:27.264874
-6	23	Requested	Expert	\N	Daily	Seeded request	2025-11-11 07:26:27.264874
-490	21	Requested	Beginner	9	Weekly	Seeded assignment	\N
-848	1	Approved	\N	\N	\N	Seeded assignment	\N
-554	9	Approved	Intermediate	10	Daily	Seeded assignment	\N
-221	19	Approved	\N	\N	Daily	Seeded request	\N
-842	8	Approved	Advanced	\N	Daily	Seeded assignment	2025-12-02 09:40:27.264874
-381	1	Approved	Expert	2	\N	Seeded request	\N
-24	13	Requested	\N	5	Daily	Seeded request	\N
-368	17	Approved	\N	9	\N	Seeded assignment	2025-11-11 16:41:27.264874
-54	10	Requested	Intermediate	4	Rarely	Seeded assignment	2025-11-24 17:40:27.264874
-47	18	Requested	Expert	8	\N	Seeded assignment	\N
-74	23	Approved	Intermediate	7	Daily	Seeded assignment	\N
-914	3	Approved	Advanced	4	\N	Seeded assignment	2025-11-27 06:54:27.264874
-274	12	Approved	Advanced	9	Monthly	Seeded assignment	2025-11-18 05:00:27.264874
-103	10	Requested	\N	\N	Weekly	Seeded assignment	\N
-364	25	Requested	Advanced	1	Monthly	Seeded request	2025-12-02 10:20:27.264874
-478	4	Approved	Beginner	\N	Daily	Seeded request	\N
-608	25	Requested	Advanced	\N	Monthly	Seeded request	2025-11-09 09:56:27.264874
-653	19	Approved	Expert	9	\N	Seeded request	2025-11-06 11:58:27.264874
-597	24	Requested	Expert	\N	Weekly	Seeded assignment	2025-11-11 12:59:27.264874
-543	20	Requested	\N	1	Weekly	Seeded assignment	2025-11-24 03:49:27.264874
-250	1	Approved	Expert	4	Monthly	Seeded assignment	\N
-407	17	Approved	\N	\N	\N	Seeded assignment	2025-11-18 16:13:27.264874
-770	20	Approved	Expert	\N	\N	Seeded request	2025-11-15 15:21:27.264874
-868	11	Requested	\N	1	Monthly	Seeded request	\N
-768	25	Approved	Advanced	\N	\N	Seeded assignment	2025-11-05 10:21:27.264874
-965	11	Requested	Intermediate	5	Monthly	Seeded assignment	2025-11-18 13:20:27.264874
-84	23	Requested	\N	\N	Weekly	Seeded assignment	2025-12-01 00:25:27.264874
-744	6	Approved	Expert	5	Monthly	Seeded request	\N
-433	20	Requested	Expert	\N	\N	Seeded assignment	2025-11-28 11:15:27.264874
-629	4	Requested	\N	10	Weekly	Seeded request	2025-11-04 20:01:27.264874
-985	6	Approved	\N	4	Weekly	Seeded assignment	2025-11-23 09:53:27.264874
-200	17	Approved	\N	\N	\N	Seeded assignment	\N
-642	20	Approved	Beginner	\N	Rarely	Seeded assignment	\N
-860	25	Approved	\N	\N	\N	Seeded assignment	\N
-753	21	Requested	Beginner	5	Weekly	Seeded assignment	2025-11-27 11:19:27.264874
-348	11	Requested	Advanced	2	\N	Seeded request	2025-11-06 10:04:27.264874
-731	24	Approved	Expert	2	Weekly	Seeded request	2025-12-02 13:14:27.264874
-875	13	Approved	Expert	\N	\N	Seeded assignment	\N
-652	18	Requested	Intermediate	8	Daily	Seeded assignment	\N
-806	13	Approved	Intermediate	\N	Weekly	Seeded request	2025-11-04 11:55:27.264874
-68	18	Requested	\N	\N	Weekly	Seeded assignment	\N
-476	25	Approved	Advanced	\N	Weekly	Seeded assignment	\N
-494	18	Approved	Expert	\N	Daily	Seeded assignment	\N
-141	6	Approved	\N	\N	Daily	Seeded assignment	\N
-765	9	Approved	\N	7	\N	Seeded assignment	\N
-879	19	Approved	Advanced	\N	\N	Seeded assignment	2025-11-22 21:27:27.264874
-374	12	Requested	Beginner	\N	Monthly	Seeded assignment	\N
-25	3	Requested	Beginner	0	Daily	Seeded request	2025-11-04 22:00:27.264874
-304	13	Approved	Intermediate	\N	\N	Seeded assignment	\N
-78	11	Requested	\N	2	Rarely	Seeded assignment	\N
-952	19	Approved	\N	2	\N	Seeded request	\N
-923	19	Approved	\N	5	\N	Seeded request	\N
-254	20	Approved	\N	0	Monthly	Seeded request	2025-11-21 02:52:27.264874
-9	17	Requested	\N	\N	\N	Seeded assignment	2025-11-04 06:11:27.264874
-565	18	Requested	Beginner	6	\N	Seeded assignment	2025-11-28 01:18:27.264874
-948	21	Requested	\N	\N	\N	Seeded assignment	\N
-432	20	Approved	\N	\N	Weekly	Seeded request	\N
-859	25	Approved	\N	9	Weekly	Seeded request	\N
-330	22	Approved	\N	10	Rarely	Seeded request	2025-12-02 08:50:27.264874
-353	12	Requested	\N	5	\N	Seeded assignment	\N
-605	7	Approved	\N	6	Rarely	Seeded assignment	2025-11-05 06:50:27.264874
-979	20	Approved	Expert	\N	Weekly	Seeded request	\N
-210	25	Requested	\N	5	\N	Seeded assignment	\N
-318	23	Approved	\N	\N	\N	Seeded assignment	2025-11-09 00:22:27.264874
-631	5	Approved	Advanced	\N	Rarely	Seeded assignment	\N
-100	11	Approved	Advanced	10	Monthly	Seeded request	\N
-189	19	Approved	Beginner	\N	Weekly	Seeded assignment	\N
-638	11	Approved	\N	\N	\N	Seeded request	\N
-474	5	Requested	Beginner	\N	\N	Seeded assignment	\N
-584	25	Approved	\N	2	Daily	Seeded assignment	\N
-397	22	Requested	Expert	\N	Weekly	Seeded request	2025-12-02 00:46:27.264874
-266	18	Requested	\N	9	\N	Seeded assignment	\N
-368	21	Approved	Beginner	\N	\N	Seeded assignment	\N
-646	12	Approved	Beginner	\N	Weekly	Seeded request	\N
-7	10	Requested	\N	2	Rarely	Seeded assignment	2025-11-23 15:23:27.264874
-850	16	Requested	\N	\N	\N	Seeded request	\N
-579	13	Approved	\N	3	Monthly	Seeded assignment	\N
-158	11	Approved	\N	10	Monthly	Seeded request	2025-11-11 17:48:27.264874
-383	17	Approved	\N	3	Weekly	Seeded assignment	2025-11-22 15:25:27.264874
-464	8	Approved	\N	4	Monthly	Seeded assignment	\N
-421	12	Requested	\N	2	\N	Seeded assignment	2025-11-27 14:45:27.264874
-120	1	Approved	Expert	\N	Monthly	Seeded request	2025-11-28 23:05:27.264874
-452	22	Approved	Beginner	6	\N	Seeded request	2025-11-04 20:34:27.264874
-449	3	Approved	Advanced	3	\N	Seeded request	2025-11-06 05:05:27.264874
-37	20	Approved	Advanced	9	\N	Seeded assignment	2025-11-30 07:36:27.264874
-793	24	Requested	\N	9	Monthly	Seeded request	2025-11-16 19:17:27.264874
-982	25	Requested	\N	1	Monthly	Seeded assignment	2025-11-25 11:39:27.264874
-747	25	Requested	Intermediate	\N	\N	Seeded request	2025-11-08 15:24:27.264874
-756	16	Requested	Intermediate	3	\N	Seeded assignment	\N
-647	22	Approved	Advanced	9	\N	Seeded assignment	\N
-188	10	Approved	\N	\N	\N	Seeded assignment	2025-11-27 16:04:27.264874
-375	10	Requested	\N	\N	Monthly	Seeded request	2025-11-06 12:06:27.264874
-301	19	Approved	Beginner	1	\N	Seeded request	\N
-497	22	Requested	Expert	4	\N	Seeded assignment	2025-11-07 06:43:27.264874
-270	16	Approved	\N	1	Monthly	Seeded assignment	2025-11-18 12:21:27.264874
-886	13	Requested	Beginner	3	Monthly	Seeded request	2025-11-19 22:03:27.264874
-847	4	Requested	Expert	5	Rarely	Seeded request	\N
-941	18	Requested	Intermediate	2	\N	Seeded request	2025-11-24 17:42:27.264874
-940	7	Approved	Beginner	5	Monthly	Seeded request	\N
-791	24	Approved	\N	\N	\N	Seeded assignment	2025-11-06 16:20:27.264874
-453	17	Requested	Expert	\N	\N	Seeded request	\N
-514	23	Approved	Expert	\N	Monthly	Seeded request	\N
-705	13	Approved	\N	\N	\N	Seeded assignment	2025-11-18 02:14:27.264874
-804	18	Approved	Beginner	1	\N	Seeded assignment	\N
-920	25	Approved	Expert	\N	\N	Seeded assignment	\N
-845	8	Approved	\N	\N	Rarely	Seeded assignment	\N
-541	3	Requested	Beginner	1	Weekly	Seeded assignment	\N
-603	18	Approved	Beginner	\N	Daily	Seeded assignment	\N
-577	22	Approved	\N	6	Daily	Seeded assignment	2025-11-11 11:58:27.264874
-76	8	Approved	\N	7	Monthly	Seeded request	2025-11-12 05:04:27.264874
-113	18	Approved	\N	5	Weekly	Seeded request	\N
-402	21	Requested	Advanced	0	\N	Seeded request	2025-11-08 04:38:27.264874
-937	20	Approved	\N	4	Daily	Seeded assignment	\N
-101	16	Approved	Beginner	1	Daily	Seeded assignment	\N
-473	13	Requested	Beginner	\N	Daily	Seeded assignment	\N
-307	3	Approved	Beginner	\N	\N	Seeded request	\N
-692	18	Approved	Expert	\N	\N	Seeded assignment	\N
-63	10	Approved	Beginner	10	Rarely	Seeded request	\N
-803	18	Approved	\N	8	\N	Seeded request	2025-11-04 00:51:27.264874
-380	21	Approved	Intermediate	2	Monthly	Seeded request	2025-11-22 00:29:27.264874
-400	13	Approved	Advanced	5	\N	Seeded request	\N
-689	13	Approved	Advanced	6	Monthly	Seeded assignment	\N
-610	13	Requested	Intermediate	\N	Weekly	Seeded assignment	2025-12-03 05:33:27.264874
-344	10	Approved	Beginner	3	Rarely	Seeded request	\N
-789	5	Requested	Intermediate	9	Daily	Seeded assignment	2025-11-21 08:51:27.264874
-469	21	Requested	\N	10	\N	Seeded assignment	\N
-719	5	Requested	\N	\N	Rarely	Seeded request	\N
-937	12	Approved	Beginner	6	Daily	Seeded assignment	\N
-152	5	Requested	\N	4	Monthly	Seeded request	\N
-883	22	Approved	Expert	\N	Rarely	Seeded assignment	\N
-423	17	Requested	Advanced	\N	Daily	Seeded request	\N
-553	23	Approved	Advanced	\N	\N	Seeded request	\N
-873	10	Approved	\N	\N	\N	Seeded assignment	2025-11-14 09:05:27.264874
-797	17	Approved	\N	5	Daily	Seeded assignment	\N
-901	17	Requested	\N	\N	\N	Seeded request	2025-11-19 04:28:27.264874
-36	24	Approved	\N	10	Monthly	Seeded assignment	\N
-649	10	Requested	Expert	\N	\N	Seeded request	\N
-755	20	Requested	Expert	2	Weekly	Seeded request	\N
-61	17	Requested	Beginner	\N	Daily	Seeded request	2025-11-15 00:54:27.264874
-595	19	Requested	Advanced	\N	\N	Seeded assignment	\N
-47	19	Requested	\N	6	\N	Seeded request	\N
-192	8	Approved	\N	\N	\N	Seeded request	\N
-62	7	Requested	\N	8	\N	Seeded assignment	\N
-217	25	Approved	\N	8	Daily	Seeded assignment	2025-11-07 03:16:27.264874
-196	4	Approved	Advanced	\N	Rarely	Seeded request	2025-11-05 08:28:27.264874
-422	21	Requested	\N	1	Daily	Seeded assignment	\N
-51	6	Requested	\N	\N	Daily	Seeded assignment	2025-11-26 23:09:27.264874
-869	5	Approved	Beginner	\N	\N	Seeded assignment	\N
-931	11	Requested	Expert	10	Rarely	Seeded assignment	2025-11-22 14:29:27.264874
-181	13	Approved	Beginner	0	Rarely	Seeded request	\N
-338	8	Requested	Advanced	10	Monthly	Seeded request	\N
-276	3	Requested	Intermediate	\N	Monthly	Seeded assignment	\N
-215	12	Approved	Beginner	4	\N	Seeded request	2025-11-23 01:16:27.264874
-836	9	Approved	Intermediate	5	Weekly	Seeded request	2025-11-26 11:58:27.264874
-60	21	Requested	Intermediate	\N	\N	Seeded assignment	\N
-599	3	Approved	Advanced	\N	Daily	Seeded assignment	\N
-293	5	Requested	\N	\N	\N	Seeded assignment	\N
-335	22	Approved	Advanced	7	Rarely	Seeded assignment	2025-12-02 04:59:27.264874
-419	19	Approved	Expert	0	\N	Seeded request	2025-11-08 00:58:27.264874
-573	17	Requested	Advanced	0	\N	Seeded assignment	\N
-317	12	Requested	\N	2	Daily	Seeded request	\N
-825	1	Approved	\N	\N	Weekly	Seeded request	2025-11-29 11:08:27.264874
-352	6	Approved	\N	2	\N	Seeded assignment	2025-11-28 02:41:27.264874
-37	12	Requested	\N	2	Daily	Seeded assignment	\N
-99	7	Approved	\N	1	\N	Seeded request	\N
-53	24	Approved	\N	\N	Weekly	Seeded assignment	\N
-235	8	Requested	Advanced	10	Monthly	Seeded assignment	\N
-639	23	Requested	Intermediate	\N	\N	Seeded assignment	2025-11-11 12:53:27.264874
-404	13	Approved	Advanced	8	Daily	Seeded request	\N
-43	10	Approved	Intermediate	5	Monthly	Seeded assignment	\N
-187	23	Approved	\N	4	Daily	Seeded request	2025-12-01 18:29:27.264874
-878	25	Approved	Intermediate	0	\N	Seeded assignment	\N
-969	16	Approved	\N	\N	Daily	Seeded request	2025-11-25 02:25:27.264874
-307	4	Requested	Intermediate	8	Weekly	Seeded request	\N
-867	25	Requested	\N	8	\N	Seeded assignment	2025-11-17 18:49:27.264874
-858	24	Approved	Beginner	\N	\N	Seeded assignment	2025-11-09 15:03:27.264874
-482	10	Approved	Intermediate	10	Weekly	Seeded request	2025-11-08 15:07:27.264874
-912	21	Requested	Expert	5	Monthly	Seeded assignment	2025-11-03 08:25:27.264874
-157	17	Approved	Advanced	0	Daily	Seeded assignment	2025-12-01 18:37:27.264874
-820	11	Approved	\N	0	\N	Seeded request	\N
-915	13	Approved	\N	2	Weekly	Seeded assignment	\N
-107	11	Requested	\N	3	Weekly	Seeded assignment	\N
-964	6	Requested	Intermediate	5	Rarely	Seeded assignment	2025-11-07 17:14:27.264874
-56	19	Requested	Intermediate	4	Weekly	Seeded assignment	\N
-609	18	Approved	\N	\N	Weekly	Seeded request	\N
-171	24	Approved	\N	10	Daily	Seeded request	\N
-957	1	Approved	\N	10	Daily	Seeded assignment	\N
-822	18	Requested	Intermediate	\N	Weekly	Seeded assignment	2025-11-12 09:04:27.264874
-924	10	Approved	\N	3	\N	Seeded request	2025-11-19 05:02:27.264874
-880	13	Approved	Advanced	6	\N	Seeded assignment	\N
-979	12	Requested	\N	7	Rarely	Seeded assignment	2025-11-21 01:02:27.264874
-432	12	Approved	\N	2	\N	Seeded assignment	2025-11-14 11:09:27.264874
-312	7	Requested	Expert	3	\N	Seeded assignment	\N
-683	7	Approved	Intermediate	\N	Daily	Seeded assignment	\N
-966	11	Requested	Expert	\N	Daily	Seeded assignment	\N
-77	19	Requested	\N	\N	Rarely	Seeded assignment	2025-11-16 22:39:27.264874
-318	7	Approved	\N	8	Rarely	Seeded assignment	\N
-140	19	Requested	Beginner	10	\N	Seeded request	\N
-710	23	Approved	Beginner	\N	Weekly	Seeded assignment	2025-11-23 23:45:27.264874
-254	12	Approved	Beginner	7	Monthly	Seeded assignment	\N
-656	12	Approved	Beginner	7	\N	Seeded assignment	\N
-429	18	Approved	Beginner	6	Daily	Seeded assignment	\N
-305	7	Requested	\N	0	\N	Seeded assignment	\N
-29	8	Requested	Advanced	3	\N	Seeded assignment	2025-11-24 02:44:27.264874
-374	20	Approved	\N	\N	\N	Seeded assignment	\N
-830	8	Approved	\N	8	Rarely	Seeded assignment	\N
-292	22	Requested	Advanced	4	Daily	Seeded assignment	2025-11-22 14:04:27.264874
-811	23	Approved	Beginner	2	Daily	Seeded assignment	\N
-578	13	Approved	Intermediate	6	\N	Seeded assignment	\N
-666	21	Approved	Intermediate	\N	\N	Seeded assignment	2025-11-09 19:06:27.264874
-15	19	Approved	\N	\N	Weekly	Seeded request	\N
-547	13	Requested	\N	\N	\N	Seeded assignment	\N
-449	4	Approved	\N	\N	Rarely	Seeded assignment	\N
-27	10	Approved	Beginner	6	Rarely	Seeded assignment	\N
-3	4	Requested	Intermediate	\N	\N	Seeded assignment	\N
-884	1	Requested	Intermediate	7	\N	Seeded assignment	\N
-401	6	Approved	Beginner	0	Daily	Seeded assignment	2025-11-27 07:52:27.264874
-283	9	Requested	\N	0	\N	Seeded assignment	\N
-110	20	Requested	Beginner	\N	Monthly	Seeded assignment	\N
-831	12	Approved	\N	7	Weekly	Seeded assignment	\N
-920	4	Approved	Intermediate	\N	\N	Seeded request	\N
-165	6	Requested	Expert	4	Weekly	Seeded request	2025-11-12 14:00:27.264874
-761	13	Approved	Intermediate	\N	\N	Seeded request	2025-11-30 15:48:27.264874
-218	17	Approved	Advanced	5	\N	Seeded assignment	\N
-900	21	Requested	\N	9	Weekly	Seeded assignment	\N
-395	13	Requested	Expert	10	Rarely	Seeded request	2025-11-06 21:36:27.264874
-988	11	Approved	Expert	\N	Monthly	Seeded assignment	2025-11-27 03:58:27.264874
-824	22	Approved	\N	\N	\N	Seeded assignment	\N
-259	16	Approved	\N	0	Rarely	Seeded request	\N
-459	8	Requested	Expert	\N	\N	Seeded request	\N
-845	5	Approved	Expert	4	Weekly	Seeded assignment	\N
-161	1	Approved	Beginner	8	Rarely	Seeded request	\N
-437	25	Approved	Intermediate	0	Daily	Seeded request	\N
-144	9	Requested	Advanced	\N	\N	Seeded request	2025-11-19 10:34:27.264874
-444	8	Requested	\N	6	Monthly	Seeded assignment	2025-11-13 01:15:27.264874
-423	16	Requested	Advanced	5	\N	Seeded assignment	2025-11-15 12:56:27.264874
-291	16	Requested	Expert	3	Weekly	Seeded request	2025-12-02 23:56:27.264874
-604	12	Requested	\N	7	Daily	Seeded assignment	\N
-82	17	Approved	Expert	\N	\N	Seeded assignment	2025-11-18 11:05:27.264874
-274	8	Approved	Intermediate	6	Weekly	Seeded request	\N
-602	22	Approved	\N	7	\N	Seeded assignment	2025-11-06 10:03:27.264874
-177	24	Approved	Intermediate	7	\N	Seeded request	2025-11-07 13:40:27.264874
-460	13	Approved	Expert	9	\N	Seeded assignment	2025-11-11 01:46:27.264874
-412	8	Approved	\N	\N	Weekly	Seeded assignment	\N
-504	21	Approved	\N	\N	Rarely	Seeded assignment	2025-11-11 20:50:27.264874
-881	20	Requested	Intermediate	\N	Daily	Seeded assignment	\N
-483	20	Requested	Advanced	1	Daily	Seeded assignment	\N
-464	5	Approved	Advanced	6	\N	Seeded request	\N
-870	19	Requested	Beginner	3	Monthly	Seeded request	\N
-838	10	Requested	Beginner	\N	Rarely	Seeded assignment	\N
-61	16	Requested	\N	0	\N	Seeded assignment	\N
-403	7	Requested	\N	3	Monthly	Seeded request	2025-11-04 09:12:27.264874
-150	3	Approved	Intermediate	10	\N	Seeded assignment	\N
-584	4	Requested	\N	\N	Daily	Seeded assignment	\N
-376	6	Approved	Intermediate	9	Weekly	Seeded assignment	2025-11-14 16:29:27.264874
-251	25	Approved	\N	3	Rarely	Seeded assignment	\N
-240	3	Requested	Expert	\N	Daily	Seeded assignment	\N
-158	7	Requested	Advanced	3	\N	Seeded assignment	\N
-879	6	Requested	Intermediate	\N	\N	Seeded assignment	\N
-269	13	Requested	Beginner	2	\N	Seeded assignment	\N
-515	6	Approved	Expert	\N	Daily	Seeded assignment	\N
-141	19	Requested	\N	\N	\N	Seeded assignment	\N
-264	25	Requested	Expert	3	Weekly	Seeded request	2025-11-28 08:47:27.264874
-398	23	Approved	\N	\N	Daily	Seeded assignment	\N
-137	10	Approved	Intermediate	8	\N	Seeded assignment	2025-11-27 21:54:27.264874
-336	5	Approved	\N	\N	Weekly	Seeded request	\N
-592	9	Requested	\N	9	Daily	Seeded request	\N
-977	6	Requested	\N	2	Daily	Seeded request	\N
-631	8	Requested	Beginner	7	\N	Seeded request	2025-11-30 10:38:27.264874
-122	20	Approved	\N	9	Rarely	Seeded request	\N
-506	5	Approved	\N	\N	Daily	Seeded request	\N
-526	21	Requested	\N	\N	Daily	Seeded assignment	\N
-558	13	Requested	\N	\N	\N	Seeded assignment	\N
-67	13	Requested	Beginner	\N	\N	Seeded request	\N
-585	20	Approved	\N	\N	Daily	Seeded request	2025-11-06 00:16:27.264874
-918	24	Requested	Intermediate	\N	\N	Seeded assignment	\N
-157	16	Approved	\N	0	\N	Seeded assignment	\N
-714	21	Requested	\N	\N	Monthly	Seeded request	2025-11-15 16:22:27.264874
-386	5	Requested	Intermediate	4	Daily	Seeded assignment	2025-11-13 12:51:27.264874
-431	1	Requested	\N	8	\N	Seeded assignment	2025-11-15 04:14:27.264874
-230	17	Requested	\N	5	Daily	Seeded assignment	\N
-493	23	Approved	Advanced	1	\N	Seeded request	2025-11-12 09:27:27.264874
-612	3	Approved	Beginner	1	\N	Seeded assignment	\N
-468	6	Requested	Advanced	6	\N	Seeded assignment	\N
-503	16	Approved	Beginner	5	\N	Seeded request	\N
-639	11	Requested	Beginner	\N	\N	Seeded request	2025-11-03 10:23:27.264874
-538	3	Requested	Beginner	4	Monthly	Seeded assignment	2025-11-20 09:44:27.264874
-774	21	Requested	Advanced	\N	Monthly	Seeded assignment	\N
-835	13	Requested	Intermediate	6	Daily	Seeded assignment	\N
-731	22	Approved	Intermediate	10	Daily	Seeded assignment	\N
-512	24	Approved	Beginner	\N	Weekly	Seeded assignment	\N
-721	19	Requested	Beginner	5	\N	Seeded request	2025-11-08 08:53:27.264874
-926	4	Requested	Intermediate	\N	Monthly	Seeded request	2025-11-30 22:37:27.264874
-455	17	Requested	\N	\N	Monthly	Seeded assignment	\N
-147	9	Approved	\N	3	Daily	Seeded request	2025-11-29 08:40:27.264874
-209	17	Approved	Expert	7	Monthly	Seeded request	2025-11-12 16:30:27.264874
-891	6	Approved	Expert	2	Weekly	Seeded assignment	2025-11-28 02:00:27.264874
-262	12	Requested	Beginner	4	Monthly	Seeded assignment	2025-11-03 06:23:27.264874
-487	20	Approved	Intermediate	1	\N	Seeded assignment	\N
-850	17	Approved	Expert	6	\N	Seeded assignment	\N
-100	23	Requested	\N	10	\N	Seeded assignment	\N
-283	1	Approved	\N	3	\N	Seeded assignment	\N
-683	11	Approved	\N	\N	Monthly	Seeded assignment	\N
-19	7	Approved	\N	\N	Weekly	Seeded assignment	\N
-398	7	Requested	Beginner	\N	\N	Seeded request	2025-11-30 18:37:27.264874
-667	25	Requested	Intermediate	\N	\N	Seeded request	\N
-130	1	Requested	\N	9	\N	Seeded assignment	2025-11-23 06:34:27.264874
-343	21	Approved	\N	\N	\N	Seeded request	\N
-548	1	Approved	Advanced	6	Daily	Seeded assignment	\N
-729	6	Requested	\N	7	Weekly	Seeded assignment	2025-11-17 01:27:27.264874
-258	7	Approved	\N	\N	Monthly	Seeded request	\N
-545	20	Approved	Expert	\N	Monthly	Seeded assignment	\N
-759	7	Approved	\N	\N	\N	Seeded assignment	2025-11-26 23:38:27.264874
-884	9	Approved	Expert	7	\N	Seeded request	\N
-507	8	Approved	\N	8	Monthly	Seeded assignment	\N
-867	4	Requested	\N	\N	\N	Seeded request	2025-11-15 11:10:27.264874
-140	6	Approved	Intermediate	1	\N	Seeded assignment	\N
-212	1	Requested	Intermediate	5	Daily	Seeded request	2025-11-18 05:32:27.264874
-654	7	Requested	Intermediate	6	\N	Seeded assignment	\N
-185	20	Approved	\N	4	Rarely	Seeded request	\N
-263	22	Requested	\N	8	Daily	Seeded assignment	\N
-775	7	Approved	Beginner	\N	Daily	Seeded request	2025-11-07 10:54:27.264874
-173	4	Requested	Beginner	\N	Weekly	Seeded assignment	2025-12-02 09:44:27.264874
-149	25	Requested	Intermediate	3	\N	Seeded assignment	2025-11-05 16:27:27.264874
-470	11	Approved	Intermediate	\N	Weekly	Seeded request	\N
-239	24	Requested	Beginner	2	Monthly	Seeded assignment	\N
-704	23	Approved	\N	4	Rarely	Seeded assignment	2025-11-21 23:09:27.264874
-876	11	Requested	\N	\N	Weekly	Seeded request	2025-11-22 00:03:27.264874
-522	3	Approved	\N	4	\N	Seeded request	\N
-211	6	Approved	\N	\N	\N	Seeded assignment	2025-11-15 02:40:27.264874
-354	13	Requested	Beginner	5	Rarely	Seeded request	\N
-706	25	Requested	Expert	\N	Daily	Seeded assignment	\N
-145	21	Requested	\N	\N	\N	Seeded assignment	\N
-607	5	Approved	\N	6	Rarely	Seeded request	2025-11-15 08:25:27.264874
-144	1	Approved	\N	\N	Monthly	Seeded request	\N
-916	9	Approved	Intermediate	\N	Rarely	Seeded request	2025-11-16 12:48:27.264874
-246	13	Requested	\N	\N	Daily	Seeded request	\N
-541	25	Approved	Beginner	\N	Weekly	Seeded assignment	2025-11-06 01:25:27.264874
-911	9	Approved	Beginner	2	\N	Seeded assignment	2025-11-26 23:01:27.264874
-874	16	Requested	\N	\N	Weekly	Seeded request	\N
-156	19	Approved	\N	\N	Daily	Seeded assignment	\N
-798	16	Requested	Beginner	8	\N	Seeded assignment	\N
-94	11	Approved	Beginner	2	Rarely	Seeded request	\N
-699	11	Approved	\N	\N	\N	Seeded request	\N
-674	21	Approved	\N	3	Daily	Seeded request	\N
-933	22	Approved	\N	\N	Monthly	Seeded assignment	\N
-538	4	Requested	\N	\N	Weekly	Seeded request	\N
-203	19	Approved	Expert	\N	Daily	Seeded assignment	\N
-166	9	Requested	\N	10	\N	Seeded assignment	\N
-672	21	Requested	Advanced	7	Monthly	Seeded assignment	2025-11-03 14:36:27.264874
-925	4	Requested	Intermediate	10	Rarely	Seeded assignment	\N
-543	8	Requested	Beginner	1	\N	Seeded request	\N
-26	25	Approved	\N	\N	\N	Seeded assignment	2025-11-06 20:25:27.264874
-722	23	Approved	\N	1	\N	Seeded assignment	\N
-815	24	Requested	Beginner	1	Monthly	Seeded assignment	\N
-931	7	Approved	Intermediate	10	Rarely	Seeded assignment	\N
-98	21	Requested	\N	\N	Weekly	Seeded assignment	2025-11-15 00:11:27.264874
-97	20	Approved	Intermediate	1	Monthly	Seeded assignment	\N
-220	9	Requested	\N	\N	\N	Seeded assignment	\N
-604	20	Requested	Beginner	2	\N	Seeded assignment	\N
-869	8	Approved	Advanced	\N	\N	Seeded assignment	2025-11-13 09:34:27.264874
-51	19	Approved	Expert	2	\N	Seeded assignment	2025-11-14 19:38:27.264874
-306	1	Approved	\N	\N	\N	Seeded request	2025-11-11 01:29:27.264874
-441	13	Approved	Expert	\N	Daily	Seeded request	\N
-805	24	Requested	Expert	3	\N	Seeded assignment	\N
-393	13	Approved	\N	4	Weekly	Seeded assignment	\N
-842	20	Requested	Expert	4	\N	Seeded assignment	\N
-434	20	Requested	\N	1	Weekly	Seeded request	\N
-436	1	Approved	\N	2	Weekly	Seeded assignment	2025-11-30 13:35:27.264874
-350	13	Approved	\N	\N	Daily	Seeded assignment	\N
-383	16	Approved	Expert	9	Rarely	Seeded request	\N
-420	1	Approved	\N	\N	\N	Seeded request	\N
-62	11	Requested	\N	\N	Rarely	Seeded assignment	\N
-146	21	Requested	Expert	10	Daily	Seeded assignment	\N
-514	11	Approved	\N	5	Monthly	Seeded assignment	\N
-763	21	Requested	Intermediate	0	Daily	Seeded assignment	\N
-746	9	Approved	Beginner	\N	\N	Seeded assignment	\N
-734	13	Approved	Beginner	\N	\N	Seeded request	\N
-370	18	Approved	Beginner	10	\N	Seeded assignment	2025-11-13 02:08:27.264874
-217	4	Requested	Expert	3	\N	Seeded request	\N
-480	6	Approved	Intermediate	\N	Weekly	Seeded assignment	\N
-308	22	Requested	Expert	2	\N	Seeded request	\N
-196	25	Approved	\N	\N	\N	Seeded assignment	2025-11-20 01:15:27.264874
-219	5	Approved	\N	\N	\N	Seeded assignment	2025-11-24 23:07:27.264874
-240	4	Approved	\N	\N	Daily	Seeded request	\N
-834	24	Requested	Beginner	10	Monthly	Seeded assignment	\N
-183	1	Approved	Beginner	9	\N	Seeded assignment	\N
-711	1	Approved	\N	9	\N	Seeded assignment	2025-11-26 10:05:27.264874
-584	3	Approved	\N	\N	\N	Seeded request	\N
-550	10	Approved	\N	4	\N	Seeded assignment	\N
-552	5	Requested	Beginner	\N	Weekly	Seeded request	\N
-193	17	Requested	\N	\N	\N	Seeded assignment	\N
-235	12	Approved	Intermediate	\N	\N	Seeded assignment	\N
-101	21	Approved	Beginner	\N	\N	Seeded request	\N
-340	8	Approved	\N	7	Daily	Seeded request	2025-11-11 20:29:27.264874
-64	10	Approved	Advanced	8	\N	Seeded assignment	\N
-202	6	Requested	Expert	\N	Weekly	Seeded assignment	\N
-241	25	Approved	Intermediate	9	\N	Seeded assignment	\N
-349	19	Requested	\N	\N	\N	Seeded assignment	\N
-661	8	Requested	\N	7	Weekly	Seeded assignment	\N
-853	17	Requested	Intermediate	\N	Weekly	Seeded request	\N
-17	25	Requested	\N	7	\N	Seeded assignment	2025-11-06 11:26:27.264874
-174	1	Approved	Beginner	\N	\N	Seeded assignment	2025-11-17 18:26:27.264874
-451	22	Approved	Intermediate	7	Rarely	Seeded assignment	\N
-795	19	Approved	Expert	\N	\N	Seeded assignment	2025-11-24 16:11:27.264874
-342	4	Requested	Intermediate	5	\N	Seeded assignment	\N
-945	9	Requested	Expert	5	Monthly	Seeded request	\N
-754	3	Requested	\N	\N	\N	Seeded assignment	\N
-426	23	Approved	\N	10	\N	Seeded assignment	2025-12-01 15:34:27.264874
-906	9	Approved	Intermediate	6	Rarely	Seeded request	2025-11-30 09:48:27.264874
-391	23	Approved	\N	8	\N	Seeded request	\N
-857	22	Requested	\N	\N	Monthly	Seeded assignment	2025-11-26 04:54:27.264874
-762	5	Approved	Intermediate	9	Rarely	Seeded request	2025-11-19 13:16:27.264874
-138	16	Requested	Expert	9	\N	Seeded request	\N
-134	11	Approved	Expert	5	Monthly	Seeded request	2025-11-19 04:33:27.264874
-415	9	Requested	Expert	6	\N	Seeded assignment	\N
-532	7	Requested	\N	8	\N	Seeded assignment	\N
-519	8	Requested	Expert	8	\N	Seeded request	\N
-300	6	Approved	Expert	\N	\N	Seeded assignment	\N
-627	23	Approved	Beginner	\N	\N	Seeded assignment	\N
-124	9	Approved	Intermediate	5	Daily	Seeded assignment	2025-11-03 10:13:27.264874
-270	21	Approved	\N	\N	Weekly	Seeded assignment	\N
-438	19	Requested	\N	\N	\N	Seeded request	2025-11-08 15:05:27.264874
-428	17	Requested	\N	\N	Monthly	Seeded assignment	\N
-978	3	Approved	Expert	2	Daily	Seeded assignment	2025-11-29 11:29:27.264874
-262	5	Requested	Expert	\N	Daily	Seeded request	\N
-524	25	Requested	Beginner	1	Daily	Seeded assignment	\N
-752	17	Approved	Expert	2	Daily	Seeded assignment	2025-12-02 02:04:27.264874
-242	4	Requested	\N	7	Weekly	Seeded request	\N
-364	3	Approved	Expert	\N	\N	Seeded assignment	\N
-44	1	Requested	Beginner	3	Rarely	Seeded assignment	\N
-581	8	Requested	Beginner	10	\N	Seeded assignment	2025-11-08 06:06:27.264874
-975	9	Approved	\N	4	Monthly	Seeded request	\N
-608	3	Approved	Intermediate	0	\N	Seeded request	\N
-619	9	Requested	Intermediate	10	Weekly	Seeded request	\N
-334	20	Approved	Intermediate	4	Daily	Seeded assignment	2025-11-05 10:01:27.264874
-606	21	Approved	\N	1	Weekly	Seeded assignment	2025-12-02 20:31:27.264874
-932	11	Approved	Advanced	\N	Weekly	Seeded assignment	2025-11-23 02:30:27.264874
-930	13	Approved	\N	5	\N	Seeded assignment	2025-11-21 18:21:27.264874
-552	12	Approved	\N	\N	Monthly	Seeded assignment	\N
-739	6	Approved	\N	4	Rarely	Seeded assignment	2025-11-10 02:57:27.264874
-870	18	Requested	\N	8	\N	Seeded request	2025-12-01 20:09:27.264874
-396	8	Approved	Intermediate	10	Daily	Seeded assignment	\N
-113	6	Requested	Intermediate	1	Weekly	Seeded request	2025-11-03 07:41:27.264874
-368	16	Approved	Intermediate	\N	Rarely	Seeded assignment	\N
-856	21	Approved	Intermediate	4	\N	Seeded assignment	\N
-937	8	Requested	Expert	10	\N	Seeded assignment	2025-11-07 06:56:27.264874
-110	5	Approved	\N	8	\N	Seeded assignment	\N
-79	12	Approved	\N	\N	Daily	Seeded assignment	2025-11-07 10:59:27.264874
-348	23	Requested	Intermediate	8	Weekly	Seeded assignment	2025-11-05 10:04:27.264874
-707	13	Requested	Advanced	\N	\N	Seeded assignment	\N
-799	19	Requested	Expert	\N	Monthly	Seeded assignment	2025-11-22 06:51:27.264874
-261	23	Requested	Expert	3	Weekly	Seeded assignment	2025-11-05 03:57:27.264874
-74	11	Approved	\N	1	\N	Seeded assignment	\N
-289	6	Approved	\N	7	\N	Seeded assignment	2025-11-04 16:42:27.264874
-186	17	Approved	\N	6	Daily	Seeded request	2025-11-13 21:52:27.264874
-936	4	Requested	\N	\N	Weekly	Seeded assignment	\N
-407	16	Approved	\N	\N	Weekly	Seeded assignment	2025-11-25 22:08:27.264874
-40	23	Requested	\N	\N	Rarely	Seeded request	\N
-182	23	Requested	Advanced	\N	\N	Seeded assignment	2025-11-13 07:13:27.264874
-355	23	Approved	\N	3	Rarely	Seeded assignment	\N
-904	22	Approved	\N	4	Weekly	Seeded request	\N
-892	6	Requested	\N	5	\N	Seeded assignment	\N
-90	18	Approved	\N	\N	Daily	Seeded assignment	\N
-338	12	Requested	\N	9	Daily	Seeded request	\N
-790	3	Requested	\N	\N	\N	Seeded assignment	2025-11-24 20:22:27.264874
-489	25	Requested	Beginner	\N	Rarely	Seeded assignment	\N
-569	7	Requested	\N	4	\N	Seeded assignment	2025-11-22 19:25:27.264874
-525	22	Approved	Expert	\N	\N	Seeded assignment	2025-11-10 10:09:27.264874
-510	3	Approved	Expert	5	Daily	Seeded assignment	\N
-408	10	Requested	Advanced	6	Daily	Seeded request	\N
-950	19	Approved	Beginner	1	Daily	Seeded assignment	2025-11-26 15:58:27.264874
-208	1	Approved	Advanced	\N	\N	Seeded request	\N
-726	16	Approved	\N	0	\N	Seeded assignment	2025-11-23 15:36:27.264874
-484	7	Approved	Intermediate	\N	\N	Seeded assignment	\N
-720	11	Approved	Expert	7	Daily	Seeded assignment	2025-11-11 16:47:27.264874
-840	11	Requested	\N	6	\N	Seeded request	2025-11-23 15:11:27.264874
-894	3	Requested	Expert	6	Daily	Seeded request	2025-11-29 23:22:27.264874
-371	16	Approved	Expert	5	Monthly	Seeded request	\N
-257	4	Approved	\N	\N	Daily	Seeded request	\N
-361	23	Requested	Advanced	9	\N	Seeded request	\N
-206	9	Requested	Expert	4	\N	Seeded assignment	2025-11-23 10:32:27.264874
-41	11	Requested	\N	7	Weekly	Seeded request	\N
-516	11	Approved	\N	\N	\N	Seeded assignment	\N
-809	5	Approved	Beginner	\N	\N	Seeded request	2025-11-28 06:50:27.264874
-887	21	Approved	Expert	\N	\N	Seeded request	\N
-730	7	Approved	Advanced	\N	\N	Seeded request	\N
-4	4	Approved	Beginner	\N	\N	Seeded assignment	\N
-105	3	Approved	\N	\N	\N	Seeded request	\N
-54	22	Approved	Expert	8	\N	Seeded assignment	2025-11-09 02:16:27.264874
-780	1	Approved	Expert	5	Daily	Seeded assignment	2025-11-22 16:55:27.264874
-464	12	Requested	Intermediate	\N	\N	Seeded request	\N
-666	16	Approved	Advanced	2	Rarely	Seeded request	\N
-421	8	Approved	Beginner	6	Monthly	Seeded assignment	\N
-242	3	Requested	Beginner	\N	Rarely	Seeded assignment	2025-11-09 19:01:27.264874
-986	13	Approved	\N	\N	\N	Seeded assignment	\N
-190	3	Approved	\N	\N	Monthly	Seeded assignment	\N
-384	24	Approved	Intermediate	\N	Weekly	Seeded request	\N
-352	18	Requested	Intermediate	2	\N	Seeded request	\N
-500	23	Approved	Intermediate	\N	Monthly	Seeded assignment	\N
-906	1	Approved	\N	2	Monthly	Seeded request	\N
-286	13	Requested	Advanced	\N	Weekly	Seeded assignment	\N
-572	4	Approved	Expert	6	Daily	Seeded assignment	\N
-479	10	Approved	Expert	\N	Weekly	Seeded request	2025-11-13 00:30:27.264874
-648	3	Approved	Beginner	\N	Weekly	Seeded assignment	2025-11-08 18:03:27.264874
-50	18	Approved	Beginner	4	Weekly	Seeded assignment	2025-11-09 02:43:27.264874
-539	3	Approved	Advanced	\N	Rarely	Seeded assignment	\N
-108	6	Approved	\N	1	Monthly	Seeded assignment	2025-11-26 00:49:27.264874
-93	21	Approved	\N	\N	\N	Seeded request	\N
-182	7	Requested	Intermediate	3	Weekly	Seeded assignment	\N
-735	18	Requested	Advanced	\N	\N	Seeded assignment	\N
-133	8	Approved	Beginner	2	Daily	Seeded request	2025-11-18 19:28:27.264874
-279	8	Requested	Beginner	10	Rarely	Seeded assignment	\N
-888	3	Approved	\N	5	Daily	Seeded request	2025-11-11 13:51:27.264874
-51	18	Approved	\N	\N	Rarely	Seeded assignment	\N
-197	13	Requested	Advanced	\N	Rarely	Seeded request	\N
-221	6	Requested	\N	1	\N	Seeded assignment	\N
-192	20	Approved	Beginner	\N	\N	Seeded request	\N
-20	24	Requested	\N	\N	Rarely	Seeded request	2025-11-04 15:34:27.264874
-668	1	Requested	\N	1	\N	Seeded assignment	\N
-155	5	Approved	Intermediate	4	\N	Seeded assignment	\N
-513	18	Approved	Intermediate	3	Daily	Seeded assignment	\N
-586	18	Approved	Beginner	\N	Rarely	Seeded assignment	\N
-968	11	Requested	Expert	\N	\N	Seeded assignment	2025-11-29 04:18:27.264874
-551	19	Requested	Beginner	5	Rarely	Seeded request	\N
-528	9	Approved	Beginner	10	\N	Seeded request	2025-11-17 18:38:27.264874
-702	13	Approved	Advanced	4	Daily	Seeded request	\N
-406	12	Requested	\N	\N	Monthly	Seeded assignment	\N
-92	9	Requested	\N	\N	\N	Seeded assignment	2025-11-08 22:29:27.264874
-767	13	Approved	Expert	\N	\N	Seeded assignment	2025-11-12 14:28:27.264874
-624	25	Approved	Beginner	10	Daily	Seeded request	\N
-919	7	Requested	Intermediate	7	Weekly	Seeded request	2025-11-06 17:18:27.264874
-203	18	Approved	\N	2	Monthly	Seeded assignment	2025-11-22 04:27:27.264874
-529	18	Requested	Advanced	1	\N	Seeded request	\N
-831	5	Requested	Intermediate	3	Weekly	Seeded request	\N
-49	16	Approved	Advanced	10	\N	Seeded assignment	\N
-415	1	Requested	\N	9	\N	Seeded assignment	2025-11-11 22:54:27.264874
-691	13	Approved	Intermediate	1	\N	Seeded request	2025-11-16 10:20:27.264874
-230	21	Approved	Expert	1	Weekly	Seeded assignment	2025-11-06 22:22:27.264874
-618	22	Requested	Expert	\N	\N	Seeded request	\N
-69	18	Requested	\N	8	\N	Seeded request	2025-11-03 13:16:27.264874
-219	20	Approved	Advanced	5	\N	Seeded request	\N
-4	3	Approved	Intermediate	2	Rarely	Seeded assignment	2025-11-05 06:45:27.264874
-709	13	Requested	\N	4	Daily	Seeded assignment	\N
-939	19	Approved	\N	7	\N	Seeded request	\N
-544	1	Approved	Expert	8	Rarely	Seeded assignment	\N
-55	8	Requested	\N	9	Weekly	Seeded assignment	2025-11-09 17:32:27.264874
-900	17	Approved	Intermediate	8	\N	Seeded assignment	\N
-805	10	Approved	Intermediate	2	Weekly	Seeded assignment	2025-11-03 10:52:27.264874
-741	7	Requested	\N	10	Rarely	Seeded assignment	2025-11-05 02:39:27.264874
-909	4	Approved	Beginner	1	Rarely	Seeded request	\N
-127	19	Approved	\N	9	\N	Seeded assignment	2025-11-21 09:33:27.264874
-257	3	Approved	Intermediate	\N	\N	Seeded request	2025-11-19 17:45:27.264874
-296	25	Approved	Advanced	\N	Monthly	Seeded assignment	2025-11-10 11:03:27.264874
-45	16	Approved	\N	\N	Rarely	Seeded assignment	\N
-374	8	Approved	Expert	2	Monthly	Seeded request	2025-12-02 13:06:27.264874
-373	21	Requested	Intermediate	0	Monthly	Seeded assignment	2025-11-20 16:54:27.264874
-647	24	Approved	\N	\N	\N	Seeded assignment	2025-11-29 06:22:27.264874
-430	18	Requested	\N	10	Monthly	Seeded request	\N
-429	6	Approved	\N	9	\N	Seeded assignment	\N
-29	20	Approved	\N	10	\N	Seeded assignment	2025-11-19 08:27:27.264874
-294	3	Requested	Beginner	\N	Weekly	Seeded request	\N
-247	9	Approved	Expert	9	Daily	Seeded assignment	\N
-487	5	Requested	\N	1	\N	Seeded assignment	2025-11-26 19:00:27.264874
-790	4	Approved	Beginner	4	\N	Seeded request	2025-11-26 13:59:27.264874
-829	4	Approved	Advanced	6	\N	Seeded request	2025-11-14 17:06:27.264874
-363	13	Approved	\N	1	Monthly	Seeded request	\N
-322	9	Requested	Beginner	\N	Rarely	Seeded request	2025-11-23 09:01:27.264874
-213	21	Requested	Advanced	10	Weekly	Seeded assignment	2025-11-25 18:07:27.264874
-422	16	Approved	\N	0	Weekly	Seeded assignment	\N
-299	19	Requested	Expert	1	\N	Seeded assignment	2025-11-15 23:55:27.264874
-540	23	Approved	\N	\N	Weekly	Seeded assignment	\N
-568	3	Approved	Expert	\N	Weekly	Seeded assignment	\N
-316	18	Approved	\N	\N	Weekly	Seeded request	\N
-650	3	Approved	Expert	\N	Weekly	Seeded request	2025-11-21 15:43:27.264874
-609	6	Requested	Advanced	0	Rarely	Seeded request	\N
-696	7	Approved	Beginner	8	Weekly	Seeded request	\N
-663	9	Requested	\N	7	Rarely	Seeded assignment	2025-11-28 11:56:27.264874
-167	25	Approved	\N	\N	\N	Seeded assignment	2025-11-12 06:56:27.264874
-725	8	Approved	Intermediate	0	Monthly	Seeded request	2025-12-02 20:25:27.264874
-708	13	Approved	\N	\N	\N	Seeded assignment	\N
-810	20	Approved	Advanced	0	Rarely	Seeded assignment	2025-11-28 07:53:27.264874
-52	21	Approved	Beginner	\N	Weekly	Seeded assignment	\N
-132	4	Approved	\N	9	Daily	Seeded assignment	\N
-642	10	Requested	\N	\N	\N	Seeded assignment	2025-11-03 19:57:27.264874
-706	6	Approved	Intermediate	2	\N	Seeded assignment	2025-11-20 05:13:27.264874
-849	1	Approved	\N	\N	\N	Seeded assignment	\N
-814	11	Requested	Beginner	7	\N	Seeded assignment	2025-11-29 23:01:27.264874
-602	5	Requested	\N	10	\N	Seeded request	\N
-964	4	Requested	Expert	10	Rarely	Seeded assignment	2025-11-25 19:52:27.264874
-70	18	Requested	\N	10	\N	Seeded request	\N
-59	3	Approved	\N	\N	Rarely	Seeded assignment	\N
-225	18	Requested	\N	\N	Weekly	Seeded assignment	\N
-15	25	Approved	\N	\N	\N	Seeded request	\N
-35	5	Approved	\N	7	Daily	Seeded assignment	2025-11-05 02:54:27.264874
-770	10	Requested	Beginner	\N	\N	Seeded request	2025-11-30 13:17:27.264874
-866	8	Approved	\N	5	\N	Seeded assignment	\N
-140	25	Approved	\N	7	\N	Seeded assignment	\N
-77	25	Approved	\N	0	\N	Seeded assignment	2025-11-27 06:51:27.264874
-932	9	Requested	\N	5	\N	Seeded assignment	2025-11-06 07:48:27.264874
-103	20	Approved	Beginner	3	Daily	Seeded request	2025-12-01 10:34:27.264874
-495	12	Approved	Expert	1	\N	Seeded assignment	2025-11-21 17:38:27.264874
-149	6	Requested	Expert	1	Rarely	Seeded request	\N
-269	16	Requested	\N	\N	Rarely	Seeded assignment	\N
-951	16	Approved	\N	\N	Rarely	Seeded request	\N
-943	19	Requested	Intermediate	\N	Rarely	Seeded request	\N
-890	11	Approved	\N	\N	Weekly	Seeded request	2025-11-06 19:44:27.264874
-787	5	Approved	\N	\N	\N	Seeded assignment	2025-11-06 07:06:27.264874
-333	17	Requested	Intermediate	\N	\N	Seeded assignment	2025-11-23 05:53:27.264874
-503	13	Approved	\N	4	Weekly	Seeded assignment	\N
-889	21	Approved	Beginner	\N	\N	Seeded assignment	2025-11-12 12:56:27.264874
-414	6	Requested	Expert	1	Monthly	Seeded request	\N
-800	17	Requested	Intermediate	0	Rarely	Seeded assignment	2025-11-25 15:53:27.264874
-334	22	Approved	Intermediate	4	Weekly	Seeded request	2025-11-24 15:41:27.264874
-667	6	Requested	Intermediate	8	Rarely	Seeded assignment	\N
-880	17	Requested	Beginner	2	\N	Seeded assignment	2025-11-06 05:58:27.264874
-646	24	Approved	Advanced	\N	Weekly	Seeded assignment	\N
-902	5	Requested	Intermediate	\N	\N	Seeded assignment	2025-11-24 22:33:27.264874
-406	22	Requested	\N	\N	Weekly	Seeded request	\N
-777	7	Requested	Beginner	\N	Rarely	Seeded request	\N
-111	11	Approved	\N	8	\N	Seeded assignment	\N
-786	6	Requested	\N	\N	Monthly	Seeded assignment	\N
-894	18	Approved	\N	6	\N	Seeded request	\N
-191	23	Requested	\N	\N	Daily	Seeded assignment	\N
-954	21	Requested	\N	9	Monthly	Seeded assignment	\N
-67	16	Requested	Expert	\N	\N	Seeded request	2025-11-28 00:45:27.264874
-475	10	Approved	Expert	2	Rarely	Seeded assignment	2025-11-19 23:29:27.264874
-457	16	Requested	\N	5	Rarely	Seeded assignment	2025-11-21 15:57:27.264874
-719	10	Requested	Intermediate	8	\N	Seeded request	2025-11-17 00:25:27.264874
-554	23	Requested	Advanced	\N	\N	Seeded assignment	\N
-249	4	Approved	Advanced	\N	Rarely	Seeded request	\N
-196	6	Approved	\N	0	Monthly	Seeded request	\N
-817	23	Requested	\N	\N	\N	Seeded assignment	\N
-134	9	Approved	Expert	10	\N	Seeded request	\N
-302	22	Requested	Expert	3	Monthly	Seeded request	2025-11-29 05:05:27.264874
-386	22	Approved	Expert	5	Monthly	Seeded assignment	2025-11-12 14:47:27.264874
-573	13	Approved	Advanced	\N	Weekly	Seeded assignment	2025-11-19 19:01:27.264874
-481	9	Requested	Beginner	\N	Daily	Seeded request	\N
-929	12	Requested	Expert	0	\N	Seeded request	\N
-779	23	Approved	\N	6	Weekly	Seeded assignment	\N
-612	19	Requested	\N	\N	\N	Seeded assignment	2025-11-08 02:50:27.264874
-925	19	Requested	Advanced	2	Rarely	Seeded request	\N
-955	16	Requested	Intermediate	10	\N	Seeded request	\N
-203	4	Approved	\N	2	\N	Seeded request	2025-11-20 00:10:27.264874
-596	10	Approved	\N	3	Rarely	Seeded assignment	\N
-945	11	Approved	Expert	10	Monthly	Seeded assignment	\N
-351	22	Approved	Advanced	\N	\N	Seeded request	\N
-927	7	Requested	Advanced	5	\N	Seeded assignment	2025-11-05 20:58:27.264874
-591	9	Requested	\N	\N	Rarely	Seeded request	\N
-69	4	Approved	Beginner	3	\N	Seeded assignment	2025-11-06 14:49:27.264874
-136	6	Approved	Expert	\N	\N	Seeded request	2025-11-16 19:55:27.264874
-731	5	Approved	Advanced	6	\N	Seeded assignment	2025-11-15 00:38:27.264874
-394	3	Approved	Intermediate	\N	Weekly	Seeded assignment	\N
-793	12	Approved	\N	\N	Rarely	Seeded assignment	2025-12-02 09:12:27.264874
-364	18	Requested	Advanced	5	Monthly	Seeded request	\N
-848	7	Approved	Expert	5	Rarely	Seeded assignment	2025-11-20 00:55:27.264874
-636	25	Requested	\N	2	Daily	Seeded assignment	2025-12-01 16:54:27.264874
-703	4	Approved	\N	9	Daily	Seeded assignment	2025-11-17 15:19:27.264874
-66	23	Approved	Intermediate	1	Monthly	Seeded request	\N
-827	23	Approved	Expert	6	\N	Seeded assignment	\N
-698	3	Approved	\N	3	Rarely	Seeded assignment	2025-11-13 17:18:27.264874
-141	3	Approved	\N	9	\N	Seeded assignment	2025-11-26 05:20:27.264874
-229	11	Approved	Intermediate	\N	\N	Seeded assignment	\N
-860	18	Approved	Beginner	\N	Weekly	Seeded assignment	\N
-291	13	Requested	Advanced	3	\N	Seeded request	\N
-86	12	Requested	\N	3	Monthly	Seeded assignment	2025-11-21 22:35:27.264874
-224	4	Approved	Advanced	7	\N	Seeded assignment	\N
-255	23	Approved	Beginner	\N	\N	Seeded request	\N
-34	7	Approved	Expert	\N	Monthly	Seeded request	2025-11-07 01:09:27.264874
-124	11	Approved	Advanced	\N	Daily	Seeded assignment	2025-11-04 09:09:27.264874
-486	8	Requested	Intermediate	\N	Weekly	Seeded assignment	2025-11-20 10:34:27.264874
-247	11	Approved	\N	\N	\N	Seeded assignment	2025-11-03 09:15:27.264874
-7	5	Approved	Beginner	6	Weekly	Seeded assignment	\N
-201	19	Requested	Intermediate	\N	Rarely	Seeded assignment	\N
-263	5	Approved	Advanced	3	Monthly	Seeded assignment	2025-11-13 07:24:27.264874
-557	16	Requested	Intermediate	\N	Weekly	Seeded assignment	2025-11-18 06:19:27.264874
-81	16	Requested	\N	9	\N	Seeded assignment	\N
-932	1	Approved	\N	1	Weekly	Seeded request	\N
-393	16	Requested	Intermediate	\N	Rarely	Seeded assignment	2025-11-15 17:46:27.264874
-303	25	Requested	Expert	\N	Rarely	Seeded assignment	\N
-437	6	Approved	\N	10	Monthly	Seeded request	\N
-88	13	Approved	Intermediate	8	\N	Seeded assignment	\N
-466	23	Approved	Expert	6	\N	Seeded request	\N
-257	18	Requested	\N	6	Daily	Seeded assignment	\N
-451	12	Approved	Intermediate	\N	Daily	Seeded request	\N
-256	21	Approved	Advanced	\N	Monthly	Seeded request	2025-11-07 14:20:27.264874
-607	22	Approved	Beginner	6	Monthly	Seeded assignment	\N
-631	10	Requested	Beginner	3	Monthly	Seeded assignment	2025-11-27 11:35:27.264874
-745	8	Approved	\N	10	Weekly	Seeded request	\N
-156	3	Approved	\N	\N	Weekly	Seeded assignment	2025-11-17 10:23:27.264874
-764	9	Approved	\N	\N	\N	Seeded assignment	\N
-139	23	Approved	\N	\N	\N	Seeded assignment	\N
-614	23	Approved	Expert	\N	\N	Seeded assignment	\N
-456	21	Approved	Intermediate	1	\N	Seeded assignment	2025-12-01 22:06:27.264874
-53	12	Requested	Advanced	\N	Monthly	Seeded assignment	2025-11-07 05:19:27.264874
-143	23	Approved	Advanced	7	\N	Seeded request	2025-11-10 12:59:27.264874
-613	18	Approved	Intermediate	0	Rarely	Seeded request	\N
-89	7	Approved	\N	7	\N	Seeded request	2025-11-22 09:04:27.264874
-317	24	Requested	Expert	1	\N	Seeded assignment	\N
-830	22	Approved	\N	\N	Daily	Seeded assignment	2025-11-18 11:46:27.264874
-827	7	Requested	\N	1	\N	Seeded assignment	2025-11-21 20:45:27.264874
-297	17	Requested	\N	\N	\N	Seeded assignment	2025-11-04 06:43:27.264874
-949	23	Approved	\N	2	Weekly	Seeded request	\N
-34	23	Approved	Intermediate	7	Daily	Seeded assignment	\N
-42	4	Approved	Advanced	\N	\N	Seeded request	2025-11-26 17:14:27.264874
-255	7	Requested	Intermediate	\N	\N	Seeded request	\N
-771	19	Approved	Intermediate	2	Weekly	Seeded request	2025-11-21 03:33:27.264874
-580	1	Requested	\N	\N	Daily	Seeded assignment	\N
-973	9	Requested	\N	\N	Rarely	Seeded assignment	2025-11-21 00:25:27.264874
-90	4	Requested	Intermediate	8	Rarely	Seeded request	2025-11-07 16:54:27.264874
-660	3	Approved	Intermediate	4	\N	Seeded request	\N
-27	8	Requested	\N	0	Daily	Seeded request	2025-11-13 18:17:27.264874
-841	10	Requested	\N	5	\N	Seeded assignment	2025-11-10 02:23:27.264874
-450	22	Requested	Advanced	2	Daily	Seeded assignment	2025-11-03 15:03:27.264874
-463	4	Requested	\N	\N	\N	Seeded request	2025-11-12 19:12:27.264874
-123	17	Requested	Intermediate	0	\N	Seeded assignment	2025-11-25 23:46:27.264874
-189	25	Requested	\N	3	\N	Seeded assignment	2025-11-13 15:56:27.264874
-496	6	Approved	\N	3	Daily	Seeded assignment	2025-11-06 23:06:27.264874
-698	4	Approved	Advanced	0	Monthly	Seeded request	\N
-210	19	Approved	Expert	6	\N	Seeded request	\N
-875	21	Approved	Beginner	10	\N	Seeded assignment	\N
-885	17	Approved	\N	\N	Rarely	Seeded assignment	\N
-102	23	Approved	Advanced	10	Rarely	Seeded assignment	2025-11-28 04:48:27.264874
-898	23	Approved	Advanced	\N	Weekly	Seeded assignment	\N
-416	21	Approved	\N	4	Monthly	Seeded request	2025-11-04 01:13:27.264874
-618	20	Requested	Intermediate	10	\N	Seeded assignment	2025-12-03 01:03:27.264874
-703	3	Approved	\N	7	\N	Seeded assignment	\N
-593	24	Requested	\N	1	Weekly	Seeded assignment	2025-11-27 20:51:27.264874
-354	16	Requested	Intermediate	3	Rarely	Seeded assignment	2025-11-10 21:33:27.264874
-527	5	Requested	\N	\N	\N	Seeded request	\N
-773	5	Approved	\N	5	\N	Seeded assignment	\N
-783	5	Requested	\N	1	\N	Seeded assignment	2025-11-04 04:22:27.264874
-933	5	Approved	Advanced	\N	Monthly	Seeded assignment	\N
-228	7	Requested	\N	\N	Daily	Seeded request	2025-11-13 18:57:27.264874
-54	12	Requested	Beginner	3	Daily	Seeded request	2025-11-28 04:44:27.264874
-246	16	Approved	Expert	1	\N	Seeded request	2025-11-23 01:03:27.264874
-859	19	Approved	Advanced	\N	Rarely	Seeded assignment	\N
-203	3	Approved	Expert	\N	Weekly	Seeded request	2025-11-10 10:55:27.264874
-529	3	Requested	Beginner	\N	Rarely	Seeded request	\N
-251	6	Approved	Expert	0	Monthly	Seeded assignment	2025-11-26 21:27:27.264874
-44	11	Approved	\N	\N	Weekly	Seeded request	2025-11-10 09:44:27.264874
-656	24	Approved	Beginner	\N	Weekly	Seeded assignment	\N
-375	5	Approved	\N	6	Daily	Seeded request	\N
-418	4	Approved	Expert	\N	Rarely	Seeded request	2025-11-27 23:26:27.264874
-191	7	Requested	\N	3	Monthly	Seeded request	\N
-85	21	Approved	\N	\N	Monthly	Seeded assignment	2025-11-08 10:41:27.264874
-513	3	Approved	Advanced	\N	Rarely	Seeded request	\N
-586	3	Approved	\N	\N	Weekly	Seeded assignment	\N
-51	3	Approved	\N	9	Monthly	Seeded request	\N
-846	24	Approved	Advanced	10	\N	Seeded request	\N
-271	22	Approved	\N	\N	Rarely	Seeded request	2025-11-08 22:05:27.264874
-806	17	Requested	\N	\N	\N	Seeded request	2025-11-06 20:50:27.264874
-879	25	Approved	\N	3	\N	Seeded request	2025-11-12 23:02:27.264874
-338	22	Requested	\N	\N	Monthly	Seeded assignment	\N
-546	21	Requested	Beginner	\N	\N	Seeded request	\N
-55	10	Approved	Expert	7	Weekly	Seeded request	2025-11-20 06:25:27.264874
-637	17	Requested	Intermediate	6	Daily	Seeded assignment	\N
-605	9	Approved	Beginner	7	\N	Seeded request	\N
-710	9	Requested	Advanced	\N	Monthly	Seeded assignment	\N
-99	1	Requested	Advanced	\N	\N	Seeded request	\N
-707	16	Requested	Beginner	\N	Weekly	Seeded assignment	2025-11-08 20:20:27.264874
-768	19	Requested	\N	\N	Daily	Seeded assignment	\N
-169	20	Approved	\N	5	\N	Seeded assignment	2025-11-23 04:12:27.264874
-626	6	Requested	Expert	\N	Weekly	Seeded assignment	\N
-805	8	Requested	Beginner	9	Daily	Seeded assignment	2025-11-05 20:53:27.264874
-448	11	Approved	\N	5	Monthly	Seeded request	2025-12-01 16:38:27.264874
-885	21	Approved	\N	\N	Weekly	Seeded request	\N
-877	4	Approved	Intermediate	\N	\N	Seeded assignment	2025-11-07 06:38:27.264874
-833	8	Requested	Advanced	\N	Weekly	Seeded assignment	2025-11-26 02:15:27.264874
-362	1	Approved	\N	\N	Rarely	Seeded request	2025-11-18 15:15:27.264874
-758	17	Approved	Advanced	\N	Daily	Seeded request	\N
-908	18	Approved	Advanced	2	Rarely	Seeded request	2025-11-12 03:06:27.264874
-572	19	Requested	Intermediate	0	\N	Seeded assignment	\N
-699	1	Approved	Expert	\N	Monthly	Seeded assignment	\N
-306	11	Approved	Advanced	\N	\N	Seeded assignment	\N
-439	3	Approved	\N	9	Monthly	Seeded request	\N
-811	9	Requested	Advanced	\N	\N	Seeded request	\N
-530	25	Approved	Beginner	10	\N	Seeded request	2025-11-23 05:24:27.264874
-262	22	Requested	\N	\N	\N	Seeded request	2025-11-17 10:35:27.264874
-427	17	Approved	Intermediate	\N	Daily	Seeded assignment	\N
-588	6	Approved	Advanced	\N	Weekly	Seeded request	\N
-24	17	Requested	\N	\N	Daily	Seeded request	2025-11-18 04:48:27.264874
-368	13	Approved	\N	\N	Monthly	Seeded assignment	\N
-608	19	Approved	\N	7	Weekly	Seeded assignment	2025-11-04 19:34:27.264874
-907	11	Approved	Advanced	\N	Daily	Seeded assignment	\N
-693	4	Approved	\N	\N	\N	Seeded request	\N
-642	24	Approved	Beginner	\N	Weekly	Seeded assignment	2025-11-27 13:55:27.264874
-946	21	Requested	Beginner	5	\N	Seeded assignment	\N
-971	16	Approved	Beginner	\N	Rarely	Seeded request	2025-11-15 04:52:27.264874
-53	5	Approved	Expert	3	Rarely	Seeded request	\N
-377	17	Approved	Expert	10	Daily	Seeded assignment	\N
-924	20	Requested	\N	\N	Daily	Seeded assignment	\N
-882	8	Approved	Intermediate	2	Monthly	Seeded request	2025-11-27 18:22:27.264874
-32	17	Approved	\N	\N	Rarely	Seeded assignment	2025-11-17 07:46:27.264874
-726	13	Approved	\N	1	Monthly	Seeded assignment	2025-11-24 19:01:27.264874
-353	10	Approved	\N	1	Monthly	Seeded assignment	2025-11-15 23:57:27.264874
-985	4	Requested	Intermediate	6	\N	Seeded assignment	2025-11-09 10:07:27.264874
-85	17	Requested	Beginner	1	Rarely	Seeded assignment	2025-11-27 00:30:27.264874
-571	16	Approved	Intermediate	\N	\N	Seeded request	2025-12-01 22:32:27.264874
-765	7	Approved	Advanced	6	\N	Seeded request	2025-11-13 07:53:27.264874
-475	24	Approved	\N	1	Monthly	Seeded request	2025-11-15 18:35:27.264874
-508	8	Approved	Intermediate	\N	Weekly	Seeded assignment	\N
-925	18	Requested	\N	3	Monthly	Seeded assignment	\N
-152	24	Approved	Beginner	\N	Daily	Seeded assignment	2025-11-20 19:35:27.264874
-309	3	Requested	\N	9	\N	Seeded assignment	2025-11-27 06:45:27.264874
-183	11	Approved	Beginner	1	Rarely	Seeded assignment	\N
-917	11	Approved	\N	4	Rarely	Seeded assignment	\N
-36	5	Requested	Beginner	3	Rarely	Seeded request	\N
-304	21	Approved	Expert	\N	Weekly	Seeded request	\N
-762	22	Requested	Beginner	\N	\N	Seeded assignment	\N
-120	23	Approved	Advanced	8	Rarely	Seeded assignment	\N
-970	21	Approved	Intermediate	10	Daily	Seeded assignment	2025-11-24 11:55:27.264874
-471	8	Requested	Intermediate	\N	Monthly	Seeded request	2025-11-12 10:57:27.264874
-560	9	Requested	\N	4	Weekly	Seeded assignment	\N
-670	9	Approved	Advanced	\N	Monthly	Seeded request	\N
-881	22	Approved	\N	4	Weekly	Seeded assignment	\N
-525	5	Approved	\N	\N	Weekly	Seeded request	\N
-375	12	Approved	\N	\N	\N	Seeded assignment	\N
-410	13	Approved	\N	3	Monthly	Seeded assignment	\N
-988	9	Approved	\N	5	Rarely	Seeded request	\N
-473	21	Approved	\N	\N	\N	Seeded assignment	\N
-479	8	Requested	Advanced	\N	Weekly	Seeded assignment	\N
-95	16	Approved	\N	6	\N	Seeded request	2025-11-07 01:12:27.264874
-268	23	Requested	Advanced	3	Monthly	Seeded assignment	2025-11-29 09:13:27.264874
-347	13	Approved	Advanced	\N	\N	Seeded request	2025-11-17 05:51:27.264874
-563	8	Approved	Advanced	5	Monthly	Seeded assignment	\N
-689	21	Approved	\N	\N	Monthly	Seeded assignment	\N
-216	17	Approved	\N	\N	Rarely	Seeded assignment	\N
-380	13	Approved	Expert	\N	Rarely	Seeded assignment	2025-11-21 07:57:27.264874
-527	12	Approved	\N	7	Rarely	Seeded assignment	\N
-512	8	Approved	Beginner	3	\N	Seeded request	\N
-783	12	Approved	\N	2	Weekly	Seeded assignment	\N
-896	25	Requested	Expert	\N	Weekly	Seeded assignment	\N
-609	25	Requested	Advanced	\N	Daily	Seeded assignment	2025-11-29 19:59:27.264874
-121	20	Approved	\N	\N	\N	Seeded request	2025-11-15 21:35:27.264874
-399	23	Approved	Beginner	0	\N	Seeded request	2025-11-27 22:51:27.264874
-634	20	Requested	\N	8	\N	Seeded request	\N
-876	1	Approved	\N	0	\N	Seeded assignment	\N
-133	10	Requested	\N	\N	Weekly	Seeded request	\N
-943	18	Requested	\N	\N	\N	Seeded assignment	2025-11-22 23:23:27.264874
-470	1	Approved	\N	\N	\N	Seeded assignment	\N
-429	25	Approved	Advanced	6	Daily	Seeded assignment	\N
-732	4	Requested	\N	5	\N	Seeded assignment	\N
-751	16	Approved	\N	\N	Rarely	Seeded assignment	2025-11-22 22:53:27.264874
-492	10	Approved	Advanced	8	\N	Seeded assignment	\N
-858	5	Requested	Advanced	7	\N	Seeded assignment	\N
-447	3	Approved	Expert	2	Rarely	Seeded assignment	\N
-902	20	Requested	Expert	1	Daily	Seeded assignment	2025-12-01 19:03:27.264874
-615	11	Approved	Beginner	1	Rarely	Seeded request	\N
-776	20	Approved	Advanced	7	\N	Seeded assignment	2025-11-11 02:34:27.264874
-705	21	Approved	\N	\N	\N	Seeded assignment	2025-11-27 09:43:27.264874
-697	9	Approved	\N	\N	\N	Seeded assignment	\N
-456	17	Requested	\N	4	\N	Seeded request	2025-11-11 01:44:27.264874
-728	17	Approved	Intermediate	\N	\N	Seeded assignment	2025-11-23 12:23:27.264874
-171	5	Requested	Expert	\N	\N	Seeded assignment	\N
-260	12	Requested	\N	1	Rarely	Seeded request	2025-11-30 12:24:27.264874
-727	21	Approved	Intermediate	0	Monthly	Seeded assignment	2025-11-14 07:42:27.264874
-685	22	Requested	\N	\N	Weekly	Seeded assignment	2025-11-15 06:49:27.264874
-172	10	Approved	\N	1	\N	Seeded assignment	\N
-344	20	Requested	Intermediate	\N	Rarely	Seeded request	\N
-175	1	Requested	Advanced	2	Weekly	Seeded assignment	\N
-63	20	Approved	Advanced	\N	Rarely	Seeded assignment	\N
-494	25	Approved	Beginner	\N	Weekly	Seeded assignment	2025-12-01 05:44:27.264874
-671	13	Approved	\N	3	Daily	Seeded request	2025-11-25 01:36:27.264874
-524	6	Approved	\N	\N	Weekly	Seeded assignment	\N
-181	21	Requested	\N	\N	\N	Seeded assignment	\N
-179	3	Approved	Intermediate	0	Monthly	Seeded request	2025-11-03 20:44:27.264874
-155	22	Requested	Advanced	\N	Monthly	Seeded assignment	\N
-68	25	Approved	Advanced	3	Rarely	Seeded assignment	2025-11-06 12:33:27.264874
-687	24	Approved	Advanced	7	\N	Seeded assignment	2025-11-11 05:40:27.264874
-910	23	Approved	Expert	\N	\N	Seeded assignment	2025-11-12 11:11:27.264874
-476	18	Approved	Expert	4	Rarely	Seeded assignment	\N
-690	17	Approved	Beginner	1	\N	Seeded request	\N
-935	10	Approved	\N	10	Rarely	Seeded assignment	\N
-644	6	Approved	Beginner	4	\N	Seeded assignment	\N
-342	19	Requested	Beginner	\N	\N	Seeded request	\N
-309	4	Approved	Advanced	\N	Weekly	Seeded assignment	\N
-873	12	Approved	\N	\N	\N	Seeded assignment	2025-11-23 04:25:27.264874
-199	13	Approved	Intermediate	4	\N	Seeded assignment	\N
-659	18	Requested	\N	\N	Monthly	Seeded assignment	\N
-549	7	Approved	Expert	\N	\N	Seeded assignment	2025-11-13 20:36:27.264874
-83	24	Requested	Advanced	1	\N	Seeded request	2025-11-24 17:45:27.264874
-287	21	Approved	Expert	\N	Monthly	Seeded request	2025-12-01 22:30:27.264874
-417	1	Requested	\N	3	Weekly	Seeded request	\N
-669	16	Approved	Expert	\N	\N	Seeded request	\N
-985	3	Approved	Advanced	3	Rarely	Seeded request	\N
-852	7	Approved	Beginner	3	\N	Seeded request	\N
-517	19	Requested	\N	\N	\N	Seeded assignment	2025-11-18 18:00:27.264874
-527	20	Requested	Advanced	3	Rarely	Seeded request	2025-11-14 05:50:27.264874
-861	6	Requested	\N	\N	Monthly	Seeded assignment	\N
-708	16	Approved	\N	10	\N	Seeded assignment	\N
-210	18	Approved	Advanced	\N	\N	Seeded request	2025-11-09 14:49:27.264874
-390	9	Approved	Intermediate	\N	\N	Seeded request	2025-11-07 21:57:27.264874
-363	16	Approved	\N	6	\N	Seeded request	2025-11-28 12:03:27.264874
-635	10	Requested	\N	1	Monthly	Seeded assignment	\N
-375	20	Approved	Advanced	10	Daily	Seeded assignment	2025-11-12 06:05:27.264874
-388	11	Approved	Expert	\N	Monthly	Seeded assignment	\N
-325	6	Approved	\N	8	Monthly	Seeded assignment	2025-11-03 06:37:27.264874
-514	9	Requested	\N	\N	\N	Seeded request	2025-11-29 03:44:27.264874
-987	25	Requested	\N	6	Weekly	Seeded request	2025-11-12 22:12:27.264874
-187	1	Requested	\N	\N	\N	Seeded assignment	\N
-865	25	Requested	Expert	4	Rarely	Seeded request	\N
-639	1	Requested	Beginner	\N	\N	Seeded assignment	\N
-185	22	Approved	Beginner	5	\N	Seeded assignment	\N
-555	23	Approved	Expert	7	Weekly	Seeded request	\N
-482	12	Approved	Beginner	\N	\N	Seeded assignment	2025-11-24 15:31:27.264874
-80	9	Requested	Advanced	0	\N	Seeded assignment	\N
-974	6	Approved	Expert	10	\N	Seeded assignment	\N
-568	19	Approved	\N	4	\N	Seeded assignment	2025-11-16 14:35:27.264874
-661	10	Requested	\N	9	Monthly	Seeded assignment	\N
-598	11	Approved	Beginner	10	\N	Seeded assignment	\N
-589	17	Approved	\N	\N	Weekly	Seeded assignment	\N
-263	20	Requested	Advanced	\N	Daily	Seeded assignment	\N
-1	13	Requested	Advanced	3	\N	Seeded assignment	2025-11-03 22:27:27.264874
-447	4	Requested	\N	\N	Rarely	Seeded assignment	\N
-988	1	Approved	Expert	3	\N	Seeded assignment	\N
-676	16	Requested	Advanced	0	Weekly	Seeded request	\N
-821	3	Requested	Intermediate	\N	Rarely	Seeded assignment	\N
-967	3	Approved	\N	\N	Rarely	Seeded assignment	\N
-924	12	Requested	Beginner	1	\N	Seeded request	\N
-22	13	Requested	Expert	9	\N	Seeded assignment	\N
-315	8	Requested	\N	\N	Monthly	Seeded assignment	2025-11-16 05:52:27.264874
-651	24	Requested	\N	5	\N	Seeded request	2025-11-20 02:58:27.264874
-319	17	Approved	Beginner	\N	\N	Seeded assignment	\N
-656	10	Requested	\N	6	Monthly	Seeded request	2025-11-24 04:23:27.264874
-254	10	Requested	Advanced	\N	\N	Seeded request	2025-11-21 07:11:27.264874
-911	11	Approved	\N	\N	Weekly	Seeded request	2025-11-12 01:41:27.264874
-716	11	Requested	Intermediate	\N	Rarely	Seeded assignment	\N
-916	11	Approved	Beginner	7	\N	Seeded assignment	\N
-892	25	Requested	\N	\N	Rarely	Seeded assignment	\N
-404	21	Approved	\N	\N	Rarely	Seeded request	\N
-920	18	Requested	Expert	\N	Rarely	Seeded assignment	\N
-372	13	Requested	Intermediate	\N	Rarely	Seeded request	2025-11-22 16:29:27.264874
-412	24	Requested	\N	5	\N	Seeded assignment	\N
-294	19	Approved	\N	2	Rarely	Seeded assignment	\N
-803	25	Approved	\N	10	\N	Seeded assignment	2025-11-18 02:16:27.264874
-739	25	Requested	Expert	\N	\N	Seeded request	\N
-876	9	Requested	Intermediate	10	\N	Seeded request	2025-11-10 07:35:27.264874
-120	7	Approved	Expert	\N	Rarely	Seeded assignment	\N
-201	18	Requested	\N	\N	\N	Seeded request	\N
-545	22	Approved	\N	10	Weekly	Seeded assignment	2025-11-27 02:55:27.264874
-113	25	Approved	Advanced	0	Monthly	Seeded request	\N
-960	5	Approved	Intermediate	1	Daily	Seeded request	\N
-76	21	Approved	Expert	0	\N	Seeded request	\N
-75	6	Approved	Expert	\N	\N	Seeded request	\N
-164	3	Requested	Intermediate	0	Daily	Seeded assignment	\N
-284	13	Approved	\N	\N	Rarely	Seeded assignment	\N
-94	25	Approved	Expert	7	Monthly	Seeded assignment	2025-11-06 17:45:27.264874
-479	13	Approved	Intermediate	10	Weekly	Seeded request	\N
-561	6	Requested	Expert	6	Rarely	Seeded assignment	\N
-889	22	Approved	\N	4	Weekly	Seeded assignment	\N
-415	6	Requested	Intermediate	10	Daily	Seeded assignment	2025-11-30 15:50:27.264874
-850	20	Requested	\N	\N	Weekly	Seeded request	2025-11-15 21:07:27.264874
-969	12	Approved	\N	10	\N	Seeded request	\N
-565	9	Requested	\N	\N	Daily	Seeded assignment	2025-11-06 03:31:27.264874
-630	20	Requested	Intermediate	10	Weekly	Seeded assignment	\N
-676	10	Approved	Expert	\N	Monthly	Seeded assignment	\N
-845	21	Approved	Advanced	\N	Weekly	Seeded request	2025-11-19 01:26:27.264874
-979	16	Approved	\N	1	Monthly	Seeded request	\N
-530	1	Approved	\N	\N	\N	Seeded assignment	\N
-3	23	Approved	Intermediate	5	Rarely	Seeded request	2025-11-10 03:55:27.264874
-455	20	Approved	\N	\N	\N	Seeded assignment	2025-11-26 01:38:27.264874
-465	13	Requested	Beginner	6	Daily	Seeded request	\N
-538	7	Approved	Advanced	6	\N	Seeded request	\N
-158	3	Requested	Expert	\N	Weekly	Seeded request	2025-12-01 06:59:27.264874
-217	7	Approved	Beginner	4	\N	Seeded request	2025-11-22 17:10:27.264874
-733	18	Requested	Expert	8	Rarely	Seeded assignment	\N
-18	19	Requested	Beginner	\N	\N	Seeded assignment	\N
-498	4	Requested	Beginner	8	Monthly	Seeded assignment	2025-11-07 10:19:27.264874
-625	16	Approved	Beginner	10	Daily	Seeded request	\N
-33	5	Requested	\N	4	Monthly	Seeded request	\N
-202	9	Approved	\N	4	Monthly	Seeded assignment	\N
-767	10	Approved	Expert	\N	\N	Seeded assignment	2025-11-08 17:14:27.264874
-980	5	Approved	Advanced	\N	\N	Seeded request	2025-11-18 15:25:27.264874
-139	19	Requested	\N	\N	Rarely	Seeded request	\N
-57	13	Approved	Expert	\N	Weekly	Seeded assignment	2025-11-18 19:02:27.264874
-205	10	Requested	\N	4	Daily	Seeded request	\N
-589	22	Requested	Advanced	3	Daily	Seeded request	2025-11-30 11:50:27.264874
-641	10	Approved	Beginner	\N	Weekly	Seeded request	2025-11-15 18:51:27.264874
-780	6	Requested	Advanced	\N	\N	Seeded assignment	\N
-826	21	Approved	\N	3	Daily	Seeded assignment	2025-11-21 18:39:27.264874
-114	10	Approved	Beginner	\N	Weekly	Seeded request	2025-11-11 12:52:27.264874
-825	18	Requested	\N	7	Monthly	Seeded assignment	2025-11-16 08:51:27.264874
-185	17	Requested	Expert	5	\N	Seeded request	\N
-750	10	Requested	Intermediate	0	Monthly	Seeded request	2025-11-18 19:47:27.264874
-678	8	Approved	\N	\N	Daily	Seeded request	2025-11-16 07:20:27.264874
-100	3	Approved	\N	4	Weekly	Seeded assignment	2025-11-21 01:25:27.264874
-197	10	Approved	\N	7	Daily	Seeded assignment	2025-11-26 23:08:27.264874
-298	22	Approved	Beginner	\N	Rarely	Seeded assignment	2025-11-04 08:02:27.264874
-398	4	Approved	\N	3	Daily	Seeded assignment	\N
-604	17	Approved	Expert	1	\N	Seeded request	2025-11-12 18:08:27.264874
-97	17	Requested	Beginner	\N	\N	Seeded request	\N
-295	13	Approved	\N	\N	Daily	Seeded assignment	2025-11-05 10:00:27.264874
-11	13	Requested	\N	9	\N	Seeded assignment	2025-11-15 19:29:27.264874
-701	9	Approved	Expert	8	Monthly	Seeded assignment	\N
-961	17	Approved	Advanced	\N	Rarely	Seeded request	\N
-367	22	Approved	Beginner	\N	Monthly	Seeded assignment	2025-11-05 09:37:27.264874
-922	21	Requested	Advanced	\N	\N	Seeded assignment	\N
-675	10	Approved	Beginner	4	Monthly	Seeded assignment	\N
-265	18	Approved	Beginner	7	Monthly	Seeded request	\N
-506	21	Approved	\N	\N	Weekly	Seeded assignment	2025-11-27 19:06:27.264874
-557	24	Approved	\N	\N	Monthly	Seeded assignment	\N
-796	19	Approved	\N	0	\N	Seeded request	\N
-72	19	Requested	\N	\N	Rarely	Seeded assignment	\N
-414	11	Approved	Beginner	\N	\N	Seeded assignment	2025-11-09 23:21:27.264874
-709	10	Approved	Advanced	1	Rarely	Seeded assignment	\N
-336	21	Requested	Beginner	2	Daily	Seeded assignment	2025-11-29 05:17:27.264874
-119	20	Approved	\N	\N	\N	Seeded assignment	2025-11-12 10:39:27.264874
-493	4	Approved	\N	7	Weekly	Seeded assignment	\N
-386	21	Requested	\N	7	Weekly	Seeded request	\N
-890	6	Requested	Intermediate	8	Daily	Seeded assignment	\N
-307	11	Approved	Expert	4	\N	Seeded assignment	\N
-582	19	Approved	\N	9	Monthly	Seeded assignment	\N
-168	18	Requested	Expert	\N	Weekly	Seeded assignment	\N
-739	9	Approved	Beginner	7	Monthly	Seeded request	\N
-619	6	Requested	Beginner	1	\N	Seeded assignment	\N
-921	20	Requested	Advanced	10	Rarely	Seeded request	\N
-892	9	Approved	\N	\N	Daily	Seeded request	\N
-734	24	Approved	\N	\N	Monthly	Seeded request	\N
-508	13	Requested	Intermediate	\N	Daily	Seeded request	\N
-690	22	Requested	Expert	8	Daily	Seeded assignment	\N
-774	5	Approved	Beginner	\N	Daily	Seeded assignment	2025-11-11 05:40:27.264874
-363	10	Approved	Expert	10	Weekly	Seeded assignment	\N
-175	25	Requested	Advanced	4	Weekly	Seeded request	2025-11-15 17:39:27.264874
-587	17	Requested	\N	8	\N	Seeded assignment	2025-11-15 21:04:27.264874
-621	24	Approved	Beginner	\N	Rarely	Seeded assignment	2025-11-21 20:57:27.264874
-722	3	Approved	Expert	\N	Weekly	Seeded assignment	2025-11-18 23:44:27.264874
-476	23	Approved	Expert	\N	Daily	Seeded assignment	\N
-775	4	Approved	Expert	10	Weekly	Seeded assignment	2025-11-28 23:05:27.264874
-694	1	Approved	Advanced	\N	Rarely	Seeded assignment	\N
-100	4	Requested	\N	5	\N	Seeded assignment	2025-11-14 22:04:27.264874
-542	17	Requested	\N	1	Monthly	Seeded request	2025-11-28 22:40:27.264874
-685	17	Requested	\N	2	Rarely	Seeded assignment	\N
-807	18	Approved	\N	\N	Daily	Seeded assignment	\N
-264	11	Approved	\N	6	Rarely	Seeded assignment	\N
-58	8	Requested	Intermediate	6	Monthly	Seeded assignment	2025-11-04 14:21:27.264874
-567	24	Approved	\N	\N	Rarely	Seeded assignment	\N
-110	17	Requested	Advanced	\N	Monthly	Seeded assignment	2025-11-05 21:08:27.264874
-872	12	Requested	Beginner	9	Monthly	Seeded request	\N
-151	12	Approved	\N	\N	Weekly	Seeded assignment	\N
-95	10	Approved	\N	4	\N	Seeded request	2025-11-15 05:32:27.264874
-662	19	Approved	\N	\N	Monthly	Seeded request	2025-12-02 08:39:27.264874
-533	5	Approved	Intermediate	\N	Weekly	Seeded assignment	\N
-605	25	Requested	Beginner	2	Monthly	Seeded assignment	\N
-64	13	Approved	\N	\N	\N	Seeded assignment	\N
-119	12	Approved	\N	\N	Rarely	Seeded assignment	\N
-356	10	Requested	\N	\N	\N	Seeded assignment	\N
-659	7	Approved	Beginner	7	\N	Seeded assignment	\N
-623	10	Approved	Expert	8	Weekly	Seeded request	\N
-372	8	Approved	Expert	4	Monthly	Seeded assignment	\N
-496	11	Approved	Expert	10	Rarely	Seeded assignment	2025-11-22 21:36:27.264874
-65	9	Approved	\N	\N	Monthly	Seeded assignment	2025-11-22 04:44:27.264874
-234	13	Requested	Intermediate	0	\N	Seeded assignment	\N
-235	21	Approved	Advanced	\N	\N	Seeded assignment	2025-11-20 06:11:27.264874
-881	17	Approved	\N	\N	\N	Seeded assignment	\N
-145	5	Approved	\N	\N	\N	Seeded request	\N
-256	22	Requested	Intermediate	\N	Daily	Seeded request	2025-11-15 21:59:27.264874
-784	23	Approved	Beginner	6	Monthly	Seeded request	\N
-643	9	Approved	Beginner	3	\N	Seeded request	2025-11-23 22:02:27.264874
-82	20	Approved	\N	9	Weekly	Seeded request	\N
-931	3	Requested	Expert	10	\N	Seeded assignment	2025-11-20 16:46:27.264874
-22	8	Approved	Advanced	0	Daily	Seeded assignment	\N
-315	13	Approved	\N	1	\N	Seeded request	\N
-865	1	Approved	\N	8	Monthly	Seeded assignment	\N
-836	18	Requested	Intermediate	5	Daily	Seeded assignment	2025-11-27 00:31:27.264874
-722	4	Approved	Advanced	7	\N	Seeded request	2025-11-13 15:04:27.264874
-374	16	Approved	\N	\N	\N	Seeded assignment	\N
-55	16	Approved	\N	\N	\N	Seeded request	\N
-358	1	Requested	Advanced	7	Weekly	Seeded request	2025-11-07 23:33:27.264874
-707	10	Requested	\N	1	\N	Seeded request	\N
-654	3	Approved	\N	8	\N	Seeded assignment	2025-11-21 19:04:27.264874
-199	8	Requested	Advanced	0	Monthly	Seeded request	\N
-324	13	Requested	Beginner	7	Daily	Seeded request	\N
-170	16	Approved	Intermediate	\N	\N	Seeded assignment	2025-11-05 09:19:27.264874
-674	5	Approved	Beginner	\N	Weekly	Seeded assignment	\N
-271	21	Approved	Expert	3	\N	Seeded request	\N
-243	5	Approved	\N	4	\N	Seeded assignment	2025-11-12 06:21:27.264874
-988	25	Requested	\N	\N	Weekly	Seeded assignment	\N
-670	25	Approved	Expert	\N	\N	Seeded assignment	\N
-128	16	Approved	Intermediate	7	Rarely	Seeded request	\N
-493	3	Requested	Intermediate	\N	Rarely	Seeded assignment	\N
-612	23	Approved	Advanced	2	Daily	Seeded assignment	2025-11-14 13:43:27.264874
-60	8	Approved	Expert	1	\N	Seeded assignment	2025-11-14 00:46:27.264874
-24	22	Approved	Advanced	\N	\N	Seeded assignment	\N
-289	1	Approved	\N	\N	Rarely	Seeded assignment	2025-11-08 18:52:27.264874
-184	22	Requested	\N	5	Daily	Seeded request	2025-11-28 09:54:27.264874
-146	5	Requested	Intermediate	5	Rarely	Seeded assignment	2025-11-04 17:36:27.264874
-450	21	Requested	Expert	5	\N	Seeded assignment	\N
-855	10	Requested	\N	6	Rarely	Seeded assignment	\N
-192	21	Requested	\N	\N	Daily	Seeded assignment	2025-11-07 21:40:27.264874
-697	25	Approved	Beginner	\N	Rarely	Seeded request	\N
-353	16	Approved	Advanced	2	\N	Seeded assignment	\N
-28	17	Requested	\N	9	Rarely	Seeded request	2025-11-08 06:57:27.264874
-422	8	Approved	\N	10	Daily	Seeded assignment	\N
-327	8	Requested	\N	9	\N	Seeded assignment	\N
-850	12	Approved	Beginner	0	\N	Seeded assignment	2025-11-15 11:58:27.264874
-428	5	Approved	Beginner	9	Monthly	Seeded assignment	\N
-758	22	Requested	Beginner	\N	Daily	Seeded assignment	2025-11-08 22:52:27.264874
-905	8	Approved	Advanced	8	Daily	Seeded assignment	\N
-552	21	Requested	Advanced	0	Daily	Seeded assignment	2025-11-08 12:56:27.264874
-759	3	Approved	Intermediate	\N	Weekly	Seeded assignment	\N
-606	12	Requested	Expert	10	Weekly	Seeded assignment	\N
-688	24	Approved	\N	1	Daily	Seeded assignment	\N
-686	5	Approved	Intermediate	1	Weekly	Seeded request	2025-11-20 17:43:27.264874
-847	11	Requested	\N	1	Monthly	Seeded assignment	2025-11-13 18:39:27.264874
-245	8	Requested	Expert	\N	Rarely	Seeded request	\N
-747	7	Requested	Advanced	8	Weekly	Seeded request	2025-12-03 01:51:27.264874
-966	3	Requested	Beginner	3	Rarely	Seeded request	2025-11-27 19:22:27.264874
-718	9	Approved	\N	\N	Daily	Seeded assignment	2025-11-25 17:42:27.264874
-273	21	Approved	\N	9	Weekly	Seeded request	2025-11-21 13:23:27.264874
-398	3	Requested	\N	\N	Weekly	Seeded assignment	2025-11-29 12:43:27.264874
-311	6	Approved	Expert	\N	Monthly	Seeded request	\N
-910	19	Approved	Expert	3	\N	Seeded assignment	\N
-320	4	Approved	Expert	\N	Rarely	Seeded assignment	2025-11-18 22:58:27.264874
-296	11	Requested	Beginner	\N	Rarely	Seeded request	\N
-569	3	Requested	\N	2	\N	Seeded assignment	\N
-962	6	Requested	Expert	9	Monthly	Seeded request	\N
-806	22	Requested	\N	6	\N	Seeded request	\N
-426	4	Approved	Expert	2	Rarely	Seeded assignment	\N
-101	5	Requested	Expert	3	Weekly	Seeded assignment	\N
-501	10	Approved	Beginner	2	\N	Seeded assignment	\N
-841	16	Requested	Intermediate	2	Daily	Seeded assignment	\N
-148	23	Approved	\N	3	Monthly	Seeded assignment	2025-11-25 04:24:27.264874
-236	23	Requested	\N	\N	\N	Seeded assignment	\N
-304	22	Approved	Advanced	5	\N	Seeded assignment	\N
-854	23	Approved	Advanced	\N	\N	Seeded request	2025-11-14 14:08:27.264874
-259	8	Approved	Advanced	\N	\N	Seeded assignment	\N
-125	1	Requested	\N	8	Weekly	Seeded assignment	\N
-122	21	Approved	\N	9	Daily	Seeded assignment	2025-11-15 18:09:27.264874
-163	12	Requested	Intermediate	\N	\N	Seeded assignment	\N
-153	1	Requested	\N	7	\N	Seeded request	2025-11-16 08:17:27.264874
-341	24	Requested	Expert	\N	Daily	Seeded request	\N
-895	7	Requested	Beginner	10	Monthly	Seeded assignment	\N
-412	16	Requested	Expert	\N	\N	Seeded assignment	2025-11-22 06:38:27.264874
-523	20	Approved	Advanced	7	\N	Seeded assignment	\N
-533	12	Approved	\N	9	\N	Seeded request	\N
-190	23	Requested	Beginner	\N	\N	Seeded assignment	\N
-864	8	Approved	Expert	\N	\N	Seeded assignment	\N
-2	18	Approved	Beginner	\N	Rarely	Seeded assignment	\N
-486	13	Approved	\N	3	Weekly	Seeded assignment	\N
-205	24	Approved	\N	\N	\N	Seeded request	2025-11-24 09:28:27.264874
-957	19	Approved	Expert	8	\N	Seeded request	\N
-242	23	Approved	Intermediate	10	Monthly	Seeded request	2025-11-28 13:08:27.264874
-772	6	Approved	\N	8	\N	Seeded assignment	2025-11-29 19:07:27.264874
-20	13	Requested	Advanced	\N	Weekly	Seeded assignment	\N
-79	17	Approved	\N	3	Weekly	Seeded request	\N
-159	10	Approved	\N	6	\N	Seeded assignment	2025-11-19 08:46:27.264874
-397	13	Requested	\N	1	Daily	Seeded request	2025-11-30 13:13:27.264874
-872	5	Approved	\N	\N	Rarely	Seeded assignment	\N
-641	24	Requested	Beginner	9	Monthly	Seeded assignment	2025-11-08 13:38:27.264874
-548	6	Approved	Beginner	10	Rarely	Seeded request	2025-11-24 09:20:27.264874
-774	20	Approved	Beginner	\N	\N	Seeded assignment	\N
-21	9	Requested	\N	2	Weekly	Seeded request	\N
-627	4	Requested	Intermediate	9	Weekly	Seeded assignment	\N
-123	22	Approved	\N	\N	Weekly	Seeded assignment	\N
-186	12	Approved	\N	3	Monthly	Seeded assignment	2025-11-15 19:14:27.264874
-61	8	Approved	\N	\N	\N	Seeded assignment	2025-11-27 03:39:27.264874
-620	13	Approved	\N	4	Daily	Seeded assignment	\N
-313	21	Approved	Expert	8	Weekly	Seeded assignment	2025-11-16 09:42:27.264874
-28	21	Approved	Expert	0	Rarely	Seeded assignment	\N
-165	9	Approved	\N	\N	\N	Seeded assignment	2025-11-24 07:49:27.264874
-70	7	Requested	Intermediate	1	\N	Seeded request	2025-11-25 02:47:27.264874
-110	21	Approved	Advanced	1	Daily	Seeded assignment	\N
-81	10	Approved	Beginner	\N	Rarely	Seeded assignment	2025-11-06 23:41:27.264874
-277	4	Requested	Expert	\N	\N	Seeded assignment	2025-11-23 05:09:27.264874
-321	18	Approved	\N	0	Weekly	Seeded request	\N
-801	5	Approved	Intermediate	5	Weekly	Seeded assignment	\N
-978	7	Requested	Expert	7	Daily	Seeded request	\N
-385	10	Requested	Expert	2	\N	Seeded assignment	2025-11-18 01:45:27.264874
-441	10	Approved	Advanced	\N	Weekly	Seeded request	\N
-568	23	Approved	Expert	\N	Rarely	Seeded assignment	\N
-34	18	Requested	Expert	5	\N	Seeded assignment	\N
-675	24	Approved	\N	7	Rarely	Seeded request	2025-11-21 13:31:27.264874
-183	6	Approved	Advanced	7	Rarely	Seeded assignment	2025-11-05 22:53:27.264874
-29	17	Approved	Expert	6	Monthly	Seeded assignment	\N
-606	5	Approved	\N	\N	Daily	Seeded request	\N
-669	24	Approved	Advanced	\N	Monthly	Seeded request	2025-11-21 23:53:27.264874
-848	18	Approved	\N	0	\N	Seeded request	\N
-752	12	Requested	Advanced	4	\N	Seeded request	\N
-285	13	Requested	\N	\N	Monthly	Seeded request	\N
-684	18	Approved	Intermediate	1	\N	Seeded request	2025-11-05 01:11:27.264874
-420	6	Approved	\N	\N	Rarely	Seeded request	2025-11-19 09:13:27.264874
-575	9	Approved	\N	\N	\N	Seeded request	2025-11-09 06:57:27.264874
-633	20	Requested	Intermediate	\N	Monthly	Seeded assignment	\N
-511	25	Requested	\N	8	Monthly	Seeded request	2025-11-12 02:19:27.264874
-193	12	Approved	Advanced	\N	Daily	Seeded assignment	2025-11-28 07:55:27.264874
-919	4	Requested	Expert	\N	\N	Seeded request	\N
-607	17	Requested	\N	\N	\N	Seeded assignment	2025-11-23 15:44:27.264874
-621	10	Requested	\N	\N	\N	Seeded request	2025-11-25 21:30:27.264874
-550	13	Requested	\N	4	\N	Seeded request	\N
-499	3	Requested	Expert	\N	Weekly	Seeded request	\N
-734	10	Requested	Intermediate	\N	\N	Seeded request	\N
-387	17	Approved	\N	3	Rarely	Seeded assignment	\N
-46	4	Requested	\N	\N	\N	Seeded assignment	\N
-802	5	Approved	\N	7	\N	Seeded request	\N
-73	4	Requested	\N	\N	\N	Seeded assignment	\N
-977	9	Requested	\N	\N	Rarely	Seeded request	2025-11-03 15:34:27.264874
-708	24	Requested	Intermediate	\N	Rarely	Seeded request	\N
-624	11	Approved	\N	5	\N	Seeded request	2025-11-18 12:07:27.264874
-754	7	Requested	Beginner	4	Weekly	Seeded assignment	2025-11-27 15:05:27.264874
-250	18	Approved	Intermediate	\N	Rarely	Seeded request	\N
-483	21	Requested	Intermediate	3	\N	Seeded request	2025-11-09 15:04:27.264874
-812	20	Approved	\N	7	Rarely	Seeded request	2025-11-17 01:40:27.264874
-350	10	Approved	\N	6	\N	Seeded assignment	\N
-672	12	Requested	Expert	8	Daily	Seeded request	\N
-626	11	Approved	Advanced	\N	Daily	Seeded assignment	\N
-782	22	Requested	Intermediate	\N	\N	Seeded assignment	\N
-95	24	Approved	Advanced	6	Weekly	Seeded assignment	\N
-572	23	Requested	\N	6	\N	Seeded assignment	\N
-978	23	Requested	Beginner	\N	\N	Seeded assignment	\N
-650	7	Requested	Advanced	7	Weekly	Seeded assignment	\N
-583	7	Requested	Advanced	\N	\N	Seeded assignment	\N
-233	4	Requested	\N	9	Rarely	Seeded request	2025-11-22 04:11:27.264874
-140	9	Requested	Expert	\N	Daily	Seeded assignment	\N
-596	16	Approved	Expert	2	\N	Seeded request	\N
-911	6	Approved	Expert	\N	\N	Seeded request	2025-11-04 05:54:27.264874
-15	9	Approved	\N	6	\N	Seeded assignment	\N
-13	4	Approved	\N	0	Monthly	Seeded request	2025-11-06 06:18:27.264874
-204	24	Requested	\N	\N	\N	Seeded request	2025-11-05 06:58:27.264874
-91	4	Approved	Advanced	9	Weekly	Seeded request	2025-11-11 20:42:27.264874
-604	21	Approved	Beginner	3	\N	Seeded request	2025-11-30 10:52:27.264874
-369	17	Approved	Advanced	5	Monthly	Seeded request	\N
-507	16	Approved	\N	\N	\N	Seeded assignment	\N
-980	12	Requested	\N	\N	\N	Seeded assignment	2025-11-17 08:00:27.264874
-93	5	Requested	Expert	\N	Rarely	Seeded assignment	\N
-303	1	Approved	Beginner	5	\N	Seeded request	\N
-89	18	Requested	Expert	10	\N	Seeded assignment	2025-11-03 19:37:27.264874
-695	22	Requested	\N	7	Daily	Seeded assignment	2025-12-02 01:05:27.264874
-160	18	Approved	Expert	\N	\N	Seeded request	2025-11-16 19:48:27.264874
-961	21	Approved	\N	7	Daily	Seeded request	2025-11-22 08:41:27.264874
-146	20	Approved	Beginner	3	Monthly	Seeded request	\N
-351	17	Requested	Beginner	0	\N	Seeded assignment	\N
-972	8	Approved	Advanced	2	Daily	Seeded assignment	\N
-838	13	Approved	\N	\N	Weekly	Seeded request	\N
-509	25	Approved	Advanced	\N	Weekly	Seeded assignment	\N
-808	8	Approved	Expert	\N	Weekly	Seeded request	2025-11-22 13:02:27.264874
-785	5	Requested	\N	\N	Daily	Seeded assignment	2025-11-21 11:43:27.264874
-686	20	Requested	Intermediate	8	\N	Seeded request	\N
-302	17	Approved	\N	\N	\N	Seeded assignment	\N
-382	13	Approved	Expert	\N	Monthly	Seeded assignment	2025-11-10 20:43:27.264874
-41	25	Requested	Beginner	2	Daily	Seeded request	2025-11-25 19:57:27.264874
-331	8	Approved	\N	3	\N	Seeded request	\N
-751	24	Requested	Beginner	8	Weekly	Seeded request	2025-11-23 13:02:27.264874
-391	3	Approved	\N	3	\N	Seeded assignment	2025-11-28 20:08:27.264874
-840	25	Requested	Beginner	1	\N	Seeded assignment	2025-11-18 04:24:27.264874
-763	20	Approved	Beginner	10	Monthly	Seeded assignment	\N
-831	21	Requested	Intermediate	3	\N	Seeded assignment	\N
-320	3	Requested	Intermediate	10	Rarely	Seeded assignment	\N
-301	1	Requested	Expert	9	Daily	Seeded assignment	\N
-56	9	Requested	Expert	6	Weekly	Seeded request	2025-11-19 12:35:27.264874
-472	6	Requested	\N	\N	Daily	Seeded request	\N
-564	25	Approved	\N	1	Monthly	Seeded assignment	\N
-17	11	Approved	Expert	3	Daily	Seeded request	\N
-832	8	Approved	\N	\N	Weekly	Seeded assignment	2025-11-23 20:02:27.264874
-836	19	Requested	Advanced	0	\N	Seeded request	\N
-176	6	Requested	\N	2	\N	Seeded assignment	\N
-404	22	Requested	\N	5	Rarely	Seeded assignment	\N
-897	4	Approved	Beginner	\N	Monthly	Seeded assignment	2025-11-14 06:22:27.264874
-930	24	Requested	Advanced	\N	\N	Seeded request	2025-11-24 16:03:27.264874
-976	4	Approved	Expert	\N	\N	Seeded request	2025-12-01 01:38:27.264874
-137	13	Approved	Intermediate	\N	Monthly	Seeded request	2025-12-01 19:48:27.264874
-357	11	Approved	Expert	8	\N	Seeded assignment	\N
-958	11	Approved	Beginner	0	Rarely	Seeded assignment	2025-11-25 18:57:27.264874
-135	18	Approved	\N	2	\N	Seeded assignment	2025-12-01 22:44:27.264874
-105	23	Approved	Advanced	6	Rarely	Seeded assignment	\N
-854	7	Approved	Expert	3	\N	Seeded request	\N
-499	4	Approved	Advanced	10	Monthly	Seeded request	\N
-909	23	Approved	Advanced	5	Daily	Seeded request	2025-11-27 05:18:27.264874
-481	25	Requested	\N	4	Monthly	Seeded request	2025-11-04 15:43:27.264874
-361	3	Approved	Expert	8	\N	Seeded assignment	\N
-895	23	Requested	Beginner	0	\N	Seeded request	\N
-333	22	Approved	Advanced	\N	Weekly	Seeded assignment	2025-11-23 01:00:27.264874
-480	9	Approved	\N	6	\N	Seeded request	2025-11-13 22:22:27.264874
-342	7	Requested	Expert	\N	\N	Seeded assignment	2025-11-22 16:41:27.264874
-487	21	Requested	Intermediate	2	\N	Seeded request	\N
-919	3	Approved	\N	\N	\N	Seeded assignment	2025-11-20 06:19:27.264874
-293	16	Approved	Beginner	5	\N	Seeded request	\N
-129	24	Approved	Expert	\N	Monthly	Seeded request	\N
-534	10	Approved	Advanced	3	Monthly	Seeded request	\N
-16	7	Approved	Beginner	\N	Monthly	Seeded assignment	2025-11-22 09:40:27.264874
-383	8	Requested	\N	6	Daily	Seeded request	\N
-190	7	Approved	Beginner	\N	Rarely	Seeded request	\N
-837	16	Approved	Intermediate	\N	\N	Seeded assignment	\N
-839	12	Requested	Advanced	0	Weekly	Seeded request	\N
-852	19	Approved	\N	6	Weekly	Seeded request	\N
-332	3	Requested	\N	5	Rarely	Seeded request	2025-11-06 07:45:27.264874
-242	7	Requested	Expert	4	\N	Seeded request	2025-11-24 07:33:27.264874
-520	10	Approved	\N	\N	Monthly	Seeded assignment	\N
-977	1	Requested	\N	10	Weekly	Seeded request	2025-11-17 08:38:27.264874
-595	9	Approved	\N	8	Weekly	Seeded request	\N
-556	22	Approved	\N	9	\N	Seeded request	\N
-145	20	Requested	Beginner	8	Rarely	Seeded request	2025-11-26 20:21:27.264874
-292	13	Requested	Expert	7	Monthly	Seeded assignment	2025-11-16 21:50:27.264874
-644	11	Approved	Expert	\N	Monthly	Seeded assignment	2025-11-05 18:50:27.264874
-365	4	Approved	Expert	6	\N	Seeded assignment	\N
-462	16	Approved	\N	\N	Daily	Seeded assignment	2025-11-21 14:40:27.264874
-178	12	Approved	Advanced	9	Monthly	Seeded assignment	\N
-515	1	Approved	\N	\N	Monthly	Seeded assignment	2025-11-27 10:38:27.264874
-457	10	Approved	Beginner	3	Weekly	Seeded assignment	2025-11-21 03:31:27.264874
-453	8	Requested	\N	\N	Monthly	Seeded request	\N
-914	11	Requested	\N	1	\N	Seeded assignment	\N
-467	7	Approved	\N	\N	\N	Seeded request	2025-11-26 05:57:27.264874
-539	7	Approved	\N	\N	\N	Seeded request	\N
-413	9	Approved	Intermediate	8	\N	Seeded assignment	\N
-33	22	Approved	Expert	9	Monthly	Seeded assignment	\N
-629	9	Approved	Intermediate	\N	Monthly	Seeded assignment	\N
-45	10	Approved	Beginner	8	Daily	Seeded assignment	2025-12-01 10:34:27.264874
-195	8	Requested	\N	9	Weekly	Seeded assignment	\N
-815	16	Approved	\N	5	Monthly	Seeded assignment	\N
-35	21	Requested	\N	2	Rarely	Seeded assignment	\N
-198	9	Approved	\N	\N	Weekly	Seeded assignment	\N
-695	12	Requested	Beginner	\N	\N	Seeded request	\N
-52	5	Approved	Intermediate	\N	Monthly	Seeded assignment	\N
-143	3	Approved	\N	\N	Daily	Seeded assignment	\N
-721	23	Requested	\N	9	Daily	Seeded assignment	\N
-707	8	Approved	\N	\N	Daily	Seeded request	2025-11-08 11:43:27.264874
-366	5	Requested	Expert	1	Rarely	Seeded assignment	2025-11-11 01:28:27.264874
-468	11	Approved	Advanced	1	\N	Seeded request	\N
-575	11	Requested	\N	10	\N	Seeded request	\N
-325	1	Approved	Beginner	1	\N	Seeded request	\N
-17	1	Requested	Beginner	6	Monthly	Seeded assignment	\N
-199	10	Approved	Expert	\N	Daily	Seeded assignment	2025-12-01 22:22:27.264874
-787	21	Approved	Expert	\N	\N	Seeded assignment	\N
-944	21	Requested	\N	5	\N	Seeded assignment	2025-11-13 16:52:27.264874
-819	20	Approved	\N	\N	\N	Seeded assignment	\N
-321	3	Requested	Expert	\N	\N	Seeded assignment	\N
-400	20	Approved	Intermediate	7	Daily	Seeded request	\N
-893	20	Requested	Intermediate	3	\N	Seeded request	\N
-903	8	Requested	Intermediate	\N	\N	Seeded assignment	\N
-964	23	Approved	Advanced	9	Rarely	Seeded assignment	\N
-154	21	Requested	Expert	\N	Monthly	Seeded request	\N
-478	9	Requested	\N	9	Rarely	Seeded assignment	\N
-473	20	Approved	Beginner	10	Weekly	Seeded request	\N
-316	23	Approved	Expert	\N	Monthly	Seeded assignment	2025-11-14 08:43:27.264874
-823	9	Approved	\N	\N	Daily	Seeded assignment	\N
-191	4	Approved	Beginner	4	\N	Seeded request	2025-11-17 05:20:27.264874
-791	17	Approved	\N	3	\N	Seeded request	2025-11-22 22:16:27.264874
-816	1	Requested	Expert	4	\N	Seeded assignment	\N
-960	17	Approved	\N	\N	Weekly	Seeded request	\N
-417	6	Approved	\N	0	Rarely	Seeded assignment	\N
-554	4	Approved	Beginner	8	Weekly	Seeded assignment	2025-11-03 06:31:27.264874
-626	9	Approved	Advanced	\N	\N	Seeded request	\N
-222	25	Approved	Advanced	4	Rarely	Seeded request	2025-11-21 03:57:27.264874
-317	13	Requested	\N	1	Weekly	Seeded request	\N
-934	23	Approved	Advanced	\N	Rarely	Seeded assignment	2025-11-27 00:13:27.264874
-121	21	Approved	Beginner	\N	Rarely	Seeded assignment	2025-11-09 10:26:27.264874
-327	10	Approved	Advanced	\N	\N	Seeded assignment	\N
-78	19	Requested	Advanced	6	\N	Seeded assignment	2025-12-01 16:30:27.264874
-297	20	Requested	\N	\N	Monthly	Seeded assignment	2025-11-19 05:00:27.264874
-710	6	Requested	Intermediate	\N	\N	Seeded assignment	\N
-290	17	Requested	Intermediate	\N	Weekly	Seeded request	2025-11-22 19:48:27.264874
-723	11	Approved	\N	10	\N	Seeded assignment	\N
-824	21	Requested	Beginner	0	\N	Seeded assignment	2025-11-24 02:03:27.264874
-927	3	Approved	\N	8	Rarely	Seeded request	2025-11-04 16:50:27.264874
-319	5	Approved	\N	8	Weekly	Seeded assignment	\N
-528	25	Approved	\N	\N	Rarely	Seeded assignment	2025-11-11 16:44:27.264874
-215	13	Requested	\N	1	Monthly	Seeded assignment	\N
-499	18	Requested	Intermediate	8	Rarely	Seeded assignment	\N
-394	7	Approved	Intermediate	\N	Daily	Seeded request	\N
-727	20	Approved	\N	3	Monthly	Seeded request	\N
-376	11	Approved	Expert	\N	\N	Seeded request	2025-11-25 10:46:27.264874
-705	20	Approved	\N	\N	Rarely	Seeded assignment	\N
-383	24	Requested	Advanced	7	Rarely	Seeded request	2025-11-19 21:46:27.264874
-633	22	Requested	Expert	\N	\N	Seeded request	2025-11-26 14:23:27.264874
-793	17	Approved	Advanced	\N	\N	Seeded assignment	2025-11-16 01:49:27.264874
-333	12	Requested	Advanced	\N	\N	Seeded assignment	\N
-677	10	Approved	Expert	0	\N	Seeded assignment	\N
-618	17	Approved	Advanced	\N	\N	Seeded assignment	\N
-553	6	Approved	Beginner	\N	Daily	Seeded request	\N
-523	22	Approved	Intermediate	8	Daily	Seeded request	2025-11-12 16:19:27.264874
-885	20	Requested	Intermediate	4	Daily	Seeded assignment	\N
-87	21	Requested	Expert	9	Rarely	Seeded request	2025-11-15 00:16:27.264874
-714	22	Approved	Intermediate	7	Weekly	Seeded request	2025-11-09 16:21:27.264874
-730	18	Approved	\N	0	Daily	Seeded assignment	\N
-123	20	Requested	\N	0	Weekly	Seeded request	\N
-753	24	Approved	Advanced	7	Monthly	Seeded assignment	\N
-95	8	Approved	\N	\N	\N	Seeded request	\N
-479	16	Approved	\N	0	\N	Seeded assignment	2025-11-13 00:21:27.264874
-252	1	Approved	Expert	\N	Monthly	Seeded assignment	\N
-356	8	Requested	Expert	\N	Monthly	Seeded request	\N
-178	22	Requested	Intermediate	3	Weekly	Seeded assignment	2025-11-10 19:09:27.264874
-298	5	Approved	Intermediate	0	Weekly	Seeded request	\N
-442	16	Requested	Intermediate	\N	Monthly	Seeded request	2025-11-29 14:43:27.264874
-547	12	Requested	Advanced	\N	Monthly	Seeded request	\N
-670	6	Approved	\N	\N	\N	Seeded assignment	\N
-581	13	Approved	Beginner	\N	\N	Seeded assignment	\N
-560	6	Approved	\N	4	Weekly	Seeded request	\N
-454	8	Approved	\N	1	\N	Seeded assignment	\N
-983	5	Approved	Intermediate	3	\N	Seeded assignment	\N
-224	23	Approved	Intermediate	\N	\N	Seeded assignment	\N
-489	1	Requested	\N	6	Weekly	Seeded request	\N
-735	23	Approved	Beginner	7	Weekly	Seeded request	2025-11-26 16:24:27.264874
-751	8	Requested	Beginner	\N	Rarely	Seeded assignment	\N
-42	7	Approved	Advanced	\N	Monthly	Seeded assignment	\N
-798	24	Approved	Intermediate	\N	Rarely	Seeded request	2025-11-17 12:30:27.264874
-301	11	Requested	\N	1	Daily	Seeded request	2025-11-05 13:33:27.264874
-870	7	Requested	Intermediate	\N	Monthly	Seeded assignment	2025-11-23 18:12:27.264874
-43	21	Requested	Beginner	8	Daily	Seeded request	\N
-403	19	Approved	Beginner	8	\N	Seeded assignment	\N
-102	3	Approved	\N	7	\N	Seeded request	\N
-304	20	Approved	\N	\N	\N	Seeded assignment	\N
-226	18	Requested	Advanced	10	\N	Seeded assignment	2025-11-18 07:04:27.264874
-519	13	Approved	Advanced	\N	\N	Seeded request	2025-11-16 01:26:27.264874
-482	21	Approved	\N	5	Daily	Seeded assignment	\N
-244	19	Requested	Advanced	4	Daily	Seeded request	\N
-31	16	Requested	Advanced	6	Monthly	Seeded assignment	2025-11-04 16:20:27.264874
-640	4	Requested	Advanced	\N	\N	Seeded request	\N
-160	4	Approved	Intermediate	5	Rarely	Seeded request	\N
-239	16	Approved	\N	9	\N	Seeded assignment	\N
-352	23	Approved	Intermediate	\N	Rarely	Seeded assignment	\N
-104	22	Requested	Expert	\N	\N	Seeded assignment	\N
-529	7	Approved	Beginner	\N	\N	Seeded request	2025-11-07 11:09:27.264874
-163	22	Approved	Expert	8	\N	Seeded assignment	2025-11-04 14:42:27.264874
-96	19	Requested	Advanced	\N	Monthly	Seeded request	\N
-12	16	Requested	Advanced	\N	\N	Seeded assignment	\N
-39	3	Requested	\N	\N	Daily	Seeded request	2025-11-26 13:35:27.264874
-7	21	Requested	\N	5	Weekly	Seeded assignment	2025-11-25 18:28:27.264874
-861	9	Approved	\N	6	Daily	Seeded request	\N
-103	17	Approved	Expert	\N	Daily	Seeded assignment	2025-11-20 19:01:27.264874
-128	13	Requested	Advanced	7	\N	Seeded assignment	2025-11-06 00:52:27.264874
-407	10	Approved	Intermediate	3	Weekly	Seeded request	\N
-578	20	Requested	Beginner	\N	Weekly	Seeded assignment	2025-11-25 05:39:27.264874
-945	25	Requested	Expert	3	\N	Seeded assignment	\N
-514	6	Approved	Expert	10	\N	Seeded assignment	2025-11-08 05:33:27.264874
-556	20	Approved	\N	\N	Monthly	Seeded assignment	2025-12-01 20:33:27.264874
-956	22	Approved	\N	9	Weekly	Seeded assignment	\N
-958	9	Approved	\N	0	Weekly	Seeded assignment	\N
-191	3	Approved	Intermediate	\N	\N	Seeded request	\N
-810	17	Requested	\N	6	\N	Seeded request	\N
-586	7	Approved	Beginner	6	Rarely	Seeded request	\N
-171	17	Requested	Advanced	9	Monthly	Seeded assignment	\N
-59	23	Approved	Beginner	\N	Monthly	Seeded request	2025-11-16 11:28:27.264874
-725	13	Approved	\N	3	Weekly	Seeded request	2025-11-15 17:40:27.264874
-404	20	Requested	Advanced	\N	Weekly	Seeded request	\N
-975	25	Requested	Advanced	\N	Monthly	Seeded assignment	2025-11-23 21:48:27.264874
-223	21	Requested	Advanced	\N	\N	Seeded assignment	\N
-502	23	Approved	\N	0	Rarely	Seeded request	2025-12-02 09:00:27.264874
-34	4	Approved	\N	\N	\N	Seeded request	\N
-182	18	Approved	Intermediate	\N	Monthly	Seeded assignment	\N
-735	7	Approved	\N	8	Daily	Seeded assignment	\N
-949	4	Requested	\N	0	Rarely	Seeded assignment	\N
-636	11	Requested	Advanced	0	\N	Seeded assignment	\N
-668	25	Requested	Expert	2	Rarely	Seeded assignment	\N
-139	4	Approved	\N	9	\N	Seeded request	2025-11-15 22:45:27.264874
-75	25	Approved	Intermediate	\N	Daily	Seeded assignment	\N
-868	18	Requested	Advanced	4	Monthly	Seeded assignment	\N
-947	7	Requested	Beginner	\N	Weekly	Seeded request	\N
-918	16	Approved	\N	\N	\N	Seeded request	\N
-624	1	Approved	\N	\N	Weekly	Seeded assignment	2025-11-22 06:07:27.264874
-965	18	Requested	Intermediate	9	Weekly	Seeded assignment	2025-11-10 09:50:27.264874
-353	13	Approved	Intermediate	\N	\N	Seeded request	\N
-118	21	Requested	Beginner	9	\N	Seeded assignment	\N
-662	3	Approved	Expert	0	Weekly	Seeded assignment	2025-11-25 00:45:27.264874
-533	22	Approved	\N	0	Monthly	Seeded assignment	\N
-561	25	Approved	Intermediate	6	\N	Seeded assignment	\N
-94	6	Approved	\N	2	\N	Seeded assignment	\N
-699	6	Requested	Advanced	6	\N	Seeded request	2025-11-28 09:31:27.264874
-800	20	Approved	\N	10	Weekly	Seeded assignment	2025-11-27 12:36:27.264874
-371	10	Requested	Expert	9	Weekly	Seeded request	\N
-498	19	Approved	\N	7	Rarely	Seeded request	\N
-816	9	Approved	Expert	7	\N	Seeded assignment	2025-11-27 02:50:27.264874
-333	20	Approved	\N	7	\N	Seeded request	2025-11-03 17:10:27.264874
-640	3	Requested	Expert	0	Rarely	Seeded assignment	\N
-184	5	Requested	Advanced	9	\N	Seeded request	\N
-341	8	Approved	Beginner	\N	Weekly	Seeded request	\N
-146	22	Approved	\N	9	\N	Seeded request	2025-11-19 19:53:27.264874
-796	4	Requested	Intermediate	0	Monthly	Seeded request	\N
-53	17	Requested	Beginner	\N	\N	Seeded assignment	\N
-2	4	Approved	\N	\N	Weekly	Seeded assignment	\N
-377	5	Requested	\N	\N	Daily	Seeded request	\N
-544	25	Approved	\N	10	\N	Seeded request	\N
-326	13	Requested	Intermediate	9	Rarely	Seeded request	\N
-175	6	Requested	Beginner	6	\N	Seeded request	2025-11-08 02:26:27.264874
-380	10	Approved	Intermediate	8	\N	Seeded assignment	2025-11-14 06:02:27.264874
-259	24	Approved	\N	\N	\N	Seeded request	2025-11-29 09:37:27.264874
-427	5	Approved	Advanced	\N	\N	Seeded assignment	2025-11-27 15:02:27.264874
-721	7	Approved	\N	\N	Rarely	Seeded assignment	\N
-297	12	Approved	\N	\N	\N	Seeded assignment	2025-12-01 14:46:27.264874
-676	8	Approved	\N	\N	Monthly	Seeded assignment	2025-11-15 06:40:27.264874
-10	22	Requested	Beginner	0	Weekly	Seeded assignment	\N
-138	10	Approved	Expert	7	\N	Seeded request	\N
-686	22	Requested	\N	8	Rarely	Seeded assignment	\N
-637	5	Approved	\N	\N	Monthly	Seeded request	\N
-966	19	Requested	Intermediate	9	Daily	Seeded request	\N
-287	20	Requested	Intermediate	\N	Weekly	Seeded assignment	\N
-463	23	Approved	Beginner	4	Daily	Seeded assignment	\N
-775	19	Approved	Intermediate	\N	\N	Seeded assignment	\N
-430	7	Approved	Beginner	2	Rarely	Seeded request	2025-11-15 09:05:27.264874
-562	25	Approved	Advanced	10	Daily	Seeded request	2025-11-28 11:47:27.264874
-172	13	Requested	Beginner	5	Daily	Seeded assignment	2025-11-24 08:11:27.264874
-206	25	Requested	Beginner	\N	\N	Seeded assignment	\N
-194	7	Approved	Beginner	\N	Rarely	Seeded assignment	2025-11-10 18:34:27.264874
-400	12	Approved	Beginner	\N	Weekly	Seeded request	2025-11-05 13:33:27.264874
-610	20	Requested	Beginner	2	Weekly	Seeded assignment	2025-11-14 21:45:27.264874
-689	12	Approved	Expert	\N	Rarely	Seeded assignment	\N
-893	12	Requested	\N	10	Daily	Seeded assignment	\N
-654	19	Requested	\N	1	Weekly	Seeded request	2025-11-14 04:20:27.264874
-736	5	Approved	\N	7	\N	Seeded assignment	\N
-817	3	Requested	Beginner	\N	\N	Seeded request	\N
-576	19	Requested	\N	1	Rarely	Seeded request	\N
-207	23	Approved	Expert	9	Monthly	Seeded assignment	2025-11-08 17:55:27.264874
-312	6	Approved	Expert	2	Monthly	Seeded request	\N
-933	21	Requested	Advanced	5	Monthly	Seeded request	2025-11-11 08:32:27.264874
-389	8	Approved	\N	\N	Daily	Seeded assignment	\N
-674	22	Requested	\N	\N	\N	Seeded assignment	2025-11-20 03:25:27.264874
-131	9	Approved	\N	\N	\N	Seeded assignment	\N
-394	23	Approved	\N	1	Daily	Seeded request	2025-11-26 22:17:27.264874
-853	22	Requested	Beginner	\N	Rarely	Seeded assignment	\N
-843	16	Requested	Intermediate	8	\N	Seeded request	\N
-107	19	Approved	\N	\N	\N	Seeded assignment	\N
-679	19	Approved	\N	4	Rarely	Seeded request	\N
-423	24	Approved	Expert	\N	Daily	Seeded assignment	\N
-489	9	Approved	\N	2	Weekly	Seeded request	2025-11-04 14:50:27.264874
-702	8	Requested	\N	6	Monthly	Seeded assignment	\N
-777	4	Approved	Expert	7	Rarely	Seeded assignment	2025-11-25 10:32:27.264874
-133	13	Approved	Expert	\N	\N	Seeded assignment	2025-11-23 18:06:27.264874
-582	4	Requested	Advanced	3	Weekly	Seeded assignment	2025-11-04 01:04:27.264874
-32	5	Requested	\N	7	\N	Seeded assignment	2025-11-06 14:28:27.264874
-279	13	Requested	Intermediate	0	Monthly	Seeded assignment	2025-11-20 01:47:27.264874
-197	8	Requested	Intermediate	\N	Monthly	Seeded request	2025-11-11 11:04:27.264874
-234	16	Approved	Advanced	5	\N	Seeded request	\N
-737	20	Approved	Expert	7	Weekly	Seeded assignment	\N
-323	10	Approved	Beginner	\N	\N	Seeded request	\N
-813	12	Requested	Intermediate	2	Rarely	Seeded assignment	2025-11-13 15:38:27.264874
-678	10	Approved	Intermediate	10	\N	Seeded assignment	2025-11-08 15:10:27.264874
-779	3	Requested	Expert	\N	Rarely	Seeded request	2025-11-24 22:27:27.264874
-370	23	Requested	Intermediate	6	\N	Seeded assignment	\N
-671	24	Approved	\N	\N	Daily	Seeded request	\N
-631	13	Approved	\N	\N	Monthly	Seeded request	\N
-270	22	Approved	\N	\N	Monthly	Seeded assignment	\N
-244	18	Approved	\N	6	Monthly	Seeded assignment	2025-12-02 17:20:27.264874
-226	19	Approved	\N	6	Rarely	Seeded request	\N
-580	6	Approved	Intermediate	3	\N	Seeded assignment	2025-11-17 07:02:27.264874
-687	13	Requested	Beginner	7	Monthly	Seeded assignment	\N
-265	3	Approved	Expert	6	Rarely	Seeded request	2025-11-08 22:51:27.264874
-91	19	Approved	Intermediate	10	Rarely	Seeded request	2025-11-26 08:19:27.264874
-253	22	Approved	Intermediate	4	\N	Seeded assignment	\N
-13	19	Requested	Intermediate	3	Rarely	Seeded request	2025-11-14 21:07:27.264874
-151	22	Approved	Beginner	1	Daily	Seeded assignment	\N
-564	6	Requested	Beginner	\N	Monthly	Seeded request	\N
-693	23	Requested	Beginner	10	Daily	Seeded request	\N
-509	6	Approved	\N	5	\N	Seeded assignment	\N
-485	19	Approved	Expert	\N	Daily	Seeded assignment	2025-11-04 20:50:27.264874
-83	13	Approved	Intermediate	5	Rarely	Seeded request	\N
-946	5	Requested	Expert	2	Daily	Seeded request	\N
-112	20	Approved	Intermediate	4	Daily	Seeded request	2025-11-22 02:25:27.264874
-147	25	Approved	Intermediate	2	\N	Seeded assignment	2025-12-03 04:16:27.264874
-260	17	Requested	Intermediate	\N	Daily	Seeded request	2025-11-22 09:53:27.264874
-579	5	Approved	Beginner	\N	\N	Seeded assignment	\N
-534	8	Requested	\N	6	\N	Seeded assignment	2025-11-23 06:03:27.264874
-497	16	Requested	\N	7	Daily	Seeded assignment	\N
-541	9	Approved	\N	\N	\N	Seeded request	\N
-569	19	Requested	Expert	\N	Monthly	Seeded request	\N
-603	11	Approved	Expert	9	\N	Seeded assignment	\N
-688	8	Requested	Beginner	\N	Weekly	Seeded assignment	2025-11-13 17:22:27.264874
-120	4	Requested	Intermediate	8	\N	Seeded assignment	2025-12-02 13:36:27.264874
-730	19	Requested	Expert	2	Rarely	Seeded assignment	\N
-857	21	Approved	Expert	3	Weekly	Seeded assignment	2025-11-14 09:08:27.264874
-307	9	Requested	\N	0	Rarely	Seeded assignment	2025-11-09 14:36:27.264874
-550	16	Requested	Beginner	2	\N	Seeded request	2025-11-05 05:08:27.264874
-970	5	Approved	Beginner	2	Daily	Seeded request	\N
-379	3	Requested	\N	1	Rarely	Seeded request	\N
-422	24	Requested	\N	5	Monthly	Seeded assignment	\N
-453	10	Approved	Beginner	9	\N	Seeded assignment	2025-11-29 02:27:27.264874
-692	11	Requested	\N	1	\N	Seeded assignment	\N
-933	17	Approved	Expert	\N	Weekly	Seeded request	2025-11-04 01:26:27.264874
-803	11	Requested	\N	\N	\N	Seeded assignment	\N
-268	4	Approved	\N	\N	\N	Seeded assignment	2025-11-12 12:43:27.264874
-765	3	Approved	\N	\N	Rarely	Seeded assignment	\N
-328	17	Approved	Expert	\N	\N	Seeded request	\N
-525	21	Requested	Beginner	0	\N	Seeded request	\N
-794	6	Requested	\N	\N	Monthly	Seeded assignment	\N
-461	19	Approved	Intermediate	\N	Monthly	Seeded assignment	2025-11-26 09:05:27.264874
-499	19	Requested	\N	10	Rarely	Seeded assignment	\N
-753	10	Approved	Advanced	\N	Daily	Seeded request	\N
-264	1	Approved	\N	\N	Daily	Seeded assignment	2025-11-09 08:58:27.264874
-810	21	Approved	Intermediate	8	Rarely	Seeded request	2025-12-02 01:29:27.264874
-366	20	Requested	Beginner	2	Daily	Seeded assignment	2025-11-12 12:29:27.264874
-939	23	Approved	\N	0	\N	Seeded request	2025-11-10 13:17:27.264874
-263	17	Approved	Beginner	8	\N	Seeded assignment	\N
-78	18	Approved	Expert	\N	Rarely	Seeded request	\N
-1	24	Approved	Expert	\N	Weekly	Seeded assignment	2025-11-18 14:10:27.264874
-589	20	Requested	Expert	\N	\N	Seeded assignment	2025-11-29 18:07:27.264874
-802	22	Requested	Advanced	\N	Monthly	Seeded request	\N
-238	3	Approved	Expert	10	Monthly	Seeded assignment	2025-11-06 15:52:27.264874
-180	23	Approved	\N	1	Rarely	Seeded assignment	\N
-164	18	Approved	Advanced	0	Monthly	Seeded assignment	2025-11-26 18:40:27.264874
-7	17	Approved	Beginner	5	Monthly	Seeded request	2025-11-25 07:19:27.264874
-704	18	Approved	Expert	6	Rarely	Seeded assignment	\N
-871	23	Approved	Advanced	\N	Weekly	Seeded assignment	2025-11-13 12:29:27.264874
-836	4	Approved	Expert	\N	Daily	Seeded assignment	\N
-329	23	Approved	Beginner	1	Weekly	Seeded assignment	\N
-346	13	Approved	Intermediate	1	Daily	Seeded request	\N
-893	5	Approved	Expert	1	Rarely	Seeded assignment	2025-11-25 09:37:27.264874
-858	21	Approved	\N	4	\N	Seeded request	2025-11-15 18:54:27.264874
-912	24	Requested	\N	\N	\N	Seeded assignment	\N
-972	10	Approved	Intermediate	6	Weekly	Seeded request	2025-11-05 21:11:27.264874
-715	6	Approved	Advanced	3	Rarely	Seeded assignment	\N
-22	24	Approved	\N	9	Rarely	Seeded assignment	\N
-875	12	Approved	\N	9	Rarely	Seeded request	2025-11-24 02:47:27.264874
-297	5	Approved	\N	0	Rarely	Seeded request	2025-11-12 09:09:27.264874
-490	10	Approved	Expert	10	Monthly	Seeded assignment	\N
-808	10	Approved	Advanced	2	\N	Seeded assignment	2025-11-08 14:55:27.264874
-416	12	Approved	\N	\N	Monthly	Seeded request	\N
-532	19	Approved	\N	\N	Weekly	Seeded assignment	\N
-435	20	Requested	\N	\N	\N	Seeded request	\N
-781	5	Requested	Intermediate	8	Monthly	Seeded assignment	2025-11-04 15:53:27.264874
-227	21	Requested	\N	2	\N	Seeded assignment	\N
-266	11	Requested	Expert	\N	\N	Seeded assignment	\N
-460	8	Approved	Intermediate	6	Weekly	Seeded assignment	\N
-319	20	Approved	Beginner	4	\N	Seeded request	\N
-272	17	Approved	Beginner	\N	Monthly	Seeded request	\N
-427	12	Requested	Intermediate	\N	\N	Seeded assignment	2025-11-07 02:44:27.264874
-600	20	Approved	Advanced	\N	\N	Seeded assignment	\N
-904	21	Approved	Advanced	\N	Daily	Seeded request	2025-11-27 03:15:27.264874
-223	17	Approved	\N	\N	Weekly	Seeded request	\N
-411	10	Requested	Expert	\N	Monthly	Seeded assignment	2025-12-02 08:40:27.264874
-439	7	Approved	Intermediate	6	Monthly	Seeded request	\N
-521	6	Approved	\N	0	\N	Seeded assignment	2025-11-05 18:20:27.264874
-231	17	Approved	\N	\N	\N	Seeded assignment	\N
-158	18	Requested	\N	\N	Monthly	Seeded assignment	2025-11-07 13:55:27.264874
-733	3	Requested	Intermediate	0	Rarely	Seeded assignment	\N
-682	24	Requested	Expert	10	Monthly	Seeded assignment	\N
-388	25	Requested	Beginner	4	\N	Seeded assignment	\N
-455	22	Approved	Expert	3	\N	Seeded assignment	\N
-274	13	Requested	\N	\N	Daily	Seeded request	\N
-557	8	Requested	Beginner	9	Rarely	Seeded assignment	2025-11-26 20:48:27.264874
-349	23	Approved	Beginner	\N	\N	Seeded assignment	2025-11-15 08:46:27.264874
-184	20	Approved	\N	3	Daily	Seeded request	\N
-441	8	Approved	Expert	1	\N	Seeded request	2025-11-21 06:16:27.264874
-543	13	Approved	\N	\N	Weekly	Seeded request	\N
-645	17	Approved	\N	6	Monthly	Seeded request	2025-11-14 16:41:27.264874
-107	18	Approved	Beginner	3	\N	Seeded assignment	2025-11-16 01:23:27.264874
-293	13	Requested	\N	\N	\N	Seeded request	2025-11-09 10:36:27.264874
-973	6	Requested	Advanced	3	Daily	Seeded request	2025-11-16 06:39:27.264874
-180	7	Approved	\N	\N	Weekly	Seeded request	\N
-230	22	Approved	\N	7	Rarely	Seeded assignment	\N
-745	16	Requested	\N	\N	Monthly	Seeded assignment	\N
-435	12	Requested	\N	\N	Weekly	Seeded request	\N
-667	1	Requested	\N	1	\N	Seeded assignment	2025-11-23 23:17:27.264874
-391	19	Approved	Beginner	9	\N	Seeded request	\N
-416	20	Approved	Advanced	\N	\N	Seeded assignment	2025-11-05 09:51:27.264874
-758	20	Approved	\N	\N	Weekly	Seeded assignment	\N
-414	1	Approved	\N	2	\N	Seeded assignment	\N
-654	18	Requested	Expert	\N	\N	Seeded request	2025-11-20 13:33:27.264874
-772	25	Approved	\N	5	Monthly	Seeded request	2025-11-04 07:18:27.264874
-822	11	Approved	Intermediate	0	\N	Seeded request	2025-11-22 16:10:27.264874
-137	16	Requested	\N	5	Daily	Seeded request	\N
-871	7	Requested	Advanced	4	\N	Seeded assignment	2025-12-01 15:38:27.264874
-637	20	Requested	Advanced	\N	\N	Seeded request	\N
-610	5	Requested	Advanced	0	\N	Seeded assignment	\N
-621	8	Approved	Advanced	1	\N	Seeded assignment	\N
-726	24	Approved	Advanced	\N	Daily	Seeded assignment	2025-11-16 15:02:27.264874
-782	5	Requested	Intermediate	\N	\N	Seeded assignment	2025-11-29 16:01:27.264874
-789	13	Requested	Advanced	\N	Daily	Seeded assignment	\N
-371	24	Approved	\N	8	\N	Seeded assignment	\N
-292	16	Approved	Expert	8	Monthly	Seeded request	\N
-719	13	Requested	Expert	7	\N	Seeded assignment	\N
-627	19	Requested	Intermediate	10	\N	Seeded request	\N
-913	12	Approved	Expert	0	\N	Seeded assignment	2025-11-30 10:06:27.264874
-157	10	Approved	Expert	10	Monthly	Seeded request	2025-11-23 21:05:27.264874
-149	1	Approved	Advanced	4	Weekly	Seeded request	\N
-849	6	Requested	\N	6	\N	Seeded assignment	\N
-863	11	Approved	Expert	\N	Daily	Seeded request	2025-11-18 06:26:27.264874
-275	24	Requested	\N	4	Daily	Seeded request	2025-11-16 13:21:27.264874
-967	7	Approved	\N	\N	Rarely	Seeded request	2025-11-10 06:28:27.264874
-953	25	Approved	\N	1	Weekly	Seeded request	\N
-837	13	Requested	\N	7	\N	Seeded request	\N
-957	4	Requested	Expert	5	\N	Seeded request	\N
-541	1	Approved	\N	1	\N	Seeded request	2025-11-20 22:15:27.264874
-695	5	Approved	Intermediate	5	Monthly	Seeded request	\N
-144	25	Approved	Advanced	2	Monthly	Seeded assignment	2025-11-29 09:58:27.264874
-963	25	Approved	\N	7	\N	Seeded assignment	\N
-216	20	Requested	\N	1	Monthly	Seeded assignment	\N
-693	7	Requested	Advanced	7	\N	Seeded request	2025-11-28 15:24:27.264874
-965	19	Approved	\N	2	\N	Seeded assignment	\N
-213	22	Approved	Advanced	4	\N	Seeded assignment	2025-11-10 09:36:27.264874
-347	24	Approved	Intermediate	\N	\N	Seeded assignment	2025-11-04 13:17:27.264874
-983	12	Approved	\N	1	Rarely	Seeded request	\N
-573	10	Requested	\N	0	Weekly	Seeded request	2025-11-10 19:52:27.264874
-355	19	Approved	\N	10	\N	Seeded request	2025-11-18 03:49:27.264874
-298	12	Requested	\N	4	Weekly	Seeded assignment	2025-11-27 02:44:27.264874
-942	16	Requested	\N	\N	Weekly	Seeded assignment	\N
-877	7	Requested	Advanced	3	\N	Seeded assignment	\N
-402	24	Requested	Expert	1	Daily	Seeded request	\N
-392	18	Approved	Expert	1	Rarely	Seeded assignment	2025-11-22 22:44:27.264874
-836	3	Approved	\N	0	\N	Seeded assignment	\N
-290	21	Approved	\N	\N	Rarely	Seeded request	2025-11-21 05:43:27.264874
-824	17	Approved	Expert	\N	Weekly	Seeded assignment	\N
-950	23	Approved	\N	10	Daily	Seeded request	\N
-323	24	Requested	Beginner	\N	Weekly	Seeded assignment	\N
-373	22	Approved	\N	\N	Monthly	Seeded assignment	\N
-159	8	Approved	\N	0	Monthly	Seeded request	\N
-238	4	Approved	Intermediate	4	\N	Seeded assignment	\N
-456	20	Requested	\N	\N	Rarely	Seeded assignment	\N
-420	25	Approved	\N	\N	Rarely	Seeded request	\N
-46	19	Requested	Expert	10	\N	Seeded assignment	2025-11-23 05:26:27.264874
-902	17	Approved	\N	7	Daily	Seeded assignment	\N
-791	21	Approved	Intermediate	4	Weekly	Seeded assignment	\N
-901	10	Approved	Advanced	0	Weekly	Seeded assignment	2025-11-21 12:46:27.264874
-196	1	Approved	Advanced	2	Monthly	Seeded assignment	2025-11-11 07:49:27.264874
-333	5	Approved	Advanced	3	Rarely	Seeded request	\N
-268	3	Approved	\N	\N	\N	Seeded assignment	2025-12-03 02:59:27.264874
-549	3	Requested	Expert	4	Daily	Seeded assignment	2025-11-11 00:27:27.264874
-121	17	Requested	Intermediate	3	Weekly	Seeded request	\N
-152	6	Approved	\N	9	\N	Seeded assignment	\N
-480	8	Approved	Expert	3	Daily	Seeded request	2025-12-01 09:05:27.264874
-203	5	Requested	Advanced	5	Rarely	Seeded request	\N
-738	21	Approved	Intermediate	\N	Monthly	Seeded request	\N
-475	6	Approved	Expert	9	Rarely	Seeded assignment	\N
-719	6	Requested	Beginner	3	Monthly	Seeded assignment	2025-11-27 07:23:27.264874
-168	17	Approved	\N	3	\N	Seeded assignment	\N
-462	6	Requested	Advanced	\N	Daily	Seeded request	\N
-783	3	Requested	Intermediate	0	\N	Seeded request	2025-11-29 09:16:27.264874
-5	6	Approved	Beginner	5	\N	Seeded assignment	\N
-51	5	Requested	\N	7	Daily	Seeded request	2025-11-18 09:41:27.264874
-449	10	Requested	Expert	6	Daily	Seeded assignment	2025-11-28 09:03:27.264874
-709	11	Requested	Intermediate	\N	\N	Seeded request	\N
-314	8	Approved	\N	\N	Daily	Seeded request	\N
-166	16	Approved	Advanced	9	Monthly	Seeded assignment	\N
-597	4	Approved	\N	\N	Rarely	Seeded assignment	\N
-717	12	Requested	Expert	\N	Monthly	Seeded request	2025-11-13 17:08:27.264874
-832	9	Approved	Expert	7	\N	Seeded request	\N
-764	13	Approved	\N	\N	Weekly	Seeded assignment	\N
-431	16	Approved	\N	3	Weekly	Seeded request	\N
-50	5	Requested	Advanced	1	Daily	Seeded assignment	2025-11-21 12:10:27.264874
-453	9	Approved	Expert	5	\N	Seeded assignment	\N
-823	24	Approved	Advanced	9	Daily	Seeded request	\N
-551	20	Approved	Expert	\N	\N	Seeded assignment	\N
-179	20	Requested	Advanced	10	\N	Seeded assignment	\N
-518	25	Approved	\N	\N	Daily	Seeded request	\N
-66	21	Approved	Advanced	2	Monthly	Seeded request	\N
-43	4	Approved	Expert	3	Monthly	Seeded request	2025-11-17 19:51:27.264874
-626	24	Approved	Expert	7	\N	Seeded request	\N
-616	9	Approved	\N	\N	Rarely	Seeded assignment	2025-11-15 01:34:27.264874
-224	5	Approved	Beginner	5	Weekly	Seeded assignment	\N
-869	6	Approved	\N	5	\N	Seeded assignment	\N
-157	1	Approved	\N	\N	Monthly	Seeded assignment	2025-11-19 16:04:27.264874
-624	24	Requested	Advanced	\N	Weekly	Seeded assignment	\N
-388	16	Approved	Intermediate	8	\N	Seeded assignment	\N
-20	25	Requested	Beginner	6	\N	Seeded assignment	2025-12-01 16:18:27.264874
-367	23	Requested	Intermediate	0	\N	Seeded assignment	2025-11-22 11:23:27.264874
-363	11	Approved	Expert	3	\N	Seeded request	\N
-588	24	Requested	\N	\N	Weekly	Seeded request	2025-11-03 10:41:27.264874
-447	12	Requested	\N	1	Rarely	Seeded assignment	2025-11-05 12:00:27.264874
-770	6	Approved	\N	10	Weekly	Seeded assignment	\N
-176	16	Requested	\N	7	\N	Seeded request	\N
-265	17	Approved	Advanced	\N	Monthly	Seeded request	2025-11-24 09:05:27.264874
-352	5	Requested	Beginner	10	\N	Seeded request	\N
-973	13	Approved	Advanced	5	Rarely	Seeded assignment	\N
-308	3	Approved	Expert	\N	Monthly	Seeded assignment	2025-11-03 21:25:27.264874
-154	4	Requested	\N	\N	Monthly	Seeded assignment	\N
-377	7	Requested	\N	\N	Daily	Seeded assignment	\N
-272	3	Approved	Expert	3	Daily	Seeded assignment	2025-11-05 21:13:27.264874
-866	25	Requested	\N	10	Daily	Seeded request	2025-11-15 06:46:27.264874
-944	4	Approved	Advanced	\N	\N	Seeded request	\N
-787	4	Approved	\N	\N	Daily	Seeded assignment	\N
-366	23	Requested	\N	\N	Rarely	Seeded assignment	\N
-647	25	Approved	Beginner	4	\N	Seeded request	\N
-132	5	Approved	Beginner	\N	\N	Seeded request	2025-11-27 19:49:27.264874
-77	8	Requested	\N	\N	Monthly	Seeded assignment	\N
-259	1	Requested	Expert	6	\N	Seeded assignment	\N
-35	4	Requested	\N	\N	\N	Seeded assignment	\N
-747	22	Approved	Advanced	\N	\N	Seeded assignment	2025-11-13 05:27:27.264874
-147	16	Approved	\N	4	Monthly	Seeded assignment	2025-11-28 17:50:27.264874
-555	17	Approved	Expert	3	Rarely	Seeded request	\N
-329	20	Requested	Intermediate	2	Monthly	Seeded assignment	\N
-875	7	Requested	Intermediate	3	\N	Seeded assignment	\N
-964	5	Approved	Advanced	9	Weekly	Seeded request	2025-11-07 23:49:27.264874
-602	4	Requested	\N	10	Rarely	Seeded assignment	2025-11-21 16:18:27.264874
-445	9	Approved	\N	\N	\N	Seeded request	2025-11-28 13:54:27.264874
-9	9	Approved	Expert	\N	\N	Seeded assignment	\N
-278	7	Approved	Intermediate	4	\N	Seeded assignment	\N
-767	11	Approved	Advanced	\N	Daily	Seeded assignment	2025-11-26 21:56:27.264874
-864	1	Requested	Advanced	\N	\N	Seeded request	\N
-299	20	Approved	Advanced	7	Monthly	Seeded request	\N
-430	5	Approved	Expert	10	\N	Seeded assignment	\N
-934	5	Requested	\N	7	\N	Seeded request	\N
-161	16	Approved	\N	6	Daily	Seeded assignment	\N
-136	10	Requested	Advanced	7	Rarely	Seeded assignment	2025-11-14 02:06:27.264874
-874	9	Approved	Beginner	\N	\N	Seeded request	\N
-691	11	Requested	Expert	7	Rarely	Seeded assignment	2025-11-14 17:33:27.264874
-228	21	Approved	Expert	\N	Weekly	Seeded assignment	2025-11-13 00:17:27.264874
-291	1	Requested	Advanced	8	Rarely	Seeded request	\N
-435	23	Approved	Intermediate	8	\N	Seeded request	2025-11-28 07:08:27.264874
-808	9	Approved	Expert	4	Monthly	Seeded assignment	\N
-901	1	Approved	Expert	6	\N	Seeded request	\N
-607	19	Approved	\N	7	\N	Seeded request	\N
-967	20	Requested	\N	\N	Monthly	Seeded request	2025-11-23 14:22:27.264874
-732	20	Requested	\N	\N	\N	Seeded assignment	2025-11-22 13:05:27.264874
-657	16	Requested	Advanced	4	\N	Seeded assignment	\N
-114	11	Approved	Advanced	\N	\N	Seeded assignment	\N
-550	25	Approved	\N	\N	\N	Seeded assignment	2025-11-29 16:27:27.264874
-702	11	Requested	Expert	8	Rarely	Seeded request	\N
-873	4	Requested	Intermediate	9	Monthly	Seeded request	\N
-28	18	Requested	\N	8	\N	Seeded assignment	2025-11-20 10:25:27.264874
-309	20	Approved	\N	\N	Monthly	Seeded request	\N
-308	4	Approved	\N	\N	Daily	Seeded request	2025-12-01 15:00:27.264874
-377	23	Approved	Beginner	8	Monthly	Seeded request	\N
-592	16	Approved	\N	\N	\N	Seeded request	\N
-369	19	Approved	Expert	2	\N	Seeded assignment	\N
-24	23	Approved	Expert	2	Rarely	Seeded assignment	2025-11-07 11:05:27.264874
-349	20	Approved	Intermediate	7	\N	Seeded assignment	2025-11-20 13:59:27.264874
-821	12	Approved	\N	6	Rarely	Seeded request	2025-11-03 20:46:27.264874
-306	16	Approved	Advanced	10	Rarely	Seeded request	2025-11-27 05:09:27.264874
-43	3	Requested	Beginner	2	Rarely	Seeded request	2025-11-12 15:27:27.264874
-585	18	Approved	Intermediate	3	Daily	Seeded request	2025-11-27 11:40:27.264874
-665	17	Approved	\N	2	Daily	Seeded request	2025-11-28 15:51:27.264874
-942	25	Approved	Intermediate	\N	Rarely	Seeded request	\N
-958	24	Requested	\N	\N	Daily	Seeded request	\N
-241	24	Approved	\N	0	Daily	Seeded assignment	2025-11-23 14:06:27.264874
-357	24	Approved	Intermediate	0	\N	Seeded assignment	2025-11-24 07:04:27.264874
-637	23	Requested	Intermediate	\N	\N	Seeded request	\N
-491	16	Approved	Intermediate	5	Daily	Seeded assignment	\N
-531	18	Requested	Intermediate	10	\N	Seeded assignment	\N
-644	24	Approved	\N	4	Weekly	Seeded assignment	\N
-564	13	Requested	\N	7	\N	Seeded request	\N
-188	4	Approved	Advanced	\N	\N	Seeded request	2025-12-01 09:44:27.264874
-418	5	Approved	\N	5	Rarely	Seeded assignment	2025-11-12 16:59:27.264874
-503	9	Approved	Beginner	6	Daily	Seeded request	2025-11-28 23:48:27.264874
-952	8	Approved	\N	1	\N	Seeded assignment	\N
-278	23	Approved	Intermediate	\N	Daily	Seeded assignment	\N
-687	6	Requested	Intermediate	10	\N	Seeded request	\N
-923	8	Requested	Advanced	\N	\N	Seeded request	2025-11-20 22:37:27.264874
-420	16	Approved	Intermediate	1	Daily	Seeded request	2025-11-17 22:30:27.264874
-438	20	Requested	\N	7	Monthly	Seeded assignment	\N
-87	3	Approved	Expert	\N	Weekly	Seeded assignment	\N
-524	24	Approved	Advanced	5	\N	Seeded assignment	2025-11-28 02:32:27.264874
-664	17	Approved	Advanced	6	Weekly	Seeded request	\N
-41	13	Requested	\N	5	Monthly	Seeded assignment	\N
-345	16	Requested	\N	4	\N	Seeded assignment	\N
-382	25	Approved	\N	\N	\N	Seeded request	\N
-109	24	Requested	\N	2	Monthly	Seeded request	2025-12-01 02:36:27.264874
-183	16	Approved	\N	2	\N	Seeded assignment	\N
-600	7	Requested	Beginner	4	Monthly	Seeded assignment	\N
-711	16	Approved	\N	\N	Daily	Seeded assignment	2025-11-09 03:13:27.264874
-773	4	Requested	Intermediate	4	\N	Seeded assignment	\N
-127	12	Approved	Expert	10	\N	Seeded request	2025-11-09 23:16:27.264874
-248	5	Approved	Expert	\N	\N	Seeded assignment	\N
-954	7	Requested	Intermediate	2	\N	Seeded request	\N
-85	23	Requested	Expert	0	Rarely	Seeded request	\N
-6	13	Requested	Expert	\N	Monthly	Seeded request	2025-11-04 18:58:27.264874
-250	21	Approved	\N	7	\N	Seeded assignment	2025-11-30 03:20:27.264874
-744	12	Requested	Advanced	6	\N	Seeded assignment	\N
-8	18	Requested	Advanced	\N	\N	Seeded request	2025-11-28 21:09:27.264874
-749	16	Approved	\N	7	Monthly	Seeded request	\N
-204	11	Requested	\N	\N	Daily	Seeded request	\N
-251	10	Requested	Advanced	0	\N	Seeded assignment	\N
-310	17	Requested	\N	\N	\N	Seeded request	2025-11-09 01:43:27.264874
-121	3	Requested	Expert	2	Daily	Seeded request	\N
-328	4	Approved	\N	4	Weekly	Seeded request	2025-11-05 10:11:27.264874
-634	3	Approved	\N	\N	\N	Seeded assignment	\N
-268	17	Approved	Beginner	5	Daily	Seeded assignment	\N
-809	18	Requested	Expert	8	\N	Seeded assignment	\N
-303	8	Approved	\N	\N	Rarely	Seeded request	\N
-594	21	Requested	\N	2	\N	Seeded request	\N
-867	22	Approved	Beginner	\N	\N	Seeded assignment	\N
-283	16	Requested	Expert	10	Monthly	Seeded request	\N
-466	21	Requested	\N	1	\N	Seeded assignment	\N
-881	18	Requested	Expert	4	\N	Seeded request	\N
-130	16	Requested	Expert	\N	\N	Seeded request	2025-11-23 07:22:27.264874
-950	20	Approved	Advanced	9	Weekly	Seeded request	\N
-828	11	Approved	Advanced	2	\N	Seeded assignment	2025-11-13 10:15:27.264874
-972	1	Approved	Advanced	7	\N	Seeded assignment	\N
-496	10	Approved	Expert	\N	\N	Seeded assignment	2025-11-21 17:00:27.264874
-877	12	Approved	Beginner	5	Weekly	Seeded request	\N
-490	1	Approved	Beginner	6	\N	Seeded assignment	2025-11-06 19:43:27.264874
-292	25	Approved	\N	8	Rarely	Seeded request	2025-11-08 18:11:27.264874
-459	6	Approved	Beginner	2	Daily	Seeded assignment	2025-11-26 17:53:27.264874
-983	7	Requested	\N	6	Daily	Seeded assignment	\N
-61	9	Requested	Beginner	5	\N	Seeded request	\N
-807	17	Approved	Expert	2	Rarely	Seeded assignment	\N
-693	12	Requested	Advanced	3	\N	Seeded request	\N
-346	6	Requested	Beginner	\N	Rarely	Seeded assignment	\N
-570	8	Approved	Advanced	6	Weekly	Seeded request	\N
-231	4	Approved	\N	1	Weekly	Seeded assignment	2025-11-03 20:51:27.264874
-943	22	Requested	\N	5	Weekly	Seeded request	\N
-615	16	Approved	Advanced	6	\N	Seeded request	\N
-826	19	Approved	\N	4	Daily	Seeded request	\N
-445	1	Approved	Expert	8	Daily	Seeded assignment	2025-11-12 19:45:27.264874
-321	21	Requested	Beginner	6	Daily	Seeded assignment	2025-11-12 18:30:27.264874
-953	16	Approved	Beginner	9	Monthly	Seeded request	2025-11-11 17:10:27.264874
-740	16	Requested	\N	8	Daily	Seeded assignment	\N
-110	18	Approved	Advanced	\N	\N	Seeded request	\N
-154	3	Approved	Advanced	6	\N	Seeded assignment	\N
-599	10	Requested	Expert	1	Daily	Seeded assignment	2025-11-23 08:13:27.264874
-537	24	Requested	Expert	9	\N	Seeded request	\N
-962	16	Requested	Advanced	\N	Daily	Seeded assignment	2025-11-25 13:16:27.264874
-813	23	Requested	Expert	\N	Weekly	Seeded request	2025-11-26 02:18:27.264874
-927	17	Requested	Beginner	\N	\N	Seeded assignment	\N
-103	4	Approved	\N	8	Rarely	Seeded request	2025-11-05 05:03:27.264874
-899	24	Approved	Intermediate	7	Rarely	Seeded assignment	2025-12-02 19:23:27.264874
-646	6	Approved	\N	6	Weekly	Seeded request	2025-11-29 16:40:27.264874
-385	11	Approved	\N	\N	Weekly	Seeded assignment	2025-11-20 01:21:27.264874
-162	13	Approved	\N	7	Weekly	Seeded assignment	\N
-466	17	Requested	Beginner	\N	Weekly	Seeded assignment	\N
-4	22	Requested	Intermediate	7	Monthly	Seeded assignment	2025-11-12 18:51:27.264874
-458	10	Approved	\N	3	\N	Seeded request	2025-12-02 23:38:27.264874
-407	1	Requested	Expert	3	Weekly	Seeded assignment	2025-11-17 10:19:27.264874
-353	6	Approved	Intermediate	7	Rarely	Seeded request	\N
-822	8	Requested	\N	\N	Daily	Seeded request	2025-11-29 05:15:27.264874
-199	9	Approved	\N	\N	Rarely	Seeded request	\N
-479	25	Approved	Intermediate	\N	Rarely	Seeded assignment	2025-11-22 02:37:27.264874
-413	10	Approved	\N	8	Rarely	Seeded request	2025-11-08 19:23:27.264874
-871	5	Approved	\N	2	Rarely	Seeded request	\N
-629	10	Approved	\N	0	Rarely	Seeded assignment	2025-11-15 11:32:27.264874
-964	20	Approved	\N	3	Weekly	Seeded request	\N
-329	5	Requested	Intermediate	\N	Daily	Seeded assignment	\N
-525	4	Approved	\N	\N	Rarely	Seeded assignment	\N
-198	10	Requested	Intermediate	\N	Rarely	Seeded assignment	\N
-316	20	Approved	Advanced	9	Rarely	Seeded request	2025-12-01 12:37:27.264874
-929	3	Requested	Advanced	9	Weekly	Seeded assignment	\N
-487	19	Approved	Expert	0	\N	Seeded assignment	\N
-463	12	Requested	\N	2	\N	Seeded assignment	\N
-568	22	Requested	\N	\N	Rarely	Seeded assignment	\N
-949	17	Approved	Expert	9	\N	Seeded assignment	2025-11-13 05:13:27.264874
-734	11	Approved	Advanced	\N	\N	Seeded assignment	\N
-905	9	Approved	Advanced	10	Weekly	Seeded request	\N
-185	19	Requested	Advanced	\N	Rarely	Seeded assignment	\N
-249	20	Approved	Advanced	\N	Weekly	Seeded assignment	\N
-588	10	Approved	Intermediate	\N	Daily	Seeded request	2025-11-10 23:48:27.264874
-680	16	Approved	Beginner	\N	Weekly	Seeded assignment	2025-11-23 16:00:27.264874
-116	11	Requested	Beginner	\N	Monthly	Seeded request	2025-11-21 01:01:27.264874
-327	9	Requested	Intermediate	6	Rarely	Seeded assignment	\N
-422	9	Approved	\N	\N	\N	Seeded request	2025-11-09 15:45:27.264874
-684	17	Approved	\N	\N	Daily	Seeded request	2025-11-25 10:54:27.264874
-149	24	Approved	Advanced	\N	Monthly	Seeded assignment	\N
-886	23	Approved	\N	10	\N	Seeded request	2025-11-15 00:47:27.264874
-62	13	Requested	\N	3	Monthly	Seeded assignment	\N
-208	16	Requested	Expert	\N	Daily	Seeded assignment	2025-11-24 04:33:27.264874
-830	18	Approved	Advanced	2	Monthly	Seeded assignment	\N
-694	8	Requested	\N	1	Rarely	Seeded assignment	\N
-695	7	Requested	Intermediate	8	\N	Seeded request	\N
-337	23	Approved	Intermediate	\N	\N	Seeded request	2025-11-11 21:32:27.264874
-805	25	Approved	Intermediate	\N	\N	Seeded request	\N
-102	17	Approved	Expert	4	\N	Seeded request	2025-11-23 22:21:27.264874
-370	5	Approved	\N	\N	Daily	Seeded assignment	\N
-529	20	Approved	\N	10	Weekly	Seeded assignment	2025-11-27 20:43:27.264874
-796	17	Requested	Expert	3	\N	Seeded request	2025-11-28 09:21:27.264874
-870	12	Requested	Intermediate	\N	Monthly	Seeded assignment	2025-11-08 10:55:27.264874
-885	23	Approved	\N	1	Daily	Seeded assignment	\N
-380	1	Approved	Intermediate	1	Weekly	Seeded request	\N
-517	22	Requested	\N	5	\N	Seeded assignment	\N
-26	24	Requested	\N	\N	Weekly	Seeded request	2025-11-04 23:44:27.264874
-833	25	Approved	\N	2	\N	Seeded request	2025-11-16 20:49:27.264874
-296	10	Requested	Intermediate	5	\N	Seeded request	2025-11-07 13:28:27.264874
-946	23	Approved	Intermediate	4	Weekly	Seeded assignment	\N
-359	24	Approved	\N	7	Weekly	Seeded assignment	\N
-959	5	Approved	Intermediate	0	Rarely	Seeded assignment	\N
-279	6	Approved	\N	1	Rarely	Seeded request	2025-11-13 00:03:27.264874
-410	1	Approved	\N	\N	Monthly	Seeded request	\N
-23	4	Approved	\N	7	Monthly	Seeded assignment	\N
-653	8	Approved	Expert	4	Weekly	Seeded request	\N
-59	12	Approved	Expert	2	\N	Seeded assignment	2025-11-27 05:54:27.264874
-961	19	Approved	Advanced	\N	Daily	Seeded request	2025-11-25 05:53:27.264874
-155	19	Requested	Beginner	\N	\N	Seeded request	2025-11-24 15:54:27.264874
-326	6	Approved	Beginner	10	Rarely	Seeded assignment	2025-11-08 17:41:27.264874
-806	23	Approved	\N	\N	\N	Seeded request	2025-11-28 17:30:27.264874
-834	25	Requested	Expert	5	\N	Seeded assignment	\N
-267	11	Approved	Expert	\N	Daily	Seeded assignment	\N
-888	22	Approved	\N	\N	Rarely	Seeded assignment	\N
-587	19	Requested	Expert	\N	\N	Seeded assignment	2025-11-22 09:52:27.264874
-915	7	Approved	\N	\N	Monthly	Seeded request	\N
-655	10	Approved	Intermediate	10	\N	Seeded request	2025-11-16 14:43:27.264874
-136	24	Approved	Expert	7	Rarely	Seeded assignment	\N
-372	9	Approved	Advanced	\N	\N	Seeded request	2025-11-16 10:03:27.264874
-167	10	Approved	\N	\N	Rarely	Seeded request	2025-11-30 08:16:27.264874
-985	5	Approved	\N	\N	Daily	Seeded assignment	\N
-618	3	Requested	\N	2	Monthly	Seeded assignment	\N
-703	20	Approved	\N	9	Daily	Seeded assignment	\N
-800	7	Requested	Beginner	\N	Daily	Seeded request	\N
-470	13	Requested	\N	\N	Monthly	Seeded request	2025-11-06 03:21:27.264874
-664	21	Approved	Beginner	\N	Daily	Seeded assignment	\N
-352	20	Requested	\N	\N	Daily	Seeded assignment	2025-11-16 00:38:27.264874
-682	9	Approved	\N	0	Weekly	Seeded assignment	\N
-958	10	Approved	\N	5	\N	Seeded request	\N
-858	3	Approved	\N	0	Rarely	Seeded request	2025-11-20 21:18:27.264874
-64	25	Requested	\N	\N	Rarely	Seeded assignment	2025-11-04 22:55:27.264874
-605	13	Approved	Intermediate	8	\N	Seeded assignment	2025-11-25 07:23:27.264874
-566	23	Requested	Intermediate	0	\N	Seeded request	\N
-825	21	Approved	Intermediate	0	Daily	Seeded assignment	\N
-555	21	Approved	Beginner	\N	Monthly	Seeded request	\N
-37	6	Approved	Advanced	5	Daily	Seeded assignment	2025-11-05 20:07:27.264874
-619	16	Approved	Advanced	4	\N	Seeded assignment	2025-11-15 02:04:27.264874
-227	3	Requested	Intermediate	6	Rarely	Seeded assignment	2025-11-21 20:47:27.264874
-578	23	Requested	Advanced	4	\N	Seeded request	\N
-660	12	Approved	Intermediate	10	Weekly	Seeded assignment	\N
-685	19	Requested	Intermediate	9	\N	Seeded assignment	2025-11-17 04:17:27.264874
-701	8	Requested	Intermediate	4	Monthly	Seeded assignment	\N
-946	7	Approved	Intermediate	2	\N	Seeded assignment	2025-11-13 20:01:27.264874
-86	4	Approved	\N	2	\N	Seeded request	\N
-799	5	Approved	\N	0	Monthly	Seeded assignment	2025-11-29 05:24:27.264874
-590	7	Approved	Beginner	7	Monthly	Seeded request	\N
-60	1	Requested	Expert	\N	Weekly	Seeded request	\N
-951	11	Approved	Advanced	\N	Daily	Seeded request	2025-11-30 22:56:27.264874
-289	8	Requested	\N	7	\N	Seeded request	2025-11-30 16:20:27.264874
-404	23	Approved	Beginner	7	\N	Seeded request	\N
-187	13	Approved	Beginner	\N	Monthly	Seeded assignment	2025-11-25 23:12:27.264874
-765	21	Requested	Advanced	7	\N	Seeded assignment	2025-11-04 15:03:27.264874
-525	3	Requested	Beginner	\N	Daily	Seeded assignment	\N
-510	22	Requested	Expert	2	Rarely	Seeded request	\N
-603	8	Requested	\N	\N	\N	Seeded assignment	2025-11-27 17:13:27.264874
-111	16	Approved	\N	5	Weekly	Seeded assignment	2025-11-11 18:12:27.264874
-562	16	Approved	\N	6	Monthly	Seeded assignment	2025-11-11 13:31:27.264874
-845	18	Approved	Beginner	8	Daily	Seeded request	\N
-844	11	Approved	\N	4	\N	Seeded request	2025-11-07 19:45:27.264874
-109	10	Requested	Expert	\N	\N	Seeded assignment	2025-11-13 02:49:27.264874
-42	20	Approved	Advanced	\N	Rarely	Seeded assignment	\N
-793	4	Approved	Beginner	6	\N	Seeded request	2025-11-23 20:38:27.264874
-909	22	Requested	Beginner	1	Rarely	Seeded assignment	\N
-905	1	Requested	\N	0	\N	Seeded assignment	\N
-334	18	Requested	Advanced	6	Daily	Seeded request	2025-11-29 03:54:27.264874
-396	6	Requested	Advanced	\N	Rarely	Seeded request	\N
-275	9	Approved	\N	3	Weekly	Seeded request	2025-11-16 23:57:27.264874
-103	3	Approved	Intermediate	10	\N	Seeded assignment	\N
-203	12	Requested	\N	\N	\N	Seeded assignment	\N
-245	1	Requested	\N	\N	Monthly	Seeded assignment	2025-11-06 11:58:27.264874
-8	19	Approved	Advanced	9	Weekly	Seeded request	\N
-895	22	Approved	\N	\N	\N	Seeded request	2025-11-21 05:54:27.264874
-698	20	Requested	\N	2	Weekly	Seeded request	2025-11-26 04:02:27.264874
-309	5	Requested	\N	\N	Weekly	Seeded request	\N
-451	3	Requested	Beginner	\N	Monthly	Seeded assignment	2025-11-13 06:21:27.264874
-181	23	Approved	Expert	\N	\N	Seeded assignment	\N
-666	1	Requested	Expert	9	\N	Seeded assignment	\N
-535	8	Approved	Expert	\N	Monthly	Seeded assignment	\N
-670	13	Approved	Expert	\N	Weekly	Seeded assignment	2025-12-01 20:03:27.264874
-628	19	Approved	Beginner	\N	\N	Seeded assignment	\N
-58	1	Approved	Expert	\N	Rarely	Seeded request	2025-11-17 22:03:27.264874
-410	9	Approved	Advanced	\N	Rarely	Seeded request	\N
-300	8	Approved	Expert	\N	Rarely	Seeded assignment	2025-11-14 21:35:27.264874
-658	11	Requested	Advanced	\N	Weekly	Seeded assignment	2025-11-21 07:53:27.264874
-347	9	Approved	\N	\N	\N	Seeded request	2025-11-30 03:19:27.264874
-264	24	Requested	\N	5	Monthly	Seeded assignment	\N
-249	12	Approved	Advanced	2	Rarely	Seeded assignment	2025-11-15 12:16:27.264874
-324	25	Requested	\N	8	Monthly	Seeded request	\N
-122	19	Requested	Beginner	\N	Rarely	Seeded request	2025-12-03 03:03:27.264874
-519	6	Requested	Beginner	\N	Rarely	Seeded assignment	2025-11-06 14:50:27.264874
-565	8	Approved	Beginner	\N	Monthly	Seeded assignment	\N
-288	17	Approved	Expert	\N	\N	Seeded assignment	\N
-846	6	Approved	Expert	10	Rarely	Seeded assignment	2025-11-13 02:14:27.264874
-754	22	Requested	Advanced	6	Rarely	Seeded request	2025-11-21 19:47:27.264874
-981	16	Requested	\N	7	Daily	Seeded assignment	\N
-194	12	Approved	\N	5	\N	Seeded request	2025-11-23 20:23:27.264874
-254	6	Approved	Expert	7	Daily	Seeded assignment	2025-11-30 14:32:27.264874
-386	18	Approved	\N	\N	Daily	Seeded assignment	\N
-531	19	Approved	\N	\N	\N	Seeded request	2025-11-18 03:40:27.264874
-424	25	Requested	\N	\N	\N	Seeded request	\N
-668	16	Approved	\N	\N	\N	Seeded assignment	\N
-572	22	Requested	Beginner	1	\N	Seeded assignment	\N
-860	22	Approved	Intermediate	2	\N	Seeded request	\N
-323	9	Requested	Advanced	6	Daily	Seeded request	2025-11-23 06:15:27.264874
-265	21	Approved	Beginner	\N	\N	Seeded assignment	\N
-408	25	Requested	\N	7	\N	Seeded assignment	\N
-132	12	Requested	Intermediate	\N	Monthly	Seeded assignment	2025-11-12 05:55:27.264874
-276	24	Approved	Beginner	\N	Monthly	Seeded assignment	2025-11-06 17:31:27.264874
-340	6	Requested	Advanced	\N	Daily	Seeded assignment	2025-11-13 19:22:27.264874
-89	17	Requested	Advanced	\N	Rarely	Seeded request	2025-11-10 00:13:27.264874
-394	20	Approved	\N	0	Rarely	Seeded assignment	2025-11-24 15:16:27.264874
-640	17	Requested	\N	8	Rarely	Seeded assignment	\N
-229	16	Approved	\N	\N	\N	Seeded request	\N
-721	12	Approved	Beginner	2	Weekly	Seeded assignment	\N
-561	16	Approved	\N	10	Monthly	Seeded assignment	\N
-337	7	Requested	Advanced	9	Weekly	Seeded request	2025-11-11 08:13:27.264874
-574	9	Approved	Expert	\N	Rarely	Seeded assignment	\N
-695	23	Approved	\N	\N	Monthly	Seeded assignment	\N
-918	25	Approved	Intermediate	3	Daily	Seeded request	2025-11-13 13:19:27.264874
-28	19	Requested	Beginner	7	\N	Seeded request	2025-11-14 00:18:27.264874
-22	1	Requested	Beginner	\N	\N	Seeded assignment	2025-12-02 20:33:27.264874
-661	6	Approved	Beginner	0	Rarely	Seeded request	\N
-987	8	Approved	\N	5	Rarely	Seeded assignment	2025-11-11 11:46:27.264874
-974	10	Approved	\N	6	\N	Seeded assignment	2025-11-06 20:17:27.264874
-496	24	Approved	Beginner	2	Weekly	Seeded request	\N
-737	23	Requested	Expert	\N	\N	Seeded assignment	\N
-335	6	Approved	\N	1	\N	Seeded assignment	\N
-485	17	Approved	Expert	1	\N	Seeded assignment	2025-11-09 03:17:27.264874
-70	12	Approved	Advanced	9	Monthly	Seeded assignment	\N
-233	17	Requested	\N	5	Monthly	Seeded assignment	\N
-178	23	Approved	\N	\N	\N	Seeded assignment	2025-11-15 00:12:27.264874
-192	3	Requested	Intermediate	5	\N	Seeded request	2025-11-16 02:14:27.264874
-264	8	Requested	\N	3	Weekly	Seeded request	2025-11-18 07:14:27.264874
-260	19	Requested	Expert	9	\N	Seeded assignment	2025-11-30 05:18:27.264874
-395	1	Approved	Advanced	7	Monthly	Seeded request	2025-11-10 13:46:27.264874
-854	20	Approved	\N	\N	\N	Seeded assignment	\N
-947	22	Approved	Intermediate	\N	\N	Seeded request	2025-12-02 23:48:27.264874
-526	23	Approved	Advanced	9	Monthly	Seeded request	\N
-535	24	Requested	Advanced	2	Rarely	Seeded request	2025-11-30 03:05:27.264874
-559	23	Approved	Beginner	\N	Weekly	Seeded request	\N
-759	21	Approved	Beginner	1	\N	Seeded request	2025-11-21 23:15:27.264874
-68	24	Approved	\N	\N	Weekly	Seeded assignment	\N
-126	16	Requested	Beginner	\N	Weekly	Seeded assignment	\N
-474	25	Requested	Intermediate	\N	Weekly	Seeded assignment	\N
-91	17	Approved	Intermediate	\N	Rarely	Seeded assignment	2025-11-08 14:51:27.264874
-839	23	Approved	\N	3	\N	Seeded request	\N
-104	7	Approved	\N	\N	\N	Seeded request	2025-11-11 20:33:27.264874
-659	5	Requested	Expert	10	Daily	Seeded assignment	\N
-576	21	Requested	Advanced	\N	\N	Seeded assignment	\N
-242	20	Approved	Intermediate	3	Daily	Seeded request	\N
-654	21	Requested	Expert	9	\N	Seeded assignment	2025-11-06 22:22:27.264874
-682	11	Requested	Expert	\N	Rarely	Seeded assignment	2025-11-25 19:39:27.264874
-21	10	Approved	Beginner	1	\N	Seeded assignment	\N
-783	19	Approved	Advanced	0	\N	Seeded request	2025-11-15 18:33:27.264874
-105	12	Approved	Intermediate	\N	Daily	Seeded request	2025-11-08 07:48:27.264874
-145	7	Approved	Beginner	10	\N	Seeded assignment	2025-11-22 03:48:27.264874
-267	9	Approved	\N	\N	\N	Seeded assignment	2025-11-29 03:52:27.264874
-49	11	Approved	\N	10	Weekly	Seeded request	\N
-569	17	Requested	\N	9	Daily	Seeded assignment	\N
-22	11	Approved	Beginner	\N	\N	Seeded request	\N
-790	12	Approved	Beginner	\N	Rarely	Seeded request	\N
-984	25	Requested	Expert	\N	Daily	Seeded assignment	\N
-338	3	Approved	Intermediate	4	Rarely	Seeded assignment	2025-12-01 20:02:27.264874
-716	13	Approved	\N	\N	\N	Seeded assignment	\N
-916	13	Approved	Intermediate	9	\N	Seeded assignment	2025-11-09 04:08:27.264874
-788	16	Requested	\N	8	Rarely	Seeded assignment	\N
-161	13	Approved	Intermediate	0	Daily	Seeded assignment	2025-11-08 06:48:27.264874
-476	5	Approved	Expert	4	\N	Seeded assignment	\N
-586	22	Approved	\N	4	Monthly	Seeded assignment	2025-11-17 00:29:27.264874
-583	20	Requested	Expert	\N	\N	Seeded assignment	2025-11-06 14:56:27.264874
-468	10	Approved	Expert	3	Daily	Seeded request	\N
-558	1	Approved	Beginner	6	Weekly	Seeded assignment	2025-12-03 00:31:27.264874
-430	22	Approved	Advanced	10	Rarely	Seeded request	\N
-841	25	Approved	Expert	\N	Daily	Seeded assignment	\N
-936	20	Approved	\N	\N	Weekly	Seeded assignment	\N
-45	11	Approved	Expert	\N	Daily	Seeded assignment	2025-11-15 10:35:27.264874
-764	16	Approved	Advanced	\N	\N	Seeded assignment	2025-11-21 11:55:27.264874
-243	7	Approved	\N	3	\N	Seeded request	2025-11-13 13:51:27.264874
-712	10	Requested	\N	\N	Daily	Seeded request	\N
-60	11	Approved	Advanced	9	\N	Seeded assignment	\N
-607	3	Approved	Expert	0	\N	Seeded request	2025-11-09 05:31:27.264874
-3	5	Approved	Advanced	\N	\N	Seeded assignment	2025-12-02 01:46:27.264874
-328	19	Requested	\N	4	Weekly	Seeded request	\N
-358	24	Requested	\N	6	Monthly	Seeded assignment	2025-11-10 07:53:27.264874
-156	22	Approved	Intermediate	\N	\N	Seeded assignment	\N
-220	13	Approved	\N	7	\N	Seeded assignment	\N
-633	23	Approved	Advanced	8	Monthly	Seeded assignment	\N
-499	17	Approved	Advanced	\N	\N	Seeded request	2025-11-30 01:17:27.264874
-477	16	Requested	\N	\N	\N	Seeded assignment	\N
-393	9	Requested	Expert	\N	\N	Seeded assignment	\N
-290	18	Requested	Expert	\N	\N	Seeded request	\N
-534	1	Approved	Intermediate	9	\N	Seeded assignment	\N
-406	4	Requested	Beginner	0	\N	Seeded request	2025-11-07 01:21:27.264874
-388	13	Approved	\N	10	Daily	Seeded request	\N
-327	11	Approved	Advanced	\N	\N	Seeded request	2025-11-09 06:51:27.264874
-392	21	Approved	Advanced	0	Daily	Seeded assignment	\N
-504	23	Requested	Beginner	3	Rarely	Seeded assignment	\N
-146	7	Approved	Beginner	\N	Daily	Seeded assignment	2025-11-21 13:59:27.264874
-272	19	Approved	\N	\N	Monthly	Seeded assignment	2025-11-16 05:17:27.264874
-116	9	Requested	Expert	\N	Daily	Seeded request	2025-11-04 18:11:27.264874
-113	24	Requested	Expert	\N	\N	Seeded assignment	\N
-844	1	Requested	\N	\N	Weekly	Seeded request	\N
-231	19	Approved	Beginner	0	\N	Seeded assignment	2025-11-20 15:52:27.264874
-412	25	Requested	Intermediate	0	Monthly	Seeded request	\N
-520	1	Approved	Expert	0	Monthly	Seeded request	2025-11-03 23:01:27.264874
-688	1	Approved	Expert	6	\N	Seeded request	\N
-428	7	Approved	Intermediate	\N	\N	Seeded assignment	\N
-768	12	Approved	Expert	2	Monthly	Seeded request	2025-11-20 05:57:27.264874
-132	22	Approved	\N	\N	Rarely	Seeded assignment	\N
-540	17	Approved	\N	5	\N	Seeded assignment	2025-11-14 09:45:27.264874
-686	7	Requested	Expert	\N	\N	Seeded request	2025-11-05 07:29:27.264874
-376	10	Requested	Advanced	\N	Daily	Seeded request	2025-11-23 07:07:27.264874
-365	17	Requested	\N	4	Weekly	Seeded request	\N
-469	11	Approved	\N	\N	Daily	Seeded assignment	\N
-457	1	Approved	Expert	6	\N	Seeded assignment	2025-11-26 22:26:27.264874
-118	19	Approved	\N	\N	Daily	Seeded assignment	\N
-812	23	Approved	Expert	\N	Monthly	Seeded assignment	\N
-723	10	Requested	Intermediate	3	Daily	Seeded request	\N
-25	8	Requested	Expert	\N	Monthly	Seeded assignment	2025-11-17 08:02:27.264874
-548	13	Requested	Beginner	\N	\N	Seeded assignment	2025-11-24 23:15:27.264874
-391	17	Requested	\N	2	Weekly	Seeded assignment	2025-11-06 13:58:27.264874
-521	16	Approved	Expert	0	\N	Seeded request	\N
-597	19	Approved	Intermediate	\N	Monthly	Seeded request	\N
-772	13	Requested	Advanced	3	\N	Seeded request	2025-11-13 00:53:27.264874
-658	9	Approved	Expert	5	\N	Seeded request	2025-11-20 13:22:27.264874
-426	17	Approved	\N	\N	Weekly	Seeded assignment	\N
-501	1	Requested	\N	\N	Rarely	Seeded request	\N
-207	22	Approved	Advanced	7	Monthly	Seeded assignment	2025-11-12 17:02:27.264874
-221	24	Requested	Beginner	1	Weekly	Seeded request	2025-11-30 00:08:27.264874
-402	11	Approved	Intermediate	4	Daily	Seeded assignment	2025-11-11 11:32:27.264874
-770	25	Approved	\N	8	\N	Seeded assignment	\N
-433	25	Approved	Advanced	\N	Monthly	Seeded assignment	\N
-567	9	Approved	Intermediate	8	\N	Seeded request	\N
-26	8	Requested	Beginner	\N	\N	Seeded assignment	\N
-140	10	Requested	\N	\N	\N	Seeded assignment	\N
-243	23	Requested	Expert	\N	Weekly	Seeded assignment	2025-11-15 06:34:27.264874
-518	6	Approved	\N	\N	\N	Seeded request	2025-11-07 08:36:27.264874
-620	6	Approved	Advanced	8	Weekly	Seeded request	\N
-98	23	Requested	\N	8	\N	Seeded assignment	2025-11-05 16:40:27.264874
-722	21	Requested	Expert	2	\N	Seeded request	\N
-538	5	Approved	Beginner	\N	Daily	Seeded request	2025-12-03 04:24:27.264874
-33	7	Approved	Advanced	4	Monthly	Seeded request	2025-11-21 09:28:27.264874
-79	4	Requested	\N	7	Rarely	Seeded assignment	2025-12-01 19:23:27.264874
-369	3	Approved	Beginner	8	\N	Seeded assignment	2025-11-10 02:10:27.264874
-700	6	Approved	\N	6	Weekly	Seeded request	\N
-953	13	Requested	\N	4	Monthly	Seeded request	2025-11-24 20:05:27.264874
-65	24	Requested	Beginner	10	Weekly	Seeded assignment	2025-12-01 04:55:27.264874
-574	11	Requested	Beginner	2	\N	Seeded request	\N
-196	8	Approved	Expert	0	Monthly	Seeded assignment	2025-11-06 06:03:27.264874
-643	24	Approved	\N	6	Rarely	Seeded request	2025-11-23 18:02:27.264874
-43	19	Requested	\N	\N	Weekly	Seeded assignment	2025-11-12 21:53:27.264874
-403	21	Requested	Beginner	\N	\N	Seeded request	\N
-936	12	Approved	Beginner	\N	Monthly	Seeded request	\N
-244	21	Requested	Beginner	\N	\N	Seeded request	2025-11-12 20:36:27.264874
-754	20	Requested	Beginner	4	Weekly	Seeded assignment	\N
-29	4	Requested	\N	9	Daily	Seeded assignment	\N
-178	7	Approved	Expert	2	\N	Seeded assignment	\N
-577	6	Approved	Beginner	8	Rarely	Seeded assignment	\N
-393	1	Approved	Intermediate	\N	Daily	Seeded request	2025-11-24 05:21:27.264874
-539	12	Approved	\N	\N	Rarely	Seeded assignment	2025-11-09 17:47:27.264874
-467	12	Approved	\N	0	\N	Seeded request	\N
-757	13	Approved	\N	\N	Weekly	Seeded assignment	\N
-355	17	Approved	\N	\N	Daily	Seeded assignment	\N
-90	22	Approved	Beginner	8	\N	Seeded assignment	2025-11-08 20:11:27.264874
-907	13	Requested	Expert	3	Rarely	Seeded assignment	\N
-280	10	Approved	\N	9	\N	Seeded assignment	2025-11-30 17:07:27.264874
-951	9	Requested	Beginner	6	Rarely	Seeded request	2025-11-05 12:10:27.264874
-790	20	Requested	Intermediate	\N	Weekly	Seeded request	\N
-904	18	Requested	\N	0	\N	Seeded assignment	\N
-502	22	Approved	Intermediate	\N	\N	Seeded assignment	2025-11-14 11:57:27.264874
-171	18	Approved	Beginner	\N	Weekly	Seeded assignment	\N
-464	3	Approved	Intermediate	9	Weekly	Seeded assignment	\N
-150	5	Approved	\N	0	Weekly	Seeded assignment	\N
-526	7	Approved	\N	9	\N	Seeded request	\N
-332	17	Requested	\N	\N	Monthly	Seeded request	2025-11-03 20:57:27.264874
-596	25	Approved	\N	\N	\N	Seeded assignment	\N
-839	7	Approved	Advanced	\N	Daily	Seeded assignment	\N
-899	8	Approved	Beginner	2	\N	Seeded request	\N
-46	17	Requested	Intermediate	10	Daily	Seeded request	2025-11-07 11:01:27.264874
-917	13	Approved	Expert	\N	Weekly	Seeded assignment	2025-11-13 02:10:27.264874
-387	4	Approved	Intermediate	\N	Weekly	Seeded assignment	2025-11-25 09:40:27.264874
-621	1	Approved	Expert	9	Rarely	Seeded assignment	\N
-863	24	Requested	\N	0	Monthly	Seeded assignment	\N
-76	3	Approved	\N	3	Monthly	Seeded assignment	2025-11-25 07:04:27.264874
-275	11	Approved	Intermediate	7	Daily	Seeded assignment	\N
-649	19	Approved	Beginner	5	Rarely	Seeded assignment	2025-11-27 00:07:27.264874
-694	24	Approved	\N	\N	\N	Seeded request	\N
-307	8	Approved	\N	0	Rarely	Seeded assignment	\N
-78	21	Approved	\N	0	Rarely	Seeded assignment	\N
-149	8	Approved	Expert	4	\N	Seeded request	\N
-611	20	Approved	Expert	\N	Weekly	Seeded assignment	\N
-334	3	Approved	\N	3	\N	Seeded request	\N
-452	6	Approved	\N	9	Weekly	Seeded assignment	\N
-121	19	Requested	Advanced	8	Monthly	Seeded assignment	\N
-634	19	Requested	\N	\N	Monthly	Seeded assignment	\N
-888	12	Approved	Beginner	7	\N	Seeded assignment	\N
-148	12	Approved	Intermediate	0	Daily	Seeded assignment	2025-11-15 22:15:27.264874
-236	12	Approved	Beginner	7	Weekly	Seeded assignment	\N
-845	3	Approved	Expert	9	Rarely	Seeded assignment	\N
-720	16	Approved	Beginner	3	Rarely	Seeded assignment	2025-11-18 13:45:27.264874
-792	5	Approved	\N	\N	\N	Seeded request	2025-11-28 23:26:27.264874
-726	11	Approved	\N	5	\N	Seeded assignment	2025-11-13 06:49:27.264874
-784	5	Requested	Intermediate	6	\N	Seeded request	\N
-878	5	Requested	\N	4	Monthly	Seeded request	\N
-70	20	Requested	Beginner	\N	Weekly	Seeded assignment	\N
-718	24	Approved	\N	1	\N	Seeded request	2025-11-24 15:59:27.264874
-713	16	Requested	\N	3	Monthly	Seeded assignment	\N
-760	20	Requested	Intermediate	\N	\N	Seeded request	2025-11-24 04:01:27.264874
-350	1	Requested	Beginner	\N	\N	Seeded assignment	2025-11-25 13:53:27.264874
-429	24	Approved	Beginner	\N	Weekly	Seeded assignment	\N
-396	25	Approved	\N	\N	Daily	Seeded assignment	2025-11-22 22:12:27.264874
-801	23	Requested	\N	\N	\N	Seeded request	2025-11-14 18:49:27.264874
-818	25	Approved	Intermediate	6	Weekly	Seeded assignment	\N
-177	6	Approved	Beginner	8	Rarely	Seeded request	\N
-201	20	Requested	\N	9	Monthly	Seeded assignment	2025-11-28 06:11:27.264874
-535	10	Requested	\N	9	\N	Seeded assignment	2025-11-13 11:14:27.264874
-652	10	Requested	Advanced	5	Daily	Seeded request	\N
-630	23	Requested	\N	7	Weekly	Seeded request	\N
-3	20	Approved	Advanced	\N	Rarely	Seeded assignment	\N
-93	7	Requested	Beginner	4	Rarely	Seeded request	2025-11-11 17:40:27.264874
-231	18	Approved	Intermediate	5	\N	Seeded assignment	2025-11-05 12:05:27.264874
-967	22	Approved	\N	8	Monthly	Seeded assignment	\N
-732	22	Requested	\N	\N	Weekly	Seeded assignment	2025-11-25 07:55:27.264874
-209	23	Requested	\N	\N	\N	Seeded assignment	\N
-272	18	Approved	\N	9	\N	Seeded request	\N
-455	23	Requested	\N	\N	Daily	Seeded request	\N
-252	8	Requested	\N	7	Daily	Seeded request	2025-11-09 16:42:27.264874
-277	21	Approved	Intermediate	\N	\N	Seeded assignment	2025-11-27 06:04:27.264874
-341	9	Approved	\N	\N	Rarely	Seeded assignment	\N
-301	24	Approved	\N	\N	Rarely	Seeded request	\N
-538	12	Approved	Beginner	6	Rarely	Seeded assignment	\N
-401	24	Approved	\N	\N	Monthly	Seeded request	2025-11-19 20:00:27.264874
-876	16	Approved	Expert	\N	\N	Seeded assignment	2025-11-05 04:10:27.264874
-454	1	Approved	Intermediate	\N	Weekly	Seeded assignment	\N
-4	5	Approved	\N	\N	Monthly	Seeded request	\N
-702	9	Requested	\N	4	\N	Seeded assignment	\N
-641	9	Approved	Advanced	\N	\N	Seeded request	2025-11-17 07:11:27.264874
-751	1	Approved	\N	2	Weekly	Seeded request	\N
-180	22	Requested	Advanced	\N	Monthly	Seeded assignment	2025-11-03 10:31:27.264874
-704	17	Approved	Intermediate	3	\N	Seeded assignment	\N
-771	20	Requested	\N	\N	Weekly	Seeded assignment	\N
-317	25	Requested	\N	6	Monthly	Seeded assignment	2025-11-13 09:57:27.264874
-9	11	Requested	Advanced	2	Daily	Seeded assignment	\N
-164	17	Approved	\N	3	Rarely	Seeded assignment	\N
-960	19	Approved	Intermediate	\N	Rarely	Seeded assignment	\N
-445	11	Approved	Beginner	\N	\N	Seeded assignment	\N
-748	24	Approved	\N	5	\N	Seeded assignment	\N
-871	22	Requested	Expert	1	Rarely	Seeded request	2025-11-19 20:07:27.264874
-37	25	Approved	Beginner	\N	Monthly	Seeded request	2025-11-21 05:53:27.264874
-982	20	Requested	\N	\N	Rarely	Seeded request	\N
-881	4	Requested	Intermediate	5	Weekly	Seeded assignment	2025-11-27 10:57:27.264874
-865	10	Requested	Intermediate	9	Weekly	Seeded assignment	\N
-446	3	Requested	Advanced	5	Daily	Seeded request	\N
-188	18	Approved	Intermediate	\N	Monthly	Seeded assignment	\N
-375	18	Approved	\N	8	\N	Seeded request	\N
-878	12	Approved	\N	\N	Daily	Seeded assignment	\N
-373	7	Approved	Expert	\N	Monthly	Seeded assignment	\N
-117	9	Requested	Beginner	2	\N	Seeded request	2025-11-30 21:54:27.264874
-129	1	Approved	Advanced	\N	Rarely	Seeded assignment	\N
-888	5	Approved	Advanced	\N	\N	Seeded request	\N
-236	5	Requested	Expert	4	Rarely	Seeded request	2025-11-27 11:18:27.264874
-712	24	Approved	Advanced	0	Monthly	Seeded request	\N
-425	19	Approved	Beginner	7	Daily	Seeded request	2025-11-18 11:09:27.264874
-122	4	Requested	Advanced	8	\N	Seeded request	2025-11-13 23:34:27.264874
-434	3	Requested	Intermediate	5	Rarely	Seeded assignment	\N
-424	6	Requested	Intermediate	7	Rarely	Seeded assignment	2025-11-27 17:57:27.264874
-618	19	Approved	Beginner	1	\N	Seeded request	2025-11-29 23:59:27.264874
-628	4	Requested	Advanced	\N	Rarely	Seeded request	2025-12-02 23:52:27.264874
-971	1	Approved	Beginner	5	Rarely	Seeded request	2025-12-01 13:57:27.264874
-342	5	Requested	Intermediate	3	Rarely	Seeded assignment	2025-11-15 21:23:27.264874
-744	22	Requested	Advanced	3	\N	Seeded request	\N
-941	10	Requested	Advanced	\N	Weekly	Seeded request	\N
-575	24	Approved	\N	\N	\N	Seeded assignment	\N
-28	4	Requested	Intermediate	8	\N	Seeded request	\N
-846	25	Requested	\N	10	\N	Seeded assignment	\N
-322	13	Approved	Advanced	\N	Monthly	Seeded assignment	2025-11-21 22:59:27.264874
-519	25	Requested	Intermediate	\N	\N	Seeded assignment	\N
-804	10	Approved	\N	8	Monthly	Seeded assignment	\N
-926	12	Approved	\N	\N	Weekly	Seeded request	\N
-693	22	Approved	\N	4	Rarely	Seeded assignment	\N
-943	12	Requested	Beginner	8	\N	Seeded assignment	2025-11-19 04:54:27.264874
-254	25	Approved	\N	0	\N	Seeded request	\N
-524	8	Approved	\N	6	\N	Seeded assignment	\N
-803	10	Requested	Beginner	6	Weekly	Seeded request	2025-11-15 12:24:27.264874
-756	23	Requested	\N	\N	\N	Seeded request	\N
-260	18	Approved	\N	1	Monthly	Seeded request	\N
-604	3	Approved	\N	4	Weekly	Seeded request	2025-12-01 02:29:27.264874
-585	4	Approved	Beginner	8	Rarely	Seeded assignment	\N
-692	10	Approved	\N	1	\N	Seeded assignment	\N
-648	5	Requested	\N	3	\N	Seeded assignment	\N
-390	16	Approved	\N	3	\N	Seeded assignment	2025-11-05 04:24:27.264874
-95	9	Requested	Expert	7	Daily	Seeded assignment	\N
-14	12	Approved	Beginner	1	\N	Seeded request	\N
-339	7	Approved	Intermediate	1	\N	Seeded request	\N
-101	7	Approved	Intermediate	\N	\N	Seeded assignment	\N
-374	25	Approved	\N	5	Monthly	Seeded request	2025-11-14 23:09:27.264874
-296	8	Approved	Advanced	\N	Rarely	Seeded assignment	\N
-673	17	Approved	\N	4	Daily	Seeded assignment	\N
-824	18	Approved	Beginner	\N	\N	Seeded assignment	\N
-945	13	Approved	Expert	6	Daily	Seeded assignment	\N
-634	18	Requested	Beginner	4	Monthly	Seeded request	\N
-809	3	Approved	Intermediate	\N	Rarely	Seeded request	2025-11-15 02:25:27.264874
-926	20	Approved	Beginner	1	\N	Seeded request	2025-11-17 05:24:27.264874
-859	12	Approved	Expert	1	\N	Seeded assignment	\N
-670	16	Approved	Expert	\N	\N	Seeded request	\N
-154	18	Approved	Expert	\N	\N	Seeded assignment	\N
-691	1	Approved	Expert	\N	Monthly	Seeded assignment	2025-11-27 11:03:27.264874
-858	19	Approved	\N	5	Weekly	Seeded assignment	2025-11-08 17:01:27.264874
-423	11	Approved	Expert	\N	Rarely	Seeded assignment	\N
-229	13	Approved	\N	5	Rarely	Seeded assignment	\N
-767	1	Approved	Advanced	\N	Monthly	Seeded request	\N
-389	1	Approved	Expert	3	Daily	Seeded assignment	\N
-151	7	Approved	\N	\N	\N	Seeded assignment	\N
-108	10	Approved	Advanced	\N	Rarely	Seeded request	\N
-872	7	Requested	Advanced	7	\N	Seeded assignment	\N
-668	13	Approved	\N	9	Rarely	Seeded assignment	2025-12-01 08:48:27.264874
-171	19	Requested	Expert	5	\N	Seeded assignment	\N
-227	19	Approved	Advanced	\N	\N	Seeded request	2025-11-07 20:09:27.264874
-454	9	Approved	\N	1	Rarely	Seeded assignment	\N
-542	3	Approved	Advanced	4	Rarely	Seeded assignment	\N
-828	9	Approved	\N	2	Monthly	Seeded assignment	\N
-617	8	Approved	\N	\N	\N	Seeded assignment	\N
-729	24	Requested	Advanced	10	\N	Seeded request	\N
-751	9	Approved	Intermediate	4	Monthly	Seeded assignment	\N
-623	9	Requested	Advanced	2	\N	Seeded assignment	\N
-760	5	Approved	Intermediate	5	Weekly	Seeded request	\N
-173	20	Approved	Intermediate	3	Monthly	Seeded assignment	2025-11-03 12:03:27.264874
-725	25	Requested	\N	\N	\N	Seeded assignment	\N
-56	24	Approved	\N	\N	Daily	Seeded assignment	2025-11-25 16:14:27.264874
-438	22	Requested	\N	\N	Rarely	Seeded assignment	2025-12-01 21:43:27.264874
-258	17	Approved	Expert	\N	\N	Seeded assignment	2025-12-02 12:03:27.264874
-747	12	Requested	\N	3	Monthly	Seeded request	\N
-811	16	Approved	\N	\N	\N	Seeded assignment	\N
-982	12	Approved	\N	0	\N	Seeded assignment	\N
-421	25	Approved	\N	\N	Rarely	Seeded assignment	\N
-850	7	Approved	\N	10	\N	Seeded request	\N
-768	5	Requested	\N	2	\N	Seeded assignment	\N
-971	9	Approved	\N	0	\N	Seeded assignment	2025-11-08 03:33:27.264874
-280	24	Requested	Expert	0	\N	Seeded request	2025-11-22 00:45:27.264874
-93	23	Approved	\N	3	Monthly	Seeded assignment	2025-11-27 16:33:27.264874
-458	8	Requested	Intermediate	\N	\N	Seeded assignment	\N
-630	7	Requested	Advanced	10	\N	Seeded assignment	\N
-834	6	Requested	\N	\N	Weekly	Seeded request	\N
-233	21	Approved	\N	\N	Monthly	Seeded request	\N
-364	5	Requested	Beginner	\N	Daily	Seeded request	2025-11-04 16:54:27.264874
-669	1	Approved	Beginner	7	Monthly	Seeded request	2025-11-03 09:55:27.264874
-508	6	Requested	Beginner	9	Rarely	Seeded request	\N
-629	8	Approved	Beginner	\N	Monthly	Seeded request	\N
-480	24	Approved	Expert	8	Weekly	Seeded assignment	2025-11-25 01:02:27.264874
-313	3	Requested	Intermediate	3	\N	Seeded request	\N
-198	8	Requested	\N	6	\N	Seeded request	\N
-896	10	Requested	Beginner	9	Daily	Seeded assignment	2025-12-02 06:30:27.264874
-360	13	Requested	\N	9	Rarely	Seeded assignment	\N
-11	6	Requested	Expert	\N	Monthly	Seeded assignment	\N
-718	10	Requested	Advanced	2	\N	Seeded assignment	\N
-645	18	Approved	Expert	\N	\N	Seeded assignment	\N
-133	25	Approved	Beginner	10	Monthly	Seeded request	\N
-628	3	Requested	\N	\N	Rarely	Seeded request	2025-11-26 11:20:27.264874
-755	25	Approved	\N	5	Daily	Seeded assignment	2025-12-03 00:48:27.264874
-595	24	Approved	Advanced	5	Monthly	Seeded assignment	2025-11-21 11:05:27.264874
-626	8	Approved	Intermediate	\N	\N	Seeded request	\N
-857	19	Approved	\N	0	Weekly	Seeded assignment	\N
-587	4	Requested	Beginner	\N	Daily	Seeded assignment	2025-11-04 08:21:27.264874
-201	12	Requested	\N	6	\N	Seeded request	2025-11-27 11:59:27.264874
-122	3	Approved	\N	4	\N	Seeded request	2025-11-18 03:12:27.264874
-230	23	Requested	Expert	7	\N	Seeded assignment	\N
-363	1	Approved	\N	7	\N	Seeded assignment	\N
-172	25	Requested	Expert	\N	Weekly	Seeded request	\N
-484	21	Approved	Advanced	\N	\N	Seeded request	2025-11-19 11:07:27.264874
-74	24	Approved	Advanced	8	\N	Seeded assignment	\N
-817	5	Approved	\N	2	\N	Seeded request	\N
-736	3	Approved	Beginner	\N	Daily	Seeded assignment	\N
-87	23	Approved	Expert	2	Daily	Seeded request	2025-11-15 06:59:27.264874
-396	1	Approved	\N	\N	Daily	Seeded assignment	\N
-597	23	Approved	Beginner	8	Rarely	Seeded request	\N
-665	20	Approved	\N	6	\N	Seeded assignment	2025-11-25 05:21:27.264874
-245	6	Requested	\N	\N	Daily	Seeded assignment	\N
-935	1	Approved	\N	9	Rarely	Seeded request	2025-11-06 02:47:27.264874
-193	19	Approved	Beginner	5	Weekly	Seeded request	\N
-32	3	Approved	\N	8	Rarely	Seeded assignment	\N
-766	8	Approved	Expert	8	\N	Seeded assignment	2025-11-09 17:09:27.264874
-932	24	Requested	\N	5	Rarely	Seeded assignment	\N
-17	13	Approved	Advanced	8	Daily	Seeded request	2025-11-13 10:00:27.264874
-645	23	Approved	\N	8	Monthly	Seeded request	\N
-374	9	Approved	\N	\N	\N	Seeded assignment	\N
-328	7	Approved	Beginner	\N	Rarely	Seeded request	\N
-710	10	Approved	Intermediate	5	Monthly	Seeded assignment	\N
-55	9	Approved	Expert	\N	\N	Seeded assignment	2025-11-16 13:36:27.264874
-356	25	Approved	Expert	4	Monthly	Seeded assignment	2025-11-06 12:35:27.264874
-731	23	Requested	Intermediate	3	Weekly	Seeded assignment	2025-11-16 00:07:27.264874
-679	22	Approved	\N	1	Daily	Seeded assignment	\N
-822	16	Requested	Beginner	1	Weekly	Seeded request	2025-11-25 18:19:27.264874
-93	18	Approved	Expert	\N	Weekly	Seeded request	\N
-292	11	Approved	\N	0	Monthly	Seeded assignment	\N
-644	13	Approved	Advanced	9	Monthly	Seeded assignment	\N
-680	8	Requested	Expert	\N	Monthly	Seeded assignment	2025-11-08 23:37:27.264874
-769	24	Approved	\N	\N	Rarely	Seeded assignment	\N
-367	4	Approved	Expert	\N	Daily	Seeded assignment	2025-11-04 05:05:27.264874
-405	11	Approved	\N	\N	Daily	Seeded assignment	\N
-524	13	Requested	Advanced	\N	Daily	Seeded request	2025-11-10 18:23:27.264874
-184	3	Requested	\N	7	Rarely	Seeded request	\N
-215	1	Approved	Intermediate	7	\N	Seeded request	\N
-828	25	Approved	Intermediate	5	Daily	Seeded assignment	2025-11-15 17:01:27.264874
-60	6	Approved	\N	10	Rarely	Seeded assignment	2025-11-08 12:43:27.264874
-223	7	Approved	\N	\N	Rarely	Seeded assignment	\N
-377	3	Requested	\N	8	Rarely	Seeded assignment	\N
-516	24	Approved	Expert	\N	\N	Seeded assignment	\N
-718	16	Requested	\N	\N	Rarely	Seeded request	2025-11-30 04:10:27.264874
-914	13	Requested	Advanced	\N	\N	Seeded assignment	\N
-429	16	Requested	\N	2	Weekly	Seeded request	2025-11-25 09:41:27.264874
-966	22	Approved	Expert	\N	Monthly	Seeded request	2025-11-08 15:39:27.264874
-109	13	Approved	Expert	4	Rarely	Seeded assignment	\N
-482	23	Approved	Advanced	8	\N	Seeded request	\N
-664	20	Approved	\N	\N	\N	Seeded request	\N
-488	24	Requested	\N	5	Weekly	Seeded request	\N
-825	12	Requested	\N	\N	Weekly	Seeded request	\N
-199	6	Requested	\N	4	\N	Seeded assignment	\N
-37	1	Approved	\N	4	\N	Seeded request	2025-11-29 21:17:27.264874
-443	3	Approved	\N	10	Weekly	Seeded assignment	\N
-10	19	Approved	Advanced	4	\N	Seeded request	2025-11-22 12:53:27.264874
-947	21	Approved	Beginner	9	\N	Seeded request	\N
-6	24	Approved	Beginner	\N	Weekly	Seeded assignment	\N
-255	5	Requested	Advanced	2	\N	Seeded request	\N
-686	19	Approved	\N	\N	Rarely	Seeded assignment	\N
-129	25	Approved	Intermediate	7	\N	Seeded assignment	2025-11-10 12:21:27.264874
-913	4	Requested	\N	\N	Rarely	Seeded assignment	2025-11-20 21:00:27.264874
-63	7	Requested	Advanced	10	Rarely	Seeded assignment	2025-12-02 06:51:27.264874
-340	1	Requested	Advanced	\N	Weekly	Seeded assignment	\N
-134	24	Requested	\N	5	\N	Seeded assignment	\N
-326	9	Requested	Advanced	2	\N	Seeded assignment	\N
-661	1	Approved	\N	5	\N	Seeded request	\N
-602	23	Approved	Expert	\N	Rarely	Seeded request	2025-11-06 04:03:27.264874
-912	6	Approved	\N	9	Daily	Seeded assignment	2025-11-26 10:46:27.264874
-707	25	Requested	Beginner	\N	Rarely	Seeded assignment	\N
-27	11	Approved	Advanced	6	Monthly	Seeded request	2025-11-15 09:09:27.264874
-560	10	Requested	\N	10	Weekly	Seeded request	2025-11-08 09:26:27.264874
-498	22	Requested	Beginner	9	Rarely	Seeded assignment	2025-11-11 22:20:27.264874
-447	17	Requested	Beginner	\N	Rarely	Seeded request	\N
-883	11	Requested	Expert	8	\N	Seeded request	2025-11-14 07:37:27.264874
-787	23	Approved	Beginner	4	Weekly	Seeded assignment	2025-11-27 19:10:27.264874
-944	23	Approved	\N	3	Weekly	Seeded assignment	\N
-366	4	Approved	Intermediate	0	Rarely	Seeded assignment	\N
-903	25	Requested	Beginner	1	\N	Seeded assignment	\N
-52	4	Approved	Expert	6	\N	Seeded assignment	\N
-132	21	Approved	\N	6	Weekly	Seeded assignment	2025-11-10 10:39:27.264874
-530	16	Approved	\N	\N	Daily	Seeded assignment	2025-11-13 20:38:27.264874
-432	1	Approved	\N	\N	Rarely	Seeded assignment	\N
-846	1	Requested	\N	9	\N	Seeded assignment	\N
-135	5	Requested	Advanced	5	Daily	Seeded request	2025-11-07 09:40:27.264874
-571	25	Requested	Advanced	4	Monthly	Seeded assignment	2025-11-20 05:28:27.264874
-319	4	Requested	Intermediate	4	Monthly	Seeded request	\N
-974	13	Requested	Expert	0	\N	Seeded assignment	\N
-172	9	Approved	Intermediate	\N	Monthly	Seeded request	2025-11-04 22:29:27.264874
-794	24	Requested	Advanced	10	Monthly	Seeded request	\N
-649	23	Approved	Expert	0	\N	Seeded request	\N
-92	8	Approved	\N	0	Daily	Seeded assignment	\N
-625	1	Requested	\N	3	\N	Seeded request	\N
-873	23	Requested	Intermediate	\N	Weekly	Seeded assignment	\N
-940	10	Approved	\N	\N	\N	Seeded assignment	\N
-492	9	Requested	\N	7	\N	Seeded assignment	2025-11-25 20:03:27.264874
-131	13	Approved	\N	\N	\N	Seeded request	\N
-677	6	Requested	\N	\N	Weekly	Seeded assignment	2025-11-03 07:19:27.264874
-489	13	Approved	Intermediate	\N	\N	Seeded assignment	\N
-256	3	Approved	Intermediate	2	\N	Seeded assignment	2025-11-12 04:35:27.264874
-335	11	Approved	\N	\N	\N	Seeded assignment	\N
-435	4	Requested	Intermediate	10	\N	Seeded assignment	\N
-581	1	Approved	\N	\N	Rarely	Seeded request	\N
-889	4	Approved	Expert	10	Rarely	Seeded assignment	\N
-344	23	Approved	Beginner	10	\N	Seeded request	\N
-622	25	Requested	Intermediate	\N	\N	Seeded assignment	\N
-554	5	Approved	\N	1	Monthly	Seeded assignment	2025-11-13 06:39:27.264874
-544	8	Requested	Expert	9	Monthly	Seeded request	2025-12-02 02:25:27.264874
-341	25	Approved	Advanced	1	\N	Seeded request	2025-11-10 06:06:27.264874
-866	11	Requested	Intermediate	\N	Rarely	Seeded request	\N
-814	8	Requested	Intermediate	\N	\N	Seeded assignment	\N
-443	4	Approved	\N	3	\N	Seeded request	\N
-170	1	Approved	\N	10	\N	Seeded assignment	\N
-875	4	Approved	Advanced	0	Weekly	Seeded request	\N
-458	13	Approved	\N	4	Monthly	Seeded request	2025-11-03 23:27:27.264874
-35	7	Requested	\N	2	Monthly	Seeded assignment	\N
-94	10	Approved	\N	2	Daily	Seeded request	\N
-285	11	Approved	Advanced	\N	\N	Seeded assignment	2025-11-16 06:18:27.264874
-726	6	Requested	Intermediate	3	\N	Seeded request	\N
-910	20	Approved	\N	4	Daily	Seeded assignment	2025-11-15 16:44:27.264874
-162	10	Approved	Advanced	\N	Weekly	Seeded assignment	\N
-38	1	Requested	\N	0	\N	Seeded assignment	\N
-128	1	Approved	Intermediate	\N	\N	Seeded request	2025-11-21 16:52:27.264874
-184	4	Requested	\N	9	Daily	Seeded assignment	\N
-154	7	Requested	\N	3	Daily	Seeded assignment	\N
-839	19	Approved	Expert	3	\N	Seeded assignment	\N
-275	6	Approved	Intermediate	8	\N	Seeded request	\N
-367	3	Requested	\N	9	Daily	Seeded assignment	\N
-497	11	Approved	\N	9	Monthly	Seeded assignment	2025-11-16 00:15:27.264874
-944	7	Approved	Intermediate	\N	Rarely	Seeded assignment	\N
-948	6	Approved	Advanced	5	Daily	Seeded request	\N
-933	23	Requested	Advanced	\N	Weekly	Seeded request	2025-11-26 18:40:27.264874
-957	20	Approved	\N	5	\N	Seeded request	2025-11-19 08:56:27.264874
-635	9	Requested	Beginner	\N	Daily	Seeded request	\N
-310	12	Approved	Advanced	\N	\N	Seeded request	2025-11-27 02:58:27.264874
-289	16	Approved	Beginner	\N	\N	Seeded assignment	2025-11-09 03:44:27.264874
-603	16	Requested	Advanced	2	Weekly	Seeded assignment	2025-11-13 17:05:27.264874
-268	12	Approved	Advanced	5	\N	Seeded assignment	2025-11-06 11:41:27.264874
-549	12	Approved	\N	\N	Rarely	Seeded request	\N
-523	19	Approved	Advanced	7	Daily	Seeded request	2025-11-16 06:50:27.264874
-582	5	Approved	\N	3	Rarely	Seeded assignment	2025-11-24 17:08:27.264874
-188	23	Approved	Beginner	\N	\N	Seeded request	2025-11-30 15:16:27.264874
-836	12	Requested	\N	\N	\N	Seeded request	2025-11-27 04:37:27.264874
-550	11	Approved	Beginner	4	\N	Seeded request	2025-11-03 19:08:27.264874
-113	16	Approved	\N	\N	\N	Seeded assignment	2025-11-16 06:50:27.264874
-776	7	Requested	\N	2	Rarely	Seeded request	\N
-360	8	Approved	Intermediate	\N	Weekly	Seeded request	\N
-725	1	Approved	\N	\N	Monthly	Seeded request	\N
-739	16	Requested	Advanced	2	\N	Seeded assignment	2025-11-07 12:57:27.264874
-112	3	Approved	Advanced	8	Rarely	Seeded request	\N
-71	13	Requested	Beginner	\N	\N	Seeded assignment	2025-11-21 15:25:27.264874
-344	7	Approved	\N	9	Monthly	Seeded request	\N
-248	21	Requested	Expert	\N	Weekly	Seeded request	2025-11-27 10:17:27.264874
-101	18	Approved	\N	3	Daily	Seeded assignment	2025-11-15 03:47:27.264874
-736	4	Approved	Expert	7	\N	Seeded assignment	2025-11-23 08:25:27.264874
-692	16	Requested	Expert	9	Monthly	Seeded assignment	\N
-435	3	Requested	Advanced	\N	Monthly	Seeded assignment	\N
-120	12	Requested	Expert	0	\N	Seeded assignment	\N
-652	16	Requested	Advanced	7	Rarely	Seeded request	2025-11-16 22:53:27.264874
-802	18	Approved	\N	\N	\N	Seeded assignment	2025-11-04 13:02:27.264874
-555	20	Requested	Advanced	0	Weekly	Seeded assignment	\N
-78	22	Requested	\N	9	\N	Seeded request	2025-11-29 17:13:27.264874
-323	6	Approved	Expert	0	Weekly	Seeded assignment	2025-11-16 18:48:27.264874
-664	12	Requested	\N	7	Weekly	Seeded request	\N
-494	16	Requested	\N	\N	Weekly	Seeded assignment	\N
-906	8	Requested	Intermediate	\N	\N	Seeded assignment	\N
-282	13	Approved	\N	6	Weekly	Seeded assignment	\N
-733	20	Requested	\N	10	Rarely	Seeded request	\N
-939	17	Approved	Beginner	\N	Weekly	Seeded request	2025-11-14 21:49:27.264874
-669	25	Requested	Expert	2	\N	Seeded assignment	2025-11-12 06:44:27.264874
-928	16	Approved	Intermediate	\N	Rarely	Seeded request	\N
-305	10	Requested	\N	9	Weekly	Seeded assignment	\N
-574	6	Requested	Advanced	\N	Rarely	Seeded request	\N
-127	17	Approved	\N	0	Monthly	Seeded request	2025-11-30 02:45:27.264874
-319	3	Approved	Expert	\N	Monthly	Seeded assignment	\N
-600	3	Approved	\N	\N	Daily	Seeded assignment	\N
-927	5	Approved	\N	\N	\N	Seeded request	2025-11-16 02:56:27.264874
-300	16	Requested	Expert	\N	Daily	Seeded assignment	\N
-318	10	Approved	Advanced	\N	\N	Seeded assignment	\N
-594	5	Requested	Beginner	7	Weekly	Seeded request	\N
-709	25	Approved	\N	1	Rarely	Seeded request	\N
-279	1	Requested	Intermediate	\N	Daily	Seeded assignment	\N
-366	3	Requested	Expert	\N	Rarely	Seeded assignment	\N
-876	10	Approved	\N	\N	Weekly	Seeded assignment	\N
-209	18	Approved	Advanced	2	\N	Seeded assignment	\N
-42	21	Approved	\N	\N	\N	Seeded request	\N
-755	1	Approved	\N	\N	Weekly	Seeded request	\N
-272	23	Requested	\N	6	Daily	Seeded assignment	\N
-223	23	Requested	Advanced	2	\N	Seeded request	\N
-620	11	Requested	\N	5	Weekly	Seeded assignment	\N
-684	5	Approved	\N	4	Daily	Seeded assignment	2025-11-28 09:42:27.264874
-518	11	Requested	Intermediate	\N	Weekly	Seeded request	2025-11-27 21:20:27.264874
-378	24	Approved	Advanced	9	Monthly	Seeded assignment	\N
-812	19	Approved	Beginner	10	Daily	Seeded request	\N
-321	5	Approved	\N	6	\N	Seeded request	2025-11-07 17:07:27.264874
-625	9	Approved	\N	9	\N	Seeded assignment	\N
-330	11	Approved	\N	10	\N	Seeded assignment	2025-11-28 20:23:27.264874
-856	18	Approved	\N	\N	Daily	Seeded request	\N
-665	12	Requested	\N	3	\N	Seeded request	2025-12-03 01:11:27.264874
-655	13	Requested	Beginner	8	Daily	Seeded assignment	2025-11-29 08:21:27.264874
-75	8	Approved	\N	\N	\N	Seeded request	2025-11-22 21:50:27.264874
-987	16	Approved	Beginner	0	Monthly	Seeded assignment	2025-11-22 09:17:27.264874
-118	23	Approved	\N	9	Weekly	Seeded request	\N
-238	20	Approved	Intermediate	\N	\N	Seeded assignment	2025-11-07 22:04:27.264874
-397	11	Approved	Beginner	6	Rarely	Seeded assignment	2025-11-12 06:50:27.264874
-456	4	Approved	Beginner	10	Weekly	Seeded assignment	\N
-172	1	Requested	Advanced	\N	\N	Seeded request	\N
-229	8	Requested	Beginner	4	Daily	Seeded request	\N
-425	7	Approved	\N	\N	\N	Seeded request	\N
-939	21	Approved	\N	\N	Monthly	Seeded assignment	\N
-84	10	Requested	\N	\N	\N	Seeded assignment	2025-11-20 09:00:27.264874
-543	9	Approved	Beginner	8	Monthly	Seeded assignment	2025-11-05 11:53:27.264874
-932	10	Approved	Advanced	4	Rarely	Seeded request	\N
-293	9	Requested	Intermediate	0	Weekly	Seeded assignment	\N
-373	19	Requested	\N	10	Daily	Seeded request	2025-11-25 08:41:27.264874
-800	3	Approved	Beginner	\N	Monthly	Seeded request	2025-11-25 20:19:27.264874
-166	8	Approved	Expert	2	Daily	Seeded request	\N
-329	21	Approved	\N	2	Weekly	Seeded assignment	2025-11-18 03:51:27.264874
-310	5	Approved	Expert	\N	Rarely	Seeded assignment	2025-12-01 09:29:27.264874
-813	4	Approved	Expert	8	Rarely	Seeded assignment	2025-11-04 15:20:27.264874
-687	1	Approved	\N	\N	Daily	Seeded request	\N
-314	16	Approved	\N	1	Weekly	Seeded assignment	\N
-419	16	Approved	\N	6	Weekly	Seeded assignment	2025-11-27 00:59:27.264874
-662	20	Requested	Expert	\N	Rarely	Seeded assignment	2025-11-14 15:28:27.264874
-104	18	Approved	\N	6	Rarely	Seeded request	\N
-777	12	Approved	Advanced	9	Daily	Seeded assignment	2025-11-16 18:00:27.264874
-180	21	Requested	Expert	9	Daily	Seeded assignment	\N
-74	10	Requested	Expert	\N	Rarely	Seeded request	2025-11-12 14:47:27.264874
-955	25	Approved	\N	\N	\N	Seeded assignment	2025-11-18 06:13:27.264874
-965	22	Requested	\N	3	Rarely	Seeded assignment	2025-11-08 16:20:27.264874
-399	5	Approved	Intermediate	\N	\N	Seeded assignment	2025-11-10 05:39:27.264874
-639	24	Requested	Intermediate	2	Daily	Seeded assignment	2025-11-29 11:13:27.264874
-868	22	Approved	\N	9	\N	Seeded request	2025-11-03 12:21:27.264874
-2	12	Requested	\N	\N	\N	Seeded assignment	\N
-796	12	Requested	\N	4	Weekly	Seeded request	\N
-299	21	Approved	Beginner	\N	Rarely	Seeded assignment	\N
-536	9	Approved	Advanced	10	Monthly	Seeded assignment	\N
-566	3	Approved	\N	4	\N	Seeded assignment	2025-12-02 10:57:27.264874
-533	18	Requested	Expert	\N	Rarely	Seeded assignment	\N
-495	7	Approved	\N	5	Monthly	Seeded assignment	\N
-858	23	Requested	\N	\N	Weekly	Seeded request	2025-11-28 12:30:27.264874
-176	8	Approved	\N	6	Monthly	Seeded assignment	2025-12-02 22:50:27.264874
-918	11	Requested	\N	10	\N	Seeded request	\N
-516	10	Requested	Advanced	\N	\N	Seeded request	\N
-502	17	Approved	\N	10	Rarely	Seeded request	\N
-832	6	Approved	Beginner	6	Monthly	Seeded assignment	2025-11-22 20:07:27.264874
-713	10	Requested	Beginner	3	Daily	Seeded assignment	\N
-807	5	Approved	Intermediate	10	Monthly	Seeded assignment	2025-11-14 07:18:27.264874
-41	10	Approved	Expert	0	\N	Seeded assignment	\N
-182	22	Approved	Beginner	4	\N	Seeded assignment	\N
-769	10	Requested	Advanced	6	Rarely	Seeded request	\N
-732	21	Approved	\N	8	Daily	Seeded request	\N
-88	6	Approved	Expert	7	Rarely	Seeded assignment	\N
-123	4	Requested	\N	\N	\N	Seeded request	\N
-693	21	Requested	\N	\N	Weekly	Seeded assignment	\N
-798	6	Requested	Advanced	\N	Monthly	Seeded assignment	2025-11-17 18:24:27.264874
-874	6	Requested	Expert	\N	Weekly	Seeded assignment	\N
-841	1	Approved	Intermediate	\N	\N	Seeded assignment	2025-11-18 07:03:27.264874
-10	18	Requested	Advanced	\N	Monthly	Seeded request	\N
-346	1	Requested	Beginner	2	Daily	Seeded assignment	\N
-591	10	Approved	\N	\N	Weekly	Seeded assignment	\N
-817	20	Approved	\N	0	Monthly	Seeded request	\N
-23	23	Approved	Intermediate	10	\N	Seeded request	\N
-610	3	Approved	\N	\N	Monthly	Seeded assignment	2025-11-23 10:41:27.264874
-763	18	Approved	\N	4	\N	Seeded assignment	2025-11-22 21:50:27.264874
-521	10	Requested	Advanced	0	Daily	Seeded assignment	\N
-665	5	Requested	\N	9	Weekly	Seeded assignment	\N
-590	4	Approved	\N	\N	Daily	Seeded assignment	\N
-696	22	Approved	Expert	7	Weekly	Seeded assignment	2025-11-10 07:33:27.264874
-779	20	Approved	Beginner	4	Rarely	Seeded assignment	\N
-972	6	Approved	Expert	\N	Weekly	Seeded assignment	\N
-752	18	Requested	Expert	5	\N	Seeded request	\N
-951	25	Approved	\N	\N	Weekly	Seeded request	2025-11-18 12:56:27.264874
-848	12	Requested	\N	2	\N	Seeded assignment	\N
-698	17	Approved	\N	4	\N	Seeded assignment	2025-11-20 16:13:27.264874
-125	16	Approved	Advanced	8	\N	Seeded assignment	\N
-381	12	Approved	\N	\N	Daily	Seeded request	\N
-844	25	Approved	Intermediate	7	Weekly	Seeded request	2025-12-02 11:52:27.264874
-729	16	Requested	\N	5	\N	Seeded assignment	\N
-911	8	Requested	Intermediate	\N	Weekly	Seeded assignment	\N
-304	4	Requested	Beginner	3	Rarely	Seeded assignment	2025-11-24 02:50:27.264874
-444	1	Approved	\N	5	Monthly	Seeded assignment	2025-11-25 04:34:27.264874
-594	12	Requested	Expert	6	\N	Seeded assignment	\N
-98	18	Requested	Beginner	4	\N	Seeded assignment	2025-11-23 05:39:27.264874
-181	3	Approved	\N	9	Daily	Seeded request	\N
-827	20	Approved	Advanced	2	Monthly	Seeded request	2025-11-29 06:29:27.264874
-412	1	Approved	Intermediate	7	Rarely	Seeded assignment	\N
-290	7	Approved	Intermediate	\N	\N	Seeded assignment	2025-11-15 01:26:27.264874
-520	25	Approved	Expert	\N	Monthly	Seeded request	\N
-688	25	Approved	\N	\N	Weekly	Seeded request	\N
-66	20	Approved	Expert	9	\N	Seeded request	\N
-89	20	Requested	Beginner	5	Weekly	Seeded request	2025-11-25 06:22:27.264874
-640	20	Requested	Advanced	0	\N	Seeded request	2025-11-22 15:57:27.264874
-248	17	Approved	Intermediate	9	\N	Seeded assignment	\N
-250	12	Approved	Intermediate	7	Rarely	Seeded request	2025-11-08 16:01:27.264874
-929	7	Approved	\N	9	Monthly	Seeded assignment	\N
-940	24	Requested	\N	8	\N	Seeded request	2025-11-17 10:53:27.264874
-255	20	Requested	\N	9	\N	Seeded request	\N
-753	6	Requested	Beginner	\N	Daily	Seeded request	2025-11-19 08:17:27.264874
-794	10	Approved	Advanced	\N	Monthly	Seeded assignment	2025-11-09 06:21:27.264874
-532	22	Approved	Advanced	\N	\N	Seeded request	\N
-578	4	Approved	\N	\N	Weekly	Seeded assignment	\N
-606	19	Approved	\N	10	\N	Seeded assignment	\N
-642	1	Approved	Intermediate	7	Weekly	Seeded assignment	2025-11-24 09:00:27.264874
-474	9	Requested	Advanced	7	Rarely	Seeded request	\N
-856	19	Approved	Beginner	9	\N	Seeded assignment	2025-11-27 11:13:27.264874
-468	16	Requested	\N	0	\N	Seeded assignment	2025-11-16 17:49:27.264874
-543	1	Approved	Intermediate	\N	\N	Seeded assignment	2025-12-01 21:07:27.264874
-799	21	Requested	Beginner	2	Daily	Seeded request	2025-11-05 07:29:27.264874
-851	9	Requested	Advanced	\N	Monthly	Seeded request	\N
-705	3	Approved	\N	\N	\N	Seeded request	\N
-733	5	Approved	Beginner	\N	Rarely	Seeded request	\N
-157	6	Requested	\N	1	Rarely	Seeded assignment	\N
-306	8	Requested	Intermediate	0	Rarely	Seeded assignment	\N
-139	20	Requested	\N	4	Monthly	Seeded request	\N
-614	20	Requested	\N	4	Monthly	Seeded assignment	\N
-508	11	Requested	Advanced	6	\N	Seeded assignment	\N
-246	25	Approved	\N	\N	Weekly	Seeded assignment	2025-11-07 00:29:27.264874
-973	10	Requested	Intermediate	5	Monthly	Seeded assignment	2025-11-12 18:38:27.264874
-952	16	Approved	Intermediate	3	Rarely	Seeded request	2025-11-29 14:24:27.264874
-633	18	Requested	Advanced	1	Daily	Seeded assignment	\N
-706	13	Approved	\N	7	Weekly	Seeded assignment	2025-11-10 12:10:27.264874
-354	25	Approved	Expert	\N	Rarely	Seeded assignment	\N
-900	18	Approved	\N	4	Monthly	Seeded request	\N
-267	25	Requested	Intermediate	10	\N	Seeded assignment	2025-11-06 01:19:27.264874
-290	23	Approved	Intermediate	0	\N	Seeded request	2025-11-21 21:25:27.264874
-813	3	Approved	Intermediate	4	Weekly	Seeded assignment	\N
-420	8	Approved	Advanced	3	\N	Seeded request	2025-11-13 20:43:27.264874
-976	22	Approved	\N	6	Monthly	Seeded assignment	2025-11-20 23:36:27.264874
-249	17	Requested	Intermediate	10	\N	Seeded request	\N
-929	23	Requested	\N	8	Monthly	Seeded assignment	\N
-36	7	Approved	\N	8	\N	Seeded assignment	2025-11-29 14:24:27.264874
-152	1	Requested	\N	8	\N	Seeded assignment	\N
-723	16	Approved	Intermediate	\N	Monthly	Seeded request	2025-11-05 09:01:27.264874
-505	20	Requested	\N	10	\N	Seeded request	\N
-857	7	Approved	Expert	\N	\N	Seeded assignment	2025-11-27 20:20:27.264874
-817	12	Requested	\N	\N	\N	Seeded request	\N
-960	23	Approved	Beginner	\N	Daily	Seeded assignment	\N
-62	24	Approved	\N	7	Monthly	Seeded request	\N
-802	19	Approved	\N	\N	\N	Seeded request	2025-11-12 20:46:27.264874
-819	3	Requested	Advanced	1	Monthly	Seeded request	2025-11-03 13:29:27.264874
-194	17	Approved	Expert	5	Daily	Seeded assignment	2025-11-23 05:15:27.264874
-5	1	Requested	Intermediate	\N	\N	Seeded request	\N
-938	9	Requested	\N	\N	Rarely	Seeded assignment	\N
-61	6	Requested	Advanced	\N	\N	Seeded request	\N
-513	17	Approved	Advanced	5	\N	Seeded assignment	\N
-459	9	Approved	Advanced	\N	Daily	Seeded request	\N
-810	7	Approved	Beginner	0	Weekly	Seeded request	\N
-425	23	Requested	Advanced	10	Rarely	Seeded assignment	2025-11-12 07:50:27.264874
-901	6	Requested	Advanced	1	Rarely	Seeded request	\N
-554	12	Requested	Intermediate	5	Daily	Seeded request	2025-11-18 04:22:27.264874
-471	11	Approved	\N	\N	\N	Seeded assignment	\N
-749	8	Approved	\N	\N	\N	Seeded assignment	2025-12-02 00:21:27.264874
-287	4	Approved	\N	10	Daily	Seeded assignment	2025-11-09 19:40:27.264874
-26	13	Approved	Intermediate	4	\N	Seeded request	2025-11-28 14:36:27.264874
-130	8	Approved	\N	0	Daily	Seeded request	\N
-72	20	Approved	Beginner	3	Rarely	Seeded request	\N
-512	11	Requested	\N	9	\N	Seeded assignment	\N
-39	12	Approved	Advanced	\N	Monthly	Seeded request	\N
-529	17	Approved	Intermediate	\N	Daily	Seeded request	\N
-346	9	Requested	Expert	5	\N	Seeded assignment	\N
-921	19	Approved	\N	8	Daily	Seeded assignment	2025-11-29 05:40:27.264874
-212	8	Approved	\N	7	\N	Seeded assignment	\N
-253	19	Requested	Beginner	\N	\N	Seeded request	\N
-151	19	Approved	Beginner	0	\N	Seeded assignment	\N
-777	20	Approved	Beginner	0	Rarely	Seeded request	\N
-582	20	Approved	Expert	3	Rarely	Seeded assignment	\N
-662	12	Approved	Expert	9	\N	Seeded request	\N
-737	4	Approved	Intermediate	0	\N	Seeded assignment	2025-11-19 23:53:27.264874
-165	16	Requested	Beginner	7	Monthly	Seeded assignment	2025-11-21 21:04:27.264874
-412	9	Requested	Intermediate	2	\N	Seeded assignment	2025-12-02 10:17:27.264874
-788	10	Approved	Intermediate	6	\N	Seeded request	\N
-742	10	Approved	Expert	4	\N	Seeded request	2025-11-30 05:44:27.264874
-782	4	Requested	Advanced	2	Monthly	Seeded assignment	\N
-610	4	Approved	\N	0	Monthly	Seeded request	\N
-401	16	Approved	\N	3	Monthly	Seeded assignment	\N
-570	16	Requested	\N	\N	Daily	Seeded assignment	\N
-239	11	Requested	\N	1	Rarely	Seeded request	\N
-227	7	Requested	\N	\N	\N	Seeded assignment	2025-11-25 21:01:27.264874
-31	11	Approved	Intermediate	\N	Monthly	Seeded assignment	\N
-123	3	Requested	Intermediate	2	Monthly	Seeded assignment	2025-11-30 00:29:27.264874
-756	19	Requested	Advanced	6	Weekly	Seeded request	\N
-444	9	Approved	\N	\N	Daily	Seeded assignment	\N
-641	6	Requested	Advanced	3	\N	Seeded assignment	2025-11-27 19:50:27.264874
-653	13	Requested	\N	4	Monthly	Seeded request	\N
-205	6	Approved	Intermediate	\N	Rarely	Seeded request	2025-12-01 05:40:27.264874
-830	7	Requested	Beginner	\N	Weekly	Seeded request	2025-12-02 13:44:27.264874
-89	22	Approved	Advanced	3	Weekly	Seeded assignment	\N
-283	24	Requested	\N	5	Daily	Seeded request	\N
-24	19	Requested	\N	\N	\N	Seeded request	2025-11-15 02:31:27.264874
-608	17	Requested	Intermediate	10	Weekly	Seeded assignment	\N
-750	6	Requested	Expert	0	\N	Seeded assignment	2025-12-02 06:00:27.264874
-827	22	Requested	Expert	5	Rarely	Seeded assignment	\N
-80	8	Approved	\N	\N	Monthly	Seeded request	\N
-336	23	Requested	Beginner	9	Daily	Seeded request	\N
-763	3	Approved	\N	5	\N	Seeded assignment	2025-12-02 04:12:27.264874
-507	11	Approved	\N	\N	Daily	Seeded assignment	\N
-540	12	Approved	\N	9	Weekly	Seeded assignment	2025-12-01 03:54:27.264874
-29	7	Requested	\N	6	Weekly	Seeded request	2025-11-21 18:31:27.264874
-252	16	Approved	\N	7	Rarely	Seeded assignment	\N
-596	11	Approved	Beginner	4	Monthly	Seeded request	2025-11-10 22:27:27.264874
-426	20	Requested	Intermediate	10	\N	Seeded request	\N
-563	1	Requested	Beginner	7	Rarely	Seeded assignment	\N
-512	1	Requested	\N	1	\N	Seeded assignment	\N
-258	5	Requested	\N	9	\N	Seeded assignment	\N
-428	3	Requested	\N	10	Monthly	Seeded request	\N
-389	6	Approved	\N	\N	\N	Seeded assignment	2025-11-21 15:18:27.264874
-758	19	Approved	Advanced	4	Weekly	Seeded assignment	\N
-584	21	Requested	Beginner	\N	Monthly	Seeded assignment	2025-11-25 20:22:27.264874
-767	6	Approved	\N	\N	Daily	Seeded assignment	\N
-318	8	Approved	Beginner	\N	\N	Seeded assignment	2025-11-13 01:33:27.264874
-978	17	Approved	\N	\N	\N	Seeded assignment	\N
-759	5	Approved	Advanced	8	Rarely	Seeded request	\N
-843	9	Approved	Advanced	10	Monthly	Seeded request	2025-11-09 17:26:27.264874
-131	16	Requested	\N	\N	Monthly	Seeded request	2025-11-24 23:00:27.264874
-470	8	Approved	\N	4	\N	Seeded assignment	2025-11-21 19:33:27.264874
-615	24	Approved	Advanced	\N	Monthly	Seeded assignment	2025-11-23 09:46:27.264874
-986	6	Requested	Advanced	6	Rarely	Seeded request	2025-11-05 11:30:27.264874
-738	22	Approved	\N	5	Monthly	Seeded assignment	2025-11-12 20:55:27.264874
-234	9	Requested	\N	8	Weekly	Seeded request	2025-11-30 15:47:27.264874
-672	3	Requested	Expert	7	Weekly	Seeded request	2025-11-14 23:10:27.264874
-948	25	Requested	Expert	1	\N	Seeded assignment	\N
-341	6	Approved	Beginner	\N	Daily	Seeded request	\N
-85	19	Approved	Beginner	\N	\N	Seeded assignment	2025-11-17 06:14:27.264874
-643	13	Requested	\N	\N	Weekly	Seeded assignment	\N
-371	25	Requested	\N	1	Rarely	Seeded assignment	2025-11-27 22:26:27.264874
-632	6	Approved	Expert	7	\N	Seeded request	\N
-107	5	Approved	\N	2	\N	Seeded request	2025-11-26 19:31:27.264874
-820	5	Approved	Expert	9	Rarely	Seeded assignment	2025-11-10 01:37:27.264874
-286	6	Approved	Expert	\N	\N	Seeded request	2025-11-25 04:51:27.264874
-99	8	Requested	Expert	6	Monthly	Seeded request	\N
-334	23	Approved	\N	10	\N	Seeded request	\N
-609	13	Approved	Advanced	\N	Monthly	Seeded assignment	\N
-770	11	Requested	Beginner	3	Rarely	Seeded assignment	\N
-868	20	Approved	Intermediate	5	\N	Seeded assignment	\N
-39	22	Approved	\N	0	Daily	Seeded assignment	\N
-544	10	Requested	\N	1	Daily	Seeded assignment	\N
-805	1	Approved	\N	\N	\N	Seeded request	2025-11-18 17:31:27.264874
-135	22	Requested	Advanced	0	Monthly	Seeded assignment	\N
-814	10	Approved	Advanced	0	\N	Seeded request	\N
-332	20	Requested	\N	\N	Rarely	Seeded assignment	2025-11-20 02:45:27.264874
-325	16	Requested	Beginner	\N	\N	Seeded request	\N
-484	12	Approved	\N	1	Rarely	Seeded request	2025-11-06 08:22:27.264874
-958	16	Approved	\N	\N	Weekly	Seeded assignment	2025-11-21 04:17:27.264874
-362	8	Requested	Beginner	10	\N	Seeded assignment	2025-11-24 16:02:27.264874
-880	18	Requested	Intermediate	\N	\N	Seeded assignment	\N
-241	16	Approved	\N	\N	\N	Seeded assignment	2025-11-28 10:09:27.264874
-406	23	Requested	Intermediate	1	Monthly	Seeded assignment	2025-11-24 16:12:27.264874
-348	20	Requested	\N	7	\N	Seeded assignment	\N
-12	9	Approved	Beginner	\N	Monthly	Seeded assignment	\N
-619	10	Requested	Expert	\N	\N	Seeded assignment	\N
-3	21	Approved	Expert	0	\N	Seeded request	\N
-915	18	Approved	Beginner	\N	Daily	Seeded request	\N
-845	23	Requested	Expert	9	Monthly	Seeded assignment	2025-11-25 13:15:27.264874
-956	3	Approved	Intermediate	10	Monthly	Seeded request	2025-11-29 06:02:27.264874
-510	17	Requested	Beginner	\N	Daily	Seeded assignment	\N
-62	8	Approved	\N	6	\N	Seeded request	2025-11-21 13:03:27.264874
-111	10	Requested	\N	\N	\N	Seeded request	2025-12-02 05:55:27.264874
-514	8	Approved	Intermediate	7	\N	Seeded assignment	2025-11-28 12:35:27.264874
-206	10	Approved	Beginner	\N	\N	Seeded request	2025-11-20 03:59:27.264874
-109	16	Requested	Intermediate	\N	Weekly	Seeded assignment	\N
-834	1	Approved	Beginner	\N	\N	Seeded request	\N
-917	24	Requested	\N	7	\N	Seeded assignment	\N
-882	1	Requested	\N	\N	Daily	Seeded assignment	2025-11-15 01:01:27.264874
-694	13	Requested	\N	\N	Rarely	Seeded request	2025-11-26 20:58:27.264874
-237	10	Approved	Intermediate	3	Rarely	Seeded assignment	2025-11-24 03:48:27.264874
-812	4	Requested	Expert	\N	Daily	Seeded request	\N
-829	17	Approved	\N	2	Rarely	Seeded request	\N
-5	11	Approved	Intermediate	7	Daily	Seeded assignment	\N
-500	12	Requested	Beginner	\N	Weekly	Seeded assignment	2025-11-12 12:14:27.264874
-462	11	Approved	Advanced	\N	\N	Seeded request	\N
-33	4	Requested	Expert	\N	Daily	Seeded assignment	2025-11-05 18:04:27.264874
-408	9	Requested	\N	6	Weekly	Seeded assignment	\N
-343	3	Approved	\N	\N	Weekly	Seeded request	\N
-219	7	Approved	\N	3	Daily	Seeded assignment	\N
-360	10	Requested	Beginner	2	Rarely	Seeded assignment	\N
-678	25	Requested	\N	1	\N	Seeded request	\N
-536	11	Approved	Intermediate	\N	Weekly	Seeded assignment	\N
-552	7	Requested	\N	\N	\N	Seeded assignment	2025-11-19 17:45:27.264874
-46	20	Approved	Advanced	3	\N	Seeded request	2025-11-27 23:36:27.264874
-718	13	Approved	Beginner	6	Monthly	Seeded assignment	\N
-46	12	Approved	\N	\N	Monthly	Seeded assignment	\N
-45	25	Approved	\N	4	Weekly	Seeded assignment	\N
-512	9	Requested	Beginner	10	\N	Seeded request	\N
-282	16	Approved	Beginner	3	\N	Seeded assignment	\N
-284	9	Requested	Advanced	\N	\N	Seeded request	2025-11-16 09:51:27.264874
-714	3	Approved	\N	5	\N	Seeded assignment	2025-11-26 08:25:27.264874
-98	4	Requested	Expert	6	Rarely	Seeded assignment	2025-11-27 04:28:27.264874
-226	20	Requested	\N	\N	Weekly	Seeded assignment	2025-11-12 16:24:27.264874
-174	10	Approved	Intermediate	5	Daily	Seeded assignment	\N
-76	7	Approved	Expert	3	\N	Seeded assignment	\N
-777	22	Approved	Intermediate	\N	Daily	Seeded assignment	2025-11-27 21:09:27.264874
-854	17	Approved	Expert	\N	Weekly	Seeded request	\N
-236	17	Approved	Expert	1	\N	Seeded assignment	\N
-623	6	Requested	Expert	10	Daily	Seeded assignment	2025-11-24 19:40:27.264874
-112	19	Approved	\N	3	\N	Seeded assignment	2025-12-01 19:21:27.264874
-674	4	Requested	Advanced	\N	Monthly	Seeded assignment	\N
-73	12	Approved	Advanced	10	Rarely	Seeded assignment	\N
-828	6	Approved	Beginner	4	Rarely	Seeded request	2025-11-30 04:58:27.264874
-233	20	Requested	Advanced	\N	Weekly	Seeded assignment	\N
-671	25	Approved	Expert	2	Monthly	Seeded request	\N
-774	3	Requested	Intermediate	6	Weekly	Seeded assignment	2025-11-11 13:02:27.264874
-271	23	Requested	Intermediate	4	Rarely	Seeded assignment	\N
-686	4	Approved	Beginner	2	Rarely	Seeded request	\N
-983	19	Approved	Intermediate	7	Rarely	Seeded request	\N
-946	18	Requested	\N	2	Rarely	Seeded request	2025-11-10 20:14:27.264874
-10	4	Requested	Intermediate	1	Weekly	Seeded request	\N
-40	12	Approved	\N	7	\N	Seeded assignment	\N
-182	12	Approved	\N	\N	Daily	Seeded assignment	\N
-92	10	Approved	\N	\N	Weekly	Seeded request	2025-11-26 02:21:27.264874
-450	23	Approved	Beginner	\N	Rarely	Seeded request	\N
-274	11	Approved	\N	6	\N	Seeded assignment	\N
-277	12	Approved	Expert	\N	Rarely	Seeded request	2025-11-13 09:44:27.264874
-763	4	Requested	Intermediate	1	\N	Seeded assignment	\N
-31	9	Approved	Expert	10	\N	Seeded request	\N
-261	12	Requested	Intermediate	6	Monthly	Seeded request	\N
-273	23	Requested	Advanced	\N	Weekly	Seeded request	\N
-348	12	Requested	\N	0	Monthly	Seeded assignment	\N
-469	25	Approved	\N	\N	\N	Seeded assignment	2025-11-25 08:08:27.264874
-908	21	Approved	\N	8	Weekly	Seeded assignment	2025-11-20 06:08:27.264874
-553	8	Requested	\N	\N	\N	Seeded assignment	\N
-72	22	Approved	Intermediate	7	Rarely	Seeded assignment	2025-11-25 21:43:27.264874
-442	9	Approved	\N	\N	Weekly	Seeded request	\N
-48	6	Approved	\N	5	Weekly	Seeded request	\N
-79	23	Approved	Intermediate	7	\N	Seeded request	\N
-464	7	Approved	\N	1	\N	Seeded request	2025-11-29 15:16:27.264874
-16	17	Approved	Intermediate	8	Daily	Seeded assignment	\N
-716	24	Requested	Beginner	4	\N	Seeded request	2025-11-13 15:51:27.264874
-102	22	Requested	Expert	\N	Weekly	Seeded request	2025-11-29 17:37:27.264874
-911	24	Requested	Beginner	\N	\N	Seeded assignment	2025-11-13 15:26:27.264874
-898	22	Requested	Advanced	\N	Daily	Seeded request	\N
-245	25	Approved	Intermediate	\N	\N	Seeded request	\N
-526	3	Requested	Advanced	5	Daily	Seeded assignment	2025-11-28 01:05:27.264874
-730	20	Approved	Intermediate	1	Rarely	Seeded assignment	\N
-848	22	Requested	Intermediate	\N	\N	Seeded request	\N
-143	22	Approved	\N	7	Daily	Seeded assignment	\N
-366	19	Approved	Expert	6	\N	Seeded assignment	2025-11-26 05:57:27.264874
-343	4	Approved	\N	\N	Rarely	Seeded request	2025-11-08 10:38:27.264874
-677	25	Approved	Advanced	\N	Monthly	Seeded request	2025-11-04 00:13:27.264874
-461	20	Requested	Beginner	3	Weekly	Seeded assignment	\N
-614	22	Approved	\N	3	Monthly	Seeded assignment	2025-11-06 05:00:27.264874
-613	17	Requested	Beginner	\N	Monthly	Seeded request	\N
-166	24	Requested	Expert	4	\N	Seeded assignment	2025-11-11 15:28:27.264874
-724	7	Approved	\N	\N	Rarely	Seeded request	2025-11-03 08:14:27.264874
-247	10	Requested	Beginner	8	\N	Seeded assignment	2025-12-01 11:36:27.264874
-337	18	Requested	\N	9	Weekly	Seeded assignment	\N
-504	3	Approved	Advanced	2	Rarely	Seeded assignment	\N
-478	16	Requested	\N	\N	Monthly	Seeded request	\N
-666	25	Approved	Intermediate	\N	Monthly	Seeded assignment	\N
-369	7	Requested	\N	\N	Rarely	Seeded assignment	\N
-440	19	Approved	Advanced	\N	\N	Seeded request	2025-11-10 17:16:27.264874
-295	9	Requested	Beginner	4	Daily	Seeded request	\N
-830	23	Requested	Expert	4	Daily	Seeded request	\N
-358	13	Requested	Beginner	0	Weekly	Seeded assignment	\N
-855	6	Approved	Intermediate	4	Monthly	Seeded request	\N
-413	16	Approved	\N	1	\N	Seeded assignment	\N
-571	6	Requested	Beginner	2	\N	Seeded assignment	\N
-936	17	Approved	Expert	\N	Rarely	Seeded request	2025-12-01 09:07:27.264874
-949	22	Requested	Beginner	\N	Daily	Seeded request	2025-11-08 15:14:27.264874
-474	11	Approved	Advanced	\N	Rarely	Seeded assignment	\N
-589	19	Requested	\N	5	\N	Seeded assignment	\N
-150	21	Approved	\N	\N	\N	Seeded assignment	\N
-34	22	Requested	\N	\N	Monthly	Seeded request	\N
-297	18	Approved	\N	1	\N	Seeded request	\N
-682	25	Approved	Expert	3	Rarely	Seeded request	2025-11-04 08:12:27.264874
-145	4	Approved	Expert	1	Rarely	Seeded assignment	\N
-365	20	Requested	Intermediate	9	Weekly	Seeded assignment	\N
-819	18	Requested	\N	7	\N	Seeded assignment	2025-11-23 20:48:27.264874
-400	18	Requested	Intermediate	6	Daily	Seeded assignment	2025-11-14 04:03:27.264874
-540	20	Approved	Intermediate	10	\N	Seeded request	\N
-164	5	Requested	Advanced	5	Rarely	Seeded assignment	\N
-473	18	Approved	Intermediate	4	Rarely	Seeded assignment	\N
-208	10	Requested	Expert	\N	\N	Seeded request	\N
-813	18	Requested	Intermediate	2	\N	Seeded assignment	2025-11-22 16:26:27.264874
-387	23	Requested	\N	2	\N	Seeded request	2025-11-25 08:02:27.264874
-163	4	Approved	Intermediate	4	Monthly	Seeded assignment	\N
-104	4	Approved	Advanced	\N	Monthly	Seeded assignment	\N
-173	21	Requested	Expert	\N	Daily	Seeded assignment	\N
-257	17	Requested	\N	10	Weekly	Seeded request	\N
-319	19	Approved	Advanced	\N	Weekly	Seeded assignment	\N
-927	22	Approved	\N	\N	\N	Seeded assignment	\N
-607	23	Approved	Intermediate	2	Daily	Seeded assignment	\N
-707	6	Requested	\N	10	\N	Seeded assignment	\N
-235	23	Approved	Beginner	\N	Daily	Seeded request	\N
-639	8	Approved	Intermediate	\N	Monthly	Seeded assignment	\N
-792	21	Approved	Beginner	\N	\N	Seeded request	2025-11-03 22:28:27.264874
-455	4	Approved	Advanced	9	\N	Seeded assignment	\N
-566	19	Approved	\N	5	\N	Seeded request	2025-11-06 15:44:27.264874
-942	9	Requested	\N	1	\N	Seeded request	\N
-96	20	Approved	Advanced	9	\N	Seeded assignment	2025-11-23 14:56:27.264874
-650	21	Requested	\N	\N	Daily	Seeded assignment	\N
-140	13	Approved	Beginner	\N	\N	Seeded assignment	\N
-883	9	Approved	\N	4	\N	Seeded assignment	\N
-583	21	Requested	Expert	6	\N	Seeded assignment	\N
-97	7	Approved	\N	2	Rarely	Seeded request	\N
-801	4	Approved	Intermediate	\N	\N	Seeded assignment	2025-11-24 00:56:27.264874
-856	4	Approved	\N	\N	Rarely	Seeded assignment	2025-11-11 00:32:27.264874
-547	19	Approved	\N	\N	Rarely	Seeded request	\N
-261	5	Requested	Expert	5	\N	Seeded assignment	\N
-126	8	Approved	Intermediate	4	Monthly	Seeded assignment	\N
-159	6	Approved	Advanced	0	\N	Seeded request	2025-11-05 12:45:27.264874
-511	8	Approved	Expert	5	\N	Seeded request	2025-11-29 14:38:27.264874
-326	11	Requested	Advanced	8	Daily	Seeded request	\N
-578	19	Approved	\N	8	Daily	Seeded request	2025-11-29 21:20:27.264874
-772	10	Requested	Intermediate	7	Weekly	Seeded assignment	2025-11-15 05:07:27.264874
-850	4	Approved	Intermediate	10	\N	Seeded assignment	\N
-838	9	Approved	Advanced	0	\N	Seeded request	\N
-415	24	Requested	Intermediate	6	\N	Seeded request	2025-11-29 10:06:27.264874
-968	8	Requested	Beginner	\N	\N	Seeded request	2025-11-15 23:05:27.264874
-73	5	Requested	Expert	\N	Weekly	Seeded request	\N
-218	3	Approved	Expert	6	\N	Seeded assignment	\N
-212	10	Approved	\N	8	\N	Seeded assignment	2025-11-17 00:16:27.264874
-173	17	Approved	Intermediate	3	Daily	Seeded assignment	2025-11-10 14:45:27.264874
-256	18	Approved	Intermediate	\N	Weekly	Seeded assignment	\N
-434	7	Requested	Advanced	\N	Monthly	Seeded request	2025-11-25 17:22:27.264874
-492	11	Requested	Advanced	\N	\N	Seeded request	2025-11-12 15:32:27.264874
-561	24	Approved	\N	0	\N	Seeded assignment	2025-11-28 22:44:27.264874
-378	8	Requested	Intermediate	7	Rarely	Seeded request	2025-11-19 18:28:27.264874
-214	1	Requested	\N	4	\N	Seeded assignment	2025-11-27 12:21:27.264874
-75	24	Approved	\N	8	Daily	Seeded request	\N
-792	17	Requested	\N	\N	Rarely	Seeded request	\N
-722	12	Requested	Expert	6	Rarely	Seeded assignment	2025-11-24 06:36:27.264874
-496	16	Approved	Advanced	3	Daily	Seeded assignment	2025-11-08 03:13:27.264874
-784	17	Requested	Advanced	\N	Daily	Seeded request	\N
-294	21	Approved	Advanced	\N	Rarely	Seeded assignment	2025-11-19 15:36:27.264874
-382	9	Approved	\N	\N	Daily	Seeded assignment	2025-11-15 01:56:27.264874
-953	10	Requested	Expert	6	Monthly	Seeded assignment	\N
-483	23	Requested	Beginner	\N	\N	Seeded assignment	\N
-668	24	Approved	Intermediate	\N	Monthly	Seeded assignment	\N
-599	16	Requested	Beginner	\N	Monthly	Seeded assignment	\N
-503	25	Approved	\N	6	Daily	Seeded assignment	\N
-314	13	Requested	Intermediate	7	Rarely	Seeded assignment	2025-11-16 03:18:27.264874
-374	11	Approved	Expert	0	Rarely	Seeded assignment	2025-11-09 17:44:27.264874
-148	21	Requested	\N	\N	Weekly	Seeded assignment	2025-11-16 17:37:27.264874
-785	3	Approved	Beginner	\N	Weekly	Seeded assignment	2025-11-26 03:39:27.264874
-106	1	Approved	Intermediate	7	\N	Seeded assignment	2025-11-24 05:12:27.264874
-628	23	Approved	\N	\N	\N	Seeded assignment	\N
-764	8	Approved	\N	\N	Daily	Seeded assignment	2025-12-01 18:48:27.264874
-116	6	Approved	Intermediate	\N	\N	Seeded assignment	\N
-448	10	Requested	Intermediate	1	Monthly	Seeded assignment	\N
-601	1	Approved	\N	5	Daily	Seeded assignment	\N
-181	19	Approved	Intermediate	\N	Rarely	Seeded request	\N
-890	24	Approved	Expert	3	Weekly	Seeded request	2025-11-08 10:38:27.264874
-55	11	Requested	Beginner	\N	\N	Seeded assignment	\N
-426	5	Requested	\N	\N	\N	Seeded assignment	2025-11-22 19:44:27.264874
-491	10	Approved	\N	\N	\N	Seeded request	\N
-278	18	Requested	\N	\N	Rarely	Seeded request	\N
-452	1	Requested	\N	1	\N	Seeded request	\N
-38	11	Approved	Beginner	\N	\N	Seeded assignment	\N
-544	24	Requested	Advanced	7	\N	Seeded request	2025-11-27 16:06:27.264874
-339	4	Approved	Beginner	0	Monthly	Seeded assignment	2025-11-09 22:04:27.264874
-969	3	Requested	Expert	\N	Daily	Seeded assignment	2025-11-22 02:26:27.264874
-908	17	Approved	\N	10	Monthly	Seeded assignment	\N
-345	10	Approved	Beginner	\N	Daily	Seeded assignment	\N
-416	18	Approved	\N	\N	Monthly	Seeded request	\N
-517	21	Requested	Intermediate	\N	Daily	Seeded assignment	2025-11-15 06:58:27.264874
-585	23	Requested	\N	\N	Weekly	Seeded assignment	\N
-638	12	Approved	Advanced	4	Weekly	Seeded request	\N
-665	22	Requested	Intermediate	5	Weekly	Seeded assignment	2025-11-09 23:45:27.264874
-353	11	Approved	Beginner	\N	Rarely	Seeded assignment	\N
-420	10	Approved	\N	7	Weekly	Seeded request	\N
-393	6	Requested	Beginner	4	Daily	Seeded assignment	\N
-648	21	Requested	Advanced	5	Rarely	Seeded assignment	\N
-81	6	Requested	Expert	\N	\N	Seeded request	\N
-237	24	Requested	Advanced	\N	Weekly	Seeded assignment	\N
-240	17	Requested	Advanced	8	Rarely	Seeded assignment	2025-11-12 14:22:27.264874
-206	24	Approved	\N	7	Rarely	Seeded assignment	2025-11-10 16:34:27.264874
-427	18	Requested	Expert	10	\N	Seeded assignment	\N
-778	6	Approved	Intermediate	6	Daily	Seeded assignment	\N
-151	4	Requested	Beginner	\N	Daily	Seeded assignment	\N
-920	17	Requested	\N	7	Daily	Seeded assignment	\N
-107	12	Approved	Advanced	\N	Daily	Seeded assignment	2025-11-25 09:19:27.264874
-522	17	Requested	Beginner	6	Monthly	Seeded request	2025-11-30 17:26:27.264874
-679	12	Approved	Beginner	\N	\N	Seeded assignment	2025-11-14 15:45:27.264874
-359	16	Approved	\N	\N	\N	Seeded request	2025-11-22 23:27:27.264874
-600	18	Requested	\N	\N	Rarely	Seeded assignment	2025-11-30 07:34:27.264874
-460	6	Approved	Advanced	\N	\N	Seeded assignment	\N
-700	9	Requested	Beginner	\N	Monthly	Seeded assignment	\N
-832	25	Requested	Beginner	10	Daily	Seeded assignment	\N
-976	5	Requested	Intermediate	7	\N	Seeded assignment	\N
-147	10	Requested	Expert	6	Daily	Seeded request	2025-11-08 07:21:27.264874
-897	5	Requested	Intermediate	3	Monthly	Seeded request	\N
-531	7	Approved	Beginner	\N	\N	Seeded assignment	\N
-883	1	Requested	\N	3	Monthly	Seeded request	2025-11-04 17:43:27.264874
-400	19	Approved	\N	8	\N	Seeded request	2025-11-17 18:53:27.264874
-576	12	Requested	\N	8	Monthly	Seeded assignment	\N
-26	16	Requested	Beginner	\N	\N	Seeded assignment	\N
-218	4	Approved	Expert	\N	\N	Seeded request	2025-11-25 00:01:27.264874
-238	22	Requested	Beginner	\N	\N	Seeded request	\N
-258	12	Requested	Beginner	2	\N	Seeded assignment	2025-11-04 04:49:27.264874
-747	17	Requested	Advanced	5	Weekly	Seeded request	\N
-850	3	Approved	\N	4	\N	Seeded assignment	2025-11-30 09:27:27.264874
-281	13	Requested	\N	\N	Monthly	Seeded assignment	\N
-625	11	Approved	Intermediate	\N	\N	Seeded request	2025-11-21 23:05:27.264874
-606	3	Approved	Intermediate	7	Weekly	Seeded request	\N
-185	23	Approved	\N	0	Rarely	Seeded request	2025-11-14 17:38:27.264874
-301	13	Requested	Intermediate	4	\N	Seeded request	\N
-382	1	Requested	\N	10	Weekly	Seeded request	\N
-30	7	Requested	Intermediate	1	\N	Seeded request	\N
-540	5	Approved	\N	6	Daily	Seeded assignment	2025-11-25 23:07:27.264874
-19	12	Requested	Beginner	10	\N	Seeded assignment	2025-11-22 01:49:27.264874
-398	12	Approved	\N	\N	\N	Seeded assignment	\N
-528	24	Requested	Intermediate	8	Rarely	Seeded request	2025-11-28 13:06:27.264874
-846	11	Approved	\N	\N	\N	Seeded assignment	2025-11-30 11:19:27.264874
-743	21	Approved	\N	\N	\N	Seeded assignment	\N
-616	25	Requested	\N	9	Rarely	Seeded assignment	2025-11-25 22:40:27.264874
-28	7	Approved	\N	\N	Monthly	Seeded request	2025-11-19 13:42:27.264874
-209	3	Approved	Advanced	\N	Rarely	Seeded assignment	\N
-395	6	Approved	Advanced	7	Weekly	Seeded request	2025-11-18 17:44:27.264874
-838	1	Approved	Beginner	2	Daily	Seeded assignment	2025-11-15 21:15:27.264874
-213	4	Approved	\N	0	Daily	Seeded request	\N
-886	19	Approved	Beginner	6	\N	Seeded assignment	2025-11-09 11:33:27.264874
-761	6	Approved	Intermediate	10	Rarely	Seeded assignment	\N
-829	21	Approved	Intermediate	0	\N	Seeded assignment	\N
-630	3	Requested	\N	\N	Rarely	Seeded request	\N
-265	22	Requested	Advanced	4	Monthly	Seeded assignment	2025-11-26 14:29:27.264874
-367	18	Requested	Beginner	\N	Daily	Seeded assignment	2025-11-21 09:00:27.264874
-500	5	Approved	Intermediate	7	Monthly	Seeded assignment	2025-11-27 20:39:27.264874
-766	24	Requested	Beginner	2	Rarely	Seeded assignment	2025-11-08 08:41:27.264874
-818	11	Requested	\N	3	\N	Seeded assignment	2025-11-13 17:43:27.264874
-712	13	Approved	Advanced	4	Monthly	Seeded assignment	\N
-498	12	Approved	Expert	8	\N	Seeded assignment	\N
-753	25	Approved	\N	\N	\N	Seeded assignment	2025-11-19 18:24:27.264874
-584	17	Approved	Expert	2	Daily	Seeded assignment	2025-11-19 04:19:27.264874
-392	12	Requested	Beginner	\N	\N	Seeded assignment	\N
-601	9	Requested	Intermediate	\N	\N	Seeded assignment	2025-11-17 15:04:27.264874
-137	1	Requested	\N	6	Daily	Seeded assignment	2025-11-14 11:06:27.264874
-579	19	Approved	\N	\N	\N	Seeded request	\N
-866	9	Approved	\N	\N	Monthly	Seeded request	\N
-899	16	Requested	Expert	8	Weekly	Seeded request	\N
-685	7	Approved	\N	\N	\N	Seeded assignment	2025-11-12 03:10:27.264874
-285	9	Approved	Beginner	10	\N	Seeded request	\N
-414	16	Requested	\N	8	\N	Seeded assignment	\N
-106	9	Requested	\N	\N	Daily	Seeded request	2025-11-29 18:33:27.264874
-842	23	Approved	\N	\N	\N	Seeded request	2025-12-02 20:20:27.264874
-468	13	Approved	Intermediate	6	Monthly	Seeded assignment	\N
-983	18	Approved	Beginner	3	Weekly	Seeded assignment	\N
-339	3	Approved	Intermediate	\N	Weekly	Seeded request	2025-11-12 10:07:27.264874
-969	4	Requested	\N	3	Daily	Seeded assignment	\N
-6	8	Approved	Expert	0	\N	Seeded assignment	2025-11-05 01:27:27.264874
-879	13	Approved	Intermediate	10	Weekly	Seeded assignment	\N
-215	11	Requested	Expert	8	\N	Seeded assignment	\N
-587	23	Approved	Intermediate	0	Rarely	Seeded assignment	\N
-746	10	Requested	\N	7	Weekly	Seeded assignment	\N
-806	19	Requested	Intermediate	5	\N	Seeded assignment	2025-11-29 10:37:27.264874
-673	12	Requested	\N	3	\N	Seeded assignment	2025-11-26 18:51:27.264874
-808	25	Approved	Advanced	1	Daily	Seeded assignment	2025-11-06 13:08:27.264874
-115	24	Approved	\N	1	\N	Seeded request	\N
-446	23	Approved	\N	\N	Weekly	Seeded request	2025-11-19 11:42:27.264874
-155	23	Approved	\N	\N	\N	Seeded request	2025-11-19 19:22:27.264874
-541	16	Approved	Expert	9	\N	Seeded request	\N
-874	25	Approved	Beginner	7	\N	Seeded assignment	\N
-331	25	Requested	Beginner	2	Daily	Seeded assignment	\N
-663	24	Approved	Advanced	7	Rarely	Seeded request	\N
-831	23	Approved	Advanced	9	\N	Seeded assignment	\N
-96	12	Approved	\N	\N	Weekly	Seeded assignment	\N
-41	8	Approved	\N	4	Weekly	Seeded assignment	2025-11-12 11:25:27.264874
-244	20	Requested	Beginner	5	Monthly	Seeded request	\N
-977	13	Requested	\N	\N	Rarely	Seeded assignment	2025-11-12 18:27:27.264874
-564	8	Approved	Intermediate	1	\N	Seeded assignment	\N
-659	17	Requested	\N	5	\N	Seeded request	2025-11-13 04:13:27.264874
-952	13	Requested	Intermediate	\N	Rarely	Seeded assignment	2025-11-21 12:31:27.264874
-379	22	Requested	Beginner	\N	Weekly	Seeded request	\N
-317	11	Requested	\N	10	\N	Seeded assignment	2025-12-02 11:11:27.264874
-720	8	Requested	Intermediate	10	\N	Seeded assignment	\N
-635	11	Requested	\N	1	\N	Seeded assignment	2025-12-01 05:52:27.264874
-769	8	Approved	Advanced	9	Weekly	Seeded request	\N
+466	11	Approved	Expert	5	Monthly	Seeded assignment	\N
+315	12	Approved	Beginner	1	Occasionally	Seeded request	\N
+376	3	Approved	Expert	3	Monthly	Seeded assignment	2025-11-04 07:14:27.264874
+400	16	Approved	Intermediate	15	Monthly	Seeded request	\N
+927	11	Approved	Advanced	11	Occasionally	Seeded request	\N
+97	24	Approved	Expert	15	Occasionally	Seeded assignment	\N
+976	9	Approved	Beginner	14	Monthly	Seeded request	\N
+823	18	Approved	Advanced	6	Weekly	Seeded assignment	2025-11-04 16:40:27.264874
+780	7	Approved	Expert	3	Daily	Seeded assignment	2025-11-19 01:06:27.264874
+332	1	Approved	Expert	15	Monthly	Seeded assignment	2025-11-29 15:07:27.264874
+842	24	Approved	Expert	7	Daily	Seeded request	\N
+529	25	Approved	Intermediate	13	Weekly	Seeded assignment	2025-11-24 21:46:27.264874
+706	19	Approved	Advanced	12	Daily	Seeded assignment	\N
+273	10	Approved	Intermediate	3	Occasionally	Seeded request	2025-11-28 19:52:27.264874
+806	16	Approved	Expert	12	Monthly	Seeded assignment	\N
+696	1	Approved	Beginner	0	Daily	Seeded request	2025-11-08 00:51:27.264874
+324	12	Approved	Expert	8	Daily	Seeded request	2025-11-08 03:16:27.264874
+855	21	Approved	Expert	3	Occasionally	Seeded request	\N
+730	9	Approved	Beginner	3	Weekly	Seeded assignment	\N
+655	18	Approved	Expert	12	Occasionally	Seeded assignment	2025-11-22 05:22:27.264874
+651	22	Approved	Intermediate	10	Monthly	Seeded assignment	\N
+15	4	Approved	Advanced	0	Weekly	Seeded assignment	2025-11-14 10:33:27.264874
+579	16	Approved	Advanced	14	Monthly	Seeded request	\N
+473	21	Approved	Advanced	2	Weekly	Seeded assignment	\N
+496	11	Approved	Expert	15	Daily	Seeded assignment	2025-11-22 21:36:27.264874
+65	9	Approved	Beginner	0	Daily	Seeded assignment	2025-11-22 04:44:27.264874
+235	21	Approved	Advanced	4	Monthly	Seeded assignment	2025-11-20 06:11:27.264874
+881	17	Approved	Intermediate	4	Daily	Seeded assignment	\N
+145	5	Approved	Expert	14	Weekly	Seeded request	\N
+784	23	Approved	Expert	9	Occasionally	Seeded request	\N
+643	9	Approved	Beginner	12	Weekly	Seeded request	2025-11-23 22:02:27.264874
+82	20	Approved	Beginner	3	Daily	Seeded request	\N
+22	8	Approved	Intermediate	3	Weekly	Seeded assignment	\N
+315	13	Approved	Intermediate	12	Occasionally	Seeded request	\N
+865	1	Approved	Advanced	9	Monthly	Seeded assignment	\N
+722	4	Approved	Intermediate	1	Monthly	Seeded request	2025-11-13 15:04:27.264874
+374	16	Approved	Advanced	1	Monthly	Seeded assignment	\N
+55	16	Approved	Beginner	5	Occasionally	Seeded request	\N
+654	3	Approved	Expert	0	Monthly	Seeded assignment	2025-11-21 19:04:27.264874
+170	16	Approved	Expert	11	Occasionally	Seeded assignment	2025-11-05 09:19:27.264874
+674	5	Approved	Advanced	4	Monthly	Seeded assignment	\N
+271	21	Approved	Expert	8	Weekly	Seeded request	\N
+243	5	Approved	Intermediate	4	Daily	Seeded assignment	2025-11-12 06:21:27.264874
+670	25	Approved	Beginner	12	Occasionally	Seeded assignment	\N
+128	16	Approved	Advanced	9	Weekly	Seeded request	\N
+612	23	Approved	Beginner	5	Weekly	Seeded assignment	2025-11-14 13:43:27.264874
+60	8	Approved	Expert	12	Weekly	Seeded assignment	2025-11-14 00:46:27.264874
+24	22	Approved	Beginner	10	Monthly	Seeded assignment	\N
+289	1	Approved	Expert	3	Daily	Seeded assignment	2025-11-08 18:52:27.264874
+697	25	Approved	Beginner	2	Weekly	Seeded request	\N
+862	17	Approved	Advanced	6	Daily	Seeded request	2025-12-01 09:26:27.264874
+898	11	Approved	Beginner	4	Weekly	Seeded assignment	2025-11-09 20:52:27.264874
+563	20	Approved	Advanced	7	Occasionally	Seeded assignment	\N
+786	19	Approved	Advanced	12	Weekly	Seeded request	2025-11-28 03:23:27.264874
+301	3	Approved	Intermediate	8	Monthly	Seeded request	\N
+226	9	Approved	Advanced	15	Monthly	Seeded assignment	2025-11-04 07:20:27.264874
+195	21	Approved	Beginner	5	Weekly	Seeded request	2025-11-21 18:25:27.264874
+35	8	Approved	Beginner	6	Monthly	Seeded assignment	\N
+285	5	Approved	Advanced	11	Daily	Seeded assignment	2025-11-14 00:57:27.264874
+681	5	Approved	Beginner	8	Weekly	Seeded assignment	\N
+617	18	Approved	Beginner	8	Occasionally	Seeded request	\N
+125	4	Approved	Advanced	12	Occasionally	Seeded assignment	2025-12-01 23:54:27.264874
+784	6	Approved	Intermediate	7	Daily	Seeded request	\N
+274	22	Approved	Beginner	15	Monthly	Seeded request	\N
+814	7	Approved	Advanced	1	Daily	Seeded assignment	2025-11-16 05:52:27.264874
+106	5	Approved	Intermediate	7	Daily	Seeded assignment	2025-11-15 03:48:27.264874
+167	18	Approved	Expert	12	Occasionally	Seeded assignment	\N
+826	10	Approved	Expert	12	Daily	Seeded assignment	\N
+44	7	Approved	Beginner	11	Daily	Seeded assignment	2025-11-30 15:48:27.264874
+30	24	Approved	Advanced	10	Occasionally	Seeded request	2025-11-21 06:46:27.264874
+554	11	Approved	Intermediate	14	Monthly	Seeded request	2025-11-19 02:12:27.264874
+688	17	Approved	Beginner	13	Weekly	Seeded assignment	\N
+528	7	Approved	Expert	9	Occasionally	Seeded assignment	2025-11-28 19:39:27.264874
+785	13	Approved	Expert	15	Occasionally	Seeded assignment	\N
+210	6	Approved	Intermediate	9	Daily	Seeded request	\N
+237	23	Approved	Expert	2	Daily	Seeded request	2025-11-15 15:39:27.264874
+230	13	Approved	Advanced	0	Daily	Seeded request	2025-11-13 22:13:27.264874
+480	3	Approved	Intermediate	10	Daily	Seeded assignment	\N
+496	19	Approved	Advanced	1	Monthly	Seeded assignment	\N
+969	13	Approved	Expert	11	Daily	Seeded assignment	2025-11-15 23:54:27.264874
+424	20	Approved	Intermediate	6	Weekly	Seeded assignment	\N
+142	18	Approved	Advanced	8	Weekly	Seeded assignment	\N
+773	8	Approved	Intermediate	4	Daily	Seeded request	2025-11-07 13:44:27.264874
+783	8	Approved	Expert	12	Daily	Seeded assignment	2025-11-18 04:44:27.264874
+558	17	Approved	Expert	6	Daily	Seeded request	\N
+816	18	Approved	Advanced	14	Weekly	Seeded request	\N
+859	6	Approved	Advanced	2	Monthly	Seeded request	2025-11-12 00:56:27.264874
+442	12	Approved	Advanced	14	Monthly	Seeded assignment	\N
+76	10	Approved	Expert	15	Monthly	Seeded request	\N
+251	19	Approved	Intermediate	2	Monthly	Seeded request	\N
+47	3	Approved	Expert	9	Weekly	Seeded request	\N
+351	10	Approved	Advanced	6	Weekly	Seeded assignment	\N
+234	20	Approved	Expert	8	Weekly	Seeded request	\N
+353	16	Approved	Beginner	6	Daily	Seeded assignment	\N
+422	8	Approved	Intermediate	5	Monthly	Seeded assignment	\N
+850	12	Approved	Beginner	12	Weekly	Seeded assignment	2025-11-15 11:58:27.264874
+428	5	Approved	Intermediate	15	Occasionally	Seeded assignment	\N
+905	8	Approved	Beginner	4	Monthly	Seeded assignment	\N
+759	3	Approved	Advanced	2	Weekly	Seeded assignment	\N
+688	24	Approved	Advanced	0	Monthly	Seeded assignment	\N
+686	5	Approved	Intermediate	12	Occasionally	Seeded request	2025-11-20 17:43:27.264874
+718	9	Approved	Intermediate	13	Daily	Seeded assignment	2025-11-25 17:42:27.264874
+273	21	Approved	Advanced	1	Weekly	Seeded request	2025-11-21 13:23:27.264874
+311	6	Approved	Intermediate	10	Monthly	Seeded request	\N
+910	19	Approved	Advanced	10	Daily	Seeded assignment	\N
+208	7	Approved	Advanced	14	Occasionally	Seeded assignment	\N
+165	4	Approved	Expert	13	Weekly	Seeded request	2025-12-01 15:56:27.264874
+748	4	Approved	Advanced	4	Occasionally	Seeded request	\N
+42	25	Approved	Advanced	3	Daily	Seeded assignment	\N
+460	17	Approved	Intermediate	13	Weekly	Seeded request	\N
+610	16	Approved	Beginner	2	Monthly	Seeded assignment	\N
+920	6	Approved	Beginner	2	Monthly	Seeded request	2025-11-20 07:58:27.264874
+680	7	Approved	Intermediate	1	Occasionally	Seeded request	2025-11-26 11:34:27.264874
+489	18	Approved	Intermediate	3	Occasionally	Seeded assignment	2025-11-26 17:21:27.264874
+745	5	Approved	Intermediate	2	Occasionally	Seeded assignment	\N
+506	10	Approved	Intermediate	15	Monthly	Seeded assignment	2025-11-10 05:25:27.264874
+741	9	Approved	Intermediate	9	Daily	Seeded request	\N
+974	18	Approved	Intermediate	13	Occasionally	Seeded assignment	\N
+426	9	Approved	Beginner	6	Daily	Seeded assignment	\N
+724	10	Approved	Intermediate	3	Weekly	Seeded request	\N
+303	4	Approved	Intermediate	3	Weekly	Seeded request	2025-11-11 11:49:27.264874
+542	24	Approved	Advanced	1	Monthly	Seeded assignment	2025-11-21 22:12:27.264874
+288	11	Approved	Expert	8	Monthly	Seeded assignment	\N
+738	11	Approved	Beginner	14	Weekly	Seeded assignment	\N
+13	1	Approved	Intermediate	3	Occasionally	Seeded request	2025-11-26 00:12:27.264874
+231	24	Approved	Intermediate	14	Occasionally	Seeded request	2025-11-06 15:12:27.264874
+232	19	Approved	Advanced	10	Monthly	Seeded request	\N
+840	7	Approved	Beginner	2	Daily	Seeded request	2025-11-30 22:33:27.264874
+742	23	Approved	Expert	12	Daily	Seeded assignment	2025-12-01 05:22:27.264874
+223	24	Approved	Expert	10	Monthly	Seeded assignment	2025-11-24 21:18:27.264874
+788	23	Approved	Advanced	0	Occasionally	Seeded request	\N
+41	7	Approved	Beginner	11	Monthly	Seeded assignment	\N
+483	8	Approved	Expert	3	Monthly	Seeded request	\N
+881	8	Approved	Expert	1	Monthly	Seeded assignment	\N
+827	1	Approved	Expert	7	Daily	Seeded request	2025-11-12 09:55:27.264874
+303	18	Approved	Advanced	15	Occasionally	Seeded request	\N
+471	22	Approved	Expert	3	Weekly	Seeded request	\N
+968	23	Approved	Advanced	9	Weekly	Seeded request	\N
+509	7	Approved	Expert	7	Occasionally	Seeded request	\N
+569	11	Approved	Beginner	4	Daily	Seeded assignment	2025-11-04 22:13:27.264874
+714	16	Approved	Advanced	11	Occasionally	Seeded assignment	\N
+167	3	Approved	Advanced	3	Monthly	Seeded request	2025-11-21 21:35:27.264874
+701	19	Approved	Beginner	6	Daily	Seeded assignment	2025-11-17 15:22:27.264874
+617	3	Approved	Advanced	1	Occasionally	Seeded assignment	2025-11-04 23:39:27.264874
+58	17	Approved	Intermediate	13	Weekly	Seeded request	\N
+31	22	Approved	Beginner	4	Weekly	Seeded assignment	\N
+717	6	Approved	Intermediate	1	Daily	Seeded request	\N
+536	12	Approved	Beginner	12	Monthly	Seeded request	\N
+320	4	Approved	Expert	7	Weekly	Seeded assignment	2025-11-18 22:58:27.264874
+426	4	Approved	Advanced	8	Occasionally	Seeded assignment	\N
+501	10	Approved	Beginner	11	Weekly	Seeded assignment	\N
+148	23	Approved	Beginner	9	Weekly	Seeded assignment	2025-11-25 04:24:27.264874
+304	22	Approved	Beginner	6	Occasionally	Seeded assignment	\N
+854	23	Approved	Beginner	8	Occasionally	Seeded request	2025-11-14 14:08:27.264874
+259	8	Approved	Expert	6	Weekly	Seeded assignment	\N
+122	21	Approved	Intermediate	12	Weekly	Seeded assignment	2025-11-15 18:09:27.264874
+523	20	Approved	Beginner	15	Occasionally	Seeded assignment	\N
+533	12	Approved	Expert	9	Weekly	Seeded request	\N
+864	8	Approved	Beginner	11	Daily	Seeded assignment	\N
+2	18	Approved	Intermediate	5	Weekly	Seeded assignment	\N
+486	13	Approved	Advanced	7	Monthly	Seeded assignment	\N
+205	24	Approved	Advanced	5	Occasionally	Seeded request	2025-11-24 09:28:27.264874
+57	22	Approved	Intermediate	15	Daily	Seeded assignment	\N
+13	11	Approved	Expert	3	Weekly	Seeded assignment	2025-11-24 15:19:27.264874
+252	4	Approved	Advanced	12	Daily	Seeded assignment	\N
+589	13	Approved	Beginner	4	Daily	Seeded request	\N
+358	19	Approved	Intermediate	10	Monthly	Seeded request	\N
+401	18	Approved	Beginner	8	Occasionally	Seeded assignment	2025-11-13 08:44:27.264874
+655	3	Approved	Intermediate	3	Occasionally	Seeded assignment	\N
+396	5	Approved	Expert	3	Daily	Seeded assignment	\N
+298	13	Approved	Intermediate	15	Occasionally	Seeded assignment	\N
+467	25	Approved	Advanced	3	Weekly	Seeded request	\N
+527	24	Approved	Beginner	12	Weekly	Seeded request	2025-11-26 08:18:27.264874
+797	21	Approved	Advanced	4	Occasionally	Seeded assignment	\N
+648	25	Approved	Beginner	4	Daily	Seeded assignment	2025-11-30 01:42:27.264874
+30	8	Approved	Advanced	11	Occasionally	Seeded assignment	2025-11-13 15:48:27.264874
+540	11	Approved	Beginner	8	Occasionally	Seeded assignment	2025-11-10 07:26:27.264874
+16	25	Approved	Expert	9	Daily	Seeded assignment	\N
+712	18	Approved	Intermediate	15	Monthly	Seeded request	2025-11-28 13:00:27.264874
+291	21	Approved	Advanced	15	Daily	Seeded assignment	2025-11-19 01:38:27.264874
+805	22	Approved	Advanced	14	Daily	Seeded request	\N
+260	24	Approved	Beginner	5	Occasionally	Seeded assignment	2025-12-01 16:20:27.264874
+626	3	Approved	Beginner	1	Daily	Seeded assignment	\N
+17	4	Approved	Intermediate	3	Monthly	Seeded request	\N
+762	8	Approved	Expert	13	Daily	Seeded assignment	\N
+122	8	Approved	Expert	4	Occasionally	Seeded assignment	\N
+979	5	Approved	Advanced	0	Occasionally	Seeded request	2025-11-30 23:36:27.264874
+624	3	Approved	Beginner	3	Weekly	Seeded request	\N
+241	4	Approved	Beginner	6	Monthly	Seeded assignment	2025-11-07 12:56:27.264874
+83	20	Approved	Expert	2	Weekly	Seeded request	2025-11-19 20:12:27.264874
+723	18	Approved	Advanced	0	Monthly	Seeded assignment	\N
+461	11	Approved	Intermediate	15	Occasionally	Seeded request	2025-11-10 17:31:27.264874
+508	22	Approved	Expert	10	Monthly	Seeded request	\N
+834	22	Approved	Beginner	8	Monthly	Seeded assignment	\N
+882	22	Approved	Advanced	4	Weekly	Seeded request	2025-11-14 14:07:27.264874
+671	17	Approved	Expert	3	Monthly	Seeded assignment	\N
+160	9	Approved	Expert	2	Occasionally	Seeded request	\N
+640	9	Approved	Advanced	0	Daily	Seeded assignment	\N
+64	22	Approved	Advanced	14	Weekly	Seeded request	2025-11-08 05:45:27.264874
+507	20	Approved	Expert	8	Weekly	Seeded assignment	2025-11-11 05:31:27.264874
+53	10	Approved	Expert	7	Daily	Seeded assignment	2025-11-07 10:05:27.264874
+738	9	Approved	Intermediate	12	Daily	Seeded assignment	\N
+347	17	Approved	Beginner	4	Daily	Seeded assignment	2025-11-14 17:53:27.264874
+299	6	Approved	Advanced	1	Daily	Seeded request	\N
+234	22	Approved	Intermediate	7	Occasionally	Seeded request	\N
+741	11	Approved	Intermediate	15	Daily	Seeded request	\N
+832	21	Approved	Beginner	1	Daily	Seeded assignment	\N
+957	19	Approved	Expert	11	Weekly	Seeded request	\N
+242	23	Approved	Beginner	6	Weekly	Seeded request	2025-11-28 13:08:27.264874
+772	6	Approved	Beginner	12	Weekly	Seeded assignment	2025-11-29 19:07:27.264874
+79	17	Approved	Beginner	3	Daily	Seeded request	\N
+159	10	Approved	Intermediate	10	Weekly	Seeded assignment	2025-11-19 08:46:27.264874
+872	5	Approved	Expert	14	Monthly	Seeded assignment	\N
+548	6	Approved	Expert	11	Monthly	Seeded request	2025-11-24 09:20:27.264874
+774	20	Approved	Intermediate	9	Occasionally	Seeded assignment	\N
+984	12	Approved	Beginner	14	Monthly	Seeded request	2025-11-28 18:34:27.264874
+537	3	Approved	Intermediate	6	Occasionally	Seeded assignment	2025-11-11 01:35:27.264874
+23	10	Approved	Beginner	11	Monthly	Seeded assignment	2025-11-09 10:35:27.264874
+967	6	Approved	Beginner	4	Monthly	Seeded request	\N
+591	23	Approved	Intermediate	10	Monthly	Seeded request	\N
+55	5	Approved	Advanced	4	Daily	Seeded assignment	2025-11-04 07:35:27.264874
+764	7	Approved	Expert	4	Daily	Seeded assignment	2025-11-14 04:28:27.264874
+580	23	Approved	Intermediate	14	Weekly	Seeded assignment	\N
+5	20	Approved	Expert	14	Occasionally	Seeded request	\N
+874	21	Approved	Beginner	14	Weekly	Seeded assignment	2025-11-16 01:33:27.264874
+505	1	Approved	Beginner	4	Daily	Seeded request	\N
+280	18	Approved	Intermediate	12	Weekly	Seeded request	2025-12-01 03:41:27.264874
+65	19	Approved	Beginner	1	Weekly	Seeded assignment	2025-11-11 12:47:27.264874
+228	9	Approved	Expert	11	Occasionally	Seeded assignment	\N
+331	21	Approved	Advanced	2	Occasionally	Seeded request	\N
+152	20	Approved	Intermediate	7	Weekly	Seeded assignment	\N
+742	7	Approved	Expert	10	Monthly	Seeded request	\N
+71	4	Approved	Expert	15	Weekly	Seeded assignment	2025-11-05 10:03:27.264874
+475	20	Approved	Expert	7	Daily	Seeded request	\N
+488	23	Approved	Beginner	14	Weekly	Seeded request	\N
+877	6	Approved	Advanced	11	Monthly	Seeded request	\N
+848	1	Approved	Intermediate	4	Monthly	Seeded assignment	\N
+554	9	Approved	Intermediate	12	Weekly	Seeded assignment	\N
+221	19	Approved	Advanced	12	Occasionally	Seeded request	\N
+842	8	Approved	Beginner	8	Weekly	Seeded assignment	2025-12-02 09:40:27.264874
+381	1	Approved	Beginner	0	Occasionally	Seeded request	\N
+368	17	Approved	Beginner	12	Weekly	Seeded assignment	2025-11-11 16:41:27.264874
+74	23	Approved	Advanced	4	Daily	Seeded assignment	\N
+914	3	Approved	Advanced	13	Monthly	Seeded assignment	2025-11-27 06:54:27.264874
+274	12	Approved	Expert	11	Monthly	Seeded assignment	2025-11-18 05:00:27.264874
+478	4	Approved	Expert	8	Monthly	Seeded request	\N
+653	19	Approved	Intermediate	4	Monthly	Seeded request	2025-11-06 11:58:27.264874
+250	1	Approved	Expert	7	Weekly	Seeded assignment	\N
+407	17	Approved	Intermediate	13	Monthly	Seeded assignment	2025-11-18 16:13:27.264874
+770	20	Approved	Expert	6	Weekly	Seeded request	2025-11-15 15:21:27.264874
+768	25	Approved	Expert	0	Weekly	Seeded assignment	2025-11-05 10:21:27.264874
+744	6	Approved	Expert	11	Weekly	Seeded request	\N
+985	6	Approved	Intermediate	6	Weekly	Seeded assignment	2025-11-23 09:53:27.264874
+200	17	Approved	Beginner	10	Occasionally	Seeded assignment	\N
+123	22	Approved	Advanced	7	Monthly	Seeded assignment	\N
+186	12	Approved	Beginner	11	Daily	Seeded assignment	2025-11-15 19:14:27.264874
+61	8	Approved	Expert	8	Monthly	Seeded assignment	2025-11-27 03:39:27.264874
+620	13	Approved	Expert	4	Daily	Seeded assignment	\N
+313	21	Approved	Intermediate	6	Occasionally	Seeded assignment	2025-11-16 09:42:27.264874
+28	21	Approved	Intermediate	9	Monthly	Seeded assignment	\N
+165	9	Approved	Expert	6	Daily	Seeded assignment	2025-11-24 07:49:27.264874
+110	21	Approved	Expert	0	Daily	Seeded assignment	\N
+81	10	Approved	Expert	9	Occasionally	Seeded assignment	2025-11-06 23:41:27.264874
+321	18	Approved	Beginner	10	Occasionally	Seeded request	\N
+801	5	Approved	Expert	0	Occasionally	Seeded assignment	\N
+441	10	Approved	Beginner	0	Weekly	Seeded request	\N
+568	23	Approved	Advanced	0	Weekly	Seeded assignment	\N
+675	24	Approved	Intermediate	13	Daily	Seeded request	2025-11-21 13:31:27.264874
+183	6	Approved	Expert	10	Daily	Seeded assignment	2025-11-05 22:53:27.264874
+29	17	Approved	Intermediate	15	Occasionally	Seeded assignment	\N
+606	5	Approved	Expert	2	Occasionally	Seeded request	\N
+669	24	Approved	Beginner	11	Weekly	Seeded request	2025-11-21 23:53:27.264874
+848	18	Approved	Expert	13	Daily	Seeded request	\N
+684	18	Approved	Intermediate	9	Daily	Seeded request	2025-11-05 01:11:27.264874
+642	20	Approved	Intermediate	1	Weekly	Seeded assignment	\N
+860	25	Approved	Intermediate	0	Monthly	Seeded assignment	\N
+731	24	Approved	Beginner	1	Monthly	Seeded request	2025-12-02 13:14:27.264874
+806	13	Approved	Beginner	1	Occasionally	Seeded request	2025-11-04 11:55:27.264874
+476	25	Approved	Beginner	5	Monthly	Seeded assignment	\N
+494	18	Approved	Advanced	0	Daily	Seeded assignment	\N
+141	6	Approved	Advanced	15	Occasionally	Seeded assignment	\N
+765	9	Approved	Intermediate	13	Daily	Seeded assignment	\N
+879	19	Approved	Expert	1	Weekly	Seeded assignment	2025-11-22 21:27:27.264874
+304	13	Approved	Intermediate	0	Daily	Seeded assignment	\N
+952	19	Approved	Intermediate	5	Monthly	Seeded request	\N
+923	19	Approved	Expert	3	Daily	Seeded request	\N
+254	20	Approved	Advanced	11	Daily	Seeded request	2025-11-21 02:52:27.264874
+956	16	Requested	Advanced	1	Daily	Seeded request	2025-11-16 07:16:09.934399
+432	20	Approved	Expert	6	Daily	Seeded request	\N
+859	25	Approved	Expert	10	Occasionally	Seeded request	\N
+330	22	Approved	Advanced	7	Weekly	Seeded request	2025-12-02 08:50:27.264874
+605	7	Approved	Beginner	12	Monthly	Seeded assignment	2025-11-05 06:50:27.264874
+318	23	Approved	Advanced	12	Daily	Seeded assignment	2025-11-09 00:22:27.264874
+631	5	Approved	Intermediate	6	Weekly	Seeded assignment	\N
+100	11	Approved	Beginner	9	Occasionally	Seeded request	\N
+189	19	Approved	Intermediate	10	Daily	Seeded assignment	\N
+584	25	Approved	Expert	2	Occasionally	Seeded assignment	\N
+368	21	Approved	Expert	9	Weekly	Seeded assignment	\N
+646	12	Approved	Advanced	11	Daily	Seeded request	\N
+579	13	Approved	Beginner	0	Weekly	Seeded assignment	\N
+158	11	Approved	Intermediate	8	Weekly	Seeded request	2025-11-11 17:48:27.264874
+383	17	Approved	Advanced	2	Weekly	Seeded assignment	2025-11-22 15:25:27.264874
+464	8	Approved	Advanced	11	Occasionally	Seeded assignment	\N
+120	1	Approved	Advanced	13	Occasionally	Seeded request	2025-11-28 23:05:27.264874
+452	22	Approved	Advanced	15	Occasionally	Seeded request	2025-11-04 20:34:27.264874
+449	3	Approved	Intermediate	6	Weekly	Seeded request	2025-11-06 05:05:27.264874
+37	20	Approved	Beginner	14	Daily	Seeded assignment	2025-11-30 07:36:27.264874
+647	22	Approved	Intermediate	4	Daily	Seeded assignment	\N
+188	10	Approved	Expert	6	Weekly	Seeded assignment	2025-11-27 16:04:27.264874
+301	19	Approved	Advanced	7	Monthly	Seeded request	\N
+270	16	Approved	Beginner	14	Occasionally	Seeded assignment	2025-11-18 12:21:27.264874
+940	7	Approved	Expert	1	Occasionally	Seeded request	\N
+791	24	Approved	Advanced	6	Monthly	Seeded assignment	2025-11-06 16:20:27.264874
+514	23	Approved	Beginner	1	Monthly	Seeded request	\N
+420	6	Approved	Beginner	4	Daily	Seeded request	2025-11-19 09:13:27.264874
+575	9	Approved	Intermediate	8	Monthly	Seeded request	2025-11-09 06:57:27.264874
+193	12	Approved	Expert	7	Weekly	Seeded assignment	2025-11-28 07:55:27.264874
+387	17	Approved	Beginner	8	Weekly	Seeded assignment	\N
+802	5	Approved	Expert	2	Monthly	Seeded request	\N
+624	11	Approved	Intermediate	13	Daily	Seeded request	2025-11-18 12:07:27.264874
+250	18	Approved	Intermediate	3	Occasionally	Seeded request	\N
+812	20	Approved	Expert	5	Daily	Seeded request	2025-11-17 01:40:27.264874
+350	10	Approved	Beginner	5	Daily	Seeded assignment	\N
+626	11	Approved	Intermediate	0	Monthly	Seeded assignment	\N
+95	24	Approved	Advanced	1	Monthly	Seeded assignment	\N
+596	16	Approved	Intermediate	2	Occasionally	Seeded request	\N
+911	6	Approved	Intermediate	9	Weekly	Seeded request	2025-11-04 05:54:27.264874
+15	9	Approved	Advanced	12	Weekly	Seeded assignment	\N
+13	4	Approved	Intermediate	12	Weekly	Seeded request	2025-11-06 06:18:27.264874
+91	4	Approved	Advanced	13	Daily	Seeded request	2025-11-11 20:42:27.264874
+705	13	Approved	Expert	10	Monthly	Seeded assignment	2025-11-18 02:14:27.264874
+804	18	Approved	Beginner	14	Weekly	Seeded assignment	\N
+920	25	Approved	Beginner	2	Occasionally	Seeded assignment	\N
+845	8	Approved	Expert	0	Weekly	Seeded assignment	\N
+603	18	Approved	Beginner	10	Occasionally	Seeded assignment	\N
+577	22	Approved	Advanced	8	Weekly	Seeded assignment	2025-11-11 11:58:27.264874
+76	8	Approved	Beginner	6	Occasionally	Seeded request	2025-11-12 05:04:27.264874
+113	18	Approved	Expert	15	Occasionally	Seeded request	\N
+937	20	Approved	Beginner	7	Daily	Seeded assignment	\N
+101	16	Approved	Beginner	7	Daily	Seeded assignment	\N
+307	3	Approved	Expert	9	Occasionally	Seeded request	\N
+692	18	Approved	Expert	15	Monthly	Seeded assignment	\N
+63	10	Approved	Beginner	13	Weekly	Seeded request	\N
+803	18	Approved	Expert	1	Weekly	Seeded request	2025-11-04 00:51:27.264874
+380	21	Approved	Advanced	15	Monthly	Seeded request	2025-11-22 00:29:27.264874
+400	13	Approved	Beginner	11	Monthly	Seeded request	\N
+689	13	Approved	Intermediate	14	Occasionally	Seeded assignment	\N
+344	10	Approved	Beginner	6	Occasionally	Seeded request	\N
+937	12	Approved	Intermediate	6	Occasionally	Seeded assignment	\N
+883	22	Approved	Advanced	1	Daily	Seeded assignment	\N
+553	23	Approved	Beginner	9	Monthly	Seeded request	\N
+873	10	Approved	Advanced	3	Weekly	Seeded assignment	2025-11-14 09:05:27.264874
+797	17	Approved	Intermediate	1	Weekly	Seeded assignment	\N
+36	24	Approved	Intermediate	8	Occasionally	Seeded assignment	\N
+192	8	Approved	Intermediate	11	Daily	Seeded request	\N
+217	25	Approved	Advanced	0	Monthly	Seeded assignment	2025-11-07 03:16:27.264874
+196	4	Approved	Intermediate	4	Weekly	Seeded request	2025-11-05 08:28:27.264874
+869	5	Approved	Beginner	9	Weekly	Seeded assignment	\N
+181	13	Approved	Intermediate	0	Monthly	Seeded request	\N
+215	12	Approved	Intermediate	14	Monthly	Seeded request	2025-11-23 01:16:27.264874
+836	9	Approved	Intermediate	15	Occasionally	Seeded request	2025-11-26 11:58:27.264874
+599	3	Approved	Beginner	2	Occasionally	Seeded assignment	\N
+335	22	Approved	Advanced	15	Monthly	Seeded assignment	2025-12-02 04:59:27.264874
+419	19	Approved	Intermediate	7	Occasionally	Seeded request	2025-11-08 00:58:27.264874
+565	18	Requested	Advanced	15	Occasionally	Seeded assignment	2025-11-16 07:16:09.934399
+825	1	Approved	Beginner	4	Daily	Seeded request	2025-11-29 11:08:27.264874
+352	6	Approved	Intermediate	10	Weekly	Seeded assignment	2025-11-28 02:41:27.264874
+99	7	Approved	Intermediate	7	Daily	Seeded request	\N
+53	24	Approved	Beginner	4	Monthly	Seeded assignment	\N
+404	13	Approved	Advanced	0	Occasionally	Seeded request	\N
+43	10	Approved	Intermediate	5	Occasionally	Seeded assignment	\N
+187	23	Approved	Expert	14	Daily	Seeded request	2025-12-01 18:29:27.264874
+604	21	Approved	Advanced	3	Monthly	Seeded request	2025-11-30 10:52:27.264874
+369	17	Approved	Intermediate	15	Monthly	Seeded request	\N
+507	16	Approved	Expert	13	Weekly	Seeded assignment	\N
+303	1	Approved	Intermediate	9	Weekly	Seeded request	\N
+160	18	Approved	Expert	11	Monthly	Seeded request	2025-11-16 19:48:27.264874
+961	21	Approved	Advanced	1	Monthly	Seeded request	2025-11-22 08:41:27.264874
+146	20	Approved	Beginner	6	Weekly	Seeded request	\N
+972	8	Approved	Beginner	2	Daily	Seeded assignment	\N
+838	13	Approved	Beginner	14	Daily	Seeded request	\N
+509	25	Approved	Intermediate	9	Weekly	Seeded assignment	\N
+808	8	Approved	Expert	4	Monthly	Seeded request	2025-11-22 13:02:27.264874
+302	17	Approved	Advanced	15	Daily	Seeded assignment	\N
+382	13	Approved	Advanced	11	Monthly	Seeded assignment	2025-11-10 20:43:27.264874
+331	8	Approved	Beginner	6	Occasionally	Seeded request	\N
+878	25	Approved	Expert	12	Monthly	Seeded assignment	\N
+969	16	Approved	Advanced	2	Daily	Seeded request	2025-11-25 02:25:27.264874
+858	24	Approved	Intermediate	13	Occasionally	Seeded assignment	2025-11-09 15:03:27.264874
+482	10	Approved	Beginner	10	Daily	Seeded request	2025-11-08 15:07:27.264874
+157	17	Approved	Intermediate	9	Monthly	Seeded assignment	2025-12-01 18:37:27.264874
+820	11	Approved	Intermediate	15	Weekly	Seeded request	\N
+915	13	Approved	Advanced	2	Daily	Seeded assignment	\N
+609	18	Approved	Beginner	14	Occasionally	Seeded request	\N
+171	24	Approved	Advanced	8	Daily	Seeded request	\N
+957	1	Approved	Expert	6	Daily	Seeded assignment	\N
+924	10	Approved	Intermediate	6	Daily	Seeded request	2025-11-19 05:02:27.264874
+880	13	Approved	Expert	14	Daily	Seeded assignment	\N
+432	12	Approved	Expert	1	Weekly	Seeded assignment	2025-11-14 11:09:27.264874
+683	7	Approved	Advanced	7	Daily	Seeded assignment	\N
+318	7	Approved	Expert	1	Weekly	Seeded assignment	\N
+710	23	Approved	Beginner	13	Monthly	Seeded assignment	2025-11-23 23:45:27.264874
+254	12	Approved	Advanced	3	Occasionally	Seeded assignment	\N
+656	12	Approved	Expert	3	Weekly	Seeded assignment	\N
+429	18	Approved	Intermediate	2	Occasionally	Seeded assignment	\N
+374	20	Approved	Advanced	1	Weekly	Seeded assignment	\N
+830	8	Approved	Intermediate	7	Daily	Seeded assignment	\N
+811	23	Approved	Advanced	9	Daily	Seeded assignment	\N
+578	13	Approved	Beginner	14	Occasionally	Seeded assignment	\N
+666	21	Approved	Intermediate	13	Monthly	Seeded assignment	2025-11-09 19:06:27.264874
+15	19	Approved	Advanced	5	Daily	Seeded request	\N
+449	4	Approved	Expert	3	Weekly	Seeded assignment	\N
+27	10	Approved	Expert	6	Monthly	Seeded assignment	\N
+401	6	Approved	Advanced	3	Monthly	Seeded assignment	2025-11-27 07:52:27.264874
+831	12	Approved	Expert	8	Occasionally	Seeded assignment	\N
+920	4	Approved	Beginner	2	Monthly	Seeded request	\N
+761	13	Approved	Intermediate	1	Occasionally	Seeded request	2025-11-30 15:48:27.264874
+218	17	Approved	Advanced	1	Daily	Seeded assignment	\N
+988	11	Approved	Intermediate	0	Occasionally	Seeded assignment	2025-11-27 03:58:27.264874
+824	22	Approved	Intermediate	1	Weekly	Seeded assignment	\N
+259	16	Approved	Expert	0	Weekly	Seeded request	\N
+845	5	Approved	Advanced	0	Monthly	Seeded assignment	\N
+161	1	Approved	Beginner	14	Daily	Seeded request	\N
+437	25	Approved	Expert	5	Daily	Seeded request	\N
+82	17	Approved	Expert	9	Occasionally	Seeded assignment	2025-11-18 11:05:27.264874
+391	3	Approved	Beginner	0	Daily	Seeded assignment	2025-11-28 20:08:27.264874
+763	20	Approved	Beginner	0	Daily	Seeded assignment	\N
+564	25	Approved	Beginner	2	Occasionally	Seeded assignment	\N
+17	11	Approved	Expert	12	Monthly	Seeded request	\N
+832	8	Approved	Intermediate	7	Occasionally	Seeded assignment	2025-11-23 20:02:27.264874
+897	4	Approved	Advanced	5	Occasionally	Seeded assignment	2025-11-14 06:22:27.264874
+976	4	Approved	Intermediate	4	Daily	Seeded request	2025-12-01 01:38:27.264874
+137	13	Approved	Expert	15	Daily	Seeded request	2025-12-01 19:48:27.264874
+357	11	Approved	Expert	8	Occasionally	Seeded assignment	\N
+958	11	Approved	Advanced	14	Occasionally	Seeded assignment	2025-11-25 18:57:27.264874
+135	18	Approved	Advanced	3	Weekly	Seeded assignment	2025-12-01 22:44:27.264874
+105	23	Approved	Advanced	13	Occasionally	Seeded assignment	\N
+854	7	Approved	Expert	11	Monthly	Seeded request	\N
+499	4	Approved	Beginner	15	Occasionally	Seeded request	\N
+909	23	Approved	Advanced	12	Monthly	Seeded request	2025-11-27 05:18:27.264874
+361	3	Approved	Intermediate	7	Occasionally	Seeded assignment	\N
+333	22	Approved	Advanced	5	Monthly	Seeded assignment	2025-11-23 01:00:27.264874
+480	9	Approved	Beginner	12	Occasionally	Seeded request	2025-11-13 22:22:27.264874
+919	3	Approved	Beginner	9	Daily	Seeded assignment	2025-11-20 06:19:27.264874
+293	16	Approved	Expert	9	Monthly	Seeded request	\N
+274	8	Approved	Expert	5	Daily	Seeded request	\N
+602	22	Approved	Expert	1	Daily	Seeded assignment	2025-11-06 10:03:27.264874
+177	24	Approved	Advanced	7	Weekly	Seeded request	2025-11-07 13:40:27.264874
+460	13	Approved	Beginner	7	Occasionally	Seeded assignment	2025-11-11 01:46:27.264874
+412	8	Approved	Intermediate	5	Weekly	Seeded assignment	\N
+504	21	Approved	Intermediate	8	Monthly	Seeded assignment	2025-11-11 20:50:27.264874
+464	5	Approved	Expert	6	Monthly	Seeded request	\N
+150	3	Approved	Beginner	6	Occasionally	Seeded assignment	\N
+376	6	Approved	Beginner	0	Weekly	Seeded assignment	2025-11-14 16:29:27.264874
+251	25	Approved	Beginner	3	Weekly	Seeded assignment	\N
+515	6	Approved	Expert	6	Monthly	Seeded assignment	\N
+398	23	Approved	Advanced	14	Occasionally	Seeded assignment	\N
+137	10	Approved	Beginner	5	Occasionally	Seeded assignment	2025-11-27 21:54:27.264874
+37	12	Requested	Beginner	13	Daily	Seeded assignment	2025-11-12 07:16:09.934399
+336	5	Approved	Beginner	12	Weekly	Seeded request	\N
+122	20	Approved	Advanced	1	Daily	Seeded request	\N
+506	5	Approved	Beginner	1	Daily	Seeded request	\N
+585	20	Approved	Advanced	9	Occasionally	Seeded request	2025-11-06 00:16:27.264874
+157	16	Approved	Expert	14	Occasionally	Seeded assignment	\N
+493	23	Approved	Advanced	0	Daily	Seeded request	2025-11-12 09:27:27.264874
+612	3	Approved	Expert	10	Monthly	Seeded assignment	\N
+503	16	Approved	Expert	1	Occasionally	Seeded request	\N
+731	22	Approved	Expert	2	Daily	Seeded assignment	\N
+512	24	Approved	Beginner	5	Weekly	Seeded assignment	\N
+147	9	Approved	Advanced	14	Daily	Seeded request	2025-11-29 08:40:27.264874
+209	17	Approved	Advanced	0	Occasionally	Seeded request	2025-11-12 16:30:27.264874
+891	6	Approved	Beginner	15	Daily	Seeded assignment	2025-11-28 02:00:27.264874
+487	20	Approved	Expert	15	Occasionally	Seeded assignment	\N
+850	17	Approved	Expert	4	Monthly	Seeded assignment	\N
+283	1	Approved	Expert	5	Weekly	Seeded assignment	\N
+683	11	Approved	Advanced	12	Daily	Seeded assignment	\N
+19	7	Approved	Beginner	4	Occasionally	Seeded assignment	\N
+343	21	Approved	Beginner	3	Monthly	Seeded request	\N
+548	1	Approved	Beginner	13	Occasionally	Seeded assignment	\N
+258	7	Approved	Beginner	7	Monthly	Seeded request	\N
+545	20	Approved	Intermediate	9	Monthly	Seeded assignment	\N
+759	7	Approved	Intermediate	13	Monthly	Seeded assignment	2025-11-26 23:38:27.264874
+884	9	Approved	Beginner	6	Monthly	Seeded request	\N
+507	8	Approved	Advanced	5	Monthly	Seeded assignment	\N
+129	24	Approved	Beginner	15	Daily	Seeded request	\N
+534	10	Approved	Beginner	13	Weekly	Seeded request	\N
+16	7	Approved	Beginner	2	Weekly	Seeded assignment	2025-11-22 09:40:27.264874
+190	7	Approved	Beginner	3	Weekly	Seeded request	\N
+837	16	Approved	Beginner	7	Weekly	Seeded assignment	\N
+852	19	Approved	Expert	5	Weekly	Seeded request	\N
+520	10	Approved	Intermediate	9	Monthly	Seeded assignment	\N
+595	9	Approved	Beginner	15	Monthly	Seeded request	\N
+556	22	Approved	Expert	7	Weekly	Seeded request	\N
+644	11	Approved	Beginner	4	Daily	Seeded assignment	2025-11-05 18:50:27.264874
+365	4	Approved	Beginner	15	Daily	Seeded assignment	\N
+462	16	Approved	Beginner	14	Daily	Seeded assignment	2025-11-21 14:40:27.264874
+178	12	Approved	Advanced	10	Occasionally	Seeded assignment	\N
+515	1	Approved	Advanced	9	Daily	Seeded assignment	2025-11-27 10:38:27.264874
+457	10	Approved	Intermediate	2	Occasionally	Seeded assignment	2025-11-21 03:31:27.264874
+467	7	Approved	Beginner	4	Monthly	Seeded request	2025-11-26 05:57:27.264874
+539	7	Approved	Advanced	9	Occasionally	Seeded request	\N
+413	9	Approved	Expert	4	Monthly	Seeded assignment	\N
+33	22	Approved	Expert	10	Daily	Seeded assignment	\N
+629	9	Approved	Expert	6	Daily	Seeded assignment	\N
+140	6	Approved	Beginner	2	Daily	Seeded assignment	\N
+185	20	Approved	Intermediate	7	Occasionally	Seeded request	\N
+775	7	Approved	Expert	12	Occasionally	Seeded request	2025-11-07 10:54:27.264874
+470	11	Approved	Beginner	8	Occasionally	Seeded request	\N
+704	23	Approved	Intermediate	7	Daily	Seeded assignment	2025-11-21 23:09:27.264874
+522	3	Approved	Beginner	8	Monthly	Seeded request	\N
+211	6	Approved	Intermediate	14	Daily	Seeded assignment	2025-11-15 02:40:27.264874
+607	5	Approved	Advanced	0	Daily	Seeded request	2025-11-15 08:25:27.264874
+144	1	Approved	Beginner	12	Weekly	Seeded request	\N
+916	9	Approved	Intermediate	9	Weekly	Seeded request	2025-11-16 12:48:27.264874
+541	25	Approved	Advanced	0	Monthly	Seeded assignment	2025-11-06 01:25:27.264874
+911	9	Approved	Expert	2	Occasionally	Seeded assignment	2025-11-26 23:01:27.264874
+156	19	Approved	Expert	1	Daily	Seeded assignment	\N
+94	11	Approved	Intermediate	9	Monthly	Seeded request	\N
+699	11	Approved	Beginner	2	Monthly	Seeded request	\N
+674	21	Approved	Advanced	11	Daily	Seeded request	\N
+933	22	Approved	Expert	0	Monthly	Seeded assignment	\N
+203	19	Approved	Expert	10	Monthly	Seeded assignment	\N
+26	25	Approved	Beginner	3	Monthly	Seeded assignment	2025-11-06 20:25:27.264874
+722	23	Approved	Advanced	3	Weekly	Seeded assignment	\N
+931	7	Approved	Beginner	11	Daily	Seeded assignment	\N
+97	20	Approved	Expert	11	Daily	Seeded assignment	\N
+869	8	Approved	Advanced	6	Occasionally	Seeded assignment	2025-11-13 09:34:27.264874
+51	19	Approved	Beginner	6	Monthly	Seeded assignment	2025-11-14 19:38:27.264874
+306	1	Approved	Intermediate	0	Monthly	Seeded request	2025-11-11 01:29:27.264874
+441	13	Approved	Expert	6	Weekly	Seeded request	\N
+393	13	Approved	Intermediate	15	Occasionally	Seeded assignment	\N
+436	1	Approved	Advanced	12	Occasionally	Seeded assignment	2025-11-30 13:35:27.264874
+350	13	Approved	Intermediate	12	Monthly	Seeded assignment	\N
+383	16	Approved	Advanced	4	Monthly	Seeded request	\N
+420	1	Approved	Intermediate	11	Monthly	Seeded request	\N
+514	11	Approved	Beginner	2	Occasionally	Seeded assignment	\N
+746	9	Approved	Advanced	12	Occasionally	Seeded assignment	\N
+734	13	Approved	Expert	4	Occasionally	Seeded request	\N
+370	18	Approved	Expert	2	Daily	Seeded assignment	2025-11-13 02:08:27.264874
+480	6	Approved	Beginner	0	Daily	Seeded assignment	\N
+196	25	Approved	Expert	12	Occasionally	Seeded assignment	2025-11-20 01:15:27.264874
+219	5	Approved	Intermediate	8	Daily	Seeded assignment	2025-11-24 23:07:27.264874
+240	4	Approved	Expert	6	Weekly	Seeded request	\N
+183	1	Approved	Beginner	15	Occasionally	Seeded assignment	\N
+711	1	Approved	Expert	9	Daily	Seeded assignment	2025-11-26 10:05:27.264874
+584	3	Approved	Expert	4	Weekly	Seeded request	\N
+329	23	Approved	Expert	14	Daily	Seeded assignment	\N
+550	10	Approved	Beginner	14	Weekly	Seeded assignment	\N
+45	10	Approved	Intermediate	11	Monthly	Seeded assignment	2025-12-01 10:34:27.264874
+815	16	Approved	Expert	15	Weekly	Seeded assignment	\N
+198	9	Approved	Expert	3	Occasionally	Seeded assignment	\N
+52	5	Approved	Advanced	6	Daily	Seeded assignment	\N
+143	3	Approved	Intermediate	14	Occasionally	Seeded assignment	\N
+707	8	Approved	Intermediate	15	Daily	Seeded request	2025-11-08 11:43:27.264874
+468	11	Approved	Expert	11	Daily	Seeded request	\N
+325	1	Approved	Beginner	1	Monthly	Seeded request	\N
+199	10	Approved	Intermediate	1	Monthly	Seeded assignment	2025-12-01 22:22:27.264874
+787	21	Approved	Advanced	11	Weekly	Seeded assignment	\N
+819	20	Approved	Advanced	3	Weekly	Seeded assignment	\N
+400	20	Approved	Intermediate	15	Weekly	Seeded request	\N
+964	23	Approved	Advanced	2	Monthly	Seeded assignment	\N
+473	20	Approved	Beginner	13	Weekly	Seeded request	\N
+235	12	Approved	Intermediate	2	Daily	Seeded assignment	\N
+101	21	Approved	Expert	4	Weekly	Seeded request	\N
+340	8	Approved	Expert	9	Weekly	Seeded request	2025-11-11 20:29:27.264874
+64	10	Approved	Expert	1	Weekly	Seeded assignment	\N
+241	25	Approved	Expert	0	Weekly	Seeded assignment	\N
+174	1	Approved	Beginner	7	Occasionally	Seeded assignment	2025-11-17 18:26:27.264874
+451	22	Approved	Advanced	9	Occasionally	Seeded assignment	\N
+795	19	Approved	Beginner	7	Weekly	Seeded assignment	2025-11-24 16:11:27.264874
+426	23	Approved	Advanced	7	Weekly	Seeded assignment	2025-12-01 15:34:27.264874
+906	9	Approved	Advanced	7	Daily	Seeded request	2025-11-30 09:48:27.264874
+391	23	Approved	Expert	10	Occasionally	Seeded request	\N
+762	5	Approved	Intermediate	14	Weekly	Seeded request	2025-11-19 13:16:27.264874
+134	11	Approved	Expert	12	Weekly	Seeded request	2025-11-19 04:33:27.264874
+300	6	Approved	Intermediate	7	Occasionally	Seeded assignment	\N
+627	23	Approved	Intermediate	11	Weekly	Seeded assignment	\N
+124	9	Approved	Beginner	7	Daily	Seeded assignment	2025-11-03 10:13:27.264874
+270	21	Approved	Beginner	6	Daily	Seeded assignment	\N
+978	3	Approved	Intermediate	4	Weekly	Seeded assignment	2025-11-29 11:29:27.264874
+752	17	Approved	Advanced	6	Occasionally	Seeded assignment	2025-12-02 02:04:27.264874
+364	3	Approved	Intermediate	6	Monthly	Seeded assignment	\N
+975	9	Approved	Beginner	5	Weekly	Seeded request	\N
+608	3	Approved	Intermediate	2	Occasionally	Seeded request	\N
+334	20	Approved	Intermediate	5	Occasionally	Seeded assignment	2025-11-05 10:01:27.264874
+606	21	Approved	Advanced	4	Daily	Seeded assignment	2025-12-02 20:31:27.264874
+932	11	Approved	Advanced	3	Occasionally	Seeded assignment	2025-11-23 02:30:27.264874
+930	13	Approved	Expert	3	Daily	Seeded assignment	2025-11-21 18:21:27.264874
+554	4	Approved	Beginner	12	Occasionally	Seeded	2025-11-03 06:31:27.264874
+552	12	Approved	Beginner	12	Weekly	Seeded assignment	\N
+739	6	Approved	Expert	15	Daily	Seeded assignment	2025-11-10 02:57:27.264874
+396	8	Approved	Beginner	6	Daily	Seeded assignment	\N
+368	16	Approved	Advanced	14	Occasionally	Seeded assignment	\N
+856	21	Approved	Advanced	13	Weekly	Seeded assignment	\N
+110	5	Approved	Advanced	15	Daily	Seeded assignment	\N
+79	12	Approved	Advanced	15	Weekly	Seeded assignment	2025-11-07 10:59:27.264874
+74	11	Approved	Beginner	9	Occasionally	Seeded assignment	\N
+289	6	Approved	Expert	7	Occasionally	Seeded assignment	2025-11-04 16:42:27.264874
+186	17	Approved	Expert	9	Weekly	Seeded request	2025-11-13 21:52:27.264874
+407	16	Approved	Intermediate	5	Daily	Seeded assignment	2025-11-25 22:08:27.264874
+355	23	Approved	Intermediate	7	Daily	Seeded assignment	\N
+316	23	Approved	Beginner	7	Monthly	Seeded assignment	2025-11-14 08:43:27.264874
+823	9	Approved	Advanced	8	Daily	Seeded assignment	\N
+191	4	Approved	Intermediate	12	Occasionally	Seeded request	2025-11-17 05:20:27.264874
+791	17	Approved	Beginner	2	Occasionally	Seeded request	2025-11-22 22:16:27.264874
+960	17	Approved	Beginner	11	Daily	Seeded request	\N
+417	6	Approved	Advanced	0	Occasionally	Seeded assignment	\N
+626	9	Approved	Intermediate	0	Daily	Seeded request	\N
+222	25	Approved	Beginner	8	Monthly	Seeded request	2025-11-21 03:57:27.264874
+934	23	Approved	Expert	0	Occasionally	Seeded assignment	2025-11-27 00:13:27.264874
+121	21	Approved	Intermediate	5	Monthly	Seeded assignment	2025-11-09 10:26:27.264874
+327	10	Approved	Intermediate	5	Daily	Seeded assignment	\N
+723	11	Approved	Expert	7	Occasionally	Seeded assignment	\N
+927	3	Approved	Intermediate	2	Daily	Seeded request	2025-11-04 16:50:27.264874
+319	5	Approved	Intermediate	12	Monthly	Seeded assignment	\N
+528	25	Approved	Intermediate	7	Daily	Seeded assignment	2025-11-11 16:44:27.264874
+394	7	Approved	Beginner	4	Occasionally	Seeded request	\N
+727	20	Approved	Advanced	7	Monthly	Seeded request	\N
+376	11	Approved	Expert	10	Monthly	Seeded request	2025-11-25 10:46:27.264874
+705	20	Approved	Beginner	9	Occasionally	Seeded assignment	\N
+793	17	Approved	Intermediate	8	Daily	Seeded assignment	2025-11-16 01:49:27.264874
+904	22	Approved	Intermediate	9	Weekly	Seeded request	\N
+90	18	Approved	Expert	13	Daily	Seeded assignment	\N
+525	22	Approved	Expert	13	Occasionally	Seeded assignment	2025-11-10 10:09:27.264874
+510	3	Approved	Beginner	6	Weekly	Seeded assignment	\N
+950	19	Approved	Advanced	8	Daily	Seeded assignment	2025-11-26 15:58:27.264874
+208	1	Approved	Expert	15	Daily	Seeded request	\N
+726	16	Approved	Beginner	10	Occasionally	Seeded assignment	2025-11-23 15:36:27.264874
+484	7	Approved	Expert	7	Occasionally	Seeded assignment	\N
+720	11	Approved	Advanced	8	Weekly	Seeded assignment	2025-11-11 16:47:27.264874
+371	16	Approved	Beginner	9	Daily	Seeded request	\N
+257	4	Approved	Expert	11	Occasionally	Seeded request	\N
+516	11	Approved	Advanced	5	Occasionally	Seeded assignment	\N
+809	5	Approved	Advanced	7	Occasionally	Seeded request	2025-11-28 06:50:27.264874
+887	21	Approved	Intermediate	7	Daily	Seeded request	\N
+730	7	Approved	Advanced	5	Occasionally	Seeded request	\N
+4	4	Approved	Beginner	1	Monthly	Seeded assignment	\N
+105	3	Approved	Advanced	9	Occasionally	Seeded request	\N
+54	22	Approved	Expert	4	Monthly	Seeded assignment	2025-11-09 02:16:27.264874
+780	1	Approved	Beginner	3	Weekly	Seeded assignment	2025-11-22 16:55:27.264874
+666	16	Approved	Beginner	2	Monthly	Seeded request	\N
+421	8	Approved	Intermediate	7	Occasionally	Seeded assignment	\N
+986	13	Approved	Intermediate	7	Occasionally	Seeded assignment	\N
+190	3	Approved	Intermediate	5	Daily	Seeded assignment	\N
+384	24	Approved	Beginner	1	Weekly	Seeded request	\N
+500	23	Approved	Advanced	11	Occasionally	Seeded assignment	\N
+906	1	Approved	Advanced	6	Occasionally	Seeded request	\N
+572	4	Approved	Advanced	2	Monthly	Seeded assignment	\N
+479	10	Approved	Intermediate	0	Monthly	Seeded request	2025-11-13 00:30:27.264874
+648	3	Approved	Beginner	8	Occasionally	Seeded assignment	2025-11-08 18:03:27.264874
+50	18	Approved	Expert	15	Occasionally	Seeded assignment	2025-11-09 02:43:27.264874
+539	3	Approved	Expert	3	Occasionally	Seeded assignment	\N
+108	6	Approved	Beginner	12	Weekly	Seeded assignment	2025-11-26 00:49:27.264874
+93	21	Approved	Advanced	9	Weekly	Seeded request	\N
+133	8	Approved	Expert	2	Daily	Seeded request	2025-11-18 19:28:27.264874
+888	3	Approved	Advanced	2	Monthly	Seeded request	2025-11-11 13:51:27.264874
+51	18	Approved	Intermediate	3	Weekly	Seeded assignment	\N
+192	20	Approved	Advanced	2	Weekly	Seeded request	\N
+155	5	Approved	Expert	11	Weekly	Seeded assignment	\N
+513	18	Approved	Advanced	1	Weekly	Seeded assignment	\N
+586	18	Approved	Intermediate	1	Weekly	Seeded assignment	\N
+528	9	Approved	Advanced	2	Occasionally	Seeded request	2025-11-17 18:38:27.264874
+702	13	Approved	Intermediate	1	Monthly	Seeded request	\N
+767	13	Approved	Expert	8	Monthly	Seeded assignment	2025-11-12 14:28:27.264874
+677	10	Approved	Expert	4	Occasionally	Seeded assignment	\N
+618	17	Approved	Advanced	3	Weekly	Seeded assignment	\N
+553	6	Approved	Beginner	10	Monthly	Seeded request	\N
+523	22	Approved	Intermediate	9	Monthly	Seeded request	2025-11-12 16:19:27.264874
+714	22	Approved	Beginner	3	Daily	Seeded request	2025-11-09 16:21:27.264874
+730	18	Approved	Expert	7	Weekly	Seeded assignment	\N
+753	24	Approved	Advanced	11	Daily	Seeded assignment	\N
+95	8	Approved	Beginner	8	Daily	Seeded request	\N
+479	16	Approved	Advanced	0	Monthly	Seeded assignment	2025-11-13 00:21:27.264874
+252	1	Approved	Intermediate	12	Daily	Seeded assignment	\N
+298	5	Approved	Beginner	6	Monthly	Seeded request	\N
+670	6	Approved	Beginner	2	Monthly	Seeded assignment	\N
+581	13	Approved	Advanced	9	Occasionally	Seeded assignment	\N
+624	25	Approved	Beginner	4	Occasionally	Seeded request	\N
+203	18	Approved	Intermediate	13	Weekly	Seeded assignment	2025-11-22 04:27:27.264874
+49	16	Approved	Intermediate	10	Occasionally	Seeded assignment	\N
+691	13	Approved	Intermediate	15	Occasionally	Seeded request	2025-11-16 10:20:27.264874
+230	21	Approved	Expert	0	Occasionally	Seeded assignment	2025-11-06 22:22:27.264874
+219	20	Approved	Beginner	5	Weekly	Seeded request	\N
+4	3	Approved	Advanced	9	Weekly	Seeded assignment	2025-11-05 06:45:27.264874
+939	19	Approved	Advanced	8	Occasionally	Seeded request	\N
+544	1	Approved	Intermediate	12	Weekly	Seeded assignment	\N
+900	17	Approved	Beginner	13	Weekly	Seeded assignment	\N
+805	10	Approved	Beginner	1	Weekly	Seeded assignment	2025-11-03 10:52:27.264874
+127	19	Approved	Beginner	7	Monthly	Seeded assignment	2025-11-21 09:33:27.264874
+257	3	Approved	Intermediate	6	Occasionally	Seeded request	2025-11-19 17:45:27.264874
+296	25	Approved	Advanced	12	Weekly	Seeded assignment	2025-11-10 11:03:27.264874
+45	16	Approved	Expert	7	Monthly	Seeded assignment	\N
+374	8	Approved	Intermediate	9	Weekly	Seeded request	2025-12-02 13:06:27.264874
+647	24	Approved	Beginner	4	Weekly	Seeded assignment	2025-11-29 06:22:27.264874
+429	6	Approved	Beginner	0	Weekly	Seeded assignment	\N
+29	20	Approved	Advanced	4	Weekly	Seeded assignment	2025-11-19 08:27:27.264874
+247	9	Approved	Expert	10	Weekly	Seeded assignment	\N
+790	4	Approved	Expert	2	Monthly	Seeded request	2025-11-26 13:59:27.264874
+353	6	Approved	Beginner	14	Daily	Seeded request	\N
+829	4	Approved	Intermediate	11	Occasionally	Seeded request	2025-11-14 17:06:27.264874
+363	13	Approved	Beginner	9	Weekly	Seeded request	\N
+422	16	Approved	Advanced	8	Weekly	Seeded assignment	\N
+540	23	Approved	Advanced	15	Daily	Seeded assignment	\N
+568	3	Approved	Beginner	10	Daily	Seeded assignment	\N
+316	18	Approved	Intermediate	13	Occasionally	Seeded request	\N
+650	3	Approved	Advanced	12	Daily	Seeded request	2025-11-21 15:43:27.264874
+696	7	Approved	Advanced	15	Daily	Seeded request	\N
+167	25	Approved	Intermediate	11	Monthly	Seeded assignment	2025-11-12 06:56:27.264874
+725	8	Approved	Beginner	15	Occasionally	Seeded request	2025-12-02 20:25:27.264874
+560	6	Approved	Advanced	3	Weekly	Seeded request	\N
+454	8	Approved	Beginner	2	Weekly	Seeded assignment	\N
+983	5	Approved	Intermediate	6	Daily	Seeded assignment	\N
+224	23	Approved	Beginner	14	Occasionally	Seeded assignment	\N
+735	23	Approved	Intermediate	7	Weekly	Seeded request	2025-11-26 16:24:27.264874
+42	7	Approved	Advanced	1	Monthly	Seeded assignment	\N
+798	24	Approved	Intermediate	8	Daily	Seeded request	2025-11-17 12:30:27.264874
+403	19	Approved	Intermediate	6	Weekly	Seeded assignment	\N
+102	3	Approved	Intermediate	7	Weekly	Seeded request	\N
+304	20	Approved	Beginner	11	Occasionally	Seeded assignment	\N
+519	13	Approved	Advanced	2	Monthly	Seeded request	2025-11-16 01:26:27.264874
+482	21	Approved	Beginner	14	Occasionally	Seeded assignment	\N
+160	4	Approved	Intermediate	6	Weekly	Seeded request	\N
+239	16	Approved	Advanced	8	Daily	Seeded assignment	\N
+352	23	Approved	Expert	7	Weekly	Seeded assignment	\N
+529	7	Approved	Intermediate	4	Weekly	Seeded request	2025-11-07 11:09:27.264874
+163	22	Approved	Expert	1	Monthly	Seeded assignment	2025-11-04 14:42:27.264874
+861	9	Approved	Intermediate	7	Monthly	Seeded request	\N
+103	17	Approved	Advanced	4	Daily	Seeded assignment	2025-11-20 19:01:27.264874
+407	10	Approved	Expert	12	Monthly	Seeded request	\N
+514	6	Approved	Intermediate	4	Daily	Seeded assignment	2025-11-08 05:33:27.264874
+556	20	Approved	Beginner	8	Occasionally	Seeded assignment	2025-12-01 20:33:27.264874
+956	22	Approved	Intermediate	5	Occasionally	Seeded assignment	\N
+958	9	Approved	Advanced	5	Weekly	Seeded assignment	\N
+191	3	Approved	Beginner	2	Weekly	Seeded request	\N
+586	7	Approved	Advanced	8	Weekly	Seeded request	\N
+59	23	Approved	Expert	12	Occasionally	Seeded request	2025-11-16 11:28:27.264874
+725	13	Approved	Expert	4	Daily	Seeded request	2025-11-15 17:40:27.264874
+502	23	Approved	Expert	4	Occasionally	Seeded request	2025-12-02 09:00:27.264874
+34	4	Approved	Beginner	6	Daily	Seeded request	\N
+182	18	Approved	Advanced	9	Occasionally	Seeded assignment	\N
+735	7	Approved	Beginner	0	Daily	Seeded assignment	\N
+139	4	Approved	Intermediate	1	Weekly	Seeded request	2025-11-15 22:45:27.264874
+708	13	Approved	Advanced	15	Daily	Seeded assignment	\N
+810	20	Approved	Expert	13	Weekly	Seeded assignment	2025-11-28 07:53:27.264874
+52	21	Approved	Expert	0	Occasionally	Seeded assignment	\N
+132	4	Approved	Expert	3	Daily	Seeded assignment	\N
+706	6	Approved	Expert	8	Daily	Seeded assignment	2025-11-20 05:13:27.264874
+849	1	Approved	Advanced	14	Monthly	Seeded assignment	\N
+59	3	Approved	Beginner	7	Daily	Seeded assignment	\N
+15	25	Approved	Advanced	13	Monthly	Seeded request	\N
+35	5	Approved	Intermediate	8	Occasionally	Seeded assignment	2025-11-05 02:54:27.264874
+866	8	Approved	Expert	5	Monthly	Seeded assignment	\N
+140	25	Approved	Beginner	0	Occasionally	Seeded assignment	\N
+77	25	Approved	Beginner	3	Weekly	Seeded assignment	2025-11-27 06:51:27.264874
+103	20	Approved	Beginner	9	Daily	Seeded request	2025-12-01 10:34:27.264874
+495	12	Approved	Beginner	13	Daily	Seeded assignment	2025-11-21 17:38:27.264874
+951	16	Approved	Advanced	9	Monthly	Seeded request	\N
+890	11	Approved	Advanced	2	Weekly	Seeded request	2025-11-06 19:44:27.264874
+787	5	Approved	Beginner	3	Monthly	Seeded assignment	2025-11-06 07:06:27.264874
+503	13	Approved	Advanced	9	Weekly	Seeded assignment	\N
+889	21	Approved	Beginner	13	Daily	Seeded assignment	2025-11-12 12:56:27.264874
+334	22	Approved	Advanced	3	Daily	Seeded request	2025-11-24 15:41:27.264874
+646	24	Approved	Expert	1	Weekly	Seeded assignment	\N
+111	11	Approved	Intermediate	3	Occasionally	Seeded assignment	\N
+894	18	Approved	Intermediate	7	Occasionally	Seeded request	\N
+475	10	Approved	Intermediate	5	Occasionally	Seeded assignment	2025-11-19 23:29:27.264874
+249	4	Approved	Intermediate	13	Weekly	Seeded request	\N
+196	6	Approved	Expert	12	Occasionally	Seeded request	\N
+134	9	Approved	Beginner	0	Monthly	Seeded request	\N
+386	22	Approved	Intermediate	8	Weekly	Seeded assignment	2025-11-12 14:47:27.264874
+573	13	Approved	Expert	0	Monthly	Seeded assignment	2025-11-19 19:01:27.264874
+779	23	Approved	Expert	4	Weekly	Seeded assignment	\N
+203	4	Approved	Beginner	6	Daily	Seeded request	2025-11-20 00:10:27.264874
+596	10	Approved	Beginner	5	Monthly	Seeded assignment	\N
+945	11	Approved	Beginner	5	Monthly	Seeded assignment	\N
+351	22	Approved	Advanced	4	Monthly	Seeded request	\N
+69	4	Approved	Expert	11	Occasionally	Seeded assignment	2025-11-06 14:49:27.264874
+136	6	Approved	Beginner	11	Daily	Seeded request	2025-11-16 19:55:27.264874
+731	5	Approved	Expert	6	Monthly	Seeded assignment	2025-11-15 00:38:27.264874
+394	3	Approved	Expert	1	Weekly	Seeded assignment	\N
+793	12	Approved	Intermediate	2	Daily	Seeded assignment	2025-12-02 09:12:27.264874
+75	25	Approved	Expert	4	Monthly	Seeded assignment	\N
+624	1	Approved	Advanced	10	Weekly	Seeded assignment	2025-11-22 06:07:27.264874
+353	13	Approved	Expert	10	Weekly	Seeded request	\N
+662	3	Approved	Beginner	11	Monthly	Seeded assignment	2025-11-25 00:45:27.264874
+533	22	Approved	Intermediate	7	Monthly	Seeded assignment	\N
+561	25	Approved	Expert	6	Weekly	Seeded assignment	\N
+94	6	Approved	Beginner	13	Weekly	Seeded assignment	\N
+800	20	Approved	Expert	1	Occasionally	Seeded assignment	2025-11-27 12:36:27.264874
+498	19	Approved	Expert	4	Occasionally	Seeded request	\N
+816	9	Approved	Expert	8	Weekly	Seeded assignment	2025-11-27 02:50:27.264874
+333	20	Approved	Intermediate	9	Daily	Seeded request	2025-11-03 17:10:27.264874
+341	8	Approved	Intermediate	1	Monthly	Seeded request	\N
+146	22	Approved	Expert	15	Weekly	Seeded request	2025-11-19 19:53:27.264874
+2	4	Approved	Beginner	15	Daily	Seeded assignment	\N
+544	25	Approved	Beginner	6	Weekly	Seeded request	\N
+380	10	Approved	Advanced	3	Weekly	Seeded assignment	2025-11-14 06:02:27.264874
+259	24	Approved	Expert	7	Daily	Seeded request	2025-11-29 09:37:27.264874
+427	5	Approved	Advanced	1	Weekly	Seeded assignment	2025-11-27 15:02:27.264874
+721	7	Approved	Beginner	12	Daily	Seeded assignment	\N
+297	12	Approved	Advanced	3	Weekly	Seeded assignment	2025-12-01 14:46:27.264874
+848	7	Approved	Beginner	3	Occasionally	Seeded assignment	2025-11-20 00:55:27.264874
+703	4	Approved	Intermediate	0	Occasionally	Seeded assignment	2025-11-17 15:19:27.264874
+66	23	Approved	Intermediate	2	Weekly	Seeded request	\N
+827	23	Approved	Expert	15	Monthly	Seeded assignment	\N
+698	3	Approved	Intermediate	13	Occasionally	Seeded assignment	2025-11-13 17:18:27.264874
+141	3	Approved	Expert	0	Weekly	Seeded assignment	2025-11-26 05:20:27.264874
+229	11	Approved	Expert	15	Occasionally	Seeded assignment	\N
+860	18	Approved	Expert	1	Occasionally	Seeded assignment	\N
+224	4	Approved	Advanced	9	Weekly	Seeded assignment	\N
+255	23	Approved	Expert	1	Daily	Seeded request	\N
+34	7	Approved	Beginner	6	Occasionally	Seeded request	2025-11-07 01:09:27.264874
+124	11	Approved	Expert	4	Occasionally	Seeded assignment	2025-11-04 09:09:27.264874
+247	11	Approved	Beginner	14	Monthly	Seeded assignment	2025-11-03 09:15:27.264874
+7	5	Approved	Expert	5	Monthly	Seeded assignment	\N
+263	5	Approved	Advanced	7	Monthly	Seeded assignment	2025-11-13 07:24:27.264874
+932	1	Approved	Expert	15	Daily	Seeded request	\N
+437	6	Approved	Expert	2	Daily	Seeded request	\N
+88	13	Approved	Advanced	10	Weekly	Seeded assignment	\N
+466	23	Approved	Intermediate	15	Occasionally	Seeded request	\N
+451	12	Approved	Advanced	12	Monthly	Seeded request	\N
+256	21	Approved	Beginner	6	Occasionally	Seeded request	2025-11-07 14:20:27.264874
+607	22	Approved	Advanced	5	Daily	Seeded assignment	\N
+745	8	Approved	Advanced	5	Occasionally	Seeded request	\N
+156	3	Approved	Expert	13	Daily	Seeded assignment	2025-11-17 10:23:27.264874
+764	9	Approved	Expert	2	Monthly	Seeded assignment	\N
+139	23	Approved	Intermediate	6	Monthly	Seeded assignment	\N
+614	23	Approved	Beginner	5	Monthly	Seeded assignment	\N
+456	21	Approved	Advanced	7	Daily	Seeded assignment	2025-12-01 22:06:27.264874
+143	23	Approved	Intermediate	7	Occasionally	Seeded request	2025-11-10 12:59:27.264874
+613	18	Approved	Advanced	10	Occasionally	Seeded request	\N
+89	7	Approved	Intermediate	11	Daily	Seeded request	2025-11-22 09:04:27.264874
+830	22	Approved	Advanced	14	Weekly	Seeded assignment	2025-11-18 11:46:27.264874
+949	23	Approved	Advanced	2	Daily	Seeded request	\N
+34	23	Approved	Intermediate	3	Weekly	Seeded assignment	\N
+42	4	Approved	Expert	3	Daily	Seeded request	2025-11-26 17:14:27.264874
+771	19	Approved	Expert	15	Monthly	Seeded request	2025-11-21 03:33:27.264874
+676	8	Approved	Advanced	3	Monthly	Seeded assignment	2025-11-15 06:40:27.264874
+138	10	Approved	Beginner	1	Occasionally	Seeded request	\N
+637	5	Approved	Expert	5	Monthly	Seeded request	\N
+463	23	Approved	Advanced	6	Occasionally	Seeded assignment	\N
+775	19	Approved	Advanced	5	Daily	Seeded assignment	\N
+430	7	Approved	Intermediate	10	Daily	Seeded request	2025-11-15 09:05:27.264874
+562	25	Approved	Advanced	2	Monthly	Seeded request	2025-11-28 11:47:27.264874
+194	7	Approved	Intermediate	11	Weekly	Seeded assignment	2025-11-10 18:34:27.264874
+400	12	Approved	Intermediate	8	Daily	Seeded request	2025-11-05 13:33:27.264874
+689	12	Approved	Advanced	5	Weekly	Seeded assignment	\N
+736	5	Approved	Beginner	15	Occasionally	Seeded assignment	\N
+207	23	Approved	Beginner	5	Monthly	Seeded assignment	2025-11-08 17:55:27.264874
+312	6	Approved	Beginner	13	Daily	Seeded request	\N
+389	8	Approved	Advanced	10	Daily	Seeded assignment	\N
+131	9	Approved	Intermediate	9	Monthly	Seeded assignment	\N
+394	23	Approved	Intermediate	6	Monthly	Seeded request	2025-11-26 22:17:27.264874
+107	19	Approved	Intermediate	0	Occasionally	Seeded assignment	\N
+679	19	Approved	Beginner	2	Occasionally	Seeded request	\N
+423	24	Approved	Intermediate	11	Monthly	Seeded assignment	\N
+489	9	Approved	Intermediate	10	Weekly	Seeded request	2025-11-04 14:50:27.264874
+777	4	Approved	Intermediate	5	Occasionally	Seeded assignment	2025-11-25 10:32:27.264874
+133	13	Approved	Beginner	11	Weekly	Seeded assignment	2025-11-23 18:06:27.264874
+234	16	Approved	Intermediate	4	Occasionally	Seeded request	\N
+737	20	Approved	Beginner	4	Occasionally	Seeded assignment	\N
+323	10	Approved	Intermediate	0	Daily	Seeded request	\N
+678	10	Approved	Expert	13	Weekly	Seeded assignment	2025-11-08 15:10:27.264874
+660	3	Approved	Beginner	7	Occasionally	Seeded request	\N
+496	6	Approved	Beginner	1	Occasionally	Seeded assignment	2025-11-06 23:06:27.264874
+698	4	Approved	Beginner	3	Occasionally	Seeded request	\N
+210	19	Approved	Intermediate	11	Occasionally	Seeded request	\N
+875	21	Approved	Beginner	5	Occasionally	Seeded assignment	\N
+885	17	Approved	Intermediate	4	Monthly	Seeded assignment	\N
+102	23	Approved	Advanced	13	Occasionally	Seeded assignment	2025-11-28 04:48:27.264874
+898	23	Approved	Expert	3	Weekly	Seeded assignment	\N
+416	21	Approved	Intermediate	10	Daily	Seeded request	2025-11-04 01:13:27.264874
+703	3	Approved	Beginner	1	Occasionally	Seeded assignment	\N
+773	5	Approved	Expert	15	Monthly	Seeded assignment	\N
+933	5	Approved	Expert	0	Daily	Seeded assignment	\N
+246	16	Approved	Advanced	8	Monthly	Seeded request	2025-11-23 01:03:27.264874
+859	19	Approved	Beginner	13	Monthly	Seeded assignment	\N
+203	3	Approved	Intermediate	8	Daily	Seeded request	2025-11-10 10:55:27.264874
+251	6	Approved	Intermediate	0	Daily	Seeded assignment	2025-11-26 21:27:27.264874
+44	11	Approved	Beginner	0	Occasionally	Seeded request	2025-11-10 09:44:27.264874
+656	24	Approved	Expert	5	Occasionally	Seeded assignment	\N
+375	5	Approved	Intermediate	10	Daily	Seeded request	\N
+418	4	Approved	Beginner	0	Weekly	Seeded request	2025-11-27 23:26:27.264874
+85	21	Approved	Advanced	4	Weekly	Seeded assignment	2025-11-08 10:41:27.264874
+513	3	Approved	Advanced	1	Occasionally	Seeded request	\N
+586	3	Approved	Advanced	6	Monthly	Seeded assignment	\N
+51	3	Approved	Expert	2	Weekly	Seeded request	\N
+846	24	Approved	Beginner	8	Occasionally	Seeded request	\N
+271	22	Approved	Advanced	2	Weekly	Seeded request	2025-11-08 22:05:27.264874
+879	25	Approved	Advanced	15	Monthly	Seeded request	2025-11-12 23:02:27.264874
+55	10	Approved	Intermediate	9	Weekly	Seeded request	2025-11-20 06:25:27.264874
+605	9	Approved	Beginner	0	Weekly	Seeded request	\N
+169	20	Approved	Intermediate	12	Weekly	Seeded assignment	2025-11-23 04:12:27.264874
+448	11	Approved	Intermediate	13	Monthly	Seeded request	2025-12-01 16:38:27.264874
+885	21	Approved	Advanced	7	Weekly	Seeded request	\N
+877	4	Approved	Intermediate	11	Occasionally	Seeded assignment	2025-11-07 06:38:27.264874
+362	1	Approved	Intermediate	4	Monthly	Seeded request	2025-11-18 15:15:27.264874
+671	24	Approved	Expert	14	Daily	Seeded request	\N
+631	13	Approved	Beginner	8	Daily	Seeded request	\N
+270	22	Approved	Beginner	13	Daily	Seeded assignment	\N
+244	18	Approved	Beginner	8	Weekly	Seeded assignment	2025-12-02 17:20:27.264874
+226	19	Approved	Intermediate	10	Daily	Seeded request	\N
+580	6	Approved	Expert	13	Weekly	Seeded assignment	2025-11-17 07:02:27.264874
+265	3	Approved	Beginner	7	Occasionally	Seeded request	2025-11-08 22:51:27.264874
+91	19	Approved	Beginner	0	Occasionally	Seeded request	2025-11-26 08:19:27.264874
+253	22	Approved	Intermediate	7	Daily	Seeded assignment	\N
+151	22	Approved	Intermediate	5	Weekly	Seeded assignment	\N
+509	6	Approved	Expert	2	Weekly	Seeded assignment	\N
+485	19	Approved	Intermediate	3	Monthly	Seeded assignment	2025-11-04 20:50:27.264874
+83	13	Approved	Beginner	14	Daily	Seeded request	\N
+112	20	Approved	Beginner	12	Weekly	Seeded request	2025-11-22 02:25:27.264874
+147	25	Approved	Beginner	15	Monthly	Seeded assignment	2025-12-03 04:16:27.264874
+579	5	Approved	Beginner	6	Weekly	Seeded assignment	\N
+541	9	Approved	Intermediate	8	Monthly	Seeded request	\N
+603	11	Approved	Advanced	15	Monthly	Seeded assignment	\N
+857	21	Approved	Intermediate	13	Daily	Seeded assignment	2025-11-14 09:08:27.264874
+970	5	Approved	Expert	6	Daily	Seeded request	\N
+453	10	Approved	Beginner	8	Daily	Seeded assignment	2025-11-29 02:27:27.264874
+933	17	Approved	Expert	2	Monthly	Seeded request	2025-11-04 01:26:27.264874
+268	4	Approved	Expert	15	Daily	Seeded assignment	2025-11-12 12:43:27.264874
+765	3	Approved	Advanced	5	Monthly	Seeded assignment	\N
+328	17	Approved	Beginner	12	Daily	Seeded request	\N
+461	19	Approved	Beginner	13	Monthly	Seeded assignment	2025-11-26 09:05:27.264874
+753	10	Approved	Expert	13	Weekly	Seeded request	\N
+264	1	Approved	Beginner	13	Weekly	Seeded assignment	2025-11-09 08:58:27.264874
+918	16	Approved	Expert	6	Weekly	Seeded request	\N
+810	21	Approved	Expert	11	Weekly	Seeded request	2025-12-02 01:29:27.264874
+939	23	Approved	Expert	6	Daily	Seeded request	2025-11-10 13:17:27.264874
+263	17	Approved	Intermediate	6	Daily	Seeded assignment	\N
+78	18	Approved	Intermediate	14	Daily	Seeded request	\N
+1	24	Approved	Advanced	5	Monthly	Seeded assignment	2025-11-18 14:10:27.264874
+238	3	Approved	Advanced	0	Monthly	Seeded assignment	2025-11-06 15:52:27.264874
+180	23	Approved	Expert	15	Weekly	Seeded assignment	\N
+164	18	Approved	Advanced	4	Weekly	Seeded assignment	2025-11-26 18:40:27.264874
+7	17	Approved	Advanced	10	Occasionally	Seeded request	2025-11-25 07:19:27.264874
+704	18	Approved	Intermediate	7	Monthly	Seeded assignment	\N
+871	23	Approved	Intermediate	0	Monthly	Seeded assignment	2025-11-13 12:29:27.264874
+836	4	Approved	Advanced	9	Monthly	Seeded assignment	\N
+346	13	Approved	Beginner	13	Occasionally	Seeded request	\N
+893	5	Approved	Expert	6	Occasionally	Seeded assignment	2025-11-25 09:37:27.264874
+858	21	Approved	Expert	0	Occasionally	Seeded request	2025-11-15 18:54:27.264874
+972	10	Approved	Expert	15	Weekly	Seeded request	2025-11-05 21:11:27.264874
+715	6	Approved	Advanced	5	Occasionally	Seeded assignment	\N
+22	24	Approved	Expert	2	Monthly	Seeded assignment	\N
+769	24	Approved	Intermediate	2	Monthly	Seeded assignment	\N
+875	12	Approved	Beginner	2	Monthly	Seeded request	2025-11-24 02:47:27.264874
+297	5	Approved	Expert	14	Daily	Seeded request	2025-11-12 09:09:27.264874
+490	10	Approved	Advanced	5	Occasionally	Seeded assignment	\N
+808	10	Approved	Beginner	2	Occasionally	Seeded assignment	2025-11-08 14:55:27.264874
+416	12	Approved	Expert	10	Occasionally	Seeded request	\N
+532	19	Approved	Beginner	10	Occasionally	Seeded assignment	\N
+460	8	Approved	Advanced	0	Weekly	Seeded assignment	\N
+319	20	Approved	Intermediate	9	Monthly	Seeded request	\N
+272	17	Approved	Beginner	7	Daily	Seeded request	\N
+600	20	Approved	Intermediate	6	Occasionally	Seeded assignment	\N
+904	21	Approved	Advanced	15	Weekly	Seeded request	2025-11-27 03:15:27.264874
+223	17	Approved	Advanced	1	Monthly	Seeded request	\N
+439	7	Approved	Advanced	7	Daily	Seeded request	\N
+521	6	Approved	Beginner	0	Occasionally	Seeded assignment	2025-11-05 18:20:27.264874
+231	17	Approved	Advanced	4	Daily	Seeded assignment	\N
+455	22	Approved	Beginner	6	Occasionally	Seeded assignment	\N
+349	23	Approved	Expert	8	Daily	Seeded assignment	2025-11-15 08:46:27.264874
+184	20	Approved	Intermediate	10	Monthly	Seeded request	\N
+441	8	Approved	Expert	15	Daily	Seeded request	2025-11-21 06:16:27.264874
+543	13	Approved	Beginner	9	Daily	Seeded request	\N
+645	17	Approved	Intermediate	15	Daily	Seeded request	2025-11-14 16:41:27.264874
+107	18	Approved	Expert	4	Daily	Seeded assignment	2025-11-16 01:23:27.264874
+180	7	Approved	Intermediate	11	Daily	Seeded request	\N
+230	22	Approved	Beginner	9	Occasionally	Seeded assignment	\N
+391	19	Approved	Intermediate	1	Monthly	Seeded request	\N
+416	20	Approved	Intermediate	4	Daily	Seeded assignment	2025-11-05 09:51:27.264874
+758	20	Approved	Intermediate	5	Weekly	Seeded assignment	\N
+414	1	Approved	Intermediate	12	Monthly	Seeded assignment	\N
+772	25	Approved	Advanced	8	Monthly	Seeded request	2025-11-04 07:18:27.264874
+822	11	Approved	Advanced	10	Daily	Seeded request	2025-11-22 16:10:27.264874
+621	8	Approved	Intermediate	2	Occasionally	Seeded assignment	\N
+726	24	Approved	Advanced	1	Occasionally	Seeded assignment	2025-11-16 15:02:27.264874
+371	24	Approved	Expert	7	Monthly	Seeded assignment	\N
+292	16	Approved	Advanced	13	Daily	Seeded request	\N
+913	12	Approved	Advanced	4	Monthly	Seeded assignment	2025-11-30 10:06:27.264874
+157	10	Approved	Expert	14	Weekly	Seeded request	2025-11-23 21:05:27.264874
+149	1	Approved	Advanced	1	Occasionally	Seeded request	\N
+863	11	Approved	Expert	12	Daily	Seeded request	2025-11-18 06:26:27.264874
+967	7	Approved	Beginner	4	Weekly	Seeded request	2025-11-10 06:28:27.264874
+953	25	Approved	Intermediate	10	Monthly	Seeded request	\N
+541	1	Approved	Advanced	2	Daily	Seeded request	2025-11-20 22:15:27.264874
+695	5	Approved	Expert	14	Monthly	Seeded request	\N
+144	25	Approved	Intermediate	13	Occasionally	Seeded assignment	2025-11-29 09:58:27.264874
+963	25	Approved	Advanced	5	Daily	Seeded assignment	\N
+965	19	Approved	Advanced	13	Monthly	Seeded assignment	\N
+213	22	Approved	Advanced	12	Monthly	Seeded assignment	2025-11-10 09:36:27.264874
+347	24	Approved	Advanced	12	Weekly	Seeded assignment	2025-11-04 13:17:27.264874
+983	12	Approved	Intermediate	7	Weekly	Seeded request	\N
+355	19	Approved	Beginner	1	Daily	Seeded request	2025-11-18 03:49:27.264874
+392	18	Approved	Advanced	3	Occasionally	Seeded assignment	2025-11-22 22:44:27.264874
+836	3	Approved	Advanced	11	Daily	Seeded assignment	\N
+290	21	Approved	Intermediate	13	Monthly	Seeded request	2025-11-21 05:43:27.264874
+824	17	Approved	Intermediate	13	Occasionally	Seeded assignment	\N
+950	23	Approved	Beginner	0	Daily	Seeded request	\N
+373	22	Approved	Expert	9	Weekly	Seeded assignment	\N
+159	8	Approved	Intermediate	14	Weekly	Seeded request	\N
+238	4	Approved	Expert	15	Occasionally	Seeded assignment	\N
+420	25	Approved	Advanced	1	Monthly	Seeded request	\N
+902	17	Approved	Intermediate	7	Occasionally	Seeded assignment	\N
+791	21	Approved	Advanced	0	Weekly	Seeded assignment	\N
+901	10	Approved	Expert	14	Weekly	Seeded assignment	2025-11-21 12:46:27.264874
+196	1	Approved	Beginner	7	Weekly	Seeded assignment	2025-11-11 07:49:27.264874
+333	5	Approved	Beginner	1	Monthly	Seeded request	\N
+268	3	Approved	Expert	13	Weekly	Seeded assignment	2025-12-03 02:59:27.264874
+152	6	Approved	Expert	14	Occasionally	Seeded assignment	\N
+480	8	Approved	Intermediate	2	Occasionally	Seeded request	2025-12-01 09:05:27.264874
+738	21	Approved	Advanced	5	Occasionally	Seeded request	\N
+475	6	Approved	Intermediate	13	Daily	Seeded assignment	\N
+168	17	Approved	Advanced	3	Monthly	Seeded assignment	\N
+5	6	Approved	Intermediate	14	Daily	Seeded assignment	\N
+314	8	Approved	Advanced	12	Daily	Seeded request	\N
+166	16	Approved	Beginner	6	Weekly	Seeded assignment	\N
+597	4	Approved	Expert	9	Weekly	Seeded assignment	\N
+832	9	Approved	Advanced	14	Weekly	Seeded request	\N
+764	13	Approved	Expert	7	Occasionally	Seeded assignment	\N
+431	16	Approved	Expert	0	Daily	Seeded request	\N
+453	9	Approved	Advanced	2	Weekly	Seeded assignment	\N
+823	24	Approved	Beginner	6	Occasionally	Seeded request	\N
+551	20	Approved	Intermediate	3	Daily	Seeded assignment	\N
+518	25	Approved	Expert	2	Daily	Seeded request	\N
+66	21	Approved	Intermediate	5	Daily	Seeded request	\N
+43	4	Approved	Advanced	5	Monthly	Seeded request	2025-11-17 19:51:27.264874
+626	24	Approved	Intermediate	14	Daily	Seeded request	\N
+616	9	Approved	Advanced	8	Occasionally	Seeded assignment	2025-11-15 01:34:27.264874
+224	5	Approved	Advanced	9	Weekly	Seeded assignment	\N
+869	6	Approved	Expert	8	Occasionally	Seeded assignment	\N
+157	1	Approved	Beginner	8	Monthly	Seeded assignment	2025-11-19 16:04:27.264874
+388	16	Approved	Advanced	1	Occasionally	Seeded assignment	\N
+363	11	Approved	Expert	6	Daily	Seeded request	\N
+770	6	Approved	Intermediate	1	Daily	Seeded assignment	\N
+265	17	Approved	Intermediate	15	Monthly	Seeded request	2025-11-24 09:05:27.264874
+973	13	Approved	Advanced	6	Daily	Seeded assignment	\N
+308	3	Approved	Advanced	11	Daily	Seeded assignment	2025-11-03 21:25:27.264874
+272	3	Approved	Beginner	7	Daily	Seeded assignment	2025-11-05 21:13:27.264874
+944	4	Approved	Intermediate	13	Weekly	Seeded request	\N
+787	4	Approved	Beginner	6	Daily	Seeded assignment	\N
+647	25	Approved	Expert	2	Daily	Seeded request	\N
+132	5	Approved	Expert	0	Occasionally	Seeded request	2025-11-27 19:49:27.264874
+747	22	Approved	Expert	1	Weekly	Seeded assignment	2025-11-13 05:27:27.264874
+147	16	Approved	Advanced	9	Monthly	Seeded assignment	2025-11-28 17:50:27.264874
+555	17	Approved	Intermediate	10	Weekly	Seeded request	\N
+964	5	Approved	Beginner	3	Occasionally	Seeded request	2025-11-07 23:49:27.264874
+445	9	Approved	Expert	1	Daily	Seeded request	2025-11-28 13:54:27.264874
+9	9	Approved	Advanced	10	Monthly	Seeded assignment	\N
+278	7	Approved	Intermediate	9	Monthly	Seeded assignment	\N
+767	11	Approved	Beginner	7	Occasionally	Seeded assignment	2025-11-26 21:56:27.264874
+299	20	Approved	Expert	8	Monthly	Seeded request	\N
+430	5	Approved	Advanced	13	Occasionally	Seeded assignment	\N
+161	16	Approved	Beginner	9	Weekly	Seeded assignment	\N
+874	9	Approved	Advanced	8	Occasionally	Seeded request	\N
+228	21	Approved	Advanced	11	Occasionally	Seeded assignment	2025-11-13 00:17:27.264874
+435	23	Approved	Expert	7	Monthly	Seeded request	2025-11-28 07:08:27.264874
+808	9	Approved	Advanced	6	Monthly	Seeded assignment	\N
+901	1	Approved	Expert	0	Weekly	Seeded request	\N
+607	19	Approved	Intermediate	1	Monthly	Seeded request	\N
+114	11	Approved	Expert	2	Weekly	Seeded assignment	\N
+550	25	Approved	Intermediate	5	Occasionally	Seeded assignment	2025-11-29 16:27:27.264874
+309	20	Approved	Advanced	14	Daily	Seeded request	\N
+308	4	Approved	Beginner	13	Monthly	Seeded request	2025-12-01 15:00:27.264874
+377	23	Approved	Intermediate	4	Monthly	Seeded request	\N
+592	16	Approved	Advanced	14	Weekly	Seeded request	\N
+369	19	Approved	Expert	13	Daily	Seeded assignment	\N
+24	23	Approved	Advanced	8	Monthly	Seeded assignment	2025-11-07 11:05:27.264874
+349	20	Approved	Intermediate	11	Daily	Seeded assignment	2025-11-20 13:59:27.264874
+821	12	Approved	Expert	12	Weekly	Seeded request	2025-11-03 20:46:27.264874
+306	16	Approved	Advanced	0	Weekly	Seeded request	2025-11-27 05:09:27.264874
+585	18	Approved	Intermediate	4	Weekly	Seeded request	2025-11-27 11:40:27.264874
+665	17	Approved	Beginner	14	Monthly	Seeded request	2025-11-28 15:51:27.264874
+942	25	Approved	Advanced	14	Monthly	Seeded request	\N
+241	24	Approved	Beginner	5	Weekly	Seeded assignment	2025-11-23 14:06:27.264874
+357	24	Approved	Expert	6	Weekly	Seeded assignment	2025-11-24 07:04:27.264874
+491	16	Approved	Intermediate	3	Monthly	Seeded assignment	\N
+161	13	Approved	Beginner	13	Occasionally	Seeded assignment	2025-11-08 06:48:27.264874
+476	5	Approved	Intermediate	5	Daily	Seeded assignment	\N
+945	13	Approved	Advanced	12	Weekly	Seeded assignment	\N
+809	3	Approved	Expert	10	Weekly	Seeded request	2025-11-15 02:25:27.264874
+926	20	Approved	Intermediate	1	Monthly	Seeded request	2025-11-17 05:24:27.264874
+859	12	Approved	Beginner	3	Weekly	Seeded assignment	\N
+670	16	Approved	Intermediate	6	Monthly	Seeded request	\N
+154	18	Approved	Intermediate	10	Occasionally	Seeded assignment	\N
+691	1	Approved	Beginner	0	Weekly	Seeded assignment	2025-11-27 11:03:27.264874
+858	19	Approved	Advanced	15	Monthly	Seeded assignment	2025-11-08 17:01:27.264874
+644	24	Approved	Expert	5	Daily	Seeded assignment	\N
+188	4	Approved	Expert	15	Monthly	Seeded request	2025-12-01 09:44:27.264874
+418	5	Approved	Intermediate	2	Daily	Seeded assignment	2025-11-12 16:59:27.264874
+503	9	Approved	Beginner	0	Monthly	Seeded request	2025-11-28 23:48:27.264874
+952	8	Approved	Beginner	0	Daily	Seeded assignment	\N
+278	23	Approved	Expert	13	Occasionally	Seeded assignment	\N
+420	16	Approved	Beginner	3	Occasionally	Seeded request	2025-11-17 22:30:27.264874
+87	3	Approved	Beginner	6	Daily	Seeded assignment	\N
+524	24	Approved	Intermediate	14	Daily	Seeded assignment	2025-11-28 02:32:27.264874
+664	17	Approved	Intermediate	11	Daily	Seeded request	\N
+382	25	Approved	Beginner	10	Occasionally	Seeded request	\N
+183	16	Approved	Expert	9	Daily	Seeded assignment	\N
+711	16	Approved	Intermediate	11	Weekly	Seeded assignment	2025-11-09 03:13:27.264874
+127	12	Approved	Beginner	9	Weekly	Seeded request	2025-11-09 23:16:27.264874
+248	5	Approved	Advanced	2	Weekly	Seeded assignment	\N
+250	21	Approved	Intermediate	2	Monthly	Seeded assignment	2025-11-30 03:20:27.264874
+749	16	Approved	Advanced	2	Occasionally	Seeded request	\N
+328	4	Approved	Expert	4	Monthly	Seeded request	2025-11-05 10:11:27.264874
+634	3	Approved	Advanced	15	Weekly	Seeded assignment	\N
+268	17	Approved	Intermediate	7	Weekly	Seeded assignment	\N
+303	8	Approved	Intermediate	3	Weekly	Seeded request	\N
+867	22	Approved	Expert	2	Monthly	Seeded assignment	\N
+950	20	Approved	Advanced	15	Weekly	Seeded request	\N
+828	11	Approved	Beginner	5	Weekly	Seeded assignment	2025-11-13 10:15:27.264874
+972	1	Approved	Intermediate	4	Occasionally	Seeded assignment	\N
+496	10	Approved	Advanced	5	Weekly	Seeded assignment	2025-11-21 17:00:27.264874
+877	12	Approved	Intermediate	14	Occasionally	Seeded request	\N
+490	1	Approved	Intermediate	5	Daily	Seeded assignment	2025-11-06 19:43:27.264874
+292	25	Approved	Intermediate	8	Monthly	Seeded request	2025-11-08 18:11:27.264874
+459	6	Approved	Intermediate	10	Monthly	Seeded assignment	2025-11-26 17:53:27.264874
+807	17	Approved	Beginner	8	Daily	Seeded assignment	\N
+570	8	Approved	Beginner	10	Monthly	Seeded request	\N
+231	4	Approved	Intermediate	4	Daily	Seeded assignment	2025-11-03 20:51:27.264874
+615	16	Approved	Intermediate	12	Occasionally	Seeded request	\N
+826	19	Approved	Intermediate	1	Occasionally	Seeded request	\N
+445	1	Approved	Beginner	9	Weekly	Seeded assignment	2025-11-12 19:45:27.264874
+953	16	Approved	Intermediate	10	Occasionally	Seeded request	2025-11-11 17:10:27.264874
+110	18	Approved	Advanced	1	Daily	Seeded request	\N
+154	3	Approved	Intermediate	8	Daily	Seeded assignment	\N
+103	4	Approved	Advanced	6	Daily	Seeded request	2025-11-05 05:03:27.264874
+899	24	Approved	Advanced	7	Daily	Seeded assignment	2025-12-02 19:23:27.264874
+646	6	Approved	Advanced	12	Monthly	Seeded request	2025-11-29 16:40:27.264874
+385	11	Approved	Advanced	13	Monthly	Seeded assignment	2025-11-20 01:21:27.264874
+162	13	Approved	Intermediate	0	Monthly	Seeded assignment	\N
+423	11	Approved	Beginner	12	Monthly	Seeded assignment	\N
+229	13	Approved	Advanced	13	Monthly	Seeded assignment	\N
+767	1	Approved	Expert	4	Monthly	Seeded request	\N
+389	1	Approved	Beginner	15	Daily	Seeded assignment	\N
+151	7	Approved	Beginner	9	Daily	Seeded assignment	\N
+108	10	Approved	Advanced	5	Daily	Seeded request	\N
+668	13	Approved	Advanced	10	Weekly	Seeded assignment	2025-12-01 08:48:27.264874
+227	19	Approved	Advanced	14	Monthly	Seeded request	2025-11-07 20:09:27.264874
+458	10	Approved	Expert	0	Occasionally	Seeded request	2025-12-02 23:38:27.264874
+199	9	Approved	Expert	14	Occasionally	Seeded request	\N
+479	25	Approved	Advanced	13	Daily	Seeded assignment	2025-11-22 02:37:27.264874
+413	10	Approved	Expert	11	Weekly	Seeded request	2025-11-08 19:23:27.264874
+871	5	Approved	Intermediate	14	Daily	Seeded request	\N
+629	10	Approved	Expert	14	Monthly	Seeded assignment	2025-11-15 11:32:27.264874
+964	20	Approved	Expert	15	Weekly	Seeded request	\N
+525	4	Approved	Advanced	5	Monthly	Seeded assignment	\N
+316	20	Approved	Beginner	5	Monthly	Seeded request	2025-12-01 12:37:27.264874
+487	19	Approved	Advanced	7	Occasionally	Seeded assignment	\N
+949	17	Approved	Advanced	1	Weekly	Seeded assignment	2025-11-13 05:13:27.264874
+734	11	Approved	Advanced	1	Weekly	Seeded assignment	\N
+905	9	Approved	Advanced	12	Daily	Seeded request	\N
+249	20	Approved	Advanced	15	Occasionally	Seeded assignment	\N
+588	10	Approved	Intermediate	4	Occasionally	Seeded request	2025-11-10 23:48:27.264874
+680	16	Approved	Beginner	10	Daily	Seeded assignment	2025-11-23 16:00:27.264874
+422	9	Approved	Beginner	8	Monthly	Seeded request	2025-11-09 15:45:27.264874
+684	17	Approved	Expert	9	Daily	Seeded request	2025-11-25 10:54:27.264874
+149	24	Approved	Beginner	9	Occasionally	Seeded assignment	\N
+886	23	Approved	Beginner	6	Monthly	Seeded request	2025-11-15 00:47:27.264874
+830	18	Approved	Expert	3	Monthly	Seeded assignment	\N
+337	23	Approved	Expert	4	Weekly	Seeded request	2025-11-11 21:32:27.264874
+805	25	Approved	Advanced	8	Daily	Seeded request	\N
+102	17	Approved	Expert	4	Daily	Seeded request	2025-11-23 22:21:27.264874
+370	5	Approved	Advanced	14	Weekly	Seeded assignment	\N
+529	20	Approved	Expert	15	Daily	Seeded assignment	2025-11-27 20:43:27.264874
+885	23	Approved	Expert	2	Daily	Seeded assignment	\N
+380	1	Approved	Beginner	13	Daily	Seeded request	\N
+833	25	Approved	Beginner	12	Weekly	Seeded request	2025-11-16 20:49:27.264874
+946	23	Approved	Beginner	1	Occasionally	Seeded assignment	\N
+359	24	Approved	Expert	12	Weekly	Seeded assignment	\N
+959	5	Approved	Advanced	4	Occasionally	Seeded assignment	\N
+279	6	Approved	Expert	6	Occasionally	Seeded request	2025-11-13 00:03:27.264874
+410	1	Approved	Beginner	3	Occasionally	Seeded request	\N
+23	4	Approved	Advanced	8	Daily	Seeded assignment	\N
+653	8	Approved	Beginner	15	Monthly	Seeded request	\N
+59	12	Approved	Beginner	12	Weekly	Seeded assignment	2025-11-27 05:54:27.264874
+961	19	Approved	Advanced	7	Occasionally	Seeded request	2025-11-25 05:53:27.264874
+326	6	Approved	Advanced	11	Occasionally	Seeded assignment	2025-11-08 17:41:27.264874
+806	23	Approved	Advanced	3	Daily	Seeded request	2025-11-28 17:30:27.264874
+267	11	Approved	Expert	7	Weekly	Seeded assignment	\N
+888	22	Approved	Expert	11	Daily	Seeded assignment	\N
+915	7	Approved	Advanced	13	Monthly	Seeded request	\N
+655	10	Approved	Beginner	15	Weekly	Seeded request	2025-11-16 14:43:27.264874
+454	9	Approved	Advanced	14	Weekly	Seeded assignment	\N
+542	3	Approved	Beginner	1	Monthly	Seeded assignment	\N
+828	9	Approved	Intermediate	12	Occasionally	Seeded assignment	\N
+617	8	Approved	Advanced	8	Daily	Seeded assignment	\N
+751	9	Approved	Advanced	12	Monthly	Seeded assignment	\N
+760	5	Approved	Intermediate	15	Monthly	Seeded request	\N
+173	20	Approved	Beginner	8	Occasionally	Seeded assignment	2025-11-03 12:03:27.264874
+56	24	Approved	Expert	4	Weekly	Seeded assignment	2025-11-25 16:14:27.264874
+136	24	Approved	Intermediate	1	Weekly	Seeded assignment	\N
+372	9	Approved	Advanced	0	Monthly	Seeded request	2025-11-16 10:03:27.264874
+167	10	Approved	Expert	5	Occasionally	Seeded request	2025-11-30 08:16:27.264874
+985	5	Approved	Intermediate	4	Weekly	Seeded assignment	\N
+703	20	Approved	Expert	4	Occasionally	Seeded assignment	\N
+664	21	Approved	Intermediate	11	Monthly	Seeded assignment	\N
+682	9	Approved	Expert	1	Occasionally	Seeded assignment	\N
+958	10	Approved	Advanced	12	Monthly	Seeded request	\N
+858	3	Approved	Beginner	6	Weekly	Seeded request	2025-11-20 21:18:27.264874
+605	13	Approved	Intermediate	5	Occasionally	Seeded assignment	2025-11-25 07:23:27.264874
+825	21	Approved	Beginner	3	Weekly	Seeded assignment	\N
+555	21	Approved	Expert	8	Occasionally	Seeded request	\N
+37	6	Approved	Beginner	13	Occasionally	Seeded assignment	2025-11-05 20:07:27.264874
+619	16	Approved	Beginner	3	Monthly	Seeded assignment	2025-11-15 02:04:27.264874
+660	12	Approved	Intermediate	15	Occasionally	Seeded assignment	\N
+946	7	Approved	Expert	11	Monthly	Seeded assignment	2025-11-13 20:01:27.264874
+86	4	Approved	Expert	6	Monthly	Seeded request	\N
+799	5	Approved	Expert	7	Occasionally	Seeded assignment	2025-11-29 05:24:27.264874
+590	7	Approved	Intermediate	15	Daily	Seeded request	\N
+951	11	Approved	Advanced	10	Monthly	Seeded request	2025-11-30 22:56:27.264874
+404	23	Approved	Advanced	0	Monthly	Seeded request	\N
+187	13	Approved	Advanced	8	Weekly	Seeded assignment	2025-11-25 23:12:27.264874
+111	16	Approved	Intermediate	2	Occasionally	Seeded assignment	2025-11-11 18:12:27.264874
+562	16	Approved	Beginner	3	Daily	Seeded assignment	2025-11-11 13:31:27.264874
+845	18	Approved	Advanced	12	Monthly	Seeded request	\N
+844	11	Approved	Expert	10	Monthly	Seeded request	2025-11-07 19:45:27.264874
+42	20	Approved	Intermediate	1	Monthly	Seeded assignment	\N
+793	4	Approved	Intermediate	9	Daily	Seeded request	2025-11-23 20:38:27.264874
+275	9	Approved	Expert	8	Occasionally	Seeded request	2025-11-16 23:57:27.264874
+103	3	Approved	Intermediate	9	Weekly	Seeded assignment	\N
+8	19	Approved	Expert	13	Weekly	Seeded request	\N
+895	22	Approved	Expert	14	Daily	Seeded request	2025-11-21 05:54:27.264874
+181	23	Approved	Advanced	14	Occasionally	Seeded assignment	\N
+535	8	Approved	Beginner	8	Occasionally	Seeded assignment	\N
+670	13	Approved	Advanced	1	Weekly	Seeded assignment	2025-12-01 20:03:27.264874
+628	19	Approved	Intermediate	10	Daily	Seeded assignment	\N
+58	1	Approved	Intermediate	14	Monthly	Seeded request	2025-11-17 22:03:27.264874
+410	9	Approved	Expert	3	Weekly	Seeded request	\N
+300	8	Approved	Intermediate	11	Weekly	Seeded assignment	2025-11-14 21:35:27.264874
+347	9	Approved	Expert	2	Daily	Seeded request	2025-11-30 03:19:27.264874
+249	12	Approved	Expert	10	Monthly	Seeded assignment	2025-11-15 12:16:27.264874
+565	8	Approved	Beginner	15	Daily	Seeded assignment	\N
+258	17	Approved	Advanced	9	Daily	Seeded assignment	2025-12-02 12:03:27.264874
+811	16	Approved	Advanced	11	Occasionally	Seeded assignment	\N
+982	12	Approved	Expert	3	Daily	Seeded assignment	\N
+421	25	Approved	Intermediate	15	Monthly	Seeded assignment	\N
+850	7	Approved	Beginner	13	Daily	Seeded request	\N
+971	9	Approved	Advanced	3	Daily	Seeded assignment	2025-11-08 03:33:27.264874
+93	23	Approved	Intermediate	0	Occasionally	Seeded assignment	2025-11-27 16:33:27.264874
+233	21	Approved	Expert	6	Daily	Seeded request	\N
+669	1	Approved	Expert	4	Occasionally	Seeded request	2025-11-03 09:55:27.264874
+629	8	Approved	Beginner	11	Daily	Seeded request	\N
+480	24	Approved	Expert	0	Daily	Seeded assignment	2025-11-25 01:02:27.264874
+645	18	Approved	Advanced	2	Weekly	Seeded assignment	\N
+133	25	Approved	Advanced	7	Weekly	Seeded request	\N
+288	17	Approved	Expert	10	Monthly	Seeded assignment	\N
+846	6	Approved	Expert	4	Occasionally	Seeded assignment	2025-11-13 02:14:27.264874
+194	12	Approved	Expert	6	Occasionally	Seeded request	2025-11-23 20:23:27.264874
+254	6	Approved	Intermediate	15	Weekly	Seeded assignment	2025-11-30 14:32:27.264874
+386	18	Approved	Beginner	1	Monthly	Seeded assignment	\N
+531	19	Approved	Intermediate	5	Monthly	Seeded request	2025-11-18 03:40:27.264874
+668	16	Approved	Beginner	12	Weekly	Seeded assignment	\N
+860	22	Approved	Advanced	9	Occasionally	Seeded request	\N
+265	21	Approved	Advanced	13	Occasionally	Seeded assignment	\N
+276	24	Approved	Expert	6	Weekly	Seeded assignment	2025-11-06 17:31:27.264874
+394	20	Approved	Expert	8	Daily	Seeded assignment	2025-11-24 15:16:27.264874
+229	16	Approved	Advanced	13	Monthly	Seeded request	\N
+587	19	Requested	Beginner	7	Weekly	Seeded assignment	2025-11-28 07:16:09.934399
+721	12	Approved	Intermediate	13	Daily	Seeded assignment	\N
+561	16	Approved	Intermediate	8	Weekly	Seeded assignment	\N
+574	9	Approved	Intermediate	5	Occasionally	Seeded assignment	\N
+695	23	Approved	Advanced	9	Monthly	Seeded assignment	\N
+918	25	Approved	Beginner	8	Occasionally	Seeded request	2025-11-13 13:19:27.264874
+661	6	Approved	Advanced	10	Occasionally	Seeded request	\N
+987	8	Approved	Intermediate	5	Weekly	Seeded assignment	2025-11-11 11:46:27.264874
+974	10	Approved	Intermediate	7	Monthly	Seeded assignment	2025-11-06 20:17:27.264874
+496	24	Approved	Intermediate	1	Monthly	Seeded request	\N
+335	6	Approved	Advanced	0	Monthly	Seeded assignment	\N
+485	17	Approved	Beginner	10	Occasionally	Seeded assignment	2025-11-09 03:17:27.264874
+70	12	Approved	Intermediate	4	Monthly	Seeded assignment	\N
+178	23	Approved	Intermediate	0	Weekly	Seeded assignment	2025-11-15 00:12:27.264874
+395	1	Approved	Beginner	9	Monthly	Seeded request	2025-11-10 13:46:27.264874
+854	20	Approved	Expert	0	Weekly	Seeded assignment	\N
+947	22	Approved	Advanced	12	Weekly	Seeded request	2025-12-02 23:48:27.264874
+526	23	Approved	Beginner	10	Weekly	Seeded request	\N
+559	23	Approved	Expert	15	Daily	Seeded request	\N
+759	21	Approved	Beginner	6	Monthly	Seeded request	2025-11-21 23:15:27.264874
+68	24	Approved	Expert	12	Daily	Seeded assignment	\N
+91	17	Approved	Expert	6	Monthly	Seeded assignment	2025-11-08 14:51:27.264874
+839	23	Approved	Beginner	12	Weekly	Seeded request	\N
+104	7	Approved	Expert	11	Weekly	Seeded request	2025-11-11 20:33:27.264874
+242	20	Approved	Intermediate	1	Occasionally	Seeded request	\N
+21	10	Approved	Beginner	13	Daily	Seeded assignment	\N
+783	19	Approved	Beginner	9	Monthly	Seeded request	2025-11-15 18:33:27.264874
+105	12	Approved	Advanced	4	Monthly	Seeded request	2025-11-08 07:48:27.264874
+145	7	Approved	Advanced	9	Occasionally	Seeded assignment	2025-11-22 03:48:27.264874
+267	9	Approved	Beginner	9	Weekly	Seeded assignment	2025-11-29 03:52:27.264874
+49	11	Approved	Beginner	3	Daily	Seeded request	\N
+22	11	Approved	Advanced	10	Weekly	Seeded request	\N
+790	12	Approved	Advanced	4	Daily	Seeded request	\N
+338	3	Approved	Advanced	5	Occasionally	Seeded assignment	2025-12-01 20:02:27.264874
+716	13	Approved	Beginner	0	Monthly	Seeded assignment	\N
+916	13	Approved	Expert	9	Occasionally	Seeded assignment	2025-11-09 04:08:27.264874
+586	22	Approved	Intermediate	5	Monthly	Seeded assignment	2025-11-17 00:29:27.264874
+468	10	Approved	Intermediate	5	Monthly	Seeded request	\N
+558	1	Approved	Advanced	11	Weekly	Seeded assignment	2025-12-03 00:31:27.264874
+430	22	Approved	Advanced	1	Occasionally	Seeded request	\N
+841	25	Approved	Advanced	12	Weekly	Seeded assignment	\N
+936	20	Approved	Advanced	12	Monthly	Seeded assignment	\N
+45	11	Approved	Intermediate	14	Weekly	Seeded assignment	2025-11-15 10:35:27.264874
+764	16	Approved	Intermediate	11	Daily	Seeded assignment	2025-11-21 11:55:27.264874
+243	7	Approved	Intermediate	15	Monthly	Seeded request	2025-11-13 13:51:27.264874
+60	11	Approved	Intermediate	8	Monthly	Seeded assignment	\N
+607	3	Approved	Advanced	10	Monthly	Seeded request	2025-11-09 05:31:27.264874
+3	5	Approved	Expert	15	Monthly	Seeded assignment	2025-12-02 01:46:27.264874
+156	22	Approved	Beginner	10	Weekly	Seeded assignment	\N
+220	13	Approved	Beginner	10	Weekly	Seeded assignment	\N
+633	23	Approved	Expert	15	Occasionally	Seeded assignment	\N
+499	17	Approved	Advanced	2	Daily	Seeded request	2025-11-30 01:17:27.264874
+534	1	Approved	Intermediate	3	Weekly	Seeded assignment	\N
+388	13	Approved	Advanced	0	Weekly	Seeded request	\N
+327	11	Approved	Advanced	14	Daily	Seeded request	2025-11-09 06:51:27.264874
+392	21	Approved	Advanced	5	Occasionally	Seeded assignment	\N
+146	7	Approved	Advanced	4	Occasionally	Seeded assignment	2025-11-21 13:59:27.264874
+272	19	Approved	Advanced	7	Monthly	Seeded assignment	2025-11-16 05:17:27.264874
+231	19	Approved	Advanced	3	Weekly	Seeded assignment	2025-11-20 15:52:27.264874
+520	1	Approved	Beginner	13	Occasionally	Seeded request	2025-11-03 23:01:27.264874
+688	1	Approved	Beginner	3	Monthly	Seeded request	\N
+428	7	Approved	Intermediate	9	Monthly	Seeded assignment	\N
+768	12	Approved	Beginner	1	Occasionally	Seeded request	2025-11-20 05:57:27.264874
+132	22	Approved	Intermediate	4	Weekly	Seeded assignment	\N
+540	17	Approved	Beginner	6	Weekly	Seeded assignment	2025-11-14 09:45:27.264874
+469	11	Approved	Expert	6	Occasionally	Seeded assignment	\N
+457	1	Approved	Beginner	9	Daily	Seeded assignment	2025-11-26 22:26:27.264874
+118	19	Approved	Beginner	7	Monthly	Seeded assignment	\N
+812	23	Approved	Intermediate	13	Monthly	Seeded assignment	\N
+521	16	Approved	Intermediate	2	Monthly	Seeded request	\N
+597	19	Approved	Intermediate	1	Weekly	Seeded request	\N
+658	9	Approved	Intermediate	0	Daily	Seeded request	2025-11-20 13:22:27.264874
+426	17	Approved	Expert	2	Daily	Seeded assignment	\N
+207	22	Approved	Expert	0	Monthly	Seeded assignment	2025-11-12 17:02:27.264874
+402	11	Approved	Beginner	12	Weekly	Seeded assignment	2025-11-11 11:32:27.264874
+770	25	Approved	Beginner	3	Daily	Seeded assignment	\N
+433	25	Approved	Beginner	15	Monthly	Seeded assignment	\N
+567	9	Approved	Expert	11	Weekly	Seeded request	\N
+518	6	Approved	Intermediate	6	Daily	Seeded request	2025-11-07 08:36:27.264874
+620	6	Approved	Expert	10	Daily	Seeded request	\N
+538	5	Approved	Beginner	7	Daily	Seeded request	2025-12-03 04:24:27.264874
+33	7	Approved	Intermediate	7	Monthly	Seeded request	2025-11-21 09:28:27.264874
+755	25	Approved	Expert	6	Monthly	Seeded assignment	2025-12-03 00:48:27.264874
+595	24	Approved	Expert	10	Monthly	Seeded assignment	2025-11-21 11:05:27.264874
+626	8	Approved	Expert	11	Weekly	Seeded request	\N
+857	19	Approved	Intermediate	3	Monthly	Seeded assignment	\N
+122	3	Approved	Beginner	0	Monthly	Seeded request	2025-11-18 03:12:27.264874
+209	18	Approved	Beginner	0	Occasionally	Seeded assignment	\N
+363	1	Approved	Expert	1	Occasionally	Seeded assignment	\N
+484	21	Approved	Expert	4	Weekly	Seeded request	2025-11-19 11:07:27.264874
+74	24	Approved	Advanced	3	Occasionally	Seeded assignment	\N
+817	5	Approved	Intermediate	14	Weekly	Seeded request	\N
+736	3	Approved	Expert	12	Weekly	Seeded assignment	\N
+87	23	Approved	Expert	10	Daily	Seeded request	2025-11-15 06:59:27.264874
+396	1	Approved	Advanced	12	Daily	Seeded assignment	\N
+597	23	Approved	Intermediate	1	Occasionally	Seeded request	\N
+665	20	Approved	Advanced	5	Occasionally	Seeded assignment	2025-11-25 05:21:27.264874
+935	1	Approved	Beginner	13	Occasionally	Seeded request	2025-11-06 02:47:27.264874
+193	19	Approved	Intermediate	1	Occasionally	Seeded request	\N
+32	3	Approved	Intermediate	8	Daily	Seeded assignment	\N
+766	8	Approved	Beginner	8	Occasionally	Seeded assignment	2025-11-09 17:09:27.264874
+17	13	Approved	Expert	11	Daily	Seeded request	2025-11-13 10:00:27.264874
+645	23	Approved	Expert	1	Monthly	Seeded request	\N
+374	9	Approved	Expert	15	Occasionally	Seeded assignment	\N
+328	7	Approved	Advanced	14	Weekly	Seeded request	\N
+710	10	Approved	Expert	4	Weekly	Seeded assignment	\N
+55	9	Approved	Beginner	11	Monthly	Seeded assignment	2025-11-16 13:36:27.264874
+356	25	Approved	Intermediate	15	Weekly	Seeded assignment	2025-11-06 12:35:27.264874
+679	22	Approved	Beginner	7	Monthly	Seeded assignment	\N
+93	18	Approved	Expert	2	Occasionally	Seeded request	\N
+292	11	Approved	Advanced	5	Occasionally	Seeded assignment	\N
+644	13	Approved	Advanced	13	Occasionally	Seeded assignment	\N
+438	22	Requested	Expert	9	Daily	Seeded assignment	2025-11-07 07:16:09.934399
+747	12	Requested	Expert	14	Weekly	Seeded request	2025-11-28 07:16:09.934399
+768	5	Requested	Advanced	10	Monthly	Seeded assignment	2025-11-21 07:16:09.934399
+280	24	Requested	Advanced	13	Occasionally	Seeded request	2025-12-02 07:16:09.934399
+458	8	Requested	Beginner	12	Daily	Seeded assignment	2025-11-09 07:16:09.934399
+630	7	Requested	Expert	9	Occasionally	Seeded assignment	2025-11-05 07:16:09.934399
+834	6	Requested	Beginner	13	Monthly	Seeded request	2025-11-04 07:16:09.934399
+364	5	Requested	Advanced	6	Weekly	Seeded request	2025-11-25 07:16:09.934399
+508	6	Requested	Advanced	12	Weekly	Seeded request	2025-11-13 07:16:09.934399
+313	3	Requested	Beginner	4	Weekly	Seeded request	2025-11-10 07:16:09.934399
+198	8	Requested	Expert	5	Monthly	Seeded request	2025-11-26 07:16:09.934399
+896	10	Requested	Beginner	10	Weekly	Seeded assignment	2025-11-09 07:16:09.934399
+360	13	Requested	Expert	3	Occasionally	Seeded assignment	2025-11-05 07:16:09.934399
+11	6	Requested	Advanced	15	Daily	Seeded assignment	2025-12-01 07:16:09.934399
+718	10	Requested	Intermediate	6	Occasionally	Seeded assignment	2025-12-02 07:16:09.934399
+628	3	Requested	Expert	11	Daily	Seeded request	2025-11-24 07:16:09.934399
+587	4	Requested	Expert	1	Occasionally	Seeded assignment	2025-11-24 07:16:09.934399
+201	12	Requested	Beginner	5	Monthly	Seeded request	2025-12-02 07:16:09.934399
+230	23	Requested	Beginner	12	Weekly	Seeded assignment	2025-11-14 07:16:09.934399
+172	25	Requested	Advanced	13	Monthly	Seeded request	2025-11-28 07:16:09.934399
+245	6	Requested	Beginner	4	Daily	Seeded assignment	2025-11-23 07:16:09.934399
+932	24	Requested	Expert	11	Weekly	Seeded assignment	2025-11-30 07:16:09.934399
+731	23	Requested	Expert	7	Weekly	Seeded assignment	2025-11-23 07:16:09.934399
+822	16	Requested	Advanced	12	Monthly	Seeded request	2025-11-11 07:16:09.934399
+680	8	Requested	Expert	13	Occasionally	Seeded assignment	2025-11-30 07:16:09.934399
+524	13	Requested	Expert	3	Daily	Seeded request	2025-11-06 07:16:09.934399
+184	3	Requested	Intermediate	7	Monthly	Seeded request	2025-12-01 07:16:09.934399
+377	3	Requested	Expert	8	Monthly	Seeded assignment	2025-11-28 07:16:09.934399
+718	16	Requested	Beginner	15	Occasionally	Seeded request	2025-11-13 07:16:09.934399
+914	13	Requested	Expert	10	Daily	Seeded assignment	2025-11-09 07:16:09.934399
+429	16	Requested	Beginner	14	Weekly	Seeded request	2025-11-16 07:16:09.934399
+488	24	Requested	Expert	14	Occasionally	Seeded request	2025-11-08 07:16:09.934399
+825	12	Requested	Expert	4	Monthly	Seeded request	2025-12-01 07:16:09.934399
+199	6	Requested	Intermediate	1	Monthly	Seeded assignment	2025-11-20 07:16:09.934399
+255	5	Requested	Expert	7	Daily	Seeded request	2025-11-14 07:16:09.934399
+913	4	Requested	Expert	14	Weekly	Seeded assignment	2025-11-03 07:16:09.934399
+63	7	Requested	Expert	1	Weekly	Seeded assignment	2025-11-04 07:16:09.934399
+340	1	Requested	Intermediate	13	Occasionally	Seeded assignment	2025-11-22 07:16:09.934399
+134	24	Requested	Beginner	11	Monthly	Seeded assignment	2025-11-03 07:16:09.934399
+326	9	Requested	Beginner	7	Weekly	Seeded assignment	2025-11-15 07:16:09.934399
+707	25	Requested	Beginner	9	Occasionally	Seeded assignment	2025-11-03 07:16:09.934399
+560	10	Requested	Intermediate	9	Monthly	Seeded request	2025-11-05 07:16:09.934399
+498	22	Requested	Advanced	12	Monthly	Seeded assignment	2025-11-09 07:16:09.934399
+447	17	Requested	Intermediate	12	Monthly	Seeded request	2025-11-15 07:16:09.934399
+883	11	Requested	Advanced	3	Occasionally	Seeded request	2025-11-06 07:16:09.934399
+903	25	Requested	Intermediate	15	Daily	Seeded assignment	2025-11-29 07:16:09.934399
+846	1	Requested	Expert	9	Weekly	Seeded assignment	2025-11-05 07:16:09.934399
+367	4	Approved	Intermediate	13	Monthly	Seeded assignment	2025-11-04 05:05:27.264874
+405	11	Approved	Beginner	0	Occasionally	Seeded assignment	\N
+215	1	Approved	Beginner	7	Monthly	Seeded request	\N
+828	25	Approved	Advanced	13	Daily	Seeded assignment	2025-11-15 17:01:27.264874
+60	6	Approved	Intermediate	12	Occasionally	Seeded assignment	2025-11-08 12:43:27.264874
+223	7	Approved	Advanced	8	Monthly	Seeded assignment	\N
+516	24	Approved	Expert	10	Daily	Seeded assignment	\N
+966	22	Approved	Intermediate	3	Occasionally	Seeded request	2025-11-08 15:39:27.264874
+109	13	Approved	Beginner	3	Occasionally	Seeded assignment	\N
+482	23	Approved	Intermediate	14	Monthly	Seeded request	\N
+664	20	Approved	Advanced	12	Monthly	Seeded request	\N
+37	1	Approved	Advanced	2	Monthly	Seeded request	2025-11-29 21:17:27.264874
+443	3	Approved	Intermediate	15	Daily	Seeded assignment	\N
+10	19	Approved	Advanced	8	Occasionally	Seeded request	2025-11-22 12:53:27.264874
+947	21	Approved	Beginner	3	Monthly	Seeded request	\N
+6	24	Approved	Expert	10	Weekly	Seeded assignment	\N
+686	19	Approved	Beginner	1	Monthly	Seeded assignment	\N
+129	25	Approved	Advanced	8	Occasionally	Seeded assignment	2025-11-10 12:21:27.264874
+661	1	Approved	Advanced	13	Weekly	Seeded request	\N
+602	23	Approved	Expert	8	Weekly	Seeded request	2025-11-06 04:03:27.264874
+912	6	Approved	Expert	3	Daily	Seeded assignment	2025-11-26 10:46:27.264874
+27	11	Approved	Beginner	8	Monthly	Seeded request	2025-11-15 09:09:27.264874
+787	23	Approved	Beginner	2	Occasionally	Seeded assignment	2025-11-27 19:10:27.264874
+944	23	Approved	Expert	14	Occasionally	Seeded assignment	\N
+366	4	Approved	Advanced	1	Occasionally	Seeded assignment	\N
+52	4	Approved	Intermediate	0	Occasionally	Seeded assignment	\N
+132	21	Approved	Advanced	14	Occasionally	Seeded assignment	2025-11-10 10:39:27.264874
+530	16	Approved	Expert	10	Daily	Seeded assignment	2025-11-13 20:38:27.264874
+432	1	Approved	Beginner	0	Daily	Seeded assignment	\N
+172	9	Approved	Expert	1	Occasionally	Seeded request	2025-11-04 22:29:27.264874
+649	23	Approved	Advanced	2	Monthly	Seeded request	\N
+92	8	Approved	Intermediate	7	Occasionally	Seeded assignment	\N
+940	10	Approved	Beginner	10	Weekly	Seeded assignment	\N
+131	13	Approved	Intermediate	15	Daily	Seeded request	\N
+489	13	Approved	Advanced	10	Daily	Seeded assignment	\N
+256	3	Approved	Beginner	1	Weekly	Seeded assignment	2025-11-12 04:35:27.264874
+335	11	Approved	Intermediate	13	Monthly	Seeded assignment	\N
+581	1	Approved	Advanced	15	Daily	Seeded request	\N
+889	4	Approved	Intermediate	7	Weekly	Seeded assignment	\N
+344	23	Approved	Beginner	6	Daily	Seeded request	\N
+554	5	Approved	Expert	9	Daily	Seeded assignment	2025-11-13 06:39:27.264874
+341	25	Approved	Intermediate	5	Weekly	Seeded request	2025-11-10 06:06:27.264874
+443	4	Approved	Advanced	11	Daily	Seeded request	\N
+170	1	Approved	Expert	5	Weekly	Seeded assignment	\N
+875	4	Approved	Intermediate	15	Occasionally	Seeded request	\N
+458	13	Approved	Expert	4	Daily	Seeded request	2025-11-03 23:27:27.264874
+94	10	Approved	Advanced	4	Monthly	Seeded request	\N
+285	11	Approved	Advanced	9	Daily	Seeded assignment	2025-11-16 06:18:27.264874
+910	20	Approved	Expert	1	Weekly	Seeded assignment	2025-11-15 16:44:27.264874
+162	10	Approved	Intermediate	11	Weekly	Seeded assignment	\N
+128	1	Approved	Advanced	4	Monthly	Seeded request	2025-11-21 16:52:27.264874
+839	19	Approved	Intermediate	14	Daily	Seeded assignment	\N
+275	6	Approved	Intermediate	6	Monthly	Seeded request	\N
+497	11	Approved	Advanced	14	Monthly	Seeded assignment	2025-11-16 00:15:27.264874
+944	7	Approved	Intermediate	8	Daily	Seeded assignment	\N
+948	6	Approved	Beginner	3	Occasionally	Seeded request	\N
+957	20	Approved	Advanced	14	Daily	Seeded request	2025-11-19 08:56:27.264874
+310	12	Approved	Beginner	1	Weekly	Seeded request	2025-11-27 02:58:27.264874
+289	16	Approved	Intermediate	2	Daily	Seeded assignment	2025-11-09 03:44:27.264874
+268	12	Approved	Expert	6	Weekly	Seeded assignment	2025-11-06 11:41:27.264874
+549	12	Approved	Expert	3	Daily	Seeded request	\N
+523	19	Approved	Beginner	3	Monthly	Seeded request	2025-11-16 06:50:27.264874
+582	5	Approved	Intermediate	15	Daily	Seeded assignment	2025-11-24 17:08:27.264874
+188	23	Approved	Intermediate	13	Occasionally	Seeded request	2025-11-30 15:16:27.264874
+550	11	Approved	Advanced	4	Monthly	Seeded request	2025-11-03 19:08:27.264874
+113	16	Approved	Intermediate	2	Weekly	Seeded assignment	2025-11-16 06:50:27.264874
+360	8	Approved	Beginner	4	Daily	Seeded request	\N
+725	1	Approved	Intermediate	11	Weekly	Seeded request	\N
+112	3	Approved	Expert	4	Daily	Seeded request	\N
+344	7	Approved	Expert	10	Monthly	Seeded request	\N
+101	18	Approved	Intermediate	10	Daily	Seeded assignment	2025-11-15 03:47:27.264874
+736	4	Approved	Beginner	15	Daily	Seeded assignment	2025-11-23 08:25:27.264874
+802	18	Approved	Expert	13	Weekly	Seeded assignment	2025-11-04 13:02:27.264874
+323	6	Approved	Beginner	14	Daily	Seeded assignment	2025-11-16 18:48:27.264874
+282	13	Approved	Advanced	2	Monthly	Seeded assignment	\N
+939	17	Approved	Intermediate	1	Occasionally	Seeded request	2025-11-14 21:49:27.264874
+928	16	Approved	Advanced	0	Occasionally	Seeded request	\N
+127	17	Approved	Expert	7	Daily	Seeded request	2025-11-30 02:45:27.264874
+319	3	Approved	Expert	15	Occasionally	Seeded assignment	\N
+600	3	Approved	Expert	7	Monthly	Seeded assignment	\N
+927	5	Approved	Beginner	14	Weekly	Seeded request	2025-11-16 02:56:27.264874
+318	10	Approved	Beginner	13	Daily	Seeded assignment	\N
+709	25	Approved	Beginner	6	Weekly	Seeded request	\N
+876	10	Approved	Expert	7	Monthly	Seeded assignment	\N
+42	21	Approved	Intermediate	0	Daily	Seeded request	\N
+755	1	Approved	Advanced	10	Daily	Seeded request	\N
+684	5	Approved	Intermediate	10	Occasionally	Seeded assignment	2025-11-28 09:42:27.264874
+378	24	Approved	Advanced	7	Weekly	Seeded assignment	\N
+812	19	Approved	Expert	11	Occasionally	Seeded request	\N
+321	5	Approved	Beginner	11	Occasionally	Seeded request	2025-11-07 17:07:27.264874
+625	9	Approved	Expert	8	Monthly	Seeded assignment	\N
+330	11	Approved	Intermediate	15	Occasionally	Seeded assignment	2025-11-28 20:23:27.264874
+856	18	Approved	Advanced	1	Weekly	Seeded request	\N
+75	8	Approved	Beginner	13	Daily	Seeded request	2025-11-22 21:50:27.264874
+987	16	Approved	Expert	15	Daily	Seeded assignment	2025-11-22 09:17:27.264874
+118	23	Approved	Expert	6	Daily	Seeded request	\N
+238	20	Approved	Advanced	4	Occasionally	Seeded assignment	2025-11-07 22:04:27.264874
+397	11	Approved	Beginner	2	Monthly	Seeded assignment	2025-11-12 06:50:27.264874
+456	4	Approved	Expert	0	Occasionally	Seeded assignment	\N
+425	7	Approved	Advanced	6	Occasionally	Seeded request	\N
+939	21	Approved	Advanced	0	Weekly	Seeded assignment	\N
+543	9	Approved	Expert	2	Occasionally	Seeded assignment	2025-11-05 11:53:27.264874
+932	10	Approved	Advanced	2	Monthly	Seeded request	\N
+800	3	Approved	Expert	6	Daily	Seeded request	2025-11-25 20:19:27.264874
+166	8	Approved	Intermediate	13	Daily	Seeded request	\N
+329	21	Approved	Advanced	14	Monthly	Seeded assignment	2025-11-18 03:51:27.264874
+310	5	Approved	Advanced	15	Occasionally	Seeded assignment	2025-12-01 09:29:27.264874
+813	4	Approved	Intermediate	13	Occasionally	Seeded assignment	2025-11-04 15:20:27.264874
+687	1	Approved	Expert	9	Occasionally	Seeded request	\N
+314	16	Approved	Beginner	9	Occasionally	Seeded assignment	\N
+419	16	Approved	Advanced	10	Occasionally	Seeded assignment	2025-11-27 00:59:27.264874
+104	18	Approved	Intermediate	3	Monthly	Seeded request	\N
+777	12	Approved	Advanced	1	Weekly	Seeded assignment	2025-11-16 18:00:27.264874
+955	25	Approved	Beginner	8	Monthly	Seeded assignment	2025-11-18 06:13:27.264874
+399	5	Approved	Expert	7	Occasionally	Seeded assignment	2025-11-10 05:39:27.264874
+868	22	Approved	Intermediate	1	Monthly	Seeded request	2025-11-03 12:21:27.264874
+299	21	Approved	Advanced	12	Occasionally	Seeded assignment	\N
+536	9	Approved	Beginner	7	Weekly	Seeded assignment	\N
+566	3	Approved	Advanced	12	Weekly	Seeded assignment	2025-12-02 10:57:27.264874
+495	7	Approved	Advanced	2	Daily	Seeded assignment	\N
+176	8	Approved	Expert	14	Occasionally	Seeded assignment	2025-12-02 22:50:27.264874
+502	17	Approved	Intermediate	10	Weekly	Seeded request	\N
+832	6	Approved	Intermediate	14	Monthly	Seeded assignment	2025-11-22 20:07:27.264874
+807	5	Approved	Intermediate	12	Occasionally	Seeded assignment	2025-11-14 07:18:27.264874
+41	10	Approved	Beginner	5	Monthly	Seeded assignment	\N
+182	22	Approved	Beginner	2	Weekly	Seeded assignment	\N
+732	21	Approved	Expert	13	Weekly	Seeded request	\N
+88	6	Approved	Intermediate	7	Occasionally	Seeded assignment	\N
+841	1	Approved	Advanced	7	Weekly	Seeded assignment	2025-11-18 07:03:27.264874
+591	10	Approved	Intermediate	10	Occasionally	Seeded assignment	\N
+817	20	Approved	Expert	1	Weekly	Seeded request	\N
+23	23	Approved	Advanced	6	Weekly	Seeded request	\N
+610	3	Approved	Advanced	14	Weekly	Seeded assignment	2025-11-23 10:41:27.264874
+763	18	Approved	Beginner	0	Occasionally	Seeded assignment	2025-11-22 21:50:27.264874
+590	4	Approved	Beginner	7	Monthly	Seeded assignment	\N
+696	22	Approved	Expert	8	Daily	Seeded assignment	2025-11-10 07:33:27.264874
+779	20	Approved	Advanced	2	Daily	Seeded assignment	\N
+972	6	Approved	Advanced	14	Monthly	Seeded assignment	\N
+951	25	Approved	Beginner	13	Daily	Seeded request	2025-11-18 12:56:27.264874
+698	17	Approved	Beginner	13	Daily	Seeded assignment	2025-11-20 16:13:27.264874
+125	16	Approved	Expert	12	Monthly	Seeded assignment	\N
+381	12	Approved	Intermediate	5	Monthly	Seeded request	\N
+844	25	Approved	Intermediate	2	Daily	Seeded request	2025-12-02 11:52:27.264874
+444	1	Approved	Beginner	1	Occasionally	Seeded assignment	2025-11-25 04:34:27.264874
+181	3	Approved	Intermediate	15	Occasionally	Seeded request	\N
+827	20	Approved	Intermediate	9	Weekly	Seeded request	2025-11-29 06:29:27.264874
+412	1	Approved	Intermediate	15	Weekly	Seeded assignment	\N
+290	7	Approved	Advanced	9	Occasionally	Seeded assignment	2025-11-15 01:26:27.264874
+520	25	Approved	Expert	11	Monthly	Seeded request	\N
+688	25	Approved	Advanced	12	Weekly	Seeded request	\N
+66	20	Approved	Expert	2	Daily	Seeded request	\N
+248	17	Approved	Beginner	1	Daily	Seeded assignment	\N
+250	12	Approved	Beginner	10	Occasionally	Seeded request	2025-11-08 16:01:27.264874
+929	7	Approved	Intermediate	3	Occasionally	Seeded assignment	\N
+794	10	Approved	Advanced	9	Occasionally	Seeded assignment	2025-11-09 06:21:27.264874
+532	22	Approved	Beginner	15	Daily	Seeded request	\N
+578	4	Approved	Expert	7	Occasionally	Seeded assignment	\N
+606	19	Approved	Beginner	2	Monthly	Seeded assignment	\N
+642	1	Approved	Expert	5	Monthly	Seeded assignment	2025-11-24 09:00:27.264874
+856	19	Approved	Advanced	0	Monthly	Seeded assignment	2025-11-27 11:13:27.264874
+543	1	Approved	Advanced	13	Daily	Seeded assignment	2025-12-01 21:07:27.264874
+705	3	Approved	Advanced	7	Weekly	Seeded request	\N
+733	5	Approved	Beginner	3	Occasionally	Seeded request	\N
+246	25	Approved	Intermediate	1	Weekly	Seeded assignment	2025-11-07 00:29:27.264874
+952	16	Approved	Beginner	15	Monthly	Seeded request	2025-11-29 14:24:27.264874
+706	13	Approved	Intermediate	15	Weekly	Seeded assignment	2025-11-10 12:10:27.264874
+354	25	Approved	Beginner	13	Weekly	Seeded assignment	\N
+900	18	Approved	Intermediate	15	Daily	Seeded request	\N
+290	23	Approved	Beginner	8	Daily	Seeded request	2025-11-21 21:25:27.264874
+813	3	Approved	Expert	11	Occasionally	Seeded assignment	\N
+420	8	Approved	Beginner	15	Monthly	Seeded request	2025-11-13 20:43:27.264874
+976	22	Approved	Intermediate	0	Monthly	Seeded assignment	2025-11-20 23:36:27.264874
+36	7	Approved	Beginner	14	Daily	Seeded assignment	2025-11-29 14:24:27.264874
+723	16	Approved	Advanced	5	Monthly	Seeded request	2025-11-05 09:01:27.264874
+857	7	Approved	Beginner	1	Monthly	Seeded assignment	2025-11-27 20:20:27.264874
+960	23	Approved	Intermediate	11	Weekly	Seeded assignment	\N
+62	24	Approved	Beginner	9	Weekly	Seeded request	\N
+802	19	Approved	Intermediate	11	Monthly	Seeded request	2025-11-12 20:46:27.264874
+194	17	Approved	Expert	12	Weekly	Seeded assignment	2025-11-23 05:15:27.264874
+513	17	Approved	Expert	9	Monthly	Seeded assignment	\N
+459	9	Approved	Expert	9	Daily	Seeded request	\N
+810	7	Approved	Advanced	14	Weekly	Seeded request	\N
+471	11	Approved	Beginner	8	Monthly	Seeded assignment	\N
+749	8	Approved	Advanced	13	Monthly	Seeded assignment	2025-12-02 00:21:27.264874
+287	4	Approved	Intermediate	1	Weekly	Seeded assignment	2025-11-09 19:40:27.264874
+26	13	Approved	Intermediate	1	Daily	Seeded request	2025-11-28 14:36:27.264874
+130	8	Approved	Advanced	6	Weekly	Seeded request	\N
+72	20	Approved	Intermediate	10	Monthly	Seeded request	\N
+39	12	Approved	Advanced	11	Daily	Seeded request	\N
+529	17	Approved	Advanced	13	Daily	Seeded request	\N
+921	19	Approved	Intermediate	8	Occasionally	Seeded assignment	2025-11-29 05:40:27.264874
+212	8	Approved	Beginner	4	Occasionally	Seeded assignment	\N
+151	19	Approved	Advanced	10	Weekly	Seeded assignment	\N
+777	20	Approved	Advanced	9	Daily	Seeded request	\N
+582	20	Approved	Expert	6	Weekly	Seeded assignment	\N
+662	12	Approved	Intermediate	11	Daily	Seeded request	\N
+737	4	Approved	Beginner	8	Weekly	Seeded assignment	2025-11-19 23:53:27.264874
+788	10	Approved	Intermediate	0	Daily	Seeded request	\N
+742	10	Approved	Beginner	2	Daily	Seeded request	2025-11-30 05:44:27.264874
+610	4	Approved	Intermediate	15	Monthly	Seeded request	\N
+401	16	Approved	Beginner	7	Weekly	Seeded assignment	\N
+31	11	Approved	Beginner	9	Daily	Seeded assignment	\N
+444	9	Approved	Advanced	3	Monthly	Seeded assignment	\N
+205	6	Approved	Intermediate	12	Occasionally	Seeded request	2025-12-01 05:40:27.264874
+89	22	Approved	Expert	0	Weekly	Seeded assignment	\N
+80	8	Approved	Advanced	8	Monthly	Seeded request	\N
+763	3	Approved	Advanced	6	Daily	Seeded assignment	2025-12-02 04:12:27.264874
+507	11	Approved	Intermediate	0	Occasionally	Seeded assignment	\N
+540	12	Approved	Advanced	10	Weekly	Seeded assignment	2025-12-01 03:54:27.264874
+940	24	Requested	Beginner	15	Occasionally	Seeded request	2025-11-13 07:16:09.934399
+252	16	Approved	Intermediate	4	Occasionally	Seeded assignment	\N
+596	11	Approved	Intermediate	8	Daily	Seeded request	2025-11-10 22:27:27.264874
+389	6	Approved	Advanced	0	Occasionally	Seeded assignment	2025-11-21 15:18:27.264874
+758	19	Approved	Intermediate	0	Daily	Seeded assignment	\N
+767	6	Approved	Expert	11	Daily	Seeded assignment	\N
+318	8	Approved	Advanced	5	Monthly	Seeded assignment	2025-11-13 01:33:27.264874
+978	17	Approved	Expert	14	Occasionally	Seeded assignment	\N
+759	5	Approved	Expert	0	Daily	Seeded request	\N
+843	9	Approved	Beginner	2	Daily	Seeded request	2025-11-09 17:26:27.264874
+470	8	Approved	Intermediate	3	Occasionally	Seeded assignment	2025-11-21 19:33:27.264874
+615	24	Approved	Beginner	2	Monthly	Seeded assignment	2025-11-23 09:46:27.264874
+738	22	Approved	Expert	0	Daily	Seeded assignment	2025-11-12 20:55:27.264874
+341	6	Approved	Beginner	0	Weekly	Seeded request	\N
+85	19	Approved	Advanced	6	Monthly	Seeded assignment	2025-11-17 06:14:27.264874
+632	6	Approved	Beginner	3	Monthly	Seeded request	\N
+107	5	Approved	Beginner	2	Daily	Seeded request	2025-11-26 19:31:27.264874
+820	5	Approved	Intermediate	3	Daily	Seeded assignment	2025-11-10 01:37:27.264874
+286	6	Approved	Intermediate	1	Monthly	Seeded request	2025-11-25 04:51:27.264874
+334	23	Approved	Advanced	5	Daily	Seeded request	\N
+609	13	Approved	Expert	10	Monthly	Seeded assignment	\N
+868	20	Approved	Beginner	1	Monthly	Seeded assignment	\N
+39	22	Approved	Expert	14	Weekly	Seeded assignment	\N
+805	1	Approved	Expert	8	Monthly	Seeded request	2025-11-18 17:31:27.264874
+814	10	Approved	Expert	8	Daily	Seeded request	\N
+484	12	Approved	Beginner	5	Occasionally	Seeded request	2025-11-06 08:22:27.264874
+958	16	Approved	Advanced	4	Daily	Seeded assignment	2025-11-21 04:17:27.264874
+241	16	Approved	Beginner	2	Weekly	Seeded assignment	2025-11-28 10:09:27.264874
+12	9	Approved	Intermediate	5	Daily	Seeded assignment	\N
+3	21	Approved	Beginner	1	Occasionally	Seeded request	\N
+915	18	Approved	Advanced	0	Monthly	Seeded request	\N
+956	3	Approved	Expert	8	Daily	Seeded request	2025-11-29 06:02:27.264874
+62	8	Approved	Advanced	11	Monthly	Seeded request	2025-11-21 13:03:27.264874
+514	8	Approved	Intermediate	6	Occasionally	Seeded assignment	2025-11-28 12:35:27.264874
+206	10	Approved	Advanced	6	Weekly	Seeded request	2025-11-20 03:59:27.264874
+834	1	Approved	Intermediate	1	Monthly	Seeded request	\N
+237	10	Approved	Expert	3	Daily	Seeded assignment	2025-11-24 03:48:27.264874
+829	17	Approved	Advanced	4	Daily	Seeded request	\N
+5	11	Approved	Advanced	4	Daily	Seeded assignment	\N
+462	11	Approved	Intermediate	7	Monthly	Seeded request	\N
+343	3	Approved	Advanced	14	Monthly	Seeded request	\N
+219	7	Approved	Advanced	5	Daily	Seeded assignment	\N
+536	11	Approved	Intermediate	8	Occasionally	Seeded assignment	\N
+46	20	Approved	Beginner	9	Weekly	Seeded request	2025-11-27 23:36:27.264874
+718	13	Approved	Advanced	2	Monthly	Seeded assignment	\N
+46	12	Approved	Beginner	2	Weekly	Seeded assignment	\N
+45	25	Approved	Intermediate	2	Weekly	Seeded assignment	\N
+282	16	Approved	Beginner	10	Monthly	Seeded assignment	\N
+714	3	Approved	Advanced	7	Daily	Seeded assignment	2025-11-26 08:25:27.264874
+174	10	Approved	Advanced	6	Weekly	Seeded assignment	\N
+76	7	Approved	Beginner	6	Occasionally	Seeded assignment	\N
+777	22	Approved	Expert	12	Occasionally	Seeded assignment	2025-11-27 21:09:27.264874
+854	17	Approved	Advanced	7	Monthly	Seeded request	\N
+236	17	Approved	Beginner	1	Weekly	Seeded assignment	\N
+112	19	Approved	Intermediate	3	Daily	Seeded assignment	2025-12-01 19:21:27.264874
+73	12	Approved	Intermediate	8	Occasionally	Seeded assignment	\N
+828	6	Approved	Expert	5	Weekly	Seeded request	2025-11-30 04:58:27.264874
+671	25	Approved	Intermediate	15	Monthly	Seeded request	\N
+686	4	Approved	Beginner	7	Monthly	Seeded request	\N
+983	19	Approved	Expert	0	Weekly	Seeded request	\N
+40	12	Approved	Expert	6	Monthly	Seeded assignment	\N
+182	12	Approved	Beginner	13	Occasionally	Seeded assignment	\N
+92	10	Approved	Expert	1	Monthly	Seeded request	2025-11-26 02:21:27.264874
+450	23	Approved	Expert	0	Weekly	Seeded request	\N
+274	11	Approved	Advanced	1	Occasionally	Seeded assignment	\N
+277	12	Approved	Beginner	4	Weekly	Seeded request	2025-11-13 09:44:27.264874
+31	9	Approved	Advanced	8	Daily	Seeded request	\N
+469	25	Approved	Beginner	15	Daily	Seeded assignment	2025-11-25 08:08:27.264874
+908	21	Approved	Advanced	7	Monthly	Seeded assignment	2025-11-20 06:08:27.264874
+72	22	Approved	Expert	15	Monthly	Seeded assignment	2025-11-25 21:43:27.264874
+442	9	Approved	Intermediate	5	Occasionally	Seeded request	\N
+48	6	Approved	Advanced	15	Monthly	Seeded request	\N
+79	23	Approved	Beginner	9	Occasionally	Seeded request	\N
+464	7	Approved	Expert	10	Daily	Seeded request	2025-11-29 15:16:27.264874
+16	17	Approved	Intermediate	4	Weekly	Seeded assignment	\N
+245	25	Approved	Intermediate	15	Weekly	Seeded request	\N
+730	20	Approved	Intermediate	7	Monthly	Seeded assignment	\N
+143	22	Approved	Intermediate	5	Daily	Seeded assignment	\N
+366	19	Approved	Intermediate	13	Monthly	Seeded assignment	2025-11-26 05:57:27.264874
+343	4	Approved	Expert	6	Daily	Seeded request	2025-11-08 10:38:27.264874
+677	25	Approved	Expert	13	Occasionally	Seeded request	2025-11-04 00:13:27.264874
+614	22	Approved	Beginner	6	Occasionally	Seeded assignment	2025-11-06 05:00:27.264874
+724	7	Approved	Beginner	14	Daily	Seeded request	2025-11-03 08:14:27.264874
+504	3	Approved	Beginner	14	Monthly	Seeded assignment	\N
+666	25	Approved	Beginner	11	Occasionally	Seeded assignment	\N
+440	19	Approved	Expert	8	Weekly	Seeded request	2025-11-10 17:16:27.264874
+855	6	Approved	Advanced	5	Daily	Seeded request	\N
+413	16	Approved	Expert	0	Daily	Seeded assignment	\N
+936	17	Approved	Advanced	3	Monthly	Seeded request	2025-12-01 09:07:27.264874
+474	11	Approved	Expert	14	Occasionally	Seeded assignment	\N
+150	21	Approved	Advanced	0	Daily	Seeded assignment	\N
+297	18	Approved	Intermediate	12	Occasionally	Seeded request	\N
+682	25	Approved	Intermediate	11	Weekly	Seeded request	2025-11-04 08:12:27.264874
+145	4	Approved	Expert	6	Weekly	Seeded assignment	\N
+540	20	Approved	Advanced	2	Daily	Seeded request	\N
+473	18	Approved	Intermediate	14	Monthly	Seeded assignment	\N
+163	4	Approved	Advanced	9	Occasionally	Seeded assignment	\N
+104	4	Approved	Expert	8	Weekly	Seeded assignment	\N
+319	19	Approved	Expert	15	Daily	Seeded assignment	\N
+927	22	Approved	Intermediate	5	Weekly	Seeded assignment	\N
+607	23	Approved	Beginner	6	Monthly	Seeded assignment	\N
+235	23	Approved	Intermediate	6	Daily	Seeded request	\N
+639	8	Approved	Intermediate	15	Monthly	Seeded assignment	\N
+792	21	Approved	Expert	9	Weekly	Seeded request	2025-11-03 22:28:27.264874
+455	4	Approved	Intermediate	9	Occasionally	Seeded assignment	\N
+566	19	Approved	Advanced	3	Daily	Seeded request	2025-11-06 15:44:27.264874
+96	20	Approved	Advanced	9	Monthly	Seeded assignment	2025-11-23 14:56:27.264874
+140	13	Approved	Beginner	15	Daily	Seeded assignment	\N
+883	9	Approved	Beginner	8	Weekly	Seeded assignment	\N
+97	7	Approved	Beginner	7	Occasionally	Seeded request	\N
+801	4	Approved	Intermediate	4	Occasionally	Seeded assignment	2025-11-24 00:56:27.264874
+856	4	Approved	Advanced	6	Monthly	Seeded assignment	2025-11-11 00:32:27.264874
+547	19	Approved	Beginner	2	Daily	Seeded request	\N
+126	8	Approved	Advanced	14	Weekly	Seeded assignment	\N
+159	6	Approved	Beginner	5	Weekly	Seeded request	2025-11-05 12:45:27.264874
+511	8	Approved	Expert	2	Occasionally	Seeded request	2025-11-29 14:38:27.264874
+578	19	Approved	Intermediate	5	Daily	Seeded request	2025-11-29 21:20:27.264874
+850	4	Approved	Advanced	6	Monthly	Seeded assignment	\N
+838	9	Approved	Advanced	3	Weekly	Seeded request	\N
+218	3	Approved	Expert	13	Daily	Seeded assignment	\N
+212	10	Approved	Expert	12	Weekly	Seeded assignment	2025-11-17 00:16:27.264874
+173	17	Approved	Intermediate	10	Weekly	Seeded assignment	2025-11-10 14:45:27.264874
+256	18	Approved	Expert	11	Occasionally	Seeded assignment	\N
+561	24	Approved	Beginner	11	Daily	Seeded assignment	2025-11-28 22:44:27.264874
+75	24	Approved	Intermediate	1	Daily	Seeded request	\N
+496	16	Approved	Beginner	3	Daily	Seeded assignment	2025-11-08 03:13:27.264874
+294	21	Approved	Expert	9	Occasionally	Seeded assignment	2025-11-19 15:36:27.264874
+382	9	Approved	Advanced	2	Weekly	Seeded assignment	2025-11-15 01:56:27.264874
+668	24	Approved	Advanced	4	Weekly	Seeded assignment	\N
+503	25	Approved	Intermediate	4	Occasionally	Seeded assignment	\N
+374	11	Approved	Expert	6	Weekly	Seeded assignment	2025-11-09 17:44:27.264874
+785	3	Approved	Intermediate	5	Occasionally	Seeded assignment	2025-11-26 03:39:27.264874
+106	1	Approved	Intermediate	12	Occasionally	Seeded assignment	2025-11-24 05:12:27.264874
+628	23	Approved	Beginner	4	Monthly	Seeded assignment	\N
+764	8	Approved	Intermediate	5	Monthly	Seeded assignment	2025-12-01 18:48:27.264874
+116	6	Approved	Intermediate	5	Monthly	Seeded assignment	\N
+601	1	Approved	Beginner	0	Daily	Seeded assignment	\N
+181	19	Approved	Expert	8	Daily	Seeded request	\N
+890	24	Approved	Expert	15	Daily	Seeded request	2025-11-08 10:38:27.264874
+491	10	Approved	Beginner	12	Occasionally	Seeded request	\N
+38	11	Approved	Advanced	3	Occasionally	Seeded assignment	\N
+339	4	Approved	Intermediate	10	Weekly	Seeded assignment	2025-11-09 22:04:27.264874
+908	17	Approved	Expert	4	Daily	Seeded assignment	\N
+345	10	Approved	Advanced	0	Occasionally	Seeded assignment	\N
+416	18	Approved	Expert	12	Monthly	Seeded request	\N
+638	12	Approved	Advanced	5	Weekly	Seeded request	\N
+353	11	Approved	Intermediate	9	Weekly	Seeded assignment	\N
+420	10	Approved	Expert	11	Occasionally	Seeded request	\N
+206	24	Approved	Intermediate	9	Daily	Seeded assignment	2025-11-10 16:34:27.264874
+778	6	Approved	Expert	4	Daily	Seeded assignment	\N
+107	12	Approved	Expert	10	Occasionally	Seeded assignment	2025-11-25 09:19:27.264874
+679	12	Approved	Expert	4	Daily	Seeded assignment	2025-11-14 15:45:27.264874
+359	16	Approved	Advanced	10	Weekly	Seeded request	2025-11-22 23:27:27.264874
+460	6	Approved	Advanced	3	Daily	Seeded assignment	\N
+531	7	Approved	Expert	4	Occasionally	Seeded assignment	\N
+400	19	Approved	Expert	10	Daily	Seeded request	2025-11-17 18:53:27.264874
+218	4	Approved	Beginner	7	Monthly	Seeded request	2025-11-25 00:01:27.264874
+850	3	Approved	Expert	11	Weekly	Seeded assignment	2025-11-30 09:27:27.264874
+625	11	Approved	Beginner	6	Daily	Seeded request	2025-11-21 23:05:27.264874
+606	3	Approved	Beginner	9	Occasionally	Seeded request	\N
+185	23	Approved	Advanced	0	Occasionally	Seeded request	2025-11-14 17:38:27.264874
+540	5	Approved	Beginner	6	Daily	Seeded assignment	2025-11-25 23:07:27.264874
+398	12	Approved	Intermediate	2	Monthly	Seeded assignment	\N
+846	11	Approved	Expert	12	Monthly	Seeded assignment	2025-11-30 11:19:27.264874
+743	21	Approved	Beginner	4	Weekly	Seeded assignment	\N
+28	7	Approved	Beginner	0	Occasionally	Seeded request	2025-11-19 13:42:27.264874
+209	3	Approved	Intermediate	5	Weekly	Seeded assignment	\N
+395	6	Approved	Expert	6	Daily	Seeded request	2025-11-18 17:44:27.264874
+838	1	Approved	Expert	6	Daily	Seeded assignment	2025-11-15 21:15:27.264874
+213	4	Approved	Intermediate	10	Weekly	Seeded request	\N
+886	19	Approved	Beginner	12	Monthly	Seeded assignment	2025-11-09 11:33:27.264874
+761	6	Approved	Intermediate	9	Daily	Seeded assignment	\N
+829	21	Approved	Expert	14	Daily	Seeded assignment	\N
+500	5	Approved	Advanced	5	Weekly	Seeded assignment	2025-11-27 20:39:27.264874
+712	13	Approved	Beginner	0	Weekly	Seeded assignment	\N
+498	12	Approved	Intermediate	7	Daily	Seeded assignment	\N
+753	25	Approved	Beginner	8	Occasionally	Seeded assignment	2025-11-19 18:24:27.264874
+584	17	Approved	Advanced	15	Daily	Seeded assignment	2025-11-19 04:19:27.264874
+579	19	Approved	Intermediate	10	Daily	Seeded request	\N
+866	9	Approved	Advanced	14	Occasionally	Seeded request	\N
+685	7	Approved	Expert	1	Occasionally	Seeded assignment	2025-11-12 03:10:27.264874
+285	9	Approved	Intermediate	3	Weekly	Seeded request	\N
+842	23	Approved	Beginner	6	Daily	Seeded request	2025-12-02 20:20:27.264874
+468	13	Approved	Expert	12	Occasionally	Seeded assignment	\N
+983	18	Approved	Expert	14	Occasionally	Seeded assignment	\N
+339	3	Approved	Intermediate	10	Daily	Seeded request	2025-11-12 10:07:27.264874
+6	8	Approved	Expert	13	Daily	Seeded assignment	2025-11-05 01:27:27.264874
+879	13	Approved	Intermediate	14	Weekly	Seeded assignment	\N
+587	23	Approved	Beginner	6	Occasionally	Seeded assignment	\N
+808	25	Approved	Expert	12	Monthly	Seeded assignment	2025-11-06 13:08:27.264874
+115	24	Approved	Advanced	12	Daily	Seeded request	\N
+446	23	Approved	Intermediate	6	Occasionally	Seeded request	2025-11-19 11:42:27.264874
+155	23	Approved	Beginner	11	Daily	Seeded request	2025-11-19 19:22:27.264874
+541	16	Approved	Intermediate	10	Occasionally	Seeded request	\N
+874	25	Approved	Expert	9	Daily	Seeded assignment	\N
+663	24	Approved	Expert	13	Occasionally	Seeded request	\N
+831	23	Approved	Beginner	14	Weekly	Seeded assignment	\N
+96	12	Approved	Intermediate	13	Weekly	Seeded assignment	\N
+41	8	Approved	Intermediate	13	Weekly	Seeded assignment	2025-11-12 11:25:27.264874
+564	8	Approved	Intermediate	2	Weekly	Seeded assignment	\N
+769	8	Approved	Beginner	5	Occasionally	Seeded request	\N
+630	3	Requested	Beginner	13	Daily	Seeded request	2025-11-14 07:16:09.934399
+265	22	Requested	Advanced	8	Monthly	Seeded assignment	2025-11-19 07:16:09.934399
+367	18	Requested	Expert	12	Daily	Seeded assignment	2025-11-09 07:16:09.934399
+766	24	Requested	Advanced	0	Monthly	Seeded assignment	2025-11-20 07:16:09.934399
+818	11	Requested	Intermediate	1	Monthly	Seeded assignment	2025-11-25 07:16:09.934399
+392	12	Requested	Expert	0	Monthly	Seeded assignment	2025-11-09 07:16:09.934399
+601	9	Requested	Expert	8	Occasionally	Seeded assignment	2025-11-29 07:16:09.934399
+137	1	Requested	Expert	6	Occasionally	Seeded assignment	2025-11-18 07:16:09.934399
+899	16	Requested	Advanced	4	Monthly	Seeded request	2025-11-24 07:16:09.934399
+414	16	Requested	Advanced	8	Occasionally	Seeded assignment	2025-12-02 07:16:09.934399
+106	9	Requested	Expert	2	Weekly	Seeded request	2025-11-26 07:16:09.934399
+969	4	Requested	Beginner	14	Occasionally	Seeded assignment	2025-11-06 07:16:09.934399
+215	11	Requested	Expert	1	Occasionally	Seeded assignment	2025-11-15 07:16:09.934399
+746	10	Requested	Advanced	5	Daily	Seeded assignment	2025-11-23 07:16:09.934399
+806	19	Requested	Expert	6	Occasionally	Seeded assignment	2025-11-05 07:16:09.934399
+673	12	Requested	Beginner	12	Daily	Seeded assignment	2025-11-07 07:16:09.934399
+331	25	Requested	Expert	4	Monthly	Seeded assignment	2025-11-09 07:16:09.934399
+244	20	Requested	Beginner	7	Occasionally	Seeded request	2025-11-15 07:16:09.934399
+977	13	Requested	Intermediate	4	Daily	Seeded assignment	2025-11-30 07:16:09.934399
+659	17	Requested	Expert	11	Daily	Seeded request	2025-11-07 07:16:09.934399
+952	13	Requested	Expert	0	Weekly	Seeded assignment	2025-11-08 07:16:09.934399
+379	22	Requested	Expert	4	Weekly	Seeded request	2025-11-24 07:16:09.934399
+317	11	Requested	Beginner	4	Occasionally	Seeded assignment	2025-12-01 07:16:09.934399
+720	8	Requested	Expert	14	Monthly	Seeded assignment	2025-11-22 07:16:09.934399
+635	11	Requested	Beginner	15	Occasionally	Seeded assignment	2025-11-06 07:16:09.934399
 \.
 
 
@@ -7476,6 +7478,7 @@ COPY public.skill (skill_id, skill_name, status, skill_type) FROM stdin;
 23	CI/CD	Approved	Technology
 24	System Design	Approved	Knowledge
 25	Python	Approved	Technology
+26	API Governance Advanced	Approved	Technology
 \.
 
 
@@ -7487,7 +7490,6 @@ COPY public.skill (skill_id, skill_name, status, skill_type) FROM stdin;
 
 COPY public.skill_request (request_id, requested_by, skill_name, skill_type, justification, status, created_at, resolved_at, resolved_by, resolution_notes, created_skill_id) FROM stdin;
 114	514	API Governance 101	Other	Requested for upcoming work: API Governance 101	Requested	2025-11-21 20:27:27.264874	\N	\N	\N	\N
-115	95	API Governance Advanced	Technology	Requested for upcoming work: API Governance Advanced	Requested	2025-12-03 05:49:27.264874	\N	\N	\N	\N
 116	3	API Governance Fundamentals	Knowledge	Requested for upcoming work: API Governance Fundamentals	Requested	2025-11-21 21:28:27.264874	\N	\N	\N	\N
 117	628	Budget Tracking 101	Other	Requested for upcoming work: Budget Tracking 101	Requested	2025-11-20 19:25:27.264874	\N	\N	\N	\N
 118	417	Budget Tracking Advanced	Experience	Requested for upcoming work: Budget Tracking Advanced	Requested	2025-12-01 03:45:27.264874	\N	\N	\N	\N
@@ -7509,6 +7511,7 @@ COPY public.skill_request (request_id, requested_by, skill_name, skill_type, jus
 134	628	Security Review Pro	Other	Requested for upcoming work: Security Review Pro	Requested	2025-12-02 04:48:27.264874	\N	\N	\N	\N
 135	979	wewe	Technology		Canceled	2025-12-03 06:01:18.709422	2025-12-03 06:01:29.064	979	\N	\N
 136	979	q	Technology	we	Canceled	2025-12-03 06:19:53.738844	2025-12-03 06:20:05.724	979	\N	\N
+115	95	API Governance Advanced	Technology	Requested for upcoming work: API Governance Advanced	Approved	2025-12-03 05:49:27.264874	2025-12-03 11:27:45.674	979	\N	26
 \.
 
 
@@ -7519,16 +7522,1709 @@ COPY public.skill_request (request_id, requested_by, skill_name, skill_type, jus
 --
 
 COPY public.team_high_value_skills (id, team_id, skill_id, priority, notes, assigned_by, created_at) FROM stdin;
-3	987	12	High		987	2025-12-02 21:18:57.422505
-4	987	6	High		987	2025-12-02 21:30:33.988942
-5	48	1	Medium		48	2025-12-02 22:12:58.664668
-6	48	9	Medium		48	2025-12-02 22:13:03.575355
-7	48	6	High		48	2025-12-02 22:18:42.559719
-8	967	7	Medium		967	2025-12-02 22:21:03.667296
-9	967	6	High		967	2025-12-02 22:21:39.315194
-11	979	10	Medium		979	2025-12-03 01:27:54.921662
-12	979	7	High		979	2025-12-03 01:28:08.922575
-13	979	13	High		979	2025-12-03 04:09:23.75746
+104	251	23	High	Auto-populated: Donovan House has approved CI/CD	251	2025-12-03 12:09:40.724534
+105	14	17	High	Auto-populated: Juliette Mueller has approved React	14	2025-12-03 12:09:40.724534
+106	815	3	High	Auto-populated: Atticus Brandt has approved ECCP	815	2025-12-03 12:09:40.724534
+107	541	3	High	Auto-populated: Mavis Medrano has approved ECCP	541	2025-12-03 12:09:40.724534
+108	719	9	High	Auto-populated: Nancy Holland has approved Agentic AI	719	2025-12-03 12:09:40.724534
+109	371	13	High	Auto-populated: Leighton Hughes has approved C#	371	2025-12-03 12:09:40.724534
+110	423	8	High	Auto-populated: Ila Fowler has approved Operating Metrics	423	2025-12-03 12:09:40.724534
+111	840	1	High	Auto-populated: Alicia Lee has approved Java	840	2025-12-03 12:09:40.724534
+113	976	3	High	Auto-populated: Elisha Ali has approved ECCP	976	2025-12-03 12:09:40.724534
+114	501	17	High	Auto-populated: Laura Garner has approved React	501	2025-12-03 12:09:40.724534
+115	934	11	High	Auto-populated: Kade Shelton has approved Data Storage	934	2025-12-03 12:09:40.724534
+116	72	9	High	Auto-populated: Finley Wise has approved Agentic AI	72	2025-12-03 12:09:40.724534
+117	380	23	High	Auto-populated: Savanna Bush has approved CI/CD	380	2025-12-03 12:09:40.724534
+118	8	13	High	Auto-populated: Clay Li has approved C#	8	2025-12-03 12:09:40.724534
+119	934	16	High	Auto-populated: Cooper Stokes has approved QA Testing	934	2025-12-03 12:09:40.724534
+120	81	4	High	Auto-populated: Kamiyah Clements has approved Project Management	81	2025-12-03 12:09:40.724534
+121	110	5	High	Auto-populated: Valeria Stephenson has approved Scrum Master	110	2025-12-03 12:09:40.724534
+122	72	8	High	Auto-populated: Joe Arnold has approved Operating Metrics	72	2025-12-03 12:09:40.724534
+123	483	23	High	Auto-populated: Braylon Olsen has approved CI/CD	483	2025-12-03 12:09:40.724534
+124	884	7	High	Auto-populated: Fabian Lang has approved Industry APIs	884	2025-12-03 12:09:40.724534
+125	190	18	High	Auto-populated: Beckett Bass has approved Node.js	190	2025-12-03 12:09:40.724534
+126	916	24	High	Auto-populated: Pedro Pugh has approved System Design	916	2025-12-03 12:09:40.724534
+127	712	25	High	Auto-populated: Aurelia Rivas has approved Python	712	2025-12-03 12:09:40.724534
+128	786	25	High	Auto-populated: Juniper Houston has approved Python	786	2025-12-03 12:09:40.724534
+129	797	1	High	Auto-populated: Clementine Burnett has approved Java	797	2025-12-03 12:09:40.724534
+130	674	4	High	Auto-populated: Camryn Thornton has approved Project Management	674	2025-12-03 12:09:40.724534
+131	110	7	High	Auto-populated: Blaine Best has approved Industry APIs	110	2025-12-03 12:09:40.724534
+132	902	5	High	Auto-populated: Dario Lowe has approved Scrum Master	902	2025-12-03 12:09:40.724534
+133	441	3	High	Auto-populated: Carson Adkins has approved ECCP	441	2025-12-03 12:09:40.724534
+134	181	10	High	Auto-populated: Bowen Salazar has approved Data Processing	181	2025-12-03 12:09:40.724534
+135	81	23	High	Auto-populated: Loretta Frost has approved CI/CD	81	2025-12-03 12:09:40.724534
+136	967	19	High	Auto-populated: Zahra Davila has approved PostgreSQL	967	2025-12-03 12:09:40.724534
+137	976	8	High	Auto-populated: Wade Roman has approved Operating Metrics	976	2025-12-03 12:09:40.724534
+138	409	5	High	Auto-populated: Aria Callahan has approved Scrum Master	409	2025-12-03 12:09:40.724534
+139	226	23	High	Auto-populated: Sutton Tyler has approved CI/CD	226	2025-12-03 12:09:40.724534
+140	130	7	High	Auto-populated: Marley Reid has approved Industry APIs	130	2025-12-03 12:09:40.724534
+141	494	9	High	Auto-populated: April Anderson has approved Agentic AI	494	2025-12-03 12:09:40.724534
+142	630	6	High	Auto-populated: Mara Ventura has approved QA Testing	630	2025-12-03 12:09:40.724534
+143	514	8	High	Auto-populated: Rosie Reyes has approved Operating Metrics	514	2025-12-03 12:09:40.724534
+144	988	19	High	Auto-populated: Kayleigh Duke has approved PostgreSQL	988	2025-12-03 12:09:40.724534
+145	181	4	High	Auto-populated: Calliope Hill has approved Project Management	181	2025-12-03 12:09:40.724534
+146	130	16	High	Auto-populated: Halle Pham has approved QA Testing	130	2025-12-03 12:09:40.724534
+147	48	23	High	Auto-populated: Harleigh Gould has approved CI/CD	48	2025-12-03 12:09:40.724534
+148	380	8	High	Auto-populated: Damari Reyes has approved Operating Metrics	380	2025-12-03 12:09:40.724534
+149	845	19	High	Auto-populated: Alistair Quintana has approved PostgreSQL	845	2025-12-03 12:09:40.724534
+150	450	7	High	Auto-populated: Emmy Vance has approved Industry APIs	450	2025-12-03 12:09:40.724534
+151	28	20	High	Auto-populated: Everest Lewis has approved Project Management	28	2025-12-03 12:09:40.724534
+152	501	5	High	Auto-populated: Sage Ho has approved Scrum Master	501	2025-12-03 12:09:40.724534
+153	934	19	High	Auto-populated: Lane Meyer has approved PostgreSQL	934	2025-12-03 12:09:40.724534
+154	260	12	High	Auto-populated: Westley Trejo has approved Product Feature Design	260	2025-12-03 12:09:40.724534
+155	934	8	High	Auto-populated: Victor Luna has approved Operating Metrics	934	2025-12-03 12:09:40.724534
+156	39	20	High	Auto-populated: Payton Chen has approved Project Management	39	2025-12-03 12:09:40.724534
+157	494	22	High	Auto-populated: Remy Tapia has approved Docker	494	2025-12-03 12:09:40.724534
+158	72	16	High	Auto-populated: Finley Wise has approved QA Testing	72	2025-12-03 12:09:40.724534
+159	8	5	High	Auto-populated: Beckham Hubbard has approved Scrum Master	8	2025-12-03 12:09:40.724534
+160	260	16	High	Auto-populated: Jamir Meadows has approved QA Testing	260	2025-12-03 12:09:40.724534
+161	293	3	High	Auto-populated: Peter Vu has approved ECCP	293	2025-12-03 12:09:40.724534
+162	190	10	High	Auto-populated: Jane Preston has approved Data Processing	190	2025-12-03 12:09:40.724534
+163	347	18	High	Auto-populated: Alivia Curtis has approved Node.js	347	2025-12-03 12:09:40.724534
+164	441	5	High	Auto-populated: Maren Wood has approved Scrum Master	441	2025-12-03 12:09:40.724534
+165	391	19	High	Auto-populated: Baylee Mathews has approved PostgreSQL	391	2025-12-03 12:09:40.724534
+166	181	13	High	Auto-populated: Callum Morton has approved C#	181	2025-12-03 12:09:40.724534
+167	532	3	High	Auto-populated: Bobby Peterson has approved ECCP	532	2025-12-03 12:09:40.724534
+168	934	21	High	Auto-populated: Gary Garrison has approved Data Analysis	934	2025-12-03 12:09:40.724534
+169	181	6	High	Auto-populated: Hadleigh Beasley has approved QA Testing	181	2025-12-03 12:09:40.724534
+170	409	4	High	Auto-populated: Quinton Cortez has approved Project Management	409	2025-12-03 12:09:40.724534
+171	674	1	High	Auto-populated: Azrael Reyna has approved Java	674	2025-12-03 12:09:40.724534
+172	967	11	High	Auto-populated: Julianna Owens has approved Data Storage	967	2025-12-03 12:09:40.724534
+173	674	6	High	Auto-populated: Jayce Washington has approved QA Testing	674	2025-12-03 12:09:40.724534
+174	603	10	High	Auto-populated: Manuel Barr has approved Data Processing	603	2025-12-03 12:09:40.724534
+175	383	21	High	Auto-populated: Jay Santana has approved Data Analysis	383	2025-12-03 12:09:40.724534
+176	123	1	High	Auto-populated: Jair Schaefer has approved Java	123	2025-12-03 12:09:40.724534
+177	753	9	High	Auto-populated: Luis Avila has approved Agentic AI	753	2025-12-03 12:09:40.724534
+178	338	10	High	Auto-populated: Kelsey Walter has approved Data Processing	338	2025-12-03 12:09:40.724534
+179	391	21	High	Auto-populated: Willow Romero has approved Data Analysis	391	2025-12-03 12:09:40.724534
+180	219	18	High	Auto-populated: Meredith Becker has approved Node.js	219	2025-12-03 12:09:40.724534
+181	284	21	High	Auto-populated: Remy Leach has approved Data Analysis	284	2025-12-03 12:09:40.724534
+182	815	5	High	Auto-populated: Viviana Bautista has approved Scrum Master	815	2025-12-03 12:09:40.724534
+183	322	18	High	Auto-populated: Sebastian Lane has approved Node.js	322	2025-12-03 12:09:40.724534
+184	226	20	High	Auto-populated: Valentin Mathews has approved Project Management	226	2025-12-03 12:09:40.724534
+185	909	20	High	Auto-populated: Emir Flowers has approved Project Management	909	2025-12-03 12:09:40.724534
+186	181	5	High	Auto-populated: Kayson Tucker has approved Scrum Master	181	2025-12-03 12:09:40.724534
+187	383	8	High	Auto-populated: Annalise Fletcher has approved Operating Metrics	383	2025-12-03 12:09:40.724534
+188	284	7	High	Auto-populated: Quincy Bowers has approved Industry APIs	284	2025-12-03 12:09:40.724534
+189	352	11	High	Auto-populated: Irene Melton has approved Data Storage	352	2025-12-03 12:09:40.724534
+190	902	11	High	Auto-populated: Cadence Le has approved Data Storage	902	2025-12-03 12:09:40.724534
+191	641	25	High	Auto-populated: Vivian Duffy has approved Python	641	2025-12-03 12:09:40.724534
+192	616	10	High	Auto-populated: Osiris Price has approved Data Processing	616	2025-12-03 12:09:40.724534
+194	474	19	High	Auto-populated: Emery Cochran has approved PostgreSQL	474	2025-12-03 12:09:40.724534
+195	148	25	High	Auto-populated: Lana Conrad has approved Python	148	2025-12-03 12:09:40.724534
+196	8	4	High	Auto-populated: Beckham Hubbard has approved Project Management	8	2025-12-03 12:09:40.724534
+197	72	25	High	Auto-populated: Edward Wagner has approved Python	72	2025-12-03 12:09:40.724534
+198	777	9	High	Auto-populated: Scarlett Contreras has approved Agentic AI	777	2025-12-03 12:09:40.724534
+199	565	18	High	Auto-populated: Chandler Salinas has approved Node.js	565	2025-12-03 12:09:40.724534
+200	902	6	High	Auto-populated: Eli O’Neal has approved QA Testing	902	2025-12-03 12:09:40.724534
+201	777	20	High	Auto-populated: Diana Reyes has approved Project Management	777	2025-12-03 12:09:40.724534
+202	110	25	High	Auto-populated: Leandro Branch has approved Python	110	2025-12-03 12:09:40.724534
+203	181	9	High	Auto-populated: Harvey Eaton has approved Agentic AI	181	2025-12-03 12:09:40.724534
+204	383	13	High	Auto-populated: Annalise Fletcher has approved C#	383	2025-12-03 12:09:40.724534
+205	753	1	High	Auto-populated: Amiyah Barry has approved Java	753	2025-12-03 12:09:40.724534
+206	884	8	High	Auto-populated: Fabian Lang has approved Operating Metrics	884	2025-12-03 12:09:40.724534
+207	391	12	High	Auto-populated: Baylee Mathews has approved Product Feature Design	391	2025-12-03 12:09:40.724534
+208	81	25	High	Auto-populated: Janelle Tucker has approved Python	81	2025-12-03 12:09:40.724534
+209	532	17	High	Auto-populated: Giuliana Craig has approved React	532	2025-12-03 12:09:40.724534
+210	39	7	High	Auto-populated: Valentino English has approved Industry APIs	39	2025-12-03 12:09:40.724534
+211	409	24	High	Auto-populated: Gwen Robbins has approved System Design	409	2025-12-03 12:09:40.724534
+212	181	22	High	Auto-populated: Esther Frazier has approved Docker	181	2025-12-03 12:09:40.724534
+213	733	6	High	Auto-populated: Addyson Shields has approved QA Testing	733	2025-12-03 12:09:40.724534
+214	416	13	High	Auto-populated: Yehuda Parks has approved C#	416	2025-12-03 12:09:40.724534
+216	84	17	High	Auto-populated: Peyton Garza has approved React	84	2025-12-03 12:09:40.724534
+217	391	16	High	Auto-populated: Wyatt Chung has approved QA Testing	391	2025-12-03 12:09:40.724534
+218	293	25	High	Auto-populated: Hendrix Phan has approved Python	293	2025-12-03 12:09:40.724534
+219	486	21	High	Auto-populated: Jayce Hunt has approved Data Analysis	486	2025-12-03 12:09:40.724534
+220	641	21	High	Auto-populated: Emmy Farley has approved Data Analysis	641	2025-12-03 12:09:40.724534
+221	565	16	High	Auto-populated: Jaxx Webster has approved QA Testing	565	2025-12-03 12:09:40.724534
+222	744	12	High	Auto-populated: Sabrina Wiley has approved Product Feature Design	744	2025-12-03 12:09:40.724534
+223	712	12	High	Auto-populated: Kye Giles has approved Product Feature Design	712	2025-12-03 12:09:40.724534
+224	988	7	High	Auto-populated: Jeffrey Rhodes has approved Industry APIs	988	2025-12-03 12:09:40.724534
+225	391	9	High	Auto-populated: Ryder McGee has approved Agentic AI	391	2025-12-03 12:09:40.724534
+226	21	13	High	Auto-populated: Briar Bruce has approved C#	21	2025-12-03 12:09:40.724534
+227	409	20	High	Auto-populated: Jaime McIntosh has approved Project Management	409	2025-12-03 12:09:40.724534
+228	181	12	High	Auto-populated: Bowen Salazar has approved Product Feature Design	181	2025-12-03 12:09:40.724534
+229	219	21	High	Auto-populated: Quincy Cohen has approved Data Analysis	219	2025-12-03 12:09:40.724534
+230	630	11	High	Auto-populated: Cannon Simmons has approved Data Storage	630	2025-12-03 12:09:40.724534
+231	916	6	High	Auto-populated: Frederick Flynn has approved QA Testing	916	2025-12-03 12:09:40.724534
+232	712	10	High	Auto-populated: Serena Owen has approved Data Processing	712	2025-12-03 12:09:40.724534
+233	641	16	High	Auto-populated: Kieran Floyd has approved QA Testing	641	2025-12-03 12:09:40.724534
+234	474	8	High	Auto-populated: Damien Marin has approved Operating Metrics	474	2025-12-03 12:09:40.724534
+235	21	8	High	Auto-populated: Briar Bruce has approved Operating Metrics	21	2025-12-03 12:09:40.724534
+236	864	5	High	Auto-populated: Gianni Williamson has approved Scrum Master	864	2025-12-03 12:09:40.724534
+237	820	25	High	Auto-populated: Yosef Hunt has approved Python	820	2025-12-03 12:09:40.724534
+238	733	1	High	Auto-populated: Muhammad Singleton has approved Java	733	2025-12-03 12:09:40.724534
+239	148	7	High	Auto-populated: Colette Vo has approved Industry APIs	148	2025-12-03 12:09:40.724534
+240	712	9	High	Auto-populated: Yaretzi Phillips has approved Agentic AI	712	2025-12-03 12:09:40.724534
+241	251	20	High	Auto-populated: Donovan House has approved Project Management	251	2025-12-03 12:09:40.724534
+242	884	13	High	Auto-populated: Oakley Chase has approved C#	884	2025-12-03 12:09:40.724534
+243	260	6	High	Auto-populated: Westley Trejo has approved QA Testing	260	2025-12-03 12:09:40.724534
+244	48	20	High	Auto-populated: Aryan Rowland has approved Project Management	48	2025-12-03 12:09:40.724534
+245	876	12	High	Auto-populated: Pearl McDowell has approved Product Feature Design	876	2025-12-03 12:09:40.724534
+246	53	13	High	Auto-populated: Hannah Livingston has approved C#	53	2025-12-03 12:09:40.724534
+247	831	8	High	Auto-populated: Finley Marks has approved Operating Metrics	831	2025-12-03 12:09:40.724534
+248	380	16	High	Auto-populated: Damari Reyes has approved QA Testing	380	2025-12-03 12:09:40.724534
+249	712	13	High	Auto-populated: Adonis Pope has approved C#	712	2025-12-03 12:09:40.724534
+250	483	6	High	Auto-populated: Korbyn Dickerson has approved QA Testing	483	2025-12-03 12:09:40.724534
+251	976	16	High	Auto-populated: Marlee Carrillo has approved QA Testing	976	2025-12-03 12:09:40.724534
+253	630	24	High	Auto-populated: Elias Skinner has approved System Design	630	2025-12-03 12:09:40.724534
+255	474	16	High	Auto-populated: Ryann Le has approved QA Testing	474	2025-12-03 12:09:40.724534
+256	777	25	High	Auto-populated: Maddox Lee has approved Python	777	2025-12-03 12:09:40.724534
+258	650	1	High	Auto-populated: Andrew Conner has approved Java	650	2025-12-03 12:09:40.724534
+259	338	17	High	Auto-populated: Angelo Cano has approved React	338	2025-12-03 12:09:40.724534
+260	514	6	High	Auto-populated: Ansley Petersen has approved QA Testing	514	2025-12-03 12:09:40.724534
+261	744	7	High	Auto-populated: Elisabeth Bautista has approved Industry APIs	744	2025-12-03 12:09:40.724534
+262	92	6	High	Auto-populated: Ayan Adkins has approved QA Testing	92	2025-12-03 12:09:40.724534
+263	719	5	High	Auto-populated: Sullivan Vaughan has approved Scrum Master	719	2025-12-03 12:09:40.724534
+264	650	11	High	Auto-populated: Jameson Phelps has approved Data Storage	650	2025-12-03 12:09:40.724534
+265	514	21	High	Auto-populated: Rosie Reyes has approved Data Analysis	514	2025-12-03 12:09:40.724534
+266	565	23	High	Auto-populated: Emani O’Connell has approved CI/CD	565	2025-12-03 12:09:40.724534
+267	777	8	High	Auto-populated: Elias Duffy has approved Operating Metrics	777	2025-12-03 12:09:40.724534
+268	190	22	High	Auto-populated: Azalea Stout has approved Docker	190	2025-12-03 12:09:40.724534
+271	712	4	High	Auto-populated: Kamdyn Dalton has approved Project Management	712	2025-12-03 12:09:40.724534
+272	371	19	High	Auto-populated: Judah Bernard has approved PostgreSQL	371	2025-12-03 12:09:40.724534
+273	777	11	High	Auto-populated: Yasmin Sexton has approved Data Storage	777	2025-12-03 12:09:40.724534
+274	181	16	High	Auto-populated: Leilani Francis has approved QA Testing	181	2025-12-03 12:09:40.724534
+275	864	21	High	Auto-populated: Ty Brady has approved Data Analysis	864	2025-12-03 12:09:40.724534
+276	416	5	High	Auto-populated: Ainsley Rocha has approved Scrum Master	416	2025-12-03 12:09:40.724534
+277	260	25	High	Auto-populated: Westley Trejo has approved Python	260	2025-12-03 12:09:40.724534
+278	603	6	High	Auto-populated: Rhys Bentley has approved QA Testing	603	2025-12-03 12:09:40.724534
+279	110	6	High	Auto-populated: Marisol Calhoun has approved QA Testing	110	2025-12-03 12:09:40.724534
+280	220	13	High	Auto-populated: Paisleigh Aguilar has approved C#	220	2025-12-03 12:09:40.724534
+281	110	3	High	Auto-populated: Niko Mora has approved ECCP	110	2025-12-03 12:09:40.724534
+282	304	8	High	Auto-populated: Bishop Ramirez has approved Operating Metrics	304	2025-12-03 12:09:40.724534
+284	565	24	High	Auto-populated: Juniper Ventura has approved System Design	565	2025-12-03 12:09:40.724534
+285	219	7	High	Auto-populated: Dakota Finley has approved Industry APIs	219	2025-12-03 12:09:40.724534
+286	934	10	High	Auto-populated: Lochlan Parrish has approved Data Processing	934	2025-12-03 12:09:40.724534
+287	967	16	High	Auto-populated: Jaylin Lucero has approved QA Testing	967	2025-12-03 12:09:40.724534
+288	117	16	High	Auto-populated: Lacey Lee has approved QA Testing	117	2025-12-03 12:09:40.724534
+289	726	3	High	Auto-populated: Jameson Richmond has approved ECCP	726	2025-12-03 12:09:40.724534
+290	753	16	High	Auto-populated: Nathalia Moon has approved QA Testing	753	2025-12-03 12:09:40.724534
+291	251	16	High	Auto-populated: Nia Wolfe has approved QA Testing	251	2025-12-03 12:09:40.724534
+292	371	25	High	Auto-populated: Marco Anderson has approved Python	371	2025-12-03 12:09:40.724534
+293	72	13	High	Auto-populated: Quinn Hunter has approved C#	72	2025-12-03 12:09:40.724534
+294	831	4	High	Auto-populated: Finley Marks has approved Project Management	831	2025-12-03 12:09:40.724534
+295	694	13	High	Auto-populated: London Rojas has approved C#	694	2025-12-03 12:09:40.724534
+296	864	19	High	Auto-populated: Ty Brady has approved PostgreSQL	864	2025-12-03 12:09:40.724534
+297	391	23	High	Auto-populated: Elsa McIntosh has approved CI/CD	391	2025-12-03 12:09:40.724534
+298	371	17	High	Auto-populated: Oaklynn Hancock has approved React	371	2025-12-03 12:09:40.724534
+299	923	25	High	Auto-populated: Jacoby Sampson has approved Python	923	2025-12-03 12:09:40.724534
+301	674	25	High	Auto-populated: Maurice Beasley has approved Python	674	2025-12-03 12:09:40.724534
+304	352	9	High	Auto-populated: Drew Shepard has approved Agentic AI	352	2025-12-03 12:09:40.724534
+305	450	1	High	Auto-populated: Maeve Stone has approved Java	450	2025-12-03 12:09:40.724534
+306	541	20	High	Auto-populated: Kody Mills has approved Project Management	541	2025-12-03 12:09:40.724534
+307	53	8	High	Auto-populated: Ambrose Chen has approved Operating Metrics	53	2025-12-03 12:09:40.724534
+308	371	16	High	Auto-populated: Ella Dyer has approved QA Testing	371	2025-12-03 12:09:40.724534
+309	674	22	High	Auto-populated: Kyler Johnson has approved Docker	674	2025-12-03 12:09:40.724534
+310	233	4	High	Auto-populated: Princeton Mitchell has approved Project Management	233	2025-12-03 12:09:40.724534
+311	864	22	High	Auto-populated: Eric Schneider has approved Docker	864	2025-12-03 12:09:40.724534
+312	284	19	High	Auto-populated: Abdiel Huynh has approved PostgreSQL	284	2025-12-03 12:09:40.724534
+313	148	11	High	Auto-populated: Aviana Montoya has approved Data Storage	148	2025-12-03 12:09:40.724534
+314	416	16	High	Auto-populated: Lilith Hensley has approved QA Testing	416	2025-12-03 12:09:40.724534
+315	987	25	High	Auto-populated: Evan Castillo has approved Python	987	2025-12-03 12:09:40.724534
+318	21	9	High	Auto-populated: Everly Barton has approved Agentic AI	21	2025-12-03 12:09:40.724534
+319	864	7	High	Auto-populated: Alden Le has approved Industry APIs	864	2025-12-03 12:09:40.724534
+321	190	25	High	Auto-populated: River Kelley has approved Python	190	2025-12-03 12:09:40.724534
+322	884	6	High	Auto-populated: Lyric Gould has approved QA Testing	884	2025-12-03 12:09:40.724534
+323	864	25	High	Auto-populated: Alden Le has approved Python	864	2025-12-03 12:09:40.724534
+324	338	22	High	Auto-populated: Alijah Goodman has approved Docker	338	2025-12-03 12:09:40.724534
+325	988	18	High	Auto-populated: Mylo Hobbs has approved Node.js	988	2025-12-03 12:09:40.724534
+326	148	4	High	Auto-populated: Aviana Montoya has approved Project Management	148	2025-12-03 12:09:40.724534
+327	8	10	High	Auto-populated: Beckham Hubbard has approved Data Processing	8	2025-12-03 12:09:40.724534
+328	789	10	High	Auto-populated: Frederick Tran has approved Data Processing	789	2025-12-03 12:09:40.724534
+330	284	4	High	Auto-populated: Jamari Beil has approved Project Management	284	2025-12-03 12:09:40.724534
+331	683	21	High	Auto-populated: Amiyah Cantrell has approved Data Analysis	683	2025-12-03 12:09:40.724534
+332	786	10	High	Auto-populated: Ramon Sawyer has approved Data Processing	786	2025-12-03 12:09:40.724534
+333	157	1	High	Auto-populated: Adele Nguyen has approved Java	157	2025-12-03 12:09:40.724534
+334	616	1	High	Auto-populated: Charli Delarosa has approved Java	616	2025-12-03 12:09:40.724534
+335	988	13	High	Auto-populated: Ledger Grant has approved C#	988	2025-12-03 12:09:40.724534
+336	483	8	High	Auto-populated: Korbyn Dickerson has approved Operating Metrics	483	2025-12-03 12:09:40.724534
+337	934	25	High	Auto-populated: Matilda Cantrell has approved Python	934	2025-12-03 12:09:40.724534
+338	565	8	High	Auto-populated: Jon Garcia has approved Operating Metrics	565	2025-12-03 12:09:40.724534
+339	630	10	High	Auto-populated: Branson Barber has approved Data Processing	630	2025-12-03 12:09:40.724534
+340	430	24	High	Auto-populated: Nyla Good has approved System Design	430	2025-12-03 12:09:40.724534
+341	786	12	High	Auto-populated: Marina Hart has approved Product Feature Design	786	2025-12-03 12:09:40.724534
+342	967	24	High	Auto-populated: Cynthia Lane has approved System Design	967	2025-12-03 12:09:40.724534
+343	864	8	High	Auto-populated: Myla McLaughlin has approved Operating Metrics	864	2025-12-03 12:09:40.724534
+344	521	24	High	Auto-populated: Stefan McPherson has approved System Design	521	2025-12-03 12:09:40.724534
+345	201	9	High	Auto-populated: Maison Carr has approved Agentic AI	201	2025-12-03 12:09:40.724534
+346	81	21	High	Auto-populated: Fisher Cisneros has approved Data Analysis	81	2025-12-03 12:09:40.724534
+347	815	12	High	Auto-populated: Jaxen Riley has approved Product Feature Design	815	2025-12-03 12:09:40.724534
+348	967	23	High	Auto-populated: Aziel Dean has approved CI/CD	967	2025-12-03 12:09:40.724534
+349	630	3	High	Auto-populated: Elias Skinner has approved ECCP	630	2025-12-03 12:09:40.724534
+350	201	7	High	Auto-populated: Rex Jimenez has approved Industry APIs	201	2025-12-03 12:09:40.724534
+352	585	17	High	Auto-populated: Bruce Li has approved React	585	2025-12-03 12:09:40.724534
+353	546	20	High	Auto-populated: Alayah Watson has approved Project Management	546	2025-12-03 12:09:40.724534
+354	391	3	High	Auto-populated: Mary Valenzuela has approved ECCP	391	2025-12-03 12:09:40.724534
+355	284	13	High	Auto-populated: Quinton Colon has approved C#	284	2025-12-03 12:09:40.724534
+356	873	20	High	Auto-populated: Omar Berger has approved Project Management	873	2025-12-03 12:09:40.724534
+357	430	5	High	Auto-populated: Remington Santiago has approved Scrum Master	430	2025-12-03 12:09:40.724534
+358	574	3	High	Auto-populated: Quinton Thompson has approved ECCP	574	2025-12-03 12:09:40.724534
+360	864	23	High	Auto-populated: Ibrahim Espinoza has approved CI/CD	864	2025-12-03 12:09:40.724534
+361	123	25	High	Auto-populated: Jair Schaefer has approved Python	123	2025-12-03 12:09:40.724534
+363	39	22	High	Auto-populated: Emmeline York has approved Docker	39	2025-12-03 12:09:40.724534
+364	967	21	High	Auto-populated: Adriel Romero has approved Data Analysis	967	2025-12-03 12:09:40.724534
+365	630	7	High	Auto-populated: Elias Skinner has approved Industry APIs	630	2025-12-03 12:09:40.724534
+367	674	3	High	Auto-populated: Kyler Johnson has approved ECCP	674	2025-12-03 12:09:40.724534
+369	831	5	High	Auto-populated: Lochlan Arnold has approved Scrum Master	831	2025-12-03 12:09:40.724534
+371	322	16	High	Auto-populated: Judah Parsons has approved QA Testing	322	2025-12-03 12:09:40.724534
+372	123	3	High	Auto-populated: Jason Townsend has approved ECCP	123	2025-12-03 12:09:40.724534
+373	181	11	High	Auto-populated: Connor Carlson has approved Data Storage	181	2025-12-03 12:09:40.724534
+374	293	23	High	Auto-populated: Alijah Walls has approved CI/CD	293	2025-12-03 12:09:40.724534
+375	815	16	High	Auto-populated: Emory Craig has approved QA Testing	815	2025-12-03 12:09:40.724534
+376	876	4	High	Auto-populated: Pearl McDowell has approved Project Management	876	2025-12-03 12:09:40.724534
+377	72	12	High	Auto-populated: Nikolas Gregory has approved Product Feature Design	72	2025-12-03 12:09:40.724534
+378	92	18	High	Auto-populated: Avi Alfaro has approved Node.js	92	2025-12-03 12:09:40.724534
+379	28	23	High	Auto-populated: Sylvie Stanton has approved CI/CD	28	2025-12-03 12:09:40.724534
+380	81	12	High	Auto-populated: Zainab Parker has approved Product Feature Design	81	2025-12-03 12:09:40.724534
+381	777	19	High	Auto-populated: Eli Rice has approved PostgreSQL	777	2025-12-03 12:09:40.724534
+382	409	6	High	Auto-populated: Berkley Christensen has approved QA Testing	409	2025-12-03 12:09:40.724534
+383	987	3	High	Auto-populated: Timothy Hanna has approved ECCP	987	2025-12-03 12:09:40.724534
+384	409	25	High	Auto-populated: Gregory Sanchez has approved Python	409	2025-12-03 12:09:40.724534
+385	541	23	High	Auto-populated: Kody Mills has approved CI/CD	541	2025-12-03 12:09:40.724534
+386	219	5	High	Auto-populated: Calvin Leblanc has approved Scrum Master	219	2025-12-03 12:09:40.724534
+387	117	21	High	Auto-populated: Lacey Lee has approved Data Analysis	117	2025-12-03 12:09:40.724534
+389	327	6	High	Auto-populated: Kassidy Strickland has approved QA Testing	327	2025-12-03 12:09:40.724534
+390	565	4	High	Auto-populated: Gary Ware has approved Project Management	565	2025-12-03 12:09:40.724534
+391	148	3	High	Auto-populated: Vincenzo Cobb has approved ECCP	148	2025-12-03 12:09:40.724534
+392	616	16	High	Auto-populated: Piper Harvey has approved QA Testing	616	2025-12-03 12:09:40.724534
+394	322	10	High	Auto-populated: Lian Soto has approved Data Processing	322	2025-12-03 12:09:40.724534
+396	683	9	High	Auto-populated: Harris Stephens has approved Agentic AI	683	2025-12-03 12:09:40.724534
+397	265	17	High	Auto-populated: Loretta Collins has approved React	265	2025-12-03 12:09:40.724534
+398	190	13	High	Auto-populated: Kali Watts has approved C#	190	2025-12-03 12:09:40.724534
+400	603	17	High	Auto-populated: Noemi Peterson has approved React	603	2025-12-03 12:09:40.724534
+401	967	17	High	Auto-populated: Cynthia Lane has approved React	967	2025-12-03 12:09:40.724534
+402	976	6	High	Auto-populated: Zelda Conrad has approved QA Testing	976	2025-12-03 12:09:40.724534
+404	923	13	High	Auto-populated: Abigail Fry has approved C#	923	2025-12-03 12:09:40.724534
+405	934	22	High	Auto-populated: Kate McCarthy has approved Docker	934	2025-12-03 12:09:40.724534
+406	815	20	High	Auto-populated: Kaiden Chandler has approved Project Management	815	2025-12-03 12:09:40.724534
+407	251	25	High	Auto-populated: Sariah Day has approved Python	251	2025-12-03 12:09:40.724534
+408	219	16	High	Auto-populated: Averi Moon has approved QA Testing	219	2025-12-03 12:09:40.724534
+409	322	17	High	Auto-populated: Brynlee Mora has approved React	322	2025-12-03 12:09:40.724534
+410	391	7	High	Auto-populated: Harlan Pugh has approved Industry APIs	391	2025-12-03 12:09:40.724534
+411	610	5	High	Auto-populated: Jade Nolan has approved Scrum Master	610	2025-12-03 12:09:40.724534
+412	744	13	High	Auto-populated: Kenzie Henry has approved C#	744	2025-12-03 12:09:40.724534
+414	744	11	High	Auto-populated: Meghan Juarez has approved Data Storage	744	2025-12-03 12:09:40.724534
+415	546	21	High	Auto-populated: Kyree Weber has approved Data Analysis	546	2025-12-03 12:09:40.724534
+416	712	11	High	Auto-populated: Jaylin Hansen has approved Data Storage	712	2025-12-03 12:09:40.724534
+417	409	18	High	Auto-populated: Kalel Sherman has approved Node.js	409	2025-12-03 12:09:40.724534
+418	181	23	High	Auto-populated: Connor Carlson has approved CI/CD	181	2025-12-03 12:09:40.724534
+419	284	10	High	Auto-populated: Oaklee Xiong has approved Data Processing	284	2025-12-03 12:09:40.724534
+420	683	18	High	Auto-populated: Elian Glover has approved Node.js	683	2025-12-03 12:09:40.724534
+421	565	21	High	Auto-populated: Jaxx Webster has approved Data Analysis	565	2025-12-03 12:09:40.724534
+422	712	3	High	Auto-populated: Yaretzi Phillips has approved ECCP	712	2025-12-03 12:09:40.724534
+423	532	13	High	Auto-populated: Rayna Pruitt has approved C#	532	2025-12-03 12:09:40.724534
+425	916	12	High	Auto-populated: Dorothy Cummings has approved Product Feature Design	916	2025-12-03 12:09:40.724534
+426	655	3	High	Auto-populated: Willie Barker has approved ECCP	655	2025-12-03 12:09:40.724534
+427	220	7	High	Auto-populated: Zara Kemp has approved Industry APIs	220	2025-12-03 12:09:40.724534
+429	474	7	High	Auto-populated: Lila Harrington has approved Industry APIs	474	2025-12-03 12:09:40.724534
+430	884	25	High	Auto-populated: Blaine Fuller has approved Python	884	2025-12-03 12:09:40.724534
+431	296	17	High	Auto-populated: Katalina Pratt has approved React	296	2025-12-03 12:09:40.724534
+432	934	3	High	Auto-populated: Kenia Galvan has approved ECCP	934	2025-12-03 12:09:40.724534
+433	148	1	High	Auto-populated: Nevaeh Felix has approved Java	148	2025-12-03 12:09:40.724534
+434	712	1	High	Auto-populated: Phillip Cardenas has approved Java	712	2025-12-03 12:09:40.724534
+435	391	11	High	Auto-populated: Lauren Barrett has approved Data Storage	391	2025-12-03 12:09:40.724534
+436	148	18	High	Auto-populated: Rodney Gaines has approved Node.js	148	2025-12-03 12:09:40.724534
+437	712	16	High	Auto-populated: Hadlee Love has approved QA Testing	712	2025-12-03 12:09:40.724534
+439	40	10	High	Auto-populated: Oaklee Chung has approved Data Processing	40	2025-12-03 12:09:40.724534
+440	409	3	High	Auto-populated: Wesley Nielsen has approved ECCP	409	2025-12-03 12:09:40.724534
+441	455	22	High	Auto-populated: Mylo David has approved Docker	455	2025-12-03 12:09:40.724534
+442	380	6	High	Auto-populated: Armani Roy has approved QA Testing	380	2025-12-03 12:09:40.724534
+443	902	21	High	Auto-populated: Lacey Gaines has approved Data Analysis	902	2025-12-03 12:09:40.724534
+444	347	8	High	Auto-populated: Javier Austin has approved Operating Metrics	347	2025-12-03 12:09:40.724534
+445	753	21	High	Auto-populated: Shay Ford has approved Data Analysis	753	2025-12-03 12:09:40.724534
+447	181	1	High	Auto-populated: Isaac Mann has approved Java	181	2025-12-03 12:09:40.724534
+448	546	22	High	Auto-populated: Alayah Watson has approved Docker	546	2025-12-03 12:09:40.724534
+449	190	19	High	Auto-populated: Zahra Patton has approved PostgreSQL	190	2025-12-03 12:09:40.724534
+450	293	11	High	Auto-populated: Hendrix Phan has approved Data Storage	293	2025-12-03 12:09:40.724534
+452	284	12	High	Auto-populated: Itzel Callahan has approved Product Feature Design	284	2025-12-03 12:09:40.724534
+453	220	16	High	Auto-populated: Ray Felix has approved QA Testing	220	2025-12-03 12:09:40.724534
+455	574	24	High	Auto-populated: Israel McKay has approved System Design	574	2025-12-03 12:09:40.724534
+456	733	5	High	Auto-populated: Addyson Shields has approved Scrum Master	733	2025-12-03 12:09:40.724534
+457	338	24	High	Auto-populated: Martha Waller has approved System Design	338	2025-12-03 12:09:40.724534
+458	815	23	High	Auto-populated: Daniella Rivers has approved CI/CD	815	2025-12-03 12:09:40.724534
+460	219	6	High	Auto-populated: Mckenna Poole has approved QA Testing	219	2025-12-03 12:09:40.724534
+464	650	19	High	Auto-populated: Hana McGee has approved PostgreSQL	650	2025-12-03 12:09:40.724534
+465	976	9	High	Auto-populated: Marlee Carrillo has approved Agentic AI	976	2025-12-03 12:09:40.724534
+466	726	18	High	Auto-populated: Melanie Bishop has approved Node.js	726	2025-12-03 12:09:40.724534
+467	293	7	High	Auto-populated: Peter Vu has approved Industry APIs	293	2025-12-03 12:09:40.724534
+468	943	13	High	Auto-populated: Jaxson Wood has approved C#	943	2025-12-03 12:09:40.724534
+469	284	5	High	Auto-populated: Remy Leach has approved Scrum Master	284	2025-12-03 12:09:40.724534
+470	507	25	High	Auto-populated: Iris Berry has approved Python	507	2025-12-03 12:09:40.724534
+471	831	18	High	Auto-populated: Amos Yu has approved Node.js	831	2025-12-03 12:09:40.724534
+472	296	21	High	Auto-populated: Kristian Shepherd has approved Data Analysis	296	2025-12-03 12:09:40.724534
+473	347	6	High	Auto-populated: Alivia Curtis has approved QA Testing	347	2025-12-03 12:09:40.724534
+474	260	3	High	Auto-populated: Marcelo Tucker has approved ECCP	260	2025-12-03 12:09:40.724534
+475	934	9	High	Auto-populated: Tiana Christian has approved Agentic AI	934	2025-12-03 12:09:40.724534
+476	840	13	High	Auto-populated: Mateo Griffith has approved C#	840	2025-12-03 12:09:40.724534
+477	815	25	High	Auto-populated: Loretta Holloway has approved Python	815	2025-12-03 12:09:40.724534
+479	81	20	High	Auto-populated: Caleb Melton has approved Project Management	81	2025-12-03 12:09:40.724534
+480	712	7	High	Auto-populated: Yaretzi Phillips has approved Industry APIs	712	2025-12-03 12:09:40.724534
+481	603	23	High	Auto-populated: Rhys Bentley has approved CI/CD	603	2025-12-03 12:09:40.724534
+482	371	1	High	Auto-populated: Leighton Hughes has approved Java	371	2025-12-03 12:09:40.724534
+483	81	7	High	Auto-populated: Janelle Tucker has approved Industry APIs	81	2025-12-03 12:09:40.724534
+484	864	11	High	Auto-populated: Annabelle Kelley has approved Data Storage	864	2025-12-03 12:09:40.724534
+485	777	5	High	Auto-populated: Yasmin Sexton has approved Scrum Master	777	2025-12-03 12:09:40.724534
+486	694	24	High	Auto-populated: Avery Russell has approved System Design	694	2025-12-03 12:09:40.724534
+487	574	19	High	Auto-populated: Kody Wright has approved PostgreSQL	574	2025-12-03 12:09:40.724534
+488	712	19	High	Auto-populated: Chandler Jackson has approved PostgreSQL	712	2025-12-03 12:09:40.724534
+490	380	10	High	Auto-populated: Taylor Shepard has approved Data Processing	380	2025-12-03 12:09:40.724534
+491	21	6	High	Auto-populated: Marilyn Bernard has approved QA Testing	21	2025-12-03 12:09:40.724534
+492	864	3	High	Auto-populated: Forrest Mason has approved ECCP	864	2025-12-03 12:09:40.724534
+493	39	8	High	Auto-populated: Valentino English has approved Operating Metrics	39	2025-12-03 12:09:40.724534
+494	190	24	High	Auto-populated: Azalea Stout has approved System Design	190	2025-12-03 12:09:40.724534
+495	474	11	High	Auto-populated: Danny Conway has approved Data Storage	474	2025-12-03 12:09:40.724534
+496	610	18	High	Auto-populated: Ariyah Christensen has approved Node.js	610	2025-12-03 12:09:40.724534
+498	987	20	High	Auto-populated: Monica Sullivan has approved Project Management	987	2025-12-03 12:09:40.724534
+499	674	9	High	Auto-populated: Kelvin Sharp has approved Agentic AI	674	2025-12-03 12:09:40.724534
+501	201	10	High	Auto-populated: Clara Phan has approved Data Processing	201	2025-12-03 12:09:40.724534
+502	909	21	High	Auto-populated: Eugene Cummings has approved Data Analysis	909	2025-12-03 12:09:40.724534
+503	845	23	High	Auto-populated: Alistair Quintana has approved CI/CD	845	2025-12-03 12:09:40.724534
+505	574	8	High	Auto-populated: Malakai Walters has approved Operating Metrics	574	2025-12-03 12:09:40.724534
+507	603	19	High	Auto-populated: Santiago Simmons has approved PostgreSQL	603	2025-12-03 12:09:40.724534
+508	923	3	High	Auto-populated: Abigail Fry has approved ECCP	923	2025-12-03 12:09:40.724534
+509	416	8	High	Auto-populated: Onyx Figueroa has approved Operating Metrics	416	2025-12-03 12:09:40.724534
+510	674	5	High	Auto-populated: Anakin Padilla has approved Scrum Master	674	2025-12-03 12:09:40.724534
+511	840	9	High	Auto-populated: Mateo Griffith has approved Agentic AI	840	2025-12-03 12:09:40.724534
+512	501	11	High	Auto-populated: Eugene Dean has approved Data Storage	501	2025-12-03 12:09:40.724534
+513	441	19	High	Auto-populated: Carson Adkins has approved PostgreSQL	441	2025-12-03 12:09:40.724534
+514	712	23	High	Auto-populated: Cayden Bravo has approved CI/CD	712	2025-12-03 12:09:40.724534
+516	233	25	High	Auto-populated: River Lugo has approved Python	233	2025-12-03 12:09:40.724534
+517	674	12	High	Auto-populated: Maurice Beasley has approved Product Feature Design	674	2025-12-03 12:09:40.724534
+518	789	4	High	Auto-populated: Frederick Tran has approved Project Management	789	2025-12-03 12:09:40.724534
+519	514	3	High	Auto-populated: Samson Hubbard has approved ECCP	514	2025-12-03 12:09:40.724534
+522	943	19	High	Auto-populated: Esteban Crane has approved PostgreSQL	943	2025-12-03 12:09:40.724534
+523	514	25	High	Auto-populated: Ansley Petersen has approved Python	514	2025-12-03 12:09:40.724534
+524	815	19	High	Auto-populated: Raul Sloan has approved PostgreSQL	815	2025-12-03 12:09:40.724534
+525	240	12	High	Auto-populated: Thaddeus Sullivan has approved Product Feature Design	240	2025-12-03 12:09:40.724534
+526	967	10	High	Auto-populated: Denisse Norman has approved Data Processing	967	2025-12-03 12:09:40.724534
+527	884	12	High	Auto-populated: Oakley Chase has approved Product Feature Design	884	2025-12-03 12:09:40.724534
+528	650	21	High	Auto-populated: Aileen Perry has approved Data Analysis	650	2025-12-03 12:09:40.724534
+529	650	6	High	Auto-populated: Waylon McCullough has approved QA Testing	650	2025-12-03 12:09:40.724534
+530	130	1	High	Auto-populated: Marley Reid has approved Java	130	2025-12-03 12:09:40.724534
+531	148	22	High	Auto-populated: Aya Day has approved Docker	148	2025-12-03 12:09:40.724534
+532	753	4	High	Auto-populated: Luis Avila has approved Project Management	753	2025-12-03 12:09:40.724534
+533	507	13	High	Auto-populated: Renata Enriquez has approved C#	507	2025-12-03 12:09:40.724534
+535	797	21	High	Auto-populated: Tori Wolf has approved Data Analysis	797	2025-12-03 12:09:40.724534
+536	371	24	High	Auto-populated: Rex Nunez has approved System Design	371	2025-12-03 12:09:40.724534
+538	110	18	High	Auto-populated: Jemma Reyes has approved Node.js	110	2025-12-03 12:09:40.724534
+539	943	17	High	Auto-populated: Jaxson Wood has approved React	943	2025-12-03 12:09:40.724534
+540	777	16	High	Auto-populated: Elias Duffy has approved QA Testing	777	2025-12-03 12:09:40.724534
+541	371	6	High	Auto-populated: Sabrina Baldwin has approved QA Testing	371	2025-12-03 12:09:40.724534
+544	641	19	High	Auto-populated: Jaxon Roach has approved PostgreSQL	641	2025-12-03 12:09:40.724534
+545	284	18	High	Auto-populated: Brayden Cameron has approved Node.js	284	2025-12-03 12:09:40.724534
+546	371	9	High	Auto-populated: Yaretzi Garza has approved Agentic AI	371	2025-12-03 12:09:40.724534
+547	338	7	High	Auto-populated: Angelo Cano has approved Industry APIs	338	2025-12-03 12:09:40.724534
+548	110	12	High	Auto-populated: Leandro Branch has approved Product Feature Design	110	2025-12-03 12:09:40.724534
+549	902	22	High	Auto-populated: Kynlee Branch has approved Docker	902	2025-12-03 12:09:40.724534
+550	712	24	High	Auto-populated: Kye Giles has approved System Design	712	2025-12-03 12:09:40.724534
+551	48	4	High	Auto-populated: Melissa Buckley has approved Project Management	48	2025-12-03 12:09:40.724534
+552	719	12	High	Auto-populated: Tatum Boyle has approved Product Feature Design	719	2025-12-03 12:09:40.724534
+553	193	4	High	Auto-populated: Eva Beasley has approved Project Management	193	2025-12-03 12:09:40.724534
+554	532	12	High	Auto-populated: Maxine Arias has approved Product Feature Design	532	2025-12-03 12:09:40.724534
+555	712	8	High	Auto-populated: Nikolai Mills has approved Operating Metrics	712	2025-12-03 12:09:40.724534
+556	304	9	High	Auto-populated: Jaxx Rich has approved Agentic AI	304	2025-12-03 12:09:40.724534
+557	162	8	High	Auto-populated: Joanna Mathis has approved Operating Metrics	162	2025-12-03 12:09:40.724534
+559	219	24	High	Auto-populated: Novalee Arias has approved System Design	219	2025-12-03 12:09:40.724534
+560	674	20	High	Auto-populated: Camryn Thornton has approved Project Management	674	2025-12-03 12:09:40.724534
+561	483	10	High	Auto-populated: Barbara Hendrix has approved Data Processing	483	2025-12-03 12:09:40.724534
+563	831	1	High	Auto-populated: Keyla Johnson has approved Java	831	2025-12-03 12:09:40.724534
+565	786	23	High	Auto-populated: Juniper Houston has approved CI/CD	786	2025-12-03 12:09:40.724534
+566	831	6	High	Auto-populated: Noah Nolan has approved QA Testing	831	2025-12-03 12:09:40.724534
+567	240	22	High	Auto-populated: Bryson Gallagher has approved Docker	240	2025-12-03 12:09:40.724534
+569	322	20	High	Auto-populated: Makenna Ball has approved Project Management	322	2025-12-03 12:09:40.724534
+570	130	8	High	Auto-populated: Reece Medrano has approved Operating Metrics	130	2025-12-03 12:09:40.724534
+572	157	10	High	Auto-populated: Case Lawson has approved Data Processing	157	2025-12-03 12:09:40.724534
+574	157	19	High	Auto-populated: Francesca Hartman has approved PostgreSQL	157	2025-12-03 12:09:40.724534
+575	786	7	High	Auto-populated: Sylas Lugo has approved Industry APIs	786	2025-12-03 12:09:40.724534
+576	233	19	High	Auto-populated: Kaylie O’Connor has approved PostgreSQL	233	2025-12-03 12:09:40.724534
+578	840	8	High	Auto-populated: Alberto Gallagher has approved Operating Metrics	840	2025-12-03 12:09:40.724534
+579	777	12	High	Auto-populated: Mylo Valdez has approved Product Feature Design	777	2025-12-03 12:09:40.724534
+580	514	9	High	Auto-populated: Arianna Hill has approved Agentic AI	514	2025-12-03 12:09:40.724534
+582	840	19	High	Auto-populated: Paityn Martin has approved PostgreSQL	840	2025-12-03 12:09:40.724534
+583	916	11	High	Auto-populated: Landry Wise has approved Data Storage	916	2025-12-03 12:09:40.724534
+584	909	1	High	Auto-populated: Emir Flowers has approved Java	909	2025-12-03 12:09:40.724534
+586	162	12	High	Auto-populated: Joanna Mathis has approved Product Feature Design	162	2025-12-03 12:09:40.724534
+587	441	18	High	Auto-populated: Seth Elliott has approved Node.js	441	2025-12-03 12:09:40.724534
+588	304	1	High	Auto-populated: Sunny Gardner has approved Java	304	2025-12-03 12:09:40.724534
+589	923	24	High	Auto-populated: Jacoby Sampson has approved System Design	923	2025-12-03 12:09:40.724534
+590	733	21	High	Auto-populated: Miranda Curtis has approved Data Analysis	733	2025-12-03 12:09:40.724534
+591	72	20	High	Auto-populated: Isla Rodgers has approved Project Management	72	2025-12-03 12:09:40.724534
+592	226	19	High	Auto-populated: Raelynn Knox has approved PostgreSQL	226	2025-12-03 12:09:40.724534
+593	909	4	High	Auto-populated: Makenzie Randolph has approved Project Management	909	2025-12-03 12:09:40.724534
+594	190	1	High	Auto-populated: Aiden Miller has approved Java	190	2025-12-03 12:09:40.724534
+595	110	23	High	Auto-populated: Gary Howell has approved CI/CD	110	2025-12-03 12:09:40.724534
+596	391	5	High	Auto-populated: Kaia Butler has approved Scrum Master	391	2025-12-03 12:09:40.724534
+597	157	11	High	Auto-populated: Gabriel Huang has approved Data Storage	157	2025-12-03 12:09:40.724534
+598	48	7	High	Auto-populated: Dominik Cole has approved Industry APIs	48	2025-12-03 12:09:40.724534
+599	873	17	High	Auto-populated: Shane Thompson has approved React	873	2025-12-03 12:09:40.724534
+600	694	10	High	Auto-populated: Colin Mosley has approved Data Processing	694	2025-12-03 12:09:40.724534
+601	338	6	High	Auto-populated: Angelo Cano has approved QA Testing	338	2025-12-03 12:09:40.724534
+603	987	23	High	Auto-populated: Monica Sullivan has approved CI/CD	987	2025-12-03 12:09:40.724534
+604	976	13	High	Auto-populated: Zelda Conrad has approved C#	976	2025-12-03 12:09:40.724534
+606	521	10	High	Auto-populated: Griffin Dorsey has approved Data Processing	521	2025-12-03 12:09:40.724534
+607	148	10	High	Auto-populated: Vincenzo Cobb has approved Data Processing	148	2025-12-03 12:09:40.724534
+608	565	11	High	Auto-populated: Royalty Lim has approved Data Storage	565	2025-12-03 12:09:40.724534
+609	21	11	High	Auto-populated: Ashley McCullough has approved Data Storage	21	2025-12-03 12:09:40.724534
+610	565	22	High	Auto-populated: John Palmer has approved Docker	565	2025-12-03 12:09:40.724534
+611	137	12	High	Auto-populated: Bexley Bullock has approved Product Feature Design	137	2025-12-03 12:09:40.724534
+612	251	4	High	Auto-populated: Brylee Valdez has approved Project Management	251	2025-12-03 12:09:40.724534
+614	251	13	High	Auto-populated: Jovanni Pruitt has approved C#	251	2025-12-03 12:09:40.724534
+616	322	1	High	Auto-populated: Edward Valenzuela has approved Java	322	2025-12-03 12:09:40.724534
+617	327	23	High	Auto-populated: Kassidy Strickland has approved CI/CD	327	2025-12-03 12:09:40.724534
+619	719	6	High	Auto-populated: Nancy Holland has approved QA Testing	719	2025-12-03 12:09:40.724534
+620	987	13	High	Auto-populated: Evan Castillo has approved C#	987	2025-12-03 12:09:40.724534
+621	864	4	High	Auto-populated: Ty Brady has approved Project Management	864	2025-12-03 12:09:40.724534
+622	219	22	High	Auto-populated: Destiny Compton has approved Docker	219	2025-12-03 12:09:40.724534
+623	190	17	High	Auto-populated: Aiden Miller has approved React	190	2025-12-03 12:09:40.724534
+624	181	3	High	Auto-populated: Ainhoa Cox has approved ECCP	181	2025-12-03 12:09:40.724534
+625	884	22	High	Auto-populated: Amirah Calhoun has approved Docker	884	2025-12-03 12:09:40.724534
+626	409	13	High	Auto-populated: Addilyn Strickland has approved C#	409	2025-12-03 12:09:40.724534
+627	831	9	High	Auto-populated: Lochlan Arnold has approved Agentic AI	831	2025-12-03 12:09:40.724534
+628	110	13	High	Auto-populated: Gunnar Maddox has approved C#	110	2025-12-03 12:09:40.724534
+629	380	22	High	Auto-populated: Taylor Shepard has approved Docker	380	2025-12-03 12:09:40.724534
+630	40	7	High	Auto-populated: Brayden Andrews has approved Industry APIs	40	2025-12-03 12:09:40.724534
+632	441	1	High	Auto-populated: Kaysen Barron has approved Java	441	2025-12-03 12:09:40.724534
+633	347	1	High	Auto-populated: Muhammad Kirk has approved Java	347	2025-12-03 12:09:40.724534
+634	48	25	High	Auto-populated: Dominik Cole has approved Python	48	2025-12-03 12:09:40.724534
+635	712	20	High	Auto-populated: Siena Berry has approved Project Management	712	2025-12-03 12:09:40.724534
+636	934	5	High	Auto-populated: Leia Adams has approved Scrum Master	934	2025-12-03 12:09:40.724534
+638	409	21	High	Auto-populated: Zayd Bullock has approved Data Analysis	409	2025-12-03 12:09:40.724534
+639	137	13	High	Auto-populated: Lila Valenzuela has approved C#	137	2025-12-03 12:09:40.724534
+642	430	3	High	Auto-populated: Reid Holloway has approved ECCP	430	2025-12-03 12:09:40.724534
+643	831	24	High	Auto-populated: Brianna Ali has approved System Design	831	2025-12-03 12:09:40.724534
+644	110	10	High	Auto-populated: Bruce Knox has approved Data Processing	110	2025-12-03 12:09:40.724534
+645	40	21	High	Auto-populated: Brayden Andrews has approved Data Analysis	40	2025-12-03 12:09:40.724534
+646	514	23	High	Auto-populated: Nathaniel Faulkner has approved CI/CD	514	2025-12-03 12:09:40.724534
+647	777	10	High	Auto-populated: Cameron Rich has approved Data Processing	777	2025-12-03 12:09:40.724534
+648	322	4	High	Auto-populated: Arturo Herrera has approved Project Management	322	2025-12-03 12:09:40.724534
+649	455	6	High	Auto-populated: Mylo David has approved QA Testing	455	2025-12-03 12:09:40.724534
+650	934	12	High	Auto-populated: Sullivan Douglas has approved Product Feature Design	934	2025-12-03 12:09:40.724534
+651	507	11	High	Auto-populated: Renata Enriquez has approved Data Storage	507	2025-12-03 12:09:40.724534
+652	293	21	High	Auto-populated: Kimora Jenkins has approved Data Analysis	293	2025-12-03 12:09:40.724534
+653	719	17	High	Auto-populated: Romina Velasquez has approved React	719	2025-12-03 12:09:40.724534
+654	603	4	High	Auto-populated: Reagan Pena has approved Project Management	603	2025-12-03 12:09:40.724534
+656	8	17	High	Auto-populated: Alani Sandoval has approved React	8	2025-12-03 12:09:40.724534
+657	565	20	High	Auto-populated: Royalty Lim has approved Project Management	565	2025-12-03 12:09:40.724534
+658	683	5	High	Auto-populated: Amiyah Cantrell has approved Scrum Master	683	2025-12-03 12:09:40.724534
+659	641	4	High	Auto-populated: Chana Bauer has approved Project Management	641	2025-12-03 12:09:40.724534
+660	603	21	High	Auto-populated: Reagan Pena has approved Data Analysis	603	2025-12-03 12:09:40.724534
+661	686	17	High	Auto-populated: Boone Yu has approved React	686	2025-12-03 12:09:40.724534
+662	902	24	High	Auto-populated: Aniya Frost has approved System Design	902	2025-12-03 12:09:40.724534
+663	565	7	High	Auto-populated: Makenzie Nash has approved Industry APIs	565	2025-12-03 12:09:40.724534
+664	72	4	High	Auto-populated: Edward Wagner has approved Project Management	72	2025-12-03 12:09:40.724534
+668	988	10	High	Auto-populated: Moises Castillo has approved Data Processing	988	2025-12-03 12:09:40.724534
+670	521	1	High	Auto-populated: Macie Nava has approved Java	521	2025-12-03 12:09:40.724534
+671	902	3	High	Auto-populated: Dario Lowe has approved ECCP	902	2025-12-03 12:09:40.724534
+673	988	1	High	Auto-populated: Ledger Grant has approved Java	988	2025-12-03 12:09:40.724534
+674	616	3	High	Auto-populated: Marshall O’Connor has approved ECCP	616	2025-12-03 12:09:40.724534
+675	934	23	High	Auto-populated: Cooper Stokes has approved CI/CD	934	2025-12-03 12:09:40.724534
+676	532	25	High	Auto-populated: Odin McDowell has approved Python	532	2025-12-03 12:09:40.724534
+677	92	9	High	Auto-populated: Nathalia Truong has approved Agentic AI	92	2025-12-03 12:09:40.724534
+679	987	22	High	Auto-populated: Erin Enriquez has approved Docker	987	2025-12-03 12:09:40.724534
+680	92	20	High	Auto-populated: Ayan Adkins has approved Project Management	92	2025-12-03 12:09:40.724534
+682	815	1	High	Auto-populated: Kayla Bradshaw has approved Java	815	2025-12-03 12:09:40.724534
+683	260	11	High	Auto-populated: Pearl Woodard has approved Data Storage	260	2025-12-03 12:09:40.724534
+685	967	25	High	Auto-populated: Luca Escobar has approved Python	967	2025-12-03 12:09:40.724534
+687	574	13	High	Auto-populated: Leanna Garner has approved C#	574	2025-12-03 12:09:40.724534
+688	789	21	High	Auto-populated: Sara Wise has approved Data Analysis	789	2025-12-03 12:09:40.724534
+689	777	13	High	Auto-populated: Abram Briggs has approved C#	777	2025-12-03 12:09:40.724534
+690	610	9	High	Auto-populated: Kelsey Cantrell has approved Agentic AI	610	2025-12-03 12:09:40.724534
+691	574	9	High	Auto-populated: Lily Callahan has approved Agentic AI	574	2025-12-03 12:09:40.724534
+692	40	12	High	Auto-populated: Marina York has approved Product Feature Design	40	2025-12-03 12:09:40.724534
+693	546	10	High	Auto-populated: Orlando Hester has approved Data Processing	546	2025-12-03 12:09:40.724534
+694	650	24	High	Auto-populated: Aileen Perry has approved System Design	650	2025-12-03 12:09:40.724534
+695	585	13	High	Auto-populated: Watson Williamson has approved C#	585	2025-12-03 12:09:40.724534
+696	712	21	High	Auto-populated: Mauricio Wilkinson has approved Data Analysis	712	2025-12-03 12:09:40.724534
+697	641	5	High	Auto-populated: Vivian Duffy has approved Scrum Master	641	2025-12-03 12:09:40.724534
+698	876	10	High	Auto-populated: Pearl McDowell has approved Data Processing	876	2025-12-03 12:09:40.724534
+699	967	20	High	Auto-populated: Greyson Hernandez has approved Project Management	967	2025-12-03 12:09:40.724534
+700	14	10	High	Auto-populated: Miley Cline has approved Data Processing	14	2025-12-03 12:09:40.724534
+701	623	8	High	Auto-populated: Amoura Olsen has approved Operating Metrics	623	2025-12-03 12:09:40.724534
+702	284	8	High	Auto-populated: Juliana Poole has approved Operating Metrics	284	2025-12-03 12:09:40.724534
+703	123	20	High	Auto-populated: Amaya Bernard has approved Project Management	123	2025-12-03 12:09:40.724534
+704	240	23	High	Auto-populated: Hadley Moran has approved CI/CD	240	2025-12-03 12:09:40.724534
+709	786	6	High	Auto-populated: Marina Hart has approved QA Testing	786	2025-12-03 12:09:40.724534
+710	758	18	High	Auto-populated: Cecilia Sims has approved Node.js	758	2025-12-03 12:09:40.724534
+711	380	3	High	Auto-populated: Armani Roy has approved ECCP	380	2025-12-03 12:09:40.724534
+712	117	10	High	Auto-populated: Jack Gonzales has approved Data Processing	117	2025-12-03 12:09:40.724534
+713	72	24	High	Auto-populated: Edward Wagner has approved System Design	72	2025-12-03 12:09:40.724534
+715	181	20	High	Auto-populated: Mallory Proctor has approved Project Management	181	2025-12-03 12:09:40.724534
+717	293	17	High	Auto-populated: Declan Keith has approved React	293	2025-12-03 12:09:40.724534
+719	532	7	High	Auto-populated: Jefferson Vance has approved Industry APIs	532	2025-12-03 12:09:40.724534
+720	474	13	High	Auto-populated: Jacob Roberts has approved C#	474	2025-12-03 12:09:40.724534
+722	820	18	High	Auto-populated: Joseph Fry has approved Node.js	820	2025-12-03 12:09:40.724534
+725	650	18	High	Auto-populated: Laney Gould has approved Node.js	650	2025-12-03 12:09:40.724534
+726	541	6	High	Auto-populated: Juniper Garrison has approved QA Testing	541	2025-12-03 12:09:40.724534
+727	532	20	High	Auto-populated: Giuliana Craig has approved Project Management	532	2025-12-03 12:09:40.724534
+728	831	23	High	Auto-populated: Itzayana Walter has approved CI/CD	831	2025-12-03 12:09:40.724534
+733	293	5	High	Auto-populated: Landry Hudson has approved Scrum Master	293	2025-12-03 12:09:40.724534
+735	110	21	High	Auto-populated: Alaya Fitzgerald has approved Data Analysis	110	2025-12-03 12:09:40.724534
+736	455	12	High	Auto-populated: Meredith Sexton has approved Product Feature Design	455	2025-12-03 12:09:40.724534
+737	943	12	High	Auto-populated: Jaxson Wood has approved Product Feature Design	943	2025-12-03 12:09:40.724534
+738	733	25	High	Auto-populated: Muhammad Singleton has approved Python	733	2025-12-03 12:09:40.724534
+739	352	13	High	Auto-populated: Lennon Woodward has approved C#	352	2025-12-03 12:09:40.724534
+741	304	18	High	Auto-populated: Brittany Briggs has approved Node.js	304	2025-12-03 12:09:40.724534
+742	934	7	High	Auto-populated: Jack Curtis has approved Industry APIs	934	2025-12-03 12:09:40.724534
+745	39	9	High	Auto-populated: Emmeline York has approved Agentic AI	39	2025-12-03 12:09:40.724534
+748	777	18	High	Auto-populated: Stephen Alfaro has approved Node.js	777	2025-12-03 12:09:40.724534
+749	864	12	High	Auto-populated: Annabelle Kelley has approved Product Feature Design	864	2025-12-03 12:09:40.724534
+750	541	12	High	Auto-populated: Kody Mills has approved Product Feature Design	541	2025-12-03 12:09:40.724534
+751	322	9	High	Auto-populated: Edward Valenzuela has approved Agentic AI	322	2025-12-03 12:09:40.724534
+752	322	23	High	Auto-populated: Edward Valenzuela has approved CI/CD	322	2025-12-03 12:09:40.724534
+753	322	5	High	Auto-populated: Ximena Esparza has approved Scrum Master	322	2025-12-03 12:09:40.724534
+759	574	20	High	Auto-populated: Leanna Garner has approved Project Management	574	2025-12-03 12:09:40.724534
+761	815	6	High	Auto-populated: Kaiden Chandler has approved QA Testing	815	2025-12-03 12:09:40.724534
+762	371	23	High	Auto-populated: Ella Dyer has approved CI/CD	371	2025-12-03 12:09:40.724534
+764	744	16	High	Auto-populated: Kenzie Henry has approved QA Testing	744	2025-12-03 12:09:40.724534
+765	39	25	High	Auto-populated: Violeta Peralta has approved Python	39	2025-12-03 12:09:40.724534
+767	181	24	High	Auto-populated: Callum Morton has approved System Design	181	2025-12-03 12:09:40.724534
+768	53	19	High	Auto-populated: Hannah Livingston has approved PostgreSQL	53	2025-12-03 12:09:40.724534
+769	909	12	High	Auto-populated: Ariya Robertson has approved Product Feature Design	909	2025-12-03 12:09:40.724534
+770	219	1	High	Auto-populated: Nova Bryan has approved Java	219	2025-12-03 12:09:40.724534
+771	873	22	High	Auto-populated: Omar Berger has approved Docker	873	2025-12-03 12:09:40.724534
+772	352	20	High	Auto-populated: Irene Melton has approved Project Management	352	2025-12-03 12:09:40.724534
+773	565	10	High	Auto-populated: John Palmer has approved Data Processing	565	2025-12-03 12:09:40.724534
+774	507	21	High	Auto-populated: Adonis Orozco has approved Data Analysis	507	2025-12-03 12:09:40.724534
+775	441	25	High	Auto-populated: Noelle Jefferson has approved Python	441	2025-12-03 12:09:40.724534
+776	240	16	High	Auto-populated: Bryson Gallagher has approved QA Testing	240	2025-12-03 12:09:40.724534
+779	483	12	High	Auto-populated: Allen Wolfe has approved Product Feature Design	483	2025-12-03 12:09:40.724534
+780	137	24	High	Auto-populated: Jace Jensen has approved System Design	137	2025-12-03 12:09:40.724534
+782	474	25	High	Auto-populated: Victoria Sampson has approved Python	474	2025-12-03 12:09:40.724534
+784	923	7	High	Auto-populated: Aubrie Adkins has approved Industry APIs	923	2025-12-03 12:09:40.724534
+785	976	1	High	Auto-populated: Marlee Carrillo has approved Java	976	2025-12-03 12:09:40.724534
+788	641	20	High	Auto-populated: Jaxon Roach has approved Project Management	641	2025-12-03 12:09:40.724534
+790	712	17	High	Auto-populated: Nicolas Aguirre has approved React	712	2025-12-03 12:09:40.724534
+791	840	25	High	Auto-populated: Elliott Jaramillo has approved Python	840	2025-12-03 12:09:40.724534
+792	193	8	High	Auto-populated: Stanley Shaffer has approved Operating Metrics	193	2025-12-03 12:09:40.724534
+794	546	9	High	Auto-populated: Zendaya Morrow has approved Agentic AI	546	2025-12-03 12:09:40.724534
+795	193	3	High	Auto-populated: Eva Beasley has approved ECCP	193	2025-12-03 12:09:40.724534
+796	546	18	High	Auto-populated: Kyree Weber has approved Node.js	546	2025-12-03 12:09:40.724534
+798	744	21	High	Auto-populated: Westley Erickson has approved Data Analysis	744	2025-12-03 12:09:40.724534
+799	744	25	High	Auto-populated: Elisabeth Bautista has approved Python	744	2025-12-03 12:09:40.724534
+800	430	6	High	Auto-populated: Nyla Good has approved QA Testing	430	2025-12-03 12:09:40.724534
+801	616	21	High	Auto-populated: Piper Harvey has approved Data Analysis	616	2025-12-03 12:09:40.724534
+802	934	17	High	Auto-populated: Brian Lu has approved React	934	2025-12-03 12:09:40.724534
+803	532	9	High	Auto-populated: Bobby Peterson has approved Agentic AI	532	2025-12-03 12:09:40.724534
+804	347	25	High	Auto-populated: Alivia Curtis has approved Python	347	2025-12-03 12:09:40.724534
+805	293	4	High	Auto-populated: Peter Vu has approved Project Management	293	2025-12-03 12:09:40.724534
+806	391	18	High	Auto-populated: Nancy Bullock has approved Node.js	391	2025-12-03 12:09:40.724534
+807	831	21	High	Auto-populated: Keyla Johnson has approved Data Analysis	831	2025-12-03 12:09:40.724534
+809	744	5	High	Auto-populated: Raul Norman has approved Scrum Master	744	2025-12-03 12:09:40.724534
+810	441	23	High	Auto-populated: Helen Manning has approved CI/CD	441	2025-12-03 12:09:40.724534
+812	110	8	High	Auto-populated: Eli Wilcox has approved Operating Metrics	110	2025-12-03 12:09:40.724534
+813	831	19	High	Auto-populated: Noah Nolan has approved PostgreSQL	831	2025-12-03 12:09:40.724534
+814	603	7	High	Auto-populated: Manuel Barr has approved Industry APIs	603	2025-12-03 12:09:40.724534
+815	726	7	High	Auto-populated: Whitney Hester has approved Industry APIs	726	2025-12-03 12:09:40.724534
+816	39	24	High	Auto-populated: Emmanuel Bernal has approved System Design	39	2025-12-03 12:09:40.724534
+817	423	5	High	Auto-populated: June Ahmed has approved Scrum Master	423	2025-12-03 12:09:40.724534
+818	162	13	High	Auto-populated: Maren Giles has approved C#	162	2025-12-03 12:09:40.724534
+819	110	16	High	Auto-populated: Gunnar Maddox has approved QA Testing	110	2025-12-03 12:09:40.724534
+820	157	8	High	Auto-populated: Adele Nguyen has approved Operating Metrics	157	2025-12-03 12:09:40.724534
+821	630	16	High	Auto-populated: Mara Ventura has approved QA Testing	630	2025-12-03 12:09:40.724534
+822	391	13	High	Auto-populated: Dax Acosta has approved C#	391	2025-12-03 12:09:40.724534
+823	574	10	High	Auto-populated: Madison Marquez has approved Data Processing	574	2025-12-03 12:09:40.724534
+825	507	1	High	Auto-populated: Adonis Orozco has approved Java	507	2025-12-03 12:09:40.724534
+826	988	11	High	Auto-populated: Ledger Grant has approved Data Storage	988	2025-12-03 12:09:40.724534
+827	416	4	High	Auto-populated: Yehuda Parks has approved Project Management	416	2025-12-03 12:09:40.724534
+828	541	9	High	Auto-populated: Ford Schaefer has approved Agentic AI	541	2025-12-03 12:09:40.724534
+829	820	20	High	Auto-populated: Genevieve Morton has approved Project Management	820	2025-12-03 12:09:40.724534
+830	943	18	High	Auto-populated: Jeremiah Knox has approved Node.js	943	2025-12-03 12:09:40.724534
+832	610	3	High	Auto-populated: Harris Long has approved ECCP	610	2025-12-03 12:09:40.724534
+834	416	18	High	Auto-populated: Yehuda Parks has approved Node.js	416	2025-12-03 12:09:40.724534
+835	514	1	High	Auto-populated: Samson Hubbard has approved Java	514	2025-12-03 12:09:40.724534
+841	8	23	High	Auto-populated: Paige Santiago has approved CI/CD	8	2025-12-03 12:09:40.724534
+843	72	23	High	Auto-populated: Zoe Hudson has approved CI/CD	72	2025-12-03 12:09:40.724534
+849	409	22	High	Auto-populated: Gregory Sanchez has approved Docker	409	2025-12-03 12:09:40.724534
+851	148	9	High	Auto-populated: Nevaeh Felix has approved Agentic AI	148	2025-12-03 12:09:40.724534
+852	683	19	High	Auto-populated: Alessia Hood has approved PostgreSQL	683	2025-12-03 12:09:40.724534
+854	219	9	High	Auto-populated: Destiny Compton has approved Agentic AI	219	2025-12-03 12:09:40.724534
+855	967	3	High	Auto-populated: Marlee Garrett has approved ECCP	967	2025-12-03 12:09:40.724534
+856	831	22	High	Auto-populated: Arjun Quintero has approved Docker	831	2025-12-03 12:09:40.724534
+857	650	25	High	Auto-populated: Waylon McCullough has approved Python	650	2025-12-03 12:09:40.724534
+858	532	23	High	Auto-populated: Jefferson Vance has approved CI/CD	532	2025-12-03 12:09:40.724534
+859	391	8	High	Auto-populated: Tate Strickland has approved Operating Metrics	391	2025-12-03 12:09:40.724534
+863	455	4	High	Auto-populated: Haylee Randolph has approved Project Management	455	2025-12-03 12:09:40.724534
+865	501	10	High	Auto-populated: Sage Ho has approved Data Processing	501	2025-12-03 12:09:40.724534
+866	28	8	High	Auto-populated: Ira Whitehead has approved Operating Metrics	28	2025-12-03 12:09:40.724534
+868	450	11	High	Auto-populated: Kyng Andrade has approved Data Storage	450	2025-12-03 12:09:40.724534
+869	967	13	High	Auto-populated: Julianna Owens has approved C#	967	2025-12-03 12:09:40.724534
+870	219	4	High	Auto-populated: Quincy Cohen has approved Project Management	219	2025-12-03 12:09:40.724534
+872	902	12	High	Auto-populated: Lacey Gaines has approved Product Feature Design	902	2025-12-03 12:09:40.724534
+873	546	1	High	Auto-populated: Zendaya Morrow has approved Java	546	2025-12-03 12:09:40.724534
+874	430	9	High	Auto-populated: Idris Rivas has approved Agentic AI	430	2025-12-03 12:09:40.724534
+875	181	21	High	Auto-populated: Corey Dudley has approved Data Analysis	181	2025-12-03 12:09:40.724534
+876	630	9	High	Auto-populated: Reagan Evans has approved Agentic AI	630	2025-12-03 12:09:40.724534
+877	219	19	High	Auto-populated: Jovie McDonald has approved PostgreSQL	219	2025-12-03 12:09:40.724534
+878	565	6	High	Auto-populated: Celine Calhoun has approved QA Testing	565	2025-12-03 12:09:40.724534
+880	948	9	High	Auto-populated: Hector Bernard has approved Agentic AI	948	2025-12-03 12:09:40.724534
+881	416	23	High	Auto-populated: Layne Donaldson has approved CI/CD	416	2025-12-03 12:09:40.724534
+882	514	17	High	Auto-populated: Arianna Hill has approved React	514	2025-12-03 12:09:40.724534
+883	284	23	High	Auto-populated: Jamari Beil has approved CI/CD	284	2025-12-03 12:09:40.724534
+884	21	17	High	Auto-populated: Cassius Guzman has approved React	21	2025-12-03 12:09:40.724534
+885	494	21	High	Auto-populated: Samir McGuire has approved Data Analysis	494	2025-12-03 12:09:40.724534
+886	712	6	High	Auto-populated: Casen Bryan has approved QA Testing	712	2025-12-03 12:09:40.724534
+887	423	16	High	Auto-populated: Kameron Lucas has approved QA Testing	423	2025-12-03 12:09:40.724534
+892	712	22	High	Auto-populated: Remington Anderson has approved Docker	712	2025-12-03 12:09:40.724534
+897	902	9	High	Auto-populated: Talon Villanueva has approved Agentic AI	902	2025-12-03 12:09:40.724534
+898	137	20	High	Auto-populated: Bexley Bullock has approved Project Management	137	2025-12-03 12:09:40.724534
+899	585	5	High	Auto-populated: Catherine Bauer has approved Scrum Master	585	2025-12-03 12:09:40.724534
+901	233	9	High	Auto-populated: Alistair Avalos has approved Agentic AI	233	2025-12-03 12:09:40.724534
+903	53	4	High	Auto-populated: Ambrose Chen has approved Project Management	53	2025-12-03 12:09:40.724534
+904	574	1	High	Auto-populated: Quinton Thompson has approved Java	574	2025-12-03 12:09:40.724534
+905	501	19	High	Auto-populated: Eugene Dean has approved PostgreSQL	501	2025-12-03 12:09:40.724534
+907	474	4	High	Auto-populated: Paisley Dorsey has approved Project Management	474	2025-12-03 12:09:40.724534
+908	574	18	High	Auto-populated: Samara Rios has approved Node.js	574	2025-12-03 12:09:40.724534
+909	577	24	High	Auto-populated: Marianna Phillips has approved System Design	577	2025-12-03 12:09:40.724534
+913	371	11	High	Auto-populated: Ella McCann has approved Data Storage	371	2025-12-03 12:09:40.724534
+915	455	8	High	Auto-populated: Eugene Gallegos has approved Operating Metrics	455	2025-12-03 12:09:40.724534
+916	876	9	High	Auto-populated: Colten Meadows has approved Agentic AI	876	2025-12-03 12:09:40.724534
+918	987	5	High	Auto-populated: Evan Castillo has approved Scrum Master	987	2025-12-03 12:09:40.724534
+919	190	23	High	Auto-populated: Isabella Knight has approved CI/CD	190	2025-12-03 12:09:40.724534
+920	284	24	High	Auto-populated: Juliana Poole has approved System Design	284	2025-12-03 12:09:40.724534
+921	148	13	High	Auto-populated: Ford Chavez has approved C#	148	2025-12-03 12:09:40.724534
+922	190	20	High	Auto-populated: Rosalie White has approved Project Management	190	2025-12-03 12:09:40.724534
+923	820	11	High	Auto-populated: Genevieve Morton has approved Data Storage	820	2025-12-03 12:09:40.724534
+925	347	7	High	Auto-populated: Cairo Hess has approved Industry APIs	347	2025-12-03 12:09:40.724534
+926	831	11	High	Auto-populated: Ahmad Kennedy has approved Data Storage	831	2025-12-03 12:09:40.724534
+927	641	3	High	Auto-populated: Ryan Mitchell has approved ECCP	641	2025-12-03 12:09:40.724534
+929	157	18	High	Auto-populated: Adele Nguyen has approved Node.js	157	2025-12-03 12:09:40.724534
+931	338	23	High	Auto-populated: Martha Waller has approved CI/CD	338	2025-12-03 12:09:40.724534
+932	831	17	High	Auto-populated: Brianna Ali has approved React	831	2025-12-03 12:09:40.724534
+933	541	7	High	Auto-populated: Ford Schaefer has approved Industry APIs	541	2025-12-03 12:09:40.724534
+935	40	11	High	Auto-populated: Brantley Whitney has approved Data Storage	40	2025-12-03 12:09:40.724534
+936	694	6	High	Auto-populated: London Rojas has approved QA Testing	694	2025-12-03 12:09:40.724534
+937	641	11	High	Auto-populated: Kyng Stout has approved Data Storage	641	2025-12-03 12:09:40.724534
+938	226	4	High	Auto-populated: Sutton Tyler has approved Project Management	226	2025-12-03 12:09:40.724534
+939	988	21	High	Auto-populated: Mylo Hobbs has approved Data Analysis	988	2025-12-03 12:09:40.724534
+940	148	16	High	Auto-populated: Lana Conrad has approved QA Testing	148	2025-12-03 12:09:40.724534
+943	967	8	High	Auto-populated: Felipe Walton has approved Operating Metrics	967	2025-12-03 12:09:40.724534
+945	712	5	High	Auto-populated: Chandler Jackson has approved Scrum Master	712	2025-12-03 12:09:40.724534
+946	441	16	High	Auto-populated: Maren Wood has approved QA Testing	441	2025-12-03 12:09:40.724534
+947	92	22	High	Auto-populated: Avi Alfaro has approved Docker	92	2025-12-03 12:09:40.724534
+948	474	17	High	Auto-populated: Enoch Ruiz has approved React	474	2025-12-03 12:09:40.724534
+950	840	22	High	Auto-populated: Riggs Goodwin has approved Docker	840	2025-12-03 12:09:40.724534
+951	864	18	High	Auto-populated: Finley Hubbard has approved Node.js	864	2025-12-03 12:09:40.724534
+953	916	7	High	Auto-populated: Frederick Flynn has approved Industry APIs	916	2025-12-03 12:09:40.724534
+954	409	12	High	Auto-populated: Jaime McIntosh has approved Product Feature Design	409	2025-12-03 12:09:40.724534
+955	733	9	High	Auto-populated: Addyson Shields has approved Agentic AI	733	2025-12-03 12:09:40.724534
+956	137	5	High	Auto-populated: Bexley Bullock has approved Scrum Master	137	2025-12-03 12:09:40.724534
+957	220	4	High	Auto-populated: Milo Carroll has approved Project Management	220	2025-12-03 12:09:40.724534
+958	744	23	High	Auto-populated: Sabrina Wiley has approved CI/CD	744	2025-12-03 12:09:40.724534
+960	39	17	High	Auto-populated: Leandro Sandoval has approved React	39	2025-12-03 12:09:40.724534
+961	327	21	High	Auto-populated: Keegan Lawrence has approved Data Analysis	327	2025-12-03 12:09:40.724534
+962	304	20	High	Auto-populated: Mae Novak has approved Project Management	304	2025-12-03 12:09:40.724534
+963	758	25	High	Auto-populated: Duncan Wells has approved Python	758	2025-12-03 12:09:40.724534
+964	409	11	High	Auto-populated: Winnie Salinas has approved Data Storage	409	2025-12-03 12:09:40.724534
+965	574	16	High	Auto-populated: Samara Rios has approved QA Testing	574	2025-12-03 12:09:40.724534
+966	815	7	High	Auto-populated: Sutton Francis has approved Industry APIs	815	2025-12-03 12:09:40.724534
+967	797	17	High	Auto-populated: Tori Wolf has approved React	797	2025-12-03 12:09:40.724534
+969	219	17	High	Auto-populated: Mckenna Poole has approved React	219	2025-12-03 12:09:40.724534
+970	845	11	High	Auto-populated: Alistair Quintana has approved Data Storage	845	2025-12-03 12:09:40.724534
+972	371	12	High	Auto-populated: Ella McCann has approved Product Feature Design	371	2025-12-03 12:09:40.724534
+973	603	22	High	Auto-populated: Rhys Bentley has approved Docker	603	2025-12-03 12:09:40.724534
+974	284	3	High	Auto-populated: Jamari Beil has approved ECCP	284	2025-12-03 12:09:40.724534
+975	494	18	High	Auto-populated: Samir McGuire has approved Node.js	494	2025-12-03 12:09:40.724534
+977	585	19	High	Auto-populated: Catherine Bauer has approved PostgreSQL	585	2025-12-03 12:09:40.724534
+982	416	10	High	Auto-populated: Lilith Hensley has approved Data Processing	416	2025-12-03 12:09:40.724534
+983	630	25	High	Auto-populated: Cannon Simmons has approved Python	630	2025-12-03 12:09:40.724534
+986	130	21	High	Auto-populated: Rebekah Underwood has approved Data Analysis	130	2025-12-03 12:09:40.724534
+987	220	1	High	Auto-populated: Milo Carroll has approved Java	220	2025-12-03 12:09:40.724534
+988	744	19	High	Auto-populated: Mathew Avery has approved PostgreSQL	744	2025-12-03 12:09:40.724534
+990	532	19	High	Auto-populated: Rayna Pruitt has approved PostgreSQL	532	2025-12-03 12:09:40.724534
+993	726	16	High	Auto-populated: Melanie Bishop has approved QA Testing	726	2025-12-03 12:09:40.724534
+994	916	3	High	Auto-populated: Raiden Walls has approved ECCP	916	2025-12-03 12:09:40.724534
+996	110	4	High	Auto-populated: Caden Pollard has approved Project Management	110	2025-12-03 12:09:40.724534
+998	501	6	High	Auto-populated: Sage Ho has approved QA Testing	501	2025-12-03 12:09:40.724534
+999	110	1	High	Auto-populated: Gary Howell has approved Java	110	2025-12-03 12:09:40.724534
+1001	786	8	High	Auto-populated: Marina Hart has approved Operating Metrics	786	2025-12-03 12:09:40.724534
+1004	284	6	High	Auto-populated: Katie Costa has approved QA Testing	284	2025-12-03 12:09:40.724534
+1005	501	23	High	Auto-populated: Sage Ho has approved CI/CD	501	2025-12-03 12:09:40.724534
+1007	948	11	High	Auto-populated: Barbara Bailey has approved Data Storage	948	2025-12-03 12:09:40.724534
+1009	260	20	High	Auto-populated: Westley Trejo has approved Project Management	260	2025-12-03 12:09:40.724534
+1013	123	23	High	Auto-populated: Colter Owens has approved CI/CD	123	2025-12-03 12:09:40.724534
+1014	916	4	High	Auto-populated: Landry Wise has approved Project Management	916	2025-12-03 12:09:40.724534
+1015	934	20	High	Auto-populated: Kate McCarthy has approved Project Management	934	2025-12-03 12:09:40.724534
+1016	650	22	High	Auto-populated: Aileen Perry has approved Docker	650	2025-12-03 12:09:40.724534
+1017	815	10	High	Auto-populated: Jaxen Riley has approved Data Processing	815	2025-12-03 12:09:40.724534
+1021	943	7	High	Auto-populated: Deacon Baxter has approved Industry APIs	943	2025-12-03 12:09:40.724534
+1023	391	17	High	Auto-populated: Amos Lindsey has approved React	391	2025-12-03 12:09:40.724534
+1024	876	13	High	Auto-populated: Pearl McDowell has approved C#	876	2025-12-03 12:09:40.724534
+1025	943	10	High	Auto-populated: Deacon Baxter has approved Data Processing	943	2025-12-03 12:09:40.724534
+1026	201	23	High	Auto-populated: Adeline Morrison has approved CI/CD	201	2025-12-03 12:09:40.724534
+1027	92	4	High	Auto-populated: Yasmin Rush has approved Project Management	92	2025-12-03 12:09:40.724534
+1028	753	23	High	Auto-populated: Emery Good has approved CI/CD	753	2025-12-03 12:09:40.724534
+1029	391	6	High	Auto-populated: Damari Erickson has approved QA Testing	391	2025-12-03 12:09:40.724534
+1031	831	13	High	Auto-populated: Teresa Combs has approved C#	831	2025-12-03 12:09:40.724534
+1032	719	22	High	Auto-populated: Romina Velasquez has approved Docker	719	2025-12-03 12:09:40.724534
+1036	541	11	High	Auto-populated: Ford Schaefer has approved Data Storage	541	2025-12-03 12:09:40.724534
+1037	616	23	High	Auto-populated: Osiris Price has approved CI/CD	616	2025-12-03 12:09:40.724534
+1038	565	9	High	Auto-populated: Gary Ware has approved Agentic AI	565	2025-12-03 12:09:40.724534
+1039	219	10	High	Auto-populated: Alec Lester has approved Data Processing	219	2025-12-03 12:09:40.724534
+1040	21	7	High	Auto-populated: Cassius Guzman has approved Industry APIs	21	2025-12-03 12:09:40.724534
+1041	987	17	High	Auto-populated: Kyson Salinas has approved React	987	2025-12-03 12:09:40.724534
+1043	967	1	High	Auto-populated: Zahra Davila has approved Java	967	2025-12-03 12:09:40.724534
+1048	987	16	High	Auto-populated: Monica Sullivan has approved QA Testing	987	2025-12-03 12:09:40.724534
+1049	934	6	High	Auto-populated: Carlos Mullen has approved QA Testing	934	2025-12-03 12:09:40.724534
+1051	683	4	High	Auto-populated: Brixton Avila has approved Project Management	683	2025-12-03 12:09:40.724534
+1052	327	10	High	Auto-populated: Elianna Vance has approved Data Processing	327	2025-12-03 12:09:40.724534
+1053	650	4	High	Auto-populated: Aileen Perry has approved Project Management	650	2025-12-03 12:09:40.724534
+1055	797	12	High	Auto-populated: Elizabeth Ortega has approved Product Feature Design	797	2025-12-03 12:09:40.724534
+1056	712	18	High	Auto-populated: Remington Anderson has approved Node.js	712	2025-12-03 12:09:40.724534
+1057	455	9	High	Auto-populated: Eugene Gallegos has approved Agentic AI	455	2025-12-03 12:09:40.724534
+1060	603	11	High	Auto-populated: Brennan Sanders has approved Data Storage	603	2025-12-03 12:09:40.724534
+1063	923	6	High	Auto-populated: Ricky Ibarra has approved QA Testing	923	2025-12-03 12:09:40.724534
+1064	733	20	High	Auto-populated: Raul Dorsey has approved Project Management	733	2025-12-03 12:09:40.724534
+1067	683	22	High	Auto-populated: Alessia Hood has approved Docker	683	2025-12-03 12:09:40.724534
+1069	683	20	High	Auto-populated: Harris Stephens has approved Project Management	683	2025-12-03 12:09:40.724534
+1072	423	25	High	Auto-populated: Ila Fowler has approved Python	423	2025-12-03 12:09:40.724534
+1078	391	24	High	Auto-populated: Nancy Bullock has approved System Design	391	2025-12-03 12:09:40.724534
+1079	14	3	High	Auto-populated: Albert Eaton has approved ECCP	14	2025-12-03 12:09:40.724534
+1080	409	16	High	Auto-populated: Haven Trevino has approved QA Testing	409	2025-12-03 12:09:40.724534
+1081	416	12	High	Auto-populated: Lilith Hensley has approved Product Feature Design	416	2025-12-03 12:09:40.724534
+1083	117	20	High	Auto-populated: Adelynn Rollins has approved Project Management	117	2025-12-03 12:09:40.724534
+1084	219	3	High	Auto-populated: Meredith Becker has approved ECCP	219	2025-12-03 12:09:40.724534
+1089	260	17	High	Auto-populated: Cohen Patel has approved React	260	2025-12-03 12:09:40.724534
+1092	284	9	High	Auto-populated: Katie Costa has approved Agentic AI	284	2025-12-03 12:09:40.724534
+1093	352	10	High	Auto-populated: Lennon Woodward has approved Data Processing	352	2025-12-03 12:09:40.724534
+1095	976	5	High	Auto-populated: Wade Roman has approved Scrum Master	976	2025-12-03 12:09:40.724534
+1096	521	13	High	Auto-populated: Emmaline Harrell has approved C#	521	2025-12-03 12:09:40.724534
+1097	130	18	High	Auto-populated: Callahan McIntyre has approved Node.js	130	2025-12-03 12:09:40.724534
+1098	840	21	High	Auto-populated: Alberto Gallagher has approved Data Analysis	840	2025-12-03 12:09:40.724534
+1100	322	11	High	Auto-populated: Maia Savage has approved Data Storage	322	2025-12-03 12:09:40.724534
+1101	53	9	High	Auto-populated: Hannah Livingston has approved Agentic AI	53	2025-12-03 12:09:40.724534
+1103	391	25	High	Auto-populated: Mary Valenzuela has approved Python	391	2025-12-03 12:09:40.724534
+1104	916	9	High	Auto-populated: Landry Wise has approved Agentic AI	916	2025-12-03 12:09:40.724534
+1107	409	23	High	Auto-populated: Keegan Bradshaw has approved CI/CD	409	2025-12-03 12:09:40.724534
+1108	304	5	High	Auto-populated: Brittany Briggs has approved Scrum Master	304	2025-12-03 12:09:40.724534
+1110	565	25	High	Auto-populated: Jon Garcia has approved Python	565	2025-12-03 12:09:40.724534
+1112	976	20	High	Auto-populated: Marlee Carrillo has approved Project Management	976	2025-12-03 12:09:40.724534
+1115	39	3	High	Auto-populated: Leandro Sandoval has approved ECCP	39	2025-12-03 12:09:40.724534
+1117	157	21	High	Auto-populated: Gabriel Huang has approved Data Analysis	157	2025-12-03 12:09:40.724534
+1118	21	18	High	Auto-populated: Jair Huynh has approved Node.js	21	2025-12-03 12:09:40.724534
+1120	902	7	High	Auto-populated: Bellamy Reyes has approved Industry APIs	902	2025-12-03 12:09:40.724534
+1124	483	18	High	Auto-populated: Braylon Olsen has approved Node.js	483	2025-12-03 12:09:40.724534
+1132	546	3	High	Auto-populated: Zendaya Morrow has approved ECCP	546	2025-12-03 12:09:40.724534
+1133	110	26	High	Auto-populated: Kallie Le has approved API Governance Advanced	110	2025-12-03 12:09:40.724534
+1134	864	17	High	Auto-populated: Gianni Williamson has approved React	864	2025-12-03 12:09:40.724534
+1137	726	11	High	Auto-populated: Jameson Richmond has approved Data Storage	726	2025-12-03 12:09:40.724534
+1138	758	20	High	Auto-populated: Cecilia Sims has approved Project Management	758	2025-12-03 12:09:40.724534
+1139	123	8	High	Auto-populated: Jason Townsend has approved Operating Metrics	123	2025-12-03 12:09:40.724534
+1141	148	19	High	Auto-populated: Rodney Gaines has approved PostgreSQL	148	2025-12-03 12:09:40.724534
+1142	201	1	High	Auto-populated: Maximus Perry has approved Java	201	2025-12-03 12:09:40.724534
+1143	486	12	High	Auto-populated: Jayce Hunt has approved Product Feature Design	486	2025-12-03 12:09:40.724534
+1145	873	8	High	Auto-populated: Asher Mora has approved Operating Metrics	873	2025-12-03 12:09:40.724534
+1146	423	19	High	Auto-populated: Kamilah Bond has approved PostgreSQL	423	2025-12-03 12:09:40.724534
+1147	409	17	High	Auto-populated: Ainhoa Ross has approved React	409	2025-12-03 12:09:40.724534
+1148	39	5	High	Auto-populated: Kelly Spencer has approved Scrum Master	39	2025-12-03 12:09:40.724534
+1149	117	19	High	Auto-populated: Lacey Lee has approved PostgreSQL	117	2025-12-03 12:09:40.724534
+1150	157	3	High	Auto-populated: Case Lawson has approved ECCP	157	2025-12-03 12:09:40.724534
+1151	909	22	High	Auto-populated: Eugene Cummings has approved Docker	909	2025-12-03 12:09:40.724534
+1152	486	16	High	Auto-populated: Genevieve Mathis has approved QA Testing	486	2025-12-03 12:09:40.724534
+1154	14	9	High	Auto-populated: Madalynn Dunn has approved Agentic AI	14	2025-12-03 12:09:40.724534
+1157	603	16	High	Auto-populated: Warren Calderon has approved QA Testing	603	2025-12-03 12:09:40.724534
+1163	546	11	High	Auto-populated: Orlando Hester has approved Data Storage	546	2025-12-03 12:09:40.724534
+1164	190	4	High	Auto-populated: Beckett Bass has approved Project Management	190	2025-12-03 12:09:40.724534
+1165	987	4	High	Auto-populated: Julius Brandt has approved Project Management	987	2025-12-03 12:09:40.724534
+1167	219	23	High	Auto-populated: Mckenna Poole has approved CI/CD	219	2025-12-03 12:09:40.724534
+1171	260	24	High	Auto-populated: Madeline Quintana has approved System Design	260	2025-12-03 12:09:40.724534
+1177	474	12	High	Auto-populated: Jacob Roberts has approved Product Feature Design	474	2025-12-03 12:09:40.724534
+1178	976	18	High	Auto-populated: Gatlin Daniels has approved Node.js	976	2025-12-03 12:09:40.724534
+1179	902	8	High	Auto-populated: Ryder O’Donnell has approved Operating Metrics	902	2025-12-03 12:09:40.724534
+1180	474	23	High	Auto-populated: Jesse Matthews has approved CI/CD	474	2025-12-03 12:09:40.724534
+1182	81	6	High	Auto-populated: Kamiyah Clements has approved QA Testing	81	2025-12-03 12:09:40.724534
+1183	934	18	High	Auto-populated: Jack Curtis has approved Node.js	934	2025-12-03 12:09:40.724534
+1185	786	3	High	Auto-populated: Kayla Lawson has approved ECCP	786	2025-12-03 12:09:40.724534
+1186	441	20	High	Auto-populated: Noelle Jefferson has approved Project Management	441	2025-12-03 12:09:40.724534
+1188	744	3	High	Auto-populated: Raul Norman has approved ECCP	744	2025-12-03 12:09:40.724534
+1189	304	12	High	Auto-populated: Bishop Ramirez has approved Product Feature Design	304	2025-12-03 12:09:40.724534
+1191	181	7	High	Auto-populated: Stanley Mayer has approved Industry APIs	181	2025-12-03 12:09:40.724534
+1192	293	9	High	Auto-populated: Landry Hudson has approved Agentic AI	293	2025-12-03 12:09:40.724534
+1195	455	10	High	Auto-populated: Haylee Randolph has approved Data Processing	455	2025-12-03 12:09:40.724534
+1197	719	18	High	Auto-populated: Romina Velasquez has approved Node.js	719	2025-12-03 12:09:40.724534
+1198	322	3	High	Auto-populated: Keaton Lin has approved ECCP	322	2025-12-03 12:09:40.724534
+1200	450	3	High	Auto-populated: Emmy Vance has approved ECCP	450	2025-12-03 12:09:40.724534
+1201	338	25	High	Auto-populated: Egypt Reese has approved Python	338	2025-12-03 12:09:40.724534
+1202	14	6	High	Auto-populated: Dawson Fox has approved QA Testing	14	2025-12-03 12:09:40.724534
+1204	603	25	High	Auto-populated: Warren Calderon has approved Python	603	2025-12-03 12:09:40.724534
+1205	181	8	High	Auto-populated: Kayson Tucker has approved Operating Metrics	181	2025-12-03 12:09:40.724534
+1207	450	9	High	Auto-populated: Harley Wagner has approved Agentic AI	450	2025-12-03 12:09:40.724534
+1208	797	19	High	Auto-populated: Davis Lawson has approved PostgreSQL	797	2025-12-03 12:09:40.724534
+1209	873	24	High	Auto-populated: Madison Austin has approved System Design	873	2025-12-03 12:09:40.724534
+1211	39	1	High	Auto-populated: Leandro Sandoval has approved Java	39	2025-12-03 12:09:40.724534
+1213	873	10	High	Auto-populated: Madison Austin has approved Data Processing	873	2025-12-03 12:09:40.724534
+1214	934	4	High	Auto-populated: Kate McCarthy has approved Project Management	934	2025-12-03 12:09:40.724534
+1215	786	19	High	Auto-populated: Marina Hart has approved PostgreSQL	786	2025-12-03 12:09:40.724534
+1217	916	10	High	Auto-populated: Dorothy Cummings has approved Data Processing	916	2025-12-03 12:09:40.724534
+1219	650	20	High	Auto-populated: Andrew Conner has approved Project Management	650	2025-12-03 12:09:40.724534
+1220	157	7	High	Auto-populated: Francesca Hartman has approved Industry APIs	157	2025-12-03 12:09:40.724534
+1221	616	6	High	Auto-populated: Charli Delarosa has approved QA Testing	616	2025-12-03 12:09:40.724534
+1222	72	5	High	Auto-populated: Selah Payne has approved Scrum Master	72	2025-12-03 12:09:40.724534
+1223	943	11	High	Auto-populated: Jaxson Wood has approved Data Storage	943	2025-12-03 12:09:40.724534
+1224	474	6	High	Auto-populated: Paisley Dorsey has approved QA Testing	474	2025-12-03 12:09:40.724534
+1227	474	18	High	Auto-populated: Victoria Sampson has approved Node.js	474	2025-12-03 12:09:40.724534
+1230	876	21	High	Auto-populated: Pearl McDowell has approved Data Analysis	876	2025-12-03 12:09:40.724534
+1231	338	3	High	Auto-populated: Carolina Adkins has approved ECCP	338	2025-12-03 12:09:40.724534
+1232	8	18	High	Auto-populated: Clay Li has approved Node.js	8	2025-12-03 12:09:40.724534
+1233	694	7	High	Auto-populated: Cohen Sierra has approved Industry APIs	694	2025-12-03 12:09:40.724534
+1234	565	19	High	Auto-populated: Anne Gallegos has approved PostgreSQL	565	2025-12-03 12:09:40.724534
+1236	14	1	High	Auto-populated: Miley Cline has approved Java	14	2025-12-03 12:09:40.724534
+1237	441	4	High	Auto-populated: Carson Adkins has approved Project Management	441	2025-12-03 12:09:40.724534
+1238	251	7	High	Auto-populated: Sariah Day has approved Industry APIs	251	2025-12-03 12:09:40.724534
+1240	916	8	High	Auto-populated: Lilianna Good has approved Operating Metrics	916	2025-12-03 12:09:40.724534
+1241	483	4	High	Auto-populated: Matteo Bernard has approved Project Management	483	2025-12-03 12:09:40.724534
+1242	190	21	High	Auto-populated: Zahra Patton has approved Data Analysis	190	2025-12-03 12:09:40.724534
+1243	494	24	High	Auto-populated: April Anderson has approved System Design	494	2025-12-03 12:09:40.724534
+1245	181	17	High	Auto-populated: Miley Fuentes has approved React	181	2025-12-03 12:09:40.724534
+1247	494	3	High	Auto-populated: Remy Tapia has approved ECCP	494	2025-12-03 12:09:40.724534
+1248	416	9	High	Auto-populated: Lilith Hensley has approved Agentic AI	416	2025-12-03 12:09:40.724534
+1249	694	1	High	Auto-populated: Zaniyah Wang has approved Java	694	2025-12-03 12:09:40.724534
+1250	744	1	High	Auto-populated: Malani Woodard has approved Java	744	2025-12-03 12:09:40.724534
+1251	507	16	High	Auto-populated: Iris Berry has approved QA Testing	507	2025-12-03 12:09:40.724534
+1252	815	4	High	Auto-populated: Viviana Bautista has approved Project Management	815	2025-12-03 12:09:40.724534
+1253	726	1	High	Auto-populated: Paxton Santiago has approved Java	726	2025-12-03 12:09:40.724534
+1254	110	17	High	Auto-populated: Colson Ramirez has approved React	110	2025-12-03 12:09:40.724534
+1256	347	13	High	Auto-populated: Eduardo Vaughan has approved C#	347	2025-12-03 12:09:40.724534
+1257	987	21	High	Auto-populated: Eva McPherson has approved Data Analysis	987	2025-12-03 12:09:40.724534
+1258	81	17	High	Auto-populated: Dario Gregory has approved React	81	2025-12-03 12:09:40.724534
+1259	322	19	High	Auto-populated: Lian Soto has approved PostgreSQL	322	2025-12-03 12:09:40.724534
+1260	251	9	High	Auto-populated: Kayson Fields has approved Agentic AI	251	2025-12-03 12:09:40.724534
+1264	948	3	High	Auto-populated: Barbara Bailey has approved ECCP	948	2025-12-03 12:09:40.724534
+1265	733	18	High	Auto-populated: Raul Dorsey has approved Node.js	733	2025-12-03 12:09:40.724534
+1267	777	1	High	Auto-populated: Miller Liu has approved Java	777	2025-12-03 12:09:40.724534
+1268	486	7	High	Auto-populated: Jayce Hunt has approved Industry APIs	486	2025-12-03 12:09:40.724534
+1269	450	20	High	Auto-populated: Kyng Andrade has approved Project Management	450	2025-12-03 12:09:40.724534
+1270	815	18	High	Auto-populated: Raul Sloan has approved Node.js	815	2025-12-03 12:09:40.724534
+1271	39	4	High	Auto-populated: Dangelo Sawyer has approved Project Management	39	2025-12-03 12:09:40.724534
+1272	979	3	High	Auto-populated: Kylo Marks has approved ECCP	979	2025-12-03 12:09:40.724534
+1273	923	11	High	Auto-populated: Aubrie Adkins has approved Data Storage	923	2025-12-03 12:09:40.724534
+1274	777	7	High	Auto-populated: Abram Briggs has approved Industry APIs	777	2025-12-03 12:09:40.724534
+1276	148	5	High	Auto-populated: Colette Vo has approved Scrum Master	148	2025-12-03 12:09:40.724534
+1278	137	19	High	Auto-populated: Jace Jensen has approved PostgreSQL	137	2025-12-03 12:09:40.724534
+1279	815	13	High	Auto-populated: Emory Craig has approved C#	815	2025-12-03 12:09:40.724534
+1280	130	22	High	Auto-populated: Reece Medrano has approved Docker	130	2025-12-03 12:09:40.724534
+1282	72	22	High	Auto-populated: Joe Arnold has approved Docker	72	2025-12-03 12:09:40.724534
+1283	641	9	High	Auto-populated: Vivian Duffy has approved Agentic AI	641	2025-12-03 12:09:40.724534
+1285	820	5	High	Auto-populated: Clarissa Clay has approved Scrum Master	820	2025-12-03 12:09:40.724534
+1288	943	23	High	Auto-populated: Della Gibbs has approved CI/CD	943	2025-12-03 12:09:40.724534
+1290	219	20	High	Auto-populated: Dakota Finley has approved Project Management	219	2025-12-03 12:09:40.724534
+1291	585	20	High	Auto-populated: Travis Richards has approved Project Management	585	2025-12-03 12:09:40.724534
+1293	110	24	High	Auto-populated: Kallie Le has approved System Design	110	2025-12-03 12:09:40.724534
+1294	884	17	High	Auto-populated: Mavis Cross has approved React	884	2025-12-03 12:09:40.724534
+1296	733	22	High	Auto-populated: Addyson Shields has approved Docker	733	2025-12-03 12:09:40.724534
+1298	322	6	High	Auto-populated: Keaton Lin has approved QA Testing	322	2025-12-03 12:09:40.724534
+1299	514	5	High	Auto-populated: Nathaniel Faulkner has approved Scrum Master	514	2025-12-03 12:09:40.724534
+1301	753	24	High	Auto-populated: Emery Good has approved System Design	753	2025-12-03 12:09:40.724534
+1302	532	6	High	Auto-populated: Barrett Burnett has approved QA Testing	532	2025-12-03 12:09:40.724534
+1304	532	8	High	Auto-populated: Barrett Burnett has approved Operating Metrics	532	2025-12-03 12:09:40.724534
+1306	157	17	High	Auto-populated: Lennon Blackwell has approved React	157	2025-12-03 12:09:40.724534
+1307	284	11	High	Auto-populated: Itzel Callahan has approved Data Storage	284	2025-12-03 12:09:40.724534
+1308	474	3	High	Auto-populated: Paisley Dorsey has approved ECCP	474	2025-12-03 12:09:40.724534
+1309	391	22	High	Auto-populated: Wyatt Chung has approved Docker	391	2025-12-03 12:09:40.724534
+1311	943	21	High	Auto-populated: Della Gibbs has approved Data Analysis	943	2025-12-03 12:09:40.724534
+1312	683	10	High	Auto-populated: Kamiyah Steele has approved Data Processing	683	2025-12-03 12:09:40.724534
+1313	474	22	High	Auto-populated: Corbin King has approved Docker	474	2025-12-03 12:09:40.724534
+1314	40	19	High	Auto-populated: Brantley Whitney has approved PostgreSQL	40	2025-12-03 12:09:40.724534
+1316	507	5	High	Auto-populated: Iris Berry has approved Scrum Master	507	2025-12-03 12:09:40.724534
+1318	130	5	High	Auto-populated: Rebekah Underwood has approved Scrum Master	130	2025-12-03 12:09:40.724534
+1319	327	19	High	Auto-populated: Casen Farrell has approved PostgreSQL	327	2025-12-03 12:09:40.724534
+1320	507	3	High	Auto-populated: Adonis Orozco has approved ECCP	507	2025-12-03 12:09:40.724534
+1321	162	25	High	Auto-populated: Beckham O’brien has approved Python	162	2025-12-03 12:09:40.724534
+1322	623	13	High	Auto-populated: Lucca Hamilton has approved C#	623	2025-12-03 12:09:40.724534
+1324	347	9	High	Auto-populated: Alivia Curtis has approved Agentic AI	347	2025-12-03 12:09:40.724534
+1325	72	10	High	Auto-populated: Jagger Rodgers has approved Data Processing	72	2025-12-03 12:09:40.724534
+1330	674	17	High	Auto-populated: Will Larsen has approved React	674	2025-12-03 12:09:40.724534
+1333	72	6	High	Auto-populated: Peter Armstrong has approved QA Testing	72	2025-12-03 12:09:40.724534
+1341	450	19	High	Auto-populated: Kyng Andrade has approved PostgreSQL	450	2025-12-03 12:09:40.724534
+1344	674	24	High	Auto-populated: Maggie Quintana has approved System Design	674	2025-12-03 12:09:40.724534
+1345	220	25	High	Auto-populated: Paisleigh Aguilar has approved Python	220	2025-12-03 12:09:40.724534
+1347	347	17	High	Auto-populated: Javier Austin has approved React	347	2025-12-03 12:09:40.724534
+1348	694	12	High	Auto-populated: Zaniyah Wang has approved Product Feature Design	694	2025-12-03 12:09:40.724534
+1349	409	7	High	Auto-populated: Keegan Bradshaw has approved Industry APIs	409	2025-12-03 12:09:40.724534
+1355	157	23	High	Auto-populated: Kyla Briggs has approved CI/CD	157	2025-12-03 12:09:40.724534
+1356	683	12	High	Auto-populated: Alessia Hood has approved Product Feature Design	683	2025-12-03 12:09:40.724534
+1357	327	22	High	Auto-populated: Elianna Vance has approved Docker	327	2025-12-03 12:09:40.724534
+1360	416	1	High	Auto-populated: Onyx Figueroa has approved Java	416	2025-12-03 12:09:40.724534
+1369	873	6	High	Auto-populated: Omar Berger has approved QA Testing	873	2025-12-03 12:09:40.724534
+1371	338	8	High	Auto-populated: Carolina Adkins has approved Operating Metrics	338	2025-12-03 12:09:40.724534
+1374	686	5	High	Auto-populated: Boone Yu has approved Scrum Master	686	2025-12-03 12:09:40.724534
+1377	304	3	High	Auto-populated: Grace Landry has approved ECCP	304	2025-12-03 12:09:40.724534
+1378	777	17	High	Auto-populated: Stephen Alfaro has approved React	777	2025-12-03 12:09:40.724534
+1379	726	21	High	Auto-populated: Nyla Kelly has approved Data Analysis	726	2025-12-03 12:09:40.724534
+1380	486	24	High	Auto-populated: Genevieve Mathis has approved System Design	486	2025-12-03 12:09:40.724534
+1381	162	18	High	Auto-populated: Gustavo Harmon has approved Node.js	162	2025-12-03 12:09:40.724534
+1382	371	18	High	Auto-populated: Rex Nunez has approved Node.js	371	2025-12-03 12:09:40.724534
+1383	934	1	High	Auto-populated: Lachlan Ramsey has approved Java	934	2025-12-03 12:09:40.724534
+1386	110	22	High	Auto-populated: Gunnar Maddox has approved Docker	110	2025-12-03 12:09:40.724534
+1389	391	4	High	Auto-populated: Tate Strickland has approved Project Management	391	2025-12-03 12:09:40.724534
+1393	820	21	High	Auto-populated: Joseph Fry has approved Data Analysis	820	2025-12-03 12:09:40.724534
+1394	260	7	High	Auto-populated: Cohen Patel has approved Industry APIs	260	2025-12-03 12:09:40.724534
+1396	623	19	High	Auto-populated: Jones Calderon has approved PostgreSQL	623	2025-12-03 12:09:40.724534
+1397	902	19	High	Auto-populated: Damien Harding has approved PostgreSQL	902	2025-12-03 12:09:40.724534
+1398	240	17	High	Auto-populated: Thaddeus Sullivan has approved React	240	2025-12-03 12:09:40.724534
+1399	352	23	High	Auto-populated: Irene Melton has approved CI/CD	352	2025-12-03 12:09:40.724534
+1400	603	18	High	Auto-populated: Reagan Pena has approved Node.js	603	2025-12-03 12:09:40.724534
+1408	565	17	High	Auto-populated: Kensley Buck has approved React	565	2025-12-03 12:09:40.724534
+1410	322	12	High	Auto-populated: Shane Gonzalez has approved Product Feature Design	322	2025-12-03 12:09:40.724534
+1411	220	17	High	Auto-populated: Milo Carroll has approved React	220	2025-12-03 12:09:40.724534
+1412	233	22	High	Auto-populated: River Lugo has approved Docker	233	2025-12-03 12:09:40.724534
+1413	674	16	High	Auto-populated: Emma Xiong has approved QA Testing	674	2025-12-03 12:09:40.724534
+1414	21	25	High	Auto-populated: Marilyn Bernard has approved Python	21	2025-12-03 12:09:40.724534
+1415	219	25	High	Auto-populated: Meredith Becker has approved Python	219	2025-12-03 12:09:40.724534
+1422	616	9	High	Auto-populated: Marshall O’Connor has approved Agentic AI	616	2025-12-03 12:09:40.724534
+1424	686	7	High	Auto-populated: Navy Nash has approved Industry APIs	686	2025-12-03 12:09:40.724534
+1425	753	8	High	Auto-populated: Nathalia Moon has approved Operating Metrics	753	2025-12-03 12:09:40.724534
+1426	758	17	High	Auto-populated: Cecilia Sims has approved React	758	2025-12-03 12:09:40.724534
+1427	251	18	High	Auto-populated: Kyler Kerr has approved Node.js	251	2025-12-03 12:09:40.724534
+1428	744	6	High	Auto-populated: Sabrina Wiley has approved QA Testing	744	2025-12-03 12:09:40.724534
+1430	733	24	High	Auto-populated: Addyson Shields has approved System Design	733	2025-12-03 12:09:40.724534
+1432	753	20	High	Auto-populated: Nova Villarreal has approved Project Management	753	2025-12-03 12:09:40.724534
+1433	719	21	High	Auto-populated: Brady Cox has approved Data Analysis	719	2025-12-03 12:09:40.724534
+1434	117	11	High	Auto-populated: Lacey Lee has approved Data Storage	117	2025-12-03 12:09:40.724534
+1435	753	17	High	Auto-populated: Shay Ford has approved React	753	2025-12-03 12:09:40.724534
+1437	92	3	High	Auto-populated: Nathalia Truong has approved ECCP	92	2025-12-03 12:09:40.724534
+1438	157	22	High	Auto-populated: Lennon Blackwell has approved Docker	157	2025-12-03 12:09:40.724534
+1439	909	17	High	Auto-populated: Emir Flowers has approved React	909	2025-12-03 12:09:40.724534
+1441	574	5	High	Auto-populated: Leanna Garner has approved Scrum Master	574	2025-12-03 12:09:40.724534
+1443	777	23	High	Auto-populated: Maddox Lee has approved CI/CD	777	2025-12-03 12:09:40.724534
+1449	162	4	High	Auto-populated: Gustavo Harmon has approved Project Management	162	2025-12-03 12:09:40.724534
+1451	371	8	High	Auto-populated: Atreus James has approved Operating Metrics	371	2025-12-03 12:09:40.724534
+1453	84	25	High	Auto-populated: Peyton Garza has approved Python	84	2025-12-03 12:09:40.724534
+1454	322	13	High	Auto-populated: Cecelia Payne has approved C#	322	2025-12-03 12:09:40.724534
+1455	450	5	High	Auto-populated: Emmy Vance has approved Scrum Master	450	2025-12-03 12:09:40.724534
+1456	873	5	High	Auto-populated: Jemma Maddox has approved Scrum Master	873	2025-12-03 12:09:40.724534
+1457	92	21	High	Auto-populated: Grace Dejesus has approved Data Analysis	92	2025-12-03 12:09:40.724534
+1459	21	12	High	Auto-populated: Ashley McCullough has approved Product Feature Design	21	2025-12-03 12:09:40.724534
+1460	902	23	High	Auto-populated: Damien Harding has approved CI/CD	902	2025-12-03 12:09:40.724534
+1463	201	17	High	Auto-populated: Rex Jimenez has approved React	201	2025-12-03 12:09:40.724534
+1469	923	16	High	Auto-populated: Kylo Gonzalez has approved QA Testing	923	2025-12-03 12:09:40.724534
+1471	797	4	High	Auto-populated: Elizabeth Ortega has approved Project Management	797	2025-12-03 12:09:40.724534
+1472	110	11	High	Auto-populated: Marisol Calhoun has approved Data Storage	110	2025-12-03 12:09:40.724534
+1475	201	4	High	Auto-populated: Dustin Jordan has approved Project Management	201	2025-12-03 12:09:40.724534
+1476	641	6	High	Auto-populated: Jaxon Roach has approved QA Testing	641	2025-12-03 12:09:40.724534
+1477	603	3	High	Auto-populated: Avery Weaver has approved ECCP	603	2025-12-03 12:09:40.724534
+1479	53	3	High	Auto-populated: Hannah Livingston has approved ECCP	53	2025-12-03 12:09:40.724534
+1480	380	11	High	Auto-populated: Damari Reyes has approved Data Storage	380	2025-12-03 12:09:40.724534
+1485	190	16	High	Auto-populated: Dakota Marshall has approved QA Testing	190	2025-12-03 12:09:40.724534
+1486	304	17	High	Auto-populated: Jaxx Rich has approved React	304	2025-12-03 12:09:40.724534
+1488	623	6	High	Auto-populated: Lucca Hamilton has approved QA Testing	623	2025-12-03 12:09:40.724534
+1490	623	18	High	Auto-populated: Amoura Olsen has approved Node.js	623	2025-12-03 12:09:40.724534
+1492	694	22	High	Auto-populated: Marceline Ellison has approved Docker	694	2025-12-03 12:09:40.724534
+1496	494	10	High	Auto-populated: Samir McGuire has approved Data Processing	494	2025-12-03 12:09:40.724534
+1497	486	19	High	Auto-populated: Genevieve Mathis has approved PostgreSQL	486	2025-12-03 12:09:40.724534
+1500	988	16	High	Auto-populated: Ledger Grant has approved QA Testing	988	2025-12-03 12:09:40.724534
+1501	226	17	High	Auto-populated: Valentin Mathews has approved React	226	2025-12-03 12:09:40.724534
+1502	884	10	High	Auto-populated: Lyric Gould has approved Data Processing	884	2025-12-03 12:09:40.724534
+1503	719	13	High	Auto-populated: Brady Cox has approved C#	719	2025-12-03 12:09:40.724534
+1504	430	7	High	Auto-populated: Reid Holloway has approved Industry APIs	430	2025-12-03 12:09:40.724534
+1505	916	20	High	Auto-populated: Pedro Pugh has approved Project Management	916	2025-12-03 12:09:40.724534
+1508	585	6	High	Auto-populated: Kieran Cunningham has approved QA Testing	585	2025-12-03 12:09:40.724534
+1510	304	6	High	Auto-populated: Mae Novak has approved QA Testing	304	2025-12-03 12:09:40.724534
+1512	541	1	High	Auto-populated: Noe Reynolds has approved Java	541	2025-12-03 12:09:40.724534
+1515	92	24	High	Auto-populated: Yasmin Rush has approved System Design	92	2025-12-03 12:09:40.724534
+1516	630	8	High	Auto-populated: Elias Skinner has approved Operating Metrics	630	2025-12-03 12:09:40.724534
+1518	585	3	High	Auto-populated: Bruce Li has approved ECCP	585	2025-12-03 12:09:40.724534
+1519	110	20	High	Auto-populated: Waverly Pineda has approved Project Management	110	2025-12-03 12:09:40.724534
+1521	934	24	High	Auto-populated: Cooper Stokes has approved System Design	934	2025-12-03 12:09:40.724534
+1522	744	22	High	Auto-populated: Westley Erickson has approved Docker	744	2025-12-03 12:09:40.724534
+1524	726	8	High	Auto-populated: Whitney Hester has approved Operating Metrics	726	2025-12-03 12:09:40.724534
+1525	797	13	High	Auto-populated: Davis Lawson has approved C#	797	2025-12-03 12:09:40.724534
+1527	265	5	High	Auto-populated: Loretta Collins has approved Scrum Master	265	2025-12-03 12:09:40.724534
+1530	72	17	High	Auto-populated: Archer Green has approved React	72	2025-12-03 12:09:40.724534
+1531	909	11	High	Auto-populated: Ariya Robertson has approved Data Storage	909	2025-12-03 12:09:40.724534
+1535	284	16	High	Auto-populated: Abdiel Huynh has approved QA Testing	284	2025-12-03 12:09:40.724534
+1538	380	7	High	Auto-populated: Luis Gordon has approved Industry APIs	380	2025-12-03 12:09:40.724534
+1542	694	4	High	Auto-populated: Marceline Ellison has approved Project Management	694	2025-12-03 12:09:40.724534
+1545	574	6	High	Auto-populated: Quinton Thompson has approved QA Testing	574	2025-12-03 12:09:40.724534
+1546	777	21	High	Auto-populated: Diana Reyes has approved Data Analysis	777	2025-12-03 12:09:40.724534
+1548	909	16	High	Auto-populated: Eugene Cummings has approved QA Testing	909	2025-12-03 12:09:40.724534
+1550	48	10	High	Auto-populated: Aryan Rowland has approved Data Processing	48	2025-12-03 12:09:40.724534
+1552	8	8	High	Auto-populated: Clay Li has approved Operating Metrics	8	2025-12-03 12:09:40.724534
+1554	840	5	High	Auto-populated: Elliott Jaramillo has approved Scrum Master	840	2025-12-03 12:09:40.724534
+1557	190	12	High	Auto-populated: Dakota Marshall has approved Product Feature Design	190	2025-12-03 12:09:40.724534
+1558	226	24	High	Auto-populated: Sutton Tyler has approved System Design	226	2025-12-03 12:09:40.724534
+1559	674	19	High	Auto-populated: Jayce Washington has approved PostgreSQL	674	2025-12-03 12:09:40.724534
+1563	226	5	High	Auto-populated: Sutton Tyler has approved Scrum Master	226	2025-12-03 12:09:40.724534
+1564	201	12	High	Auto-populated: Rex Jimenez has approved Product Feature Design	201	2025-12-03 12:09:40.724534
+1572	8	3	High	Auto-populated: Beckham Hubbard has approved ECCP	8	2025-12-03 12:09:40.724534
+1573	521	5	High	Auto-populated: Stefan McPherson has approved Scrum Master	521	2025-12-03 12:09:40.724534
+1574	565	5	High	Auto-populated: Gary Ware has approved Scrum Master	565	2025-12-03 12:09:40.724534
+1578	81	24	High	Auto-populated: Kamiyah Clements has approved System Design	81	2025-12-03 12:09:40.724534
+1579	541	5	High	Auto-populated: Arian Spencer has approved Scrum Master	541	2025-12-03 12:09:40.724534
+1580	430	4	High	Auto-populated: Idris Rivas has approved Project Management	430	2025-12-03 12:09:40.724534
+1584	603	24	High	Auto-populated: Zendaya Sutton has approved System Design	603	2025-12-03 12:09:40.724534
+1585	744	24	High	Auto-populated: Hudson Jarvis has approved System Design	744	2025-12-03 12:09:40.724534
+1586	616	20	High	Auto-populated: Annalise Leon has approved Project Management	616	2025-12-03 12:09:40.724534
+1591	988	23	High	Auto-populated: Ledger Grant has approved CI/CD	988	2025-12-03 12:09:40.724534
+1592	815	9	High	Auto-populated: Atticus Brandt has approved Agentic AI	815	2025-12-03 12:09:40.724534
+1595	483	16	High	Auto-populated: Barbara Hendrix has approved QA Testing	483	2025-12-03 12:09:40.724534
+1596	474	21	High	Auto-populated: Tatum Stokes has approved Data Analysis	474	2025-12-03 12:09:40.724534
+1597	219	11	High	Auto-populated: Destiny Compton has approved Data Storage	219	2025-12-03 12:09:40.724534
+1599	190	8	High	Auto-populated: Dakota Marshall has approved Operating Metrics	190	2025-12-03 12:09:40.724534
+1600	371	4	High	Auto-populated: Barbara Donovan has approved Project Management	371	2025-12-03 12:09:40.724534
+1601	81	5	High	Auto-populated: Dario Gregory has approved Scrum Master	81	2025-12-03 12:09:40.724534
+1605	14	11	High	Auto-populated: Miley Cline has approved Data Storage	14	2025-12-03 12:09:40.724534
+1610	137	22	High	Auto-populated: Ben Matthews has approved Docker	137	2025-12-03 12:09:40.724534
+1620	430	8	High	Auto-populated: Averie Willis has approved Operating Metrics	430	2025-12-03 12:09:40.724534
+1621	988	3	High	Auto-populated: Kayleigh Duke has approved ECCP	988	2025-12-03 12:09:40.724534
+1622	53	11	High	Auto-populated: Lexie Barron has approved Data Storage	53	2025-12-03 12:09:40.724534
+1623	148	20	High	Auto-populated: Gordon Reeves has approved Project Management	148	2025-12-03 12:09:40.724534
+1624	674	13	High	Auto-populated: Kelvin Sharp has approved C#	674	2025-12-03 12:09:40.724534
+1625	507	8	High	Auto-populated: Devon Hayes has approved Operating Metrics	507	2025-12-03 12:09:40.724534
+1628	322	7	High	Auto-populated: Lian Soto has approved Industry APIs	322	2025-12-03 12:09:40.724534
+1629	284	22	High	Auto-populated: Kenji Ferguson has approved Docker	284	2025-12-03 12:09:40.724534
+1631	845	1	High	Auto-populated: Alexis Yoder has approved Java	845	2025-12-03 12:09:40.724534
+1632	758	1	High	Auto-populated: Duncan Wells has approved Java	758	2025-12-03 12:09:40.724534
+1633	327	5	High	Auto-populated: Casen Farrell has approved Scrum Master	327	2025-12-03 12:09:40.724534
+1636	391	20	High	Auto-populated: Carl Klein has approved Project Management	391	2025-12-03 12:09:40.724534
+1637	831	20	High	Auto-populated: Itzayana Walter has approved Project Management	831	2025-12-03 12:09:40.724534
+1638	623	24	High	Auto-populated: Mackenzie Krueger has approved System Design	623	2025-12-03 12:09:40.724534
+1642	110	9	High	Auto-populated: Anne Colon has approved Agentic AI	110	2025-12-03 12:09:40.724534
+1644	72	11	High	Auto-populated: Peter Armstrong has approved Data Storage	72	2025-12-03 12:09:40.724534
+1645	585	23	High	Auto-populated: Kieran Cunningham has approved CI/CD	585	2025-12-03 12:09:40.724534
+1647	541	10	High	Auto-populated: Arian Spencer has approved Data Processing	541	2025-12-03 12:09:40.724534
+1648	507	22	High	Auto-populated: Devon Hayes has approved Docker	507	2025-12-03 12:09:40.724534
+1651	616	8	High	Auto-populated: Marshall O’Connor has approved Operating Metrics	616	2025-12-03 12:09:40.724534
+1653	322	8	High	Auto-populated: Niko Lozano has approved Operating Metrics	322	2025-12-03 12:09:40.724534
+1655	616	13	High	Auto-populated: Osiris Price has approved C#	616	2025-12-03 12:09:40.724534
+1658	610	22	High	Auto-populated: Jade Nolan has approved Docker	610	2025-12-03 12:09:40.724534
+1661	293	20	High	Auto-populated: Lilianna Welch has approved Project Management	293	2025-12-03 12:09:40.724534
+1662	251	6	High	Auto-populated: Kyler Kerr has approved QA Testing	251	2025-12-03 12:09:40.724534
+1664	190	6	High	Auto-populated: Adalyn Herrera has approved QA Testing	190	2025-12-03 12:09:40.724534
+1666	650	3	High	Auto-populated: Waylon McCullough has approved ECCP	650	2025-12-03 12:09:40.724534
+1667	967	22	High	Auto-populated: Kairo Bass has approved Docker	967	2025-12-03 12:09:40.724534
+1669	909	9	High	Auto-populated: Nylah Sosa has approved Agentic AI	909	2025-12-03 12:09:40.724534
+1672	72	19	High	Auto-populated: Vera Keith has approved PostgreSQL	72	2025-12-03 12:09:40.724534
+1675	162	16	High	Auto-populated: Maren Giles has approved QA Testing	162	2025-12-03 12:09:40.724534
+1677	902	25	High	Auto-populated: Aniya Frost has approved Python	902	2025-12-03 12:09:40.724534
+1679	845	9	High	Auto-populated: Theodora Andersen has approved Agentic AI	845	2025-12-03 12:09:40.724534
+1681	450	24	High	Auto-populated: Brooke Barr has approved System Design	450	2025-12-03 12:09:40.724534
+1682	123	13	High	Auto-populated: Mavis Hamilton has approved C#	123	2025-12-03 12:09:40.724534
+1685	117	7	High	Auto-populated: Nova Holt has approved Industry APIs	117	2025-12-03 12:09:40.724534
+1686	864	20	High	Auto-populated: Ibrahim Espinoza has approved Project Management	864	2025-12-03 12:09:40.724534
+1690	130	11	High	Auto-populated: Callahan McIntyre has approved Data Storage	130	2025-12-03 12:09:40.724534
+1693	123	7	High	Auto-populated: Jair Schaefer has approved Industry APIs	123	2025-12-03 12:09:40.724534
+1695	603	20	High	Auto-populated: Judson Gentry has approved Project Management	603	2025-12-03 12:09:40.724534
+1700	726	12	High	Auto-populated: Whitney Hester has approved Product Feature Design	726	2025-12-03 12:09:40.724534
+1701	416	7	High	Auto-populated: Yehuda Parks has approved Industry APIs	416	2025-12-03 12:09:40.724534
+1702	494	20	High	Auto-populated: Ishaan Colon has approved Project Management	494	2025-12-03 12:09:40.724534
+1709	21	4	High	Auto-populated: Everly Barton has approved Project Management	21	2025-12-03 12:09:40.724534
+1711	909	25	High	Auto-populated: Eugene Cummings has approved Python	909	2025-12-03 12:09:40.724534
+1712	494	1	High	Auto-populated: Ishaan Colon has approved Java	494	2025-12-03 12:09:40.724534
+1714	240	3	High	Auto-populated: Micah Gonzales has approved ECCP	240	2025-12-03 12:09:40.724534
+1715	976	23	High	Auto-populated: Elisha Ali has approved CI/CD	976	2025-12-03 12:09:40.724534
+1720	441	22	High	Auto-populated: Seth Elliott has approved Docker	441	2025-12-03 12:09:40.724534
+1724	616	24	High	Auto-populated: Annalise Leon has approved System Design	616	2025-12-03 12:09:40.724534
+1726	233	21	High	Auto-populated: Alistair Avalos has approved Data Analysis	233	2025-12-03 12:09:40.724534
+1727	190	3	High	Auto-populated: Josue Conrad has approved ECCP	190	2025-12-03 12:09:40.724534
+1728	831	16	High	Auto-populated: Teresa Combs has approved QA Testing	831	2025-12-03 12:09:40.724534
+1729	137	7	High	Auto-populated: Jace Jensen has approved Industry APIs	137	2025-12-03 12:09:40.724534
+1731	380	24	High	Auto-populated: Tyson Wong has approved System Design	380	2025-12-03 12:09:40.724534
+1733	623	3	High	Auto-populated: Lucca Hamilton has approved ECCP	623	2025-12-03 12:09:40.724534
+1734	441	12	High	Auto-populated: Carson Adkins has approved Product Feature Design	441	2025-12-03 12:09:40.724534
+1738	157	24	High	Auto-populated: Baker Fowler has approved System Design	157	2025-12-03 12:09:40.724534
+1742	916	22	High	Auto-populated: Raiden Walls has approved Docker	916	2025-12-03 12:09:40.724534
+1745	240	10	High	Auto-populated: Melanie Coleman has approved Data Processing	240	2025-12-03 12:09:40.724534
+1748	123	11	High	Auto-populated: Jair Schaefer has approved Data Storage	123	2025-12-03 12:09:40.724534
+1749	110	19	High	Auto-populated: Kaiser Mathis has approved PostgreSQL	110	2025-12-03 12:09:40.724534
+1752	117	24	High	Auto-populated: Adelynn Rollins has approved System Design	117	2025-12-03 12:09:40.724534
+1753	630	18	High	Auto-populated: Reagan Evans has approved Node.js	630	2025-12-03 12:09:40.724534
+1758	943	20	High	Auto-populated: Natalia Mack has approved Project Management	943	2025-12-03 12:09:40.724534
+1759	831	10	High	Auto-populated: Noah Nolan has approved Data Processing	831	2025-12-03 12:09:40.724534
+1762	327	1	High	Auto-populated: Kassidy Strickland has approved Java	327	2025-12-03 12:09:40.724534
+1763	483	24	High	Auto-populated: Braylon Olsen has approved System Design	483	2025-12-03 12:09:40.724534
+1765	831	25	High	Auto-populated: Lochlan Arnold has approved Python	831	2025-12-03 12:09:40.724534
+1767	786	1	High	Auto-populated: Sylas Lugo has approved Java	786	2025-12-03 12:09:40.724534
+1768	655	7	High	Auto-populated: Ella Travis has approved Industry APIs	655	2025-12-03 12:09:40.724534
+1769	347	3	High	Auto-populated: Ellis Norris has approved ECCP	347	2025-12-03 12:09:40.724534
+1770	251	21	High	Auto-populated: Nia Wolfe has approved Data Analysis	251	2025-12-03 12:09:40.724534
+1774	753	18	High	Auto-populated: Shay Ford has approved Node.js	753	2025-12-03 12:09:40.724534
+1775	610	19	High	Auto-populated: Maximo Zimmerman has approved PostgreSQL	610	2025-12-03 12:09:40.724534
+1782	293	6	High	Auto-populated: Peter Vu has approved QA Testing	293	2025-12-03 12:09:40.724534
+1785	284	17	High	Auto-populated: Abdiel Huynh has approved React	284	2025-12-03 12:09:40.724534
+1786	265	9	High	Auto-populated: Kai Brandt has approved Agentic AI	265	2025-12-03 12:09:40.724534
+1789	72	3	High	Auto-populated: Vera Keith has approved ECCP	72	2025-12-03 12:09:40.724534
+1790	430	20	High	Auto-populated: Reid Holloway has approved Project Management	430	2025-12-03 12:09:40.724534
+1792	391	1	High	Auto-populated: Tru Doyle has approved Java	391	2025-12-03 12:09:40.724534
+1797	777	3	High	Auto-populated: Addisyn Mercado has approved ECCP	777	2025-12-03 12:09:40.724534
+1798	546	13	High	Auto-populated: Zendaya Morrow has approved C#	546	2025-12-03 12:09:40.724534
+1800	380	18	High	Auto-populated: Audrey Terry has approved Node.js	380	2025-12-03 12:09:40.724534
+1803	327	17	High	Auto-populated: Keegan Lawrence has approved React	327	2025-12-03 12:09:40.724534
+1805	733	23	High	Auto-populated: Malaysia Bautista has approved CI/CD	733	2025-12-03 12:09:40.724534
+1808	430	21	High	Auto-populated: Nyla Good has approved Data Analysis	430	2025-12-03 12:09:40.724534
+1809	744	4	High	Auto-populated: Raul Norman has approved Project Management	744	2025-12-03 12:09:40.724534
+1810	514	20	High	Auto-populated: Ansley Petersen has approved Project Management	514	2025-12-03 12:09:40.724534
+1813	84	20	High	Auto-populated: Peyton Garza has approved Project Management	84	2025-12-03 12:09:40.724534
+1814	916	23	High	Auto-populated: Pedro Pugh has approved CI/CD	916	2025-12-03 12:09:40.724534
+1818	610	21	High	Auto-populated: Charlie McBride has approved Data Analysis	610	2025-12-03 12:09:40.724534
+1819	130	17	High	Auto-populated: Halle Pham has approved React	130	2025-12-03 12:09:40.724534
+1823	797	11	High	Auto-populated: Clementine Burnett has approved Data Storage	797	2025-12-03 12:09:40.724534
+1825	845	25	High	Auto-populated: Alistair Quintana has approved Python	845	2025-12-03 12:09:40.724534
+1827	483	25	High	Auto-populated: Barbara Hendrix has approved Python	483	2025-12-03 12:09:40.724534
+1828	380	19	High	Auto-populated: Tyson Wong has approved PostgreSQL	380	2025-12-03 12:09:40.724534
+1829	130	24	High	Auto-populated: Halle Pham has approved System Design	130	2025-12-03 12:09:40.724534
+1831	265	13	High	Auto-populated: Loretta Collins has approved C#	265	2025-12-03 12:09:40.724534
+1832	380	5	High	Auto-populated: Audrey Terry has approved Scrum Master	380	2025-12-03 12:09:40.724534
+1835	347	23	High	Auto-populated: Cairo Hess has approved CI/CD	347	2025-12-03 12:09:40.724534
+1836	441	6	High	Auto-populated: Noelle Jefferson has approved QA Testing	441	2025-12-03 12:09:40.724534
+1837	948	7	High	Auto-populated: Hector Bernard has approved Industry APIs	948	2025-12-03 12:09:40.724534
+1838	902	10	High	Auto-populated: Monroe Lowery has approved Data Processing	902	2025-12-03 12:09:40.724534
+1840	423	20	High	Auto-populated: Kamilah Bond has approved Project Management	423	2025-12-03 12:09:40.724534
+1841	616	11	High	Auto-populated: Annalise Leon has approved Data Storage	616	2025-12-03 12:09:40.724534
+1842	909	7	High	Auto-populated: Nylah Sosa has approved Industry APIs	909	2025-12-03 12:09:40.724534
+1843	797	25	High	Auto-populated: Elizabeth Ortega has approved Python	797	2025-12-03 12:09:40.724534
+1845	923	4	High	Auto-populated: Jacoby Sampson has approved Project Management	923	2025-12-03 12:09:40.724534
+1846	815	24	High	Auto-populated: Moshe Garza has approved System Design	815	2025-12-03 12:09:40.724534
+1850	391	10	High	Auto-populated: Rivka Valencia has approved Data Processing	391	2025-12-03 12:09:40.724534
+1851	81	8	High	Auto-populated: Kamiyah Clements has approved Operating Metrics	81	2025-12-03 12:09:40.724534
+1853	72	21	High	Auto-populated: Alaya Pope has approved Data Analysis	72	2025-12-03 12:09:40.724534
+1854	251	1	High	Auto-populated: Kyler Kerr has approved Java	251	2025-12-03 12:09:40.724534
+1858	674	21	High	Auto-populated: Maurice Beasley has approved Data Analysis	674	2025-12-03 12:09:40.724534
+1859	162	6	High	Auto-populated: Joanna Mathis has approved QA Testing	162	2025-12-03 12:09:40.724534
+1860	521	7	High	Auto-populated: Addilynn Greene has approved Industry APIs	521	2025-12-03 12:09:40.724534
+1861	948	23	High	Auto-populated: Axel Pacheco has approved CI/CD	948	2025-12-03 12:09:40.724534
+1862	81	11	High	Auto-populated: Caleb Melton has approved Data Storage	81	2025-12-03 12:09:40.724534
+1865	338	21	High	Auto-populated: Egypt Reese has approved Data Analysis	338	2025-12-03 12:09:40.724534
+1867	81	3	High	Auto-populated: Fisher Cisneros has approved ECCP	81	2025-12-03 12:09:40.724534
+1870	380	9	High	Auto-populated: Damari Reyes has approved Agentic AI	380	2025-12-03 12:09:40.724534
+1876	48	12	High	Auto-populated: Aryan Rowland has approved Product Feature Design	48	2025-12-03 12:09:40.724534
+1881	383	25	High	Auto-populated: Annalise Fletcher has approved Python	383	2025-12-03 12:09:40.724534
+1883	514	22	High	Auto-populated: Nathaniel Faulkner has approved Docker	514	2025-12-03 12:09:40.724534
+1885	777	6	High	Auto-populated: Yasmin Sexton has approved QA Testing	777	2025-12-03 12:09:40.724534
+1891	494	23	High	Auto-populated: April Anderson has approved CI/CD	494	2025-12-03 12:09:40.724534
+1892	494	19	High	Auto-populated: Evangeline Stein has approved PostgreSQL	494	2025-12-03 12:09:40.724534
+1894	48	8	High	Auto-populated: Margaret Dunlap has approved Operating Metrics	48	2025-12-03 12:09:40.724534
+1895	641	12	High	Auto-populated: Kyng Stout has approved Product Feature Design	641	2025-12-03 12:09:40.724534
+1896	474	10	High	Auto-populated: Miranda Anderson has approved Data Processing	474	2025-12-03 12:09:40.724534
+1902	409	10	High	Auto-populated: Ainhoa Ross has approved Data Processing	409	2025-12-03 12:09:40.724534
+1904	845	4	High	Auto-populated: Alistair Quintana has approved Project Management	845	2025-12-03 12:09:40.724534
+1906	902	17	High	Auto-populated: Eli O’Neal has approved React	902	2025-12-03 12:09:40.724534
+1909	130	20	High	Auto-populated: Rebekah Underwood has approved Project Management	130	2025-12-03 12:09:40.724534
+1910	532	11	High	Auto-populated: Giuliana Craig has approved Data Storage	532	2025-12-03 12:09:40.724534
+1912	532	24	High	Auto-populated: Maxine Arias has approved System Design	532	2025-12-03 12:09:40.724534
+1915	864	6	High	Auto-populated: Lucille Farrell has approved QA Testing	864	2025-12-03 12:09:40.724534
+1917	786	18	High	Auto-populated: Devin Palmer has approved Node.js	786	2025-12-03 12:09:40.724534
+1918	450	12	High	Auto-populated: Van Rios has approved Product Feature Design	450	2025-12-03 12:09:40.724534
+1920	789	5	High	Auto-populated: Sara Wise has approved Scrum Master	789	2025-12-03 12:09:40.724534
+1921	28	11	High	Auto-populated: Ellie Gonzales has approved Data Storage	28	2025-12-03 12:09:40.724534
+1922	840	18	High	Auto-populated: Shiloh McConnell has approved Node.js	840	2025-12-03 12:09:40.724534
+1923	14	4	High	Auto-populated: Albert Eaton has approved Project Management	14	2025-12-03 12:09:40.724534
+1929	193	25	High	Auto-populated: Eva Beasley has approved Python	193	2025-12-03 12:09:40.724534
+1931	380	12	High	Auto-populated: Luis Gordon has approved Product Feature Design	380	2025-12-03 12:09:40.724534
+1932	371	3	High	Auto-populated: Everett Floyd has approved ECCP	371	2025-12-03 12:09:40.724534
+1936	789	23	High	Auto-populated: Frederick Tran has approved CI/CD	789	2025-12-03 12:09:40.724534
+1937	884	3	High	Auto-populated: Amirah Calhoun has approved ECCP	884	2025-12-03 12:09:40.724534
+1939	753	5	High	Auto-populated: Jazlyn Villarreal has approved Scrum Master	753	2025-12-03 12:09:40.724534
+1940	546	24	High	Auto-populated: Orlando Hester has approved System Design	546	2025-12-03 12:09:40.724534
+1943	260	4	High	Auto-populated: Esther Wang has approved Project Management	260	2025-12-03 12:09:40.724534
+1944	532	21	High	Auto-populated: Odin McDowell has approved Data Analysis	532	2025-12-03 12:09:40.724534
+1945	181	18	High	Auto-populated: Esther Frazier has approved Node.js	181	2025-12-03 12:09:40.724534
+1947	916	13	High	Auto-populated: Lilianna Good has approved C#	916	2025-12-03 12:09:40.724534
+1951	565	12	High	Auto-populated: Makenzie Nash has approved Product Feature Design	565	2025-12-03 12:09:40.724534
+1955	162	19	High	Auto-populated: Maren Giles has approved PostgreSQL	162	2025-12-03 12:09:40.724534
+1957	507	10	High	Auto-populated: Elisha Khan has approved Data Processing	507	2025-12-03 12:09:40.724534
+1958	148	21	High	Auto-populated: Ford Chavez has approved Data Analysis	148	2025-12-03 12:09:40.724534
+1959	967	9	High	Auto-populated: Grey Mays has approved Agentic AI	967	2025-12-03 12:09:40.724534
+1964	719	3	High	Auto-populated: Robin Bonilla has approved ECCP	719	2025-12-03 12:09:40.724534
+1966	8	19	High	Auto-populated: Jace Delgado has approved PostgreSQL	8	2025-12-03 12:09:40.724534
+1970	650	7	High	Auto-populated: Blaine Ponce has approved Industry APIs	650	2025-12-03 12:09:40.724534
+1971	40	16	High	Auto-populated: Brantley Whitney has approved QA Testing	40	2025-12-03 12:09:40.724534
+1972	92	19	High	Auto-populated: Yasmin Rush has approved PostgreSQL	92	2025-12-03 12:09:40.724534
+1974	744	9	High	Auto-populated: Meghan Juarez has approved Agentic AI	744	2025-12-03 12:09:40.724534
+1981	157	5	High	Auto-populated: Gabriel Huang has approved Scrum Master	157	2025-12-03 12:09:40.724534
+1982	501	8	High	Auto-populated: Sage Ho has approved Operating Metrics	501	2025-12-03 12:09:40.724534
+1983	815	17	High	Auto-populated: Brynn Mejia has approved React	815	2025-12-03 12:09:40.724534
+1984	943	1	High	Auto-populated: Alaina James has approved Java	943	2025-12-03 12:09:40.724534
+1988	655	17	High	Auto-populated: Keily Avery has approved React	655	2025-12-03 12:09:40.724534
+1993	501	12	High	Auto-populated: Israel Becker has approved Product Feature Design	501	2025-12-03 12:09:40.724534
+1995	220	23	High	Auto-populated: Julissa Mata has approved CI/CD	220	2025-12-03 12:09:40.724534
+1996	81	13	High	Auto-populated: Loretta Frost has approved C#	81	2025-12-03 12:09:40.724534
+2000	123	19	High	Auto-populated: Colter Owens has approved PostgreSQL	123	2025-12-03 12:09:40.724534
+2001	902	13	High	Auto-populated: Ella Butler has approved C#	902	2025-12-03 12:09:40.724534
+2003	753	11	High	Auto-populated: Nikolai Rowe has approved Data Storage	753	2025-12-03 12:09:40.724534
+2004	40	25	High	Auto-populated: Marina York has approved Python	40	2025-12-03 12:09:40.724534
+2005	650	17	High	Auto-populated: Laney Gould has approved React	650	2025-12-03 12:09:40.724534
+2011	193	20	High	Auto-populated: Stanley Shaffer has approved Project Management	193	2025-12-03 12:09:40.724534
+2015	265	6	High	Auto-populated: Regina Castillo has approved QA Testing	265	2025-12-03 12:09:40.724534
+2020	220	12	High	Auto-populated: Julissa Mata has approved Product Feature Design	220	2025-12-03 12:09:40.724534
+2022	430	23	High	Auto-populated: Idris Rivas has approved CI/CD	430	2025-12-03 12:09:40.724534
+2024	514	19	High	Auto-populated: Ansley Petersen has approved PostgreSQL	514	2025-12-03 12:09:40.724534
+2025	137	8	High	Auto-populated: Lila Valenzuela has approved Operating Metrics	137	2025-12-03 12:09:40.724534
+2027	988	24	High	Auto-populated: Jeffrey Rhodes has approved System Design	988	2025-12-03 12:09:40.724534
+2028	260	1	High	Auto-populated: Jamir Meadows has approved Java	260	2025-12-03 12:09:40.724534
+2031	873	1	High	Auto-populated: Journey Ball has approved Java	873	2025-12-03 12:09:40.724534
+2036	574	7	High	Auto-populated: Samara Rios has approved Industry APIs	574	2025-12-03 12:09:40.724534
+2037	521	6	High	Auto-populated: Nelson Haley has approved QA Testing	521	2025-12-03 12:09:40.724534
+2038	233	16	High	Auto-populated: Paloma Herrera has approved QA Testing	233	2025-12-03 12:09:40.724534
+2040	719	4	High	Auto-populated: Romina Velasquez has approved Project Management	719	2025-12-03 12:09:40.724534
+2041	338	20	High	Auto-populated: Lochlan Wise has approved Project Management	338	2025-12-03 12:09:40.724534
+2044	201	21	High	Auto-populated: Adeline Morrison has approved Data Analysis	201	2025-12-03 12:09:40.724534
+2045	220	5	High	Auto-populated: Zara Kemp has approved Scrum Master	220	2025-12-03 12:09:40.724534
+2046	820	16	High	Auto-populated: Genevieve Morton has approved QA Testing	820	2025-12-03 12:09:40.724534
+2047	574	4	High	Auto-populated: Israel McKay has approved Project Management	574	2025-12-03 12:09:40.724534
+2049	521	11	High	Auto-populated: Stefan McPherson has approved Data Storage	521	2025-12-03 12:09:40.724534
+2050	514	24	High	Auto-populated: Eli Wallace has approved System Design	514	2025-12-03 12:09:40.724534
+2052	902	18	High	Auto-populated: Jaxxon Duarte has approved Node.js	902	2025-12-03 12:09:40.724534
+2056	565	1	High	Auto-populated: Branson Lu has approved Java	565	2025-12-03 12:09:40.724534
+2058	719	16	High	Auto-populated: Robin Bonilla has approved QA Testing	719	2025-12-03 12:09:40.724534
+2061	474	1	High	Auto-populated: Miranda Anderson has approved Java	474	2025-12-03 12:09:40.724534
+2062	240	20	High	Auto-populated: Micah Gonzales has approved Project Management	240	2025-12-03 12:09:40.724534
+2063	162	10	High	Auto-populated: Joanna Mathis has approved Data Processing	162	2025-12-03 12:09:40.724534
+2064	483	21	High	Auto-populated: Barbara Hendrix has approved Data Analysis	483	2025-12-03 12:09:40.724534
+2068	483	5	High	Auto-populated: Braylon Olsen has approved Scrum Master	483	2025-12-03 12:09:40.724534
+2070	585	22	High	Auto-populated: Kieran Cunningham has approved Docker	585	2025-12-03 12:09:40.724534
+2071	219	8	High	Auto-populated: Quincy Cohen has approved Operating Metrics	219	2025-12-03 12:09:40.724534
+2072	293	16	High	Auto-populated: Elyse Reese has approved QA Testing	293	2025-12-03 12:09:40.724534
+2073	726	10	High	Auto-populated: Paxton Santiago has approved Data Processing	726	2025-12-03 12:09:40.724534
+2075	338	11	High	Auto-populated: Mira Lim has approved Data Storage	338	2025-12-03 12:09:40.724534
+2080	577	16	High	Auto-populated: Andrew Graham has approved QA Testing	577	2025-12-03 12:09:40.724534
+2081	603	13	High	Auto-populated: Marcus Hester has approved C#	603	2025-12-03 12:09:40.724534
+2084	8	24	High	Auto-populated: Kamryn Villa has approved System Design	8	2025-12-03 12:09:40.724534
+2088	694	25	High	Auto-populated: Weston Payne has approved Python	694	2025-12-03 12:09:40.724534
+2098	694	18	High	Auto-populated: Avery Russell has approved Node.js	694	2025-12-03 12:09:40.724534
+2099	304	21	High	Auto-populated: Mae Novak has approved Data Analysis	304	2025-12-03 12:09:40.724534
+2100	53	5	High	Auto-populated: Ambrose Chen has approved Scrum Master	53	2025-12-03 12:09:40.724534
+2105	137	25	High	Auto-populated: Lila Valenzuela has approved Python	137	2025-12-03 12:09:40.724534
+2111	450	23	High	Auto-populated: Finn Hodge has approved CI/CD	450	2025-12-03 12:09:40.724534
+2112	28	10	High	Auto-populated: Ellie Gonzales has approved Data Processing	28	2025-12-03 12:09:40.724534
+2117	423	12	High	Auto-populated: Kamilah Bond has approved Product Feature Design	423	2025-12-03 12:09:40.724534
+2119	409	8	High	Auto-populated: Jaime McIntosh has approved Operating Metrics	409	2025-12-03 12:09:40.724534
+2120	541	8	High	Auto-populated: Juniper Garrison has approved Operating Metrics	541	2025-12-03 12:09:40.724534
+2130	137	9	High	Auto-populated: Jamari Jordan has approved Agentic AI	137	2025-12-03 12:09:40.724534
+2142	650	23	High	Auto-populated: Laney Gould has approved CI/CD	650	2025-12-03 12:09:40.724534
+2143	623	17	High	Auto-populated: Skyler Kelley has approved React	623	2025-12-03 12:09:40.724534
+2146	979	24	High	Auto-populated: Kylo Marks has approved System Design	979	2025-12-03 12:09:40.724534
+2152	201	19	High	Auto-populated: Dustin Jordan has approved PostgreSQL	201	2025-12-03 12:09:40.724534
+2153	92	25	High	Auto-populated: Nathalia Truong has approved Python	92	2025-12-03 12:09:40.724534
+2154	430	19	High	Auto-populated: Mae Noble has approved PostgreSQL	430	2025-12-03 12:09:40.724534
+2159	371	7	High	Auto-populated: Jaiden Cannon has approved Industry APIs	371	2025-12-03 12:09:40.724534
+2161	585	1	High	Auto-populated: Marley Gregory has approved Java	585	2025-12-03 12:09:40.724534
+2175	53	18	High	Auto-populated: Hannah Livingston has approved Node.js	53	2025-12-03 12:09:40.724534
+2180	260	22	High	Auto-populated: Pearl Woodard has approved Docker	260	2025-12-03 12:09:40.724534
+2182	797	5	High	Auto-populated: Jase Thomas has approved Scrum Master	797	2025-12-03 12:09:40.724534
+2186	507	23	High	Auto-populated: Devon Hayes has approved CI/CD	507	2025-12-03 12:09:40.724534
+2187	130	9	High	Auto-populated: Callahan McIntyre has approved Agentic AI	130	2025-12-03 12:09:40.724534
+2189	383	1	High	Auto-populated: Annalise Fletcher has approved Java	383	2025-12-03 12:09:40.724534
+2190	630	1	High	Auto-populated: Cannon Simmons has approved Java	630	2025-12-03 12:09:40.724534
+2194	483	7	High	Auto-populated: Barbara Hendrix has approved Industry APIs	483	2025-12-03 12:09:40.724534
+2201	521	22	High	Auto-populated: Stefan McPherson has approved Docker	521	2025-12-03 12:09:40.724534
+2203	28	13	High	Auto-populated: Everest Lewis has approved C#	28	2025-12-03 12:09:40.724534
+2204	81	18	High	Auto-populated: Ivan Brandt has approved Node.js	81	2025-12-03 12:09:40.724534
+2205	565	13	High	Auto-populated: Emani O’Connell has approved C#	565	2025-12-03 12:09:40.724534
+2208	220	6	High	Auto-populated: Ray Felix has approved QA Testing	220	2025-12-03 12:09:40.724534
+2209	873	23	High	Auto-populated: Jemma Maddox has approved CI/CD	873	2025-12-03 12:09:40.724534
+2210	130	25	High	Auto-populated: Halle Pham has approved Python	130	2025-12-03 12:09:40.724534
+2211	260	18	High	Auto-populated: Marcelo Tucker has approved Node.js	260	2025-12-03 12:09:40.724534
+2213	873	4	High	Auto-populated: Journey Ball has approved Project Management	873	2025-12-03 12:09:40.724534
+2215	655	22	High	Auto-populated: Keily Avery has approved Docker	655	2025-12-03 12:09:40.724534
+2217	948	22	High	Auto-populated: Paris Ryan has approved Docker	948	2025-12-03 12:09:40.724534
+2219	137	6	High	Auto-populated: Jace Jensen has approved QA Testing	137	2025-12-03 12:09:40.724534
+2221	251	11	High	Auto-populated: Veronica O’Connell has approved Data Storage	251	2025-12-03 12:09:40.724534
+2222	603	12	High	Auto-populated: Remi Portillo has approved Product Feature Design	603	2025-12-03 12:09:40.724534
+2226	650	16	High	Auto-populated: Hana McGee has approved QA Testing	650	2025-12-03 12:09:40.724534
+2227	92	1	High	Auto-populated: Rio Good has approved Java	92	2025-12-03 12:09:40.724534
+2229	293	1	High	Auto-populated: Kimora Jenkins has approved Java	293	2025-12-03 12:09:40.724534
+2231	494	16	High	Auto-populated: Evangeline Stein has approved QA Testing	494	2025-12-03 12:09:40.724534
+2237	532	16	High	Auto-populated: Odin McDowell has approved QA Testing	532	2025-12-03 12:09:40.724534
+2238	201	18	High	Auto-populated: Clara Phan has approved Node.js	201	2025-12-03 12:09:40.724534
+2239	137	11	High	Auto-populated: Jamari Jordan has approved Data Storage	137	2025-12-03 12:09:40.724534
+2245	486	17	High	Auto-populated: Genevieve Mathis has approved React	486	2025-12-03 12:09:40.724534
+2246	383	9	High	Auto-populated: Jay Santana has approved Agentic AI	383	2025-12-03 12:09:40.724534
+2252	967	5	High	Auto-populated: Greyson Hernandez has approved Scrum Master	967	2025-12-03 12:09:40.724534
+2253	226	7	High	Auto-populated: Sloan Holloway has approved Industry APIs	226	2025-12-03 12:09:40.724534
+2254	409	19	High	Auto-populated: Allison Whitehead has approved PostgreSQL	409	2025-12-03 12:09:40.724534
+2255	501	25	High	Auto-populated: Scout Randolph has approved Python	501	2025-12-03 12:09:40.724534
+2257	338	5	High	Auto-populated: Kelsey Walter has approved Scrum Master	338	2025-12-03 12:09:40.724534
+2258	815	22	High	Auto-populated: Murphy Macdonald has approved Docker	815	2025-12-03 12:09:40.724534
+2260	28	22	High	Auto-populated: Everest Lewis has approved Docker	28	2025-12-03 12:09:40.724534
+2262	532	4	High	Auto-populated: Emberly Sawyer has approved Project Management	532	2025-12-03 12:09:40.724534
+2265	923	19	High	Auto-populated: Meilani Beltran has approved PostgreSQL	923	2025-12-03 12:09:40.724534
+2269	532	5	High	Auto-populated: Emberly Sawyer has approved Scrum Master	532	2025-12-03 12:09:40.724534
+2272	786	16	High	Auto-populated: Joel Riley has approved QA Testing	786	2025-12-03 12:09:40.724534
+2279	603	1	High	Auto-populated: Amelie Quinn has approved Java	603	2025-12-03 12:09:40.724534
+2282	923	1	High	Auto-populated: Ricky Ibarra has approved Java	923	2025-12-03 12:09:40.724534
+2292	521	25	High	Auto-populated: Griffin Dorsey has approved Python	521	2025-12-03 12:09:40.724534
+2293	233	24	High	Auto-populated: Kaylie O’Connor has approved System Design	233	2025-12-03 12:09:40.724534
+2296	233	13	High	Auto-populated: River Lugo has approved C#	233	2025-12-03 12:09:40.724534
+2301	574	23	High	Auto-populated: Malakai Walters has approved CI/CD	574	2025-12-03 12:09:40.724534
+2304	820	9	High	Auto-populated: Joseph Fry has approved Agentic AI	820	2025-12-03 12:09:40.724534
+2305	815	8	High	Auto-populated: Atticus Brandt has approved Operating Metrics	815	2025-12-03 12:09:40.724534
+2306	758	6	High	Auto-populated: Harris Doyle has approved QA Testing	758	2025-12-03 12:09:40.724534
+2309	719	24	High	Auto-populated: Brady Cox has approved System Design	719	2025-12-03 12:09:40.724534
+2310	610	23	High	Auto-populated: Jade Nolan has approved CI/CD	610	2025-12-03 12:09:40.724534
+2314	284	1	High	Auto-populated: Rose Andrade has approved Java	284	2025-12-03 12:09:40.724534
+2315	14	19	High	Auto-populated: Dawson Fox has approved PostgreSQL	14	2025-12-03 12:09:40.724534
+2317	148	12	High	Auto-populated: Vincenzo Cobb has approved Product Feature Design	148	2025-12-03 12:09:40.724534
+2318	430	1	High	Auto-populated: Mae Noble has approved Java	430	2025-12-03 12:09:40.724534
+2321	233	18	High	Auto-populated: Kaylie O’Connor has approved Node.js	233	2025-12-03 12:09:40.724534
+2322	610	7	High	Auto-populated: Kelsey Cantrell has approved Industry APIs	610	2025-12-03 12:09:40.724534
+2328	123	21	High	Auto-populated: Mavis Hamilton has approved Data Analysis	123	2025-12-03 12:09:40.724534
+2329	532	10	High	Auto-populated: Jefferson Vance has approved Data Processing	532	2025-12-03 12:09:40.724534
+2332	347	10	High	Auto-populated: Kaliyah Beck has approved Data Processing	347	2025-12-03 12:09:40.724534
+2334	130	3	High	Auto-populated: Russell Cunningham has approved ECCP	130	2025-12-03 12:09:40.724534
+2339	683	23	High	Auto-populated: Brixton Avila has approved CI/CD	683	2025-12-03 12:09:40.724534
+2345	240	18	High	Auto-populated: Melanie Coleman has approved Node.js	240	2025-12-03 12:09:40.724534
+2349	84	1	High	Auto-populated: Peyton Garza has approved Java	84	2025-12-03 12:09:40.724534
+2355	441	10	High	Auto-populated: Alora Lamb has approved Data Processing	441	2025-12-03 12:09:40.724534
+2357	541	17	High	Auto-populated: Ford Schaefer has approved React	541	2025-12-03 12:09:40.724534
+2359	840	23	High	Auto-populated: Alicia Lee has approved CI/CD	840	2025-12-03 12:09:40.724534
+2360	226	6	High	Auto-populated: Helena Bauer has approved QA Testing	226	2025-12-03 12:09:40.724534
+2361	92	10	High	Auto-populated: Avi Alfaro has approved Data Processing	92	2025-12-03 12:09:40.724534
+2365	226	25	High	Auto-populated: Valentin Mathews has approved Python	226	2025-12-03 12:09:40.724534
+2374	733	16	High	Auto-populated: Devon Walsh has approved QA Testing	733	2025-12-03 12:09:40.724534
+2378	371	22	High	Auto-populated: Marco Anderson has approved Docker	371	2025-12-03 12:09:40.724534
+2379	220	24	High	Auto-populated: Paisleigh Aguilar has approved System Design	220	2025-12-03 12:09:40.724534
+2381	532	22	High	Auto-populated: Caroline Soto has approved Docker	532	2025-12-03 12:09:40.724534
+2386	148	6	High	Auto-populated: Ford Chavez has approved QA Testing	148	2025-12-03 12:09:40.724534
+2387	130	12	High	Auto-populated: Halle Pham has approved Product Feature Design	130	2025-12-03 12:09:40.724534
+2388	304	24	High	Auto-populated: Grace Landry has approved System Design	304	2025-12-03 12:09:40.724534
+2392	8	6	High	Auto-populated: Rosie Long has approved QA Testing	8	2025-12-03 12:09:40.724534
+2398	873	9	High	Auto-populated: Shane Thompson has approved Agentic AI	873	2025-12-03 12:09:40.724534
+2400	130	4	High	Auto-populated: Rebekah Underwood has approved Project Management	130	2025-12-03 12:09:40.724534
+2403	40	9	High	Auto-populated: Brantley Whitney has approved Agentic AI	40	2025-12-03 12:09:40.724534
+2404	641	23	High	Auto-populated: Lyanna Guerra has approved CI/CD	641	2025-12-03 12:09:40.724534
+2407	233	11	High	Auto-populated: Paloma Herrera has approved Data Storage	233	2025-12-03 12:09:40.724534
+2408	733	7	High	Auto-populated: Raul Dorsey has approved Industry APIs	733	2025-12-03 12:09:40.724534
+2413	641	13	High	Auto-populated: Ryan Mitchell has approved C#	641	2025-12-03 12:09:40.724534
+2417	733	17	High	Auto-populated: Muhammad Singleton has approved React	733	2025-12-03 12:09:40.724534
+2418	347	4	High	Auto-populated: Bailey Maldonado has approved Project Management	347	2025-12-03 12:09:40.724534
+2421	494	5	High	Auto-populated: Remy Tapia has approved Scrum Master	494	2025-12-03 12:09:40.724534
+2422	815	11	High	Auto-populated: Brynn Mejia has approved Data Storage	815	2025-12-03 12:09:40.724534
+2423	753	7	High	Auto-populated: Nova Villarreal has approved Industry APIs	753	2025-12-03 12:09:40.724534
+2425	923	5	High	Auto-populated: Kylo Gonzalez has approved Scrum Master	923	2025-12-03 12:09:40.724534
+2428	137	18	High	Auto-populated: Adalynn Long has approved Node.js	137	2025-12-03 12:09:40.724534
+2431	430	11	High	Auto-populated: Averie Willis has approved Data Storage	430	2025-12-03 12:09:40.724534
+2432	28	24	High	Auto-populated: Ira Whitehead has approved System Design	28	2025-12-03 12:09:40.724534
+2437	371	10	High	Auto-populated: Leighton Hughes has approved Data Processing	371	2025-12-03 12:09:40.724534
+2442	251	12	High	Auto-populated: Kyler Kerr has approved Product Feature Design	251	2025-12-03 12:09:40.724534
+2447	820	22	High	Auto-populated: Joseph Fry has approved Docker	820	2025-12-03 12:09:40.724534
+2451	92	13	High	Auto-populated: Ayan Adkins has approved C#	92	2025-12-03 12:09:40.724534
+2455	840	6	High	Auto-populated: Alberto Gallagher has approved QA Testing	840	2025-12-03 12:09:40.724534
+2456	744	20	High	Auto-populated: Malani Woodard has approved Project Management	744	2025-12-03 12:09:40.724534
+2459	909	18	High	Auto-populated: Emir Flowers has approved Node.js	909	2025-12-03 12:09:40.724534
+2463	494	4	High	Auto-populated: Creed Ali has approved Project Management	494	2025-12-03 12:09:40.724534
+2466	8	20	High	Auto-populated: Paige Santiago has approved Project Management	8	2025-12-03 12:09:40.724534
+2470	501	4	High	Auto-populated: Laura Garner has approved Project Management	501	2025-12-03 12:09:40.724534
+2472	873	7	High	Auto-populated: Laylah Young has approved Industry APIs	873	2025-12-03 12:09:40.724534
+2477	845	8	High	Auto-populated: Johan Buckley has approved Operating Metrics	845	2025-12-03 12:09:40.724534
+2478	683	8	High	Auto-populated: Elian Glover has approved Operating Metrics	683	2025-12-03 12:09:40.724534
+2480	840	7	High	Auto-populated: Shiloh McConnell has approved Industry APIs	840	2025-12-03 12:09:40.724534
+2486	514	13	High	Auto-populated: Samson Hubbard has approved C#	514	2025-12-03 12:09:40.724534
+2488	455	1	High	Auto-populated: Eugene Gallegos has approved Java	455	2025-12-03 12:09:40.724534
+2491	157	12	High	Auto-populated: Francesca Hartman has approved Product Feature Design	157	2025-12-03 12:09:40.724534
+2500	987	7	High	Auto-populated: Lennon Harvey has approved Industry APIs	987	2025-12-03 12:09:40.724534
+2503	251	10	High	Auto-populated: Donovan House has approved Data Processing	251	2025-12-03 12:09:40.724534
+2505	948	1	High	Auto-populated: Hector Bernard has approved Java	948	2025-12-03 12:09:40.724534
+2506	251	3	High	Auto-populated: Osiris Dawson has approved ECCP	251	2025-12-03 12:09:40.724534
+2509	201	13	High	Auto-populated: Rowan Barron has approved C#	201	2025-12-03 12:09:40.724534
+2511	338	4	High	Auto-populated: Angelo Cano has approved Project Management	338	2025-12-03 12:09:40.724534
+2513	409	1	High	Auto-populated: Addilyn Strickland has approved Java	409	2025-12-03 12:09:40.724534
+2514	251	17	High	Auto-populated: Jovanni Pruitt has approved React	251	2025-12-03 12:09:40.724534
+2515	226	8	High	Auto-populated: Sutton Tyler has approved Operating Metrics	226	2025-12-03 12:09:40.724534
+2516	623	21	High	Auto-populated: Amoura Olsen has approved Data Analysis	623	2025-12-03 12:09:40.724534
+2517	574	21	High	Auto-populated: Malakai Walters has approved Data Analysis	574	2025-12-03 12:09:40.724534
+2522	797	24	High	Auto-populated: Tori Wolf has approved System Design	797	2025-12-03 12:09:40.724534
+2523	623	20	High	Auto-populated: Lucca Hamilton has approved Project Management	623	2025-12-03 12:09:40.724534
+2524	902	1	High	Auto-populated: Dario Lowe has approved Java	902	2025-12-03 12:09:40.724534
+2527	610	13	High	Auto-populated: Ariyah Christensen has approved C#	610	2025-12-03 12:09:40.724534
+2528	884	9	High	Auto-populated: Amirah Calhoun has approved Agentic AI	884	2025-12-03 12:09:40.724534
+2533	226	9	High	Auto-populated: Helena Bauer has approved Agentic AI	226	2025-12-03 12:09:40.724534
+2535	694	9	High	Auto-populated: Colin Mosley has approved Agentic AI	694	2025-12-03 12:09:40.724534
+2541	450	4	High	Auto-populated: Emmy Vance has approved Project Management	450	2025-12-03 12:09:40.724534
+2550	441	17	High	Auto-populated: Seth Elliott has approved React	441	2025-12-03 12:09:40.724534
+2551	483	19	High	Auto-populated: Maisie Yates has approved PostgreSQL	483	2025-12-03 12:09:40.724534
+2556	423	10	High	Auto-populated: Roger Lucero has approved Data Processing	423	2025-12-03 12:09:40.724534
+2560	916	1	High	Auto-populated: Lilianna Good has approved Java	916	2025-12-03 12:09:40.724534
+2561	686	18	High	Auto-populated: Boone Yu has approved Node.js	686	2025-12-03 12:09:40.724534
+2565	8	11	High	Auto-populated: Alani Sandoval has approved Data Storage	8	2025-12-03 12:09:40.724534
+2568	92	7	High	Auto-populated: Emelia Blevins has approved Industry APIs	92	2025-12-03 12:09:40.724534
+2572	884	4	High	Auto-populated: Lyric Gould has approved Project Management	884	2025-12-03 12:09:40.724534
+2578	284	20	High	Auto-populated: Ava Grimes has approved Project Management	284	2025-12-03 12:09:40.724534
+2582	296	13	High	Auto-populated: Katalina Pratt has approved C#	296	2025-12-03 12:09:40.724534
+2586	753	3	High	Auto-populated: Nathalia Moon has approved ECCP	753	2025-12-03 12:09:40.724534
+2591	293	12	High	Auto-populated: Lilianna Welch has approved Product Feature Design	293	2025-12-03 12:09:40.724534
+2596	441	7	High	Auto-populated: Alora Lamb has approved Industry APIs	441	2025-12-03 12:09:40.724534
+2597	521	23	High	Auto-populated: Macie Nava has approved CI/CD	521	2025-12-03 12:09:40.724534
+2602	786	20	High	Auto-populated: Juniper Houston has approved Project Management	786	2025-12-03 12:09:40.724534
+2604	650	8	High	Auto-populated: Waylon McCullough has approved Operating Metrics	650	2025-12-03 12:09:40.724534
+2605	979	17	High	Auto-populated: Loretta Adkins has approved React	979	2025-12-03 12:09:40.724534
+2606	507	12	High	Auto-populated: Iris Berry has approved Product Feature Design	507	2025-12-03 12:09:40.724534
+2608	338	1	High	Auto-populated: Kylo McBride has approved Java	338	2025-12-03 12:09:40.724534
+2610	758	13	High	Auto-populated: Cecilia Sims has approved C#	758	2025-12-03 12:09:40.724534
+2617	820	8	High	Auto-populated: Genevieve Morton has approved Operating Metrics	820	2025-12-03 12:09:40.724534
+2621	220	10	High	Auto-populated: Paisleigh Aguilar has approved Data Processing	220	2025-12-03 12:09:40.724534
+2622	507	9	High	Auto-populated: Iris Berry has approved Agentic AI	507	2025-12-03 12:09:40.724534
+2624	430	25	High	Auto-populated: Nyla Good has approved Python	430	2025-12-03 12:09:40.724534
+2625	909	3	High	Auto-populated: Ariya Robertson has approved ECCP	909	2025-12-03 12:09:40.724534
+2626	338	12	High	Auto-populated: Alijah Goodman has approved Product Feature Design	338	2025-12-03 12:09:40.724534
+2628	726	23	High	Auto-populated: Rene Sullivan has approved CI/CD	726	2025-12-03 12:09:40.724534
+2631	8	21	High	Auto-populated: Paige Santiago has approved Data Analysis	8	2025-12-03 12:09:40.724534
+2633	117	8	High	Auto-populated: Jack Gonzales has approved Operating Metrics	117	2025-12-03 12:09:40.724534
+2634	423	6	High	Auto-populated: Roger Lucero has approved QA Testing	423	2025-12-03 12:09:40.724534
+2637	233	6	High	Auto-populated: Kaylie O’Connor has approved QA Testing	233	2025-12-03 12:09:40.724534
+2638	380	20	High	Auto-populated: Damari Reyes has approved Project Management	380	2025-12-03 12:09:40.724534
+2641	577	9	High	Auto-populated: Marianna Phillips has approved Agentic AI	577	2025-12-03 12:09:40.724534
+2645	474	9	High	Auto-populated: Ryann Le has approved Agentic AI	474	2025-12-03 12:09:40.724534
+2646	117	3	High	Auto-populated: Jack Gonzales has approved ECCP	117	2025-12-03 12:09:40.724534
+2647	532	1	High	Auto-populated: Odin McDowell has approved Java	532	2025-12-03 12:09:40.724534
+2651	474	5	High	Auto-populated: Damien Marin has approved Scrum Master	474	2025-12-03 12:09:40.724534
+2654	304	7	High	Auto-populated: Bishop Ramirez has approved Industry APIs	304	2025-12-03 12:09:40.724534
+2657	840	4	High	Auto-populated: London Terrell has approved Project Management	840	2025-12-03 12:09:40.724534
+2658	28	5	High	Auto-populated: Aliyah Madden has approved Scrum Master	28	2025-12-03 12:09:40.724534
+2659	840	16	High	Auto-populated: Paityn Martin has approved QA Testing	840	2025-12-03 12:09:40.724534
+2663	864	24	High	Auto-populated: Ty Brady has approved System Design	864	2025-12-03 12:09:40.724534
+2665	987	19	High	Auto-populated: Amiyah Wu has approved PostgreSQL	987	2025-12-03 12:09:40.724534
+2667	683	7	High	Auto-populated: Brixton Avila has approved Industry APIs	683	2025-12-03 12:09:40.724534
+2674	514	7	High	Auto-populated: Ansley Petersen has approved Industry APIs	514	2025-12-03 12:09:40.724534
+2679	40	24	High	Auto-populated: Cullen Nelson has approved System Design	40	2025-12-03 12:09:40.724534
+2691	322	24	High	Auto-populated: Shane Gonzalez has approved System Design	322	2025-12-03 12:09:40.724534
+2692	623	12	High	Auto-populated: Jones Calderon has approved Product Feature Design	623	2025-12-03 12:09:40.724534
+2702	577	13	High	Auto-populated: Andrew Graham has approved C#	577	2025-12-03 12:09:40.724534
+2704	423	7	High	Auto-populated: Kamilah Bond has approved Industry APIs	423	2025-12-03 12:09:40.724534
+2710	884	20	High	Auto-populated: Amirah Calhoun has approved Project Management	884	2025-12-03 12:09:40.724534
+2712	455	21	High	Auto-populated: Eugene Gallegos has approved Data Analysis	455	2025-12-03 12:09:40.724534
+2713	777	4	High	Auto-populated: Cameron Rich has approved Project Management	777	2025-12-03 12:09:40.724534
+2716	948	4	High	Auto-populated: Hector Bernard has approved Project Management	948	2025-12-03 12:09:40.724534
+2717	450	8	High	Auto-populated: Coraline Duffy has approved Operating Metrics	450	2025-12-03 12:09:40.724534
+2721	296	19	High	Auto-populated: Kristian Shepherd has approved PostgreSQL	296	2025-12-03 12:09:40.724534
+2723	40	13	High	Auto-populated: Cullen Nelson has approved C#	40	2025-12-03 12:09:40.724534
+2729	483	20	High	Auto-populated: Maisie Yates has approved Project Management	483	2025-12-03 12:09:40.724534
+2738	797	3	High	Auto-populated: Kobe Massey has approved ECCP	797	2025-12-03 12:09:40.724534
+2739	201	6	High	Auto-populated: Maximus Perry has approved QA Testing	201	2025-12-03 12:09:40.724534
+2750	84	13	High	Auto-populated: River Walters has approved C#	84	2025-12-03 12:09:40.724534
+2752	423	1	High	Auto-populated: Roger Lucero has approved Java	423	2025-12-03 12:09:40.724534
+2754	948	10	High	Auto-populated: Axel Pacheco has approved Data Processing	948	2025-12-03 12:09:40.724534
+2766	674	7	High	Auto-populated: Luella Freeman has approved Industry APIs	674	2025-12-03 12:09:40.724534
+2767	623	16	High	Auto-populated: Rosalie Potter has approved QA Testing	623	2025-12-03 12:09:40.724534
+2768	616	18	High	Auto-populated: Charli Delarosa has approved Node.js	616	2025-12-03 12:09:40.724534
+2774	943	25	High	Auto-populated: Jeremiah Knox has approved Python	943	2025-12-03 12:09:40.724534
+2783	233	17	High	Auto-populated: Princeton Mitchell has approved React	233	2025-12-03 12:09:40.724534
+2785	948	21	High	Auto-populated: Paris Ryan has approved Data Analysis	948	2025-12-03 12:09:40.724534
+2787	28	4	High	Auto-populated: Sylvie Stanton has approved Project Management	28	2025-12-03 12:09:40.724534
+2789	162	11	High	Auto-populated: Beckham O’brien has approved Data Storage	162	2025-12-03 12:09:40.724534
+2791	683	16	High	Auto-populated: Brixton Avila has approved QA Testing	683	2025-12-03 12:09:40.724534
+2793	585	16	High	Auto-populated: Catherine Bauer has approved QA Testing	585	2025-12-03 12:09:40.724534
+2799	733	11	High	Auto-populated: Addyson Shields has approved Data Storage	733	2025-12-03 12:09:40.724534
+2802	474	20	High	Auto-populated: Jacob Roberts has approved Project Management	474	2025-12-03 12:09:40.724534
+2812	976	10	High	Auto-populated: Dilan Fitzgerald has approved Data Processing	976	2025-12-03 12:09:40.724534
+2815	902	4	High	Auto-populated: Amari Fitzpatrick has approved Project Management	902	2025-12-03 12:09:40.724534
+2817	650	13	High	Auto-populated: Jameson Phelps has approved C#	650	2025-12-03 12:09:40.724534
+2818	943	22	High	Auto-populated: Alaina James has approved Docker	943	2025-12-03 12:09:40.724534
+2820	304	19	High	Auto-populated: Grace Landry has approved PostgreSQL	304	2025-12-03 12:09:40.724534
+2822	371	21	High	Auto-populated: Ella Dyer has approved Data Analysis	371	2025-12-03 12:09:40.724534
+2830	610	25	High	Auto-populated: Charlie McBride has approved Python	610	2025-12-03 12:09:40.724534
+2833	623	1	High	Auto-populated: Mackenzie Krueger has approved Java	623	2025-12-03 12:09:40.724534
+2835	603	9	High	Auto-populated: Zendaya Sutton has approved Agentic AI	603	2025-12-03 12:09:40.724534
+2837	423	9	High	Auto-populated: Kameron Lucas has approved Agentic AI	423	2025-12-03 12:09:40.724534
+2845	157	6	High	Auto-populated: Baker Fowler has approved QA Testing	157	2025-12-03 12:09:40.724534
+2850	934	13	High	Auto-populated: Cooper Stokes has approved C#	934	2025-12-03 12:09:40.724534
+2853	815	21	High	Auto-populated: Sutton Francis has approved Data Analysis	815	2025-12-03 12:09:40.724534
+2856	641	8	High	Auto-populated: Chana Bauer has approved Operating Metrics	641	2025-12-03 12:09:40.724534
+2860	483	17	High	Auto-populated: Maisie Yates has approved React	483	2025-12-03 12:09:40.724534
+2866	347	21	High	Auto-populated: Ellis Norris has approved Data Analysis	347	2025-12-03 12:09:40.724534
+2874	976	21	High	Auto-populated: Dilan Fitzgerald has approved Data Analysis	976	2025-12-03 12:09:40.724534
+2876	371	5	High	Auto-populated: Rex Nunez has approved Scrum Master	371	2025-12-03 12:09:40.724534
+2889	864	9	High	Auto-populated: Delaney Parks has approved Agentic AI	864	2025-12-03 12:09:40.724534
+2891	251	24	High	Auto-populated: Nia Wolfe has approved System Design	251	2025-12-03 12:09:40.724534
+2894	260	23	High	Auto-populated: Rosalyn Roy has approved CI/CD	260	2025-12-03 12:09:40.724534
+2895	455	23	High	Auto-populated: Haylee Randolph has approved CI/CD	455	2025-12-03 12:09:40.724534
+2899	423	23	High	Auto-populated: Ila Fowler has approved CI/CD	423	2025-12-03 12:09:40.724534
+2901	416	20	High	Auto-populated: Yehuda Parks has approved Project Management	416	2025-12-03 12:09:40.724534
+2902	296	8	High	Auto-populated: Kristian Shepherd has approved Operating Metrics	296	2025-12-03 12:09:40.724534
+2910	683	25	High	Auto-populated: Harris Stephens has approved Python	683	2025-12-03 12:09:40.724534
+2912	48	18	High	Auto-populated: Luisa Booker has approved Node.js	48	2025-12-03 12:09:40.724534
+2913	383	20	High	Auto-populated: Jay Santana has approved Project Management	383	2025-12-03 12:09:40.724534
+2914	28	25	High	Auto-populated: Everest Lewis has approved Python	28	2025-12-03 12:09:40.724534
+2918	123	12	High	Auto-populated: Amaya Bernard has approved Product Feature Design	123	2025-12-03 12:09:40.724534
+2934	220	9	High	Auto-populated: Ray Felix has approved Agentic AI	220	2025-12-03 12:09:40.724534
+2936	450	16	High	Auto-populated: Finn Hodge has approved QA Testing	450	2025-12-03 12:09:40.724534
+2937	265	11	High	Auto-populated: Miles Moreno has approved Data Storage	265	2025-12-03 12:09:40.724534
+2939	352	22	High	Auto-populated: Drew Shepard has approved Docker	352	2025-12-03 12:09:40.724534
+2942	347	19	High	Auto-populated: Eduardo Vaughan has approved PostgreSQL	347	2025-12-03 12:09:40.724534
+2943	694	17	High	Auto-populated: Weston Payne has approved React	694	2025-12-03 12:09:40.724534
+2945	181	25	High	Auto-populated: Esther Frazier has approved Python	181	2025-12-03 12:09:40.724534
+2951	987	18	High	Auto-populated: Amiyah Wu has approved Node.js	987	2025-12-03 12:09:40.724534
+2952	603	8	High	Auto-populated: Manuel Barr has approved Operating Metrics	603	2025-12-03 12:09:40.724534
+2953	786	13	High	Auto-populated: Kayla Lawson has approved C#	786	2025-12-03 12:09:40.724534
+2957	304	16	High	Auto-populated: Jaxx Rich has approved QA Testing	304	2025-12-03 12:09:40.724534
+2958	81	10	High	Auto-populated: Fisher Cisneros has approved Data Processing	81	2025-12-03 12:09:40.724534
+2961	753	22	High	Auto-populated: Amiyah Barry has approved Docker	753	2025-12-03 12:09:40.724534
+2964	797	10	High	Auto-populated: Kobe Massey has approved Data Processing	797	2025-12-03 12:09:40.724534
+2968	494	13	High	Auto-populated: April Anderson has approved C#	494	2025-12-03 12:09:40.724534
+2973	521	18	High	Auto-populated: Griffin Dorsey has approved Node.js	521	2025-12-03 12:09:40.724534
+2977	117	6	High	Auto-populated: Wes McIntosh has approved QA Testing	117	2025-12-03 12:09:40.724534
+2981	39	23	High	Auto-populated: Valentino English has approved CI/CD	39	2025-12-03 12:09:40.724534
+2984	630	23	High	Auto-populated: Branson Barber has approved CI/CD	630	2025-12-03 12:09:40.724534
+2988	72	1	High	Auto-populated: Archer Green has approved Java	72	2025-12-03 12:09:40.724534
+2989	21	24	High	Auto-populated: Cassius Guzman has approved System Design	21	2025-12-03 12:09:40.724534
+2993	162	1	High	Auto-populated: Maren Giles has approved Java	162	2025-12-03 12:09:40.724534
+2995	296	11	High	Auto-populated: Kristian Shepherd has approved Data Storage	296	2025-12-03 12:09:40.724534
+2996	840	11	High	Auto-populated: London Terrell has approved Data Storage	840	2025-12-03 12:09:40.724534
+3001	251	5	High	Auto-populated: Sariah Day has approved Scrum Master	251	2025-12-03 12:09:40.724534
+3003	789	3	High	Auto-populated: Frederick Tran has approved ECCP	789	2025-12-03 12:09:40.724534
+3034	541	22	High	Auto-populated: Noe Reynolds has approved Docker	541	2025-12-03 12:09:40.724534
+3036	501	16	High	Auto-populated: Eugene Dean has approved QA Testing	501	2025-12-03 12:09:40.724534
+3046	610	10	High	Auto-populated: Harris Long has approved Data Processing	610	2025-12-03 12:09:40.724534
+3049	190	11	High	Auto-populated: Adalyn Herrera has approved Data Storage	190	2025-12-03 12:09:40.724534
+3051	507	17	High	Auto-populated: Devon Hayes has approved React	507	2025-12-03 12:09:40.724534
+3052	441	9	High	Auto-populated: Kayson Swanson has approved Agentic AI	441	2025-12-03 12:09:40.724534
+3055	546	17	High	Auto-populated: Zendaya Morrow has approved React	546	2025-12-03 12:09:40.724534
+3056	201	25	High	Auto-populated: Maximus Perry has approved Python	201	2025-12-03 12:09:40.724534
+3057	777	24	High	Auto-populated: Diana Reyes has approved System Design	777	2025-12-03 12:09:40.724534
+3062	380	25	High	Auto-populated: Damari Reyes has approved Python	380	2025-12-03 12:09:40.724534
+3066	39	11	High	Auto-populated: Emmeline York has approved Data Storage	39	2025-12-03 12:09:40.724534
+3071	845	24	High	Auto-populated: Johan Buckley has approved System Design	845	2025-12-03 12:09:40.724534
+3076	655	23	High	Auto-populated: Keily Avery has approved CI/CD	655	2025-12-03 12:09:40.724534
+3079	162	9	High	Auto-populated: Gustavo Harmon has approved Agentic AI	162	2025-12-03 12:09:40.724534
+3081	546	25	High	Auto-populated: Kyree Weber has approved Python	546	2025-12-03 12:09:40.724534
+3084	494	6	High	Auto-populated: Evangeline Stein has approved QA Testing	494	2025-12-03 12:09:40.724534
+3089	840	3	High	Auto-populated: Paityn Martin has approved ECCP	840	2025-12-03 12:09:40.724534
+3091	48	16	High	Auto-populated: Melissa Buckley has approved QA Testing	48	2025-12-03 12:09:40.724534
+3096	148	23	High	Auto-populated: Rodney Gaines has approved CI/CD	148	2025-12-03 12:09:40.724534
+3098	28	6	High	Auto-populated: Zyair Nichols has approved QA Testing	28	2025-12-03 12:09:40.724534
+3101	190	7	High	Auto-populated: Josue Conrad has approved Industry APIs	190	2025-12-03 12:09:40.724534
+3104	902	16	High	Auto-populated: Jaxxon Duarte has approved QA Testing	902	2025-12-03 12:09:40.724534
+3109	923	9	High	Auto-populated: Ricky Ibarra has approved Agentic AI	923	2025-12-03 12:09:40.724534
+3112	137	16	High	Auto-populated: Adalynn Long has approved QA Testing	137	2025-12-03 12:09:40.724534
+3114	40	22	High	Auto-populated: Marina York has approved Docker	40	2025-12-03 12:09:40.724534
+3116	565	3	High	Auto-populated: Chandler Salinas has approved ECCP	565	2025-12-03 12:09:40.724534
+3117	117	18	High	Auto-populated: Adelynn Rollins has approved Node.js	117	2025-12-03 12:09:40.724534
+3120	92	23	High	Auto-populated: Nathalia Truong has approved CI/CD	92	2025-12-03 12:09:40.724534
+3131	884	19	High	Auto-populated: Oakley Chase has approved PostgreSQL	884	2025-12-03 12:09:40.724534
+3136	304	4	High	Auto-populated: Sunny Gardner has approved Project Management	304	2025-12-03 12:09:40.724534
+3142	948	13	High	Auto-populated: Barbara Bailey has approved C#	948	2025-12-03 12:09:40.724534
+3144	623	23	High	Auto-populated: Lucca Hamilton has approved CI/CD	623	2025-12-03 12:09:40.724534
+3145	610	1	High	Auto-populated: Jade Nolan has approved Java	610	2025-12-03 12:09:40.724534
+3149	92	16	High	Auto-populated: Nathalia Truong has approved QA Testing	92	2025-12-03 12:09:40.724534
+3151	483	13	High	Auto-populated: Braylon Olsen has approved C#	483	2025-12-03 12:09:40.724534
+3160	616	22	High	Auto-populated: Osiris Price has approved Docker	616	2025-12-03 12:09:40.724534
+3165	416	19	High	Auto-populated: Lilith Hensley has approved PostgreSQL	416	2025-12-03 12:09:40.724534
+3166	220	3	High	Auto-populated: Milo Carroll has approved ECCP	220	2025-12-03 12:09:40.724534
+3171	190	5	High	Auto-populated: Kole Ho has approved Scrum Master	190	2025-12-03 12:09:40.724534
+3175	514	18	High	Auto-populated: Arianna Hill has approved Node.js	514	2025-12-03 12:09:40.724534
+3183	585	4	High	Auto-populated: Watson Williamson has approved Project Management	585	2025-12-03 12:09:40.724534
+3187	501	7	High	Auto-populated: Scout Randolph has approved Industry APIs	501	2025-12-03 12:09:40.724534
+3189	501	24	High	Auto-populated: Eugene Dean has approved System Design	501	2025-12-03 12:09:40.724534
+3194	988	5	High	Auto-populated: Mylo Hobbs has approved Scrum Master	988	2025-12-03 12:09:40.724534
+3197	650	12	High	Auto-populated: Blaine Ponce has approved Product Feature Design	650	2025-12-03 12:09:40.724534
+3211	117	25	High	Auto-populated: Hadley Moon has approved Python	117	2025-12-03 12:09:40.724534
+3216	338	18	High	Auto-populated: Alijah Goodman has approved Node.js	338	2025-12-03 12:09:40.724534
+3217	873	3	High	Auto-populated: Laylah Young has approved ECCP	873	2025-12-03 12:09:40.724534
+3218	976	12	High	Auto-populated: Zelda Conrad has approved Product Feature Design	976	2025-12-03 12:09:40.724534
+3221	943	4	High	Auto-populated: Lara Howard has approved Project Management	943	2025-12-03 12:09:40.724534
+3226	988	8	High	Auto-populated: Nicole McLean has approved Operating Metrics	988	2025-12-03 12:09:40.724534
+3230	514	10	High	Auto-populated: Arianna Hill has approved Data Processing	514	2025-12-03 12:09:40.724534
+3232	610	17	High	Auto-populated: Charlie McBride has approved React	610	2025-12-03 12:09:40.724534
+3236	758	7	High	Auto-populated: Annalise Lu has approved Industry APIs	758	2025-12-03 12:09:40.724534
+3237	987	8	High	Auto-populated: Kallie Hail has approved Operating Metrics	987	2025-12-03 12:09:40.724534
+3238	521	19	High	Auto-populated: Stefan McPherson has approved PostgreSQL	521	2025-12-03 12:09:40.724534
+3240	630	19	High	Auto-populated: Branson Barber has approved PostgreSQL	630	2025-12-03 12:09:40.724534
+3250	987	9	High	Auto-populated: Julius Brandt has approved Agentic AI	987	2025-12-03 12:09:40.724534
+3260	967	4	High	Auto-populated: Adriel Romero has approved Project Management	967	2025-12-03 12:09:40.724534
+3261	726	4	High	Auto-populated: Rene Sullivan has approved Project Management	726	2025-12-03 12:09:40.724534
+3264	352	3	High	Auto-populated: Lennon Woodward has approved ECCP	352	2025-12-03 12:09:40.724534
+3266	304	13	High	Auto-populated: Case Holloway has approved C#	304	2025-12-03 12:09:40.724534
+3274	304	22	High	Auto-populated: Case Holloway has approved Docker	304	2025-12-03 12:09:40.724534
+3277	694	21	High	Auto-populated: London Rojas has approved Data Analysis	694	2025-12-03 12:09:40.724534
+3278	260	21	High	Auto-populated: Marcelo Tucker has approved Data Analysis	260	2025-12-03 12:09:40.724534
+3280	864	1	High	Auto-populated: Finley Hubbard has approved Java	864	2025-12-03 12:09:40.724534
+3283	943	3	High	Auto-populated: Natalia Mack has approved ECCP	943	2025-12-03 12:09:40.724534
+3288	293	24	High	Auto-populated: Declan Keith has approved System Design	293	2025-12-03 12:09:40.724534
+3291	916	18	High	Auto-populated: Lilianna Good has approved Node.js	916	2025-12-03 12:09:40.724534
+3292	130	19	High	Auto-populated: Halle Pham has approved PostgreSQL	130	2025-12-03 12:09:40.724534
+3297	610	4	High	Auto-populated: Kelsey Cantrell has approved Project Management	610	2025-12-03 12:09:40.724534
+3299	260	8	High	Auto-populated: Madeline Quintana has approved Operating Metrics	260	2025-12-03 12:09:40.724534
+3301	416	11	High	Auto-populated: Layne Donaldson has approved Data Storage	416	2025-12-03 12:09:40.724534
+3302	284	25	High	Auto-populated: Rose Andrade has approved Python	284	2025-12-03 12:09:40.724534
+3311	683	24	High	Auto-populated: Zainab Greene has approved System Design	683	2025-12-03 12:09:40.724534
+3314	430	18	High	Auto-populated: Nyla Good has approved Node.js	430	2025-12-03 12:09:40.724534
+3324	48	3	High	Auto-populated: Harleigh Gould has approved ECCP	48	2025-12-03 12:09:40.724534
+3329	53	21	High	Auto-populated: Ambrose Chen has approved Data Analysis	53	2025-12-03 12:09:40.724534
+3330	976	19	High	Auto-populated: Astrid Pruitt has approved PostgreSQL	976	2025-12-03 12:09:40.724534
+3339	585	25	High	Auto-populated: Bruce Li has approved Python	585	2025-12-03 12:09:40.724534
+3342	265	1	High	Auto-populated: Miles Moreno has approved Java	265	2025-12-03 12:09:40.724534
+3343	53	16	High	Auto-populated: Lexie Barron has approved QA Testing	53	2025-12-03 12:09:40.724534
+3347	655	19	High	Auto-populated: Ella Travis has approved PostgreSQL	655	2025-12-03 12:09:40.724534
+3350	48	21	High	Auto-populated: Dominik Cole has approved Data Analysis	48	2025-12-03 12:09:40.724534
+3351	293	8	High	Auto-populated: Alijah Walls has approved Operating Metrics	293	2025-12-03 12:09:40.724534
+3355	585	7	High	Auto-populated: Marley Gregory has approved Industry APIs	585	2025-12-03 12:09:40.724534
+3358	916	16	High	Auto-populated: Pedro Pugh has approved QA Testing	916	2025-12-03 12:09:40.724534
+3370	650	9	High	Auto-populated: Alondra Ward has approved Agentic AI	650	2025-12-03 12:09:40.724534
+3371	233	5	High	Auto-populated: Princeton Mitchell has approved Scrum Master	233	2025-12-03 12:09:40.724534
+3384	39	6	High	Auto-populated: Violeta Peralta has approved QA Testing	39	2025-12-03 12:09:40.724534
+3386	220	8	High	Auto-populated: Milo Carroll has approved Operating Metrics	220	2025-12-03 12:09:40.724534
+3388	610	24	High	Auto-populated: Harris Long has approved System Design	610	2025-12-03 12:09:40.724534
+3389	574	11	High	Auto-populated: Madison Marquez has approved Data Storage	574	2025-12-03 12:09:40.724534
+3392	137	4	High	Auto-populated: Ben Matthews has approved Project Management	137	2025-12-03 12:09:40.724534
+3393	884	1	High	Auto-populated: Blaine Fuller has approved Java	884	2025-12-03 12:09:40.724534
+3394	574	22	High	Auto-populated: Samara Rios has approved Docker	574	2025-12-03 12:09:40.724534
+3396	137	21	High	Auto-populated: Ben Matthews has approved Data Analysis	137	2025-12-03 12:09:40.724534
+3400	193	10	High	Auto-populated: Eva Beasley has approved Data Processing	193	2025-12-03 12:09:40.724534
+3401	610	16	High	Auto-populated: Charlie McBride has approved QA Testing	610	2025-12-03 12:09:40.724534
+3403	441	11	High	Auto-populated: Kaysen Barron has approved Data Storage	441	2025-12-03 12:09:40.724534
+3410	48	24	High	Auto-populated: Aryan Rowland has approved System Design	48	2025-12-03 12:09:40.724534
+3412	726	13	High	Auto-populated: Nyla Kelly has approved C#	726	2025-12-03 12:09:40.724534
+3420	327	4	High	Auto-populated: Casen Farrell has approved Project Management	327	2025-12-03 12:09:40.724534
+3421	28	18	High	Auto-populated: Ellie Gonzales has approved Node.js	28	2025-12-03 12:09:40.724534
+3426	322	21	High	Auto-populated: Amy Holt has approved Data Analysis	322	2025-12-03 12:09:40.724534
+3427	201	20	High	Auto-populated: Dustin Jordan has approved Project Management	201	2025-12-03 12:09:40.724534
+3428	380	17	High	Auto-populated: Savanna Bush has approved React	380	2025-12-03 12:09:40.724534
+3435	423	4	High	Auto-populated: Harry Stark has approved Project Management	423	2025-12-03 12:09:40.724534
+3443	327	12	High	Auto-populated: Casen Farrell has approved Product Feature Design	327	2025-12-03 12:09:40.724534
+3445	383	12	High	Auto-populated: Annalise Fletcher has approved Product Feature Design	383	2025-12-03 12:09:40.724534
+3450	48	11	High	Auto-populated: Aries Watts has approved Data Storage	48	2025-12-03 12:09:40.724534
+3451	383	10	High	Auto-populated: Annalise Fletcher has approved Data Processing	383	2025-12-03 12:09:40.724534
+3452	916	19	High	Auto-populated: Pedro Pugh has approved PostgreSQL	916	2025-12-03 12:09:40.724534
+3453	641	7	High	Auto-populated: Ryan Mitchell has approved Industry APIs	641	2025-12-03 12:09:40.724534
+3473	641	18	High	Auto-populated: Jaxon Roach has approved Node.js	641	2025-12-03 12:09:40.724534
+3479	240	21	High	Auto-populated: Elliott Palacios has approved Data Analysis	240	2025-12-03 12:09:40.724534
+3485	430	17	High	Auto-populated: Averie Willis has approved React	430	2025-12-03 12:09:40.724534
+3492	650	10	High	Auto-populated: Waylon McCullough has approved Data Processing	650	2025-12-03 12:09:40.724534
+3494	483	9	High	Auto-populated: Korbyn Dickerson has approved Agentic AI	483	2025-12-03 12:09:40.724534
+3496	655	8	High	Auto-populated: Ella Travis has approved Operating Metrics	655	2025-12-03 12:09:40.724534
+3502	831	12	High	Auto-populated: Teresa Combs has approved Product Feature Design	831	2025-12-03 12:09:40.724534
+3504	117	22	High	Auto-populated: Wes McIntosh has approved Docker	117	2025-12-03 12:09:40.724534
+3505	753	19	High	Auto-populated: Shay Ford has approved PostgreSQL	753	2025-12-03 12:09:40.724534
+3512	21	19	High	Auto-populated: Everly Barton has approved PostgreSQL	21	2025-12-03 12:09:40.724534
+3515	338	19	High	Auto-populated: Carolina Adkins has approved PostgreSQL	338	2025-12-03 12:09:40.724534
+3518	674	8	High	Auto-populated: Azrael Reyna has approved Operating Metrics	674	2025-12-03 12:09:40.724534
+3523	541	13	High	Auto-populated: Arian Spencer has approved C#	541	2025-12-03 12:09:40.724534
+3525	909	8	High	Auto-populated: Nylah Sosa has approved Operating Metrics	909	2025-12-03 12:09:40.724534
+3526	873	13	High	Auto-populated: Asher Mora has approved C#	873	2025-12-03 12:09:40.724534
+3528	876	25	High	Auto-populated: Colten Meadows has approved Python	876	2025-12-03 12:09:40.724534
+3532	744	10	High	Auto-populated: Joaquin Lyons has approved Data Processing	744	2025-12-03 12:09:40.724534
+3534	979	6	High	Auto-populated: Kylo Marks has approved QA Testing	979	2025-12-03 12:09:40.724534
+3544	92	17	High	Auto-populated: Yasmin Rush has approved React	92	2025-12-03 12:09:40.724534
+3547	220	20	High	Auto-populated: Zara Kemp has approved Project Management	220	2025-12-03 12:09:40.724534
+3555	987	10	High	Auto-populated: Foster Avila has approved Data Processing	987	2025-12-03 12:09:40.724534
+3559	157	20	High	Auto-populated: Baker Fowler has approved Project Management	157	2025-12-03 12:09:40.724534
+3566	201	8	High	Auto-populated: Maximus Perry has approved Operating Metrics	201	2025-12-03 12:09:40.724534
+3571	48	17	High	Auto-populated: Harleigh Gould has approved React	48	2025-12-03 12:09:40.724534
+3584	521	4	High	Auto-populated: Griffin Dorsey has approved Project Management	521	2025-12-03 12:09:40.724534
+3591	84	3	High	Auto-populated: River Walters has approved ECCP	84	2025-12-03 12:09:40.724534
+3593	483	3	High	Auto-populated: Korbyn Dickerson has approved ECCP	483	2025-12-03 12:09:40.724534
+3597	845	21	High	Auto-populated: Alexis Yoder has approved Data Analysis	845	2025-12-03 12:09:40.724534
+3598	240	4	High	Auto-populated: Micah Gonzales has approved Project Management	240	2025-12-03 12:09:40.724534
+3607	979	5	High	Auto-populated: Admin Monica Sullivan has approved Scrum Master	979	2025-12-03 12:09:40.724534
+3609	979	16	High	Auto-populated: Admin Monica Sullivan has approved QA Testing	979	2025-12-03 12:09:40.724534
+3610	979	20	High	Auto-populated: Admin Monica Sullivan has approved Project Management	979	2025-12-03 12:09:40.724534
+3611	979	22	High	Auto-populated: Admin Monica Sullivan has approved Docker	979	2025-12-03 12:09:40.724534
+3612	979	23	High	Auto-populated: Admin Monica Sullivan has approved CI/CD	979	2025-12-03 12:09:40.724534
+3613	980	5	High	Auto-populated: Admin Evan Castillo has approved Scrum Master	980	2025-12-03 12:09:40.724534
+3614	980	13	High	Auto-populated: Admin Evan Castillo has approved C#	980	2025-12-03 12:09:40.724534
+3615	980	25	High	Auto-populated: Admin Evan Castillo has approved Python	980	2025-12-03 12:09:40.724534
+3616	981	5	High	Auto-populated: Admin Eva McPherson has approved Scrum Master	981	2025-12-03 12:09:40.724534
+3617	981	21	High	Auto-populated: Admin Eva McPherson has approved Data Analysis	981	2025-12-03 12:09:40.724534
+3618	982	10	High	Auto-populated: Admin Foster Avila has approved Data Processing	982	2025-12-03 12:09:40.724534
+3619	982	12	High	Auto-populated: Admin Foster Avila has approved Product Feature Design	982	2025-12-03 12:09:40.724534
+3620	983	5	High	Auto-populated: Admin Amiyah Wu has approved Scrum Master	983	2025-12-03 12:09:40.724534
+3621	983	12	High	Auto-populated: Admin Amiyah Wu has approved Product Feature Design	983	2025-12-03 12:09:40.724534
+3622	983	18	High	Auto-populated: Admin Amiyah Wu has approved Node.js	983	2025-12-03 12:09:40.724534
+3623	983	19	High	Auto-populated: Admin Amiyah Wu has approved PostgreSQL	983	2025-12-03 12:09:40.724534
+3624	984	7	High	Auto-populated: Admin Kyson Salinas has approved Industry APIs	984	2025-12-03 12:09:40.724534
+3625	984	12	High	Auto-populated: Admin Kyson Salinas has approved Product Feature Design	984	2025-12-03 12:09:40.724534
+3626	984	17	High	Auto-populated: Admin Kyson Salinas has approved React	984	2025-12-03 12:09:40.724534
+3627	984	19	High	Auto-populated: Admin Kyson Salinas has approved PostgreSQL	984	2025-12-03 12:09:40.724534
 \.
 
 
@@ -7574,7 +9270,7 @@ SELECT pg_catalog.setval('public.skill_request_request_id_seq', 136, true);
 -- Name: skill_skill_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.skill_skill_id_seq', 25, true);
+SELECT pg_catalog.setval('public.skill_skill_id_seq', 26, true);
 
 
 --
@@ -7583,7 +9279,7 @@ SELECT pg_catalog.setval('public.skill_skill_id_seq', 25, true);
 -- Name: team_high_value_skills_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.team_high_value_skills_id_seq', 13, true);
+SELECT pg_catalog.setval('public.team_high_value_skills_id_seq', 3630, true);
 
 
 --
@@ -7994,11 +9690,11 @@ ALTER DEFAULT PRIVILEGES FOR ROLE postgres IN SCHEMA public GRANT ALL ON TABLES 
 ALTER DEFAULT PRIVILEGES FOR ROLE postgres GRANT ALL ON TABLES TO skills_user;
 
 
--- Completed on 2025-12-03 06:29:26
+-- Completed on 2025-12-03 12:13:33
 
 --
 -- PostgreSQL database dump complete
 --
 
-\unrestrict gaL3OF3hVAXo1K4Tbkhf0FddcUUiv0cfx7U5qbfWBQQ07VNYYifAU7ryOXjdDW7
+\unrestrict sgg1Ne7bskMSZCSFrryOBUaNB7JmNXMHYqJTpRkmueekEqfV8cBFbxQmKEd2JCE
 
