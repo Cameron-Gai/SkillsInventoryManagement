@@ -9,6 +9,7 @@ import skillsApi from '@/api/skillsApi'
 import teamApi from '@/api/teamApi'
 import { getCatalogRequests, processCatalogRequest, updateCatalogRequest } from '@/api/catalogRequestsApi'
 import { useToast } from '@/components/ToastProvider'
+import dataManagementApi from '@/api/dataManagementApi'
 
 function levelClasses(level) {
   switch ((level || '').toLowerCase()) {
@@ -54,7 +55,7 @@ export default function Admin() {
   const [skills, setSkills] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
-  const [activeTab, setActiveTab] = useState('users') // 'users' | 'skills' | 'userSkills' | 'requests' | 'logs'
+  const [activeTab, setActiveTab] = useState('users') // 'users' | 'skills' | 'userSkills' | 'requests' | 'logs' | 'backup'
   // Users tab filters/sort
   const [userSearch, setUserSearch] = useState('')
   const [userRoleFilter, setUserRoleFilter] = useState('all') // 'all' | 'employee' | 'manager' | 'admin'
@@ -78,6 +79,10 @@ export default function Admin() {
   const [logs, setLogs] = useState([])
   const [editUserSkill, setEditUserSkill] = useState(null) // { person_id, skill: {id}, level, years, frequency, notes, name, username }
   const [selectedUser, setSelectedUser] = useState(null)
+  const [backups, setBackups] = useState([])
+  const [backupLoading, setBackupLoading] = useState(false)
+  const [confirmRestore, setConfirmRestore] = useState(null) // filename to restore
+  const [confirmDeleteBackup, setConfirmDeleteBackup] = useState(null) // filename to delete
 
   useEffect(() => {
     const fetchData = async () => {
@@ -223,6 +228,113 @@ export default function Admin() {
     }
   }
 
+  // Backup & Restore functions
+  const loadBackups = async () => {
+    try {
+      setBackupLoading(true)
+      const response = await dataManagementApi.listBackups()
+      setBackups(response.data || [])
+      setError(null)
+    } catch (err) {
+      setError('Failed to load backups: ' + err.message)
+    } finally {
+      setBackupLoading(false)
+    }
+  }
+
+  const handleCreateBackup = async () => {
+    try {
+      setBackupLoading(true)
+      await dataManagementApi.createBackup()
+      showToast('Backup created successfully', 'success')
+      await loadBackups()
+    } catch (err) {
+      setError('Failed to create backup: ' + err.message)
+      showToast('Failed to create backup', 'error')
+    } finally {
+      setBackupLoading(false)
+    }
+  }
+
+  const handleDownloadBackup = async (filename) => {
+    try {
+      const response = await dataManagementApi.downloadBackup(filename)
+      const url = window.URL.createObjectURL(new Blob([response.data]))
+      const link = document.createElement('a')
+      link.href = url
+      link.setAttribute('download', filename)
+      document.body.appendChild(link)
+      link.click()
+      link.remove()
+      showToast('Backup downloaded', 'success')
+    } catch (err) {
+      setError('Failed to download backup: ' + err.message)
+      showToast('Failed to download backup', 'error')
+    }
+  }
+
+  const handleDeleteBackup = async (filename) => {
+    try {
+      setBackupLoading(true)
+      await dataManagementApi.deleteBackup(filename)
+      showToast('Backup deleted', 'success')
+      setConfirmDeleteBackup(null)
+      await loadBackups()
+    } catch (err) {
+      setError('Failed to delete backup: ' + err.message)
+      showToast('Failed to delete backup', 'error')
+      setConfirmDeleteBackup(null)
+    } finally {
+      setBackupLoading(false)
+    }
+  }
+
+  const handleRestoreBackup = async (filename) => {
+    try {
+      setBackupLoading(true)
+      await dataManagementApi.restoreBackup(filename)
+      showToast('Database restored successfully. Please refresh the page.', 'success')
+      setConfirmRestore(null)
+      setTimeout(() => window.location.reload(), 2000)
+    } catch (err) {
+      setError('Failed to restore backup: ' + err.message)
+      showToast('Failed to restore backup', 'error')
+      setConfirmRestore(null)
+    } finally {
+      setBackupLoading(false)
+    }
+  }
+
+  const handleExportJSON = async () => {
+    try {
+      const response = await dataManagementApi.exportJSON()
+      const dataStr = JSON.stringify(response.data, null, 2)
+      const blob = new Blob([dataStr], { type: 'application/json' })
+      const url = window.URL.createObjectURL(blob)
+      const link = document.createElement('a')
+      link.href = url
+      const timestamp = new Date().toISOString().replace(/[:.]/g, '-')
+      link.setAttribute('download', `export_${timestamp}.json`)
+      document.body.appendChild(link)
+      link.click()
+      link.remove()
+      showToast('Data exported successfully', 'success')
+    } catch (err) {
+      setError('Failed to export data: ' + err.message)
+      showToast('Failed to export data', 'error')
+    }
+  }
+
+  const formatFileSize = (bytes) => {
+    if (bytes < 1024) return bytes + ' B'
+    if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(2) + ' KB'
+    return (bytes / (1024 * 1024)).toFixed(2) + ' MB'
+  }
+
+  const formatDate = (dateString) => {
+    return new Date(dateString).toLocaleString()
+  }
+
   return (
     <div className="flex min-h-screen bg-[var(--background)] text-[var(--text-color)]">
       <Sidebar />
@@ -292,6 +404,16 @@ export default function Admin() {
             }`}
           >
             Logs
+          </button>
+          <button
+            onClick={async () => { setActiveTab('backup'); await loadBackups() }}
+            className={`px-4 py-2 font-medium border-b-2 transition ${
+              activeTab === 'backup'
+                ? 'border-[var(--color-primary)] text-[var(--color-primary)]'
+                : 'border-transparent text-[var(--text-color-secondary)] hover:text-[var(--text-color)]'
+            }`}
+          >
+            Backup & Restore
           </button>
         </div>
 
@@ -850,7 +972,7 @@ export default function Admin() {
               </div>
             )}
           </section>
-        ) : (
+        ) : activeTab === 'logs' ? (
           <section className="rounded-xl border border-[var(--border-color)] bg-[var(--card-background)] p-6 shadow-sm">
             <div className="flex items-center justify-between">
               <h2 className="text-xl font-semibold text-[var(--text-color)]">Logs (Approved & Canceled)</h2>
@@ -881,7 +1003,88 @@ export default function Admin() {
               )}
             </div>
           </section>
-        )}
+        ) : activeTab === 'backup' ? (
+          <section className="space-y-6">
+            <div className="rounded-xl border border-[var(--border-color)] bg-[var(--card-background)] p-6 shadow-sm">
+              <div className="flex items-center justify-between mb-6">
+                <div>
+                  <h2 className="text-xl font-semibold text-[var(--text-color)]">Database Backup & Restore</h2>
+                  <p className="mt-1 text-sm text-[var(--text-color-secondary)]">Create and manage database backups. Restore previous states if needed.</p>
+                </div>
+                <div className="flex gap-2">
+                  <button
+                    onClick={handleCreateBackup}
+                    disabled={backupLoading}
+                    className="rounded-md bg-[color:var(--color-primary)] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[color:var(--color-primary-dark)] disabled:opacity-50"
+                  >
+                    {backupLoading ? 'Creating...' : 'Create Backup'}
+                  </button>
+                  <button
+                    onClick={loadBackups}
+                    disabled={backupLoading}
+                    className="rounded-md border border-[var(--border-color)] px-4 py-2 text-sm font-medium text-[var(--text-color)] hover:border-[color:var(--color-primary)] disabled:opacity-50"
+                  >
+                    Refresh
+                  </button>
+                  <button
+                    onClick={handleExportJSON}
+                    className="rounded-md border border-[var(--border-color)] px-4 py-2 text-sm font-medium text-[var(--text-color)] hover:border-[color:var(--color-primary)]"
+                  >
+                    Export JSON
+                  </button>
+                </div>
+              </div>
+
+              {backupLoading && (
+                <div className="text-center py-8">
+                  <p className="text-[var(--text-color-secondary)]">Loading...</p>
+                </div>
+              )}
+
+              {!backupLoading && backups.length === 0 && (
+                <div className="text-center py-8">
+                  <p className="text-[var(--text-color-secondary)]">No backups found. Create your first backup above.</p>
+                </div>
+              )}
+
+              {!backupLoading && backups.length > 0 && (
+                <div className="space-y-3">
+                  {backups.map((backup) => (
+                    <div key={backup.filename} className="rounded-lg border border-[var(--border-color)] bg-[var(--background-muted)] p-4 flex items-center justify-between">
+                      <div className="flex-1">
+                        <p className="font-semibold text-[var(--text-color)]">{backup.filename}</p>
+                        <div className="mt-1 flex gap-4 text-xs text-[var(--text-color-secondary)]">
+                          <span>Size: {formatFileSize(backup.size)}</span>
+                          <span>Created: {formatDate(backup.created)}</span>
+                        </div>
+                      </div>
+                      <div className="flex gap-2">
+                        <button
+                          onClick={() => handleDownloadBackup(backup.filename)}
+                          className="rounded-md border border-[var(--border-color)] px-3 py-1.5 text-sm font-medium text-[var(--text-color)] hover:border-[color:var(--color-primary)] hover:text-[color:var(--color-primary)]"
+                        >
+                          Download
+                        </button>
+                        <button
+                          onClick={() => setConfirmRestore(backup.filename)}
+                          className="rounded-md border border-blue-200 bg-blue-50 px-3 py-1.5 text-sm font-medium text-blue-700 hover:bg-blue-100 dark:border-blue-700 dark:bg-blue-900 dark:text-blue-300 dark:hover:bg-blue-800"
+                        >
+                          Restore
+                        </button>
+                        <button
+                          onClick={() => setConfirmDeleteBackup(backup.filename)}
+                          className="rounded-md border border-red-200 bg-red-50 px-3 py-1.5 text-sm font-medium text-red-700 hover:bg-red-100 dark:border-red-700 dark:bg-red-900 dark:text-red-300 dark:hover:bg-red-800"
+                        >
+                          Delete
+                        </button>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          </section>
+        ) : null}
 
       {/* User Summary Modal */}
       {selectedUser && (
@@ -1119,6 +1322,41 @@ export default function Admin() {
                 <button type="submit" className="rounded-md bg-[color:var(--color-primary)] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[color:var(--color-primary-dark)]">Save Changes</button>
               </div>
             </form>
+          </div>
+        </div>
+      )}
+
+      {/* Restore Backup Confirmation Modal */}
+      {confirmRestore && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
+          <div className="w-full max-w-md rounded-lg bg-[var(--card-background)] p-6 shadow-xl">
+            <h3 className="text-xl font-semibold text-red-600">⚠️ Restore Backup</h3>
+            <p className="mt-3 text-sm text-[var(--text-color-secondary)]">
+              Are you sure you want to restore from <strong>{confirmRestore}</strong>? This will replace all current data with the backup data. This action cannot be undone.
+            </p>
+            <p className="mt-2 text-sm font-semibold text-red-600">
+              It is strongly recommended to create a backup of the current state before proceeding.
+            </p>
+            <div className="mt-6 flex justify-end gap-3">
+              <button onClick={() => setConfirmRestore(null)} className="rounded-md border border-[var(--border-color)] px-4 py-2 text-sm font-medium text-[var(--text-color-secondary)] hover:border-[color:var(--color-primary)]">Cancel</button>
+              <button onClick={() => handleRestoreBackup(confirmRestore)} className="rounded-md bg-red-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-red-700">Restore Now</button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Delete Backup Confirmation Modal */}
+      {confirmDeleteBackup && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
+          <div className="w-full max-w-md rounded-lg bg-[var(--card-background)] p-6 shadow-xl">
+            <h3 className="text-xl font-semibold text-[var(--text-color)]">Delete Backup</h3>
+            <p className="mt-3 text-sm text-[var(--text-color-secondary)]">
+              Are you sure you want to delete <strong>{confirmDeleteBackup}</strong>? This action cannot be undone.
+            </p>
+            <div className="mt-6 flex justify-end gap-3">
+              <button onClick={() => setConfirmDeleteBackup(null)} className="rounded-md border border-[var(--border-color)] px-4 py-2 text-sm font-medium text-[var(--text-color-secondary)] hover:border-[color:var(--color-primary)]">Cancel</button>
+              <button onClick={() => handleDeleteBackup(confirmDeleteBackup)} className="rounded-md bg-red-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-red-700">Delete</button>
+            </div>
           </div>
         </div>
       )}

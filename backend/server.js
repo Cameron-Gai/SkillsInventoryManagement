@@ -9,6 +9,7 @@ const skillsRoutes = require('./src/routes/skillsRoutes');
 const personSkillsRoutes = require('./src/routes/personSkillsRoutes');
 const teamRoutes = require('./src/routes/teamRoutes');
 const catalogRequestsRoutes = require('./src/routes/catalogRequestsRoutes');
+const dataManagementRoutes = require('./src/routes/dataManagementRoutes');
 const db = require('./src/config/db');
 
 const app = express();
@@ -43,6 +44,9 @@ app.use('/api/team', teamRoutes);
 
 // Catalog Requests routes
 app.use('/api/catalog-requests', catalogRequestsRoutes);
+
+// Data Management routes (Admin only)
+app.use('/api/data-management', dataManagementRoutes);
 
 // Health check
 app.get('/health', async (req, res) => {
